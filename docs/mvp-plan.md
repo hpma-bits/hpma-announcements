@@ -22,7 +22,7 @@ removed on 2026-10-28. What remains is the minimal skeleton.
 - Add a minimal store: one `Notice` dataclass, `write()` with `first_seen_at` /
   `revision` / `content_hash`, `iter_notices()`, `write_index()`.
 - Add `schema/notice.schema.json`.
-- CLI: `collect --source dashen`, `index`, `validate`.
+- CLI: `index`, `validate`.
 - Add `tests/` covering write idempotency and schema validation.
 
 **Non-goals.** Network access, image download, OCR.
@@ -42,6 +42,7 @@ MVP.
 
 - Add `collectors/dashen.py` with list pagination, notice filter and detail
   parse.
+- CLI: `collect --source dashen` runs the collector and stores the results.
 - Filter: first line matches `^【\d{1,2}月\d{1,2}日更新公告】`.
 - Parse the `content` JSON string: `body.text`, `body.media[]`.
 - Derive `notice_date` from the title; infer the year from `published_at`
