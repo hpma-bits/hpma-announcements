@@ -8,7 +8,10 @@ multi-channel docs and scaffold were removed on 2026-10-28.
 Archive every official **update notice** (更新公告) published by the verified
 Harry Potter: Magic Awakened account on Dashen — body text plus every long
 image — with provenance, in a public Git repository, and turn it into
-searchable text for a future announcement-search site.
+searchable text for a future announcement-search site. Which posts count as
+update notices is not a hand-written pattern: the full post corpus is
+harvested first, an offline LLM-assisted study induces the selection method,
+and production runs only that deterministic method.
 
 ## Why
 
@@ -32,16 +35,30 @@ producer → data-repo handoff.
   - detail `GET /v1/web/feed/basic/facade?feedId=...`
   - headers used by the web client: `GL-ClientType: 61`, `GL-DeviceId`,
     `Referer: https://ds.163.com/`
-- Notice filter: first line matches `【M月D日更新公告】`. Measured recent
-  cadence is biweekly (Wednesday), 4–6 long images per notice.
+- Measured recent cadence is biweekly (Wednesday); notices carry 4–6 long
+  images. Historical formats may differ — the corpus study, not a guess,
+  establishes the full set.
 - The body text carries only the maintenance window; the actual changes are in
   the images. Images are public on `ok.166.net`, watermarked.
 - Canonical item URL: `https://ds.163.com/feed/<id>/`.
 
+## Selection (decided 2026-10-29)
+
+- Positives: periodic update notices (`【M月D日更新公告】`), emergency
+  maintenance notices, major version notices and version previews.
+- Negatives: event/fashion/promo posts, community and birthday posts, videos,
+  everything else.
+- The full corpus (text + metadata, no images) is committed under `corpus/`.
+  LLM-assisted labeling and rule induction run offline over it; prompts,
+  labels and the evaluation are committed as the evidence base.
+- Production runs only the induced deterministic procedure. Plausible posts
+  that do not match go to a review queue, never silently dropped.
+- The LLM is an offline analysis tool, not a runtime dependency.
+
 ## MVP scope
 
 1. Pull the account feed: full backfill (~117 pages), then incremental.
-2. Keep only `【…更新公告】` items.
+2. Select notices with the corpus-derived procedure (see Selection).
 3. Write one JSON per notice with `id / url / published_at / notice_date /
    title / text / images[]`.
 4. Download every image in order and commit the original bytes; record
@@ -93,7 +110,10 @@ page archives, a generic channel framework, the search site itself.
 
 ## Storage policy (decision 1A)
 
-- Images are committed to Git under `assets/dashen/<feed_id>/<NN>.<ext>`.
+- The corpus (all posts, text only, ~5–10 MB) is committed under
+  `corpus/dashen/`.
+- Images are committed to Git under `assets/dashen/<feed_id>/<NN>.<ext>`, for
+  selected notices only.
 - Estimate: ~130 notices × 5 images × 300 KB ≈ 200 MB. Revisit LFS above
   500 MB.
 - Re-running must be byte-idempotent.
@@ -108,6 +128,8 @@ page archives, a generic channel framework, the search site itself.
 
 ## Acceptance (MVP)
 
+- The selection procedure reproduces the reviewed notice list with no false
+  negatives.
 - Every historical update notice is present: no missing dates, no duplicates.
 - Every image is present, ordered, and opens offline.
 - Re-running produces zero diff.
@@ -127,6 +149,7 @@ page archives, a generic channel framework, the search site itself.
 
 ## Phases
 
-1. **MVP** (4 issues): skeleton + collector + images + backfill/automation.
+1. **MVP** (5 issues): skeleton → corpus → selection study → images →
+   automation.
 2. **OCR**: one-notice spike, then full OCR and text export.
 3. **Search site**: consumes the JSON + OCR text; the repo ships data, not UI.
