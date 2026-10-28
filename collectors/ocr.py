@@ -103,7 +103,9 @@ def default_engine() -> tuple[Engine, dict[str, str]]:
         height, _ = image.shape[:2]
         lines: list[tuple[float, str, float, list[list[int]]]] = []
         for start, end in tiles(height):
-            result, _ = ocr(image[start:end, :])
+            # use_cls=False: notice images are upright, and the angle
+            # classifier dominates runtime on CPU (30s+ per image).
+            result, _ = ocr(image[start:end, :], use_cls=False)
             lines.extend(raw_to_lines(result, start, image.shape[1]))
         return merge_lines(lines)
 
@@ -112,6 +114,7 @@ def default_engine() -> tuple[Engine, dict[str, str]]:
         "version": version("rapidocr-onnxruntime"),
         "model": "PP-OCRv4",
         "tiling": "1280+256",
+        "cls": "off",
     }
     return engine, meta
 
