@@ -3,9 +3,11 @@
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 
 from . import dashen
+from . import ocr
 from .store import Store
 
 
@@ -38,6 +40,12 @@ def _corpus(args: argparse.Namespace) -> int:
     return 0
 
 
+def _ocr(args: argparse.Namespace) -> int:
+    stats = ocr.run(args.root, family=args.family, limit=args.limit)
+    print(json.dumps(stats, sort_keys=True))
+    return 0 if stats["failed_posts"] == 0 else 1
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="hpma-announcements")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -55,6 +63,12 @@ def main(argv: list[str] | None = None) -> int:
     corpus.add_argument("--max-pages", type=int, default=None, help="stop after N pages (smoke)")
     corpus.add_argument("--root", help="repository root (tests)")
     corpus.set_defaults(func=_corpus)
+
+    ocr_cmd = sub.add_parser("ocr", help="OCR notice images for a label family")
+    ocr_cmd.add_argument("--family", default="update")
+    ocr_cmd.add_argument("--limit", type=int, default=None, help="process only the first N posts (smoke)")
+    ocr_cmd.add_argument("--root", help="repository root (tests)")
+    ocr_cmd.set_defaults(func=_ocr)
 
     args = parser.parse_args(argv)
     return args.func(args)
