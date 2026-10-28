@@ -16,6 +16,7 @@ image whose ``sha256`` already has text in the notice JSON is not re-OCRed.
 from __future__ import annotations
 
 import json
+import re
 import time
 from pathlib import Path
 from typing import Any, Callable
@@ -37,29 +38,80 @@ def sniff_ext(data: bytes) -> str:
     return ".bin"
 
 
+def tiles(height: int, window: int = 1280, step: int = 1024) -> list[tuple[int, int]]:
+    """Vertical (start, end) slices covering ``height`` with overlap.
+
+    Long notices are 6000-10000 px tall; detection models downscale whole
+    images to uselessness, so tall images are OCR'd window by window and the
+    overlapping lines are merged.
+    """
+    if height <= window:
+        return [(0, height)]
+    spans = [(start, min(start + window, height)) for start in range(0, height, step)]
+    if spans[-1][1] - spans[-1][0] < 64 and len(spans) > 1:
+        spans[-2] = (spans[-2][0], height)
+        spans.pop()
+    return spans
+
+
+def merge_lines(
+    lines: list[tuple[float, str, float, list[list[int]]]],
+    tolerance: float = 40.0,
+) -> list[Block]:
+    """Merge OCR lines from overlapping windows.
+
+    ``lines`` are (center_y_absolute, text, score, box). Lines with the same
+    text whose centers are within ``tolerance`` px are duplicates from the
+    overlap zone; the first (highest) occurrence wins. Output is sorted
+    top-to-bottom.
+    """
+    kept: list[tuple[float, str, float, list[list[int]]]] = []
+    for cy, text, score, box in sorted(lines, key=lambda item: (item[0], item[1])):
+        if any(text == other[1] and abs(cy - other[0]) < tolerance for other in kept):
+            continue
+        kept.append((cy, text, score, box))
+    kept.sort(key=lambda item: item[0])
+    return [{"box": box, "text": text, "score": round(score, 4)} for cy, text, score, box in kept]
+
+
 def default_engine() -> tuple[Engine, dict[str, str]]:
-    """Build the real OCR engine. Heavy dependency; imported lazily."""
+    """Build the real OCR engine. Heavy dependency; imported lazily.
+
+    Tall images are read with OpenCV, sliced into overlapping windows, and
+    OCR'd window by window; per-window results are re-offset to absolute
+    coordinates and merged.
+    """
     from importlib.metadata import version
 
+    import cv2
     from rapidocr_onnxruntime import RapidOCR
 
     ocr = RapidOCR()
 
+    def raw_to_lines(result, y_offset: int, width: int) -> list[tuple[float, str, float, list[list[int]]]]:
+        out = []
+        for box, text, score in (result or []):
+            pts = [[int(x), int(y) + y_offset] for x, y in box]
+            cy = sum(y for _, y in pts) / len(pts)
+            out.append((cy, str(text), float(score or 0.0), pts))
+        return out
+
     def engine(path: str) -> list[Block]:
-        result, _ = ocr(path)
-        return [
-            {
-                "box": [[int(x), int(y)] for x, y in box],
-                "text": str(text),
-                "score": round(float(score or 0.0), 4),
-            }
-            for box, text, score in (result or [])
-        ]
+        image = cv2.imread(path)
+        if image is None:
+            raise ValueError(f"cannot read image {path}")
+        height, _ = image.shape[:2]
+        lines: list[tuple[float, str, float, list[list[int]]]] = []
+        for start, end in tiles(height):
+            result, _ = ocr(image[start:end, :])
+            lines.extend(raw_to_lines(result, start, image.shape[1]))
+        return merge_lines(lines)
 
     meta = {
         "name": "rapidocr-onnxruntime",
         "version": version("rapidocr-onnxruntime"),
         "model": "PP-OCRv4",
+        "tiling": "1280+256",
     }
     return engine, meta
 
@@ -78,6 +130,19 @@ def load_posts(root: Path, family: str) -> list[dict[str, Any]]:
         if line.strip()
     }
     return [post for post in posts if labels.get(post["id"]) == family]
+
+
+INLINE_IMG = re.compile(r'<img[^>]+src="(https?://[^"]+)"')
+
+
+def image_urls_for(post: dict[str, Any]) -> list[str]:
+    """All images belonging to a post: feed media plus inline images embedded
+    in a type-6 article's longText (their covers alone carry no content)."""
+    urls = list(post.get("image_urls") or [])
+    for src in INLINE_IMG.findall(post.get("long_text") or ""):
+        if src not in urls:
+            urls.append(src)
+    return urls
 
 
 def _local_image(asset_dir: Path, index: int) -> Path | None:
@@ -165,14 +230,18 @@ def run(
             existing: dict[str, Any] = {}
             if out_path.exists():
                 existing = json.loads(out_path.read_text(encoding="utf-8"))
-            cached = {
-                image["index"]: image
-                for image in existing.get("images", [])
-                if image.get("sha256") and image.get("text") is not None
-            }
+            cached: dict[int, dict[str, Any]] = {}
+            if existing.get("engine") == engine_meta:
+                # Same engine fingerprint: reuse per-image OCR by sha256.
+                # A changed engine/meta invalidates every cached line.
+                cached = {
+                    image["index"]: image
+                    for image in existing.get("images", [])
+                    if image.get("sha256") and image.get("text") is not None
+                }
 
             images: list[dict[str, Any]] = []
-            for index, url in enumerate(post["image_urls"], 1):
+            for index, url in enumerate(image_urls_for(post), 1):
                 stats["images"] += 1
                 try:
                     data, downloaded = _image_bytes(asset_dir, index, url, fetch, stats)

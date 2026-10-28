@@ -109,3 +109,61 @@ def test_sniff_ext():
     assert ocr.sniff_ext(b"\xff\xd8\xff\xe0xx") == ".jpg"
     assert ocr.sniff_ext(b"\x89PNG\r\n\x1a\n" + b"xx") == ".png"
     assert ocr.sniff_ext(b"whatever") == ".bin"
+
+
+def test_tiles_cover_the_full_height_with_overlap():
+    assert ocr.tiles(800) == [(0, 800)]
+    spans = ocr.tiles(3000, window=1280, step=1024)
+    assert spans[0][0] == 0
+    assert spans[-1][1] == 3000
+    for (a0, a1), (b0, b1) in zip(spans, spans[1:]):
+        assert a1 > b0  # consecutive windows overlap
+        assert b0 > a0  # and always advance
+
+
+def test_tiles_folds_a_tiny_tail_into_the_previous_window():
+    spans = ocr.tiles(2110, window=1280, step=1024)
+    assert spans == [(0, 1280), (1024, 2110)]
+    assert ocr.tiles(2200, window=1280, step=1024) == [(0, 1280), (1024, 2200), (2048, 2200)]
+
+
+def test_merge_lines_dedupes_overlap_and_keeps_reading_order():
+    lines = [
+        (110.0, "同一行", 0.9, [[0, 100], [9, 100], [9, 120], [0, 120]]),
+        (110.0, "同一行", 0.9, [[0, 100], [9, 100], [9, 120], [0, 120]]),  # overlap duplicate
+        (30.0, "第一行", 0.95, [[0, 20], [9, 20], [9, 40], [0, 40]]),
+        (500.0, "同一行", 0.9, [[0, 490], [9, 490], [9, 510], [0, 510]]),  # distant repeat is real
+        (200.0, "第三行", 0.8, [[0, 190], [9, 190], [9, 210], [0, 210]]),
+    ]
+    blocks = ocr.merge_lines(lines)
+    assert [b["text"] for b in blocks] == ["第一行", "同一行", "第三行", "同一行"]
+    assert blocks[0]["score"] == 0.95
+
+
+def test_engine_meta_change_invalidates_cached_ocr(tmp_path):
+    post, _ = _post("dddd", "update", ["https://ok.166.net/d1"])
+    _seed(tmp_path, [post], [("dddd", "update")])
+
+    def engine(path: str):
+        return [{"box": [[0, 0], [9, 0], [9, 9], [0, 9]], "text": "文本", "score": 0.9}]
+
+    def fetch(url: str) -> bytes:
+        return JPEG_BYTES
+
+    ocr.run(tmp_path, engine=engine, engine_meta={"name": "fake", "version": "1"}, fetch=fetch, delay=0)
+    stats = ocr.run(tmp_path, engine=engine, engine_meta={"name": "fake", "version": "2"}, fetch=fetch, delay=0)
+    assert stats["ocred"] == 1  # re-OCRed because the engine fingerprint changed
+
+
+def test_image_urls_includes_long_text_inline_images():
+    post = {
+        "image_urls": ["https://ok.166.net/cover"],
+        "long_text": '<p>x</p><img src="https://ok.166.net/inline1"><p>y</p>'
+        '<img class="editor-image" src="https://ok.166.net/inline2">'
+        '<img src="https://ok.166.net/cover">',
+    }
+    assert ocr.image_urls_for(post) == [
+        "https://ok.166.net/cover",
+        "https://ok.166.net/inline1",
+        "https://ok.166.net/inline2",
+    ]
