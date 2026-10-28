@@ -35,6 +35,10 @@ def sniff_ext(data: bytes) -> str:
         return ".jpg"
     if data.startswith(PNG_MAGIC):
         return ".png"
+    if data[:4] == b"RIFF" and data[8:12] == b"WEBP":
+        return ".webp"
+    if data[:4] in (b"GIF8",):
+        return ".gif"
     return ".bin"
 
 

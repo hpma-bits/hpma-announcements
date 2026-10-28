@@ -108,6 +108,8 @@ def test_ocr_retries_failed_image_on_next_run(tmp_path):
 def test_sniff_ext():
     assert ocr.sniff_ext(b"\xff\xd8\xff\xe0xx") == ".jpg"
     assert ocr.sniff_ext(b"\x89PNG\r\n\x1a\n" + b"xx") == ".png"
+    assert ocr.sniff_ext(b"RIFF\x24\x00\x00\x00WEBPVP8 ") == ".webp"
+    assert ocr.sniff_ext(b"GIF89a\x80\x02") == ".gif"
     assert ocr.sniff_ext(b"whatever") == ".bin"
 
 
