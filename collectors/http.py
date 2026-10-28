@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import time
-from typing import Mapping
+from typing import Any, Mapping
 
 import requests
 
@@ -63,3 +63,8 @@ def fetch_text(url: str, **kwargs) -> str:
 
 def fetch_bytes(url: str, **kwargs) -> bytes:
     return fetch(url, **kwargs).content
+
+
+def fetch_json(url: str, **kwargs) -> Any:
+    """Fetch ``url`` and decode the body as JSON."""
+    return fetch(url, **kwargs).json()

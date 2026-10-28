@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import sys
 
+from . import dashen
 from .store import Store
 
 
@@ -28,6 +29,15 @@ def _validate(args: argparse.Namespace) -> int:
     return 0
 
 
+def _corpus(args: argparse.Namespace) -> int:
+    summary = dashen.harvest_corpus(args.root, max_pages=args.max_pages)
+    print(
+        f"corpus: {summary['post_count']} posts, {summary['page_count']} pages, "
+        f"changed={summary['changed']}"
+    )
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="hpma-announcements")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -39,6 +49,12 @@ def main(argv: list[str] | None = None) -> int:
     validate = sub.add_parser("validate", help="validate data/*.json")
     validate.add_argument("--root", help="repository root (tests)")
     validate.set_defaults(func=_validate)
+
+    corpus = sub.add_parser("corpus", help="harvest the Dashen post corpus (text only)")
+    corpus.add_argument("--source", default="dashen", choices=["dashen"])
+    corpus.add_argument("--max-pages", type=int, default=None, help="stop after N pages (smoke)")
+    corpus.add_argument("--root", help="repository root (tests)")
+    corpus.set_defaults(func=_corpus)
 
     args = parser.parse_args(argv)
     return args.func(args)
