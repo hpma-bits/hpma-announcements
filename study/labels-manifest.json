@@ -1,0 +1,23 @@
+{
+  "batches": 24,
+  "counts_by_confidence": {
+    "high": 2071,
+    "low": 1,
+    "medium": 252
+  },
+  "counts_by_label": {
+    "event": 1362,
+    "maintenance": 25,
+    "other": 519,
+    "test_server": 73,
+    "update": 162,
+    "version": 183
+  },
+  "labeled": 2324,
+  "labeler": "zcode session subagents",
+  "missing": 0,
+  "post_count": 2324,
+  "problems": [],
+  "prompt_sha256": "979ad26b6e447715c80ab27e1f7cab49f66384456f14c4060f3c86ba5a7b2fc3",
+  "prompt_version": 1
+}
