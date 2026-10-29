@@ -1,0 +1,17 @@
+{
+  "id": "dashen.63cfc13d7442470001d4e94e",
+  "source_ocr": "derived/ocr/dashen/63cfc13d7442470001d4e94e.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 34,
+      "original": "随”、“男-绻心意”&“女-绻心意”。",
+      "corrected": "随”、“男-缱绻心意”&“女-缱绻心意”。",
+      "reason": "漏字“缱”；源图两个发型名均为“缱绻心意”，各补一个“缱”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.63cfc13d7442470001d4e94e 1 34"
+    }
+  ]
+}

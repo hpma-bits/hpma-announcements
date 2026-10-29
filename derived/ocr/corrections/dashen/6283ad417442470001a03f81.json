@@ -1,0 +1,26 @@
+{
+  "id": "dashen.6283ad417442470001a03f81",
+  "source_ocr": "derived/ocr/dashen/6283ad417442470001a03f81.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6283ad417442470001a03f81 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 78,
+      "original": "3、咒语卡“钻心骨”稀有度将由“传说”调整至",
+      "corrected": "3、咒语卡“钻心剜骨”稀有度将由“传说”调整至",
+      "reason": "漏字“剜”；咒语名源图为“钻心剜骨”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6283ad417442470001a03f81 1 78"
+    }
+  ]
+}

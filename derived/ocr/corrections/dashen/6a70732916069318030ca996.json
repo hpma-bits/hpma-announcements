@@ -1,0 +1,71 @@
+{
+  "id": "dashen.6a70732916069318030ca996",
+  "source_ocr": "derived/ocr/dashen/6a70732916069318030ca996.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6a70732916069318030ca996 1 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 3,
+      "original": "外观“终焉密语”、传说品质猫头鹰“幼年褐林号”。",
+      "corrected": "外观“终焉密语”、传说品质猫头鹰“幼年褐林鸮”。",
+      "reason": "号→鸮；源图猫头鹰名为“幼年褐林鸮”（sheet 第77行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6a70732916069318030ca996 2 3"
+    },
+    {
+      "image_index": 3,
+      "block_index": 10,
+      "original": "“S21纯血家族赛季·排红华章”开启！",
+      "corrected": "“S21纯血家族赛季·绯红华章”开启！",
+      "reason": "排→绯；源图赛季名为“绯红华章”（sheet 第85行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6a70732916069318030ca996 3 10"
+    },
+    {
+      "image_index": 3,
+      "block_index": 11,
+      "original": "排红华章",
+      "corrected": "绯红华章",
+      "reason": "排→绯；源图赛季名为“绯红华章”（sheet 第73行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6a70732916069318030ca996 3 11"
+    },
+    {
+      "image_index": 5,
+      "block_index": 24,
+      "original": "活动期间，巫师参与3次茶馆茶聚酒领疲将法觉醒",
+      "corrected": "活动期间，巫师参与3次茶馆茶聚即可领取金币奖励",
+      "reason": "“酒领疲将法觉醒”为水印窜入；源图正文为“即可领取金币奖励”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6a70732916069318030ca996 5 24"
+    },
+    {
+      "image_index": 6,
+      "block_index": 7,
+      "original": "“林中径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6a70732916069318030ca996 6 7"
+    },
+    {
+      "image_index": 6,
+      "block_index": 9,
+      "original": "“林中径”的挑战区域将进行更新，游走在禁林深处",
+      "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6a70732916069318030ca996 6 9"
+    }
+  ]
+}

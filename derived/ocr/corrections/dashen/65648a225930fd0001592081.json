@@ -1,0 +1,26 @@
+{
+  "id": "dashen.65648a225930fd0001592081",
+  "source_ocr": "derived/ocr/dashen/65648a225930fd0001592081.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”（同批次已核验同款封面 logo）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65648a225930fd0001592081 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 23,
+      "original": "外观“巨龙之怒”、传说品质猫头鹰“毛腿渔鸡”、传说品",
+      "corrected": "外观“巨龙之怒”、传说品质猫头鹰“毛腿渔鸮”、传说品",
+      "reason": "鸡→鸮；源图猫头鹰名为“毛腿渔鸮”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65648a225930fd0001592081 1 23"
+    }
+  ]
+}

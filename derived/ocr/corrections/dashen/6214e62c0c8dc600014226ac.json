@@ -1,0 +1,17 @@
+{
+  "id": "dashen.6214e62c0c8dc600014226ac",
+  "source_ocr": "derived/ocr/dashen/6214e62c0c8dc600014226ac.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 2,
+      "block_index": 5,
+      "original": "（注：只要魔咒组合中存在“阿瓦达索命”、“钻心骨”，无论魔咒组",
+      "corrected": "（注：只要魔咒组合中存在“阿瓦达索命”、“钻心剜骨”，无论魔咒组",
+      "reason": "漏字“剜”；咒语名源图为“钻心剜骨”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6214e62c0c8dc600014226ac 2 5"
+    }
+  ]
+}

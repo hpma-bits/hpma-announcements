@@ -1,0 +1,62 @@
+{
+  "id": "dashen.68108a95a38fa44072852946",
+  "source_ocr": "derived/ocr/dashen/68108a95a38fa44072852946.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68108a95a38fa44072852946 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 29,
+      "original": "2.传说召唤卡“石出动”",
+      "corrected": "2.传说召唤卡“石墩出动”",
+      "reason": "漏字“墩”；卡牌名源图为“石墩出动”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68108a95a38fa44072852946 1 29"
+    },
+    {
+      "image_index": 4,
+      "block_index": 19,
+      "original": "6魔力值卡牌：石出动、万咒皆终、阿兹卡班、巨乌贼",
+      "corrected": "6魔力值卡牌：石墩出动、万咒皆终、阿兹卡班、巨乌贼",
+      "reason": "漏字“墩”；卡牌名源图为“石墩出动”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68108a95a38fa44072852946 4 19"
+    },
+    {
+      "image_index": 4,
+      "block_index": 56,
+      "original": "先成在男，达成对应等级可狄持传说品质年命配饰",
+      "corrected": "完成任务，达成对应等级可获得传说品质耳部配饰“幽",
+      "reason": "sheet 第7条；源图与上一 block 为同一行“完成任务，达成对应等级可获得传说品质耳部配饰“幽”",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.68108a95a38fa44072852946 4 56"
+    },
+    {
+      "image_index": 5,
+      "block_index": 15,
+      "original": "“林中径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68108a95a38fa44072852946 5 15"
+    },
+    {
+      "image_index": 5,
+      "block_index": 17,
+      "original": "“林中径”的挑战区域将进行更新，游走在禁林深处",
+      "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68108a95a38fa44072852946 5 17"
+    }
+  ]
+}

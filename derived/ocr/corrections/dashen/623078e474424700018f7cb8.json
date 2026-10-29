@@ -1,0 +1,17 @@
+{
+  "id": "dashen.623078e474424700018f7cb8",
+  "source_ocr": "derived/ocr/dashen/623078e474424700018f7cb8.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 24,
+      "original": "大神@哈利波特魔法宽醒",
+      "corrected": "大神@哈利波特魔法觉醒",
+      "reason": "宽→觉；页脚源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.623078e474424700018f7cb8 1 24"
+    }
+  ]
+}

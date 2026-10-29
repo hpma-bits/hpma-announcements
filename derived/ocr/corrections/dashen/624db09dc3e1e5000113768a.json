@@ -1,0 +1,98 @@
+{
+  "id": "dashen.624db09dc3e1e5000113768a",
+  "source_ocr": "derived/ocr/dashen/624db09dc3e1e5000113768a.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 24,
+      "original": "大神@哈利波特魔法宽醒",
+      "corrected": "大神@哈利波特魔法觉醒",
+      "reason": "宽→觉；页脚水印源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.624db09dc3e1e5000113768a 1 24"
+    },
+    {
+      "image_index": 2,
+      "block_index": 6,
+      "original": "败吾，还可获取大量“奶油雏菊”！",
+      "corrected": "败骆吾，还可获取大量“奶油雏菊”！",
+      "reason": "漏字“骆”；源图为“败骆吾”，承接上一行“每日首次击”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.624db09dc3e1e5000113768a 2 6"
+    },
+    {
+      "image_index": 3,
+      "block_index": 37,
+      "original": "大神@哈利波特魔法宽醒",
+      "corrected": "大神@哈利波特魔法觉醒",
+      "reason": "宽→觉；页脚水印源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.624db09dc3e1e5000113768a 3 37"
+    },
+    {
+      "image_index": 4,
+      "block_index": 25,
+      "original": "【“寻找嗅噢”活动开启】",
+      "corrected": "【“寻找嗅嗅”活动开启】",
+      "reason": "噢→嗅；源图标题为“寻找嗅嗅”（嗅嗅为游戏内神奇动物）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.624db09dc3e1e5000113768a 4 25"
+    },
+    {
+      "image_index": 4,
+      "block_index": 26,
+      "original": "“寻找噢噢”活动开启】",
+      "corrected": "“寻找嗅嗅”活动开启】",
+      "reason": "噢噢→嗅嗅；同一标题被重复识别，源图为“寻找嗅嗅”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.624db09dc3e1e5000113768a 4 26"
+    },
+    {
+      "image_index": 4,
+      "block_index": 29,
+      "original": "帮助海格寻找噢噢，完成后可获得表情包等奖励。",
+      "corrected": "帮助海格寻找嗅嗅，完成后可获得表情包等奖励。",
+      "reason": "噢噢→嗅嗅；sheet 第102条，源图为“帮助海格寻找嗅嗅”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.624db09dc3e1e5000113768a 4 29"
+    },
+    {
+      "image_index": 4,
+      "block_index": 30,
+      "original": "帮助海格寻找噢，完成后可获得表情包等奖励。",
+      "corrected": "帮助海格寻找嗅嗅，完成后可获得表情包等奖励。",
+      "reason": "噢→嗅嗅；源图与上一 block 为同一行“帮助海格寻找嗅嗅”，该 block 漏识一个“嗅”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.624db09dc3e1e5000113768a 4 30"
+    },
+    {
+      "image_index": 5,
+      "block_index": 15,
+      "original": "了贝拉的堕落值积赞规则，使其在面对大量生物进攻时也能够顺利地召唤",
+      "corrected": "了贝拉的堕落值积攒规则，使其在面对大量生物进攻时也能够顺利地召唤",
+      "reason": "赞→攒；源图为“积攒”，与上一 block 为同一行重复识别",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.624db09dc3e1e5000113768a 5 15"
+    },
+    {
+      "image_index": 5,
+      "block_index": 35,
+      "original": "大神@哈利波特魔法宽醒",
+      "corrected": "大神@哈利波特魔法觉醒",
+      "reason": "sheet 第97条；宽→觉，源图水印为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.624db09dc3e1e5000113768a 5 35"
+    },
+    {
+      "image_index": 6,
+      "block_index": 3,
+      "original": "提升至10秒；乌龙出洞将会增加全场己方生物的攻速、移速，同时使已方生",
+      "corrected": "提升至10秒；乌龙出洞将会增加全场己方生物的攻速、移速，同时使己方生",
+      "reason": "已→己；源图为“同时使己方生物”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.624db09dc3e1e5000113768a 6 3"
+    }
+  ]
+}

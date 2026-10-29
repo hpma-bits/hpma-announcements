@@ -1,0 +1,35 @@
+{
+  "id": "dashen.63987af40c8dc60001eec2dc",
+  "source_ocr": "derived/ocr/dashen/63987af40c8dc60001eec2dc.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.63987af40c8dc60001eec2dc 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 27,
+      "original": "召唤|只",
+      "corrected": "召唤1只）。",
+      "reason": "|→1；sheet 第17条，源图为“召唤1只）。”，与下一 block 重复识别",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.63987af40c8dc60001eec2dc 1 27"
+    },
+    {
+      "image_index": 3,
+      "block_index": 27,
+      "original": "大神@哈利波法觉醒",
+      "corrected": "大神@哈利波特魔法觉醒",
+      "reason": "漏“特魔”；源图水印为“大神@哈利波特魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.63987af40c8dc60001eec2dc 3 27"
+    }
+  ]
+}

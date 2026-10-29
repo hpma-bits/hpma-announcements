@@ -1,0 +1,35 @@
+{
+  "id": "dashen.62d6912834083600011b8bfa",
+  "source_ocr": "derived/ocr/dashen/62d6912834083600011b8bfa.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62d6912834083600011b8bfa 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 57,
+      "original": "息的准确性，一旦提交，收货信息将无惠利波特腐法觉醒",
+      "corrected": "息的准确性，一旦提交，收货信息将无法更改",
+      "reason": "“无惠利波特腐法觉醒”为水印窜入；源图正文为“无法更改”（sheet 第157行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62d6912834083600011b8bfa 1 57"
+    },
+    {
+      "image_index": 1,
+      "block_index": 58,
+      "original": "利波特魔法觉醒",
+      "corrected": "大神@哈利波特魔法觉醒",
+      "reason": "水印残缺；源图页脚水印为“大神@哈利波特魔法觉醒”（sheet 第88行）",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.62d6912834083600011b8bfa 1 58"
+    }
+  ]
+}

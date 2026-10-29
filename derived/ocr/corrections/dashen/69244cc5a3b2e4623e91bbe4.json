@@ -1,0 +1,98 @@
+{
+  "id": "dashen.69244cc5a3b2e4623e91bbe4",
+  "source_ocr": "derived/ocr/dashen/69244cc5a3b2e4623e91bbe4.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69244cc5a3b2e4623e91bbe4 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "秘语”、传说品质魔杖外观“权奔交锋”、传说品质猫头",
+      "corrected": "秘语”、传说品质魔杖外观“权弈交锋”、传说品质猫头",
+      "reason": "奔→弈；源图“权弈交锋”（b12 为同一行正确重复块）",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.69244cc5a3b2e4623e91bbe4 1 11"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "鹰“小灰面”。集齐家具套装后，可在巫师空间领取",
+      "corrected": "鹰“小灰面鸮”。集齐家具套装后，可在巫师空间领取",
+      "reason": "漏“鸮”；源图“小灰面鸮”（与 b14 同一行重复块）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69244cc5a3b2e4623e91bbe4 1 13"
+    },
+    {
+      "image_index": 1,
+      "block_index": 14,
+      "original": "鹰“小灰面鸡”。集齐家具套装后，可在巫师空间领取",
+      "corrected": "鹰“小灰面鸮”。集齐家具套装后，可在巫师空间领取",
+      "reason": "鸡→鸮；源图“小灰面鸮”（与 b13 同一行重复块）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69244cc5a3b2e4623e91bbe4 1 14"
+    },
+    {
+      "image_index": 2,
+      "block_index": 26,
+      "original": "买得越多折扣越多，千万不要错过这畅魔法钜惠风暴觉醒",
+      "corrected": "买得越多折扣越多，千万不要错过这场魔法钜惠风暴！",
+      "reason": "sheet 第46行；“这畅”为水印串扰，源图“这场魔法钜惠风暴！”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69244cc5a3b2e4623e91bbe4 2 26"
+    },
+    {
+      "image_index": 4,
+      "block_index": 13,
+      "original": "购买即可获得12月“神奇动物在哪里·1”主题史诗时装：",
+      "corrected": "购买即可获得12月“神奇动物在哪里·I”主题史诗时装：",
+      "reason": "1→I；源图主题编号为罗马数字“I”",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.69244cc5a3b2e4623e91bbe4 4 13"
+    },
+    {
+      "image_index": 5,
+      "block_index": 22,
+      "original": "赛季预告?光与影的执择",
+      "corrected": "赛季预告·光与影的抉择",
+      "reason": "sheet 第28行；?→·、执→抉，源图“赛季预告·光与影的抉择”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69244cc5a3b2e4623e91bbe4 5 22"
+    },
+    {
+      "image_index": 5,
+      "block_index": 26,
+      "original": "“林中径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69244cc5a3b2e4623e91bbe4 5 26"
+    },
+    {
+      "image_index": 5,
+      "block_index": 28,
+      "original": "“林中径”的挑战区域将进行更新，游走在禁林深处",
+      "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69244cc5a3b2e4623e91bbe4 5 28"
+    },
+    {
+      "image_index": 5,
+      "block_index": 35,
+      "original": "每日金币获取量存在上限，此上限5度特魔法觉醒",
+      "corrected": "每日金币获取量存在上限，此上限每日5:00重置。",
+      "reason": "sheet 第178行；“5度特”为水印串扰，源图“此上限每日5:00重置。”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69244cc5a3b2e4623e91bbe4 5 35"
+    }
+  ]
+}

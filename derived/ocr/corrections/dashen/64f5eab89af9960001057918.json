@@ -1,0 +1,26 @@
+{
+  "id": "dashen.64f5eab89af9960001057918",
+  "source_ocr": "derived/ocr/dashen/64f5eab89af9960001057918.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64f5eab89af9960001057918 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 56,
+      "original": "魔杖外观“找球手之获”、传说品质猫头鹰“小领角”",
+      "corrected": "魔杖外观“找球手之获”、传说品质猫头鹰“小领角鸮”",
+      "reason": "漏字“鸮”；源图为“小领角鸮”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64f5eab89af9960001057918 1 56"
+    }
+  ]
+}

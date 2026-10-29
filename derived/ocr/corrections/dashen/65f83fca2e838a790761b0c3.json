@@ -1,0 +1,62 @@
+{
+  "id": "dashen.65f83fca2e838a790761b0c3",
+  "source_ocr": "derived/ocr/dashen/65f83fca2e838a790761b0c3.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65f83fca2e838a790761b0c3 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 4,
+      "original": "“诡藤鹰战”",
+      "corrected": "“诡藤鏖战”",
+      "reason": "鹰→鏖；源图为“诡藤鏖战”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65f83fca2e838a790761b0c3 1 4"
+    },
+    {
+      "image_index": 1,
+      "block_index": 25,
+      "original": "魔杖外观“紫水晶百合”、传说品质猫头鹰“毛腿雕号”",
+      "corrected": "魔杖外观“紫水晶百合”、传说品质猫头鹰“毛腿雕鸮”",
+      "reason": "号→鸮；源图为“毛腿雕鸮”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65f83fca2e838a790761b0c3 1 25"
+    },
+    {
+      "image_index": 1,
+      "block_index": 29,
+      "original": "*“诡藤战”开启！",
+      "corrected": "*“诡藤鏖战”开启！",
+      "reason": "漏识“鏖”；源图为“诡藤鏖战”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65f83fca2e838a790761b0c3 1 29"
+    },
+    {
+      "image_index": 1,
+      "block_index": 72,
+      "original": "已将要售卖的商品。",
+      "corrected": "己将要售卖的商品。",
+      "reason": "已→己；源图为“自己”的“己”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65f83fca2e838a790761b0c3 1 72"
+    },
+    {
+      "image_index": 3,
+      "block_index": 29,
+      "original": "的平均分发给其杀队员。",
+      "corrected": "将在结算时平均分发给其余队员。",
+      "reason": "残片“其杀”，源图整行为此句",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65f83fca2e838a790761b0c3 3 29"
+    }
+  ]
+}

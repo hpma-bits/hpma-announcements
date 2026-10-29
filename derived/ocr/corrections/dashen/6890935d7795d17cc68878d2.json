@@ -1,0 +1,71 @@
+{
+  "id": "dashen.6890935d7795d17cc68878d2",
+  "source_ocr": "derived/ocr/dashen/6890935d7795d17cc68878d2.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6890935d7795d17cc68878d2 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 12,
+      "original": "鹰“小黄脚渔”。集齐家具套装后，可在巫师空间领",
+      "corrected": "鹰“小黄脚渔鸮”。集齐家具套装后，可在巫师空间领",
+      "reason": "漏字“鸮”；源图猫头鹰名为“小黄脚渔鸮”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6890935d7795d17cc68878d2 1 12"
+    },
+    {
+      "image_index": 2,
+      "block_index": 21,
+      "original": "惟幕拉上，台前燃烧着下一次盛大演出的前奏，而非",
+      "corrected": "帷幕拉上，台前燃烧着下一次盛大演出的前奏，而非",
+      "reason": "惟→帷；源图为“帷幕”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6890935d7795d17cc68878d2 2 21"
+    },
+    {
+      "image_index": 3,
+      "block_index": 1,
+      "original": "在时间的隙里，唯余一片深邃的蓝，永恒轻颤，盛",
+      "corrected": "在时间的罅隙里，唯余一片深邃的蓝，永恒轻颤，盛",
+      "reason": "漏字“罅”；源图为“罅隙”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6890935d7795d17cc68878d2 3 1"
+    },
+    {
+      "image_index": 4,
+      "block_index": 14,
+      "original": "巫师可以创建自已的频道，邀请好友畅聊，打造你的",
+      "corrected": "巫师可以创建自己的频道，邀请好友畅聊，打造你的",
+      "reason": "已→己；源图为“自己”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6890935d7795d17cc68878d2 4 14"
+    },
+    {
+      "image_index": 5,
+      "block_index": 0,
+      "original": "w赛季预告·于群星之间",
+      "corrected": "赛季预告·于群星之间",
+      "reason": "删行首误识“w”；源图为“赛季预告·于群星之间”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6890935d7795d17cc68878d2 5 0"
+    },
+    {
+      "image_index": 5,
+      "block_index": 1,
+      "original": "星辰明灭，不祥预言悄然蔓延，默的“天目”为你而",
+      "corrected": "星辰明灭，不祥预言悄然蔓延，缄默的“天目”为你而",
+      "reason": "漏字“缄”；源图为“缄默的‘天目’”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6890935d7795d17cc68878d2 5 1"
+    }
+  ]
+}

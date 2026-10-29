@@ -1,0 +1,80 @@
+{
+  "id": "dashen.69809b37dca1b62657b3c449",
+  "source_ocr": "derived/ocr/dashen/69809b37dca1b62657b3c449.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69809b37dca1b62657b3c449 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "曼德”、光辉咒语卡“古下莱仙火”。",
+      "corrected": "曼德”、光辉咒语卡“古卜莱仙火”。",
+      "reason": "下→卜；源图为“古卜莱仙火”（sheet 第105行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69809b37dca1b62657b3c449 1 11"
+    },
+    {
+      "image_index": 2,
+      "block_index": 33,
+      "original": "通过奇妙羁绊获得的“翼魔”衍生卡生命值与伤害由",
+      "corrected": "通过奇妙羁绊获得的“蜷翼魔”衍生卡生命值与伤害由",
+      "reason": "漏字“蜷”；源图为“蜷翼魔”，与 b0034 同句一致（重叠切片）（sheet 第162行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69809b37dca1b62657b3c449 2 33"
+    },
+    {
+      "image_index": 3,
+      "block_index": 30,
+      "original": "意外访客。嗅、雪貂、球遁鸟等神奇动物正活跃于",
+      "corrected": "意外访客。嗅嗅、雪貂、球遁鸟等神奇动物正活跃于",
+      "reason": "漏字“嗅”；源图为“嗅嗅”，与 b0031 同句一致（重叠切片）（sheet 第163行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69809b37dca1b62657b3c449 3 30"
+    },
+    {
+      "image_index": 4,
+      "block_index": 28,
+      "original": "爪，保准能远购到让你和宠物同时眼睛发亮的惊",
+      "corrected": "爪，保准能选购到让你和宠物同时眼睛发亮的惊",
+      "reason": "远→选；源图为“选购到”（重叠切片）（sheet 第57行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69809b37dca1b62657b3c449 4 28"
+    },
+    {
+      "image_index": 4,
+      "block_index": 44,
+      "original": "独特的玩要动作。购买任意礼包均可获赠宠物好感度",
+      "corrected": "独特的玩耍动作。购买任意礼包均可获赠宠物好感度",
+      "reason": "要→耍；源图为“玩耍动作”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69809b37dca1b62657b3c449 4 44"
+    },
+    {
+      "image_index": 6,
+      "block_index": 0,
+      "original": "“林中径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69809b37dca1b62657b3c449 6 0"
+    },
+    {
+      "image_index": 6,
+      "block_index": 2,
+      "original": "“林中径”的挑战区域将进行更新，游走在禁林深处",
+      "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69809b37dca1b62657b3c449 6 2"
+    }
+  ]
+}

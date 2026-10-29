@@ -1,0 +1,89 @@
+{
+  "id": "dashen.667977af9a58390f4abe8cbd",
+  "source_ocr": "derived/ocr/dashen/667977af9a58390f4abe8cbd.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.667977af9a58390f4abe8cbd 1 1"
+    },
+    {
+      "image_index": 3,
+      "block_index": 1,
+      "original": "*“菜”玩法上线！",
+      "corrected": "*“薅菜”玩法上线！",
+      "reason": "漏“薅”；玩法名源图为“薅菜”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.667977af9a58390f4abe8cbd 3 1"
+    },
+    {
+      "image_index": 3,
+      "block_index": 3,
+      "original": "巫师朋友常向你炫耀“菜壮叶又娇，请您一”？这",
+      "corrected": "巫师朋友常向你炫耀“菜壮叶又娇，请您薅一薅”？这",
+      "reason": "漏两个“薅”；源图为“请您薅一薅”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.667977af9a58390f4abe8cbd 3 3"
+    },
+    {
+      "image_index": 3,
+      "block_index": 6,
+      "original": "师的巫师空间中，一把对方没有来得及收获的植物",
+      "corrected": "师的巫师空间中，薅一把对方没有来得及收获的植物",
+      "reason": "漏“薅”；源图为“薅一把”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.667977af9a58390f4abe8cbd 3 6"
+    },
+    {
+      "image_index": 3,
+      "block_index": 8,
+      "original": "手气好的巫师有可能到同品质同颜色的植物！被",
+      "corrected": "手气好的巫师有可能薅到同品质同颜色的植物！被薅",
+      "reason": "漏两个“薅”；源图为“薅到……被薅”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.667977af9a58390f4abe8cbd 3 8"
+    },
+    {
+      "image_index": 3,
+      "block_index": 10,
+      "original": "草药研究等级没有达到对应等级的话，只能到萎靡",
+      "corrected": "草药研究等级没有达到对应等级的话，只能薅到萎靡",
+      "reason": "漏“薅”；源图为“只能薅到”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.667977af9a58390f4abe8cbd 3 10"
+    },
+    {
+      "image_index": 3,
+      "block_index": 12,
+      "original": "每株植物存在被上限。为了保证先下手为强，主界",
+      "corrected": "每株植物存在被薅上限。为了保证先下手为强，主界",
+      "reason": "漏“薅”；源图为“被薅上限”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.667977af9a58390f4abe8cbd 3 12"
+    },
+    {
+      "image_index": 3,
+      "block_index": 40,
+      "original": "收获时获得的草药学研究经验也将提。@哈利波特魔法觉醒",
+      "corrected": "收获时获得的草药学研究经验也将提升。",
+      "reason": "漏“升”；源图为“也将提升。”，行末水印已去除。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.667977af9a58390f4abe8cbd 3 40"
+    },
+    {
+      "image_index": 4,
+      "block_index": 39,
+      "original": "禁林深处的“八眼巨蛛”等待着与你神决哈利波特魔法觉醒",
+      "corrected": "禁林深处的“八眼巨蛛”等待着与你对决！",
+      "reason": "神→对；“对决”处被水印覆盖，源图可见“与你对决！”。",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.667977af9a58390f4abe8cbd 4 39"
+    }
+  ]
+}

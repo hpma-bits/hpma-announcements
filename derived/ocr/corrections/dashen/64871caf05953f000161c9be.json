@@ -1,0 +1,26 @@
+{
+  "id": "dashen.64871caf05953f000161c9be",
+  "source_ocr": "derived/ocr/dashen/64871caf05953f000161c9be.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "幸运转盘的单次转动消耗200宝石，每期最多",
+      "corrected": "幸运轮盘的单次转动消耗200宝石，每期最多",
+      "reason": "转→轮；源图为“幸运轮盘”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64871caf05953f000161c9be 1 11"
+    },
+    {
+      "image_index": 1,
+      "block_index": 21,
+      "original": "调整：将“神奇动物空间”家具“噢嗅草窝”与“动",
+      "corrected": "调整：将“神奇动物空间”家具“嗅嗅草窝”与“动",
+      "reason": "噢→嗅；源图为“嗅嗅草窝”（与 b0020 为同一行重叠切片）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64871caf05953f000161c9be 1 21"
+    }
+  ]
+}

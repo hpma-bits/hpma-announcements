@@ -1,0 +1,35 @@
+{
+  "id": "dashen.63f4c4ec0c8dc60001bf8858",
+  "source_ocr": "derived/ocr/dashen/63f4c4ec0c8dc60001bf8858.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.63f4c4ec0c8dc60001bf8858 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "时将自动切换wif和移动网络，可大幅改善网络情况，减少",
+      "corrected": "时将自动切换wifi和移动网络，可大幅改善网络情况，减少",
+      "reason": "漏字母“i”；源图为“wifi”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.63f4c4ec0c8dc60001bf8858 1 11"
+    },
+    {
+      "image_index": 1,
+      "block_index": 26,
+      "original": "-对“决斗俱乐部\"玩法中“最终时刻”的光谓优华魔法觉醒",
+      "corrected": "-对“决斗俱乐部”玩法中“最终时刻”的光效进行了调整优化。",
+      "reason": "水印覆盖处源图为“光效进行了调整优化。”；“谓优”为“效进行”之误。",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.63f4c4ec0c8dc60001bf8858 1 26"
+    }
+  ]
+}

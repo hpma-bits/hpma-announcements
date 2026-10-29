@@ -1,0 +1,89 @@
+{
+  "id": "dashen.68d13e54dbba24229025b7b9",
+  "source_ocr": "derived/ocr/dashen/68d13e54dbba24229025b7b9.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 12,
+      "original": "头鹰“小纵纹腹小鹃”。集齐家具套装后，可在巫师空",
+      "corrected": "头鹰“小纵纹腹小鸮”。集齐家具套装后，可在巫师空",
+      "reason": "鹃→鸮；猫头鹰名源图为“小纵纹腹小鸮”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 1 12"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "星辰明灭，不祥预言悄然蔓延，默的“天目”为你而",
+      "corrected": "星辰明灭，不祥预言悄然蔓延，缄默的“天目”为你而",
+      "reason": "漏“缄”；源图为“缄默的‘天目’”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 1 19"
+    },
+    {
+      "image_index": 2,
+      "block_index": 45,
+      "original": "碎片的获取提示每日追加1条，共6@哈利波特魔法觉醒",
+      "corrected": "碎片的获取提示每日追加1条，共6条。",
+      "reason": "水印覆盖处源图为“共6条。”；“@”为“条”之误。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 2 45"
+    },
+    {
+      "image_index": 4,
+      "block_index": 28,
+      "original": "心“咔噻、研！”玩法限时开启",
+      "corrected": "“咔嚓、砰！”玩法限时开启",
+      "reason": "衍字“心”，噻→嚓，研→砰；玩法名源图为“咔嚓、砰！”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 4 28"
+    },
+    {
+      "image_index": 4,
+      "block_index": 29,
+      "original": "“味、研！”玩法限时开启",
+      "corrected": "“咔嚓、砰！”玩法限时开启",
+      "reason": "味→咔嚓，研→砰；玩法名源图为“咔嚓、砰！”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 4 29"
+    },
+    {
+      "image_index": 4,
+      "block_index": 52,
+      "original": "有丰富的实物道具奖励和实装大浆神@哈利波特魔法觉醒",
+      "corrected": "有丰富的实物道具奖励和实装大奖！",
+      "reason": "水印覆盖处源图为“实装大奖！”；“浆神@…”为水印。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 4 52"
+    },
+    {
+      "image_index": 5,
+      "block_index": 22,
+      "original": "“林中径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 5 22"
+    },
+    {
+      "image_index": 5,
+      "block_index": 24,
+      "original": "“林中径”的挑战区域将进行更新，游走在禁林深处",
+      "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 5 24"
+    }
+  ]
+}

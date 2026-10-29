@@ -1,0 +1,26 @@
+{
+  "id": "dashen.62274e860c8dc600014ae3fe",
+  "source_ocr": "derived/ocr/dashen/62274e860c8dc600014ae3fe.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 25,
+      "original": "大神@哈利波特魔法宽醒",
+      "corrected": "大神@哈利波特魔法觉醒",
+      "reason": "宽→觉；水印专名源图为“哈利波特魔法觉醒”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62274e860c8dc600014ae3fe 1 25"
+    },
+    {
+      "image_index": 2,
+      "block_index": 4,
+      "original": "修复了“甜点大师”被“阿不思·邓布利多”强化后召唤物为级的问题。",
+      "corrected": "修复了“甜点大师”被“阿不思·邓布利多”强化后召唤物为1级的问题。",
+      "reason": "漏数字“1”；源图为“召唤物为1级”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62274e860c8dc600014ae3fe 2 4"
+    }
+  ]
+}

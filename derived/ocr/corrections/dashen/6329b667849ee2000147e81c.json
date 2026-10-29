@@ -1,0 +1,53 @@
+{
+  "id": "dashen.6329b667849ee2000147e81c",
+  "source_ocr": "derived/ocr/dashen/6329b667849ee2000147e81c.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6329b667849ee2000147e81c 1 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 31,
+      "original": "尽之前，“烟花秀”玩法将暂时关闪大神@哈利波特魔法觉醒",
+      "corrected": "尽之前，“烟花秀”玩法将暂时关闭大神@哈利波特魔法觉醒",
+      "reason": "闪→闭；源图为“关闭”（水印同行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6329b667849ee2000147e81c 2 31"
+    },
+    {
+      "image_index": 3,
+      "block_index": 4,
+      "original": "沃茨的伙伴们参与试练，共同面对未知的挑战。",
+      "corrected": "沃茨的伙伴们参与试炼，共同面对未知的挑战。",
+      "reason": "练→炼；源图为“试炼”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6329b667849ee2000147e81c 3 4"
+    },
+    {
+      "image_index": 4,
+      "block_index": 18,
+      "original": "并免疫禁效果，幻影移形及乘坐海格摩托车时不包含",
+      "corrected": "并免疫禁锢效果，幻影移形及乘坐海格摩托车时不包含",
+      "reason": "漏识“锢”；源图为“禁锢效果”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6329b667849ee2000147e81c 4 18"
+    },
+    {
+      "image_index": 6,
+      "block_index": 11,
+      "original": "模仿蝎尾兽移动期间，玩家将免疫禁效果。",
+      "corrected": "模仿蝎尾兽移动期间，玩家将免疫禁锢效果。",
+      "reason": "漏识“锢”；源图为“禁锢效果”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6329b667849ee2000147e81c 6 11"
+    }
+  ]
+}

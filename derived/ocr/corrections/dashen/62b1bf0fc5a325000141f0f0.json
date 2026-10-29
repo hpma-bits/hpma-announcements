@@ -1,0 +1,71 @@
+{
+  "id": "dashen.62b1bf0fc5a325000141f0f0",
+  "source_ocr": "derived/ocr/dashen/62b1bf0fc5a325000141f0f0.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 9,
+      "original": "其中就有最近风巫师界，引领流行的“染发灵”。",
+      "corrected": "其中就有最近风靡巫师界，引领流行的“染发灵”。",
+      "reason": "漏字“靡”；源图为“风靡巫师界”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62b1bf0fc5a325000141f0f0 1 9"
+    },
+    {
+      "image_index": 2,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62b1bf0fc5a325000141f0f0 2 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 18,
+      "original": "5）复制成双任务，也可以在决斗派大神完成合利波特魔法觉醒",
+      "corrected": "5）复制成双任务，也可以在决斗派对中完成。",
+      "reason": "sheet 第84条；源图正文为“在决斗派对中完成。”，“中完成”与水印重叠",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.62b1bf0fc5a325000141f0f0 2 18"
+    },
+    {
+      "image_index": 4,
+      "block_index": 3,
+      "original": "1、时装“黑龙驯养者”额外赠送耳饰配饰“深渊梦”",
+      "corrected": "1、时装“黑龙驯养者”额外赠送耳饰配饰“深渊梦魇”",
+      "reason": "漏字“魇”；耳饰名源图为“深渊梦魇”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62b1bf0fc5a325000141f0f0 4 3"
+    },
+    {
+      "image_index": 5,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62b1bf0fc5a325000141f0f0 5 1"
+    },
+    {
+      "image_index": 5,
+      "block_index": 3,
+      "original": "1、修复了昏昏倒地一段命中被变形为免子的单位后，",
+      "corrected": "1、修复了昏昏倒地一段命中被变形为兔子的单位后，",
+      "reason": "免→兔；源图为“兔子”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62b1bf0fc5a325000141f0f0 5 3"
+    },
+    {
+      "image_index": 5,
+      "block_index": 20,
+      "original": "款上",
+      "corrected": "敬上",
+      "reason": "款→敬；sheet 第3条，署名源图为“敬上”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62b1bf0fc5a325000141f0f0 5 20"
+    }
+  ]
+}

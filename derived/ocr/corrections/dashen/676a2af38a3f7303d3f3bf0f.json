@@ -1,0 +1,26 @@
+{
+  "id": "dashen.676a2af38a3f7303d3f3bf0f",
+  "source_ocr": "derived/ocr/dashen/676a2af38a3f7303d3f3bf0f.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.676a2af38a3f7303d3f3bf0f 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 76,
+      "original": "“巧5克力蛙画片”更新",
+      "corrected": "“巧克力蛙画片”更新",
+      "reason": "5→克；源图“巧克力蛙画片”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.676a2af38a3f7303d3f3bf0f 1 76"
+    }
+  ]
+}

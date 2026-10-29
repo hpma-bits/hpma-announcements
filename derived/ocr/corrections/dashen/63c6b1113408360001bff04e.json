@@ -1,0 +1,53 @@
+{
+  "id": "dashen.63c6b1113408360001bff04e",
+  "source_ocr": "derived/ocr/dashen/63c6b1113408360001bff04e.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.63c6b1113408360001bff04e 1 1"
+    },
+    {
+      "image_index": 3,
+      "block_index": 0,
+      "original": "“陷吾来迎”活动开启",
+      "corrected": "“骆吾来迎”活动开启",
+      "reason": "陷→骆；源图为“骆吾来迎”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.63c6b1113408360001bff04e 3 0"
+    },
+    {
+      "image_index": 3,
+      "block_index": 11,
+      "original": "转化为“吾”。通过阅读获得“骆吾”的初始概率为",
+      "corrected": "转化为“骆吾”。通过阅读获得“骆吾”的初始概率为",
+      "reason": "漏识“骆”；源图为“骆吾”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.63c6b1113408360001bff04e 3 11"
+    },
+    {
+      "image_index": 3,
+      "block_index": 39,
+      "original": "月25000:00",
+      "corrected": "活动时间：1月18日维护后－1月25日05:00",
+      "reason": "低置信度重复残片，源图整行为活动时间",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.63c6b1113408360001bff04e 3 39"
+    },
+    {
+      "image_index": 3,
+      "block_index": 44,
+      "original": "及魔咒“吾”和“狼牙飞碟”，通关试炼关卡。",
+      "corrected": "及魔咒“骆吾”和“狼牙飞碟”，通关试炼关卡。",
+      "reason": "漏识“骆”；源图为“骆吾”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.63c6b1113408360001bff04e 3 44"
+    }
+  ]
+}

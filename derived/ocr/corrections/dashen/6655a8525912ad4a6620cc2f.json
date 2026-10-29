@@ -1,0 +1,80 @@
+{
+  "id": "dashen.6655a8525912ad4a6620cc2f",
+  "source_ocr": "derived/ocr/dashen/6655a8525912ad4a6620cc2f.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6655a8525912ad4a6620cc2f 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 21,
+      "original": "心“马形水怪”魔咒试炼开启",
+      "corrected": "“马形水怪”魔咒试炼开启",
+      "reason": "衍字“心”；源图标题行首为装饰花符，无“心”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6655a8525912ad4a6620cc2f 1 21"
+    },
+    {
+      "image_index": 1,
+      "block_index": 49,
+      "original": "w草药学家·水生植物上线！",
+      "corrected": "草药学家·水生植物上线！",
+      "reason": "衍字“w”；源图标题行首为装饰花符，无“w”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6655a8525912ad4a6620cc2f 1 49"
+    },
+    {
+      "image_index": 2,
+      "block_index": 33,
+      "original": "“林中径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6655a8525912ad4a6620cc2f 2 33"
+    },
+    {
+      "image_index": 2,
+      "block_index": 34,
+      "original": "“林中溪径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "溪→蹊；区域名源图为“林中蹊径”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6655a8525912ad4a6620cc2f 2 34"
+    },
+    {
+      "image_index": 2,
+      "block_index": 36,
+      "original": "维护后，“林中径”的挑战区域将进行更新，游走在",
+      "corrected": "维护后，“林中蹊径”的挑战区域将进行更新，游走在",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6655a8525912ad4a6620cc2f 2 36"
+    },
+    {
+      "image_index": 2,
+      "block_index": 47,
+      "original": "妆容“甜薰粉棕”、耳饰“银苦”。",
+      "corrected": "妆容“甜薰粉棕”、耳饰“银茭”。",
+      "reason": "苦→茭；耳饰名源图为“银茭”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6655a8525912ad4a6620cc2f 2 47"
+    },
+    {
+      "image_index": 3,
+      "block_index": 43,
+      "original": "(3)优化了植物采集的体验，毒牙天竺葵、泡泡豆英和",
+      "corrected": "(3)优化了植物采集的体验，毒牙天竺葵、泡泡豆荚和",
+      "reason": "英→荚；植物名源图为“泡泡豆荚”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6655a8525912ad4a6620cc2f 3 43"
+    }
+  ]
+}

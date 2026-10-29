@@ -1,0 +1,71 @@
+{
+  "id": "dashen.65c0f65053b12a0001635ee1",
+  "source_ocr": "derived/ocr/dashen/65c0f65053b12a0001635ee1.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65c0f65053b12a0001635ee1 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 4,
+      "original": "光影干忆",
+      "corrected": "光影千忆",
+      "reason": "干→千；源图活动名为“光影千忆”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65c0f65053b12a0001635ee1 1 4"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "及“音日重现-阿不思·邓布利多”。",
+      "corrected": "及“昔日重现-阿不思·邓布利多”。",
+      "reason": "音日→昔日；源图为“昔日重现”（sheet 第22行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65c0f65053b12a0001635ee1 1 11"
+    },
+    {
+      "image_index": 3,
+      "block_index": 23,
+      "original": "本期大奖：传说品质时装“泡泡豆英”、传说品质魔杖",
+      "corrected": "本期大奖：传说品质时装“泡泡豆荚”、传说品质魔杖",
+      "reason": "英→荚；源图时装名为“泡泡豆荚”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65c0f65053b12a0001635ee1 3 23"
+    },
+    {
+      "image_index": 3,
+      "block_index": 25,
+      "original": "外观“缭绕白鲜”、传说品质猫头鹰“小乳黄鹰鸡”。",
+      "corrected": "外观“缭绕白鲜”、传说品质猫头鹰“小乳黄鹰鸮”。",
+      "reason": "鸡→鸮；源图猫头鹰名为“小乳黄鹰鸮”（sheet 第139行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65c0f65053b12a0001635ee1 3 25"
+    },
+    {
+      "image_index": 3,
+      "block_index": 81,
+      "original": "们“赛季商店”系统上线！",
+      "corrected": "“赛季商店”系统上线！",
+      "reason": "衍“们”；源图标题为“赛季商店”系统上线（sheet 第48行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65c0f65053b12a0001635ee1 3 81"
+    },
+    {
+      "image_index": 3,
+      "block_index": 125,
+      "original": "WPC版正式上线！",
+      "corrected": "PC版正式上线！",
+      "reason": "衍“W”；源图为“PC版正式上线”（sheet 第31行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65c0f65053b12a0001635ee1 3 125"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "dashen.65ae4516c4b3630001bb2772",
+  "source_ocr": "derived/ocr/dashen/65ae4516c4b3630001bb2772.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65ae4516c4b3630001bb2772 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 24,
+      "original": "外观“路灯淡朦”、传说品质猫头鹰“林雕号”、传说品质",
+      "corrected": "外观“路灯淡朦”、传说品质猫头鹰“林雕鸮”、传说品质",
+      "reason": "号→鸮；猫头鹰名源图为“林雕鸮”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65ae4516c4b3630001bb2772 1 24"
+    }
+  ]
+}

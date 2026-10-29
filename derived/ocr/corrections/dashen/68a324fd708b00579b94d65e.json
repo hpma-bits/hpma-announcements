@@ -1,0 +1,116 @@
+{
+  "id": "dashen.68a324fd708b00579b94d65e",
+  "source_ocr": "derived/ocr/dashen/68a324fd708b00579b94d65e.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68a324fd708b00579b94d65e 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 7,
+      "original": "利不与笔尖",
+      "corrected": "利爪与笔尖",
+      "reason": "不→爪；源图为“利爪与笔尖”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68a324fd708b00579b94d65e 1 7"
+    },
+    {
+      "image_index": 1,
+      "block_index": 40,
+      "original": "毒液每击败1个自标，就会在自标位置召唤1只剧",
+      "corrected": "毒液每击败1个目标，就会在目标位置召唤1只剧",
+      "reason": "自→目（两处）；源图为“目标”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68a324fd708b00579b94d65e 1 40"
+    },
+    {
+      "image_index": 1,
+      "block_index": 45,
+      "original": "1.传说召唤卡“凤凰”：凤凰湿重生的次数增加1次。",
+      "corrected": "1.传说召唤卡“凤凰”：凤凰涅槃重生的次数增加1次。",
+      "reason": "湿→涅槃；源图为“凤凰涅槃重生”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68a324fd708b00579b94d65e 1 45"
+    },
+    {
+      "image_index": 1,
+      "block_index": 46,
+      "original": "1.传说召唤卡“凤凰”：凤凰涅重生的次数增加1次。",
+      "corrected": "1.传说召唤卡“凤凰”：凤凰涅槃重生的次数增加1次。",
+      "reason": "漏字“槃”；源图为“凤凰涅槃重生”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68a324fd708b00579b94d65e 1 46"
+    },
+    {
+      "image_index": 2,
+      "block_index": 4,
+      "original": "星辰明灭，不祥预言悄然蔓延，默的“天目”为你而",
+      "corrected": "星辰明灭，不祥预言悄然蔓延，缄默的“天目”为你而",
+      "reason": "漏字“缄”；源图为“缄默的‘天目’”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68a324fd708b00579b94d65e 2 4"
+    },
+    {
+      "image_index": 3,
+      "block_index": 33,
+      "original": "*“徜繁星夜·主题舞会”活动开启！",
+      "corrected": "*“徜徉繁星夜·主题舞会”活动开启！",
+      "reason": "漏字“徉”；源图为“徜徉繁星夜·主题舞会”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68a324fd708b00579b94d65e 3 33"
+    },
+    {
+      "image_index": 4,
+      "block_index": 57,
+      "original": "心全自动魔法牌“占星奇旅”版本上线！",
+      "corrected": "全自动魔法牌“占星奇旅”版本上线！",
+      "reason": "删行首衍字“心”；源图行首为装饰花纹",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68a324fd708b00579b94d65e 4 57"
+    },
+    {
+      "image_index": 4,
+      "block_index": 84,
+      "original": "5魔力值卡牌：澳洲蛋白眼幼龙、石出动",
+      "corrected": "5魔力值卡牌：澳洲蛋白眼幼龙、石墩出动",
+      "reason": "漏字“墩”；卡牌名源图为“石墩出动”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68a324fd708b00579b94d65e 4 84"
+    },
+    {
+      "image_index": 4,
+      "block_index": 85,
+      "original": "力值卡牌：澳洲蛋白眼幼龙、石徽出动",
+      "corrected": "力值卡牌：澳洲蛋白眼幼龙、石墩出动",
+      "reason": "徽→墩；源图为“石墩出动”（与 b0084 为同一行重叠切片）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68a324fd708b00579b94d65e 4 85"
+    },
+    {
+      "image_index": 5,
+      "block_index": 61,
+      "original": "“林中径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68a324fd708b00579b94d65e 5 61"
+    },
+    {
+      "image_index": 5,
+      "block_index": 63,
+      "original": "“林中径”的挑战区域将进行更新，游走在禁林深处",
+      "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.68a324fd708b00579b94d65e 5 63"
+    }
+  ]
+}

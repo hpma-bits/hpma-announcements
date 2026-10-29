@@ -1,0 +1,71 @@
+{
+  "id": "dashen.66e929039dbf45199e5e3402",
+  "source_ocr": "derived/ocr/dashen/66e929039dbf45199e5e3402.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.66e929039dbf45199e5e3402 1 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 15,
+      "original": "通过奇妙羁绊获得的行生卡牌中新增“翼魔”，且上",
+      "corrected": "通过奇妙羁绊获得的衍生卡牌中新增“蜷翼魔”，且上",
+      "reason": "行→衍、漏“蜷”；源图为“衍生卡牌中新增‘蜷翼魔’”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.66e929039dbf45199e5e3402 2 15"
+    },
+    {
+      "image_index": 3,
+      "block_index": 10,
+      "original": "液让大家胃口全无、梦连连。",
+      "corrected": "液让大家胃口全无、噩梦连连。",
+      "reason": "漏字“噩”；源图为“噩梦连连”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.66e929039dbf45199e5e3402 3 10"
+    },
+    {
+      "image_index": 3,
+      "block_index": 48,
+      "original": "“掠夺者勋章”将按1：50的比例转化为回响晶石，“噢嗅",
+      "corrected": "“掠夺者勋章”将按1：50的比例转化为回响晶石，“嗅嗅",
+      "reason": "噢→嗅；源图为“嗅嗅皇冠”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.66e929039dbf45199e5e3402 3 48"
+    },
+    {
+      "image_index": 3,
+      "block_index": 50,
+      "original": "式也不再产出掠夺者勋章和噢嗅皇冠，改为掉落战斗",
+      "corrected": "式也不再产出掠夺者勋章和嗅嗅皇冠，改为掉落战斗",
+      "reason": "噢→嗅；道具名源图为“嗅嗅皇冠”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.66e929039dbf45199e5e3402 3 50"
+    },
+    {
+      "image_index": 4,
+      "block_index": 28,
+      "original": "“林中径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.66e929039dbf45199e5e3402 4 28"
+    },
+    {
+      "image_index": 4,
+      "block_index": 30,
+      "original": "“林中径”的挑战区域将进行更新，游走在禁林深处",
+      "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.66e929039dbf45199e5e3402 4 30"
+    }
+  ]
+}

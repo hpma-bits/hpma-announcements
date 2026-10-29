@@ -1,0 +1,89 @@
+{
+  "id": "dashen.69b7f85d58771d514315a136",
+  "source_ocr": "derived/ocr/dashen/69b7f85d58771d514315a136.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69b7f85d58771d514315a136 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 12,
+      "original": "猫头鹰“兰屿角号”。集齐家具套装后，可在巫师空",
+      "corrected": "猫头鹰“兰屿角鸮”。集齐家具套装后，可在巫师空",
+      "reason": "号→鸮；源图猫头鹰名为“兰屿角鸮”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69b7f85d58771d514315a136 1 12"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "猫头鹰“兰屿角”。集齐家具套装后，可在巫师空",
+      "corrected": "猫头鹰“兰屿角鸮”。集齐家具套装后，可在巫师空",
+      "reason": "漏字“鸮”；源图猫头鹰名为“兰屿角鸮”（与 b0012 为同一行重叠切片）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69b7f85d58771d514315a136 1 13"
+    },
+    {
+      "image_index": 2,
+      "block_index": 4,
+      "original": "学校附近突然涌入大量神奇动物，其中竞有一只通",
+      "corrected": "学校附近突然涌入大量神奇动物，其中竟有一只通",
+      "reason": "竞→竟；源图为“竟有”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69b7f85d58771d514315a136 2 4"
+    },
+    {
+      "image_index": 2,
+      "block_index": 5,
+      "original": "体漆黑、气息孩人的巨龙！",
+      "corrected": "体漆黑、气息骇人的巨龙！",
+      "reason": "孩→骇；源图为“骇人”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69b7f85d58771d514315a136 2 5"
+    },
+    {
+      "image_index": 4,
+      "block_index": 0,
+      "original": "“林中径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69b7f85d58771d514315a136 4 0"
+    },
+    {
+      "image_index": 4,
+      "block_index": 2,
+      "original": "“林中径”的挑战区域将进行更新，游走在禁林深",
+      "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69b7f85d58771d514315a136 4 2"
+    },
+    {
+      "image_index": 5,
+      "block_index": 18,
+      "original": "9.疯狂藤蔓的碧找安德烈学习了先进的销售技",
+      "corrected": "9.疯狂藤蔓的葭碧找安德烈学习了先进的销售技",
+      "reason": "漏字“葭”；源图 NPC 名为“葭碧”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69b7f85d58771d514315a136 5 18"
+    },
+    {
+      "image_index": 5,
+      "block_index": 20,
+      "original": "碧将种子外卖到家服务了。",
+      "corrected": "葭碧将种子外卖到家服务了。",
+      "reason": "漏字“葭”；源图为“葭碧将种子外卖到家服务了”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.69b7f85d58771d514315a136 5 20"
+    }
+  ]
+}

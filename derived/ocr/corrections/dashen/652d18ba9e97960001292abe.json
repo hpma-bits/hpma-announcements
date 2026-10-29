@@ -1,0 +1,35 @@
+{
+  "id": "dashen.652d18ba9e97960001292abe",
+  "source_ocr": "derived/ocr/dashen/652d18ba9e97960001292abe.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”（同批次已核验同款封面 logo）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.652d18ba9e97960001292abe 1 1"
+    },
+    {
+      "image_index": 3,
+      "block_index": 17,
+      "original": "心签到入口更换",
+      "corrected": "签到入口更换",
+      "reason": "衍字“心”；源图标题为“签到入口更换”，行首无“心”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.652d18ba9e97960001292abe 3 17"
+    },
+    {
+      "image_index": 3,
+      "block_index": 26,
+      "original": "非组队状态下，巫帅在课",
+      "corrected": "非组队状态下，巫师在课",
+      "reason": "帅→师；源图为“巫师”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.652d18ba9e97960001292abe 3 26"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "dashen.660ab22a9c7ecc1358e8ac18",
+  "source_ocr": "derived/ocr/dashen/660ab22a9c7ecc1358e8ac18.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.660ab22a9c7ecc1358e8ac18 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 51,
+      "original": "在温暖的季节中，与好友一起探索减吧哈利波特魔法觉醒",
+      "corrected": "在温暖的季节中，与好友一起探索城堡吧！",
+      "reason": "“减吧”为水印串扰；源图正文为“探索城堡吧！”，中部被水印覆盖",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.660ab22a9c7ecc1358e8ac18 1 51"
+    },
+    {
+      "image_index": 2,
+      "block_index": 74,
+      "original": "7.“集中效应”——咒语伤害增加效果赢系%觉醒",
+      "corrected": "7.“集中效应”——咒语伤害增加效果由60%提高至80%",
+      "reason": "“赢系%”为水印串扰；源图为“由60%提高至80%”，数字被水印半遮",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.660ab22a9c7ecc1358e8ac18 2 74"
+    }
+  ]
+}

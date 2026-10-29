@@ -1,0 +1,71 @@
+{
+  "id": "dashen.6385ee69744247000130be78",
+  "source_ocr": "derived/ocr/dashen/6385ee69744247000130be78.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 29,
+      "original": "“染发灵”发型更新u",
+      "corrected": "“染发灵”发型更新",
+      "reason": "衍字“u”；源图行末为装饰花纹，无字母 u（sheet 第82行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6385ee69744247000130be78 1 29"
+    },
+    {
+      "image_index": 2,
+      "block_index": 3,
+      "original": "本期大奖：传说品质时装“与骂同栖”、传说品质魔杖",
+      "corrected": "本期大奖：传说品质时装“与鸮同栖”、传说品质魔杖",
+      "reason": "骂→鸮；源图时装名为“与鸮同栖”，与下文“与鸮同栖·冰爪/银羽”一致",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6385ee69744247000130be78 2 3"
+    },
+    {
+      "image_index": 2,
+      "block_index": 7,
+      "original": "本期传说品质时装“与骂同栖”还会附赠一只猫头鹰“小",
+      "corrected": "本期传说品质时装“与鸮同栖”还会附赠一只猫头鹰“小",
+      "reason": "骂→鸮；源图为“与鸮同栖”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6385ee69744247000130be78 2 7"
+    },
+    {
+      "image_index": 2,
+      "block_index": 8,
+      "original": "眼镜鸡”哦。",
+      "corrected": "眼镜鸮”哦。",
+      "reason": "鸡→鸮；源图为猫头鹰“小眼镜鸮”（sheet 第40行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6385ee69744247000130be78 2 8"
+    },
+    {
+      "image_index": 2,
+      "block_index": 12,
+      "original": "新增“与同栖”焕新款时装：“与鹃同栖·冰爪”",
+      "corrected": "新增“与鸮同栖”焕新款时装：“与鸮同栖·冰爪”",
+      "reason": "漏“鸮”、鹃→鸮；源图为“与鸮同栖”焕新款",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6385ee69744247000130be78 2 12"
+    },
+    {
+      "image_index": 2,
+      "block_index": 13,
+      "original": "“与号同栖·银羽”。",
+      "corrected": "“与鸮同栖·银羽”。",
+      "reason": "号→鸮；源图为“与鸮同栖·银羽”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6385ee69744247000130be78 2 13"
+    },
+    {
+      "image_index": 2,
+      "block_index": 14,
+      "original": "“海底咏者”、“与骂同栖”原版时装上架同时，对应的",
+      "corrected": "“海底咏者”、“与鸮同栖”原版时装上架同时，对应的",
+      "reason": "骂→鸮；源图为“与鸮同栖”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6385ee69744247000130be78 2 14"
+    }
+  ]
+}

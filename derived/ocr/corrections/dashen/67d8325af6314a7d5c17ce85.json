@@ -1,0 +1,125 @@
+{
+  "id": "dashen.67d8325af6314a7d5c17ce85",
+  "source_ocr": "derived/ocr/dashen/67d8325af6314a7d5c17ce85.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67d8325af6314a7d5c17ce85 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 10,
+      "original": "杖外观“顽石绽繁花”、传说品质猫头鹰“长须”。",
+      "corrected": "杖外观“顽石绽繁花”、传说品质猫头鹰“长须鸮”。",
+      "reason": "漏字“鸮”；源图为猫头鹰“长须鸮”（sheet 第173行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67d8325af6314a7d5c17ce85 1 10"
+    },
+    {
+      "image_index": 2,
+      "block_index": 12,
+      "original": "嘻乐奇旅",
+      "corrected": "嬉乐奇旅",
+      "reason": "嘻→嬉；源图活动标题为“嬉乐奇旅”（sheet 第78行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67d8325af6314a7d5c17ce85 2 12"
+    },
+    {
+      "image_index": 2,
+      "block_index": 19,
+      "original": "米“羽毛笔回收计划”开启！",
+      "corrected": "“羽毛笔回收计划”开启！",
+      "reason": "衍字“米”；源图行首为星形装饰，无“米”（sheet 第96行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67d8325af6314a7d5c17ce85 2 19"
+    },
+    {
+      "image_index": 3,
+      "block_index": 2,
+      "original": "活动期间，巫师可画出属于自已的幸运彩蛋，参与复",
+      "corrected": "活动期间，巫师可画出属于自己的幸运彩蛋，参与复",
+      "reason": "已→己；源图为“属于自己”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67d8325af6314a7d5c17ce85 3 2"
+    },
+    {
+      "image_index": 3,
+      "block_index": 26,
+      "original": "“5解高布石”活动开启！",
+      "corrected": "“巧解高布石”活动开启！",
+      "reason": "5→巧；源图活动名为“巧解高布石”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67d8325af6314a7d5c17ce85 3 26"
+    },
+    {
+      "image_index": 3,
+      "block_index": 41,
+      "original": "尝试、设计与装点自已的帽子。装饰材料可在格瑞宝",
+      "corrected": "尝试、设计与装点自己的帽子。装饰材料可在格瑞宝",
+      "reason": "已→己；源图为“装点自己的帽子”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67d8325af6314a7d5c17ce85 3 41"
+    },
+    {
+      "image_index": 4,
+      "block_index": 9,
+      "original": "苏“共绘风景”活动开启",
+      "corrected": "“共绘风景”活动开启",
+      "reason": "衍字“苏”；源图行首为装饰花纹，无“苏”（sheet 第73行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67d8325af6314a7d5c17ce85 4 9"
+    },
+    {
+      "image_index": 4,
+      "block_index": 36,
+      "original": "“周未福利”活动开启！",
+      "corrected": "“周末福利”活动开启！",
+      "reason": "未→末；源图为“周末福利”（sheet 第169行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67d8325af6314a7d5c17ce85 4 36"
+    },
+    {
+      "image_index": 4,
+      "block_index": 42,
+      "original": "“林中径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67d8325af6314a7d5c17ce85 4 42"
+    },
+    {
+      "image_index": 4,
+      "block_index": 44,
+      "original": "“林中径”的挑战区域将进行更新，游走在禁林深处",
+      "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67d8325af6314a7d5c17ce85 4 44"
+    },
+    {
+      "image_index": 5,
+      "block_index": 11,
+      "original": "棋子和已方棋子的区别更明显。",
+      "corrected": "棋子和己方棋子的区别更明显。",
+      "reason": "已→己；源图为“己方棋子”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67d8325af6314a7d5c17ce85 5 11"
+    },
+    {
+      "image_index": 6,
+      "block_index": 26,
+      "original": "新已方棋子完成赛季成就任务的问题。",
+      "corrected": "新己方棋子完成赛季成就任务的问题。",
+      "reason": "已→己；源图为“己方棋子”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67d8325af6314a7d5c17ce85 6 26"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "dashen.6989a694759e573fe467fe54",
+  "source_ocr": "derived/ocr/dashen/6989a694759e573fe467fe54.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6989a694759e573fe467fe54 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 10,
+      "original": "杖外观“墨启灵思”、传说品质猫头鹰“球形领角号”。",
+      "corrected": "杖外观“墨启灵思”、传说品质猫头鹰“球形领角鸮”。",
+      "reason": "号→鸮；猫头鹰名源图为“球形领角鸮”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6989a694759e573fe467fe54 1 10"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "体漆黑、气息孩人的巨龙！",
+      "corrected": "体漆黑、气息骇人的巨龙！",
+      "reason": "孩→骇；源图为“气息骇人”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6989a694759e573fe467fe54 1 19"
+    },
+    {
+      "image_index": 1,
+      "block_index": 51,
+      "original": "饰物，更有礼堂穹顶魔法烟花，邀迎绣鏡法觉醒",
+      "corrected": "饰物，更有礼堂穹顶魔法烟花，邀你共迎锦绣祥年。",
+      "reason": "水印覆盖处源图为“邀你共迎锦绣祥年。”；“邀迎绣鏡”为误识。",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.6989a694759e573fe467fe54 1 51"
+    },
+    {
+      "image_index": 2,
+      "block_index": 26,
+      "original": "巫师！同时，师也可以查看和点赞其他巫师的祝",
+      "corrected": "巫师！同时，巫师也可以查看和点赞其他巫师的祝",
+      "reason": "漏“巫”；源图为“巫师也可以查看”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6989a694759e573fe467fe54 2 26"
+    },
+    {
+      "image_index": 2,
+      "block_index": 84,
+      "original": "-右上角领封面-右上角兑换-输入庆神@哈利波特魔法觉醒",
+      "corrected": "-右上角领封面-右上角兑换-输入兑换码",
+      "reason": "水印覆盖处源图为“输入兑换码”；“庆神@…”为水印。",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.6989a694759e573fe467fe54 2 84"
+    },
+    {
+      "image_index": 3,
+      "block_index": 80,
+      "original": "公示时间：2026年3月1日0:00-3月3神00啥利波特魔法觉醒",
+      "corrected": "公示时间：2026年3月1日0:00-3月3日0:00",
+      "reason": "水印覆盖处源图为“3月3日0:00”；“神00啥利波特”为误识。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6989a694759e573fe467fe54 3 80"
+    },
+    {
+      "image_index": 4,
+      "block_index": 81,
+      "original": "在白雪纷飞的季节，一起回忆更多子的律特魔法觉醒",
+      "corrected": "在白雪纷飞的季节，一起回忆更多美好的旋律吧！",
+      "reason": "水印覆盖处源图为“更多美好的旋律吧！”；“子的律特”为误识。",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.6989a694759e573fe467fe54 4 81"
+    },
+    {
+      "image_index": 5,
+      "block_index": 0,
+      "original": "“味、砰！”玩法限时开启",
+      "corrected": "“咔嚓、砰！”玩法限时开启",
+      "reason": "味→咔嚓；玩法名源图为“咔嚓、砰！”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6989a694759e573fe467fe54 5 0"
+    },
+    {
+      "image_index": 5,
+      "block_index": 7,
+      "original": "本次开启带来了神奇动物模特变形免和月痴兽，每",
+      "corrected": "本次开启带来了神奇动物模特变形兔和月痴兽，每",
+      "reason": "免→兔；宠物名源图为“变形兔”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6989a694759e573fe467fe54 5 7"
+    },
+    {
+      "image_index": 5,
+      "block_index": 42,
+      "original": "“林中径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6989a694759e573fe467fe54 5 42"
+    },
+    {
+      "image_index": 5,
+      "block_index": 44,
+      "original": "“林中径”的挑战区域将进行更新，游走在禁林深",
+      "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6989a694759e573fe467fe54 5 44"
+    },
+    {
+      "image_index": 6,
+      "block_index": 30,
+      "original": "（5）调整变形免在巫师肩上的停靠位置，提升其可",
+      "corrected": "（5）调整变形兔在巫师肩上的停靠位置，提升其可",
+      "reason": "免→兔；宠物名源图为“变形兔”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6989a694759e573fe467fe54 6 30"
+    },
+    {
+      "image_index": 6,
+      "block_index": 66,
+      "original": "（6）修复了巫师携带变形免进入黑湖场景时变形兔",
+      "corrected": "（6）修复了巫师携带变形兔进入黑湖场景时变形兔",
+      "reason": "免→兔；宠物名源图为“变形兔”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6989a694759e573fe467fe54 6 66"
+    }
+  ]
+}

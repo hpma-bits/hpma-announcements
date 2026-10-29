@@ -1,0 +1,71 @@
+{
+  "id": "dashen.687e2b3bbcba18627bf53c3f",
+  "source_ocr": "derived/ocr/dashen/687e2b3bbcba18627bf53c3f.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.687e2b3bbcba18627bf53c3f 1 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 37,
+      "original": "师仍会被视为原落选教授的支持者神@哈利波特魔法觉醒",
+      "corrected": "师仍会被视为原落选教授的支持者。",
+      "reason": "“神@哈利波特魔法觉醒”为水印；源图正文为“支持者。”，句号被水印半遮",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.687e2b3bbcba18627bf53c3f 2 37"
+    },
+    {
+      "image_index": 3,
+      "block_index": 8,
+      "original": "“林中径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.687e2b3bbcba18627bf53c3f 3 8"
+    },
+    {
+      "image_index": 3,
+      "block_index": 10,
+      "original": "“林中径”的挑战区域将进行更新，游走在禁林深处",
+      "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.687e2b3bbcba18627bf53c3f 3 10"
+    },
+    {
+      "image_index": 4,
+      "block_index": 27,
+      "original": "心“周末福利”活动开启！",
+      "corrected": "*“周末福利”活动开启！",
+      "reason": "sheet 第136条；“心”为节目标记误识，源图标记同其他小节记作“*”",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.687e2b3bbcba18627bf53c3f 4 27"
+    },
+    {
+      "image_index": 5,
+      "block_index": 48,
+      "original": "不影响游戏内其他声音（如背景音神雪效等皮特效果觉醒",
+      "corrected": "不影响游戏内其他声音（如背景音乐、音效等）",
+      "reason": "“背景音神雪效等皮特效果”为水印串扰；源图正文为“（如背景音乐、音效等）”，句末被水印覆盖",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.687e2b3bbcba18627bf53c3f 5 48"
+    },
+    {
+      "image_index": 6,
+      "block_index": 3,
+      "original": "拽添加至场上任意位置；当摆放到已方半场时，巫师",
+      "corrected": "拽添加至场上任意位置；当摆放到己方半场时，巫师",
+      "reason": "已→己；源图为“己方半场”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.687e2b3bbcba18627bf53c3f 6 3"
+    }
+  ]
+}

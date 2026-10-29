@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%237b2d3b'/%3E%3Cpath d='M16 7l7 9-7 9-7-9z' fill='%23f7ead9'/%3E%3C/svg%3E">
+<title>HPMA 修正复核台</title>
+<style>
+/*{{STYLE}}*/
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" aria-label="复核筛选">
+    <header class="brand">
+      <div class="brand-mark" aria-hidden="true">✓</div>
+      <div class="brand-text">
+        <h1>修正复核台</h1>
+        <p>源图 vs 干净 corpus · 低置信推理</p>
+      </div>
+    </header>
+
+    <section class="progress-block" aria-label="复核进度">
+      <div class="progress-head">
+        <span id="progress-label">已确认 0 / 0</span>
+        <span id="progress-pct">0%</span>
+      </div>
+      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <i id="progress-fill"></i>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="筛选">
+      <label class="search">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"></circle><path d="M12.8 12.8 17 17"></path></svg>
+        <input id="search" type="search" placeholder="搜索术语、公告、文本或理由…" autocomplete="off" spellcheck="false">
+      </label>
+      <div class="filter-list" id="filters" role="group" aria-label="复核类别">
+        <button type="button" class="chip active" data-filter="terms" aria-pressed="true">术语对照 <b data-count="terms">0</b></button>
+        <button type="button" class="chip" data-filter="low" aria-pressed="false">低置信 <b data-count="low">0</b></button>
+        <button type="button" class="chip" data-filter="watermark" aria-pressed="false">水印重建 <b data-count="watermark">0</b></button>
+        <button type="button" class="chip" data-filter="rewrite" aria-pressed="false">整行重写 <b data-count="rewrite">0</b></button>
+        <button type="button" class="chip" data-filter="all" aria-pressed="false">全部修正 <b data-count="all">0</b></button>
+        <button type="button" class="chip" data-filter="reviewed" aria-pressed="false">已确认 <b data-count="reviewed">0</b></button>
+      </div>
+    </section>
+
+    <div class="legend">
+      <p><b>术语对照</b>：源图与干净 corpus 写法不一致时，决定保留源图还是统一为 corpus。</p>
+      <p><b>低置信 / 水印 / 整行</b>：逐条对照源图，接受修正、保留原文或改写。</p>
+      <p class="muted">页面只读仓库数据；决定保存在本机浏览器，导出 JSON 后另行应用。低置信/水印/整行三类有重叠，进度按去重条目计算。</p>
+    </div>
+
+    <footer class="sidebar-foot">
+      <button type="button" class="btn ghost" id="import-btn">导入记录</button>
+      <button type="button" class="btn" id="export-btn">导出复核结果</button>
+    </footer>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-head">
+      <div>
+        <h2 id="view-title">术语对照</h2>
+        <p id="view-desc" class="muted"></p>
+      </div>
+      <div class="main-meta" id="view-count"></div>
+    </div>
+    <div id="cards" class="cards"></div>
+    <div id="empty" class="empty" hidden>没有匹配的条目</div>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<input type="file" id="import-file" accept="application/json,.json" hidden>
+<script src="corrections-data.js"></script>
+<script>
+/*{{APP}}*/
+</script>
+</body>
+</html>

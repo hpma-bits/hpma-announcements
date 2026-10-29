@@ -1,0 +1,53 @@
+{
+  "id": "dashen.64eddbc496695c0001a4b3f7",
+  "source_ocr": "derived/ocr/dashen/64eddbc496695c0001a4b3f7.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64eddbc496695c0001a4b3f7 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "*“噢噢宝藏”活动开启",
+      "corrected": "*“嗅嗅宝藏”活动开启",
+      "reason": "噢→嗅；活动名源图为“嗅嗅宝藏”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64eddbc496695c0001a4b3f7 1 11"
+    },
+    {
+      "image_index": 1,
+      "block_index": 14,
+      "original": "完成常规日常玩法，可获得“噢噢宝藏”的参与次数，",
+      "corrected": "完成常规日常玩法，可获得“嗅嗅宝藏”的参与次数，",
+      "reason": "噢→嗅；活动名源图为“嗅嗅宝藏”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64eddbc496695c0001a4b3f7 1 14"
+    },
+    {
+      "image_index": 1,
+      "block_index": 15,
+      "original": "完成常规日常玩法，可获得“噢嗅宝藏”的参与次数，",
+      "corrected": "完成常规日常玩法，可获得“嗅嗅宝藏”的参与次数，",
+      "reason": "噢→嗅；活动名源图为“嗅嗅宝藏”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64eddbc496695c0001a4b3f7 1 15"
+    },
+    {
+      "image_index": 1,
+      "block_index": 16,
+      "original": "更有机会通过“噢噢宝藏”获得“糖果券”！",
+      "corrected": "更有机会通过“嗅嗅宝藏”获得“糖果券”！",
+      "reason": "噢→嗅；活动名源图为“嗅嗅宝藏”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64eddbc496695c0001a4b3f7 1 16"
+    }
+  ]
+}

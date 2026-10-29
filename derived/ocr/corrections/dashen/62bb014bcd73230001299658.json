@@ -1,0 +1,53 @@
+{
+  "id": "dashen.62bb014bcd73230001299658",
+  "source_ocr": "derived/ocr/dashen/62bb014bcd73230001299658.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 2,
+      "block_index": 8,
+      "original": "魔药“染发灵”全新上线心",
+      "corrected": "魔药“染发灵”全新上线",
+      "reason": "删衍字“心”；源图标题行末为装饰花纹",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62bb014bcd73230001299658 2 8"
+    },
+    {
+      "image_index": 2,
+      "block_index": 20,
+      "original": "名义、偏分青年、英伦绅士、成长足迹、豌蜓之径、",
+      "corrected": "名义、偏分青年、英伦绅士、成长足迹、蜿蜒之径、",
+      "reason": "豌→蜿、蜓→蜒；源图发型名为“蜿蜒之径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62bb014bcd73230001299658 2 20"
+    },
+    {
+      "image_index": 4,
+      "block_index": 2,
+      "original": "卢哪·洛夫古德",
+      "corrected": "卢娜·洛夫古德",
+      "reason": "哪→娜；源图回响名为“卢娜·洛夫古德”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62bb014bcd73230001299658 4 2"
+    },
+    {
+      "image_index": 4,
+      "block_index": 53,
+      "original": "隔降低为18秒",
+      "corrected": "隔降低为1.8秒",
+      "reason": "补小数点；源图为“隔降低为1.8秒”（与相邻块为同一行重叠切片）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62bb014bcd73230001299658 4 53"
+    },
+    {
+      "image_index": 4,
+      "block_index": 62,
+      "original": "第一届“设计大奖赛”圆满落下惟幕，感谢各位选手的",
+      "corrected": "第一届“设计大奖赛”圆满落下帷幕，感谢各位选手的",
+      "reason": "惟→帷；源图为“帷幕”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62bb014bcd73230001299658 4 62"
+    }
+  ]
+}

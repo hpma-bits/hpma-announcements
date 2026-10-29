@@ -1,0 +1,35 @@
+{
+  "id": "dashen.65521d5c1a46f60001c7606a",
+  "source_ocr": "derived/ocr/dashen/65521d5c1a46f60001c7606a.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65521d5c1a46f60001c7606a 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 4,
+      "original": "龙焰啪",
+      "corrected": "龙焰噼啪",
+      "reason": "漏字“噼”；源图导航标题为“龙焰噼啪”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65521d5c1a46f60001c7606a 1 4"
+    },
+    {
+      "image_index": 1,
+      "block_index": 6,
+      "original": "“龙焰啪”赛季限定卡池开启",
+      "corrected": "“龙焰噼啪”赛季限定卡池开启",
+      "reason": "漏字“噼”；源图标题为“龙焰噼啪”赛季限定卡池开启",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65521d5c1a46f60001c7606a 1 6"
+    }
+  ]
+}

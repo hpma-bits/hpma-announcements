@@ -1,0 +1,89 @@
+{
+  "id": "dashen.64762bf1da84de0001b55764",
+  "source_ocr": "derived/ocr/dashen/64762bf1da84de0001b55764.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”（同批次已核验同款封面 logo）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64762bf1da84de0001b55764 1 1"
+    },
+    {
+      "image_index": 4,
+      "block_index": 27,
+      "original": "6月1日－6月27日更新前的赛李中，“宰运轮盘",
+      "corrected": "6月1日－6月27日更新前的赛季中，“幸运轮盘",
+      "reason": "李→季、宰→幸；源图为“赛季中”“幸运轮盘”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64762bf1da84de0001b55764 4 27"
+    },
+    {
+      "image_index": 5,
+      "block_index": 2,
+      "original": "进行效果和表现的修改与送代，玩家已拥有的",
+      "corrected": "进行效果和表现的修改与迭代，玩家已拥有的",
+      "reason": "选/送→迭；源图为“迭代”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64762bf1da84de0001b55764 5 2"
+    },
+    {
+      "image_index": 5,
+      "block_index": 34,
+      "original": "成就将会在更新后进行奖励选代或暂时关闭",
+      "corrected": "成就将会在更新后进行奖励迭代或暂时关闭",
+      "reason": "选/送→迭；源图为“迭代”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64762bf1da84de0001b55764 5 34"
+    },
+    {
+      "image_index": 7,
+      "block_index": 1,
+      "original": "GVE系统界面优化选代；",
+      "corrected": "GVE系统界面优化迭代；",
+      "reason": "选/送→迭；源图为“迭代”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64762bf1da84de0001b55764 7 1"
+    },
+    {
+      "image_index": 7,
+      "block_index": 9,
+      "original": "寝室留言板界面优化选代。",
+      "corrected": "寝室留言板界面优化迭代。",
+      "reason": "选/送→迭；源图为“迭代”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64762bf1da84de0001b55764 7 9"
+    },
+    {
+      "image_index": 7,
+      "block_index": 19,
+      "original": "通用组队界面优化选代。",
+      "corrected": "通用组队界面优化迭代。",
+      "reason": "选/送→迭；源图为“迭代”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64762bf1da84de0001b55764 7 19"
+    },
+    {
+      "image_index": 8,
+      "block_index": 40,
+      "original": "-石出动：石像士兵血量上调7%，去除了攻",
+      "corrected": "-石墩出动：石像士兵血量上调7%，去除了攻",
+      "reason": "漏字“墩”；卡牌名源图为“石墩出动”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64762bf1da84de0001b55764 8 40"
+    },
+    {
+      "image_index": 8,
+      "block_index": 82,
+      "original": "一黑魔法表现选代：应版权方要求，当使用魔",
+      "corrected": "-黑魔法表现迭代：应版权方要求，当使用魔",
+      "reason": "一→-、选→迭；源图行首为连字符“-”，且为“迭代”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64762bf1da84de0001b55764 8 82"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "dashen.67c6a5413855041608f7fde0",
+  "source_ocr": "derived/ocr/dashen/67c6a5413855041608f7fde0.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67c6a5413855041608f7fde0 1 1"
+    },
+    {
+      "image_index": 3,
+      "block_index": 29,
+      "original": "花瓶“绿野拾芳”也会在3月12日5点前限时上架碧的",
+      "corrected": "花瓶“绿野拾芳”也会在3月12日5点前限时上架葭碧的",
+      "reason": "漏字“葭”；源图为“限时上架葭碧的草药商店”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67c6a5413855041608f7fde0 3 29"
+    },
+    {
+      "image_index": 4,
+      "block_index": 33,
+      "original": "“林中径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67c6a5413855041608f7fde0 4 33"
+    },
+    {
+      "image_index": 4,
+      "block_index": 35,
+      "original": "“林中径”的挑战区域将进行更新，游走在禁林深处",
+      "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67c6a5413855041608f7fde0 4 35"
+    },
+    {
+      "image_index": 5,
+      "block_index": 2,
+      "original": "当巫师装备了“速速禁铜”的卡牌皮肤时，阿比盖尔使",
+      "corrected": "当巫师装备了“速速禁锢”的卡牌皮肤时，阿比盖尔使",
+      "reason": "铜→锢；咒语名源图为“速速禁锢”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67c6a5413855041608f7fde0 5 2"
+    },
+    {
+      "image_index": 5,
+      "block_index": 3,
+      "original": "用的速速禁铜也会应用该皮肤效果。",
+      "corrected": "用的速速禁锢也会应用该皮肤效果。",
+      "reason": "铜→锢；源图为“速速禁锢”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67c6a5413855041608f7fde0 5 3"
+    }
+  ]
+}

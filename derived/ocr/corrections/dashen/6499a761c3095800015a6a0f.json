@@ -1,0 +1,62 @@
+{
+  "id": "dashen.6499a761c3095800015a6a0f",
+  "source_ocr": "derived/ocr/dashen/6499a761c3095800015a6a0f.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6499a761c3095800015a6a0f 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "拆续时间：永久。",
+      "corrected": "持续时间：永久。",
+      "reason": "拆→持；源图为“持续时间”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6499a761c3095800015a6a0f 1 19"
+    },
+    {
+      "image_index": 1,
+      "block_index": 39,
+      "original": "7J1-050C",
+      "corrected": "开启时间：7月4日05：00。",
+      "reason": "整行乱码；源图为“开启时间：7月4日05：00。”（sheet 第1行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6499a761c3095800015a6a0f 1 39"
+    },
+    {
+      "image_index": 2,
+      "block_index": 25,
+      "original": "空间家真等奖励。",
+      "corrected": "空间家具等奖励。",
+      "reason": "真→具；源图为“空间家具等奖励”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6499a761c3095800015a6a0f 2 25"
+    },
+    {
+      "image_index": 5,
+      "block_index": 18,
+      "original": "魔技视觉效果调整",
+      "corrected": "魔杖视觉效果调整",
+      "reason": "技→杖；源图为“魔杖视觉效果调整”（sheet 第26行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6499a761c3095800015a6a0f 5 18"
+    },
+    {
+      "image_index": 5,
+      "block_index": 54,
+      "original": "9、修复了“石出动”的免伤无法削弱罗恩回响，主教",
+      "corrected": "9、修复了“石墩出动”的免伤无法削弱罗恩回响，主教",
+      "reason": "漏字“墩”；卡牌名源图为“石墩出动”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6499a761c3095800015a6a0f 5 54"
+    }
+  ]
+}

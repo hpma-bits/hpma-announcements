@@ -1,0 +1,35 @@
+{
+  "id": "dashen.67b3fba157529f558a4e05e2",
+  "source_ocr": "derived/ocr/dashen/67b3fba157529f558a4e05e2.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67b3fba157529f558a4e05e2 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 14,
+      "original": "抽中所有大奖即句获得轮盘中所有剩余奖品，快来",
+      "corrected": "抽中所有大奖即可获得轮盘中所有剩余奖品，快来",
+      "reason": "句→可；源图为“即可获得”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67b3fba157529f558a4e05e2 1 14"
+    },
+    {
+      "image_index": 1,
+      "block_index": 17,
+      "original": "“S1I魔法部赛季·黑魔王往事”持续更",
+      "corrected": "“S11魔法部赛季·黑魔王往事”持续更",
+      "reason": "I→1；源图为“S11魔法部赛季”（sheet 第17行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67b3fba157529f558a4e05e2 1 17"
+    }
+  ]
+}

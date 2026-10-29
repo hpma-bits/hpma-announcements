@@ -1,0 +1,26 @@
+{
+  "id": "dashen.628cb14fc3e1e50001d2a549",
+  "source_ocr": "derived/ocr/dashen/628cb14fc3e1e50001d2a549.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”（同批次已核验同款封面 logo）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.628cb14fc3e1e50001d2a549 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 98,
+      "original": "禁忌魔咒“钻心骨”更改为“摧心咒”。",
+      "corrected": "禁忌魔咒“钻心剜骨”更改为“摧心咒”。",
+      "reason": "漏字“剜”；源图为“钻心剜骨”，当前“钻心骨”不是完整咒名",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.628cb14fc3e1e50001d2a549 1 98"
+    }
+  ]
+}

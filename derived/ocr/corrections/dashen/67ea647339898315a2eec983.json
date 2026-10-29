@@ -1,0 +1,35 @@
+{
+  "id": "dashen.67ea647339898315a2eec983",
+  "source_ocr": "derived/ocr/dashen/67ea647339898315a2eec983.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”（同批次已核验同款封面 logo）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67ea647339898315a2eec983 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 15,
+      "original": "10张传说品质卡牌分别为：石出动/水牢/厉火/标准",
+      "corrected": "10张传说品质卡牌分别为：石墩出动/水牢/厉火/标准",
+      "reason": "漏字“墩”；卡牌名源图为“石墩出动”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67ea647339898315a2eec983 1 15"
+    },
+    {
+      "image_index": 4,
+      "block_index": 21,
+      "original": "“林中径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "漏字“蹊”；标题源图为“林中蹊径”，与同页正文一致",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.67ea647339898315a2eec983 4 21"
+    }
+  ]
+}

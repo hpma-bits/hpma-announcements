@@ -1,0 +1,89 @@
+{
+  "id": "dashen.669e756f7b715975b2f57eda",
+  "source_ocr": "derived/ocr/dashen/669e756f7b715975b2f57eda.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.669e756f7b715975b2f57eda 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 21,
+      "original": "“陷吾”“棋子士兵”魔咒试炼开启！",
+      "corrected": "“骆吾”“棋子士兵”魔咒试炼开启！",
+      "reason": "陷→骆；源图为“骆吾”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.669e756f7b715975b2f57eda 1 21"
+    },
+    {
+      "image_index": 2,
+      "block_index": 48,
+      "original": "故事缓缓拉开惟幕，全新角色即将登场！",
+      "corrected": "故事缓缓拉开帷幕，全新角色即将登场！",
+      "reason": "惟→帷；源图为“帷幕”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.669e756f7b715975b2f57eda 2 48"
+    },
+    {
+      "image_index": 2,
+      "block_index": 71,
+      "original": "赛李加速福利升始！",
+      "corrected": "赛季加速福利开始！",
+      "reason": "sheet 第43条；李→季、升→开，源图为“赛季加速福利开始！”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.669e756f7b715975b2f57eda 2 71"
+    },
+    {
+      "image_index": 3,
+      "block_index": 1,
+      "original": "夏日炎炎，畅快玩要吧！无论是决斗、亲近神奇动物",
+      "corrected": "夏日炎炎，畅快玩耍吧！无论是决斗、亲近神奇动物",
+      "reason": "要→耍；源图为“玩耍”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.669e756f7b715975b2f57eda 3 1"
+    },
+    {
+      "image_index": 3,
+      "block_index": 25,
+      "original": "奖励。累计找到5只球通鸟，更可以领取“夺宝券”1。",
+      "corrected": "奖励。累计找到5只球遁鸟，更可以领取“夺宝券”*1。",
+      "reason": "通→遁、漏“*”；源图为“球遁鸟”及““夺宝券”*1”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.669e756f7b715975b2f57eda 3 25"
+    },
+    {
+      "image_index": 4,
+      "block_index": 3,
+      "original": "四大学院的比拼如火如茶，快来为你的学院争得荣光",
+      "corrected": "四大学院的比拼如火如荼，快来为你的学院争得荣光",
+      "reason": "茶→荼；源图为“如火如荼”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.669e756f7b715975b2f57eda 4 3"
+    },
+    {
+      "image_index": 5,
+      "block_index": 17,
+      "original": "邮件发放“地精的睡液”1。",
+      "corrected": "邮件发放“地精的唾液”*1。",
+      "reason": "sheet 第135条；睡→唾，源图为“唾液”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.669e756f7b715975b2f57eda 5 17"
+    },
+    {
+      "image_index": 5,
+      "block_index": 23,
+      "original": "6.优化了社团商店的售馨状态显示和排序规则。",
+      "corrected": "6.优化了社团商店的售罄状态显示和排序规则。",
+      "reason": "馨→罄；源图为“售罄”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.669e756f7b715975b2f57eda 5 23"
+    }
+  ]
+}

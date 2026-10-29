@@ -1,0 +1,35 @@
+{
+  "id": "dashen.677bdabe5e06c563daab832e",
+  "source_ocr": "derived/ocr/dashen/677bdabe5e06c563daab832e.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.677bdabe5e06c563daab832e 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 4,
+      "original": "SII魔法部赛季·黑魔王往事",
+      "corrected": "S11魔法部赛季·黑魔王往事",
+      "reason": "II→11；赛季编号源图为“S11”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.677bdabe5e06c563daab832e 1 4"
+    },
+    {
+      "image_index": 2,
+      "block_index": 25,
+      "original": "被塑造并嘉立于此",
+      "corrected": "被塑造并矗立于此",
+      "reason": "嘉→矗；源图为“矗立于此”。",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.677bdabe5e06c563daab832e 2 25"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "dashen.6422eba34574f60001b54b7f",
+  "source_ocr": "derived/ocr/dashen/6422eba34574f60001b54b7f.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 2,
+      "block_index": 33,
+      "original": "“青柳蒙雨”时装上架",
+      "corrected": "“青柳濛雨”时装上架",
+      "reason": "sheet 第75行；蒙→濛，源图“青柳濛雨”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6422eba34574f60001b54b7f 2 33"
+    },
+    {
+      "image_index": 2,
+      "block_index": 34,
+      "original": "全新时装·青柳蒙雨",
+      "corrected": "全新时装·青柳濛雨",
+      "reason": "蒙→濛，源图“全新时装·青柳濛雨”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6422eba34574f60001b54b7f 2 34"
+    },
+    {
+      "image_index": 2,
+      "block_index": 40,
+      "original": "/“青柳蒙雨·雅”、“古老狂想·云母”及“古老狂想",
+      "corrected": "/“青柳濛雨·雅”、“古老狂想·云母”及“古老狂想",
+      "reason": "蒙→濛，源图“青柳濛雨·雅”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6422eba34574f60001b54b7f 2 40"
+    }
+  ]
+}

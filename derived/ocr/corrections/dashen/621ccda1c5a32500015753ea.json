@@ -1,0 +1,35 @@
+{
+  "id": "dashen.621ccda1c5a32500015753ea",
+  "source_ocr": "derived/ocr/dashen/621ccda1c5a32500015753ea.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 7,
+      "original": "和赛季商店更新，全新的头像框、铭牌，更有赛季大奖“山茱英木魔杖”。",
+      "corrected": "和赛季商店更新，全新的头像框、铭牌，更有赛季大奖“山茱萸木魔杖”。",
+      "reason": "英→萸；源图为“山茱萸木魔杖”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.621ccda1c5a32500015753ea 1 7"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "活动期间完成指定任务可积累奖励，积累一定奖励后可参与摇噢噢的小玩",
+      "corrected": "活动期间完成指定任务可积累奖励，积累一定奖励后可参与摇嗅嗅的小玩",
+      "reason": "噢→嗅；源图为“摇嗅嗅的小玩法”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.621ccda1c5a32500015753ea 1 13"
+    },
+    {
+      "image_index": 1,
+      "block_index": 14,
+      "original": "法，轻轻上下晃动噢，摇出金币奖励，更有机会摇出非凡卡包、幸运发",
+      "corrected": "法，轻轻上下晃动嗅嗅，摇出金币奖励，更有机会摇出非凡卡包、幸运发",
+      "reason": "噢→嗅、漏一“嗅”；源图为“轻轻上下晃动嗅嗅”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.621ccda1c5a32500015753ea 1 14"
+    }
+  ]
+}

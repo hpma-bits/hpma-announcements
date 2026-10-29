@@ -1,0 +1,53 @@
+{
+  "id": "dashen.6267d8c574424700015b9ed2",
+  "source_ocr": "derived/ocr/dashen/6267d8c574424700015b9ed2.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”，当前“魔祛觉醒”不成词（同批次已核验同款封面 logo）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6267d8c574424700015b9ed2 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 24,
+      "original": "动可获得奖励次数额外+l。",
+      "corrected": "动可获得奖励次数额外+1。",
+      "reason": "l→1；OCR 将数字 1 识为小写字母 l，源图为“额外+1”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6267d8c574424700015b9ed2 1 24"
+    },
+    {
+      "image_index": 1,
+      "block_index": 88,
+      "original": "“噢噢宝藏”活动开启",
+      "corrected": "“嗅嗅宝藏”活动开启",
+      "reason": "噢→嗅；活动名源图为“嗅嗅宝藏”，嗅嗅为游戏内神奇动物名",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6267d8c574424700015b9ed2 1 88"
+    },
+    {
+      "image_index": 1,
+      "block_index": 89,
+      "original": "“噢宝藏”活动开启",
+      "corrected": "“嗅嗅宝藏”活动开启",
+      "reason": "噢→嗅；同上，标题源图为“嗅嗅宝藏”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6267d8c574424700015b9ed2 1 89"
+    },
+    {
+      "image_index": 1,
+      "block_index": 121,
+      "original": "调整：当已方存在5个及以上食死徒时，将无法再次召唤",
+      "corrected": "调整：当己方存在5个及以上食死徒时，将无法再次召唤",
+      "reason": "已→己；源图为“己方”，与同段后文“己方食死徒”一致",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6267d8c574424700015b9ed2 1 121"
+    }
+  ]
+}

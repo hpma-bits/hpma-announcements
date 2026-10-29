@@ -1,0 +1,35 @@
+{
+  "id": "dashen.63fdfee62428dd0001208aa1",
+  "source_ocr": "derived/ocr/dashen/63fdfee62428dd0001208aa1.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.63fdfee62428dd0001208aa1 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 30,
+      "original": "可解锁特权：日常活动中金币获取效李为波特魔法觉醒",
+      "corrected": "可解锁特权：日常活动中金币获取效率提升50%。",
+      "reason": "效李→效率、补“提升50%”；源图为“金币获取效率提升50%”，尾部被水印覆盖但正文可辨",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.63fdfee62428dd0001208aa1 1 30"
+    },
+    {
+      "image_index": 2,
+      "block_index": 31,
+      "original": "奖励以邮件形式发达。",
+      "corrected": "奖励以邮件形式发送。",
+      "reason": "达→送；源图仅一行“奖励以邮件形式发送。”，此块为同一行的重叠切片误识",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.63fdfee62428dd0001208aa1 2 31"
+    }
+  ]
+}

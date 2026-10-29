@@ -1,0 +1,26 @@
+{
+  "id": "dashen.636a471b3408360001243548",
+  "source_ocr": "derived/ocr/dashen/636a471b3408360001243548.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.636a471b3408360001243548 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 29,
+      "original": "4、修复了发型“叶影深深”、“花影缝绻”图标错误",
+      "corrected": "4、修复了发型“叶影深深”、“花影缱绻”图标错误",
+      "reason": "缝→缱；源图发型名为“花影缱绻”，当前“缝绻”不成词",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.636a471b3408360001243548 1 29"
+    }
+  ]
+}

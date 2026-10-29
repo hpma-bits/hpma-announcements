@@ -1,0 +1,26 @@
+{
+  "id": "dashen.65e5c3f52e838a79075354c9",
+  "source_ocr": "derived/ocr/dashen/65e5c3f52e838a79075354c9.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65e5c3f52e838a79075354c9 1 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "等级提升后，可解锁票林中的植",
+      "corrected": "等级提升后，可解锁“禁林”中的植",
+      "reason": "票→禁、补引号；源图为“可解锁“禁林”中的植”，与 b0026 同句（重叠切片）（sheet 第66行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.65e5c3f52e838a79075354c9 2 27"
+    }
+  ]
+}

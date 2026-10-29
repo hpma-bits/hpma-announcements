@@ -1,0 +1,89 @@
+{
+  "id": "dashen.6a956608f192995fa945121c",
+  "source_ocr": "derived/ocr/dashen/6a956608f192995fa945121c.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6a956608f192995fa945121c 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 4,
+      "original": "排红华章",
+      "corrected": "绯红华章",
+      "reason": "排→绯；源图赛季名为“绯红华章”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6a956608f192995fa945121c 1 4"
+    },
+    {
+      "image_index": 2,
+      "block_index": 0,
+      "original": "“S21纯血家族赛季·啡红华章”持续更",
+      "corrected": "“S21纯血家族赛季·绯红华章”持续更",
+      "reason": "啡→绯；源图为“绯红华章”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6a956608f192995fa945121c 2 0"
+    },
+    {
+      "image_index": 2,
+      "block_index": 2,
+      "original": "排红华章",
+      "corrected": "绯红华章",
+      "reason": "排→绯；源图为“绯红华章”（与 b0000 同一标题）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6a956608f192995fa945121c 2 2"
+    },
+    {
+      "image_index": 2,
+      "block_index": 16,
+      "original": "“咔、碎！”玩法限时开启",
+      "corrected": "“咔嚓、砰！”玩法限时开启",
+      "reason": "OCR 误作“咔、碎”；源图为“咔嚓、砰！”（同 11 月公告同名玩法）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6a956608f192995fa945121c 2 16"
+    },
+    {
+      "image_index": 2,
+      "block_index": 23,
+      "original": "本次开启带来了神奇动物模特变形免和月痴兽，每天",
+      "corrected": "本次开启带来了神奇动物模特变形兔和月痴兽，每天",
+      "reason": "免→兔；源图为宠物“变形兔”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6a956608f192995fa945121c 2 23"
+    },
+    {
+      "image_index": 2,
+      "block_index": 26,
+      "original": "摆好姿势，对准镜头，等待相机的特察响起吧",
+      "corrected": "摆好姿势，对准镜头，等待相机的“咔嚓”声响起吧！",
+      "reason": "特察→“咔嚓”声，补引号与叹号；源图为“等待相机的‘咔嚓’声响起吧！”（尾部被水印覆盖）",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.6a956608f192995fa945121c 2 26"
+    },
+    {
+      "image_index": 4,
+      "block_index": 0,
+      "original": "“林中径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6a956608f192995fa945121c 4 0"
+    },
+    {
+      "image_index": 4,
+      "block_index": 2,
+      "original": "“林中径”的挑战区域将进行更新，游走在禁林深处",
+      "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6a956608f192995fa945121c 4 2"
+    }
+  ]
+}

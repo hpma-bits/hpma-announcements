@@ -1,0 +1,35 @@
+{
+  "id": "dashen.62dfbea2c3e1e5000120a501",
+  "source_ocr": "derived/ocr/dashen/62dfbea2c3e1e5000120a501.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 4,
+      "block_index": 17,
+      "original": "大神@哈利皮特魔法觉醒",
+      "corrected": "大神@哈利波特魔法觉醒",
+      "reason": "皮→波；水印专名源图为“哈利波特”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62dfbea2c3e1e5000120a501 4 17"
+    },
+    {
+      "image_index": 6,
+      "block_index": 2,
+      "original": "2、修复了少数情况下，凤凰被击败后不会留下灰炽的问",
+      "corrected": "2、修复了少数情况下，凤凰被击败后不会留下灰烬的问",
+      "reason": "炽→烬；源图为“不会留下灰烬”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62dfbea2c3e1e5000120a501 6 2"
+    },
+    {
+      "image_index": 6,
+      "block_index": 13,
+      "original": "大神@哈利皮特魔法觉醒",
+      "corrected": "大神@哈利波特魔法觉醒",
+      "reason": "皮→波；水印专名源图为“哈利波特”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.62dfbea2c3e1e5000120a501 6 13"
+    }
+  ]
+}

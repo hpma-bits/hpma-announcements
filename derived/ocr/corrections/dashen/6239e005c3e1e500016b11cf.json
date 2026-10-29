@@ -1,0 +1,26 @@
+{
+  "id": "dashen.6239e005c3e1e500016b11cf",
+  "source_ocr": "derived/ocr/dashen/6239e005c3e1e500016b11cf.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 25,
+      "original": "大神@哈利波特魔法宽醒",
+      "corrected": "大神@哈利波特魔法觉醒",
+      "reason": "宽→觉；页脚水印源图为“魔法觉醒”（sheet 第109行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6239e005c3e1e500016b11cf 1 25"
+    },
+    {
+      "image_index": 2,
+      "block_index": 13,
+      "original": "化了社区体验。已关注的巫师更新动态的，王界面社区人口会出现红点",
+      "corrected": "优化了社区体验。已关注的巫师更新动态时，主界面社区入口会出现红点",
+      "reason": "整行乱码；源图与上一正确行同为“优化了社区体验……会出现红点”（sheet 第16行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6239e005c3e1e500016b11cf 2 13"
+    }
+  ]
+}

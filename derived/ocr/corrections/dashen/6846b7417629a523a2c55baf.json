@@ -1,0 +1,53 @@
+{
+  "id": "dashen.6846b7417629a523a2c55baf",
+  "source_ocr": "derived/ocr/dashen/6846b7417629a523a2c55baf.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6846b7417629a523a2c55baf 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 17,
+      "original": "“S13烘焙赛季·霜结燃烧火刑架”持读",
+      "corrected": "“S13烘焙赛季·霜结燃烧火刑架”持续",
+      "reason": "读→续；源图为“持续”（sheet 第74行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6846b7417629a523a2c55baf 1 17"
+    },
+    {
+      "image_index": 5,
+      "block_index": 38,
+      "original": "每日金币获取量存在上限，此上限5度特魔法觉醒",
+      "corrected": "每日金币获取量存在上限，此上限每日5：00重置。",
+      "reason": "“5度特魔法觉醒”→“每日5：00重置”；源图正文与“大神@哈利波特魔法觉醒”水印合并，可辨内容为“每日5：00重置”，故标 medium",
+      "confidence": "medium",
+      "recrop": "python tools/ocr_review.py crop dashen.6846b7417629a523a2c55baf 5 38"
+    },
+    {
+      "image_index": 6,
+      "block_index": 11,
+      "original": "“林中溪径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "溪→蹊；源图标题为“林中蹊径”（sheet 第100行）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6846b7417629a523a2c55baf 6 11"
+    },
+    {
+      "image_index": 6,
+      "block_index": 13,
+      "original": "“林中径”的挑战区域将进行更新，游走在禁林深处",
+      "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6846b7417629a523a2c55baf 6 13"
+    }
+  ]
+}

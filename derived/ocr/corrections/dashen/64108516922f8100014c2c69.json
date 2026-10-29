@@ -1,0 +1,26 @@
+{
+  "id": "dashen.64108516922f8100014c2c69",
+  "source_ocr": "derived/ocr/dashen/64108516922f8100014c2c69.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64108516922f8100014c2c69 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 9,
+      "original": "活动期间将会有8套风格异的时装参与投票角逐，争",
+      "corrected": "活动期间将会有8套风格迥异的时装参与投票角逐，争",
+      "reason": "漏字“迥”；源图为“风格迥异”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.64108516922f8100014c2c69 1 9"
+    }
+  ]
+}

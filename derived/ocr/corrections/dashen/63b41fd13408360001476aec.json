@@ -1,0 +1,35 @@
+{
+  "id": "dashen.63b41fd13408360001476aec",
+  "source_ocr": "derived/ocr/dashen/63b41fd13408360001476aec.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.63b41fd13408360001476aec 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 6,
+      "original": "“陷吾来袭”挑战复刻",
+      "corrected": "“骆吾来袭”挑战复刻",
+      "reason": "陷→骆；源图标题为“骆吾来袭”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.63b41fd13408360001476aec 1 6"
+    },
+    {
+      "image_index": 1,
+      "block_index": 27,
+      "original": "4、修复了魔咒“速速禁”造成的禁时间缩短以及",
+      "corrected": "4、修复了魔咒“速速禁锢”造成的禁锢时间缩短以及",
+      "reason": "漏两处“锢”；源图为“速速禁锢造成的禁锢时间缩短”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.63b41fd13408360001476aec 1 27"
+    }
+  ]
+}

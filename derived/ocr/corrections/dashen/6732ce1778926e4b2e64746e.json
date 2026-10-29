@@ -1,0 +1,71 @@
+{
+  "id": "dashen.6732ce1778926e4b2e64746e",
+  "source_ocr": "derived/ocr/dashen/6732ce1778926e4b2e64746e.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 1,
+      "original": "魔祛觉醒",
+      "corrected": "魔法觉醒",
+      "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6732ce1778926e4b2e64746e 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 3,
+      "original": "SI0·冬夜故事谈",
+      "corrected": "S10·冬夜故事谈",
+      "reason": "I→1；源图为“S10·冬夜故事谈”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6732ce1778926e4b2e64746e 1 3"
+    },
+    {
+      "image_index": 1,
+      "block_index": 64,
+      "original": "聚、巫师名片育景倒角一隅等奖励。",
+      "corrected": "聚”、巫师名片背景“街角一隅”等奖励。",
+      "reason": "育景→背景、倒角→街角，补引号；源图为“巫师名片背景‘街角一隅’”（与 b0063 为同一行重叠切片）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6732ce1778926e4b2e64746e 1 64"
+    },
+    {
+      "image_index": 1,
+      "block_index": 131,
+      "original": "“咔噻、砰！”玩法限时开启",
+      "corrected": "“咔嚓、砰！”玩法限时开启",
+      "reason": "噻→嚓；源图为“咔嚓、砰！”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6732ce1778926e4b2e64746e 1 131"
+    },
+    {
+      "image_index": 1,
+      "block_index": 147,
+      "original": "进退，同患难，在决斗场上尽情展现绝妙的配合与草",
+      "corrected": "进退，同患难，在决斗场上尽情展现绝妙的配合与卓",
+      "reason": "草→卓；源图为“配合与卓”（与 b0146 为同一行重叠切片）",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6732ce1778926e4b2e64746e 1 147"
+    },
+    {
+      "image_index": 1,
+      "block_index": 153,
+      "original": "“林中径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6732ce1778926e4b2e64746e 1 153"
+    },
+    {
+      "image_index": 1,
+      "block_index": 166,
+      "original": "2、优化了永夜之息·壁纸“雾影垂慢”的声音效果。",
+      "corrected": "2、优化了永夜之息·壁纸“雾影垂幔”的声音效果。",
+      "reason": "慢→幔；源图为“雾影垂幔”",
+      "confidence": "high",
+      "recrop": "python tools/ocr_review.py crop dashen.6732ce1778926e4b2e64746e 1 166"
+    }
+  ]
+}
