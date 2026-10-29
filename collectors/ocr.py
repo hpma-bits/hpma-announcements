@@ -188,13 +188,15 @@ def _store_image(asset_dir: Path, index: int, data: bytes, url: str) -> Path:
     return path
 
 
-def _ocr_image(engine: Engine, path: Path) -> tuple[str | None, list[Block] | None, str | None]:
+def _ocr_image(engine: Engine, path: Path) -> tuple[str, list[Block], str | None]:
     try:
         blocks = engine(str(path))
     except Exception as exc:  # noqa: BLE001 - one bad image must not kill the run
-        return None, None, repr(exc)
+        return "", [], repr(exc)
     text = "\n".join(block["text"] for block in blocks if block.get("text"))
-    return text or None, blocks, None
+    # Empty string means "OCR ran, found no text" — cacheable, unlike a
+    # missing result (None) from an image that was never processed.
+    return text, blocks, None
 
 
 def run(

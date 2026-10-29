@@ -142,6 +142,29 @@ def test_merge_lines_dedupes_overlap_and_keeps_reading_order():
     assert blocks[0]["score"] == 0.95
 
 
+def test_empty_ocr_text_is_cached(tmp_path):
+    post, _ = _post("eeee", "update", ["https://ok.166.net/e1"])
+    _seed(tmp_path, [post], [("eeee", "update")])
+    calls = {"n": 0}
+
+    def engine(path: str):
+        calls["n"] += 1
+        return []  # image has no detectable text (footer/placeholder)
+
+    def fetch(url: str) -> bytes:
+        return JPEG_BYTES
+
+    first = ocr.run(tmp_path, engine=engine, engine_meta={"name": "fake", "version": "0"}, fetch=fetch, delay=0)
+    assert first["ocred"] == 1
+    notice = json.loads((tmp_path / "derived" / "ocr" / "dashen" / "eeee.json").read_text(encoding="utf-8"))
+    assert notice["images"][0]["text"] == ""
+    assert notice["text"] == ""
+
+    second = ocr.run(tmp_path, engine=engine, engine_meta={"name": "fake", "version": "0"}, fetch=fetch, delay=0)
+    assert second["ocred"] == 0  # empty result is a valid cache entry
+    assert calls["n"] == 1
+
+
 def test_engine_meta_change_invalidates_cached_ocr(tmp_path):
     post, _ = _post("dddd", "update", ["https://ok.166.net/d1"])
     _seed(tmp_path, [post], [("dddd", "update")])
