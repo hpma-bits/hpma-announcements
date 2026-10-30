@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.66d6af77c1beb0737fafccde 1 1"
+      "recrop": "python -m tools.cli crop dashen.66d6af77c1beb0737fafccde 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "鹰“小乌林鸮”。集齐家具套装后，可在巫师空间领取",
       "reason": "漏识“鸮”；源图为“小乌林鸮”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.66d6af77c1beb0737fafccde 1 12"
+      "recrop": "python -m tools.cli crop dashen.66d6af77c1beb0737fafccde 1 12"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "鹰“小乌林鸮”。集齐家具套装后，可在巫师空间领取",
       "reason": "鸦→鸮；源图为“小乌林鸮”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.66d6af77c1beb0737fafccde 1 13"
+      "recrop": "python -m tools.cli crop dashen.66d6af77c1beb0737fafccde 1 13"
     },
     {
       "image_index": 1,
@@ -38,7 +38,7 @@
       "corrected": "黄昏中金与红交织燃烧，火焰盛放在巫师的一颦一笑",
       "reason": "漏识“颦”；源图为“一颦一笑”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.66d6af77c1beb0737fafccde 1 63"
+      "recrop": "python -m tools.cli crop dashen.66d6af77c1beb0737fafccde 1 63"
     },
     {
       "image_index": 1,
@@ -47,7 +47,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.66d6af77c1beb0737fafccde 1 98"
+      "recrop": "python -m tools.cli crop dashen.66d6af77c1beb0737fafccde 1 98"
     },
     {
       "image_index": 1,
@@ -56,7 +56,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "溪→蹊；源图为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.66d6af77c1beb0737fafccde 1 99"
+      "recrop": "python -m tools.cli crop dashen.66d6af77c1beb0737fafccde 1 99"
     },
     {
       "image_index": 1,
@@ -65,7 +65,7 @@
       "corrected": "维护后",
       "reason": "拍→护；源图同行为“维护后”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.66d6af77c1beb0737fafccde 1 100"
+      "recrop": "python -m tools.cli crop dashen.66d6af77c1beb0737fafccde 1 100"
     }
   ]
 }

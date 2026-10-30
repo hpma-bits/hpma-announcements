@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a83056cc1d2f3184ef6ff6d 1 1"
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "青枝奔趣",
       "reason": "技→枝；源图赛季名为“青枝奔趣”（sheet 第42行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a83056cc1d2f3184ef6ff6d 1 7"
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 1 7"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "“S21纯血家族赛季·绯红华章”开启！",
       "reason": "啡→绯；源图为“绯红华章”（sheet 第54行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a83056cc1d2f3184ef6ff6d 1 26"
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 1 26"
     },
     {
       "image_index": 1,
@@ -38,7 +38,7 @@
       "corrected": "绯红华章",
       "reason": "排→绯；源图为“绯红华章”（sheet 第89行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a83056cc1d2f3184ef6ff6d 1 27"
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 1 27"
     },
     {
       "image_index": 2,
@@ -47,7 +47,7 @@
       "corrected": "奇弈挑战解锁，千变排行榜开启！",
       "reason": "奔→弈；源图为“奇弈挑战”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a83056cc1d2f3184ef6ff6d 2 21"
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 2 21"
     },
     {
       "image_index": 2,
@@ -56,7 +56,7 @@
       "corrected": "累计登录7日即可领取时装大奖“秘言梅影”",
       "reason": "漏字“影”；源图正文与水印合并，可辨为“秘言梅影”，行末标点被遮挡，故标 medium",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.6a83056cc1d2f3184ef6ff6d 2 41"
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 2 41"
     },
     {
       "image_index": 3,
@@ -65,7 +65,7 @@
       "corrected": "踏着潋滟的波光滑入舞池，在宛如冷翠的渊镜之",
       "reason": "敛→潋；源图为“潋滟”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a83056cc1d2f3184ef6ff6d 3 35"
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 3 35"
     },
     {
       "image_index": 4,
@@ -74,7 +74,7 @@
       "corrected": "蔷薇风格肤色“花漾微醺”以及专属称号！",
       "reason": "漏字“醺”；源图为“花漾微醺”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a83056cc1d2f3184ef6ff6d 4 21"
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 4 21"
     },
     {
       "image_index": 4,
@@ -83,7 +83,7 @@
       "corrected": "“格洛普”。他宛如荒野中耸立的缄默巨石，却在禁林",
       "reason": "漏字“缄”；源图为“缄默巨石”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a83056cc1d2f3184ef6ff6d 4 42"
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 4 42"
     },
     {
       "image_index": 5,
@@ -92,7 +92,7 @@
       "corrected": "2）豪华礼盒",
       "reason": "家牛→豪华；源图为“2）豪华礼盒”（sheet 第3行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a83056cc1d2f3184ef6ff6d 5 28"
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 5 28"
     },
     {
       "image_index": 5,
@@ -101,7 +101,7 @@
       "corrected": "购买即可获得9月“采风之行·I”主题史诗时装：“巷末拾",
       "reason": "数字 1→罗马数字 I；源图为“采风之行·I”，与 b0030 一致，故标 medium（sheet 第112行）",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.6a83056cc1d2f3184ef6ff6d 5 29"
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 5 29"
     },
     {
       "image_index": 6,
@@ -110,7 +110,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a83056cc1d2f3184ef6ff6d 6 27"
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 6 27"
     },
     {
       "image_index": 6,
@@ -119,7 +119,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a83056cc1d2f3184ef6ff6d 6 29"
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 6 29"
     },
     {
       "image_index": 6,
@@ -128,7 +128,7 @@
       "corrected": "1.开心宝石奇弈调整：",
       "reason": "奔→弈；源图为“开心宝石奇弈调整”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a83056cc1d2f3184ef6ff6d 6 33"
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 6 33"
     },
     {
       "image_index": 6,
@@ -137,7 +137,7 @@
       "corrected": "弈",
       "reason": "奔→弈；源图为“弈”（“对弈”）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a83056cc1d2f3184ef6ff6d 6 36"
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 6 36"
     }
   ]
 }

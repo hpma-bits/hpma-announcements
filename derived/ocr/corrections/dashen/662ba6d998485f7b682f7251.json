@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”（同批次已核验同款封面 logo）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.662ba6d998485f7b682f7251 2 1"
+      "recrop": "python -m tools.cli crop dashen.662ba6d998485f7b682f7251 2 1"
     }
   ]
 }

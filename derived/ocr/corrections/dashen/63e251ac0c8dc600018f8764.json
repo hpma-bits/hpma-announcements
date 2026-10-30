@@ -11,7 +11,7 @@
       "corrected": "奇动物的专属能力，它将与你并肩而战，共同保卫嗅",
       "reason": "噢→嗅；源图为“共同保卫嗅”，下块为“嗅！”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63e251ac0c8dc600018f8764 1 16"
+      "recrop": "python -m tools.cli crop dashen.63e251ac0c8dc600018f8764 1 16"
     }
   ]
 }

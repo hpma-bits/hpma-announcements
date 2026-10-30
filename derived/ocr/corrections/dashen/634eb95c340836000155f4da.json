@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.634eb95c340836000155f4da 1 1"
+      "recrop": "python -m tools.cli crop dashen.634eb95c340836000155f4da 1 1"
     },
     {
       "image_index": 3,
@@ -20,7 +20,7 @@
       "corrected": "7、修复了部分情况下iOS16系统引起的闪退问题。",
       "reason": "衍“1”；源图为“引起的闪退问题”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.634eb95c340836000155f4da 3 20"
+      "recrop": "python -m tools.cli crop dashen.634eb95c340836000155f4da 3 20"
     }
   ]
 }

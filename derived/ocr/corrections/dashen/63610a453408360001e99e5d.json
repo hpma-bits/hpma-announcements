@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63610a453408360001e99e5d 1 1"
+      "recrop": "python -m tools.cli crop dashen.63610a453408360001e99e5d 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "己的手气吧，心仪的奖品等着你！",
       "reason": "已→己；源图为“自己的手气吧”，本行首字为“己”。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63610a453408360001e99e5d 1 32"
+      "recrop": "python -m tools.cli crop dashen.63610a453408360001e99e5d 1 32"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "更多详细规则可查阅活动页规则说明大神@哈利波特魔法觉醒",
       "reason": "油→神；源图水印为“大神@哈利波特魔法觉醒”。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63610a453408360001e99e5d 1 33"
+      "recrop": "python -m tools.cli crop dashen.63610a453408360001e99e5d 1 33"
     },
     {
       "image_index": 3,
@@ -38,7 +38,7 @@
       "corrected": "大神@哈利波特魔法觉醒",
       "reason": "渡→波；水印专名源图为“哈利波特”。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63610a453408360001e99e5d 3 41"
+      "recrop": "python -m tools.cli crop dashen.63610a453408360001e99e5d 3 41"
     }
   ]
 }

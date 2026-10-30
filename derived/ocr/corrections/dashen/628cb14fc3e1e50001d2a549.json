@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”（同批次已核验同款封面 logo）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.628cb14fc3e1e50001d2a549 1 1"
+      "recrop": "python -m tools.cli crop dashen.628cb14fc3e1e50001d2a549 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "禁忌魔咒“钻心剜骨”更改为“摧心咒”。",
       "reason": "漏字“剜”；源图为“钻心剜骨”，当前“钻心骨”不是完整咒名",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.628cb14fc3e1e50001d2a549 1 98"
+      "recrop": "python -m tools.cli crop dashen.628cb14fc3e1e50001d2a549 1 98"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "corrected": "大神@哈利波特魔法觉醒",
       "reason": "皮→波；水印专名源图为“哈利波特”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62cd5552c3e1e50001910c35 3 12"
+      "recrop": "python -m tools.cli crop dashen.62cd5552c3e1e50001910c35 3 12"
     },
     {
       "image_index": 5,
@@ -20,7 +20,7 @@
       "corrected": "大神@哈利波特魔法觉醒",
       "reason": "皮→波；水印专名源图为“哈利波特”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62cd5552c3e1e50001910c35 5 15"
+      "recrop": "python -m tools.cli crop dashen.62cd5552c3e1e50001910c35 5 15"
     }
   ]
 }

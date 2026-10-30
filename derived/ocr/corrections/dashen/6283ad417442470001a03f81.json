@@ -11,7 +11,16 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6283ad417442470001a03f81 1 1"
+      "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 61,
+      "original": "购买礼包，即可获得头像框“骆吾开心”、梳妆魔盒、",
+      "corrected": "购买礼包，即可获得头像框“驺吾开心”、梳妆魔盒、",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 61"
     },
     {
       "image_index": 1,
@@ -20,7 +29,7 @@
       "corrected": "3、咒语卡“钻心剜骨”稀有度将由“传说”调整至",
       "reason": "漏字“剜”；咒语名源图为“钻心剜骨”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6283ad417442470001a03f81 1 78"
+      "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 78"
     }
   ]
 }

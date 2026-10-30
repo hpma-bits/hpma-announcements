@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.645a34423af41a0001de3818 1 1"
+      "recrop": "python -m tools.cli crop dashen.645a34423af41a0001de3818 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "获得奖励“史诗卡牌”*1，“非凡卡包”*1。",
       "reason": "“非凡卡神*@”为水印串扰；源图物品名为“非凡卡包”，末字被水印部分遮挡",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.645a34423af41a0001de3818 1 23"
+      "recrop": "python -m tools.cli crop dashen.645a34423af41a0001de3818 1 23"
     },
     {
       "image_index": 3,
@@ -29,7 +29,7 @@
       "corrected": "行了特效和模型升级迭代。",
       "reason": "选/送→迭；源图为“迭代”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.645a34423af41a0001de3818 3 4"
+      "recrop": "python -m tools.cli crop dashen.645a34423af41a0001de3818 3 4"
     }
   ]
 }

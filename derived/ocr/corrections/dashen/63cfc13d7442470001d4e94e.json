@@ -11,7 +11,7 @@
       "corrected": "随”、“男-缱绻心意”&“女-缱绻心意”。",
       "reason": "漏字“缱”；源图两个发型名均为“缱绻心意”，各补一个“缱”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63cfc13d7442470001d4e94e 1 34"
+      "recrop": "python -m tools.cli crop dashen.63cfc13d7442470001d4e94e 1 34"
     }
   ]
 }

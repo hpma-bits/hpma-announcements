@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 1 1"
+      "recrop": "python -m tools.cli crop dashen.68d13e54dbba24229025b7b9 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "头鹰“小纵纹腹小鸮”。集齐家具套装后，可在巫师空",
       "reason": "鹃→鸮；猫头鹰名源图为“小纵纹腹小鸮”。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 1 12"
+      "recrop": "python -m tools.cli crop dashen.68d13e54dbba24229025b7b9 1 12"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "星辰明灭，不祥预言悄然蔓延，缄默的“天目”为你而",
       "reason": "漏“缄”；源图为“缄默的‘天目’”。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 1 19"
+      "recrop": "python -m tools.cli crop dashen.68d13e54dbba24229025b7b9 1 19"
     },
     {
       "image_index": 2,
@@ -38,7 +38,16 @@
       "corrected": "碎片的获取提示每日追加1条，共6条。",
       "reason": "水印覆盖处源图为“共6条。”；“@”为“条”之误。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 2 45"
+      "recrop": "python -m tools.cli crop dashen.68d13e54dbba24229025b7b9 2 45"
+    },
+    {
+      "image_index": 3,
+      "block_index": 32,
+      "original": "6.传说卡牌礼包（内含骆吾、水牢、火盾护身）",
+      "corrected": "6.传说卡牌礼包（内含驺吾、水牢、火盾护身）",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.68d13e54dbba24229025b7b9 3 32"
     },
     {
       "image_index": 4,
@@ -47,7 +56,7 @@
       "corrected": "“咔嚓、砰！”玩法限时开启",
       "reason": "衍字“心”，噻→嚓，研→砰；玩法名源图为“咔嚓、砰！”。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 4 28"
+      "recrop": "python -m tools.cli crop dashen.68d13e54dbba24229025b7b9 4 28"
     },
     {
       "image_index": 4,
@@ -56,7 +65,7 @@
       "corrected": "“咔嚓、砰！”玩法限时开启",
       "reason": "味→咔嚓，研→砰；玩法名源图为“咔嚓、砰！”。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 4 29"
+      "recrop": "python -m tools.cli crop dashen.68d13e54dbba24229025b7b9 4 29"
     },
     {
       "image_index": 4,
@@ -65,7 +74,7 @@
       "corrected": "有丰富的实物道具奖励和实装大奖！",
       "reason": "水印覆盖处源图为“实装大奖！”；“浆神@…”为水印。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 4 52"
+      "recrop": "python -m tools.cli crop dashen.68d13e54dbba24229025b7b9 4 52"
     },
     {
       "image_index": 5,
@@ -74,7 +83,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 5 22"
+      "recrop": "python -m tools.cli crop dashen.68d13e54dbba24229025b7b9 5 22"
     },
     {
       "image_index": 5,
@@ -83,7 +92,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68d13e54dbba24229025b7b9 5 24"
+      "recrop": "python -m tools.cli crop dashen.68d13e54dbba24229025b7b9 5 24"
     }
   ]
 }

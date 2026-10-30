@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a1432d2c5c9d625ae4f8939 1 1"
+      "recrop": "python -m tools.cli crop dashen.6a1432d2c5c9d625ae4f8939 1 1"
     },
     {
       "image_index": 3,
@@ -20,7 +20,7 @@
       "corrected": "萝宾最近的飞行训练简直酷毙了！照这个状态飞下",
       "reason": "漏字“毙”；源图为“简直酷毙了”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a1432d2c5c9d625ae4f8939 3 3"
+      "recrop": "python -m tools.cli crop dashen.6a1432d2c5c9d625ae4f8939 3 3"
     },
     {
       "image_index": 6,
@@ -29,7 +29,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a1432d2c5c9d625ae4f8939 6 6"
+      "recrop": "python -m tools.cli crop dashen.6a1432d2c5c9d625ae4f8939 6 6"
     },
     {
       "image_index": 6,
@@ -38,7 +38,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a1432d2c5c9d625ae4f8939 6 8"
+      "recrop": "python -m tools.cli crop dashen.6a1432d2c5c9d625ae4f8939 6 8"
     }
   ]
 }

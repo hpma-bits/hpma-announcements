@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.64108516922f8100014c2c69 1 1"
+      "recrop": "python -m tools.cli crop dashen.64108516922f8100014c2c69 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "活动期间将会有8套风格迥异的时装参与投票角逐，争",
       "reason": "漏字“迥”；源图为“风格迥异”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.64108516922f8100014c2c69 1 9"
+      "recrop": "python -m tools.cli crop dashen.64108516922f8100014c2c69 1 9"
     }
   ]
 }

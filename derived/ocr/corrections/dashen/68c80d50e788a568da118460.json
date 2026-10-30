@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68c80d50e788a568da118460 1 1"
+      "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 1 1"
     },
     {
       "image_index": 2,
@@ -20,7 +20,7 @@
       "corrected": "星辰明灭，不祥预言悄然蔓延，缄默的“天目”为你而",
       "reason": "漏字“缄”；源图为“缄默的‘天目’”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68c80d50e788a568da118460 2 14"
+      "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 2 14"
     },
     {
       "image_index": 3,
@@ -29,7 +29,7 @@
       "corrected": "月的殷红浸染了整片天空，预言中的“魔法湮灭”，不",
       "reason": "漏字“湮”；源图为“魔法湮灭”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68c80d50e788a568da118460 3 8"
+      "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 3 8"
     },
     {
       "image_index": 4,
@@ -38,7 +38,7 @@
       "corrected": "随本次更新，葭碧还会为巫师们奉上“地精的唾液”*1，",
       "reason": "漏字“葭”、睡→唾；源图为“葭碧……地精的唾液”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68c80d50e788a568da118460 4 28"
+      "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 4 28"
     },
     {
       "image_index": 4,
@@ -47,7 +47,7 @@
       "corrected": "随本次更新，葭碧还会为巫师们奉上“地精的唾液”*1，",
       "reason": "漏字“葭”；源图为“葭碧……”（与 b0028 为同一行的重叠切片）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68c80d50e788a568da118460 4 29"
+      "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 4 29"
     },
     {
       "image_index": 5,
@@ -56,7 +56,7 @@
       "corrected": "6.女生发型“银色枷锁盘发”&男生发型“银色枷锁”。",
       "reason": "咖→枷；源图为“枷锁”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68c80d50e788a568da118460 5 8"
+      "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 5 8"
     },
     {
       "image_index": 5,
@@ -65,7 +65,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68c80d50e788a568da118460 5 20"
+      "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 5 20"
     },
     {
       "image_index": 5,
@@ -74,7 +74,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68c80d50e788a568da118460 5 22"
+      "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 5 22"
     }
   ]
 }

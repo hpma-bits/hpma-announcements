@@ -15,6 +15,7 @@ image whose ``sha256`` already has text in the notice JSON is not re-OCRed.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import time
@@ -22,12 +23,16 @@ from pathlib import Path
 from typing import Any, Callable
 
 from . import http
-from .store import REPO_ROOT, sha256_bytes
+from .paths import REPO_ROOT
 
 Fetcher = Callable[[str], bytes]
 Block = dict[str, Any]
 Engine = Callable[[str], list[Block]]
 PNG_MAGIC = b"\x89PNG\r\n\x1a\n"
+
+
+def sha256_bytes(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
 
 
 def sniff_ext(data: bytes) -> str:

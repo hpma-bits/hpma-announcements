@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6821d974c45ea84f29c098d5 1 1"
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "外观“莓糖果露”、传说品质猫头鹰“幼年林斑小鸮”。",
       "reason": "漏字“鸮”；猫头鹰名源图为“幼年林斑小鸮”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6821d974c45ea84f29c098d5 1 10"
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 1 10"
     },
     {
       "image_index": 5,
@@ -29,7 +29,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6821d974c45ea84f29c098d5 5 21"
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 5 21"
     },
     {
       "image_index": 5,
@@ -38,7 +38,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6821d974c45ea84f29c098d5 5 23"
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 5 23"
     },
     {
       "image_index": 6,
@@ -47,7 +47,7 @@
       "corrected": "10.优化了草药学家薅菜的体验，现支持收获时点击分",
       "reason": "漏字“薅”；源图为“草药学家薅菜”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6821d974c45ea84f29c098d5 6 20"
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 6 20"
     },
     {
       "image_index": 6,
@@ -56,7 +56,7 @@
       "corrected": "享召唤其他巫师前来薅菜，与好友共享丰收体验！",
       "reason": "漏字“薅”；源图为“前来薅菜”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6821d974c45ea84f29c098d5 6 21"
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 6 21"
     }
   ]
 }

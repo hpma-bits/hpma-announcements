@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.67fcec3845bdfc20bd3263c0 1 1"
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "鹰“幼年斑林鸮”。集齐家具套装后，可在巫师空间领",
       "reason": "漏字“鸮”；源图为“幼年斑林鸮”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.67fcec3845bdfc20bd3263c0 1 12"
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 1 12"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "鹰“幼年斑林鸮”。集齐家具套装后，可在巫师空间领",
       "reason": "号→鸮；源图为“幼年斑林鸮”，与上一 block 为同一行重复识别",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.67fcec3845bdfc20bd3263c0 1 13"
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 1 13"
     },
     {
       "image_index": 4,
@@ -38,7 +38,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.67fcec3845bdfc20bd3263c0 4 16"
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 4 16"
     },
     {
       "image_index": 4,
@@ -47,7 +47,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.67fcec3845bdfc20bd3263c0 4 18"
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 4 18"
     },
     {
       "image_index": 4,
@@ -56,7 +56,7 @@
       "corrected": "快去大世界里找到故事碎片进行阅读吧！",
       "reason": "sheet 第150条；“吧@哈利波特魔法觉醒”为水印串扰，源图正文为“阅读吧！”",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.67fcec3845bdfc20bd3263c0 4 46"
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 4 46"
     },
     {
       "image_index": 5,
@@ -65,7 +65,7 @@
       "corrected": "起魔杖时，眼中迸发的独一无二的光芒。",
       "reason": "进→迸；源图为“迸发”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.67fcec3845bdfc20bd3263c0 5 33"
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 5 33"
     },
     {
       "image_index": 5,
@@ -74,7 +74,7 @@
       "corrected": "赛季预告界面开启时间：2025年4月26日7:00",
       "reason": "sheet 第156条；“700波特魔法觉醒”为“7:00”加水印，源图为“2025年4月26日7:00”",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.67fcec3845bdfc20bd3263c0 5 43"
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 5 43"
     }
   ]
 }

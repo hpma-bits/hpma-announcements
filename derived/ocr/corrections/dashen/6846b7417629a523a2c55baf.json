@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6846b7417629a523a2c55baf 1 1"
+      "recrop": "python -m tools.cli crop dashen.6846b7417629a523a2c55baf 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "“S13烘焙赛季·霜结燃烧火刑架”持续",
       "reason": "读→续；源图为“持续”（sheet 第74行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6846b7417629a523a2c55baf 1 17"
+      "recrop": "python -m tools.cli crop dashen.6846b7417629a523a2c55baf 1 17"
     },
     {
       "image_index": 5,
@@ -29,7 +29,7 @@
       "corrected": "每日金币获取量存在上限，此上限每日5：00重置。",
       "reason": "“5度特魔法觉醒”→“每日5：00重置”；源图正文与“大神@哈利波特魔法觉醒”水印合并，可辨内容为“每日5：00重置”，故标 medium",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.6846b7417629a523a2c55baf 5 38"
+      "recrop": "python -m tools.cli crop dashen.6846b7417629a523a2c55baf 5 38"
     },
     {
       "image_index": 6,
@@ -38,7 +38,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "溪→蹊；源图标题为“林中蹊径”（sheet 第100行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6846b7417629a523a2c55baf 6 11"
+      "recrop": "python -m tools.cli crop dashen.6846b7417629a523a2c55baf 6 11"
     },
     {
       "image_index": 6,
@@ -47,7 +47,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6846b7417629a523a2c55baf 6 13"
+      "recrop": "python -m tools.cli crop dashen.6846b7417629a523a2c55baf 6 13"
     }
   ]
 }

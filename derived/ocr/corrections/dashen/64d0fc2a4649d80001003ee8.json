@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.64d0fc2a4649d80001003ee8 1 1"
+      "recrop": "python -m tools.cli crop dashen.64d0fc2a4649d80001003ee8 1 1"
     },
     {
       "image_index": 2,
@@ -20,7 +20,7 @@
       "corrected": "4、优化了日常任务界面。新增玩法推送，玩家完成",
       "reason": "整行乱码；源图与上一行同为“4、优化了日常任务界面。新增玩法推送，玩家完成”（sheet 第8行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.64d0fc2a4649d80001003ee8 2 51"
+      "recrop": "python -m tools.cli crop dashen.64d0fc2a4649d80001003ee8 2 51"
     }
   ]
 }

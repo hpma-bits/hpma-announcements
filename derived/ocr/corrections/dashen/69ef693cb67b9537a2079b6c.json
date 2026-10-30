@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69ef693cb67b9537a2079b6c 1 1"
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "幻咒千变",
       "reason": "干→千；源图封面活动名为“幻咒千变”（sheet 第52行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69ef693cb67b9537a2079b6c 1 4"
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 1 4"
     },
     {
       "image_index": 2,
@@ -29,7 +29,7 @@
       "corrected": "“呢喃林隙”劳动节活动精彩开启！",
       "reason": "哺→喃；源图活动名为“呢喃林隙”（sheet 第121行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69ef693cb67b9537a2079b6c 2 40"
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 2 40"
     },
     {
       "image_index": 4,
@@ -38,7 +38,7 @@
       "corrected": "全新材料！家养小精灵格瑞宝灵感迸发，制作出了浓",
       "reason": "进→迸；源图为“灵感迸发”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69ef693cb67b9537a2079b6c 4 46"
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 4 46"
     },
     {
       "image_index": 5,
@@ -47,7 +47,7 @@
       "corrected": "学院杯“最强巫师”项目即将开赛",
       "reason": "衍字“心”；源图行首为装饰花纹，无“心”（sheet 第151行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69ef693cb67b9537a2079b6c 5 35"
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 5 35"
     },
     {
       "image_index": 5,
@@ -56,7 +56,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69ef693cb67b9537a2079b6c 5 49"
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 5 49"
     },
     {
       "image_index": 5,
@@ -65,7 +65,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69ef693cb67b9537a2079b6c 5 51"
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 5 51"
     }
   ]
 }

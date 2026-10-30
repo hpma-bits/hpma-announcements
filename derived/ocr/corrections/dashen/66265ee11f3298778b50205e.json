@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.66265ee11f3298778b50205e 1 1"
+      "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "10张传说品质卡牌分别为：石墩出动/幽灵骑士团/卢",
       "reason": "漏字“墩”；卡牌名源图为“石墩出动”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.66265ee11f3298778b50205e 1 16"
+      "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 1 16"
     }
   ]
 }

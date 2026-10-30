@@ -11,7 +11,34 @@
       "corrected": "其中就有最近风靡巫师界，引领流行的“染发灵”。",
       "reason": "漏字“靡”；源图为“风靡巫师界”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62b1bf0fc5a325000141f0f0 1 9"
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 1 9"
+    },
+    {
+      "image_index": 1,
+      "block_index": 31,
+      "original": "深入调查，收集特殊道具“噢幻草”，解锁调查能力，",
+      "corrected": "深入调查，收集特殊道具“嗅幻草”，解锁调查能力，",
+      "reason": "OCR 稀有字误识（噢→嗅）；源图为「嗅幻草」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 1 31"
+    },
+    {
+      "image_index": 1,
+      "block_index": 36,
+      "original": "一巨蛛”、“寝室壁画一骆吾”、“摆件一似雪纯净”、",
+      "corrected": "一巨蛛”、“寝室壁画一驺吾”、“摆件一似雪纯净”、",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 1 36"
+    },
+    {
+      "image_index": 1,
+      "block_index": 39,
+      "original": "“壁画-八眼巨蛛”、“壁画-骆吾”、“壁画一有翼的",
+      "corrected": "“壁画-八眼巨蛛”、“壁画-驺吾”、“壁画一有翼的",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 1 39"
     },
     {
       "image_index": 2,
@@ -20,7 +47,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62b1bf0fc5a325000141f0f0 2 1"
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 2 1"
     },
     {
       "image_index": 2,
@@ -29,7 +56,7 @@
       "corrected": "5）复制成双任务，也可以在决斗派对中完成。",
       "reason": "sheet 第84条；源图正文为“在决斗派对中完成。”，“中完成”与水印重叠",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.62b1bf0fc5a325000141f0f0 2 18"
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 2 18"
     },
     {
       "image_index": 4,
@@ -38,7 +65,7 @@
       "corrected": "1、时装“黑龙驯养者”额外赠送耳饰配饰“深渊梦魇”",
       "reason": "漏字“魇”；耳饰名源图为“深渊梦魇”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62b1bf0fc5a325000141f0f0 4 3"
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 4 3"
     },
     {
       "image_index": 5,
@@ -47,7 +74,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62b1bf0fc5a325000141f0f0 5 1"
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 5 1"
     },
     {
       "image_index": 5,
@@ -56,7 +83,7 @@
       "corrected": "1、修复了昏昏倒地一段命中被变形为兔子的单位后，",
       "reason": "免→兔；源图为“兔子”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62b1bf0fc5a325000141f0f0 5 3"
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 5 3"
     },
     {
       "image_index": 5,
@@ -65,7 +92,7 @@
       "corrected": "敬上",
       "reason": "款→敬；sheet 第3条，署名源图为“敬上”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62b1bf0fc5a325000141f0f0 5 20"
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 5 20"
     }
   ]
 }

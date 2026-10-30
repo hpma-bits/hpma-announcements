@@ -11,7 +11,7 @@
       "corrected": "（注：只要魔咒组合中存在“阿瓦达索命”、“钻心剜骨”等不可饶恕咒，",
       "reason": "怒→恕；源图为“不可饶恕咒”。同 block 的“钻心骨”已由 systematic 统一改为“钻心剜骨”，此处 corrected 已将两者合并，避免同一 locator 冲突",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.620b75eec3e1e50001f33764 2 23"
+      "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 2 23"
     }
   ]
 }

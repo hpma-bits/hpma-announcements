@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62f3b68a3408360001f2c1c9 1 1"
+      "recrop": "python -m tools.cli crop dashen.62f3b68a3408360001f2c1c9 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "大神@哈利波特魔法觉醒",
       "reason": "水印漏识“波”；源图为“大神@哈利波特魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62f3b68a3408360001f2c1c9 1 5"
+      "recrop": "python -m tools.cli crop dashen.62f3b68a3408360001f2c1c9 1 5"
     }
   ]
 }

@@ -23,3 +23,9 @@ jobs:
 
       - name: Test
         run: pytest -q
+
+      - name: Check the correction ledger
+        run: python -m tools.cli verify
+
+      - name: Check the committed edition
+        run: python -m tools.cli edition --check

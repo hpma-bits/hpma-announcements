@@ -11,25 +11,97 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63c6b1113408360001bff04e 1 1"
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 1 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 19,
+      "original": "表情“骆吾歪头”、动作“非常认可”、史诗家具图纸",
+      "corrected": "表情“驺吾歪头”、动作“非常认可”、史诗家具图纸",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 2 19"
     },
     {
       "image_index": 3,
       "block_index": 0,
       "original": "“陷吾来迎”活动开启",
-      "corrected": "“骆吾来迎”活动开启",
-      "reason": "陷→骆；源图为“骆吾来迎”",
+      "corrected": "“驺吾来迎”活动开启",
+      "reason": "OCR 稀有字误识（骆→驺）；陷→驺；源图为“驺吾来迎”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63c6b1113408360001bff04e 3 0"
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 3 0"
+    },
+    {
+      "image_index": 3,
+      "block_index": 1,
+      "original": "全新传说魔咒“骆吾”和史诗魔咒“狼牙飞碟”上线，掀",
+      "corrected": "全新传说魔咒“驺吾”和史诗魔咒“狼牙飞碟”上线，掀",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 3 1"
+    },
+    {
+      "image_index": 3,
+      "block_index": 9,
+      "original": "2.“骆吾”、“狼牙飞碟”获取概率提升：",
+      "corrected": "2.“驺吾”、“狼牙飞碟”获取概率提升：",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 3 9"
     },
     {
       "image_index": 3,
       "block_index": 11,
       "original": "转化为“吾”。通过阅读获得“骆吾”的初始概率为",
-      "corrected": "转化为“骆吾”。通过阅读获得“骆吾”的初始概率为",
-      "reason": "漏识“骆”；源图为“骆吾”",
+      "corrected": "转化为“驺吾”。通过阅读获得“驺吾”的初始概率为",
+      "reason": "OCR 稀有字误识（骆→驺）；漏识“驺”；源图为“驺吾”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63c6b1113408360001bff04e 3 11"
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 3 11"
+    },
+    {
+      "image_index": 3,
+      "block_index": 13,
+      "original": "的转化概率增加0.1%，最高可至100%。获得“骆吾”后，",
+      "corrected": "的转化概率增加0.1%，最高可至100%。获得“驺吾”后，",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 3 13"
+    },
+    {
+      "image_index": 3,
+      "block_index": 15,
+      "original": "活动期间最多可通过此方式获得4张“骆吾”。",
+      "corrected": "活动期间最多可通过此方式获得4张“驺吾”。",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 3 15"
+    },
+    {
+      "image_index": 3,
+      "block_index": 24,
+      "original": "“骆吾”",
+      "corrected": "“驺吾”",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 3 24"
+    },
+    {
+      "image_index": 3,
+      "block_index": 25,
+      "original": "取出逗猫棒吸引骆吾。骆吾受到逗猫棒的吸引，跃向",
+      "corrected": "取出逗猫棒吸引驺吾。驺吾受到逗猫棒的吸引，跃向",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 3 25"
+    },
+    {
+      "image_index": 3,
+      "block_index": 27,
+      "original": "猫棒位置，指挥骆吾攻击。在进行2次攻击后，骆吾会",
+      "corrected": "猫棒位置，指挥驺吾攻击。在进行2次攻击后，驺吾会",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 3 27"
     },
     {
       "image_index": 3,
@@ -38,16 +110,43 @@
       "corrected": "活动时间：1月18日维护后－1月25日05:00",
       "reason": "低置信度重复残片，源图整行为活动时间",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.63c6b1113408360001bff04e 3 39"
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 3 39"
+    },
+    {
+      "image_index": 3,
+      "block_index": 43,
+      "original": "及魔咒“骆吾”和“狼牙飞碟”，通关试炼关卡。",
+      "corrected": "及魔咒“驺吾”和“狼牙飞碟”，通关试炼关卡。",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 3 43"
     },
     {
       "image_index": 3,
       "block_index": 44,
       "original": "及魔咒“吾”和“狼牙飞碟”，通关试炼关卡。",
-      "corrected": "及魔咒“骆吾”和“狼牙飞碟”，通关试炼关卡。",
-      "reason": "漏识“骆”；源图为“骆吾”",
+      "corrected": "及魔咒“驺吾”和“狼牙飞碟”，通关试炼关卡。",
+      "reason": "OCR 稀有字误识（骆→驺）；漏识“驺”；源图为“驺吾”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63c6b1113408360001bff04e 3 44"
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 3 44"
+    },
+    {
+      "image_index": 3,
+      "block_index": 48,
+      "original": "魔咒等级保护将于本期新魔咒“骆吾”和“狼牙飞",
+      "corrected": "魔咒等级保护将于本期新魔咒“驺吾”和“狼牙飞",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 3 48"
+    },
+    {
+      "image_index": 3,
+      "block_index": 53,
+      "original": "或队友使用“骆吾”或“狼牙飞碟”参与任意战斗",
+      "corrected": "或队友使用“驺吾”或“狼牙飞碟”参与任意战斗",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 3 53"
     }
   ]
 }

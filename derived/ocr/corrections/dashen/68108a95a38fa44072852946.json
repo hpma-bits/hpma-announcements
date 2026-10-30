@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68108a95a38fa44072852946 1 1"
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "2.传说召唤卡“石墩出动”",
       "reason": "漏字“墩”；卡牌名源图为“石墩出动”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68108a95a38fa44072852946 1 29"
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 1 29"
     },
     {
       "image_index": 4,
@@ -29,7 +29,7 @@
       "corrected": "6魔力值卡牌：石墩出动、万咒皆终、阿兹卡班、巨乌贼",
       "reason": "漏字“墩”；卡牌名源图为“石墩出动”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68108a95a38fa44072852946 4 19"
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 4 19"
     },
     {
       "image_index": 4,
@@ -38,7 +38,7 @@
       "corrected": "完成任务，达成对应等级可获得传说品质耳部配饰“幽",
       "reason": "sheet 第7条；源图与上一 block 为同一行“完成任务，达成对应等级可获得传说品质耳部配饰“幽”",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.68108a95a38fa44072852946 4 56"
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 4 56"
     },
     {
       "image_index": 5,
@@ -47,7 +47,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68108a95a38fa44072852946 5 15"
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 5 15"
     },
     {
       "image_index": 5,
@@ -56,7 +56,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68108a95a38fa44072852946 5 17"
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 5 17"
     }
   ]
 }

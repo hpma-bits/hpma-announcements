@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6aba258c7427865d21e69300 1 1"
+      "recrop": "python -m tools.cli crop dashen.6aba258c7427865d21e69300 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "本期大奖：传说品质时装“缇边流光”、传说品质魔杖",
       "reason": "漏字“缇”；源图时装名为“缇边流光”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6aba258c7427865d21e69300 1 10"
+      "recrop": "python -m tools.cli crop dashen.6aba258c7427865d21e69300 1 10"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "焕新时装“缇边流光·铅华”与“缇边流光·月尘”也将同期",
       "reason": "漏字“缇”（两处）；源图时装名为“缇边流光”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6aba258c7427865d21e69300 1 14"
+      "recrop": "python -m tools.cli crop dashen.6aba258c7427865d21e69300 1 14"
     },
     {
       "image_index": 5,
@@ -38,7 +38,7 @@
       "corrected": "购买即可获得10月“采风之行·Ⅱ”主题史诗时装：“苍野",
       "reason": "1I1→Ⅱ；源图为罗马数字“Ⅱ”",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.6aba258c7427865d21e69300 5 13"
+      "recrop": "python -m tools.cli crop dashen.6aba258c7427865d21e69300 5 13"
     },
     {
       "image_index": 6,
@@ -47,7 +47,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6aba258c7427865d21e69300 6 12"
+      "recrop": "python -m tools.cli crop dashen.6aba258c7427865d21e69300 6 12"
     },
     {
       "image_index": 6,
@@ -56,7 +56,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6aba258c7427865d21e69300 6 14"
+      "recrop": "python -m tools.cli crop dashen.6aba258c7427865d21e69300 6 14"
     }
   ]
 }

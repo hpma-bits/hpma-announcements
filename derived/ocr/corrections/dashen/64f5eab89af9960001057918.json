@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.64f5eab89af9960001057918 1 1"
+      "recrop": "python -m tools.cli crop dashen.64f5eab89af9960001057918 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "魔杖外观“找球手之获”、传说品质猫头鹰“小领角鸮”",
       "reason": "漏字“鸮”；源图为“小领角鸮”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.64f5eab89af9960001057918 1 56"
+      "recrop": "python -m tools.cli crop dashen.64f5eab89af9960001057918 1 56"
     }
   ]
 }

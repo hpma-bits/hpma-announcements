@@ -11,7 +11,7 @@
       "corrected": "“嗅嗅宝物”礼包上架",
       "reason": "噢噢→嗅嗅；源图为“嗅嗅宝物”（此期作“宝物”，非“宝藏”）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6373864dc5a32500013884a7 1 7"
+      "recrop": "python -m tools.cli crop dashen.6373864dc5a32500013884a7 1 7"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "框“帷幔轻动”、道具“永恒卡牌”、“传说卡牌”等",
       "reason": "慢→幔；源图为“帷幔轻动”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6373864dc5a32500013884a7 1 10"
+      "recrop": "python -m tools.cli crop dashen.6373864dc5a32500013884a7 1 10"
     }
   ]
 }

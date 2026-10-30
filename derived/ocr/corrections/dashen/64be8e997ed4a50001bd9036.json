@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”（同批次已核验同款封面 logo）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.64be8e997ed4a50001bd9036 1 1"
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "“金缎豪华礼盒”奖励调整",
       "reason": "锻→缎；源图礼盒名为“金缎豪华礼盒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.64be8e997ed4a50001bd9036 1 59"
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 1 59"
     },
     {
       "image_index": 3,
@@ -29,7 +29,7 @@
       "corrected": "问题修正",
       "reason": "悠→修；标题源图为“问题修正”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.64be8e997ed4a50001bd9036 3 59"
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 3 59"
     }
   ]
 }

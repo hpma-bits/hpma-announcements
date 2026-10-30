@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.668be43d3fc41364fdedf3a5 1 1"
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "鹰“纵纹腹小鸮”。",
       "reason": "漏“鸮”；源图为猫头鹰名“纵纹腹小鸮”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.668be43d3fc41364fdedf3a5 1 12"
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 1 12"
     },
     {
       "image_index": 2,
@@ -29,7 +29,7 @@
       "corrected": "葭碧商店的升级任务及每周的植物高价收购！完成商",
       "reason": "薛→葭；NPC 名源图为“葭碧”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.668be43d3fc41364fdedf3a5 2 17"
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 2 17"
     },
     {
       "image_index": 2,
@@ -38,7 +38,7 @@
       "corrected": "1.对应等级下，葭碧钱包每周刷新的钱包金额区间提",
       "reason": "漏“葭”；源图为“葭碧钱包”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.668be43d3fc41364fdedf3a5 2 21"
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 2 21"
     },
     {
       "image_index": 2,
@@ -47,7 +47,7 @@
       "corrected": "升，葭碧钱包金额将从此前受巫师草药学等级影响，",
       "reason": "漏“葭”；源图为“葭碧钱包”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.668be43d3fc41364fdedf3a5 2 22"
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 2 22"
     },
     {
       "image_index": 2,
@@ -56,7 +56,7 @@
       "corrected": "修改为受商店等级影响（当前葭碧钱包已经跟随等级",
       "reason": "漏“葭”；源图为“当前葭碧钱包”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.668be43d3fc41364fdedf3a5 2 23"
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 2 23"
     },
     {
       "image_index": 2,
@@ -65,7 +65,7 @@
       "corrected": "现在葭碧的商店新增了以下可以购买照料的植物种子：",
       "reason": "漏“葭”；源图为“现在葭碧的商店”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.668be43d3fc41364fdedf3a5 2 31"
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 2 31"
     },
     {
       "image_index": 3,
@@ -74,7 +74,7 @@
       "corrected": "败场，不会降低分数。",
       "reason": "sheet 第5行；整行乱码，源图“败场，不会降低分数。”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.668be43d3fc41364fdedf3a5 3 27"
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 3 27"
     },
     {
       "image_index": 3,
@@ -83,7 +83,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.668be43d3fc41364fdedf3a5 3 29"
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 3 29"
     },
     {
       "image_index": 3,
@@ -92,7 +92,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.668be43d3fc41364fdedf3a5 3 31"
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 3 31"
     },
     {
       "image_index": 4,
@@ -101,7 +101,7 @@
       "corrected": "15、优化了薅菜的文本表达。",
       "reason": "漏“薅”；源图系统名为“薅菜”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.668be43d3fc41364fdedf3a5 4 44"
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 4 44"
     },
     {
       "image_index": 4,
@@ -110,7 +110,7 @@
       "corrected": "20、优化了“薅菜”的体验，当巫师草药学研究等级低",
       "reason": "漏“薅”；源图为“优化了‘薅菜’的体验”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.668be43d3fc41364fdedf3a5 4 53"
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 4 53"
     },
     {
       "image_index": 4,
@@ -119,7 +119,7 @@
       "corrected": "于被薅菜玩家等级时，从原本只会到“萎靡不振”品",
       "reason": "漏“薅”；源图为“于被薅菜玩家等级时”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.668be43d3fc41364fdedf3a5 4 54"
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 4 54"
     },
     {
       "image_index": 5,
@@ -128,7 +128,7 @@
       "corrected": "1、修复了巫师在收获、采集或薅菜时，植物的图标显",
       "reason": "漏“薅”；源图为“收获、采集或薅菜时”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.668be43d3fc41364fdedf3a5 5 1"
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 5 1"
     }
   ]
 }

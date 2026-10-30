@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”（同批次已核验同款封面 logo）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.65648a225930fd0001592081 1 1"
+      "recrop": "python -m tools.cli crop dashen.65648a225930fd0001592081 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "外观“巨龙之怒”、传说品质猫头鹰“毛腿渔鸮”、传说品",
       "reason": "鸡→鸮；源图猫头鹰名为“毛腿渔鸮”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.65648a225930fd0001592081 1 23"
+      "recrop": "python -m tools.cli crop dashen.65648a225930fd0001592081 1 23"
     }
   ]
 }

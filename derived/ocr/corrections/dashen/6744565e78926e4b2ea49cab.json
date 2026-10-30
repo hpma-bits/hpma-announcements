@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6744565e78926e4b2ea49cab 1 1"
+      "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "外观“糖果扎束”、传说品质猫头鹰“乳黄鹰鸮”。",
       "reason": "鸡→鸮；源图猫头鹰名为“乳黄鹰鸮”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6744565e78926e4b2ea49cab 1 12"
+      "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 12"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "每收集1块拼图碎片，可获得宝石*20、金币*3000！",
       "reason": "右→石；源图为“宝石*20”，与上一行同句一致（该 block 与 b0036 为重叠切片）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6744565e78926e4b2ea49cab 1 37"
+      "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 37"
     },
     {
       "image_index": 1,
@@ -38,7 +38,7 @@
       "corrected": "*1、“稀有巨螺壳收藏罐”*2！让星光在你的头顶喟叹闪",
       "reason": "漏字“喟”；源图为“喟叹闪耀”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6744565e78926e4b2ea49cab 1 72"
+      "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 72"
     },
     {
       "image_index": 1,
@@ -47,7 +47,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "溪→蹊；源图标题为“林中蹊径”（sheet 第116行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6744565e78926e4b2ea49cab 1 91"
+      "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 91"
     }
   ]
 }

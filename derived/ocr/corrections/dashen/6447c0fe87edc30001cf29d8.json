@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6447c0fe87edc30001cf29d8 1 1"
+      "recrop": "python -m tools.cli crop dashen.6447c0fe87edc30001cf29d8 1 1"
     },
     {
       "image_index": 3,
@@ -20,7 +20,7 @@
       "corrected": "购买可获得传说品质魔咒皮肤“速速禁锢·无处可逃”",
       "reason": "补“锢”；源图魔咒皮肤名为“速速禁锢·无处可逃”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6447c0fe87edc30001cf29d8 3 14"
+      "recrop": "python -m tools.cli crop dashen.6447c0fe87edc30001cf29d8 3 14"
     },
     {
       "image_index": 4,
@@ -29,7 +29,7 @@
       "corrected": "漫步于恬静原野，歌声在莠草和蒲公英间回荡，如阳光",
       "reason": "菱→莠；源图及官方同文均为“莠草和蒲公英”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6447c0fe87edc30001cf29d8 4 2"
+      "recrop": "python -m tools.cli crop dashen.6447c0fe87edc30001cf29d8 4 2"
     },
     {
       "image_index": 5,
@@ -38,7 +38,7 @@
       "corrected": "“家具组合蓝图套装”：玩家可将自己精心构建的小角落，",
       "reason": "已→己；源图为“自己”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6447c0fe87edc30001cf29d8 5 5"
+      "recrop": "python -m tools.cli crop dashen.6447c0fe87edc30001cf29d8 5 5"
     }
   ]
 }

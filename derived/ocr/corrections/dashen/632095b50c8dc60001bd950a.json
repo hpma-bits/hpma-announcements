@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.632095b50c8dc60001bd950a 1 1"
+      "recrop": "python -m tools.cli crop dashen.632095b50c8dc60001bd950a 1 1"
     },
     {
       "image_index": 2,
@@ -20,7 +20,7 @@
       "corrected": "全新功能抢先体验：",
       "reason": "金→全；源图标题为“全新功能抢先体验”（重叠切片）（sheet 第186行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.632095b50c8dc60001bd950a 2 33"
+      "recrop": "python -m tools.cli crop dashen.632095b50c8dc60001bd950a 2 33"
     }
   ]
 }

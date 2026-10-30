@@ -11,7 +11,7 @@
       "corrected": "“段位保护”活动开启！",
       "reason": "衍“心”（装饰图标）；源图标题无“心”（sheet 第94行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.664217c33275d263668540d6 1 11"
+      "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 1 11"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "14、时装“乐于助人的草药学家”和帽子“曼德拉噤声耳",
       "reason": "漏“噤”；源图帽子名为“曼德拉噤声耳罩”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.664217c33275d263668540d6 1 57"
+      "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 1 57"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "15、优化了“梳妆魔盒”中模特的妆容搭配",
       "reason": "塔→搭；源图为“妆容搭配”（sheet 第105行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.664217c33275d263668540d6 1 59"
+      "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 1 59"
     },
     {
       "image_index": 2,
@@ -38,7 +38,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.664217c33275d263668540d6 2 1"
+      "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 2 1"
     }
   ]
 }

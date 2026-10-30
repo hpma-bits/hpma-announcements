@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6255792c3408360001063839 1 1"
+      "recrop": "python -m tools.cli crop dashen.6255792c3408360001063839 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "调，在蛋糕的甜蜜中翩翩起舞！",
       "reason": "漏字“翩”；源图为“翩翩起舞”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6255792c3408360001063839 1 9"
+      "recrop": "python -m tools.cli crop dashen.6255792c3408360001063839 1 9"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "同时，调配“复方汤剂”所需的全新魔药材料“草蛉",
       "reason": "岭→蛉；材料名源图为“草蛉虫”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6255792c3408360001063839 1 48"
+      "recrop": "python -m tools.cli crop dashen.6255792c3408360001063839 1 48"
     },
     {
       "image_index": 1,
@@ -38,7 +38,7 @@
       "corrected": "品，均可累积1点奖励进度。累积5点后，即可领取“哐铛",
       "reason": "眶→哐；道具名源图为“哐铛铛钱袋”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6255792c3408360001063839 1 76"
+      "recrop": "python -m tools.cli crop dashen.6255792c3408360001063839 1 76"
     }
   ]
 }

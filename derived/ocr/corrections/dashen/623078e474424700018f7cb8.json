@@ -11,7 +11,7 @@
       "corrected": "大神@哈利波特魔法觉醒",
       "reason": "宽→觉；页脚源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.623078e474424700018f7cb8 1 24"
+      "recrop": "python -m tools.cli crop dashen.623078e474424700018f7cb8 1 24"
     }
   ]
 }

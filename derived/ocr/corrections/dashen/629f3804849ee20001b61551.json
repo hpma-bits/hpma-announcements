@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.629f3804849ee20001b61551 1 1"
+      "recrop": "python -m tools.cli crop dashen.629f3804849ee20001b61551 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "升级，我们暂时停止了蓝牙/WiFi的互换方式，待升级",
       "reason": "M→W；源图为“WiFi”（与 b0021 为同一行的重叠切片）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.629f3804849ee20001b61551 1 20"
+      "recrop": "python -m tools.cli crop dashen.629f3804849ee20001b61551 1 20"
     }
   ]
 }

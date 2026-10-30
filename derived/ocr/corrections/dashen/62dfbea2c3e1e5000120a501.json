@@ -11,7 +11,7 @@
       "corrected": "大神@哈利波特魔法觉醒",
       "reason": "皮→波；水印专名源图为“哈利波特”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62dfbea2c3e1e5000120a501 4 17"
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 4 17"
     },
     {
       "image_index": 6,
@@ -20,7 +20,7 @@
       "corrected": "2、修复了少数情况下，凤凰被击败后不会留下灰烬的问",
       "reason": "炽→烬；源图为“不会留下灰烬”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62dfbea2c3e1e5000120a501 6 2"
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 6 2"
     },
     {
       "image_index": 6,
@@ -29,7 +29,7 @@
       "corrected": "大神@哈利波特魔法觉醒",
       "reason": "皮→波；水印专名源图为“哈利波特”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62dfbea2c3e1e5000120a501 6 13"
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 6 13"
     }
   ]
 }

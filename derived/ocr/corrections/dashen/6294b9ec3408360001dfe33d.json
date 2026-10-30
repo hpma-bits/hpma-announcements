@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6294b9ec3408360001dfe33d 1 1"
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "刻生命值扣除量略微提升。好友切磋、学院精英赛、自定",
       "reason": "漏识“磋”；源图为“好友切磋”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6294b9ec3408360001dfe33d 1 81"
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 81"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "刻生命值扣除量略微提升。好友切磋、学院精英赛、自定",
       "reason": "“提开/好发切砖/字院”为形近误识，源图为“提升/好友切磋/学院”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6294b9ec3408360001dfe33d 1 82"
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 82"
     },
     {
       "image_index": 1,
@@ -38,7 +38,7 @@
       "corrected": "队友巫师的收益并不理想且与强化非巫师单位相冲突，所",
       "reason": "低置信度重复残片，源图整行为此句",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6294b9ec3408360001dfe33d 1 123"
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 123"
     },
     {
       "image_index": 1,
@@ -47,7 +47,7 @@
       "corrected": "了使战斗双方能够有更多策略博弈的空间，我们整体调整",
       "reason": "奔→弈；源图为“博弈”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6294b9ec3408360001dfe33d 1 156"
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 156"
     },
     {
       "image_index": 1,
@@ -56,7 +56,7 @@
       "corrected": "3）罗恩·韦斯莱-昔日重现调整：巫师棋马生命提升",
       "reason": "重复残片“区师/提开”，源图整行为此句",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6294b9ec3408360001dfe33d 1 165"
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 165"
     },
     {
       "image_index": 1,
@@ -65,7 +65,7 @@
       "corrected": "家单位造成50%减速，同时伤害增加上限提高20%，弹射",
       "reason": "残片“猫射”，源图整行为此句",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6294b9ec3408360001dfe33d 1 175"
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 175"
     },
     {
       "image_index": 1,
@@ -74,7 +74,7 @@
       "corrected": "的标注展示，方便巫师们分辨自己的魔杖与已收集的魔杖",
       "reason": "已→己；源图为“自己”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6294b9ec3408360001dfe33d 1 246"
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 246"
     }
   ]
 }

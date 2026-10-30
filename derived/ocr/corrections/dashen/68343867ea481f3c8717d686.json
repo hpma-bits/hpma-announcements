@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68343867ea481f3c8717d686 1 1"
+      "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 1 1"
     },
     {
       "image_index": 2,
@@ -20,7 +20,7 @@
       "corrected": "望，审判善良......",
       "reason": "漏“判”；源图为“望，审判善良……”（sheet 第4行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68343867ea481f3c8717d686 2 8"
+      "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 2 8"
     },
     {
       "image_index": 3,
@@ -29,7 +29,7 @@
       "corrected": "学院杯“最强巫师”项目即将开赛",
       "reason": "衍“心”（装饰图标）；源图标题无“心”（sheet 第92行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68343867ea481f3c8717d686 3 42"
+      "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 3 42"
     },
     {
       "image_index": 5,
@@ -38,7 +38,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68343867ea481f3c8717d686 5 24"
+      "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 5 24"
     },
     {
       "image_index": 5,
@@ -47,7 +47,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68343867ea481f3c8717d686 5 26"
+      "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 5 26"
     }
   ]
 }

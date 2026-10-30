@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62f222a5849ee200017e6aaa 1 1"
+      "recrop": "python -m tools.cli crop dashen.62f222a5849ee200017e6aaa 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "“魔咒等级保护”功能上线",
       "reason": "删衍字“心”；源图标题为“魔咒等级保护”功能上线，行末为装饰花纹",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62f222a5849ee200017e6aaa 1 19"
+      "recrop": "python -m tools.cli crop dashen.62f222a5849ee200017e6aaa 1 19"
     },
     {
       "image_index": 2,
@@ -29,7 +29,7 @@
       "corrected": "萦绕在禁林中的紧张气氛来自盛夏，还是……蜂拥而",
       "reason": "荣→萦；源图为“萦绕”，省略号为“……”，OCR 误作“·”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62f222a5849ee200017e6aaa 2 19"
+      "recrop": "python -m tools.cli crop dashen.62f222a5849ee200017e6aaa 2 19"
     },
     {
       "image_index": 3,
@@ -38,7 +38,7 @@
       "corrected": "大神@哈利波特魔法觉醒",
       "reason": "皮→波；水印专名源图为“哈利波特”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62f222a5849ee200017e6aaa 3 21"
+      "recrop": "python -m tools.cli crop dashen.62f222a5849ee200017e6aaa 3 21"
     },
     {
       "image_index": 4,
@@ -47,7 +47,7 @@
       "corrected": "卢娜·洛夫古德",
       "reason": "哪→娜；源图回响名为“卢娜·洛夫古德”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62f222a5849ee200017e6aaa 4 5"
+      "recrop": "python -m tools.cli crop dashen.62f222a5849ee200017e6aaa 4 5"
     },
     {
       "image_index": 4,
@@ -56,7 +56,7 @@
       "corrected": "物卡可升级的魔咒种类中增加“雪人飞来”与“嗅嗅”。",
       "reason": "噢→嗅；源图为“嗅嗅”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62f222a5849ee200017e6aaa 4 10"
+      "recrop": "python -m tools.cli crop dashen.62f222a5849ee200017e6aaa 4 10"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6720552190b2886a4b1236ec 1 1"
+      "recrop": "python -m tools.cli crop dashen.6720552190b2886a4b1236ec 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "鹰“小兰屿角鸮”。集齐家具套装后，可在巫师空间领",
       "reason": "漏字“鸮”；源图猫头鹰名为“小兰屿角鸮”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6720552190b2886a4b1236ec 1 12"
+      "recrop": "python -m tools.cli crop dashen.6720552190b2886a4b1236ec 1 12"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "溪→蹊；源图标题为“林中蹊径”（与 b0064 为同一行的重叠切片）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6720552190b2886a4b1236ec 1 65"
+      "recrop": "python -m tools.cli crop dashen.6720552190b2886a4b1236ec 1 65"
     }
   ]
 }

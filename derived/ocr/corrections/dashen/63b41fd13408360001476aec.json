@@ -11,16 +11,79 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63b41fd13408360001476aec 1 1"
+      "recrop": "python -m tools.cli crop dashen.63b41fd13408360001476aec 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 3,
+      "original": "骆吾来袭",
+      "corrected": "驺吾来袭",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63b41fd13408360001476aec 1 3"
     },
     {
       "image_index": 1,
       "block_index": 6,
       "original": "“陷吾来袭”挑战复刻",
-      "corrected": "“骆吾来袭”挑战复刻",
-      "reason": "陷→骆；源图标题为“骆吾来袭”",
+      "corrected": "“驺吾来袭”挑战复刻",
+      "reason": "OCR 稀有字误识（骆→驺）；陷→驺；源图标题为“驺吾来袭”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63b41fd13408360001476aec 1 6"
+      "recrop": "python -m tools.cli crop dashen.63b41fd13408360001476aec 1 6"
+    },
+    {
+      "image_index": 1,
+      "block_index": 9,
+      "original": "“骆吾来袭”挑战再度开启！本次活动将继承巫师上",
+      "corrected": "“驺吾来袭”挑战再度开启！本次活动将继承巫师上",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63b41fd13408360001476aec 1 9"
+    },
+    {
+      "image_index": 1,
+      "block_index": 10,
+      "original": "一次“骆吾来袭”活动中的挑战进度。",
+      "corrected": "一次“驺吾来袭”活动中的挑战进度。",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63b41fd13408360001476aec 1 10"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "活动期间，每日前2次通关“骆吾来袭”将获取大量奖",
+      "corrected": "活动期间，每日前2次通关“驺吾来袭”将获取大量奖",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63b41fd13408360001476aec 1 11"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "同时，还将开启“骆吾来袭”的专属挑战任务，巫师",
+      "corrected": "同时，还将开启“驺吾来袭”的专属挑战任务，巫师",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63b41fd13408360001476aec 1 13"
+    },
+    {
+      "image_index": 1,
+      "block_index": 15,
+      "original": "巫师于本次活动中解锁的“骆吾来袭”最高难度将继",
+      "corrected": "巫师于本次活动中解锁的“驺吾来袭”最高难度将继",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63b41fd13408360001476aec 1 15"
+    },
+    {
+      "image_index": 1,
+      "block_index": 16,
+      "original": "承至下次“骆吾来袭”活动，快拿起魔杖，前来挑战",
+      "corrected": "承至下次“驺吾来袭”活动，快拿起魔杖，前来挑战",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63b41fd13408360001476aec 1 16"
     },
     {
       "image_index": 1,
@@ -29,7 +92,7 @@
       "corrected": "4、修复了魔咒“速速禁锢”造成的禁锢时间缩短以及",
       "reason": "漏两处“锢”；源图为“速速禁锢造成的禁锢时间缩短”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63b41fd13408360001476aec 1 27"
+      "recrop": "python -m tools.cli crop dashen.63b41fd13408360001476aec 1 27"
     }
   ]
 }

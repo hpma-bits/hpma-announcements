@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68594a09392f132d97a63a98 1 1"
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 1 1"
     },
     {
       "image_index": 3,
@@ -20,7 +20,7 @@
       "corrected": "*任务奖励不含括战斗结算的奖励。",
       "reason": "“任条/战头”为形近误识，源图为此句",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68594a09392f132d97a63a98 3 34"
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 3 34"
     },
     {
       "image_index": 4,
@@ -29,7 +29,7 @@
       "corrected": "“巫师入学季”任务更新！",
       "reason": "“坐师入学李”为形近误识，源图为此句",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68594a09392f132d97a63a98 4 26"
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 4 26"
     },
     {
       "image_index": 4,
@@ -38,7 +38,7 @@
       "corrected": "时装隐藏在帷幕之后，帷幕将于上架一周后揭开，4件",
       "reason": "惟→帷；源图两处均为“帷幕”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68594a09392f132d97a63a98 4 53"
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 4 53"
     },
     {
       "image_index": 4,
@@ -47,7 +47,7 @@
       "corrected": "帷幕之后的4件时装会随往后的每次维护进行更新，巫",
       "reason": "惟→帷；源图为“帷幕”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68594a09392f132d97a63a98 4 56"
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 4 56"
     },
     {
       "image_index": 5,
@@ -56,7 +56,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68594a09392f132d97a63a98 5 54"
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 5 54"
     },
     {
       "image_index": 5,
@@ -65,7 +65,7 @@
       "corrected": "林中蹊径”的挑战区域将进行更新，",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68594a09392f132d97a63a98 5 57"
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 5 57"
     },
     {
       "image_index": 5,
@@ -74,7 +74,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68594a09392f132d97a63a98 5 59"
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 5 59"
     },
     {
       "image_index": 6,
@@ -83,7 +83,7 @@
       "corrected": "“持鹗而立”。",
       "reason": "号→鹗；源图为“持鹗而立”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68594a09392f132d97a63a98 6 37"
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 6 37"
     },
     {
       "image_index": 6,
@@ -92,7 +92,7 @@
       "corrected": "4.修复了在使用家具“银阙权座”时角色目光异常的问题。",
       "reason": "自→目；同段上一块源图为“目光”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68594a09392f132d97a63a98 6 56"
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 6 56"
     },
     {
       "image_index": 6,
@@ -101,7 +101,7 @@
       "corrected": "7.修复了眼镜“飞行护目镜”、猫头鹰“幼年横斑林鸮”描",
       "reason": "号→鸮；源图为“横斑林鸮”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.68594a09392f132d97a63a98 6 59"
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 6 59"
     }
   ]
 }

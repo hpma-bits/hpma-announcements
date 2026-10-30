@@ -11,7 +11,7 @@
       "corrected": "具体开启时间请各位巫师关注游戏内活动界面",
       "reason": "sheet 第62条；真→具、客→各，源图为“具体开启时间请各位巫师…”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.64ac006f7ed4a500019e6361 1 15"
+      "recrop": "python -m tools.cli crop dashen.64ac006f7ed4a500019e6361 1 15"
     },
     {
       "image_index": 2,
@@ -20,7 +20,7 @@
       "corrected": "第201-500名：限时称号“脑洞大王”、宝石*30",
       "reason": "漏“王”及“、宝石*30”；源图称号为“脑洞大王”，中段被水印覆盖",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.64ac006f7ed4a500019e6361 2 38"
+      "recrop": "python -m tools.cli crop dashen.64ac006f7ed4a500019e6361 2 38"
     },
     {
       "image_index": 3,
@@ -29,7 +29,7 @@
       "corrected": "质魔杖外观“黑车闪击”、传说品质猫头鹰“雪鸮",
       "reason": "sheet 第154条；鸡→鸮，猫头鹰名源图为“雪鸮”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.64ac006f7ed4a500019e6361 3 4"
+      "recrop": "python -m tools.cli crop dashen.64ac006f7ed4a500019e6361 3 4"
     },
     {
       "image_index": 5,
@@ -38,7 +38,7 @@
       "corrected": "大神@哈利波特魔法觉醒",
       "reason": "申→大神；水印源图为“大神@哈利波特魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.64ac006f7ed4a500019e6361 5 58"
+      "recrop": "python -m tools.cli crop dashen.64ac006f7ed4a500019e6361 5 58"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63d920f20c8dc600018c6dbe 1 1"
+      "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "果并达到任意区域25层，可获得大量调查奖励。",
       "reason": "“适商奖励”为水印串扰；源图“可获得大量调查奖励”，句号被水印遮挡",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.63d920f20c8dc600018c6dbe 1 24"
+      "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 1 24"
     },
     {
       "image_index": 2,
@@ -29,7 +29,7 @@
       "corrected": "5.石墩出动-石像旋风",
       "reason": "漏字“墩”；卡牌名源图为“石墩出动”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63d920f20c8dc600018c6dbe 2 12"
+      "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 2 12"
     },
     {
       "image_index": 2,
@@ -38,7 +38,7 @@
       "corrected": "达天罗谜网区域40层，或达到致命狩猎区域40层以上。",
       "reason": "“护装邮0层昭”为水印串扰；源图“致命狩猎区域40层以上”，句号被水印遮挡",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.63d920f20c8dc600018c6dbe 2 40"
+      "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 2 40"
     },
     {
       "image_index": 3,
@@ -47,7 +47,16 @@
       "corrected": "了保底重置规则，未改变实际保底机制。",
       "reason": "sheet 第90行；“机龄申”为水印串扰，源图“未改变实际保底机制”",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.63d920f20c8dc600018c6dbe 3 31"
+      "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 3 31"
+    },
+    {
+      "image_index": 4,
+      "block_index": 1,
+      "original": "1、修复了魔咒“骆吾”在部分情况下伤害存在多次结算",
+      "corrected": "1、修复了魔咒“驺吾”在部分情况下伤害存在多次结算",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 4 1"
     },
     {
       "image_index": 4,
@@ -56,7 +65,7 @@
       "corrected": "大神@哈利波特魔法觉醒",
       "reason": "漏“魔”；源图水印为“大神@哈利波特魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63d920f20c8dc600018c6dbe 4 42"
+      "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 4 42"
     }
   ]
 }

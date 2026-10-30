@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63a1c23f0c8dc60001f1e49f 1 1"
+      "recrop": "python -m tools.cli crop dashen.63a1c23f0c8dc60001f1e49f 1 1"
     },
     {
       "image_index": 2,
@@ -20,7 +20,7 @@
       "corrected": "巫师每日前3次胜利都将额外获得奖励大神@哈利波特魔法觉醒",
       "reason": "缺→励；源图为“奖励”，其后为同图水印",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63a1c23f0c8dc60001f1e49f 2 25"
+      "recrop": "python -m tools.cli crop dashen.63a1c23f0c8dc60001f1e49f 2 25"
     },
     {
       "image_index": 4,
@@ -29,7 +29,7 @@
       "corrected": "大神@哈利波特魔法觉醒",
       "reason": "渡→波；水印源图为“哈利波特”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63a1c23f0c8dc60001f1e49f 4 33"
+      "recrop": "python -m tools.cli crop dashen.63a1c23f0c8dc60001f1e49f 4 33"
     }
   ]
 }

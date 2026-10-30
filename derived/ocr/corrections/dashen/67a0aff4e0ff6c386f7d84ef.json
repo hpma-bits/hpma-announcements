@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.67a0aff4e0ff6c386f7d84ef 1 1"
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "S11魔法部赛季·黑魔王往事",
       "reason": "II→11；赛季编号源图为“S11”。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.67a0aff4e0ff6c386f7d84ef 1 4"
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 1 4"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "全新回响“伏地魔”上线！",
       "reason": "衍字“心”；源图标题行首为装饰花符，无“心”。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.67a0aff4e0ff6c386f7d84ef 1 6"
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 1 6"
     },
     {
       "image_index": 2,
@@ -38,7 +38,7 @@
       "corrected": "“S11魔法部赛季·黑魔王往事”持续更",
       "reason": "1I→11；赛季编号源图为“S11”。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.67a0aff4e0ff6c386f7d84ef 2 5"
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 2 5"
     },
     {
       "image_index": 2,
@@ -47,7 +47,7 @@
       "corrected": "被塑造并矗立于此...",
       "reason": "嘉→矗；源图为“矗立于此”，保留原省略号。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.67a0aff4e0ff6c386f7d84ef 2 13"
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 2 13"
     },
     {
       "image_index": 3,
@@ -56,7 +56,7 @@
       "corrected": "“绯红心情·情人节限定礼”上架！",
       "reason": "排→绯；礼包名源图为“绯红心情”。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.67a0aff4e0ff6c386f7d84ef 3 15"
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 3 15"
     },
     {
       "image_index": 3,
@@ -65,7 +65,7 @@
       "corrected": "情人节礼包“糖缄此时”上架！",
       "reason": "喊→缄；礼包名源图为“糖缄此时”。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.67a0aff4e0ff6c386f7d84ef 3 22"
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 3 22"
     },
     {
       "image_index": 3,
@@ -74,7 +74,7 @@
       "corrected": "情人节节日礼包“糖缄此时”限时上架！共有4款礼包供",
       "reason": "漏“缄”；礼包名源图为“糖缄此时”。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.67a0aff4e0ff6c386f7d84ef 3 24"
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 3 24"
     },
     {
       "image_index": 4,
@@ -83,7 +83,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.67a0aff4e0ff6c386f7d84ef 4 36"
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 4 36"
     },
     {
       "image_index": 4,
@@ -92,7 +92,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.67a0aff4e0ff6c386f7d84ef 4 38"
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 4 38"
     }
   ]
 }

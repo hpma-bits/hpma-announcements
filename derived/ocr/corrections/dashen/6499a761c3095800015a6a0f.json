@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6499a761c3095800015a6a0f 1 1"
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "持续时间：永久。",
       "reason": "拆→持；源图为“持续时间”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6499a761c3095800015a6a0f 1 19"
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 1 19"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "开启时间：7月4日05：00。",
       "reason": "整行乱码；源图为“开启时间：7月4日05：00。”（sheet 第1行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6499a761c3095800015a6a0f 1 39"
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 1 39"
     },
     {
       "image_index": 2,
@@ -38,7 +38,16 @@
       "corrected": "空间家具等奖励。",
       "reason": "真→具；源图为“空间家具等奖励”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6499a761c3095800015a6a0f 2 25"
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 2 25"
+    },
+    {
+      "image_index": 4,
+      "block_index": 31,
+      "original": "3.魔咒“骆吾”",
+      "corrected": "3.魔咒“驺吾”",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 4 31"
     },
     {
       "image_index": 5,
@@ -47,7 +56,7 @@
       "corrected": "魔杖视觉效果调整",
       "reason": "技→杖；源图为“魔杖视觉效果调整”（sheet 第26行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6499a761c3095800015a6a0f 5 18"
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 5 18"
     },
     {
       "image_index": 5,
@@ -56,7 +65,7 @@
       "corrected": "9、修复了“石墩出动”的免伤无法削弱罗恩回响，主教",
       "reason": "漏字“墩”；卡牌名源图为“石墩出动”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6499a761c3095800015a6a0f 5 54"
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 5 54"
     }
   ]
 }

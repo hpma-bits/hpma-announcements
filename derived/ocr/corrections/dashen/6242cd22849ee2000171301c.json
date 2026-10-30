@@ -11,7 +11,7 @@
       "corrected": "传说品质魔杖“灵魂使者·银木”、传说品质魔咒皮肤“钻心剜骨·切",
       "reason": "漏字“剜”；咒语名源图为“钻心剜骨”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6242cd22849ee2000171301c 1 12"
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 1 12"
     },
     {
       "image_index": 3,
@@ -20,7 +20,7 @@
       "corrected": "注：该礼包购买/兑换上限为1次。",
       "reason": "漏“1”；源图为“上限为1次”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6242cd22849ee2000171301c 3 2"
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 3 2"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.646373405478580001cc7fd6 1 1"
+      "recrop": "python -m tools.cli crop dashen.646373405478580001cc7fd6 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "嗅嗅宝藏",
       "reason": "噢→嗅；活动名源图为“嗅嗅宝藏”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.646373405478580001cc7fd6 1 3"
+      "recrop": "python -m tools.cli crop dashen.646373405478580001cc7fd6 1 3"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "自敦煌来",
       "reason": "白→自；源图联动标题为“自敦煌来”，正文亦作“自敦煌来”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.646373405478580001cc7fd6 1 4"
+      "recrop": "python -m tools.cli crop dashen.646373405478580001cc7fd6 1 4"
     },
     {
       "image_index": 1,
@@ -38,7 +38,7 @@
       "corrected": "取次数达到3和6次时，巫师还可领取额外奖励",
       "reason": "餐→额外；源图行末“额外奖励”被水印覆盖但仍可辨，故标 medium",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.646373405478580001cc7fd6 1 20"
+      "recrop": "python -m tools.cli crop dashen.646373405478580001cc7fd6 1 20"
     },
     {
       "image_index": 2,
@@ -47,7 +47,7 @@
       "corrected": "“嗅嗅宝藏”活动开启",
       "reason": "噢→嗅；活动名源图为“嗅嗅宝藏”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.646373405478580001cc7fd6 2 0"
+      "recrop": "python -m tools.cli crop dashen.646373405478580001cc7fd6 2 0"
     },
     {
       "image_index": 2,
@@ -56,7 +56,7 @@
       "corrected": "想要获取额外“摇嗅嗅”次数的巫师们可在获取完今日次",
       "reason": "嗅噢→嗅嗅；源图两次均作“摇嗅嗅”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.646373405478580001cc7fd6 2 10"
+      "recrop": "python -m tools.cli crop dashen.646373405478580001cc7fd6 2 10"
     },
     {
       "image_index": 3,
@@ -65,7 +65,7 @@
       "corrected": "领取的成就奖励，将于再度上线时发送到邮箱",
       "reason": "发邮籍→发送到邮箱；源图行末被“大神@哈利波特魔法觉醒”水印覆盖，可辨内容止于“邮箱”，故标 medium",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.646373405478580001cc7fd6 3 31"
+      "recrop": "python -m tools.cli crop dashen.646373405478580001cc7fd6 3 31"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.696e17a0377e0713640f41e0 1 1"
+      "recrop": "python -m tools.cli crop dashen.696e17a0377e0713640f41e0 1 1"
     },
     {
       "image_index": 2,
@@ -20,7 +20,7 @@
       "corrected": "“S17奇珍赛季·光与影的抉择”持续更",
       "reason": "sheet 第69条；执→抉，源图为“光与影的抉择”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.696e17a0377e0713640f41e0 2 4"
+      "recrop": "python -m tools.cli crop dashen.696e17a0377e0713640f41e0 2 4"
     },
     {
       "image_index": 2,
@@ -29,7 +29,7 @@
       "corrected": "光与影的抉择",
       "reason": "sheet 第36条；执→抉，章节副标题源图为“光与影的抉择”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.696e17a0377e0713640f41e0 2 6"
+      "recrop": "python -m tools.cli crop dashen.696e17a0377e0713640f41e0 2 6"
     },
     {
       "image_index": 5,
@@ -38,7 +38,7 @@
       "corrected": "*赛季预告·黑龙缚影之谜",
       "reason": "sheet 第40条；行首“w”为节目标记误识，源图标记同其他小节记作“*”",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.696e17a0377e0713640f41e0 5 17"
+      "recrop": "python -m tools.cli crop dashen.696e17a0377e0713640f41e0 5 17"
     },
     {
       "image_index": 5,
@@ -47,7 +47,7 @@
       "corrected": "通体漆黑、气息骇人的巨龙！它们究竟源自何方？又",
       "reason": "孩→骇；源图为“骇人”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.696e17a0377e0713640f41e0 5 19"
+      "recrop": "python -m tools.cli crop dashen.696e17a0377e0713640f41e0 5 19"
     },
     {
       "image_index": 5,
@@ -56,7 +56,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "sheet 第90条；溪→蹊，源图标题为“林中蹊径”（统一样式未覆盖“溪径”变体）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.696e17a0377e0713640f41e0 5 22"
+      "recrop": "python -m tools.cli crop dashen.696e17a0377e0713640f41e0 5 22"
     },
     {
       "image_index": 5,
@@ -65,7 +65,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.696e17a0377e0713640f41e0 5 24"
+      "recrop": "python -m tools.cli crop dashen.696e17a0377e0713640f41e0 5 24"
     }
   ]
 }

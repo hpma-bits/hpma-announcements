@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.64355a6832f3230001c208dc 1 1"
+      "recrop": "python -m tools.cli crop dashen.64355a6832f3230001c208dc 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "大奖池中奖励包括传说品质猫头鹰“小长耳鸮”，以",
       "reason": "号→鸮；猫头鹰名源图为“小长耳鸮”。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.64355a6832f3230001c208dc 1 18"
+      "recrop": "python -m tools.cli crop dashen.64355a6832f3230001c208dc 1 18"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "corrected": "魔药“染发灵”全新上线",
       "reason": "删衍字“心”；源图标题行末为装饰花纹",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62bb014bcd73230001299658 2 8"
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 2 8"
     },
     {
       "image_index": 2,
@@ -20,7 +20,16 @@
       "corrected": "名义、偏分青年、英伦绅士、成长足迹、蜿蜒之径、",
       "reason": "豌→蜿、蜓→蜒；源图发型名为“蜿蜒之径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62bb014bcd73230001299658 2 20"
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 2 20"
+    },
+    {
+      "image_index": 3,
+      "block_index": 31,
+      "original": "调整：上调了刷新强化效果所需要的噢幻草数量，价",
+      "corrected": "调整：上调了刷新强化效果所需要的嗅幻草数量，价",
+      "reason": "OCR 稀有字误识（噢→嗅）；源图为「嗅幻草」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 3 31"
     },
     {
       "image_index": 4,
@@ -29,7 +38,7 @@
       "corrected": "卢娜·洛夫古德",
       "reason": "哪→娜；源图回响名为“卢娜·洛夫古德”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62bb014bcd73230001299658 4 2"
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 4 2"
     },
     {
       "image_index": 4,
@@ -38,7 +47,7 @@
       "corrected": "隔降低为1.8秒",
       "reason": "补小数点；源图为“隔降低为1.8秒”（与相邻块为同一行重叠切片）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62bb014bcd73230001299658 4 53"
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 4 53"
     },
     {
       "image_index": 4,
@@ -47,7 +56,7 @@
       "corrected": "第一届“设计大奖赛”圆满落下帷幕，感谢各位选手的",
       "reason": "惟→帷；源图为“帷幕”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.62bb014bcd73230001299658 4 62"
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 4 62"
     }
   ]
 }

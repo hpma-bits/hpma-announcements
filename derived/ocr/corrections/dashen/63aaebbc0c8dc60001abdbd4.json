@@ -11,7 +11,7 @@
       "corrected": "可解锁特权：日常活动中金币获取效率提升50%。",
       "reason": "“效亮神5哈剂”为水印串扰；源图为“金币获取效率提升50%”，句末句号被水印遮挡",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.63aaebbc0c8dc60001abdbd4 1 43"
+      "recrop": "python -m tools.cli crop dashen.63aaebbc0c8dc60001abdbd4 1 43"
     },
     {
       "image_index": 2,
@@ -20,7 +20,7 @@
       "corrected": "“协助人数”排行榜将在每月1号05:00刷新。",
       "reason": "sheet 第92行；“只神新”为水印串扰，源图为“每月1号05:00刷新。”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63aaebbc0c8dc60001abdbd4 2 40"
+      "recrop": "python -m tools.cli crop dashen.63aaebbc0c8dc60001abdbd4 2 40"
     },
     {
       "image_index": 3,
@@ -29,7 +29,7 @@
       "corrected": "在冰面起舞，每日最多可接受3次邀请。",
       "reason": "水印吞掉“请”字；源图为“每日最多可接受3次邀请。”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63aaebbc0c8dc60001abdbd4 3 42"
+      "recrop": "python -m tools.cli crop dashen.63aaebbc0c8dc60001abdbd4 3 42"
     },
     {
       "image_index": 6,
@@ -38,7 +38,7 @@
       "corrected": "敬上",
       "reason": "擎→敬；sheet 第3行，源图为页脚“敬上”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.63aaebbc0c8dc60001abdbd4 6 35"
+      "recrop": "python -m tools.cli crop dashen.63aaebbc0c8dc60001abdbd4 6 35"
     }
   ]
 }

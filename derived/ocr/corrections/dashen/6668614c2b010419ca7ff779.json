@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6668614c2b010419ca7ff779 1 1"
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "外观“夜藻私语”、传说品质猫头鹰“短耳鸮”。",
       "reason": "鸡→鸮；源图猫头鹰名为“短耳鸮”（sheet 第66行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6668614c2b010419ca7ff779 1 10"
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 1 10"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "弗立维教授的蟾蜍合唱团开始招新，城堡中到处是跃",
       "reason": "漏“蜍”；源图为“蟾蜍合唱团”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6668614c2b010419ca7ff779 1 30"
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 1 30"
     },
     {
       "image_index": 1,
@@ -38,7 +38,7 @@
       "corrected": "前往礼堂前的广场，听听想报名蟾蜍合唱团的学生都",
       "reason": "漏“蜍”；源图为“蟾蜍合唱团”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6668614c2b010419ca7ff779 1 34"
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 1 34"
     },
     {
       "image_index": 2,
@@ -47,7 +47,7 @@
       "corrected": "影与热浪氤氲在舞池之中。",
       "reason": "“盒”为“氤氲”误识；源图为“影与热浪氤氲在舞池之中”（sheet 第96行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6668614c2b010419ca7ff779 2 46"
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 2 46"
     },
     {
       "image_index": 3,
@@ -56,7 +56,7 @@
       "corrected": "购买礼包后可分别获得头像框“昨日威严”、头像“缄默",
       "reason": "漏“缄”；源图头像名为“缄默秘辛”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6668614c2b010419ca7ff779 3 30"
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 3 30"
     },
     {
       "image_index": 3,
@@ -65,7 +65,7 @@
       "corrected": "等奖获得者的设计必定获得游戏内实装！",
       "reason": "海→装；水印窜入；源图正文为“游戏内实装！”（sheet 第107行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6668614c2b010419ca7ff779 3 47"
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 3 47"
     },
     {
       "image_index": 4,
@@ -74,7 +74,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "溪→蹊；源图区域名为“林中蹊径”（sheet 第53行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6668614c2b010419ca7ff779 4 4"
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 4 4"
     },
     {
       "image_index": 4,
@@ -83,7 +83,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6668614c2b010419ca7ff779 4 6"
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 4 6"
     },
     {
       "image_index": 4,
@@ -92,7 +92,7 @@
       "corrected": "为了成为更资深的草药学家，请继续向前行进吧！",
       "reason": "整行乱码；源图与上一行同为“为了成为更资深的草药学家，请继续向前行进吧！”（sheet 第11行）",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.6668614c2b010419ca7ff779 4 27"
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 4 27"
     }
   ]
 }

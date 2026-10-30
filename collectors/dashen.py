@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from . import http
-from .store import REPO_ROOT
+from .paths import REPO_ROOT
 
 UID = "29c10cd0344f462e82e16a516001f0dd"
 FEED_TYPES = "1,2,3,4,6,7,10,11"

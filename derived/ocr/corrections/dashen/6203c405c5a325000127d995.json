@@ -11,7 +11,7 @@
       "corrected": "修复了魔咒“阿瓦达索命”“钻心剜骨”的卡牌教学视频中，角色动作丢",
       "reason": "漏字“剜”；咒语名源图为“钻心剜骨”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6203c405c5a325000127d995 3 16"
+      "recrop": "python -m tools.cli crop dashen.6203c405c5a325000127d995 3 16"
     }
   ]
 }

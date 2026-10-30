@@ -11,7 +11,7 @@
       "corrected": "可解锁特权：日常活动中金币获取效率提升50%大神@哈利波特魔法觉醒",
       "reason": "水印重叠导致“效率提升50%”及水印乱码，按源图还原",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.6332fcd67442470001656d84 3 49"
+      "recrop": "python -m tools.cli crop dashen.6332fcd67442470001656d84 3 49"
     }
   ]
 }

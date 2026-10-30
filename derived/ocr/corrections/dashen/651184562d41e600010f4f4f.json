@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.651184562d41e600010f4f4f 1 1"
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "贡献都必不可少。而我们也将在四学院中决出学院锦",
       "reason": "贵→贡；源图为“贡献”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.651184562d41e600010f4f4f 1 12"
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 1 12"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "球场上逼近的黑影，萦绕耳畔的低语....",
       "reason": "蒙→萦；源图为“萦绕”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.651184562d41e600010f4f4f 1 42"
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 1 42"
     },
     {
       "image_index": 2,
@@ -38,7 +38,7 @@
       "corrected": "经典回归·“神奇动物在哪里”寻找嗅",
       "reason": "噢→嗅；源图与下一块“嗅！”相连",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.651184562d41e600010f4f4f 2 9"
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 2 9"
     },
     {
       "image_index": 2,
@@ -47,7 +47,7 @@
       "corrected": "外观“击打之愿”、传说品质猫头鹰“乌林鸮”、传说品质",
       "reason": "骂→鸮；源图为“乌林鸮”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.651184562d41e600010f4f4f 2 19"
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 2 19"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69a57ecebb7d9814e64ac684 1 1"
+      "recrop": "python -m tools.cli crop dashen.69a57ecebb7d9814e64ac684 1 1"
     },
     {
       "image_index": 2,
@@ -20,7 +20,7 @@
       "corrected": "体漆黑、气息骇人的巨龙！",
       "reason": "孩→骇；源图为“骇人”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69a57ecebb7d9814e64ac684 2 17"
+      "recrop": "python -m tools.cli crop dashen.69a57ecebb7d9814e64ac684 2 17"
     },
     {
       "image_index": 6,
@@ -29,7 +29,7 @@
       "corrected": "（2）优化了变形兔发动巫师研究技能时的效果，现在",
       "reason": "免→兔；源图为宠物“变形兔”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69a57ecebb7d9814e64ac684 6 8"
+      "recrop": "python -m tools.cli crop dashen.69a57ecebb7d9814e64ac684 6 8"
     },
     {
       "image_index": 6,
@@ -38,7 +38,7 @@
       "corrected": "（4）修复了变形兔的模型在某些场景会变黑的问题；",
       "reason": "免→兔；源图为宠物“变形兔”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69a57ecebb7d9814e64ac684 6 41"
+      "recrop": "python -m tools.cli crop dashen.69a57ecebb7d9814e64ac684 6 41"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.65b7a0ee53b12a00014b9a76 1 1"
+      "recrop": "python -m tools.cli crop dashen.65b7a0ee53b12a00014b9a76 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "“新春挑战赛”上线！",
       "reason": "衍字“心”；源图行首为装饰花纹，无“心”（sheet 第107行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.65b7a0ee53b12a00014b9a76 1 7"
+      "recrop": "python -m tools.cli crop dashen.65b7a0ee53b12a00014b9a76 1 7"
     }
   ]
 }

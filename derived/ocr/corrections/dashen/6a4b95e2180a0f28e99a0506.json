@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a4b95e2180a0f28e99a0506 1 1"
+      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 1 1"
     },
     {
       "image_index": 2,
@@ -20,7 +20,7 @@
       "corrected": "萝宾最近的飞行训练简直酷毙了！照这个状态飞下",
       "reason": "漏“毙”；源图为“简直酷毙了”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a4b95e2180a0f28e99a0506 2 4"
+      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 2 4"
     },
     {
       "image_index": 2,
@@ -29,7 +29,7 @@
       "corrected": "赛季预告·绯红华章",
       "reason": "啡→绯；源图赛季名为“绯红华章”（sheet 第34行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a4b95e2180a0f28e99a0506 2 16"
+      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 2 16"
     },
     {
       "image_index": 2,
@@ -38,7 +38,7 @@
       "corrected": "赛季预告开启时间：2026年7月15日0:00-7月22日7:00",
       "reason": "“六神00月”为水印窜入；源图可辨为“2026年7月15日0:00-7月22日7:00”",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.6a4b95e2180a0f28e99a0506 2 21"
+      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 2 21"
     },
     {
       "image_index": 3,
@@ -47,7 +47,7 @@
       "corrected": "“巫师画猜”神奇动物版上线！",
       "reason": "精→猜；源图活动名为“巫师画猜”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a4b95e2180a0f28e99a0506 3 0"
+      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 3 0"
     },
     {
       "image_index": 4,
@@ -56,7 +56,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a4b95e2180a0f28e99a0506 4 6"
+      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 4 6"
     },
     {
       "image_index": 4,
@@ -65,7 +65,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6a4b95e2180a0f28e99a0506 4 8"
+      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 4 8"
     }
   ]
 }

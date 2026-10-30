@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6911c361d54fe13dc5984fb1 1 1"
+      "recrop": "python -m tools.cli crop dashen.6911c361d54fe13dc5984fb1 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,16 @@
       "corrected": "巫师有1次机会变更选择的传说卡牌",
       "reason": "“点神@哈利波特魔法觉醒”→“牌”；源图正文“传说卡牌”与水印合并，行末标点被遮挡，故标 medium",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.6911c361d54fe13dc5984fb1 1 15"
+      "recrop": "python -m tools.cli crop dashen.6911c361d54fe13dc5984fb1 1 15"
+    },
+    {
+      "image_index": 2,
+      "block_index": 0,
+      "original": "10张传说品质卡牌分别为：诗翁彼豆故事集/骆吾/马形",
+      "corrected": "10张传说品质卡牌分别为：诗翁彼豆故事集/驺吾/马形",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.6911c361d54fe13dc5984fb1 2 0"
     },
     {
       "image_index": 2,
@@ -29,7 +38,7 @@
       "corrected": "你的心就越来越忐忑..",
       "reason": "忘→忐忑；源图为“忐忑”（sheet 第17行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6911c361d54fe13dc5984fb1 2 25"
+      "recrop": "python -m tools.cli crop dashen.6911c361d54fe13dc5984fb1 2 25"
     },
     {
       "image_index": 4,
@@ -38,7 +47,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6911c361d54fe13dc5984fb1 4 24"
+      "recrop": "python -m tools.cli crop dashen.6911c361d54fe13dc5984fb1 4 24"
     },
     {
       "image_index": 4,
@@ -47,7 +56,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6911c361d54fe13dc5984fb1 4 26"
+      "recrop": "python -m tools.cli crop dashen.6911c361d54fe13dc5984fb1 4 26"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69dcd76942d7e97707ed911e 1 1"
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "“S19梦想与创作赛季·费金疑案”持续",
       "reason": "读→续；源图为“持续”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69dcd76942d7e97707ed911e 1 15"
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 1 15"
     },
     {
       "image_index": 3,
@@ -29,7 +29,7 @@
       "corrected": "随着植物不断生长，社团场景也将被盎然绿意妆",
       "reason": "盘→盎；源图为“盎然”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69dcd76942d7e97707ed911e 3 15"
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 3 15"
     },
     {
       "image_index": 3,
@@ -38,7 +38,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69dcd76942d7e97707ed911e 3 30"
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 3 30"
     },
     {
       "image_index": 3,
@@ -47,7 +47,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "溪→蹊；源图为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69dcd76942d7e97707ed911e 3 31"
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 3 31"
     },
     {
       "image_index": 3,
@@ -56,7 +56,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69dcd76942d7e97707ed911e 3 33"
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 3 33"
     },
     {
       "image_index": 4,
@@ -65,7 +65,7 @@
       "corrected": "1.修复了魔法电台播放异常的问题。",
       "reason": "“参夏/电音”为形近误识，源图为此句",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.69dcd76942d7e97707ed911e 4 27"
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 4 27"
     }
   ]
 }

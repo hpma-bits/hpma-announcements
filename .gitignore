@@ -3,7 +3,8 @@ __pycache__/
 .pytest_cache/
 .venv/
 .DS_Store
+
+# Scratch: reviewer crops and the raw labelling batches they came from.
+.review/
 study/batches/
 study/labels/
-.review/
-checkpage/

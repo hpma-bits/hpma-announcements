@@ -229,7 +229,7 @@ Run the section-4 procedure over `corpus/dashen/posts.jsonl`, diff against
 ## 6. Open questions for the human
 
 1. **test_server**: keep the 73 体验服/测试 posts (series dead since
-   2023-06) or drop from MVP selection? intent.md lists only
+   2023-06) or drop from MVP selection? The scope note at the time listed only
    update/maintenance/version families as positives.
 2. **Season-serial teasers** (✦X·剧情序章✦, ✦X赛季·奖励总览✦, 发布会情报; ~35
    posts 2023-10..2026-10): identical shape, labeler split across version and

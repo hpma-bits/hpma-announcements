@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.695b95270a702c7f59d67fb4 1 1"
+      "recrop": "python -m tools.cli crop dashen.695b95270a702c7f59d67fb4 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "光与影的抉择",
       "reason": "执→抉；源图赛季名为“光与影的抉择”（sheet 第47行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.695b95270a702c7f59d67fb4 1 4"
+      "recrop": "python -m tools.cli crop dashen.695b95270a702c7f59d67fb4 1 4"
     },
     {
       "image_index": 2,
@@ -29,7 +29,7 @@
       "corrected": "“S17奇珍赛季·光与影的抉择”持续更",
       "reason": "执→抉；源图为“抉择”（sheet 第76行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.695b95270a702c7f59d67fb4 2 17"
+      "recrop": "python -m tools.cli crop dashen.695b95270a702c7f59d67fb4 2 17"
     },
     {
       "image_index": 2,
@@ -38,7 +38,7 @@
       "corrected": "光与影的抉择",
       "reason": "执→抉；源图为“抉择”（sheet 第58行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.695b95270a702c7f59d67fb4 2 19"
+      "recrop": "python -m tools.cli crop dashen.695b95270a702c7f59d67fb4 2 19"
     },
     {
       "image_index": 3,
@@ -47,7 +47,7 @@
       "corrected": "境，你既忐忑又惦念，而这一切只能朝无法言语的朋",
       "reason": "志怎→忐忑；源图为“忐忑”（sheet 第120行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.695b95270a702c7f59d67fb4 3 2"
+      "recrop": "python -m tools.cli crop dashen.695b95270a702c7f59d67fb4 3 2"
     },
     {
       "image_index": 3,
@@ -56,7 +56,7 @@
       "corrected": "在本阶段中，众人翘首以盼的拍卖会终于敞开了大",
       "reason": "敬→敞；源图为“敞开了大门”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.695b95270a702c7f59d67fb4 3 15"
+      "recrop": "python -m tools.cli crop dashen.695b95270a702c7f59d67fb4 3 15"
     },
     {
       "image_index": 5,
@@ -65,7 +65,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.695b95270a702c7f59d67fb4 5 11"
+      "recrop": "python -m tools.cli crop dashen.695b95270a702c7f59d67fb4 5 11"
     },
     {
       "image_index": 5,
@@ -74,7 +74,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.695b95270a702c7f59d67fb4 5 13"
+      "recrop": "python -m tools.cli crop dashen.695b95270a702c7f59d67fb4 5 13"
     },
     {
       "image_index": 5,
@@ -83,7 +83,7 @@
       "corrected": "胜3次后，即可从对手卡组中随机复制1张魔咒！",
       "reason": "“复1张摩罚皮特魔法觉醒”→“复制1张魔咒”；源图正文与水印合并，可辨整句，故标 medium（sheet 第86行）",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.695b95270a702c7f59d67fb4 5 25"
+      "recrop": "python -m tools.cli crop dashen.695b95270a702c7f59d67fb4 5 25"
     }
   ]
 }

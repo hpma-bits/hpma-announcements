@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6577084b9d4c7f0001a6b065 1 1"
+      "recrop": "python -m tools.cli crop dashen.6577084b9d4c7f0001a6b065 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "“霍格莫德赛季·狼影迷踪”开启！",
       "reason": "“?”为“·”误识且缺前引号，源图如此",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6577084b9d4c7f0001a6b065 1 19"
+      "recrop": "python -m tools.cli crop dashen.6577084b9d4c7f0001a6b065 1 19"
     },
     {
       "image_index": 4,
@@ -29,7 +29,7 @@
       "corrected": "2.魔咒“石墩出动”",
       "reason": "漏字“墩”；卡牌名源图为“石墩出动”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6577084b9d4c7f0001a6b065 4 19"
+      "recrop": "python -m tools.cli crop dashen.6577084b9d4c7f0001a6b065 4 19"
     }
   ]
 }

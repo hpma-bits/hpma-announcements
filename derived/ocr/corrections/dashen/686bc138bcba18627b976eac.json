@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.686bc138bcba18627b976eac 1 1"
+      "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "本期大奖：传说品质时装“假日欢醴”、传说品质魔杖",
       "reason": "漏字“醴”；源图时装名为“假日欢醴”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.686bc138bcba18627b976eac 1 10"
+      "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 1 10"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "外观“惊声尖叫”、传说品质猫头鹰“沼泽耳鸮”。",
       "reason": "鸡→鸮；源图猫头鹰名为“沼泽耳鸮”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.686bc138bcba18627b976eac 1 11"
+      "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 1 11"
     },
     {
       "image_index": 2,
@@ -38,7 +38,7 @@
       "corrected": "完成教授们的试炼，将可获得大量宝石奖励！",
       "reason": "练→炼；源图为“试炼”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.686bc138bcba18627b976eac 2 32"
+      "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 2 32"
     },
     {
       "image_index": 5,
@@ -47,7 +47,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.686bc138bcba18627b976eac 5 7"
+      "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 5 7"
     },
     {
       "image_index": 5,
@@ -56,7 +56,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.686bc138bcba18627b976eac 5 9"
+      "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 5 9"
     }
   ]
 }

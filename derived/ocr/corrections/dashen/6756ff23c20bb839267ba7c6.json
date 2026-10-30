@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6756ff23c20bb839267ba7c6 1 1"
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "S10·冬夜故事谈",
       "reason": "字母 I→数字 1；源图为“S10·冬夜故事谈”（sheet 第24行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6756ff23c20bb839267ba7c6 1 3"
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 1 3"
     },
     {
       "image_index": 1,
@@ -29,7 +29,7 @@
       "corrected": "更多，具体奖励内容请巫师在相应界面中查看！",
       "reason": "界画→界面、中播→中查看；源图正文与“大神@哈利波特魔法觉醒”水印合并，可辨内容为“在相应界面中查看”，故标 medium（sheet 第122行）",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.6756ff23c20bb839267ba7c6 1 22"
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 1 22"
     },
     {
       "image_index": 2,
@@ -38,7 +38,7 @@
       "corrected": "“童话赛季·冬夜故事谈”持续更新！",
       "reason": "读→续；源图为“持续更新”（sheet 第60行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6756ff23c20bb839267ba7c6 2 5"
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 2 5"
     },
     {
       "image_index": 2,
@@ -47,7 +47,7 @@
       "corrected": "地中都被教授们布置了圣诞装饰，蟾蜍合唱团也奏",
       "reason": "漏字“蜍”；源图为“蟾蜍合唱团”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6756ff23c20bb839267ba7c6 2 53"
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 2 53"
     },
     {
       "image_index": 2,
@@ -56,7 +56,7 @@
       "corrected": "在欢乐来临的气氛中，与好友一起探索城堡吧！",
       "reason": "漏“索”、衍“皮特魔法觉醒”；源图正文与“大神@哈利波特魔法觉醒”水印合并，故标 medium（sheet 第88行）",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.6756ff23c20bb839267ba7c6 2 55"
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 2 55"
     },
     {
       "image_index": 5,
@@ -65,7 +65,7 @@
       "corrected": "通过使用“嘀嗒宝箱”累积进度，使用一定次数",
       "reason": "哈→嗒、补引号；源图为“通过使用“嘀嗒宝箱”累积进度”（sheet 第59行；该 block 与 b0054 为重叠切片）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6756ff23c20bb839267ba7c6 5 55"
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 5 55"
     },
     {
       "image_index": 5,
@@ -74,7 +74,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "溪→蹊；源图标题为“林中蹊径”（sheet 第160行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6756ff23c20bb839267ba7c6 5 70"
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 5 70"
     }
   ]
 }

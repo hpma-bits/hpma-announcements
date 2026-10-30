@@ -1,93 +1,141 @@
 # hpma-announcements
 
-Archive of the official *Harry Potter: Magic Awakened* update notices published
-on Dashen: native text, long images, provenance, and a deterministic index.
-Built as the data base for a future searchable text edition.
+Every update notice (更新公告) published by the verified *Harry Potter: Magic
+Awakened* account `哈利波特魔法觉醒` on Dashen, archived as data and as readable
+text: the post itself, its long images as original bytes, OCR of those images,
+the human corrections on top of that OCR, and a Markdown edition.
 
-This is an unofficial research and preservation archive. All announcement text
-and images remain the property of their rights holders. See
-[docs/intent.md](docs/intent.md) and
-[docs/adr/0001-public-archive-content-policy.md](docs/adr/0001-public-archive-content-policy.md).
+This is an unofficial research and preservation archive. Announcement text and
+images remain the property of their rights holders; takedown requests are
+honoured. Notices live only on the community platform, where they get edited,
+deleted, or lost in redesigns, and the game files do not contain them.
 
-## Reviewing the OCR layer
-
-The OCR output is checked in a static, offline review page. Build it from the
-committed corpus, labels, OCR JSON and images, then open `checkpage/index.html`
-directly — no server needed; images are read from the checkout:
+## What is in the archive
 
 ```
-python tools/build_checkpage.py
+corpus/dashen/posts.jsonl                   2,324 posts: everything the account published
+study/labels.jsonl                          which posts are notices, and their notice date
+assets/dashen/<feed_id>/<NN>.<ext>          original image bytes (650 images)
+derived/ocr/dashen/<feed_id>.json           OCR engine output, immutable
+derived/ocr/corrections/dashen/<id>.json    the correction ledger: human decisions
+edition/dashen/<feed_id>.md                 the readable edition, one file per notice
+edition/notices.jsonl                       one line per notice, metadata only
 ```
 
-Each notice shows its original images next to the OCR lines. Hovering a text
-line highlights its box on the image, and clicking either side scrolls the
-other into view. Lines below the confidence thresholds are tinted. The
-reviewer can mark a notice 通过 / 有问题, flag individual images, leave notes
-and correct OCR text in place.
+162 of the 2,324 posts are update notices. Only those have images, OCR and an
+edition; the rest (events, fashion, videos, community posts) are kept in the
+corpus because the selection was derived from it.
 
-Review state lives in the browser's localStorage. **导出核对结果** downloads a
-`checkpage-review-*.json` with status, notes, image flags and corrected text;
-**导入记录** merges such a file back. Corrections are review data, not a
-rewrite of `derived/ocr/` — applying them is a separate step.
+`study/` holds the offline evidence for that selection: the labelling prompt,
+the evaluation report and the selected ids.
 
-`python tools/build_checkpage.py --check` exits non-zero when the generated
-page is stale; the test suite uses it to prove the build is deterministic.
+## Reading the edition
 
-## Corrected OCR layer
+Each notice is one Markdown file with YAML front matter and two optional
+sections:
 
-`derived/ocr/dashen/` remains the immutable engine output. Verified text
-corrections are stored beside it:
+```markdown
+---
+id: "dashen.6adf31ceee0069337849bde8"
+title: "【10月28日更新公告】"
+published_at: "2026-10-26T18:56:00+08:00"
+notice_date: "2026-10-28"
+url: "https://ds.163.com/feed/6adf31ceee0069337849bde8/"
+images:
+  - "assets/dashen/6adf31ceee0069337849bde8/01.jpg"
+---
 
-- `derived/ocr/corrections/dashen/<feed_id>.json` — one ledger per notice.
-  Every entry locates a block by `(image_index, block_index)`, keeps the raw
-  `original` and the source-image `corrected` text, a reason and a reproducible
-  `recrop` command.
-- `derived/ocr/corrected/dashen/<feed_id>.json` — the notice with accepted
-  corrections applied and its per-image and notice-level `text` rebuilt. Only
-  notices with accepted corrections have a file here; the remaining notices
-  are unchanged raw OCR. The raw OCR files are never modified.
+## 正文
 
-`tools/ocr_review.py` is the review pipeline: `queue` (compact text per
-notice), `batches` (balanced reviewer batches), `candidates` (low-confidence
-blocks, optionally per batch), `crop` (upscaled source-image crop for one
-block), `sheet` (labelled contact sheets), `term`/`grep` (corpus and OCR
-lookup), `verify` and `apply`. `.review/` holds gitignored scratch data: queues,
-crops, sheets and reviewer proposals.
+The post's own text.
 
-The current pass accepted 769 corrections across 153 of 162 notices. Every
-corrected block was checked against a crop of its source image; repeated
-systematic variants (for example 魔祛觉醒 → 魔法觉醒) were sampled across
-notices. Two source-level variants are deliberately preserved: 骆吾 and 金锻,
-because the images use those forms even where the native body text does not.
-Some corrections also remove the repeated `大神@哈利波特魔法觉醒` watermark
-suffix from OCR lines that were merged with it; the ledger reason marks those.
+## 图片文字
 
-## Reviewing the corrections
+### 图 1
 
-The correction ledger has its own focused review page, separate from the full
-OCR checkpage. Build it and open `checkpage/corrections.html` directly:
-
-```
-python tools/build_correction_checkpage.py
+One line per OCR block, in reading order.
 ```
 
-The page has three review layers:
+- `published_at` is post time; `notice_date` is the date in the notice title
+  (notices are usually posted the evening before).
+- `images` are paths relative to the repository root.
+- Image text is the engine's reading with the ledger applied: the platform
+  watermark is removed, and a line captured twice by overlapping OCR tiles is
+  kept once.
 
-- **术语对照** — where the source images and the clean corpus disagree:
-  骆吾/驺吾, 金锻/金缎, 石墩出动/石礅出动, 噢幻草/嗅幻草, 银辉之匙/钥,
-  戈德利克/戈德里克, 鲁本/鲁伯, 长跑/长袍, and the smaller one-off variants.
-  Each card shows representative source-image crops, the corpus counts and
-  corpus snippets, and a recommendation; the reviewer chooses 保留源图,
-  按 corpus, or another form.
-- **低置信 / 水印重建 / 整行重写** — the 61 `medium` corrections, the 86
-  watermark reconstructions and the 21 full-line rewrites, each with its
-  source-image crop, OCR/fix diff, reason and the notice's clean corpus body.
-- **全部修正** — all 769 accepted corrections, searchable.
+`edition/notices.jsonl` repeats the metadata, one JSON object per notice, oldest
+first, for consumers that do not want to parse Markdown.
 
-The clean corpus is shown as the reference, but the source image remains the
-evidence for what the notice actually printed. Decisions live in the browser's
-localStorage; **导出复核结果** downloads a JSON with the term/item decisions,
-snapshots of the original and corrected text, and notes. **导入记录** merges it
-back. Applying the decisions to the corrected layer is a separate step.
-`python tools/build_correction_checkpage.py --check` exits non-zero when the
-generated page is stale.
+## Rebuilding
+
+```bash
+pip install -r requirements.txt
+python -m collectors.cli corpus     # refresh posts from the read-only Dashen API
+python -m collectors.cli ocr        # download images and OCR them (needs requirements-ocr.txt)
+python -m tools.cli verify          # check every ledger entry against the raw OCR
+python -m tools.cli edition         # rewrite edition/ from the data
+```
+
+`python -m tools.cli edition --check` exits non-zero when the committed edition
+is not what the data produces. A fresh clone needs neither network access nor an
+OCR engine for the tests, `verify` or `edition --check`.
+
+## The correction ledger
+
+OCR misreads rare glyphs (驺 as 骆, 嗅 as 噢). Each human decision is one entry
+that locates an OCR block and records what the source image shows:
+
+```json
+{
+  "image_index": 2,
+  "block_index": 80,
+  "original": "每次完成挑战后可获得高额嗅幻草和基道展特魔法觉醒",
+  "corrected": "每次完成挑战后可获得高额嗅幻草和其他道具奖励",
+  "reason": "水印窜入与漏识；源图为“其他道具奖励”",
+  "confidence": "high",
+  "recrop": "python -m tools.cli crop dashen.63bd7308c3e1e500018dba57 2 80"
+}
+```
+
+- `original` must equal the OCR block text exactly. A ledger that no longer
+  matches the OCR is refused, never applied, so corrected text cannot drift.
+- `recrop` regenerates the evidence crop from the committed image with
+  `python -m tools.cli crop <notice> <image> <block>`.
+- 819 corrections cover 153 of the 162 notices; the block text is the only thing
+  the ledger changes, `derived/ocr/` is never edited.
+
+## Checking
+
+```bash
+pytest
+python -m tools.cli verify
+python -m tools.cli edition --check
+```
+
+CI runs the same three commands on a Linux runner without network, OCR engine or
+Pillow.
+
+## Known gaps
+
+- 16 confusable words are not yet checked glyph by glyph against the images:
+  石墩/石礅, 金锻/金缎, 银辉之匙/银辉之钥, 子立/孑立, 戈德利克/戈德里克,
+  鲁本·海格/鲁伯·海格, 长跑专卖店/长袍专卖店, 云雾飘渺/云雾缥缈,
+  凤吟凰鸣/凰吟凤鸣, 讽爽英姿/飒爽英姿, 进发出/迸发出, 换新款/焕新款,
+  等级上线/等级上限, 补获/捕获, 无暇信念/无瑕信念, 登陆/登录.
+- The edition covers the update family only. Maintenance, version and
+  test-server notices are labelled in `study/labels.jsonl` but have no images,
+  OCR or edition yet.
+
+## Source
+
+- Dashen verified account `哈利波特魔法觉醒`, uid `29c10cd0344f462e82e16a516001f0dd`.
+- Public read-only GET API, no login and no request signing:
+  - list `https://inf.ds.163.com/v1/web/feed/basic/getSomeOneFeeds`
+  - detail `https://inf.ds.163.com/v1/web/feed/basic/facade`
+  - headers the web client sends: `GL-ClientType: 61`, `GL-DeviceId`,
+    `Referer: https://ds.163.com/`
+- Canonical item URL: `https://ds.163.com/feed/<id>/` (type-6 articles use
+  `/article/<id>/`).
+- Only this account is fetched, at a low rate, from the JSON API. No page
+  scraping, no login bypass; `ds.163.com/robots.txt` disallows `/` for wildcard
+  crawlers, so the API host is used instead.

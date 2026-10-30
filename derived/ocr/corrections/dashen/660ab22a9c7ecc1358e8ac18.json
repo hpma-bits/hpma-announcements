@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.660ab22a9c7ecc1358e8ac18 1 1"
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,16 @@
       "corrected": "在温暖的季节中，与好友一起探索城堡吧！",
       "reason": "“减吧”为水印串扰；源图正文为“探索城堡吧！”，中部被水印覆盖",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.660ab22a9c7ecc1358e8ac18 1 51"
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 1 51"
+    },
+    {
+      "image_index": 2,
+      "block_index": 58,
+      "original": "一飞天扫帚、云雾缥缈、骆吾、中",
+      "corrected": "一飞天扫帚、云雾缥缈、驺吾、中",
+      "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 58"
     },
     {
       "image_index": 2,
@@ -29,7 +38,7 @@
       "corrected": "7.“集中效应”——咒语伤害增加效果由60%提高至80%",
       "reason": "“赢系%”为水印串扰；源图为“由60%提高至80%”，数字被水印半遮",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.660ab22a9c7ecc1358e8ac18 2 74"
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 74"
     }
   ]
 }

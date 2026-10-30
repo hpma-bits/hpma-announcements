@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6adf31ceee0069337849bde8 1 1"
+      "recrop": "python -m tools.cli crop dashen.6adf31ceee0069337849bde8 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "外观“冰封残响”、传说品质猫头鹰“成年褐林鸮”。",
       "reason": "号→鸮；猫头鹰名源图为“成年褐林鸮”。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6adf31ceee0069337849bde8 1 11"
+      "recrop": "python -m tools.cli crop dashen.6adf31ceee0069337849bde8 1 11"
     },
     {
       "image_index": 3,
@@ -29,7 +29,7 @@
       "corrected": "多积分的学生将获得本期代理级长的资格。",
       "reason": "水印覆盖处源图为“的资格。”；“的格”漏“资”。",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.6adf31ceee0069337849bde8 3 29"
+      "recrop": "python -m tools.cli crop dashen.6adf31ceee0069337849bde8 3 29"
     },
     {
       "image_index": 4,
@@ -38,7 +38,7 @@
       "corrected": "“林中蹊径”挑战区域更新",
       "reason": "溪→蹊；区域名源图为“林中蹊径”。",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6adf31ceee0069337849bde8 4 10"
+      "recrop": "python -m tools.cli crop dashen.6adf31ceee0069337849bde8 4 10"
     },
     {
       "image_index": 4,
@@ -47,7 +47,7 @@
       "corrected": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6adf31ceee0069337849bde8 4 12"
+      "recrop": "python -m tools.cli crop dashen.6adf31ceee0069337849bde8 4 12"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6357f2eb7442470001997fa9 1 1"
+      "recrop": "python -m tools.cli crop dashen.6357f2eb7442470001997fa9 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "动期间上架，且无法通过“梳妆魔盒·时新”获取",
       "reason": "“大神新哈特魔法觉醒”为水印窜入；源图正文为“梳妆魔盒·时新”获取",
       "confidence": "medium",
-      "recrop": "python tools/ocr_review.py crop dashen.6357f2eb7442470001997fa9 1 12"
+      "recrop": "python -m tools.cli crop dashen.6357f2eb7442470001997fa9 1 12"
     },
     {
       "image_index": 2,
@@ -29,7 +29,7 @@
       "corrected": "购买可获得传说品质魔咒皮肤“石墩出动·无声守护”",
       "reason": "漏字“墩”；卡牌名源图为“石墩出动”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6357f2eb7442470001997fa9 2 22"
+      "recrop": "python -m tools.cli crop dashen.6357f2eb7442470001997fa9 2 22"
     },
     {
       "image_index": 5,
@@ -38,7 +38,7 @@
       "corrected": "新增开放染色发型：男-叶影深深&女-花影缱绻、男",
       "reason": "缝缕→缱绻；源图发型名为“花影缱绻”（sheet 第164行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.6357f2eb7442470001997fa9 5 29"
+      "recrop": "python -m tools.cli crop dashen.6357f2eb7442470001997fa9 5 29"
     }
   ]
 }

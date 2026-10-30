@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.676a2af38a3f7303d3f3bf0f 1 1"
+      "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 1"
     },
     {
       "image_index": 1,
@@ -20,7 +20,7 @@
       "corrected": "“巧克力蛙画片”更新",
       "reason": "5→克；源图“巧克力蛙画片”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.676a2af38a3f7303d3f3bf0f 1 76"
+      "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 76"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "corrected": "魔法觉醒",
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.646cc073ed0eff00019ff6bc 1 1"
+      "recrop": "python -m tools.cli crop dashen.646cc073ed0eff00019ff6bc 1 1"
     },
     {
       "image_index": 2,
@@ -20,7 +20,7 @@
       "corrected": "魔法装扮“回归季”开启！",
       "reason": "衍字“V”；源图行末为装饰花纹（sheet 第71行）",
       "confidence": "high",
-      "recrop": "python tools/ocr_review.py crop dashen.646cc073ed0eff00019ff6bc 2 12"
+      "recrop": "python -m tools.cli crop dashen.646cc073ed0eff00019ff6bc 2 12"
     }
   ]
 }
