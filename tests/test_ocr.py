@@ -165,7 +165,7 @@ def test_empty_ocr_text_is_cached(tmp_path):
     assert calls["n"] == 1
 
 
-def test_engine_meta_change_invalidates_cached_ocr(tmp_path):
+def test_foreign_engine_record_is_kept_unless_forced(tmp_path):
     post, _ = _post("dddd", "update", ["https://ok.166.net/d1"])
     _seed(tmp_path, [post], [("dddd", "update")])
 
@@ -176,8 +176,17 @@ def test_engine_meta_change_invalidates_cached_ocr(tmp_path):
         return JPEG_BYTES
 
     ocr.run(tmp_path, engine=engine, engine_meta={"name": "fake", "version": "1"}, fetch=fetch, delay=0)
+    # A complete record from another engine stays untouched by default.
     stats = ocr.run(tmp_path, engine=engine, engine_meta={"name": "fake", "version": "2"}, fetch=fetch, delay=0)
-    assert stats["ocred"] == 1  # re-OCRed because the engine fingerprint changed
+    assert stats["ocred"] == 0
+    assert stats["kept_foreign"] == 1
+    # force re-OCRs everything under the current engine (explicit migration).
+    stats2 = ocr.run(
+        tmp_path, engine=engine, engine_meta={"name": "fake", "version": "2"},
+        fetch=fetch, delay=0, force=True,
+    )
+    assert stats2["ocred"] == 1
+    assert stats2["kept_foreign"] == 0
 
 
 def test_run_writes_to_out_dir_and_never_downloads(tmp_path):

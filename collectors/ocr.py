@@ -83,13 +83,70 @@ def merge_lines(
     return [{"box": box, "text": text, "score": round(score, 4)} for cy, text, score, box in kept]
 
 
-def default_engine() -> tuple[Engine, dict[str, str]]:
-    """Build the real OCR engine. Heavy dependency; imported lazily.
+def _rapidocr_v6():
+    """Build the rapidocr 3.x (PP-OCRv6 small) engine, lazily.
 
-    Tall images are read with OpenCV, sliced into overlapping windows, and
-    OCR'd window by window; per-window results are re-offset to absolute
-    coordinates and merged.
+    Same windowed reading as the v4 engine: tall images are sliced into
+    overlapping 1280 px windows and per-window lines are merged, so results
+    differ only in what the models read, not in how images are cut.
     """
+    from importlib.metadata import version
+
+    import cv2
+    from rapidocr import RapidOCR
+
+    rapid = RapidOCR()
+
+    def raw_to_lines(result, y_offset: int) -> list[tuple[float, str, float, list[list[int]]]]:
+        boxes = result.boxes if result.boxes is not None else []
+        txts = result.txts if result.txts is not None else []
+        scores = result.scores if result.scores is not None else []
+        out = []
+        for box, text, score in zip(boxes, txts, scores):
+            pts = [[int(x), int(y) + y_offset] for x, y in box]
+            cy = sum(y for _, y in pts) / len(pts)
+            out.append((cy, str(text), float(score or 0.0), pts))
+        return out
+
+    def engine(path: str) -> list[Block]:
+        image = cv2.imread(path)
+        if image is None:
+            raise ValueError(f"cannot read image {path}")
+        height, _ = image.shape[:2]
+        lines: list[tuple[float, str, float, list[list[int]]]] = []
+        for start, end in tiles(height):
+            result = rapid(image[start:end, :], use_cls=False)
+            lines.extend(raw_to_lines(result, start))
+        return merge_lines(lines)
+
+    meta = {
+        "name": "rapidocr",
+        "version": version("rapidocr"),
+        "model": "PP-OCRv6-small",
+        "tiling": "1280+256",
+        "cls": "off",
+    }
+    return engine, meta
+
+
+def default_engine() -> tuple[Engine, dict[str, str]]:
+    """Build the engine for NEW notices: rapidocr 3.x (PP-OCRv6 small).
+
+    The 162 notices already on file keep their v4 records verbatim: run()
+    skips any notice whose OCR was produced by a different, complete engine
+    fingerprint, so switching the default never rewrites committed history.
+    ``--force`` on the CLI re-OCRs everything under the current engine
+    (an explicit migration). The benchmark that decided this lives in the
+    repo history: v6 fixes 3.4x more human-corrected hard blocks than v4
+    and reads full images twice as fast.
+
+    Heavy dependency; imported lazily.
+    """
+    return _rapidocr_v6()
+
+
+def v4_engine() -> tuple[Engine, dict[str, str]]:
+    """The retired engine of record for the committed 162 notices."""
     from importlib.metadata import version
 
     import cv2
@@ -215,6 +272,7 @@ def run(
     delay: float = 0.15,
     out_dir: str | Path | None = None,
     download: bool = True,
+    force: bool = False,
 ) -> dict[str, int]:
     root_path = Path(root) if root else REPO_ROOT
     posts = load_posts(root_path, family)
@@ -239,6 +297,7 @@ def run(
         "failed_images": 0,
         "failed_posts": 0,
         "written": 0,
+        "kept_foreign": 0,
     }
 
     for post in posts:
@@ -250,6 +309,22 @@ def run(
             existing: dict[str, Any] = {}
             if out_path.exists():
                 existing = json.loads(out_path.read_text(encoding="utf-8"))
+            if (
+                existing
+                and not force
+                and existing.get("engine") != engine_meta
+                and existing.get("images")
+                and all(
+                    image.get("text") is not None and not image.get("error")
+                    for image in existing["images"]
+                )
+            ):
+                # A complete record from another engine stays untouched:
+                # committed OCR history never gets rewritten by a default
+                # engine switch. Use force for an explicit migration.
+                stats["kept_foreign"] += 1
+                stats["posts"] += 1
+                continue
             cached: dict[int, dict[str, Any]] = {}
             if existing.get("engine") == engine_meta:
                 # Same engine fingerprint: reuse per-image OCR by sha256.

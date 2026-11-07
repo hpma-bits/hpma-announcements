@@ -40,7 +40,7 @@ def _nga(args: argparse.Namespace) -> int:
 
 
 def _ocr(args: argparse.Namespace) -> int:
-    stats = ocr.run(family=args.family, limit=args.limit)
+    stats = ocr.run(family=args.family, limit=args.limit, force=args.force)
     print(json.dumps(stats, sort_keys=True))
     return 0 if stats["failed_posts"] == 0 else 1
 
@@ -77,6 +77,11 @@ def main(argv: list[str] | None = None) -> int:
     ocr_cmd = sub.add_parser("ocr", help="download images and OCR one label family")
     ocr_cmd.add_argument("--family", default="update")
     ocr_cmd.add_argument("--limit", type=int, default=None, help="process only the first N posts (smoke)")
+    ocr_cmd.add_argument(
+        "--force",
+        action="store_true",
+        help="re-OCR every notice under the current engine, overriding kept foreign records",
+    )
     ocr_cmd.set_defaults(func=_ocr)
 
     args = parser.parse_args(argv)
