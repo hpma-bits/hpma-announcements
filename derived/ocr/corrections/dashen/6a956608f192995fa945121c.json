@@ -164,6 +164,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6a956608f192995fa945121c 4 11"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "去觉醒",
+      "drop": true,
+      "reason": "watermark：「去觉醒」(y1092-1113,x576-632)为右下水印「大神@哈利波特魔法觉醒」尾部「（魔法）觉醒」的误读，水印覆盖内容不可恢复；所在正文行亦被水印叠压",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a956608f192995fa945121c 2 27"
     }
   ]
 }

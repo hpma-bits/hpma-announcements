@@ -177,6 +177,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 6 22"
+    },
+    {
+      "image_index": 6,
+      "block_index": 25,
+      "original": "同时，折扣季活动将相应延长至9月22日4：59结束，",
+      "corrected": "同时，折扣季活动将相应延长至9月22日4:59结束，",
+      "reason": "标点规则 time_colon_halfwidth（共识块补漏）：数字:数字时间冒号源图印半角（分年采样 23/23；保留块 zoom 复核佐证）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 6 25"
     }
   ]
 }

@@ -223,6 +223,76 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 2 30"
+    },
+    {
+      "image_index": 2,
+      "block_index": 56,
+      "original": "的梦想”、发型“流星划过之夜”、表情包“欢享反调”",
+      "drop": true,
+      "reason": "与b55同行重复（y2125-2151同线双读）：b55已对上v6、缺后引号在punct-p5队列补正；b56为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 2 56"
+    },
+    {
+      "image_index": 3,
+      "block_index": 55,
+      "original": "开启时间：2026年4月11日0：00-4月25日0:00",
+      "drop": true,
+      "reason": "与b54同行重复（y2065-2087同线双读）：b54已对上v6且半角0:00与源图一致，b55首个0：00为全角误读重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 3 55"
+    },
+    {
+      "image_index": 4,
+      "block_index": 31,
+      "original": "活动时间：当地时间2026年4月4日20:00-22:00",
+      "drop": true,
+      "reason": "与b32同行重复（y1146-1171同线双读）：源图冒号为半角22:00（v6同），b31正确；对齐器保留的b32尾冒号22：00为全角误读且未入任何队列，建议punct补正；b31为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 4 31"
+    },
+    {
+      "image_index": 5,
+      "block_index": 58,
+      "original": "配卡界面时会触发弹窗提醒。",
+      "drop": true,
+      "reason": "与b57同行重复（y2054-2077同线双读）：b57已对上v6、缺句号在punct-p5队列补正；b58为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 58"
+    },
+    {
+      "image_index": 5,
+      "block_index": 59,
+      "original": "14.优化了宠物在巫师空间中寻路的表现",
+      "drop": true,
+      "reason": "与b60同行重复（y2090-2113同线双读）：b60已读出「14.优化了宠物在巫师空间中寻路的表现。」（含句号，v6同），b59漏句号为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 59"
+    },
+    {
+      "image_index": 6,
+      "block_index": 30,
+      "original": "0.优化了裁决事务司权盆的经验获取逻辑，新赛季",
+      "drop": true,
+      "reason": "与b29同行重叠（y1020-1043同线）：b29已完整读出「30.优化了裁决事务司权益的经验获取逻辑，新赛季」且与v6一致，b30「0.优化了裁决事务司权盆的…」为漏头且乱码的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 6 30"
+    },
+    {
+      "image_index": 6,
+      "block_index": 60,
+      "original": "9.修夏了副分经典邮质发型案巴异吊的问题",
+      "drop": true,
+      "reason": "与b59同行重叠（y2041-2064同线）：b59已完整读出「9.修复了部分经典品质发型染色异常的问题。」且与v6一致，b60「9.修夏了副分经典邮质发型案巴异吊的问题」为严重乱码的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 6 60"
     }
   ]
 }

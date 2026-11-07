@@ -109,6 +109,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 2 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 28,
+      "original": "活动时间：2025年4月9日5:00－4月16日5:00",
+      "drop": true,
+      "reason": "与b29同行重复（y1120-1145同线双读）：源图冒号为半角5:00（v6同），b28正确；对齐器保留的b29两个5：00均为全角误读且未入任何队列，建议punct补正；b28为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 2 28"
     }
   ]
 }

@@ -167,6 +167,26 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.6a5dec5320356f5d979a9408 5 36"
+    },
+    {
+      "image_index": 2,
+      "block_index": 29,
+      "original": "赛季时间：2026年7月22日维护后-9月16日6：00",
+      "drop": true,
+      "reason": "与b28同行重复（y1178-1203同线双读）：b28已对上v6且6:00半角与源图一致，b29的6：00为全角误读重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a5dec5320356f5d979a9408 2 29"
+    },
+    {
+      "image_index": 2,
+      "block_index": 30,
+      "original": "“倘若殷红汁液，仍于你脉中激荡，",
+      "drop": true,
+      "reason": "与b31同行重复（y1214-1237同线双读）：b31已对上v6、缺前引号在punct-p5队列补正；b30为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a5dec5320356f5d979a9408 2 30"
     }
   ]
 }
