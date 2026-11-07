@@ -160,9 +160,12 @@ that locates an OCR block and records what the source image shows:
 
 - `original` must equal the OCR block text exactly. A ledger that no longer
   matches the OCR is refused, never applied, so corrected text cannot drift.
+- A `drop: true` entry is a verdict, not a rewrite: the block is a duplicate
+  slice with no line of its own in the source image, and the edition removes
+  it instead of replacing its text. Drop entries carry no `corrected`.
 - `recrop` regenerates the evidence crop from the committed image with
   `python -m tools.cli crop <notice> <image> <block>`.
-- 819 corrections cover 153 of the 162 Dashen notices; the block text is the only
+- 829 corrections cover 154 of the 162 Dashen notices; the block text is the only
   thing the ledger changes, `derived/ocr/` is never edited.
 
 ## Checking

@@ -66,6 +66,16 @@
       "reason": "漏字“睐”；源图为“青睐之人”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6936cff8cb387243bb18d4c8 6 13"
+    },
+    {
+      "image_index": 6,
+      "block_index": 9,
+      "original": "上架时间：2025年12月17日5：00-2026年1月7日7:00",
+      "corrected": "上架时间：2025年12月17日5:00-2026年1月7日7:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6936cff8cb387243bb18d4c8 6 9"
     }
   ]
 }

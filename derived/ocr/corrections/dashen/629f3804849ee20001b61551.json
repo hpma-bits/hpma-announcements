@@ -21,6 +21,16 @@
       "reason": "M→W；源图为“WiFi”（与 b0021 为同一行的重叠切片）",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.629f3804849ee20001b61551 1 20"
+    },
+    {
+      "image_index": 1,
+      "block_index": 6,
+      "original": "活动时间：6月8日维护后－6月22日5：00",
+      "corrected": "活动时间：6月8日维护后－6月22日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.629f3804849ee20001b61551 1 6"
     }
   ]
 }

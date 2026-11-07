@@ -55,7 +55,7 @@
       "original": "快去大世界里找到故事碎片进行阅读吧@哈利波特魔法觉醒",
       "corrected": "快去大世界里找到故事碎片进行阅读吧！",
       "reason": "sheet 第150条；“吧@哈利波特魔法觉醒”为水印串扰，源图正文为“阅读吧！”",
-      "confidence": "medium",
+      "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 4 46"
     },
     {
@@ -75,6 +75,66 @@
       "reason": "sheet 第156条；“700波特魔法觉醒”为“7:00”加水印，源图为“2025年4月26日7:00”",
       "confidence": "medium",
       "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 5 43"
+    },
+    {
+      "image_index": 2,
+      "block_index": 29,
+      "original": "活动时间：2025年4月26日0：00-5月10日0:00",
+      "corrected": "活动时间：2025年4月26日0:00-5月10日0:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 2 29"
+    },
+    {
+      "image_index": 2,
+      "block_index": 34,
+      "original": "活动时间：2025年4月26日0：00-5月10日0:00",
+      "corrected": "活动时间：2025年4月26日0:00-5月10日0:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 2 34"
+    },
+    {
+      "image_index": 2,
+      "block_index": 35,
+      "original": "活动期间，巫师消费宝石或星石即可1：1获得积分。累",
+      "corrected": "活动期间，巫师消费宝石或星石即可1:1获得积分。累",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 2 35"
+    },
+    {
+      "image_index": 4,
+      "block_index": 1,
+      "original": "活动时间：2025年4月16日5：00-4月23日5：00",
+      "corrected": "活动时间：2025年4月16日5:00-4月23日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 4 1"
+    },
+    {
+      "image_index": 4,
+      "block_index": 4,
+      "original": "每日金币获取量存在上限，此上限每日5：00重置。",
+      "corrected": "每日金币获取量存在上限，此上限每日5:00重置。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 4 4"
+    },
+    {
+      "image_index": 4,
+      "block_index": 6,
+      "original": "活动时间：2025年4月23日5：00－4月30日5:00",
+      "corrected": "活动时间：2025年4月23日5:00－4月30日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 4 6"
     }
   ]
 }

@@ -12,6 +12,16 @@
       "reason": "噢→嗅；源图为“共同保卫嗅”，下块为“嗅！”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.63e251ac0c8dc600018f8764 1 16"
+    },
+    {
+      "image_index": 2,
+      "block_index": 12,
+      "original": "活动时间：2月8日维护后－2月22日05：00",
+      "corrected": "活动时间：2月8日维护后－2月22日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.63e251ac0c8dc600018f8764 2 12"
     }
   ]
 }

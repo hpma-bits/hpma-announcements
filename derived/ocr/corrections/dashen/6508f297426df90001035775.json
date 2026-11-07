@@ -12,6 +12,56 @@
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6508f297426df90001035775 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "则第50次抽取必然获得传说卡牌“哈利?波特”。",
+      "corrected": "则第50次抽取必然获得传说卡牌“哈利·波特”。",
+      "reason": "标点规则 take_v6 ?->·：源图为人名/标题分隔点（采样 v6 全对）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6508f297426df90001035775 1 18"
+    },
+    {
+      "image_index": 2,
+      "block_index": 11,
+      "original": "活动时间：所在服务器时区9月26日05：00-10月3日4：59",
+      "corrected": "活动时间：所在服务器时区9月26日05:00-10月3日4:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6508f297426df90001035775 2 11"
+    },
+    {
+      "image_index": 2,
+      "block_index": 23,
+      "original": "活动时间：当地时间8月16日18:00-9月25日16：59。",
+      "corrected": "活动时间：当地时间8月16日18:00-9月25日16:59。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6508f297426df90001035775 2 23"
+    },
+    {
+      "image_index": 2,
+      "block_index": 26,
+      "original": "“缤纷魁地奇?梳妆魔盒”全新上线！",
+      "corrected": "“缤纷魁地奇·梳妆魔盒”全新上线！",
+      "reason": "标点规则 take_v6 ?->·：源图为人名/标题分隔点（采样 v6 全对）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6508f297426df90001035775 2 26"
+    },
+    {
+      "image_index": 3,
+      "block_index": 6,
+      "original": "2.伙伴卡“哈利?波特”",
+      "corrected": "2.伙伴卡“哈利·波特”",
+      "reason": "标点规则 take_v6 ?->·：源图为人名/标题分隔点（采样 v6 全对）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6508f297426df90001035775 3 6"
     }
   ]
 }

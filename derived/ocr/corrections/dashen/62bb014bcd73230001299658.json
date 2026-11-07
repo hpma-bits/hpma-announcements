@@ -57,6 +57,36 @@
       "reason": "惟→帷；源图为“帷幕”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 4 62"
+    },
+    {
+      "image_index": 1,
+      "block_index": 5,
+      "original": "MA第10赛季将于7月1日5：30正式开启！决斗俱乐部段",
+      "corrected": "MA第10赛季将于7月1日5:30正式开启！决斗俱乐部段",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 1 5"
+    },
+    {
+      "image_index": 1,
+      "block_index": 22,
+      "original": "0:00至7月14日23：59期间进行购买，更可享受680星石",
+      "corrected": "0:00至7月14日23:59期间进行购买，更可享受680星石",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 1 22"
+    },
+    {
+      "image_index": 2,
+      "block_index": 1,
+      "original": "活动时间：6月29日维护后-7月13日5：00",
+      "corrected": "活动时间：6月29日维护后-7月13日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 2 1"
     }
   ]
 }

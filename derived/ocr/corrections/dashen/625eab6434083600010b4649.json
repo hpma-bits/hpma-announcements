@@ -1,0 +1,18 @@
+{
+  "id": "dashen.625eab6434083600010b4649",
+  "source_ocr": "derived/ocr/dashen/625eab6434083600010b4649.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 6,
+      "original": "维护后至5月4日4：59期间进行购买，更可以60星石特",
+      "corrected": "维护后至5月4日4:59期间进行购买，更可以60星石特",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.625eab6434083600010b4649 1 6"
+    }
+  ]
+}

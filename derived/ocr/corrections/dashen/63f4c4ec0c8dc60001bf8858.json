@@ -28,7 +28,7 @@
       "original": "-对“决斗俱乐部\"玩法中“最终时刻”的光谓优华魔法觉醒",
       "corrected": "-对“决斗俱乐部”玩法中“最终时刻”的光效进行了调整优化。",
       "reason": "水印覆盖处源图为“光效进行了调整优化。”；“谓优”为“效进行”之误。",
-      "confidence": "medium",
+      "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.63f4c4ec0c8dc60001bf8858 1 26"
     }
   ]

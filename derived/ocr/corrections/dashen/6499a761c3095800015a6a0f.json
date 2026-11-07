@@ -75,6 +75,76 @@
       "reason": "漏「/“」两符号；源图红字为“银辉之匙”/“焰色之锁”（字符级放大核验）。“匙”为源图原字，不改作“钥”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 5 10"
+    },
+    {
+      "image_index": 1,
+      "block_index": 27,
+      "original": "持续时间：截止7月4日17：00前。",
+      "corrected": "持续时间：截止7月4日17:00前。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 1 27"
+    },
+    {
+      "image_index": 1,
+      "block_index": 38,
+      "original": "开启时间：7月4日05：00。",
+      "corrected": "开启时间：7月4日05:00。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 1 38"
+    },
+    {
+      "image_index": 1,
+      "block_index": 40,
+      "original": "持续时间：截止7月11日04：59。",
+      "corrected": "持续时间：截止7月11日04:59。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 1 40"
+    },
+    {
+      "image_index": 2,
+      "block_index": 5,
+      "original": "“焰色之锁”：累积抽取100抽可领取“闪电风暴”卡牌皮",
+      "corrected": "“焰色之锁”；累积抽取100抽可领取“闪电风暴”卡牌皮",
+      "reason": "标点规则 take_v6 ：->；：源图印带尾分号（采样复检确认）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 2 5"
+    },
+    {
+      "image_index": 2,
+      "block_index": 37,
+      "original": "开放时间：6月27日维护后-7月11日13：59",
+      "corrected": "开放时间：6月27日维护后-7月11日13:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 2 37"
+    },
+    {
+      "image_index": 4,
+      "block_index": 7,
+      "original": "开放时间：巫师所在地区，当地时间每周一05：00-周",
+      "corrected": "开放时间：巫师所在地区，当地时间每周一05:00-周",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 4 7"
+    },
+    {
+      "image_index": 4,
+      "block_index": 20,
+      "original": "活动时间：7月4日07:00-7月17日05：00",
+      "corrected": "活动时间：7月4日07:00-7月17日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 4 20"
     }
   ]
 }

@@ -35,10 +35,10 @@
       "image_index": 4,
       "block_index": 56,
       "original": "先成在男，达成对应等级可狄持传说品质年命配饰",
-      "corrected": "完成任务，达成对应等级可获得传说品质耳部配饰“幽",
-      "reason": "sheet 第7条；源图与上一 block 为同一行“完成任务，达成对应等级可获得传说品质耳部配饰“幽”",
-      "confidence": "medium",
-      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 4 56"
+      "reason": "b56 框（x38-561,y2048-2061）落在 b55“完成任务，达成对应等级可获得传说品质耳部配饰“幽”行内，为同一行乱码重复识别；修正后将与 b55 完全相同，应删",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 4 56",
+      "drop": true
     },
     {
       "image_index": 5,
@@ -57,6 +57,56 @@
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 5 17"
+    },
+    {
+      "image_index": 1,
+      "block_index": 22,
+      "original": "开启时间：2025年4月30日维护后-5月28日6：00",
+      "corrected": "开启时间：2025年4月30日维护后-5月28日6:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 1 22"
+    },
+    {
+      "image_index": 3,
+      "block_index": 20,
+      "original": "开启时间：2025年4月30日维护后－6月25日5：00",
+      "corrected": "开启时间：2025年4月30日维护后－6月25日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 3 20"
+    },
+    {
+      "image_index": 3,
+      "block_index": 29,
+      "original": "开启时间：2025年4月30日维护后－6月20日23：59",
+      "corrected": "开启时间：2025年4月30日维护后－6月20日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 3 29"
+    },
+    {
+      "image_index": 3,
+      "block_index": 52,
+      "original": "注意，一定要在每周五23：59前将商品售出，否则商品",
+      "corrected": "注意，一定要在每周五23:59前将商品售出，否则商品",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 3 52"
+    },
+    {
+      "image_index": 5,
+      "block_index": 20,
+      "original": "活动时间：2025年5月7日5：00-5月14日5:00",
+      "corrected": "活动时间：2025年5月7日5:00-5月14日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 5 20"
     }
   ]
 }

@@ -120,6 +120,36 @@
       "reason": "全角冒号→半角；源图为“04:00”（字符级放大核验，与 b0017/b0019 一致），补齐后 b0017/b0018 重复行被去重",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 1 18"
+    },
+    {
+      "image_index": 1,
+      "block_index": 33,
+      "original": "首发赛季时间：6月1日维护后－6月27日13：59",
+      "corrected": "首发赛季时间：6月1日维护后－6月27日13:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 1 33"
+    },
+    {
+      "image_index": 6,
+      "block_index": 86,
+      "original": "6月1日05：00后所有玩家将重新开始七日签到并",
+      "corrected": "6月1日05:00后所有玩家将重新开始七日签到并",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 86"
+    },
+    {
+      "image_index": 9,
+      "block_index": 32,
+      "original": "活动时间：6月1日维护后－6月27日13：59",
+      "corrected": "活动时间：6月1日维护后－6月27日13:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 9 32"
     }
   ]
 }

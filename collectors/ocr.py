@@ -213,6 +213,8 @@ def run(
     engine_meta: dict[str, str] | None = None,
     fetch: Fetcher | None = None,
     delay: float = 0.15,
+    out_dir: str | Path | None = None,
+    download: bool = True,
 ) -> dict[str, int]:
     root_path = Path(root) if root else REPO_ROOT
     posts = load_posts(root_path, family)
@@ -221,9 +223,13 @@ def run(
     if engine is None:
         engine, engine_meta = default_engine()
     if fetch is None:
-        fetch = lambda url: http.fetch_bytes(url, headers={"Referer": "https://ds.163.com/"})  # noqa: E731
+        if download:
+            fetch = lambda url: http.fetch_bytes(url, headers={"Referer": "https://ds.163.com/"})  # noqa: E731
+        else:
+            def fetch(url: str) -> bytes:
+                raise ValueError(f"download disabled: {url}")
 
-    derived_dir = root_path / "derived" / "ocr" / "dashen"
+    derived_dir = (root_path / out_dir) if out_dir else (root_path / "derived" / "ocr" / "dashen")
     derived_dir.mkdir(parents=True, exist_ok=True)
     stats = {
         "posts": 0,

@@ -180,6 +180,40 @@ def test_engine_meta_change_invalidates_cached_ocr(tmp_path):
     assert stats["ocred"] == 1  # re-OCRed because the engine fingerprint changed
 
 
+def test_run_writes_to_out_dir_and_never_downloads(tmp_path):
+    post, _ = _post("ffff", "update", ["https://ok.166.net/f1"])
+    _seed(tmp_path, [post], [("ffff", "update")])
+
+    def engine(path: str):
+        return [{"box": [[0, 0], [9, 0], [9, 9], [0, 9]], "text": "文本", "score": 0.9}]
+
+    # No local asset and download=False: the missing image is recorded as an
+    # error from the built-in disabled fetch, never the network.
+    stats = ocr.run(
+        tmp_path, engine=engine, engine_meta={"name": "fake", "version": "0"},
+        download=False, out_dir="derived/ocr-v6/dashen", delay=0,
+    )
+    assert stats["failed_images"] == 1
+    assert stats["downloaded"] == 0
+    out = tmp_path / "derived" / "ocr-v6" / "dashen" / "ffff.json"
+    assert out.exists()
+    notice = json.loads(out.read_text(encoding="utf-8"))
+    assert notice["images"][0]["error"] == "ValueError('download disabled: https://ok.166.net/f1')"
+
+    # With the asset present locally, the audit layer gets a full record.
+    asset_dir = tmp_path / "assets" / "dashen" / "ffff"
+    asset_dir.mkdir(parents=True, exist_ok=True)
+    (asset_dir / "01.jpg").write_bytes(JPEG_BYTES)
+    stats2 = ocr.run(
+        tmp_path, engine=engine, engine_meta={"name": "fake", "version": "0"},
+        download=False, out_dir="derived/ocr-v6/dashen", delay=0,
+    )
+    assert stats2["failed_images"] == 0
+    assert stats2["ocred"] == 1
+    notice2 = json.loads(out.read_text(encoding="utf-8"))
+    assert notice2["images"][0]["text"] == "文本"
+
+
 def test_image_urls_includes_long_text_inline_images():
     post = {
         "image_urls": ["https://ok.166.net/cover"],

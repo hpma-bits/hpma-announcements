@@ -30,6 +30,76 @@
       "reason": "皮→波；水印专名源图为“哈利波特”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 6 13"
+    },
+    {
+      "image_index": 1,
+      "block_index": 7,
+      "original": "赛季更新时间：8月1日5：30-9月1日5:00",
+      "corrected": "赛季更新时间：8月1日5:30-9月1日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 1 7"
+    },
+    {
+      "image_index": 1,
+      "block_index": 8,
+      "original": "MA第11赛季将于8月1日5：30正式开启！决斗俱乐部段",
+      "corrected": "MA第11赛季将于8月1日5:30正式开启！决斗俱乐部段",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 1 8"
+    },
+    {
+      "image_index": 1,
+      "block_index": 25,
+      "original": "0:00至8月14日23：59期间进行购买，更可享受680星",
+      "corrected": "0:00至8月14日23:59期间进行购买，更可享受680星",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 1 25"
+    },
+    {
+      "image_index": 3,
+      "block_index": 11,
+      "original": "7月30日20：00，官方直播间将颁布“金加隆大奖”，谁",
+      "corrected": "7月30日20:00，官方直播间将颁布“金加隆大奖”，谁",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 3 11"
+    },
+    {
+      "image_index": 4,
+      "block_index": 7,
+      "original": "4、“清泉飞溅”：巫师基础移动速度提高20%：“清泉",
+      "corrected": "4、“清泉飞溅”：巫师基础移动速度提高20%；“清泉",
+      "reason": "标点规则 take_v6 ：->；：源图印带尾分号（采样复检确认）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 4 7"
+    },
+    {
+      "image_index": 5,
+      "block_index": 7,
+      "original": "晰直观：在熬制时加入了二次确认步骤，防止巫师误",
+      "corrected": "晰直观；在熬制时加入了二次确认步骤，防止巫师误",
+      "reason": "标点规则 take_v6 ：->；：源图印带尾分号（采样复检确认）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 5 7"
+    },
+    {
+      "image_index": 5,
+      "block_index": 8,
+      "original": "触：合并了巫师持有的“染发灵”列表及发色列表。",
+      "corrected": "触；合并了巫师持有的“染发灵”列表及发色列表。",
+      "reason": "标点规则 take_v6 ：->；：源图印带尾分号（采样复检确认）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 5 8"
     }
   ]
 }

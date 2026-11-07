@@ -66,6 +66,26 @@
       "reason": "漏“魔”；源图水印为“大神@哈利波特魔法觉醒”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 4 42"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "的下架时间延长至3月1日5：00。",
+      "corrected": "的下架时间延长至3月1日5:00。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 1 13"
+    },
+    {
+      "image_index": 1,
+      "block_index": 15,
+      "original": "活动日期：2023年2月1日更新后-2月14日23：59",
+      "corrected": "活动日期：2023年2月1日更新后-2月14日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 1 15"
     }
   ]
 }

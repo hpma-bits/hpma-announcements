@@ -66,6 +66,126 @@
       "reason": "衍“W”；源图为“PC版正式上线”（sheet 第31行）",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 3 125"
+    },
+    {
+      "image_index": 2,
+      "block_index": 5,
+      "original": "活动时间：2月7日05：00-2月21日05:00",
+      "corrected": "活动时间：2月7日05:00-2月21日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 2 5"
+    },
+    {
+      "image_index": 2,
+      "block_index": 25,
+      "original": "发财树附近的嗅嗅每日05：00刷新，每日可交互5",
+      "corrected": "发财树附近的嗅嗅每日05:00刷新，每日可交互5",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 2 25"
+    },
+    {
+      "image_index": 2,
+      "block_index": 46,
+      "original": "有关嗅嗅的线索会在每日05：00追加2段，共14段！",
+      "corrected": "有关嗅嗅的线索会在每日05:00追加2段，共14段！",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 2 46"
+    },
+    {
+      "image_index": 2,
+      "block_index": 63,
+      "original": "碎片的获取提示每日05：00追加1条，共5条。",
+      "corrected": "碎片的获取提示每日05:00追加1条，共5条。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 2 63"
+    },
+    {
+      "image_index": 2,
+      "block_index": 106,
+      "original": "活动时间：2月9日00:00-2月24日23：59",
+      "corrected": "活动时间：2月9日00:00-2月24日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 2 106"
+    },
+    {
+      "image_index": 2,
+      "block_index": 119,
+      "original": "别于2月7日和2月8日的20：00分两轮角逐出8强席位。",
+      "corrected": "别于2月7日和2月8日的20:00分两轮角逐出8强席位。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 2 119"
+    },
+    {
+      "image_index": 2,
+      "block_index": 123,
+      "original": "其他巫师在2月9日0:00-20：00间，可以参与8强选手投",
+      "corrected": "其他巫师在2月9日0:00-20:00间，可以参与8强选手投",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 2 123"
+    },
+    {
+      "image_index": 3,
+      "block_index": 15,
+      "original": "第二章开启时间：2月20日15：00",
+      "corrected": "第二章开启时间：2月20日15:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 3 15"
+    },
+    {
+      "image_index": 3,
+      "block_index": 126,
+      "original": "PC版将于2月6日15：00正式开放下载！",
+      "corrected": "PC版将于2月6日15:00正式开放下载！",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 3 126"
+    },
+    {
+      "image_index": 4,
+      "block_index": 9,
+      "original": "活动时间：2月7日5：00-2月14日05:00",
+      "corrected": "活动时间：2月7日5:00-2月14日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 4 9"
+    },
+    {
+      "image_index": 4,
+      "block_index": 13,
+      "original": "活动时间：2月7日05：00－2月21日05:00",
+      "corrected": "活动时间：2月7日05:00－2月21日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 4 13"
+    },
+    {
+      "image_index": 4,
+      "block_index": 19,
+      "original": "活动时间：2月6日维护后－2月20日05：00",
+      "corrected": "活动时间：2月6日维护后－2月20日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 4 19"
     }
   ]
 }

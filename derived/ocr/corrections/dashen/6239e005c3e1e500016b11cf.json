@@ -21,6 +21,36 @@
       "reason": "整行乱码；源图与上一正确行同为“优化了社区体验……会出现红点”（sheet 第16行）",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6239e005c3e1e500016b11cf 2 13"
+    },
+    {
+      "image_index": 1,
+      "block_index": 7,
+      "original": "4：59期间进行购买，更可以60星石特价获取！",
+      "corrected": "4:59期间进行购买，更可以60星石特价获取！",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6239e005c3e1e500016b11cf 1 7"
+    },
+    {
+      "image_index": 1,
+      "block_index": 9,
+      "original": "活动时间：2022年3月26日5：00-2022年3月30日4:59",
+      "corrected": "活动时间：2022年3月26日5:00-2022年3月30日4:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6239e005c3e1e500016b11cf 1 9"
+    },
+    {
+      "image_index": 1,
+      "block_index": 16,
+      "original": "比赛时间：2022年3月24日-2022年4月24日，每日18:00-23：00；",
+      "corrected": "比赛时间：2022年3月24日-2022年4月24日，每日18:00-23:00；",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6239e005c3e1e500016b11cf 1 16"
     }
   ]
 }

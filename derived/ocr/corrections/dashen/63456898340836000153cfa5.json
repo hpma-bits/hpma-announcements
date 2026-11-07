@@ -1,0 +1,18 @@
+{
+  "id": "dashen.63456898340836000153cfa5",
+  "source_ocr": "derived/ocr/dashen/63456898340836000153cfa5.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 9,
+      "original": "售卖时间：10月12日7:00-10月18日23：59",
+      "corrected": "售卖时间：10月12日7:00-10月18日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.63456898340836000153cfa5 1 9"
+    }
+  ]
+}

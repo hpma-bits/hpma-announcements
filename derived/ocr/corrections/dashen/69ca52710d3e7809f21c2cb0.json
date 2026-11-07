@@ -53,10 +53,10 @@
       "image_index": 3,
       "block_index": 62,
       "original": "残瓣汲取最后一抹余晖，将所有祝藏心夜皮特魔法觉醒",
-      "corrected": "残瓣汲取最后一抹余晖，将所有祝福藏入长夜。",
-      "reason": "“祝藏心夜”为水印串扰；源图“将所有祝福藏入长夜。”，与 b61 为同一行重复块",
-      "confidence": "medium",
-      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 3 62"
+      "reason": "b62 框（x34-635,y2234-2270）与 b61（x35-634,y2235-2268）几乎重合，同一行重复识别；修正后将与 b61 完全相同，应删",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 3 62",
+      "drop": true
     },
     {
       "image_index": 4,
@@ -93,6 +93,76 @@
       "reason": "水印串扰；增强后源图“现在能支持双人动作了。”，与 b64 为同一行重复块",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 65"
+    },
+    {
+      "image_index": 1,
+      "block_index": 8,
+      "original": "开启时间：2026年3月31日维护后－4月29日6：00",
+      "corrected": "开启时间：2026年3月31日维护后－4月29日6:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 1 8"
+    },
+    {
+      "image_index": 2,
+      "block_index": 33,
+      "original": "活动时间：2026年3月31日维护后－5月27日6：00每",
+      "corrected": "活动时间：2026年3月31日维护后－5月27日6:00每",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 2 33"
+    },
+    {
+      "image_index": 3,
+      "block_index": 29,
+      "original": "求助信息会在每日5：00追加1段，共7段。",
+      "corrected": "求助信息会在每日5:00追加1段，共7段。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 3 29"
+    },
+    {
+      "image_index": 4,
+      "block_index": 1,
+      "original": "上架时间：2026年4月1日5：30-5月1日3:20",
+      "corrected": "上架时间：2026年4月1日5:30-5月1日3:20",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 4 1"
+    },
+    {
+      "image_index": 4,
+      "block_index": 20,
+      "original": "公示时间：2026年4月15日0：00-4月22日0:00",
+      "corrected": "公示时间：2026年4月15日0:00-4月22日0:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 4 20"
+    },
+    {
+      "image_index": 4,
+      "block_index": 32,
+      "original": "活动时间：当地时间2026年4月4日20:00-22：00",
+      "corrected": "活动时间：当地时间2026年4月4日20:00-22:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 4 32"
+    },
+    {
+      "image_index": 4,
+      "block_index": 41,
+      "original": "活动时间：2026年4月8日5：00-4月15日5:00",
+      "corrected": "活动时间：2026年4月8日5:00-4月15日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 4 41"
     }
   ]
 }

@@ -84,6 +84,46 @@
       "reason": "“复1张摩罚皮特魔法觉醒”→“复制1张魔咒”；源图正文与水印合并，可辨整句，故标 medium（sheet 第86行）",
       "confidence": "medium",
       "recrop": "python -m tools.cli crop dashen.695b95270a702c7f59d67fb4 5 25"
+    },
+    {
+      "image_index": 5,
+      "block_index": 16,
+      "original": "活动时间：2026年1月14日5：00-1月21日5：00",
+      "corrected": "活动时间：2026年1月14日5:00-1月21日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.695b95270a702c7f59d67fb4 5 16"
+    },
+    {
+      "image_index": 5,
+      "block_index": 21,
+      "original": "每日宝箱奖励获取量存在上限，每日5：00重置。",
+      "corrected": "每日宝箱奖励获取量存在上限，每日5:00重置。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.695b95270a702c7f59d67fb4 5 21"
+    },
+    {
+      "image_index": 5,
+      "block_index": 23,
+      "original": "活动时间：2026年1月14日5：00-1月21日5：00",
+      "corrected": "活动时间：2026年1月14日5:00-1月21日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.695b95270a702c7f59d67fb4 5 23"
+    },
+    {
+      "image_index": 6,
+      "block_index": 17,
+      "original": "误的问题，实际结束时间为1月15日0：00。",
+      "corrected": "误的问题，实际结束时间为1月15日0:00。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.695b95270a702c7f59d67fb4 6 17"
     }
   ]
 }

@@ -66,6 +66,46 @@
       "reason": "漏字“缄”；源图为“缄默的‘天目’”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6890935d7795d17cc68878d2 5 1"
+    },
+    {
+      "image_index": 4,
+      "block_index": 2,
+      "original": "活动期间，巫师消费宝石或星石即可1：1获得积分。累",
+      "corrected": "活动期间，巫师消费宝石或星石即可1:1获得积分。累",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6890935d7795d17cc68878d2 4 2"
+    },
+    {
+      "image_index": 5,
+      "block_index": 11,
+      "original": "活动时间：2025年8月6日5：00-8月13日5:00",
+      "corrected": "活动时间：2025年8月6日5:00-8月13日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6890935d7795d17cc68878d2 5 11"
+    },
+    {
+      "image_index": 5,
+      "block_index": 14,
+      "original": "每日金币获取量存在上限，此上限每日5：00重置。",
+      "corrected": "每日金币获取量存在上限，此上限每日5:00重置。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6890935d7795d17cc68878d2 5 14"
+    },
+    {
+      "image_index": 6,
+      "block_index": 20,
+      "original": "活动时间：2025年7月23日维护后－8月20日5：00",
+      "corrected": "活动时间：2025年7月23日维护后－8月20日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6890935d7795d17cc68878d2 6 20"
     }
   ]
 }

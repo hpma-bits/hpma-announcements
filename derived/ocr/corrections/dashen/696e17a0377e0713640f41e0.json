@@ -35,9 +35,9 @@
       "image_index": 5,
       "block_index": 17,
       "original": "w赛季预告·黑龙缚影之谜",
-      "corrected": "*赛季预告·黑龙缚影之谜",
-      "reason": "sheet 第40条；行首“w”为节目标记误识，源图标记同其他小节记作“*”",
-      "confidence": "medium",
+      "corrected": "赛季预告·黑龙缚影之谜",
+      "reason": "z8 可见行首为居中标题的波浪花饰（行尾对称），并非“*”；本通知真正的“*”小节标题（如“*全新赛季故事·第四章！”）为左对齐正文样式，与该横幅不同（附证 z-696e17a0-2-12.png）",
+      "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.696e17a0377e0713640f41e0 5 17"
     },
     {
@@ -66,6 +66,66 @@
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.696e17a0377e0713640f41e0 5 24"
+    },
+    {
+      "image_index": 2,
+      "block_index": 24,
+      "original": "的“开业培训”阶段将延长至2月4日6：00。在此之前，巫",
+      "corrected": "的“开业培训”阶段将延长至2月4日6:00。在此之前，巫",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.696e17a0377e0713640f41e0 2 24"
+    },
+    {
+      "image_index": 4,
+      "block_index": 16,
+      "original": "上架时间：2026年2月1日5：30-3月1日3:20",
+      "corrected": "上架时间：2026年2月1日5:30-3月1日3:20",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.696e17a0377e0713640f41e0 4 16"
+    },
+    {
+      "image_index": 5,
+      "block_index": 11,
+      "original": "公示时间：2026年2月4日7：00-2月10日6:00",
+      "corrected": "公示时间：2026年2月4日7:00-2月10日6:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.696e17a0377e0713640f41e0 5 11"
+    },
+    {
+      "image_index": 5,
+      "block_index": 27,
+      "original": "活动时间：2026年1月21日5：00-1月28日5:00",
+      "corrected": "活动时间：2026年1月21日5:00-1月28日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.696e17a0377e0713640f41e0 5 27"
+    },
+    {
+      "image_index": 5,
+      "block_index": 30,
+      "original": "每日回响晶石获取量存在上限，此上限每日5：00重",
+      "corrected": "每日回响晶石获取量存在上限，此上限每日5:00重",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.696e17a0377e0713640f41e0 5 30"
+    },
+    {
+      "image_index": 6,
+      "block_index": 1,
+      "original": "活动时间：2026年1月28日5：00-2月4日5:00",
+      "corrected": "活动时间：2026年1月28日5:00-2月4日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.696e17a0377e0713640f41e0 6 1"
     }
   ]
 }

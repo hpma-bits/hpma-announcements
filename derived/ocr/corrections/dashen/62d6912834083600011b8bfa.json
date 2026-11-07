@@ -28,8 +28,78 @@
       "original": "利波特魔法觉醒",
       "corrected": "大神@哈利波特魔法觉醒",
       "reason": "水印残缺；源图页脚水印为“大神@哈利波特魔法觉醒”（sheet 第88行）",
-      "confidence": "medium",
+      "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.62d6912834083600011b8bfa 1 58"
+    },
+    {
+      "image_index": 1,
+      "block_index": 14,
+      "original": "活动时间：7月20日维护后-8月03日4：59",
+      "corrected": "活动时间：7月20日维护后-8月03日4:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62d6912834083600011b8bfa 1 14"
+    },
+    {
+      "image_index": 1,
+      "block_index": 48,
+      "original": "1.实体限量奖品将于7月20日12:00、18：00和20:00补货",
+      "corrected": "1.实体限量奖品将于7月20日12:00、18:00和20:00补货",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62d6912834083600011b8bfa 1 48"
+    },
+    {
+      "image_index": 1,
+      "block_index": 49,
+      "original": "3次，此后每日补货4次，补货时间为每日10：00、",
+      "corrected": "3次，此后每日补货4次，补货时间为每日10:00、",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62d6912834083600011b8bfa 1 49"
+    },
+    {
+      "image_index": 1,
+      "block_index": 55,
+      "original": "往记录页面进行收货信息填写：填写时请确认收货信",
+      "corrected": "往记录页面进行收货信息填写；填写时请确认收货信",
+      "reason": "标点规则 take_v6 ：->；：源图印带尾分号（采样复检确认）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62d6912834083600011b8bfa 1 55"
+    },
+    {
+      "image_index": 2,
+      "block_index": 1,
+      "original": "活动时间：7月20日维护后-7月27日5：00",
+      "corrected": "活动时间：7月20日维护后-7月27日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62d6912834083600011b8bfa 2 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 14,
+      "original": "活动时间：7月20日维护后-8月3日5：00",
+      "corrected": "活动时间：7月20日维护后-8月3日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62d6912834083600011b8bfa 2 14"
+    },
+    {
+      "image_index": 2,
+      "block_index": 19,
+      "original": "售卖时间：7月20日维护后-7月26日23：59",
+      "corrected": "售卖时间：7月20日维护后-7月26日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62d6912834083600011b8bfa 2 19"
     }
   ]
 }

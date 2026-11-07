@@ -12,6 +12,16 @@
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.62c419f1849ee2000110472e 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 30,
+      "original": "活动时间：7月6日维护后-7月20日5：00",
+      "corrected": "活动时间：7月6日维护后-7月20日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62c419f1849ee2000110472e 1 30"
     }
   ]
 }

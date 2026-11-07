@@ -21,6 +21,26 @@
       "reason": "5→克；源图“巧克力蛙画片”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 76"
+    },
+    {
+      "image_index": 1,
+      "block_index": 108,
+      "original": "活动时间：2024年12月25日5：00－2025年1月1日5:00",
+      "corrected": "活动时间：2024年12月25日5:00－2025年1月1日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 108"
+    },
+    {
+      "image_index": 1,
+      "block_index": 111,
+      "original": "每日金币获取量存在上限，此上限每日5：00重置。",
+      "corrected": "每日金币获取量存在上限，此上限每日5:00重置。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 111"
     }
   ]
 }

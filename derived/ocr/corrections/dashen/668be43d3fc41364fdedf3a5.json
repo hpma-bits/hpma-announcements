@@ -129,6 +129,36 @@
       "reason": "漏“薅”；源图为“收获、采集或薅菜时”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 5 1"
+    },
+    {
+      "image_index": 3,
+      "block_index": 18,
+      "original": "活动时间：2024年7月10日5：00－7月17日5：00",
+      "corrected": "活动时间：2024年7月10日5:00－7月17日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 3 18"
+    },
+    {
+      "image_index": 3,
+      "block_index": 21,
+      "original": "每日回响晶石获取量存在上限，此上限每日5：00重置。",
+      "corrected": "每日回响晶石获取量存在上限，此上限每日5:00重置。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 3 21"
+    },
+    {
+      "image_index": 3,
+      "block_index": 23,
+      "original": "活动时间：2024年7月17日05：00－7月24日05:00",
+      "corrected": "活动时间：2024年7月17日05:00－7月24日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 3 23"
     }
   ]
 }

@@ -21,6 +21,36 @@
       "reason": "衍“1”；源图为“引起的闪退问题”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.634eb95c340836000155f4da 3 20"
+    },
+    {
+      "image_index": 1,
+      "block_index": 5,
+      "original": "活动时间：10月19日维护后－11月16日5：00",
+      "corrected": "活动时间：10月19日维护后－11月16日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.634eb95c340836000155f4da 1 5"
+    },
+    {
+      "image_index": 2,
+      "block_index": 9,
+      "original": "2022年10月19日5：00之后，巫师可前往摩金夫人长袍",
+      "corrected": "2022年10月19日5:00之后，巫师可前往摩金夫人长袍",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.634eb95c340836000155f4da 2 9"
+    },
+    {
+      "image_index": 2,
+      "block_index": 12,
+      "original": "售卖时间：10月19日维护后－10月25日23：59",
+      "corrected": "售卖时间：10月19日维护后－10月25日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.634eb95c340836000155f4da 2 12"
     }
   ]
 }

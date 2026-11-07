@@ -84,6 +84,26 @@
       "reason": "神→对；“对决”处被水印覆盖，源图可见“与你对决！”。",
       "confidence": "medium",
       "recrop": "python -m tools.cli crop dashen.667977af9a58390f4abe8cbd 4 39"
+    },
+    {
+      "image_index": 4,
+      "block_index": 33,
+      "original": "活动时间：2024年7月3日5：00-7月10日5:00",
+      "corrected": "活动时间：2024年7月3日5:00-7月10日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.667977af9a58390f4abe8cbd 4 33"
+    },
+    {
+      "image_index": 6,
+      "block_index": 33,
+      "original": "17.修复了“黑湖?深潜区”的稀有采集点会出现绿菊以外",
+      "corrected": "17.修复了“黑湖·深潜区”的稀有采集点会出现绿菊以外",
+      "reason": "标点规则 take_v6 ?->·：源图为人名/标题分隔点（采样 v6 全对）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.667977af9a58390f4abe8cbd 6 33"
     }
   ]
 }

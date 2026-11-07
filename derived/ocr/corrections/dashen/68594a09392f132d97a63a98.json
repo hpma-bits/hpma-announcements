@@ -102,6 +102,26 @@
       "reason": "号→鸮；源图为“横斑林鸮”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 6 59"
+    },
+    {
+      "image_index": 4,
+      "block_index": 37,
+      "original": "活动时间：2025年6月25日维护后－8月20日6：00",
+      "corrected": "活动时间：2025年6月25日维护后－8月20日6:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 4 37"
+    },
+    {
+      "image_index": 5,
+      "block_index": 51,
+      "original": "活动时间：2025年7月2日5：00－7月9日5:00",
+      "corrected": "活动时间：2025年7月2日5:00－7月9日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 5 51"
     }
   ]
 }

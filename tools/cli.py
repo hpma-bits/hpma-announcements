@@ -4,15 +4,17 @@
     python -m tools.cli crop <notice> <image> <block> [--context N] [--scale F]
     python -m tools.cli edition [--check]
     python -m tools.cli doctor [--strict] [--require-ocr] [--require-audit] [--ocr-smoke]
+    python -m tools.cli audit-ocr [--family update] [--limit N]
 """
 
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
-from . import archive, crop, doctor, edition
+from . import archive, audit_compare, crop, doctor, edition, ocr_audit
 
 CROP_DIR = Path(".review/crops")
 
@@ -101,6 +103,20 @@ def _doctor(args: argparse.Namespace) -> int:
     )
 
 
+def _audit_ocr(args: argparse.Namespace) -> int:
+    stats = ocr_audit.run(family=args.family, limit=args.limit)
+    print(json.dumps(stats, sort_keys=True))
+    return 0
+
+
+def _audit_compare(args: argparse.Namespace) -> int:
+    stats = audit_compare.run_compare(
+        notice_ids=args.notice or None, crops=args.crops
+    )
+    print(json.dumps(stats, sort_keys=True))
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         prog="python -m tools.cli", description="Local tooling for the announcement archive."
@@ -144,6 +160,26 @@ def main(argv: list[str] | None = None) -> int:
         help="run each installed engine on one committed image, offline",
     )
     doctor_cmd.set_defaults(func=_doctor)
+
+    audit_cmd = sub.add_parser(
+        "audit-ocr",
+        help="OCR every notice image with the v6 second-reader engine (no downloads)",
+    )
+    audit_cmd.add_argument("--family", default="update")
+    audit_cmd.add_argument("--limit", type=int, default=None, help="process only the first N posts")
+    audit_cmd.set_defaults(func=_audit_ocr)
+
+    compare_cmd = sub.add_parser(
+        "audit-compare",
+        help="align the v4 record against the v6 second reading and queue differences",
+    )
+    compare_cmd.add_argument(
+        "notice", nargs="*", help="feed id(s) to compare (default: every notice with a v6 reading)"
+    )
+    compare_cmd.add_argument(
+        "--crops", action="store_true", help="render an evidence crop per review item"
+    )
+    compare_cmd.set_defaults(func=_audit_compare)
 
     args = parser.parse_args(argv)
     try:

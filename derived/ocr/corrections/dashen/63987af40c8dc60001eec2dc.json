@@ -17,10 +17,10 @@
       "image_index": 1,
       "block_index": 27,
       "original": "召唤|只",
-      "corrected": "召唤1只）。",
-      "reason": "|→1；sheet 第17条，源图为“召唤1只）。”，与下一 block 重复识别",
-      "confidence": "medium",
-      "recrop": "python -m tools.cli crop dashen.63987af40c8dc60001eec2dc 1 27"
+      "reason": "b27 框（x40-105,y1262-1279）完全落在 b28“召唤1只）。”行内，是该行的局部重复识别；改写只会复制出与 b28 相同的块，应删",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.63987af40c8dc60001eec2dc 1 27",
+      "drop": true
     },
     {
       "image_index": 3,
@@ -30,6 +30,46 @@
       "reason": "漏“特魔”；源图水印为“大神@哈利波特魔法觉醒”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.63987af40c8dc60001eec2dc 3 27"
+    },
+    {
+      "image_index": 1,
+      "block_index": 9,
+      "original": "双人模式：12月16日05：00－12月21日04:59",
+      "corrected": "双人模式：12月16日05:00－12月21日04:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.63987af40c8dc60001eec2dc 1 9"
+    },
+    {
+      "image_index": 2,
+      "block_index": 1,
+      "original": "活动时间：12月14日维护后-1月4日05：00",
+      "corrected": "活动时间：12月14日维护后-1月4日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.63987af40c8dc60001eec2dc 2 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 18,
+      "original": "活动时间：12月14日维护后-1月4日05：00",
+      "corrected": "活动时间：12月14日维护后-1月4日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.63987af40c8dc60001eec2dc 2 18"
+    },
+    {
+      "image_index": 2,
+      "block_index": 28,
+      "original": "活动时间：12月14日维护后-12月28日05：00",
+      "corrected": "活动时间：12月14日维护后-12月28日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.63987af40c8dc60001eec2dc 2 28"
     }
   ]
 }

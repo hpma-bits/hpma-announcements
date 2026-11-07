@@ -93,6 +93,76 @@
       "reason": "款→敬；sheet 第3条，署名源图为“敬上”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 5 20"
+    },
+    {
+      "image_index": 1,
+      "block_index": 7,
+      "original": "活动时间：6月22日维护后-7月13日5：00",
+      "corrected": "活动时间：6月22日维护后-7月13日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 1 7"
+    },
+    {
+      "image_index": 3,
+      "block_index": 5,
+      "original": "特惠时间：6月22日维护后-7月6日4：59",
+      "corrected": "特惠时间：6月22日维护后-7月6日4:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 3 5"
+    },
+    {
+      "image_index": 3,
+      "block_index": 7,
+      "original": "护后至7月6日4：59期间进行购买，参与“巫师集市”活",
+      "corrected": "护后至7月6日4:59期间进行购买，参与“巫师集市”活",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 3 7"
+    },
+    {
+      "image_index": 4,
+      "block_index": 16,
+      "original": "初级：上架煮烂的曼德拉草，下架百里香酊：",
+      "corrected": "初级：上架煮烂的曼德拉草，下架百里香酊；",
+      "reason": "标点规则 take_v6 ：->；：源图印带尾分号（采样复检确认）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 4 16"
+    },
+    {
+      "image_index": 4,
+      "block_index": 17,
+      "original": "中级：上架白鲜、坏血草、鸟蛇蛋壳：",
+      "corrected": "中级：上架白鲜、坏血草、鸟蛇蛋壳；",
+      "reason": "标点规则 take_v6 ：->；：源图印带尾分号（采样复检确认）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 4 17"
+    },
+    {
+      "image_index": 4,
+      "block_index": 44,
+      "original": "线索最高星级的通关排行成绩：取消学院排行榜，新增",
+      "corrected": "线索最高星级的通关排行成绩；取消学院排行榜，新增",
+      "reason": "标点规则 take_v6 ：->；：源图印带尾分号（采样复检确认）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 4 44"
+    },
+    {
+      "image_index": 4,
+      "block_index": 45,
+      "original": "好友排行榜：合并了蓝色线索的单人排行榜与多人排行",
+      "corrected": "好友排行榜；合并了蓝色线索的单人排行榜与多人排行",
+      "reason": "标点规则 take_v6 ：->；：源图印带尾分号（采样复检确认）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 4 45"
     }
   ]
 }

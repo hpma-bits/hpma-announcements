@@ -39,6 +39,46 @@
       "reason": "申→大神；水印源图为“大神@哈利波特魔法觉醒”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.64ac006f7ed4a500019e6361 5 58"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "结束时间：7月24日17：59",
+      "corrected": "结束时间：7月24日17:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64ac006f7ed4a500019e6361 1 13"
+    },
+    {
+      "image_index": 1,
+      "block_index": 23,
+      "original": "开启时间：7月18日05：00",
+      "corrected": "开启时间：7月18日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64ac006f7ed4a500019e6361 1 23"
+    },
+    {
+      "image_index": 1,
+      "block_index": 24,
+      "original": "结束时间：8月21日17：59",
+      "corrected": "结束时间：8月21日17:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64ac006f7ed4a500019e6361 1 24"
+    },
+    {
+      "image_index": 3,
+      "block_index": 9,
+      "original": "活动时间：7月18日07:00-7月31日04：59",
+      "corrected": "活动时间：7月18日07:00-7月31日04:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64ac006f7ed4a500019e6361 3 9"
     }
   ]
 }

@@ -1,0 +1,100 @@
+{
+  "decided_at": "2026-11-07",
+  "decided_by": "main-session (planning) per sampled evidence; user pre-approved rules-first approach",
+  "evidence": ".review/audit/punct-sampling.jsonl (425 crops read, stratified 2022-2026, no year flips)",
+  "rules": [
+    {
+      "name": "take_v4_fullwidth",
+      "pairs": [
+        "！->!",
+        "？->?",
+        "·->.",
+        "；->;",
+        "－->-",
+        "－->–"
+      ],
+      "reading": "v4",
+      "action": "keep",
+      "note": "源图印全角字形（em 宽度/中点高度像素佐证）；行尾分号按类证据推定（medium）",
+      "affected": "~2400 items stay as-is"
+    },
+    {
+      "name": "star_marker",
+      "pairs": [
+        "*-> ",
+        "*->4"
+      ],
+      "reading": "v4",
+      "action": "keep",
+      "note": "章节大号装饰六角星照印 *，与既定 ledger 约定一致；multiplier 小星号 consensus 也是 *",
+      "affected": "424 items"
+    },
+    {
+      "name": "take_v6_slash",
+      "pairs": [
+        "／->/"
+      ],
+      "reading": "v6",
+      "action": "correct",
+      "note": "源图印窄斜杠",
+      "affected": 8
+    },
+    {
+      "name": "take_v6_semicolon",
+      "pairs": [
+        "：->；"
+      ],
+      "reading": "v6",
+      "action": "correct",
+      "note": "源图印带尾分号（scale8 复检）",
+      "affected": 18
+    },
+    {
+      "name": "take_v6_interpunct",
+      "pairs": [
+        "?->·"
+      ],
+      "reading": "v6",
+      "action": "correct",
+      "note": "人名/标题分隔点，v4 的 ? 错",
+      "affected": 9
+    },
+    {
+      "name": "time_colon_halfwidth",
+      "pairs": [
+        ":->:"
+      ],
+      "reading": "v6 when digit:digit else v4",
+      "action": "correct-if-time",
+      "note": "时间冒号（数字:数字）源图印半角；标签冒号（后接文字）印全角",
+      "affected": "~561 corrections within 751"
+    },
+    {
+      "name": "per_notice_vote_pending",
+      "pairs": [
+        "（->(",
+        "）->)",
+        "\"->”",
+        "，->,"
+      ],
+      "reading": "per-notice",
+      "action": "pending-second-round",
+      "note": "同公告内约定一致；需每公告 1-2 crop 投票",
+      "affected": 265
+    },
+    {
+      "name": "per_item_review",
+      "pairs": [
+        "length_diff",
+        "quote-variants",
+        "～->~",
+        ".->…",
+        "odd"
+      ],
+      "reading": "per-item",
+      "action": "pending-adjudication",
+      "note": "尾部标点增删方向不定、引号变体、省略号字形数",
+      "affected": 771
+    }
+  ]
+}

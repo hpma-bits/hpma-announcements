@@ -21,6 +21,36 @@
       "reason": "衍字“V”；源图行末为装饰花纹（sheet 第71行）",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.646cc073ed0eff00019ff6bc 2 12"
+    },
+    {
+      "image_index": 1,
+      "block_index": 7,
+      "original": "6月1日05：00结算提前至6月1日03：59结算，金",
+      "corrected": "6月1日05:00结算提前至6月1日03:59结算，金",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.646cc073ed0eff00019ff6bc 1 7"
+    },
+    {
+      "image_index": 1,
+      "block_index": 8,
+      "original": "缎礼盒的时间也提前至6月1日03：59结算，转盘",
+      "corrected": "缎礼盒的时间也提前至6月1日03:59结算，转盘",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.646cc073ed0eff00019ff6bc 1 8"
+    },
+    {
+      "image_index": 1,
+      "block_index": 9,
+      "original": "和当期直售时装的售卖时间延长至6月1日03：59",
+      "corrected": "和当期直售时装的售卖时间延长至6月1日03:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.646cc073ed0eff00019ff6bc 1 9"
     }
   ]
 }

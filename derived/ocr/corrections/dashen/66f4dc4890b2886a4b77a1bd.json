@@ -48,6 +48,36 @@
       "reason": "漏字“薅”；源图下行首为“薅时”（草药学“薅”机制），OCR 丢首字",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 4 18"
+    },
+    {
+      "image_index": 3,
+      "block_index": 30,
+      "original": "活动时间：2024年10月1日5：00－10月15日5:00",
+      "corrected": "活动时间：2024年10月1日5:00－10月15日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 3 30"
+    },
+    {
+      "image_index": 3,
+      "block_index": 39,
+      "original": "活动期间，巫师消费宝石或星石即可1：1获得积分。累",
+      "corrected": "活动期间，巫师消费宝石或星石即可1:1获得积分。累",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 3 39"
+    },
+    {
+      "image_index": 3,
+      "block_index": 67,
+      "original": "活动时间：2024年10月9日5：00－10月16日5:00",
+      "corrected": "活动时间：2024年10月9日5:00－10月16日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 3 67"
     }
   ]
 }

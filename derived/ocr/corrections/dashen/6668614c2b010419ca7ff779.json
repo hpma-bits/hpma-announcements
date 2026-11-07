@@ -89,10 +89,70 @@
       "image_index": 4,
       "block_index": 27,
       "original": "成为更货深的草药字家，请继续问前行进吧！",
-      "corrected": "为了成为更资深的草药学家，请继续向前行进吧！",
-      "reason": "整行乱码；源图与上一行同为“为了成为更资深的草药学家，请继续向前行进吧！”（sheet 第11行）",
-      "confidence": "medium",
-      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 4 27"
+      "reason": "b27 框（x91-556,y1024-1046）与 b26（x37-550,y1012-1037）重叠，同一物理行的重复识别（crop 中该句只印一次）；修正后将与 b26 完全相同，应删",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 4 27",
+      "drop": true
+    },
+    {
+      "image_index": 1,
+      "block_index": 7,
+      "original": "活动时间：2024年6月12日维护后-7月10日06：00",
+      "corrected": "活动时间：2024年6月12日维护后-7月10日06:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 1 7"
+    },
+    {
+      "image_index": 2,
+      "block_index": 6,
+      "original": "活动时间：2024年6月22日00：00-7月6日00:00",
+      "corrected": "活动时间：2024年6月22日00:00-7月6日00:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 2 6"
+    },
+    {
+      "image_index": 2,
+      "block_index": 10,
+      "original": "05：00不会解锁新窗格。",
+      "corrected": "05:00不会解锁新窗格。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 2 10"
+    },
+    {
+      "image_index": 4,
+      "block_index": 1,
+      "original": "活动时间：2024年6月12日05：00-6月19日05:00",
+      "corrected": "活动时间：2024年6月12日05:00-6月19日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 4 1"
+    },
+    {
+      "image_index": 4,
+      "block_index": 9,
+      "original": "活动时间：2024年6月19日05：00-7月3日05：00",
+      "corrected": "活动时间：2024年6月19日05:00-7月3日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 4 9"
+    },
+    {
+      "image_index": 4,
+      "block_index": 16,
+      "original": "活动时间：2024年6月19日05：00-7月3日05：00",
+      "corrected": "活动时间：2024年6月19日05:00-7月3日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 4 16"
     }
   ]
 }

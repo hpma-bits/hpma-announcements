@@ -75,6 +75,65 @@
       "reason": "溪→蹊；源图标题为“林中蹊径”（sheet 第160行）",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 5 70"
+    },
+    {
+      "image_index": 2,
+      "block_index": 56,
+      "original": "在欢乐来临的气氛中，与好友一起城波特魔法觉醒",
+      "drop": true,
+      "reason": "低置信度重复切片；与 b0055 为同一行重复识别（框几乎重合，源图该句只印一次）",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 2 56"
+    },
+    {
+      "image_index": 5,
+      "block_index": 9,
+      "original": "“悠然小憩?茶点套餐”",
+      "corrected": "“悠然小憩·茶点套餐”",
+      "reason": "标点规则 take_v6 ?->·：源图为人名/标题分隔点（采样 v6 全对）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 5 9"
+    },
+    {
+      "image_index": 5,
+      "block_index": 30,
+      "original": "活动时间：2024年12月18日5：00－2025年1月1日5:00",
+      "corrected": "活动时间：2024年12月18日5:00－2025年1月1日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 5 30"
+    },
+    {
+      "image_index": 5,
+      "block_index": 35,
+      "original": "活动时间：2024年12月18日5：00－12月25日5:00",
+      "corrected": "活动时间：2024年12月18日5:00－12月25日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 5 35"
+    },
+    {
+      "image_index": 5,
+      "block_index": 39,
+      "original": "每日金币宝箱奖励获取量存在上限，此上限每日5：00",
+      "corrected": "每日金币宝箱奖励获取量存在上限，此上限每日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 5 39"
+    },
+    {
+      "image_index": 5,
+      "block_index": 61,
+      "original": "活动时间：2024年12月18日5：00-2024年12月25日5:00",
+      "corrected": "活动时间：2024年12月18日5:00-2024年12月25日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 5 61"
     }
   ]
 }

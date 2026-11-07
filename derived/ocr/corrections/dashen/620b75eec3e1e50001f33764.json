@@ -12,6 +12,46 @@
       "reason": "怒→恕；源图为“不可饶恕咒”。同 block 的“钻心骨”已由 systematic 统一改为“钻心剜骨”，此处 corrected 已将两者合并，避免同一 locator 冲突",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 2 23"
+    },
+    {
+      "image_index": 2,
+      "block_index": 9,
+      "original": "活动时间：2022年2月16日维护后-2022年2月23日5：00",
+      "corrected": "活动时间：2022年2月16日维护后-2022年2月23日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 2 9"
+    },
+    {
+      "image_index": 3,
+      "block_index": 12,
+      "original": "赛季结算时间调整为2月24日5：00，相关活动结束时间调整：",
+      "corrected": "赛季结算时间调整为2月24日5:00，相关活动结束时间调整：",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 3 12"
+    },
+    {
+      "image_index": 3,
+      "block_index": 13,
+      "original": "作业礼盒结束时间调整为2月24日5：00，赛季商店结束时间调整为2月24日",
+      "corrected": "作业礼盒结束时间调整为2月24日5:00，赛季商店结束时间调整为2月24日",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 3 13"
+    },
+    {
+      "image_index": 3,
+      "block_index": 14,
+      "original": "4:59，幸运轮盘结束时间调整为2月23日23：59。",
+      "corrected": "4:59，幸运轮盘结束时间调整为2月23日23:59。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 3 14"
     }
   ]
 }

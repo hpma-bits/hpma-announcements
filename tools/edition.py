@@ -21,6 +21,7 @@ duplicate slice or other artifact that has no line of its own in the image.
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -30,6 +31,11 @@ EDITION_DIR = Path("edition/dashen")
 INDEX_PATH = Path("edition/notices.jsonl")
 
 WATERMARK = "大神@哈利波特魔法觉醒"
+# The stamped watermark reaches the text layer as line-end suffixes in several
+# OCR spellings: the 大神 prefix or @ may be dropped or merged into content
+# characters, and 特 may come back as 属. Anchored at the line end; a legitimate
+# game-title mention always carries 《》 or a full-width colon before 觉醒.
+WATERMARK_SUFFIX = re.compile(r"(?:大神|神)?\s*[＠@]?\s*哈利波[特属]?\s*魔?法?\s*觉醒\s*$")
 
 Record = dict[str, Any]
 
@@ -50,7 +56,7 @@ def normalize_body(text: str) -> str:
 
 def clean_block(text: str) -> str:
     """OCR block text with the platform watermark removed; empty when it was only that."""
-    text = text.replace(WATERMARK, "").strip()
+    text = WATERMARK_SUFFIX.sub("", text).strip()
     return "" if text in WATERMARK else text
 
 

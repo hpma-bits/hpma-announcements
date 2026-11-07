@@ -66,6 +66,16 @@
       "reason": "慢→幔；源图为“雾影垂幔”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6732ce1778926e4b2e64746e 1 166"
+    },
+    {
+      "image_index": 1,
+      "block_index": 88,
+      "original": "投票时间：2024年11月21日00:00-11月27日23：59",
+      "corrected": "投票时间：2024年11月21日00:00-11月27日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6732ce1778926e4b2e64746e 1 88"
     }
   ]
 }

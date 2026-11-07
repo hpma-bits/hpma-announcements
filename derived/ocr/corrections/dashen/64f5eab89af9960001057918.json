@@ -21,6 +21,16 @@
       "reason": "漏字“鸮”；源图为“小领角鸮”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.64f5eab89af9960001057918 1 56"
+    },
+    {
+      "image_index": 1,
+      "block_index": 9,
+      "original": "结束时间统一修改为9月19日05：00。",
+      "corrected": "结束时间统一修改为9月19日05:00。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64f5eab89af9960001057918 1 9"
     }
   ]
 }

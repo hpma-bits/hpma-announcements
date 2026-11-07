@@ -39,6 +39,86 @@
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6a3949aec18eb54e843d192b 4 2"
+    },
+    {
+      "image_index": 2,
+      "block_index": 1,
+      "original": "开启时间：2026年6月24日维护后-7月22日6：00",
+      "corrected": "开启时间：2026年6月24日维护后-7月22日6:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6a3949aec18eb54e843d192b 2 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 18,
+      "original": "活动时间：2026年6月24日维护后-7月22日6：00",
+      "corrected": "活动时间：2026年6月24日维护后-7月22日6:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6a3949aec18eb54e843d192b 2 18"
+    },
+    {
+      "image_index": 2,
+      "block_index": 24,
+      "original": "上架时间：2026年7月1日5：30-8月1日3:20",
+      "corrected": "上架时间：2026年7月1日5:30-8月1日3:20",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6a3949aec18eb54e843d192b 2 24"
+    },
+    {
+      "image_index": 3,
+      "block_index": 5,
+      "original": "活动时间：2026年6月24日5：00-7月8日5:00",
+      "corrected": "活动时间：2026年6月24日5:00-7月8日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6a3949aec18eb54e843d192b 3 5"
+    },
+    {
+      "image_index": 3,
+      "block_index": 16,
+      "original": "活动时间：2026年6月24日维护后-6月29日7：00",
+      "corrected": "活动时间：2026年6月24日维护后-6月29日7:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6a3949aec18eb54e843d192b 3 16"
+    },
+    {
+      "image_index": 3,
+      "block_index": 22,
+      "original": "活动时间：2026年6月27日20:00-22：00",
+      "corrected": "活动时间：2026年6月27日20:00-22:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6a3949aec18eb54e843d192b 3 22"
+    },
+    {
+      "image_index": 3,
+      "block_index": 31,
+      "original": "活动时间：2026年7月1日5：00-7月8日5：00",
+      "corrected": "活动时间：2026年7月1日5:00-7月8日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6a3949aec18eb54e843d192b 3 31"
+    },
+    {
+      "image_index": 4,
+      "block_index": 5,
+      "original": "活动时间：2026年7月1日5：00-7月8日5：00",
+      "corrected": "活动时间：2026年7月1日5:00-7月8日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6a3949aec18eb54e843d192b 4 5"
     }
   ]
 }

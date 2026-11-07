@@ -66,6 +66,56 @@
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 4 8"
+    },
+    {
+      "image_index": 1,
+      "block_index": 8,
+      "original": "活动时间：2026年7月8日维护后-8月5日6：00",
+      "corrected": "活动时间：2026年7月8日维护后-8月5日6:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 1 8"
+    },
+    {
+      "image_index": 2,
+      "block_index": 3,
+      "original": "赛季时间：2026年5月27日维护后-7月22日6：00",
+      "corrected": "赛季时间：2026年5月27日维护后-7月22日6:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 2 3"
+    },
+    {
+      "image_index": 3,
+      "block_index": 19,
+      "original": "活动时间：2026年7月8日5：00-7月15日5:00",
+      "corrected": "活动时间：2026年7月8日5:00-7月15日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 3 19"
+    },
+    {
+      "image_index": 3,
+      "block_index": 22,
+      "original": "每日金币获取量存在上限，此上限每日5：00重置。",
+      "corrected": "每日金币获取量存在上限，此上限每日5:00重置。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 3 22"
+    },
+    {
+      "image_index": 3,
+      "block_index": 24,
+      "original": "活动时间：2026年7月15日5：00-7月22日5:00",
+      "corrected": "活动时间：2026年7月15日5:00-7月22日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 3 24"
     }
   ]
 }

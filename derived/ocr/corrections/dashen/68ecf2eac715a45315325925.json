@@ -75,6 +75,26 @@
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.68ecf2eac715a45315325925 6 23"
+    },
+    {
+      "image_index": 4,
+      "block_index": 18,
+      "original": "线索每日5：00追加1个区域，共6个区域可供收集。集",
+      "corrected": "线索每日5:00追加1个区域，共6个区域可供收集。集",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.68ecf2eac715a45315325925 4 18"
+    },
+    {
+      "image_index": 6,
+      "block_index": 18,
+      "original": "活动时间：2025年10月22日5：00-10月29日5:00",
+      "corrected": "活动时间：2025年10月22日5:00-10月29日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.68ecf2eac715a45315325925 6 18"
     }
   ]
 }
