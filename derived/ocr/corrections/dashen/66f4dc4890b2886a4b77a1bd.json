@@ -128,6 +128,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 2 18"
+    },
+    {
+      "image_index": 1,
+      "block_index": 23,
+      "original": "完成任务，达成对应等级可获得眼镜“时髦优等生”",
+      "corrected": "完成任务，达成对应等级可获得眼镜“时髦优等生”、",
+      "reason": "crop shows trailing 、 printed at line end; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 1 23"
+    },
+    {
+      "image_index": 2,
+      "block_index": 9,
+      "original": "*“赛季支线：复制成'灾\"开启！",
+      "corrected": "*“赛季支线：复制成'灾\"”开启！",
+      "reason": "zoom p3-105-zoom2: outer curly “ ”, inner straight ' before 灾 and straight \" after 灾, star ornament printed, ！ full-width; v4 missed curly ”, v6 missed straight \" and star",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 2 9"
+    },
+    {
+      "image_index": 2,
+      "block_index": 11,
+      "original": "群......都是来闹事的？！",
+      "corrected": "群……都是来闹事的？！",
+      "reason": "crop shows mid-line six dots between 群 and 都 = ……; ？！ full-width",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 2 11"
+    },
+    {
+      "image_index": 3,
+      "block_index": 40,
+      "original": "计积分达到一定额度即可领取床品套装“金秋盈实”",
+      "corrected": "计积分达到一定额度即可领取床品套装“金秋盈实”、",
+      "reason": "crop shows trailing 、 printed at line end; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 3 40"
     }
   ]
 }

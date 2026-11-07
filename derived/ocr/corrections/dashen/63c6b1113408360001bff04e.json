@@ -397,6 +397,146 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 2 25"
+    },
+    {
+      "image_index": 1,
+      "block_index": 32,
+      "original": "在“鸿运啪”活动中翻牌1次，每次翻牌都有概率获",
+      "corrected": "在“鸿运噼啪”活动中翻牌1次，每次翻牌都有概率获",
+      "reason": "crop d1-184 clearly shows red 鸿运噼啪; v4 dropped 噼",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 1 32"
+    },
+    {
+      "image_index": 2,
+      "block_index": 0,
+      "original": "*2）鸿运啪",
+      "corrected": "*2）鸿运噼啪",
+      "reason": "crop d1-185 shows section-marker star + 2）鸿运噼啪; star prints as *, v4 dropped 噼, v6 dropped star",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 2 0"
+    },
+    {
+      "image_index": 2,
+      "block_index": 2,
+      "original": "1月18日维护后，“鸿运啪”活动迎来平分一亿宝石奖",
+      "corrected": "1月18日维护后，“鸿运噼啪”活动迎来平分一亿宝石奖",
+      "reason": "crop d1-186 clearly shows 鸿运噼啪; v4 dropped 噼",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 2 2"
+    },
+    {
+      "image_index": 2,
+      "block_index": 8,
+      "original": "啪”活动中翻牌25次”及“使用烤箱解锁30道菜品",
+      "corrected": "噼啪’活动中翻牌25次”及“使用烤箱解锁30道菜品”，",
+      "reason": "crop d1-187 shows inner single-quote close ’ after 噼啪 (source prints “‘鸿运噼啪’), closing ” after 25次 and after 菜品, trailing full-width ，; v4 wrote 啪” and dropped ，, v6 dropped ，",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 2 8"
+    },
+    {
+      "image_index": 4,
+      "block_index": 28,
+      "original": "“神奇动物调查”获得部分制作材大神@哈利波特魔法觉醒",
+      "corrected": "“神奇动物调查”获得部分制作材料。",
+      "reason": "crop d1-189 + threshold: tail under watermark reads 料。 (料 mostly visible through gaps); v4/v6 mixed watermark chars",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 4 28"
+    },
+    {
+      "image_index": 5,
+      "block_index": 27,
+      "original": "“膨膨南瓜凳”、“细金壁灯”将随邮件免费发放给",
+      "corrected": "“嘭嘭南瓜凳”、“细金壁灯”将随邮件免费发放给",
+      "reason": "crop d1-190 clearly shows 嘭嘭 (口+彭); v4 wrote 膨膨",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 5 27"
+    },
+    {
+      "image_index": 5,
+      "block_index": 32,
+      "original": "“巫师空间”内摆放的室内家具。大神@哈利波特魔法觉醒",
+      "corrected": "“巫师空间”内摆放的室内家具。",
+      "reason": "crop d1-191 shows row ending 家具。 with watermark after it; v6 correctly excluded watermark furniture, v4 mixed it in",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 5 32"
+    },
+    {
+      "image_index": 7,
+      "block_index": 18,
+      "original": "“万弹齐发－万毒齐发”",
+      "drop": true,
+      "reason": "twin fragment of the same printed row as v4 b19 (y515/517): one row 1、“万弹齐发-万毒齐发”; correction carried at v4 b19, this fragment “万弹齐发－万毒齐发” has no independent line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 7 18"
+    },
+    {
+      "image_index": 7,
+      "block_index": 19,
+      "original": "1、",
+      "corrected": "1、“万弹齐发-万毒齐发”",
+      "reason": "crop d1-192 shows 1、“万弹齐发-万毒齐发” with short hyphen joiner, not full-width －; matches v6 b19",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 7 19"
+    },
+    {
+      "image_index": 8,
+      "block_index": 7,
+      "original": "“城堡”",
+      "corrected": "“城堡”、“焰色”、“无言”、“傲罗”、“静谧”、",
+      "reason": "crop d1-194 shows full printed row “城堡”、“焰色”、“无言”、“傲罗”、“静谧”、; v4 fragmented it into five blocks, correction carried at v4 b7 (leftmost, matches v6 b7)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 8 7"
+    },
+    {
+      "image_index": 8,
+      "block_index": 8,
+      "original": "“傲罗”",
+      "drop": true,
+      "reason": "twin fragment “傲罗” of the row carried corrected at v4 b7 (crop d1-194); v6 b8 paired here is the NEXT printed row (y233), mis-paired",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 8 8"
+    },
+    {
+      "image_index": 8,
+      "block_index": 9,
+      "original": "“无言”",
+      "drop": true,
+      "reason": "twin fragment “无言” of the row carried corrected at v4 b7 (crop d1-194); v6 b9 paired here is a lower row (y258), mis-paired",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 8 9"
+    },
+    {
+      "image_index": 8,
+      "block_index": 10,
+      "original": "“焰色”",
+      "drop": true,
+      "reason": "twin fragment “焰色” of the row carried corrected at v4 b7 (crop d1-194); v6 b10 paired here is a lower row (y283), mis-paired",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 8 10"
+    },
+    {
+      "image_index": 4,
+      "block_index": 10,
+      "original": "新开放染色发型：“男-落羽之影”&“女-落羽迷影”",
+      "corrected": "新开放染色发型：“男-落羽之影”&“女-落羽迷影”、",
+      "reason": "trailing 、 printed at line end; v6 captured it, v4 missed (p1 12/12; crop p2-2 confirms)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 4 10"
     }
   ]
 }

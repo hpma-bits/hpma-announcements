@@ -116,6 +116,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6385ee69744247000130be78 2 10"
+    },
+    {
+      "image_index": 1,
+      "block_index": 22,
+      "original": "小“海底咏者”时装上架",
+      "corrected": "“海底咏者”时装上架",
+      "reason": "crop d1-168 shows banner “海底咏者”时装上架 with leading full-width quote printed; v4 prefixed 小 (flourish misread), v6 block is a different line entirely",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6385ee69744247000130be78 1 22"
+    },
+    {
+      "image_index": 1,
+      "block_index": 31,
+      "original": "色”、“男-旷野疾驰”&“女-旷野夹”@哈利波特魔法觉醒",
+      "corrected": "色”、“男-旷野疾驰”&“女-旷野疾驰”",
+      "reason": "crop d1-169 + threshold zoom: covered slots after 女-旷野 read 疾驰” (pairing matches 男-旷野疾驰 on same line, fragments consistent); nothing legible after ”",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6385ee69744247000130be78 1 31"
+    },
+    {
+      "image_index": 2,
+      "block_index": 4,
+      "original": "外观“余炽星火”、传说品质魔咒皮肤“气象咒·骤雨未",
+      "corrected": "外观“余烬星火”、传说品质魔咒皮肤“气象咒·骤雨未",
+      "reason": "crop d1-170 clearly shows 余烬星火 (火+尽); v4 wrote 炽",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6385ee69744247000130be78 2 4"
     }
   ]
 }

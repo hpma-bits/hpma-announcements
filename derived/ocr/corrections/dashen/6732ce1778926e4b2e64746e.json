@@ -96,6 +96,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6732ce1778926e4b2e64746e 1 15"
+    },
+    {
+      "image_index": 1,
+      "block_index": 44,
+      "original": "的故事也在悄然流动...",
+      "corrected": "的故事也在悄然流动……",
+      "reason": "crop shows line ends 流动 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6732ce1778926e4b2e64746e 1 44"
+    },
+    {
+      "image_index": 1,
+      "block_index": 52,
+      "original": "一只狂奔的猫狸子..",
+      "corrected": "一只狂奔的猫狸子……",
+      "reason": "crop shows line ends 猫狸子 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6732ce1778926e4b2e64746e 1 52"
+    },
+    {
+      "image_index": 1,
+      "block_index": 81,
+      "original": "坚冰之上嬉戏滑冰的学生们.....",
+      "corrected": "坚冰之上嬉戏滑冰的学生们……",
+      "reason": "crop shows line ends 学生们 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6732ce1778926e4b2e64746e 1 81"
     }
   ]
 }

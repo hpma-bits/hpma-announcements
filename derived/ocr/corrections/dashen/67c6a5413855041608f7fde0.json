@@ -187,6 +187,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 6 36"
+    },
+    {
+      "image_index": 2,
+      "block_index": 20,
+      "original": "生命值下调12%",
+      "corrected": "生命值下调12%。",
+      "reason": "crop shows trailing 。 printed after 12%; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 2 20"
+    },
+    {
+      "image_index": 2,
+      "block_index": 44,
+      "original": "忘却...",
+      "corrected": "忘却……",
+      "reason": "crop shows line ends 忘却 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 2 44"
+    },
+    {
+      "image_index": 4,
+      "block_index": 15,
+      "original": "攻速加成下调至40%",
+      "corrected": "攻速加成下调至40%。",
+      "reason": "crop shows trailing 。 printed; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 4 15"
     }
   ]
 }

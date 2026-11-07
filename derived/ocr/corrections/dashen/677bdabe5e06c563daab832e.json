@@ -90,6 +90,56 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.677bdabe5e06c563daab832e 3 35"
+    },
+    {
+      "image_index": 1,
+      "block_index": 10,
+      "original": "伴卡“西弗勒斯·斯内普”",
+      "corrected": "伴卡“西弗勒斯·斯内普”。",
+      "reason": "crop shows trailing 。 printed; interpunct · printed; v4 missed 。",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.677bdabe5e06c563daab832e 1 10"
+    },
+    {
+      "image_index": 2,
+      "block_index": 15,
+      "original": "按回响品质提高4/5/6/7%",
+      "corrected": "按回响品质提高4/5/6/7%。",
+      "reason": "crop shows trailing 。 printed; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.677bdabe5e06c563daab832e 2 15"
+    },
+    {
+      "image_index": 2,
+      "block_index": 29,
+      "original": "校内传开，大家对各个部门充满好奇.....",
+      "corrected": "校内传开，大家对各个部门充满好奇……",
+      "reason": "crop shows line ends 好奇 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.677bdabe5e06c563daab832e 2 29"
+    },
+    {
+      "image_index": 2,
+      "block_index": 30,
+      "original": "校内传开，大家对各个部门充满好奇....",
+      "corrected": "校内传开，大家对各个部门充满好奇……",
+      "reason": "same printed row as item 162 (duplicate slice pair); six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.677bdabe5e06c563daab832e 2 30"
+    },
+    {
+      "image_index": 3,
+      "block_index": 6,
+      "original": "在橡木门后等待造访..",
+      "corrected": "在橡木门后等待造访……",
+      "reason": "crop shows line ends 造访 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.677bdabe5e06c563daab832e 3 6"
     }
   ]
 }

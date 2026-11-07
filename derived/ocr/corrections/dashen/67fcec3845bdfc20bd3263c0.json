@@ -235,6 +235,76 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 2 28"
+    },
+    {
+      "image_index": 1,
+      "block_index": 31,
+      "original": "明先生曾经最喜欢的地方...",
+      "corrected": "明先生曾经最喜欢的地方……",
+      "reason": "crop shows line ends 地方 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 1 31"
+    },
+    {
+      "image_index": 3,
+      "block_index": 2,
+      "original": "活动礼包“风雨笃行礼”、“脱颖而出礼”、“刻苦耐劳礼”",
+      "corrected": "活动礼包“风雨笃行礼”、“脱颖而出礼”、“刻苦耐劳礼”、",
+      "reason": "crop shows trailing 、 printed at line end (list wraps to 好学不倦礼); v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 3 2"
+    },
+    {
+      "image_index": 4,
+      "block_index": 29,
+      "original": "生的和即将发生的奇奇怪怪的故事.....巫师在大世界",
+      "corrected": "生的和即将发生的奇奇怪怪的故事……巫师在大世界",
+      "reason": "crop shows mid-line six dots between 故事 and 巫师 = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 4 29"
+    },
+    {
+      "image_index": 5,
+      "block_index": 27,
+      "original": "换为工作室品牌标识WoooMeowStudio。工作室将继",
+      "corrected": "换为工作室品牌标识WoooMeow Studio。工作室将继",
+      "reason": "crop shows printed space between WoooMeow and Studio in the red Latin brand text; v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 5 27"
+    },
+    {
+      "image_index": 5,
+      "block_index": 42,
+      "original": "审判甜蜜，审判欲望，审判善良...",
+      "corrected": "审判甜蜜，审判欲望，审判善良……",
+      "reason": "crop shows line ends 善良 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 5 42"
+    },
+    {
+      "image_index": 6,
+      "block_index": 24,
+      "original": "（1）闪亮登场·服装动作”模块中新增时装“未尽恶作剧”",
+      "corrected": "(1)“闪亮登场·服装动作”模块中新增时装“未尽恶作剧”",
+      "reason": "crop shows tight half-width (1) digit-list marker (notice vote （->( v6), opening “ and interpunct · printed; v4's full-width （1） and missing “ wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 6 24"
+    },
+    {
+      "image_index": 6,
+      "block_index": 29,
+      "original": "（③）新增了巫师尚未使用搭配的提示。",
+      "corrected": "(3)新增了巫师尚未使用搭配的提示。",
+      "reason": "crop shows the list marker prints as (3) with half-width parens and digit 3, not circled ③; trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 6 29"
     }
   ]
 }

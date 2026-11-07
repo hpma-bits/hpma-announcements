@@ -193,6 +193,56 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 4 33"
+    },
+    {
+      "image_index": 2,
+      "block_index": 18,
+      "original": "缓向生者张开利齿...",
+      "corrected": "缓向生者张开利齿……",
+      "reason": "crop shows line ends 利齿 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 2 18"
+    },
+    {
+      "image_index": 2,
+      "block_index": 39,
+      "original": "刑事案件，泛黄的旧卷宗与庭审记录四散各处..",
+      "corrected": "刑事案件，泛黄的旧卷宗与庭审记录四散各处……",
+      "reason": "crop shows line ends 各处 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 2 39"
+    },
+    {
+      "image_index": 3,
+      "block_index": 27,
+      "original": "氛围”、双人动作“默契回旋”、“幸运发条”、“焰色之锁",
+      "corrected": "氛围”、双人动作“默契回旋”、“幸运发条”、“焰色之锁”",
+      "reason": "crop shows trailing ” printed at line end; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 3 27"
+    },
+    {
+      "image_index": 3,
+      "block_index": 36,
+      "original": "活动期间，巫师参与3次茶馆茶聚即可领取金币奖励",
+      "corrected": "活动期间，巫师参与3次茶馆茶聚即可领取金币奖励。",
+      "reason": "crop shows trailing 。 printed; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 3 36"
+    },
+    {
+      "image_index": 4,
+      "block_index": 34,
+      "original": "周六、周日登录还可各自领取“嘀嗒宝箱”4、“金耀之",
+      "corrected": "周六、周日登录还可各自领取“嘀嗒宝箱”*4、“金耀之",
+      "reason": "crop prints 宝箱”*4 with multiplier star; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 4 34"
     }
   ]
 }

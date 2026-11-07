@@ -890,6 +890,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 7 31"
+    },
+    {
+      "image_index": 8,
+      "block_index": 60,
+      "original": "70%/126%",
+      "corrected": "70%/126%。",
+      "reason": "trailing 。 printed at line end; v6 captured it, v4 missed (p1 50/50; crops p2-6/p2-152 confirm)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 8 60"
+    },
+    {
+      "image_index": 8,
+      "block_index": 63,
+      "original": "20%/30%/40%/50%",
+      "corrected": "20%/30%/40%/50%。",
+      "reason": "trailing 。 printed at line end; v6 captured it, v4 missed (p1 50/50; crops p2-6/p2-152 confirm)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 8 63"
+    },
+    {
+      "image_index": 9,
+      "block_index": 21,
+      "original": "“时间旅行者”",
+      "corrected": "“时间旅行者”。",
+      "reason": "trailing 。 printed at line end; v6 captured it, v4 missed (p1 50/50; crops p2-6/p2-152 confirm)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 9 21"
     }
   ]
 }

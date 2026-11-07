@@ -99,6 +99,56 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 1 56"
+    },
+    {
+      "image_index": 1,
+      "block_index": 55,
+      "original": "13、新增了家具“胜享决斗梦图鉴及收集奖励",
+      "corrected": "13、新增了家具“胜享决斗梦”图鉴及收集奖励。",
+      "reason": "crop shows closing ” after 梦 and trailing 。 both printed; v4 missed both",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 1 55"
+    },
+    {
+      "image_index": 2,
+      "block_index": 11,
+      "original": "家具“胜享决斗梦”",
+      "corrected": "家具“胜享决斗梦”。",
+      "reason": "crop shows trailing 。 printed after closing quote (dark 。 follows red 梦”); v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 2 11"
+    },
+    {
+      "image_index": 2,
+      "block_index": 41,
+      "original": "一本陈旧的笔记，一段尘封的往事...",
+      "corrected": "一本陈旧的笔记，一段尘封的往事……",
+      "reason": "crop shows six dots at line end = ……; v4 b41/v6 b46 are duplicate slices of the same printed row (same y band); corrected text is the row's true text",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 2 41"
+    },
+    {
+      "image_index": 2,
+      "block_index": 42,
+      "original": "一本陈旧的笔记，一段尘封的往事....",
+      "corrected": "一本陈旧的笔记，一段尘封的往事……",
+      "reason": "same printed row as item 15 (v4 b42/v6 b47 duplicate slices, y2171-2196); six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 2 42"
+    },
+    {
+      "image_index": 2,
+      "block_index": 46,
+      "original": "日记中的知识带来欢笑、也记录着遗憾与惋惜",
+      "corrected": "日记中的知识带来欢笑、也记录着遗憾与惋惜……",
+      "reason": "crop shows line ends 惋惜 with six dots = ……; v6's ...... right count, wrong glyph per six-dot prior",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 2 46"
     }
   ]
 }

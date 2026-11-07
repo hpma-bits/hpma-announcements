@@ -110,6 +110,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.63a1c23f0c8dc60001f1e49f 3 4"
+    },
+    {
+      "image_index": 3,
+      "block_index": 40,
+      "original": "“底色”以及“特效”，该部分材料消利波特魔法觉醒",
+      "corrected": "“底色”以及“特效”，该部分材料不会消耗。",
+      "reason": "crop d1-175 + zoom: tail under watermark reads 不会消耗。 (不/消耗/。 visible through stencil gaps); both v4/v6 mixed watermark chars",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63a1c23f0c8dc60001f1e49f 3 40"
     }
   ]
 }

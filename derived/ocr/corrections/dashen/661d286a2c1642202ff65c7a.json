@@ -31,6 +31,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.661d286a2c1642202ff65c7a 1 32"
+    },
+    {
+      "image_index": 1,
+      "block_index": 17,
+      "original": "一本陈旧的笔记，一段尘封的往事..",
+      "corrected": "一本陈旧的笔记，一段尘封的往事……",
+      "reason": "crop shows line ends 往事 with six dots (one CJK ellipsis ……); v4 had 2 dots, v6 4 dots; per p1/p2 prior line-end ellipsis prints six-dot ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.661d286a2c1642202ff65c7a 1 17"
+    },
+    {
+      "image_index": 1,
+      "block_index": 22,
+      "original": "识，还有一段不为人知的往事.",
+      "corrected": "识，还有一段不为人知的往事……",
+      "reason": "crop shows line ends 往事...... six dots = ……; v4 1 dot, v6 noisy .………. both wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.661d286a2c1642202ff65c7a 1 22"
     }
   ]
 }

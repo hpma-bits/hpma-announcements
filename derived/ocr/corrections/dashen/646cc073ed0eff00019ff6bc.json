@@ -61,6 +61,16 @@
       "confidence": "high",
       "via": "audit-insert",
       "recrop": "python -m tools.cli crop dashen.646cc073ed0eff00019ff6bc 1 11 --v6"
+    },
+    {
+      "image_index": 1,
+      "block_index": 3,
+      "original": "魔法装扮“回归季",
+      "corrected": "魔法装扮“回归季”",
+      "reason": "closing ” printed at line end; v6 captured it, v4 missed (p1 3/3; crop p2-32 confirms)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.646cc073ed0eff00019ff6bc 1 3"
     }
   ]
 }

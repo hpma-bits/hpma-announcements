@@ -110,6 +110,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.63f4c4ec0c8dc60001bf8858 2 31"
+    },
+    {
+      "image_index": 2,
+      "block_index": 19,
+      "original": "150%",
+      "corrected": "150%。",
+      "reason": "trailing 。 printed at line end; v6 captured it, v4 missed (p1 50/50; crops p2-6/p2-152 confirm)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63f4c4ec0c8dc60001bf8858 2 19"
     }
   ]
 }

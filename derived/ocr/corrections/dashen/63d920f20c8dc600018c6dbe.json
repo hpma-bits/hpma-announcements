@@ -126,6 +126,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 2 33"
+    },
+    {
+      "image_index": 2,
+      "block_index": 13,
+      "original": "石旋风斩的伤害上调至250/300/375/500%攻击力。",
+      "corrected": "石礅旋风斩的伤害上调至250/300/375/500%攻击力。",
+      "reason": "crop d1-198 clearly shows 石礅旋风斩 (礅=石+敦); v4 wrote 石, v6 wrote 石磁",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 2 13"
+    },
+    {
+      "image_index": 2,
+      "block_index": 6,
+      "original": "雷云移动速度加成上调至75%/100%/150%/200%",
+      "corrected": "雷云移动速度加成上调至75%/100%/150%/200%。",
+      "reason": "trailing 。 printed at line end; v6 captured it, v4 missed (p1 50/50; crops p2-6/p2-152 confirm)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 2 6"
+    },
+    {
+      "image_index": 2,
+      "block_index": 32,
+      "original": "30%",
+      "corrected": "30%。",
+      "reason": "trailing 。 printed at line end; v6 captured it, v4 missed (p1 50/50; crops p2-6/p2-152 confirm)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 2 32"
     }
   ]
 }

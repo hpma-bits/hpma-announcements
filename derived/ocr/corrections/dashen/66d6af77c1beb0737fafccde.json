@@ -76,6 +76,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.66d6af77c1beb0737fafccde 1 119"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "洲际巫师杯赛季”开启！",
+      "corrected": "“洲际巫师杯赛季”开启！",
+      "reason": "banner prints opening curly “ (crop); gap before 开启 is layout margin; v4 missed opening quote",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66d6af77c1beb0737fafccde 1 18"
+    },
+    {
+      "image_index": 1,
+      "block_index": 28,
+      "original": "大家齐聚一堂，享受一场别开生面的音乐会....",
+      "corrected": "大家齐聚一堂，享受一场别开生面的音乐会……",
+      "reason": "crop shows line ends 音乐会 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66d6af77c1beb0737fafccde 1 28"
+    },
+    {
+      "image_index": 1,
+      "block_index": 39,
+      "original": "尔却心事重重....",
+      "corrected": "尔却心事重重……",
+      "reason": "crop shows line ends 重重 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66d6af77c1beb0737fafccde 1 39"
     }
   ]
 }

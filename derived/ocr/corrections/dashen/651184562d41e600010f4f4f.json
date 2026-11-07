@@ -158,6 +158,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 1 50"
+    },
+    {
+      "image_index": 2,
+      "block_index": 28,
+      "original": "积分可用于领取传说品质时装“东方年华”、“新月之券",
+      "corrected": "积分可用于领取传说品质时装“东方年华”、“新月之券”",
+      "reason": "closing ” printed at line end; v6 captured it, v4 missed (p1 3/3; crop p2-32 confirms)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 2 28"
     }
   ]
 }

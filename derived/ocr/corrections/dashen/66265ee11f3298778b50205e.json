@@ -91,6 +91,56 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 3 19"
+    },
+    {
+      "image_index": 1,
+      "block_index": 9,
+      "original": "本期概率提升卡牌：史诗伙伴卡“阿比盖尔·格雷”",
+      "corrected": "本期概率提升卡牌：史诗伙伴卡“阿比盖尔·格雷”、",
+      "reason": "crop shows trailing 、 printed after closing quote at line end; v6 trailing mark real (prior)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 1 9"
+    },
+    {
+      "image_index": 1,
+      "block_index": 29,
+      "original": "一本陈旧的笔记，一段尘封的往事.....",
+      "corrected": "一本陈旧的笔记，一段尘封的往事……",
+      "reason": "crop shows six dots at line end = ……; v4 5 dots, v6 noisy mix; six-dot prior",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 1 29"
+    },
+    {
+      "image_index": 1,
+      "block_index": 35,
+      "original": "然而，这本手记中还有太多的未解之谜，",
+      "corrected": "然而，这本手记中还有太多的未解之谜……",
+      "reason": "crop shows line ends 未解之谜 with six dots = ……; v4 trailing ，misread, v6 noisy; six-dot prior",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 1 35"
+    },
+    {
+      "image_index": 2,
+      "block_index": 7,
+      "original": "继续..",
+      "corrected": "继续……",
+      "reason": "crop shows 继续 followed by six dots = …… (large font, clearly 6); neither engine matched",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 2 7"
+    },
+    {
+      "image_index": 2,
+      "block_index": 23,
+      "original": "“繁星夜下”主题舞会开启！",
+      "corrected": "*“繁星夜下”主题舞会开启！",
+      "reason": "crop shows star ornament at line start; v6-only leading * real; ！ full-width",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 2 23"
     }
   ]
 }

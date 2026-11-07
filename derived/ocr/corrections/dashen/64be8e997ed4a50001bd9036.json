@@ -159,6 +159,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 2 60"
+    },
+    {
+      "image_index": 1,
+      "block_index": 65,
+      "original": "购买即可获得史诗时装“闲暇如常”",
+      "corrected": "购买即可获得史诗时装“闲暇如常”。",
+      "reason": "trailing 。 printed at line end; v6 captured it, v4 missed (p1 50/50; crops p2-6/p2-152 confirm)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 1 65"
+    },
+    {
+      "image_index": 2,
+      "block_index": 5,
+      "original": "卡牌“盛放之夜”",
+      "corrected": "卡牌“盛放之夜”。",
+      "reason": "trailing 。 printed at line end; v6 captured it, v4 missed (p1 50/50; crops p2-6/p2-152 confirm)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 2 5"
     }
   ]
 }

@@ -108,6 +108,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 2 50"
+    },
+    {
+      "image_index": 2,
+      "block_index": 6,
+      "original": "宝剑失窃之事虽然暂时平息，新的谜题却悄然降临.",
+      "corrected": "宝剑失窃之事虽然暂时平息，新的谜题却悄然降临……",
+      "reason": "crop shows line ends 降临 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 2 6"
     }
   ]
 }

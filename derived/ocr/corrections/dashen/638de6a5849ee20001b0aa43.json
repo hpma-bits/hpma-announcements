@@ -61,6 +61,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.638de6a5849ee20001b0aa43 1 27"
+    },
+    {
+      "image_index": 1,
+      "block_index": 28,
+      "original": "2月8日05：00结束。",
+      "corrected": "2月8日05:00结束。",
+      "reason": "crop d1-172 shows 2月8日05:00结束。 with half-width time colon; v4 used full-width 05：00, v6 block is unrelated garbage",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.638de6a5849ee20001b0aa43 1 28"
     }
   ]
 }

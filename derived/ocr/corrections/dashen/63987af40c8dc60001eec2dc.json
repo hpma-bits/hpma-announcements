@@ -100,6 +100,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.63987af40c8dc60001eec2dc 2 39"
+    },
+    {
+      "image_index": 2,
+      "block_index": 32,
+      "original": "“冬青赠礼”。",
+      "corrected": "可获得制帽专属材料——“冬青赠礼”。",
+      "reason": "crop d1-173 shows full row 可获得制帽专属材料——“冬青赠礼”。 with double em dash; v4 block is a tail fragment “冬青赠礼”。, v6 dropped ——",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63987af40c8dc60001eec2dc 2 32"
     }
   ]
 }
