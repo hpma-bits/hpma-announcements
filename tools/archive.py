@@ -203,7 +203,12 @@ def check_ledger(notice: Record, ledger: Record) -> list[str]:
                 f"{label}: original mismatch at image {image_index} block {block_index}: "
                 f"ledger={original!r} ocr={blocks[block_index].get('text')!r}"
             )
-        if not isinstance(corrected, str) or not corrected:
+        if correction.get("drop"):
+            # A drop is a verdict, not a rewrite: the block is a duplicate
+            # slice or other non-text artifact and leaves the edition whole.
+            if corrected:
+                problems.append(f"{label}: a drop correction must not carry corrected text")
+        elif not isinstance(corrected, str) or not corrected:
             problems.append(f"{label}: corrected must be a non-empty string")
         elif corrected == original:
             problems.append(f"{label}: corrected equals original")
@@ -211,8 +216,11 @@ def check_ledger(notice: Record, ledger: Record) -> list[str]:
     return problems
 
 
-def corrected_blocks(notice: Record, ledger: Record | None) -> dict[Locator, str]:
+def corrected_blocks(notice: Record, ledger: Record | None) -> dict[Locator, str | None]:
     """Map ``(image_index, block_index)`` to the text the source image shows.
+
+    A value of ``None`` marks a dropped block: the ledger decided the OCR
+    emitted a duplicate slice or other artifact that is not edition text.
 
     Raises :class:`ValueError` when the ledger is stale, so callers fail loudly
     instead of publishing text that the OCR output no longer supports.
@@ -223,6 +231,8 @@ def corrected_blocks(notice: Record, ledger: Record | None) -> dict[Locator, str
     if problems:
         raise ValueError("; ".join(problems))
     return {
-        (correction["image_index"], correction["block_index"]): correction["corrected"]
+        (correction["image_index"], correction["block_index"]): (
+            None if correction.get("drop") else correction["corrected"]
+        )
         for correction in ledger["corrections"]
     }

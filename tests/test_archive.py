@@ -81,6 +81,22 @@ def test_check_ledger_rejects_out_of_range_and_noop():
     assert any("corrected equals original" in problem for problem in problems)
 
 
+def test_check_ledger_accepts_a_drop_without_corrected():
+    drop = {"image_index": 1, "block_index": 0, "original": "魔祛觉醒", "drop": True}
+    assert archive.check_ledger(notice(), {"corrections": [drop]}) == []
+
+
+def test_check_ledger_rejects_drop_carrying_corrected():
+    drop = {"image_index": 1, "block_index": 0, "original": "魔祛觉醒", "drop": True, "corrected": "魔法觉醒"}
+    problems = archive.check_ledger(notice(), {"corrections": [drop]})
+    assert any("drop correction must not carry corrected" in problem for problem in problems)
+
+
+def test_corrected_blocks_marks_dropped_block_as_none():
+    drop = {"image_index": 1, "block_index": 0, "original": "魔祛觉醒", "drop": True}
+    assert archive.corrected_blocks(notice(), {"corrections": [drop]}) == {(1, 0): None}
+
+
 def test_corrected_blocks_maps_locator_to_reading():
     assert archive.corrected_blocks(notice(), ledger()) == {(1, 0): "魔法觉醒"}
 
