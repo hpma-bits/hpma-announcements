@@ -295,6 +295,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 4 50"
+    },
+    {
+      "image_index": 1,
+      "block_index": 21,
+      "original": "2.全球上线周活动",
+      "corrected": "2. 全球上线周活动",
+      "reason": "space after 2. printed before 全球上线周活动 (crop); v6 matches",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 1 21"
     }
   ]
 }
