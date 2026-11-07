@@ -1,5 +1,6 @@
 ---
 id: "dashen.66d6af77c1beb0737fafccde"
+source: "dashen"
 title: "【9月4日更新公告】"
 published_at: "2024-09-03T14:40:55+08:00"
 notice_date: "2024-09-04"

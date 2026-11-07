@@ -1,6 +1,6 @@
 # HPMA update-notice archive
 
-一个官方账号的公开内容存档：抓取它发的每条帖子，选出其中的更新公告，把图片里的文字识别、修正，最后生成可读的文本版。
+一个官方账号加一个社区索引的公开内容存档：抓取每个来源的帖子，选出其中的更新公告，把图片里的文字识别、修正，最后生成可读的文本版。Dashen 是主源，NGA 索引帖补 2021 年的缺口，并为 2022 年重叠期提供转载的运营方纯文本。
 
 ## 两层数据
 
@@ -11,12 +11,16 @@
 
 ## Language
 
+**Source**：
+帖子的来源。`dashen` 是官方账号，`nga` 是社区索引帖；每个 Source 有自己的 corpus、labels 和 edition 目录，ID 用 `<source>.<native_id>`。
+_Avoid_: platform、feed、channel
+
 **Post**：
-账号在 Dashen 发布的一条内容，是存档里唯一的一等记录。
+某个 Source 发布的一条内容，是存档里唯一的一等记录。Dashen 的 Post 是一条 feed/article；NGA 的 Post 是一个帖子。
 _Avoid_: feed、corpus item、notice record
 
 **Body text**：
-Post 自带的文字；type-6 长文的 `long_text`（HTML）也属于 Body text。
+Post 自带的文字；type-6 长文的 `long_text`（HTML）也属于 Body text。NGA 的 Body text 是从第一楼 BBCode 还原的公告正文。
 _Avoid_: corpus text、原文
 
 **Notice**：
@@ -24,27 +28,35 @@ _Avoid_: corpus text、原文
 _Avoid_: notice record、公告实体
 
 **Selection**：
-对 Post 的判定：哪条是公告、属于哪个家族、公告日期是什么。是人的决策，不是可重算的结果。
+对 Post 的判定：哪条是公告、属于哪个家族、公告日期是什么。是人的决策，不是可重算的结果。每个 Source 一份账本：`study/labels.jsonl`（Dashen）、`study/labels-nga.jsonl`（NGA）。
 _Avoid_: labels 文件、classifier output
 
 **Image**：
-Post 的附件，按 index 排序；身份是 `(post_id, index)`，字节用 sha256 校验。
+Dashen Post 的附件，按 index 排序；身份是 `(post_id, index)`，字节用 sha256 校验。NGA 的图床图片不入库，只保留正文里的原始引用。
 _Avoid_: asset、media
 
 **OCR result**：
-引擎对 Image 的输出：blocks（box / text / score）加引擎指纹。派生数据，可重建，但重建依赖引擎版本。
+引擎对 Dashen Image 的输出：blocks（box / text / score）加引擎指纹。派生数据，可重建，但重建依赖引擎版本。
 _Avoid_: raw text、derived text
 
 **Correction**：
-人工判定某个 block 应读作什么的记录：original / corrected / reason / confidence / recrop。是决策，不是派生数据；`original` 与当前 OCR 对不上就拒绝应用，不允许静默改字。
+人工判定某个 OCR block 应读作什么的记录：original / corrected / reason / confidence / recrop。是决策，不是派生数据；`original` 与当前 OCR 对不上就拒绝应用，不允许静默改字。
 _Avoid_: fix、patch、corrected text
 
 **Edition**：
-由 Post + OCR result + Correction 生成的阅读文本：每篇一份 Markdown，另加一个 jsonl 索引。派生数据。
+由 Post（Dashen 另加 OCR result + Correction）生成的阅读文本：每篇一份 Markdown，另加一个 jsonl 索引。派生数据。NGA 的 Edition 只有正文，没有 OCR 段；`edition/notices.jsonl` 合并两个 Source，按 `published_at` 排序。
 _Avoid_: corrected layer、output
 
+**Canonical**：
+同一公告日期的优先阅读版本。有 NGA 纯文本时选 NGA，否则选 Dashen；只影响 `edition/notices.jsonl` 的 `canonical` 标记，不删除另一来源的 Edition 或图片记录。
+_Avoid_: preferred、dedupe
+
+**Repost**：
+NGA 帖是对官方公告的社区转载，不是官方原文。Edition 用 `source: "nga"` 和 `source_author_uid` 标明。
+_Avoid_: original、official text
+
 **Watermark**：
-平台给长图打的「大神@哈利波特魔法觉醒」。它不是公告内容，Edition 里整块丢弃，混在正文行尾的截掉。
+平台给 Dashen 长图打的「大神@哈利波特魔法觉醒」。它不是公告内容，Edition 里整块丢弃，混在正文行尾的截掉。
 _Avoid_: logo、角标
 
 **Study**：

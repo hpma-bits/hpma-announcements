@@ -41,6 +41,13 @@ def ledger() -> dict:
 def test_feed_id_accepts_both_forms():
     assert archive.feed_id("dashen.aaaa") == "aaaa"
     assert archive.feed_id("aaaa") == "aaaa"
+    assert archive.feed_id("nga.12345") == "12345"
+
+
+def test_split_id_names_the_source():
+    assert archive.split_id("dashen.aaaa") == ("dashen", "aaaa")
+    assert archive.split_id("nga.12345") == ("nga", "12345")
+    assert archive.split_id("aaaa") == ("dashen", "aaaa")
 
 
 def test_check_ledger_accepts_matching_original():
@@ -118,3 +125,19 @@ def test_selected_posts_filters_labels_and_sorts_by_publication(tmp_path):
 
     assert [post["id"] for post, _ in chosen] == ["aaaa", "cccc"]
     assert all(row["label"] == "update" for _, row in chosen)
+
+
+def test_selected_posts_reads_a_named_source(tmp_path):
+    _write_jsonl(
+        tmp_path / "corpus/nga/posts.jsonl",
+        [{"id": "100", "published_at": "2021-09-14T13:39:00+08:00", "title": "N"}],
+    )
+    _write_jsonl(
+        tmp_path / "study/labels-nga.jsonl",
+        [{"id": "100", "label": "update", "notice_date": "2021-09-15"}],
+    )
+
+    chosen = archive.selected_posts(tmp_path, source="nga")
+
+    assert [post["id"] for post, _ in chosen] == ["100"]
+    assert chosen[0][1]["notice_date"] == "2021-09-15"

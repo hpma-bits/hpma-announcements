@@ -1,0 +1,1171 @@
+{
+  "entries": [
+    {
+      "kind": "production",
+      "label": "11.16 正式服维护详情",
+      "month": "2022.11",
+      "month_number": 11,
+      "notice_date": "2022-11-16",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=34295176",
+      "tid": "34295176",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "11.16 体验服维护详情",
+      "month": "2022.11",
+      "month_number": 11,
+      "notice_date": "2022-11-16",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=34295165",
+      "tid": "34295165",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "11.9 正式服维护详情",
+      "month": "2022.11",
+      "month_number": 11,
+      "notice_date": "2022-11-09",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=34203868",
+      "tid": "34203868",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "11.9 体验服维护详情",
+      "month": "2022.11",
+      "month_number": 11,
+      "notice_date": "2022-11-09",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=34203850",
+      "tid": "34203850",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "11.2 正式服维护详情",
+      "month": "2022.11",
+      "month_number": 11,
+      "notice_date": "2022-11-02",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=34101934",
+      "tid": "34101934",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "11.2 体验服维护详情",
+      "month": "2022.11",
+      "month_number": 11,
+      "notice_date": "2022-11-02",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=34101943",
+      "tid": "34101943",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "10.26 正式服维护详情",
+      "month": "2022.10",
+      "month_number": 10,
+      "notice_date": "2022-10-26",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=34009060",
+      "tid": "34009060",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "10.26 体验服维护详情",
+      "month": "2022.10",
+      "month_number": 10,
+      "notice_date": "2022-10-26",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=34009077",
+      "tid": "34009077",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "10.19 正式服维护详情",
+      "month": "2022.10",
+      "month_number": 10,
+      "notice_date": "2022-10-19",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33914596",
+      "tid": "33914596",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "10.19 体验服维护详情",
+      "month": "2022.10",
+      "month_number": 10,
+      "notice_date": "2022-10-19",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33914826",
+      "tid": "33914826",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "10.12 正式服维护详情",
+      "month": "2022.10",
+      "month_number": 10,
+      "notice_date": "2022-10-12",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33820162",
+      "tid": "33820162",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "10.12 体验服维护详情",
+      "month": "2022.10",
+      "month_number": 10,
+      "notice_date": "2022-10-12",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33820636",
+      "tid": "33820636",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "9.28 正式服维护详情",
+      "month": "2022.9",
+      "month_number": 9,
+      "notice_date": "2022-09-28",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33641671",
+      "tid": "33641671",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "9.28 体验服维护详情",
+      "month": "2022.9",
+      "month_number": 9,
+      "notice_date": "2022-09-28",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33641407",
+      "tid": "33641407",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "9.21 正式服维护详情",
+      "month": "2022.9",
+      "month_number": 9,
+      "notice_date": "2022-09-21",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33555652",
+      "tid": "33555652",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "9.21 体验服维护详情",
+      "month": "2022.9",
+      "month_number": 9,
+      "notice_date": "2022-09-21",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33555652",
+      "tid": "33555652",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "9.14 正式服维护详情",
+      "month": "2022.9",
+      "month_number": 9,
+      "notice_date": "2022-09-14",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33472579",
+      "tid": "33472579",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "9.14 体验服维护详情",
+      "month": "2022.9",
+      "month_number": 9,
+      "notice_date": "2022-09-14",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33472593",
+      "tid": "33472593",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "9.7 正式服维护详情",
+      "month": "2022.9",
+      "month_number": 9,
+      "notice_date": "2022-09-07",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33385399",
+      "tid": "33385399",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "9.7 体验服维护详情",
+      "month": "2022.9",
+      "month_number": 9,
+      "notice_date": "2022-09-07",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33385326",
+      "tid": "33385326",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "8.31 正式服维护详情",
+      "month": "2022.8",
+      "month_number": 8,
+      "notice_date": "2022-08-31",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33289975",
+      "tid": "33289975",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "8.31 体验服维护详情",
+      "month": "2022.8",
+      "month_number": 8,
+      "notice_date": "2022-08-31",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33289742",
+      "tid": "33289742",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "8.24 正式服维护详情",
+      "month": "2022.8",
+      "month_number": 8,
+      "notice_date": "2022-08-24",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33193911",
+      "tid": "33193911",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "8.24 体验服维护详情",
+      "month": "2022.8",
+      "month_number": 8,
+      "notice_date": "2022-08-24",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33193961",
+      "tid": "33193961",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "8.17 正式服维护详情",
+      "month": "2022.8",
+      "month_number": 8,
+      "notice_date": "2022-08-17",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33099057",
+      "tid": "33099057",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "8.17 体验服维护详情",
+      "month": "2022.8",
+      "month_number": 8,
+      "notice_date": "2022-08-17",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33099040",
+      "tid": "33099040",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "8.10 正式服维护详情",
+      "month": "2022.8",
+      "month_number": 8,
+      "notice_date": "2022-08-10",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32999785",
+      "tid": "32999785",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "8.10 体验服维护详情",
+      "month": "2022.8",
+      "month_number": 8,
+      "notice_date": "2022-08-10",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=33000533",
+      "tid": "33000533",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "8.3 正式服维护详情",
+      "month": "2022.8",
+      "month_number": 8,
+      "notice_date": "2022-08-03",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32909463",
+      "tid": "32909463",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "8.3 体验服维护详情",
+      "month": "2022.8",
+      "month_number": 8,
+      "notice_date": "2022-08-03",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32909429",
+      "tid": "32909429",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "7.27 正式服维护详情",
+      "month": "2022.7",
+      "month_number": 7,
+      "notice_date": "2022-07-27",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32819723",
+      "tid": "32819723",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "7.27 体验服维护详情",
+      "month": "2022.7",
+      "month_number": 7,
+      "notice_date": "2022-07-27",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32819812",
+      "tid": "32819812",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "7.20 正式服维护详情",
+      "month": "2022.7",
+      "month_number": 7,
+      "notice_date": "2022-07-20",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32741243",
+      "tid": "32741243",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "7.20 体验服维护详情",
+      "month": "2022.7",
+      "month_number": 7,
+      "notice_date": "2022-07-20",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32741174",
+      "tid": "32741174",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "7.13 正式服维护详情",
+      "month": "2022.7",
+      "month_number": 7,
+      "notice_date": "2022-07-13",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32655135",
+      "tid": "32655135",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "7.13 体验服维护详情",
+      "month": "2022.7",
+      "month_number": 7,
+      "notice_date": "2022-07-13",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32655184",
+      "tid": "32655184",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "7.6 正式服维护详情",
+      "month": "2022.7",
+      "month_number": 7,
+      "notice_date": "2022-07-06",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32572129",
+      "tid": "32572129",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "7.6 体验服维护详情",
+      "month": "2022.7",
+      "month_number": 7,
+      "notice_date": "2022-07-06",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32572101",
+      "tid": "32572101",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "6.29 正式服维护详情",
+      "month": "2022.6",
+      "month_number": 6,
+      "notice_date": "2022-06-29",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32488302",
+      "tid": "32488302",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "6.29 体验服维护详情",
+      "month": "2022.6",
+      "month_number": 6,
+      "notice_date": "2022-06-29",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32487813",
+      "tid": "32487813",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "6.22 正式服维护详情",
+      "month": "2022.6",
+      "month_number": 6,
+      "notice_date": "2022-06-22",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32407200",
+      "tid": "32407200",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "6.22 体验服维护详情",
+      "month": "2022.6",
+      "month_number": 6,
+      "notice_date": "2022-06-22",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32407224",
+      "tid": "32407224",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "6.15 正式服维护详情",
+      "month": "2022.6",
+      "month_number": 6,
+      "notice_date": "2022-06-15",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32321611",
+      "tid": "32321611",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "6.15 体验服维护详情",
+      "month": "2022.6",
+      "month_number": 6,
+      "notice_date": "2022-06-15",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32321641",
+      "tid": "32321641",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "6.8 正式服维护详情",
+      "month": "2022.6",
+      "month_number": 6,
+      "notice_date": "2022-06-08",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32228796",
+      "tid": "32228796",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "6.8 体验服维护详情",
+      "month": "2022.6",
+      "month_number": 6,
+      "notice_date": "2022-06-08",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32228846",
+      "tid": "32228846",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "5.31 正式服维护详情",
+      "month": "2022.5",
+      "month_number": 5,
+      "notice_date": "2022-05-31",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32117550",
+      "tid": "32117550",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "5.31 体验服维护详情",
+      "month": "2022.5",
+      "month_number": 5,
+      "notice_date": "2022-05-31",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32117506",
+      "tid": "32117506",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "5.25 正式服维护详情",
+      "month": "2022.5",
+      "month_number": 5,
+      "notice_date": "2022-05-25",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32031990",
+      "tid": "32031990",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "5.25 体验服维护详情",
+      "month": "2022.5",
+      "month_number": 5,
+      "notice_date": "2022-05-25",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=32031990",
+      "tid": "32031990",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "5.18 正式服维护详情",
+      "month": "2022.5",
+      "month_number": 5,
+      "notice_date": "2022-05-18",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31939680",
+      "tid": "31939680",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "5.18 体验服维护详情",
+      "month": "2022.5",
+      "month_number": 5,
+      "notice_date": "2022-05-18",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31938598",
+      "tid": "31938598",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "5.11 正式服维护详情",
+      "month": "2022.5",
+      "month_number": 5,
+      "notice_date": "2022-05-11",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31844277",
+      "tid": "31844277",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "5.11 体验服维护详情",
+      "month": "2022.5",
+      "month_number": 5,
+      "notice_date": "2022-05-11",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31844330",
+      "tid": "31844330",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "4.27 正式服维护详情",
+      "month": "2022.4",
+      "month_number": 4,
+      "notice_date": "2022-04-27",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31651208",
+      "tid": "31651208",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "4.27 体验服维护详情",
+      "month": "2022.4",
+      "month_number": 4,
+      "notice_date": "2022-04-27",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31651705",
+      "tid": "31651705",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "4.20 正式服维护详情",
+      "month": "2022.4",
+      "month_number": 4,
+      "notice_date": "2022-04-20",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31544873",
+      "tid": "31544873",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "4.20 体验服维护详情",
+      "month": "2022.4",
+      "month_number": 4,
+      "notice_date": "2022-04-20",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31544873",
+      "tid": "31544873",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "4.13 正式服维护详情",
+      "month": "2022.4",
+      "month_number": 4,
+      "notice_date": "2022-04-13",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31449867",
+      "tid": "31449867",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "4.13 体验服维护详情",
+      "month": "2022.4",
+      "month_number": 4,
+      "notice_date": "2022-04-13",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31449795",
+      "tid": "31449795",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "4.7 正式服维护详情",
+      "month": "2022.4",
+      "month_number": 4,
+      "notice_date": "2022-04-07",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31373727",
+      "tid": "31373727",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "4.7 体验服维护详情",
+      "month": "2022.4",
+      "month_number": 4,
+      "notice_date": "2022-04-07",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31373727",
+      "tid": "31373727",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "3.30 正式服维护详情",
+      "month": "2022.3",
+      "month_number": 3,
+      "notice_date": "2022-03-30",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31257956",
+      "tid": "31257956",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "3.30 体验服维护详情",
+      "month": "2022.3",
+      "month_number": 3,
+      "notice_date": "2022-03-30",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31257956",
+      "tid": "31257956",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "3.23 正式服维护详情",
+      "month": "2022.3",
+      "month_number": 3,
+      "notice_date": "2022-03-23",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31167254",
+      "tid": "31167254",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "3.23 体验服维护详情",
+      "month": "2022.3",
+      "month_number": 3,
+      "notice_date": "2022-03-23",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31167143",
+      "tid": "31167143",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "3.16 正式服维护详情",
+      "month": "2022.3",
+      "month_number": 3,
+      "notice_date": "2022-03-16",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31069044",
+      "tid": "31069044",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "3.16 体验服维护详情",
+      "month": "2022.3",
+      "month_number": 3,
+      "notice_date": "2022-03-16",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=31068986",
+      "tid": "31068986",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "3.9 正式服维护详情",
+      "month": "2022.3",
+      "month_number": 3,
+      "notice_date": "2022-03-09",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30973443",
+      "tid": "30973443",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "3.9 体验服维护详情",
+      "month": "2022.3",
+      "month_number": 3,
+      "notice_date": "2022-03-09",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30971488",
+      "tid": "30971488",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "3.1 正式服维护详情",
+      "month": "2022.3",
+      "month_number": 3,
+      "notice_date": "2022-03-01",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30862099",
+      "tid": "30862099",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "3.1 体验服维护详情",
+      "month": "2022.3",
+      "month_number": 3,
+      "notice_date": "2022-03-01",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30863369",
+      "tid": "30863369",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "2.23 正式服维护详情",
+      "month": "2022.2",
+      "month_number": 2,
+      "notice_date": "2022-02-23",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30777890",
+      "tid": "30777890",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "2.23 体验服维护详情",
+      "month": "2022.2",
+      "month_number": 2,
+      "notice_date": "2022-02-23",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30777935",
+      "tid": "30777935",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "2.16 正式服维护详情",
+      "month": "2022.2",
+      "month_number": 2,
+      "notice_date": "2022-02-16",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30680380",
+      "tid": "30680380",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "2.16 体验服维护详情",
+      "month": "2022.2",
+      "month_number": 2,
+      "notice_date": "2022-02-16",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30680870",
+      "tid": "30680870",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "2.10 正式服维护详情",
+      "month": "2022.2",
+      "month_number": 2,
+      "notice_date": "2022-02-10",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30610005",
+      "tid": "30610005",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "2.10 体验服维护详情",
+      "month": "2022.2",
+      "month_number": 2,
+      "notice_date": "2022-02-10",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30611483",
+      "tid": "30611483",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "1.26 正式服维护详情",
+      "month": "2022.1",
+      "month_number": 1,
+      "notice_date": "2022-01-26",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30428061",
+      "tid": "30428061",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "1.26 体验服维护详情",
+      "month": "2022.1",
+      "month_number": 1,
+      "notice_date": "2022-01-26",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30427421",
+      "tid": "30427421",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "1.19 正式服维护详情",
+      "month": "2022.1",
+      "month_number": 1,
+      "notice_date": "2022-01-19",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30331544",
+      "tid": "30331544",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "1.19 体验服维护详情",
+      "month": "2022.1",
+      "month_number": 1,
+      "notice_date": "2022-01-19",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30332400",
+      "tid": "30332400",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "1.12 正式服维护详情",
+      "month": "2022.1",
+      "month_number": 1,
+      "notice_date": "2022-01-12",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30235423",
+      "tid": "30235423",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "1.12 体验服维护详情",
+      "month": "2022.1",
+      "month_number": 1,
+      "notice_date": "2022-01-12",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30235535",
+      "tid": "30235535",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "1.6 正式服维护详情",
+      "month": "2022.1",
+      "month_number": 1,
+      "notice_date": "2022-01-06",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30149084",
+      "tid": "30149084",
+      "year": 2022
+    },
+    {
+      "kind": "test",
+      "label": "1.6 体验服维护详情",
+      "month": "2022.1",
+      "month_number": 1,
+      "notice_date": "2022-01-06",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30150912",
+      "tid": "30150912",
+      "year": 2022
+    },
+    {
+      "kind": "production",
+      "label": "12.29 正式服维护详情",
+      "month": "2021.12",
+      "month_number": 12,
+      "notice_date": "2021-12-29",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30042634",
+      "tid": "30042634",
+      "year": 2021
+    },
+    {
+      "kind": "test",
+      "label": "12.29 体验服维护详情",
+      "month": "2021.12",
+      "month_number": 12,
+      "notice_date": "2021-12-29",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=30043128",
+      "tid": "30043128",
+      "year": 2021
+    },
+    {
+      "kind": "production",
+      "label": "12.22 正式服维护详情",
+      "month": "2021.12",
+      "month_number": 12,
+      "notice_date": "2021-12-22",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29948261",
+      "tid": "29948261",
+      "year": 2021
+    },
+    {
+      "kind": "test",
+      "label": "12.22 体验服维护详情",
+      "month": "2021.12",
+      "month_number": 12,
+      "notice_date": "2021-12-22",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29950223",
+      "tid": "29950223",
+      "year": 2021
+    },
+    {
+      "kind": "production",
+      "label": "12.16 正式服维护详情",
+      "month": "2021.12",
+      "month_number": 12,
+      "notice_date": "2021-12-16",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29849508",
+      "tid": "29849508",
+      "year": 2021
+    },
+    {
+      "kind": "test",
+      "label": "12.16 体验服维护详情",
+      "month": "2021.12",
+      "month_number": 12,
+      "notice_date": "2021-12-16",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29850459",
+      "tid": "29850459",
+      "year": 2021
+    },
+    {
+      "kind": "production",
+      "label": "12.8 正式服维护详情",
+      "month": "2021.12",
+      "month_number": 12,
+      "notice_date": "2021-12-08",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29750772",
+      "tid": "29750772",
+      "year": 2021
+    },
+    {
+      "kind": "test",
+      "label": "12.8 体验服维护详情",
+      "month": "2021.12",
+      "month_number": 12,
+      "notice_date": "2021-12-08",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29752774",
+      "tid": "29752774",
+      "year": 2021
+    },
+    {
+      "kind": "production",
+      "label": "12.1 正式服维护详情",
+      "month": "2021.12",
+      "month_number": 12,
+      "notice_date": "2021-12-01",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29660208",
+      "tid": "29660208",
+      "year": 2021
+    },
+    {
+      "kind": "test",
+      "label": "12.1 体验服维护详情",
+      "month": "2021.12",
+      "month_number": 12,
+      "notice_date": "2021-12-01",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29660304",
+      "tid": "29660304",
+      "year": 2021
+    },
+    {
+      "kind": "production",
+      "label": "11.24 正式服维护详情",
+      "month": "2021.11",
+      "month_number": 11,
+      "notice_date": "2021-11-24",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29564736",
+      "tid": "29564736",
+      "year": 2021
+    },
+    {
+      "kind": "test",
+      "label": "11.24 体验服维护详情",
+      "month": "2021.11",
+      "month_number": 11,
+      "notice_date": "2021-11-24",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29564758",
+      "tid": "29564758",
+      "year": 2021
+    },
+    {
+      "kind": "production",
+      "label": "11.17 正式服维护详情",
+      "month": "2021.11",
+      "month_number": 11,
+      "notice_date": "2021-11-17",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29465621",
+      "tid": "29465621",
+      "year": 2021
+    },
+    {
+      "kind": "test",
+      "label": "11.17 体验服维护详情",
+      "month": "2021.11",
+      "month_number": 11,
+      "notice_date": "2021-11-17",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29467601",
+      "tid": "29467601",
+      "year": 2021
+    },
+    {
+      "kind": "production",
+      "label": "11.10 正式服维护详情",
+      "month": "2021.11",
+      "month_number": 11,
+      "notice_date": "2021-11-10",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29369999",
+      "tid": "29369999",
+      "year": 2021
+    },
+    {
+      "kind": "test",
+      "label": "11.10 体验服维护详情",
+      "month": "2021.11",
+      "month_number": 11,
+      "notice_date": "2021-11-10",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29370772",
+      "tid": "29370772",
+      "year": 2021
+    },
+    {
+      "kind": "production",
+      "label": "11.3 正式服维护详情",
+      "month": "2021.11",
+      "month_number": 11,
+      "notice_date": "2021-11-03",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29263715",
+      "tid": "29263715",
+      "year": 2021
+    },
+    {
+      "kind": "test",
+      "label": "11.3 体验服维护详情",
+      "month": "2021.11",
+      "month_number": 11,
+      "notice_date": "2021-11-03",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29264498",
+      "tid": "29264498",
+      "year": 2021
+    },
+    {
+      "kind": "production",
+      "label": "10.27 正式服维护详情",
+      "month": "2021.10",
+      "month_number": 10,
+      "notice_date": "2021-10-27",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29158467",
+      "tid": "29158467",
+      "year": 2021
+    },
+    {
+      "kind": "test",
+      "label": "10.27 体验服维护详情",
+      "month": "2021.10",
+      "month_number": 10,
+      "notice_date": "2021-10-27",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29158456",
+      "tid": "29158456",
+      "year": 2021
+    },
+    {
+      "kind": "production",
+      "label": "10.20 正式服维护详情",
+      "month": "2021.10",
+      "month_number": 10,
+      "notice_date": "2021-10-20",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29049370",
+      "tid": "29049370",
+      "year": 2021
+    },
+    {
+      "kind": "test",
+      "label": "10.20 体验服维护详情",
+      "month": "2021.10",
+      "month_number": 10,
+      "notice_date": "2021-10-20",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=29052563",
+      "tid": "29052563",
+      "year": 2021
+    },
+    {
+      "kind": "production",
+      "label": "10.13 正式服维护详情",
+      "month": "2021.10",
+      "month_number": 10,
+      "notice_date": "2021-10-13",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=28924339",
+      "tid": "28924339",
+      "year": 2021
+    },
+    {
+      "kind": "test",
+      "label": "10.13 体验服维护详情",
+      "month": "2021.10",
+      "month_number": 10,
+      "notice_date": "2021-10-13",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=28925539",
+      "tid": "28925539",
+      "year": 2021
+    },
+    {
+      "kind": "production",
+      "label": "10.1 正式服维护详情",
+      "month": "2021.10",
+      "month_number": 10,
+      "notice_date": "2021-10-01",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=28751924",
+      "tid": "28751924",
+      "year": 2021
+    },
+    {
+      "kind": "test",
+      "label": "10.1 体验服维护详情",
+      "month": "2021.10",
+      "month_number": 10,
+      "notice_date": "2021-10-01",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=28753300",
+      "tid": "28753300",
+      "year": 2021
+    },
+    {
+      "kind": "test",
+      "label": "9.29 体验服维护详情",
+      "month": "2021.9",
+      "month_number": 9,
+      "notice_date": "2021-09-29",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=28720658",
+      "tid": "28720658",
+      "year": 2021
+    },
+    {
+      "kind": "test",
+      "label": "9.26 体验服维护详情",
+      "month": "2021.9",
+      "month_number": 9,
+      "notice_date": "2021-09-26",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=28674051",
+      "tid": "28674051",
+      "year": 2021
+    },
+    {
+      "kind": "production",
+      "label": "9.22 正式服维护详情",
+      "month": "2021.9",
+      "month_number": 9,
+      "notice_date": "2021-09-22",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=28607851",
+      "tid": "28607851",
+      "year": 2021
+    },
+    {
+      "kind": "production",
+      "label": "9.15 正式服维护详情",
+      "month": "2021.9",
+      "month_number": 9,
+      "notice_date": "2021-09-15",
+      "thread_url": "https://bbs.nga.cn/read.php?tid=28502179",
+      "tid": "28502179",
+      "year": 2021
+    }
+  ],
+  "entry_count": 116,
+  "fetched_at": "2026-11-04T06:58:43Z",
+  "index_tid": "27915340",
+  "index_url": "https://bbs.nga.cn/read.php?tid=27915340",
+  "page_sha256": "76cea02654fa6dd29616cddf5866fca535c843c75470c9fb9aef6033b949bdb9",
+  "production_count": 58,
+  "test_count": 58
+}
