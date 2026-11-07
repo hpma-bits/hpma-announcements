@@ -68,6 +68,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.64eddbc496695c0001a4b3f7 1 13"
+    },
+    {
+      "image_index": 1,
+      "block_index": 5,
+      "original": "周年庆预热活动第二弹",
+      "corrected": "周年庆预热活动·第二弹",
+      "reason": "seg048 crop shows banner 〰周年庆预热活动·第二弹〰 with a real printed middle dot ·; v4 b5 missed the dot; v6 trailing 一 is right flourish noise",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64eddbc496695c0001a4b3f7 1 5"
+    },
+    {
+      "image_index": 1,
+      "block_index": 36,
+      "original": "积分可用于领取传说品质床品“国王十字专列”、“噢噢",
+      "corrected": "积分可用于领取传说品质床品“国王十字专列”、“嗅嗅",
+      "reason": "seg049 crop clearly shows red 嗅嗅 (Niffler, 口口 present); v4 b36 wrote 噢噢; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64eddbc496695c0001a4b3f7 1 36"
+    },
+    {
+      "image_index": 1,
+      "block_index": 42,
+      "original": "活动时间：当地时间9月1日00:00-9月15日05：00",
+      "drop": true,
+      "reason": "seg050 crop shows 活动时间：当地时间9月1日00:00-9月15日05:00 with half-width time colons, carried by v4 b41; b42 is the duplicate twin with wrong full-width 05：00; v6 b40 is the next line (mis-paired)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64eddbc496695c0001a4b3f7 1 42"
     }
   ]
 }

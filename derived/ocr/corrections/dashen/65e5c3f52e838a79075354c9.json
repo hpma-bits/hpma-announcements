@@ -91,6 +91,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.65e5c3f52e838a79075354c9 2 4"
+    },
+    {
+      "image_index": 2,
+      "block_index": 32,
+      "original": "快到店里找到家养小精灵碧，浏览商品吧！",
+      "corrected": "快到店里找到家养小精灵葭碧，浏览商品吧！",
+      "reason": "seg080 crop shows elf name 葭碧 in red (v4 b32 missed leading 葭); v6 b35 is the previous line (mis-paired)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65e5c3f52e838a79075354c9 2 32"
     }
   ]
 }

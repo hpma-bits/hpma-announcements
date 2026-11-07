@@ -305,6 +305,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 1 21"
+    },
+    {
+      "image_index": 3,
+      "block_index": 62,
+      "original": "调整：在魔法史/麻瓜研究课堂使用后，可为自已排除",
+      "corrected": "调整：在魔法史/麻瓜研究课堂使用后，可为自己排除",
+      "reason": "zoom d2-z55 shows red text 可为自己排除 with 己 (top-left fully open), not v4's 自已; rest of line matches both",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 3 62"
+    },
+    {
+      "image_index": 4,
+      "block_index": 10,
+      "original": "一开放时间：巫师所在地区，当地时间每周五18：00-周",
+      "corrected": "-开放时间：巫师所在地区，当地时间每周五18:00-周",
+      "reason": "zoom d2-z57 shows small leading hyphen (v4 read ideograph 一), full-width label colon 开放时间：, half-width time colon 18:00 and range dash; v4 wrong on 一 and 18：00, v6 wrong on half-width label colon",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 4 10"
+    },
+    {
+      "image_index": 5,
+      "block_index": 17,
+      "original": "一魔咒巩固手册”和“魔咒研习-魔咒精进大全”中。",
+      "corrected": "-魔咒巩固手册”和“魔咒研习-魔咒精进大全”中。",
+      "reason": "seg028 crop shows the line starting with a small half-width hyphen (v4 wrote ideograph 一); internal 研习-精进 hyphens also narrow; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 5 17"
+    },
+    {
+      "image_index": 5,
+      "block_index": 53,
+      "original": "8、修复了部分脸型下，眉色无法显示的问题。",
+      "drop": true,
+      "reason": "seg029 crop shows one printed line 8、修复了部分脸型下，眉色无法显示的问题。 double-read as v4 b52+b53; b52 already corrected to the full line by punct-p2, so b53 is the duplicate twin; v6 b54 is the next line 9、… (mis-paired)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 5 53"
     }
   ]
 }

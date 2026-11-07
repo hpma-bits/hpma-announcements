@@ -120,6 +120,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.652d18ba9e97960001292abe 2 16"
+    },
+    {
+      "image_index": 1,
+      "block_index": 32,
+      "original": "还有猝不及防将你裹挟其中的危险...",
+      "corrected": "还有猝不及防将你裹挟其中的危险……",
+      "reason": "zoom d2-z91 shows simplified 裹 (v6 wrote variant 裏) and six-dot ellipsis …… (v4 3 dots and v6 5 dots both wrong)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.652d18ba9e97960001292abe 1 32"
+    },
+    {
+      "image_index": 2,
+      "block_index": 62,
+      "original": "在这个万圣奇妙夜，与其他巫师尽恃鸡刺波特魔法觉醒",
+      "corrected": "在这个万圣奇妙夜，与其他巫师尽情狂欢吧！",
+      "reason": "zoom d2-z92: head …与其他巫师尽 legible; tail 情狂欢吧！ recovered from fragments under 大神@哈利波特魔法觉醒 watermark (狂欢吧！ clear, 情 partial); v4 尽恃鸡刺波特… and v6 運恣昭利… tails are watermark OCR garbage",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.652d18ba9e97960001292abe 2 62"
     }
   ]
 }

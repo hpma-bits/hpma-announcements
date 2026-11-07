@@ -102,6 +102,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6508f297426df90001035775 2 8"
+    },
+    {
+      "image_index": 2,
+      "block_index": 1,
+      "original": "魁地奇选拔活动",
+      "drop": true,
+      "reason": "seg052 crop shows one printed line *1.学院锦标赛——魁地奇选拔活动; v4_only-p1 rewrote head block v4 b2 to the full row (star + ——), so tail slice b1 魁地奇选拔活动 is the duplicate; v6 b1 merged both lines and lost the dash",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6508f297426df90001035775 2 1"
     }
   ]
 }

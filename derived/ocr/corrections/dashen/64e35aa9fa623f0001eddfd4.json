@@ -132,6 +132,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.64e35aa9fa623f0001eddfd4 3 14"
+    },
+    {
+      "image_index": 1,
+      "block_index": 5,
+      "original": "周年庆预热活动第一弹",
+      "corrected": "周年庆预热活动·第一弹",
+      "reason": "seg044 crop shows banner 〰周年庆预热活动·第一弹〰 with a real printed middle dot · between 活动 and 第一弹; v4 b5 missed the dot; v6 leading 一 is left flourish noise",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64e35aa9fa623f0001eddfd4 1 5"
     }
   ]
 }

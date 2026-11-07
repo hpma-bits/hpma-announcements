@@ -71,6 +71,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.65898367e21e4c0001e3002c 1 41"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "霍格莫德赛季·狼影迷踪”进行中！",
+      "drop": true,
+      "reason": "seg072 crop shows one printed line “霍格莫德赛季·狼影迷踪”进行中！ carried by v4 b17 (with opening “); b18 is the duplicate slice missing it; v6 b20 S is banner noise",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65898367e21e4c0001e3002c 1 18"
+    },
+    {
+      "image_index": 1,
+      "block_index": 42,
+      "original": "备了丰富的整蛊道具，快来一探究竟吧！",
+      "drop": true,
+      "reason": "seg073 crop shows line 备了丰富的整蛊道具，快来一探究竟吧！ already carried by v4 b41 (punct-p2 corrected it to the full line with ！); b42 is the duplicate twin; v6 b45 is watermark OCR garbage (mis-paired)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65898367e21e4c0001e3002c 1 42"
     }
   ]
 }

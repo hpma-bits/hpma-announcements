@@ -255,6 +255,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 3 8"
+    },
+    {
+      "image_index": 1,
+      "block_index": 31,
+      "original": "黑湖地图开启！",
+      "corrected": "黑湖地图开启!",
+      "reason": "zoom d2-z145 shows art banner 黑湖地图开启 with simplified 黑 and narrow half-width-style ! (art-banner narrow-! precedent); v4 full-width ！ wrong; v6 黒 variant wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 1 31"
+    },
+    {
+      "image_index": 1,
+      "block_index": 40,
+      "original": "..敬请期待！",
+      "corrected": "……敬请期待！",
+      "reason": "seg100 crop shows ……敬请期待！ with six-dot ellipsis; twin b39 has 4 dots and b40 has 2, both wrong; b40 rewritten to the printed form (twin b39 to fix/drop by punct pass)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 1 40"
+    },
+    {
+      "image_index": 1,
+      "block_index": 52,
+      "original": "前往“疯狂藤蔓”，与碧对话即可购买新品种水生植",
+      "corrected": "前往“疯狂藤蔓”，与葭碧对话即可购买新品种水生植",
+      "reason": "seg101 crop shows 与葭碧对话 with 葭 in red; v4 b52 missed 葭; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 1 52"
     }
   ]
 }

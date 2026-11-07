@@ -2190,6 +2190,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 9 26"
+    },
+    {
+      "image_index": 3,
+      "block_index": 58,
+      "original": "天梦酣睡药剂，回忆药水”",
+      "drop": true,
+      "reason": "zoom d2-z29 shows printed line 、无梦酣睡药剂、回忆药水”，并进行相应资; v4 b58 天梦酣睡药剂，回忆药水” is a misread fragment (天 for 无, ，for 、, missing leading 、); full line already carried by v4 b60; v6 b58 same line missing leading 、and ，",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 3 58"
     }
   ]
 }

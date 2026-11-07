@@ -90,6 +90,66 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6577084b9d4c7f0001a6b065 2 4"
+    },
+    {
+      "image_index": 2,
+      "block_index": 2,
+      "original": "然而冰雪之下潜伏着蠢蠢欲动的阴影，猩红的眼",
+      "corrected": "然而冰雪皑皑之下潜伏着蠢蠢欲动的阴影，猩红的眼",
+      "reason": "zoom d2-z100 clearly shows 冰雪皑皑之下 (v4 b2 missed 皑皑); equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6577084b9d4c7f0001a6b065 2 2"
+    },
+    {
+      "image_index": 2,
+      "block_index": 3,
+      "original": "晴凝视着宁静祥和的小村庄，窃窃私语中不可告人的",
+      "corrected": "睛凝视着宁静祥和的小村庄，窃窃私语中不可告人的",
+      "reason": "zoom d2-z101 shows 目-radical 睛 (eye, continuing 猩红的眼), not v4's 晴; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6577084b9d4c7f0001a6b065 2 3"
+    },
+    {
+      "image_index": 3,
+      "block_index": 14,
+      "original": "*“寄冰典”圣诞舞会开启！",
+      "corrected": "*“槲寄冰典”圣诞舞会开启！",
+      "reason": "zoom d2-z102 shows star marker + “槲寄冰典”圣诞舞会开启！ in serif font with full-width ！; v4 b14 missed 槲; v6 dropped the * star and its narrow ! is wrong for this non-art-font line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6577084b9d4c7f0001a6b065 3 14"
+    },
+    {
+      "image_index": 3,
+      "block_index": 22,
+      "original": "节，追随者麋鹿的脚印，获得奖励！",
+      "drop": true,
+      "reason": "seg066 crop shows one printed line 圣诞季节，追随者麋鹿的脚印，获得奖励！ carried by v4 b21; b22 节，追随者… is a duplicate tail slice; v6 b23 whole line (mis-paired)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6577084b9d4c7f0001a6b065 3 22"
+    },
+    {
+      "image_index": 3,
+      "block_index": 26,
+      "original": "领取全部奖励共需10天。每日5：00解锁下一个奖励。",
+      "drop": true,
+      "reason": "seg067 crop shows 每日5:00 with half-width time colon, line carried by v4 b25; b26 is the duplicate twin with wrong full-width 5：00; v6 b27 is the next line (mis-paired)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6577084b9d4c7f0001a6b065 3 26"
+    },
+    {
+      "image_index": 4,
+      "block_index": 3,
+      "original": "巧克力蛙收集全面升级！",
+      "corrected": "巧克力蛙收集全面升级!",
+      "reason": "zooms d2-z106/d2-z106b show art banner with narrow half-width-style ! (thin bar, diamond dot, reduced advance, matches punct-p4 art-banner precedent); v4 full-width ！ wrong; v6 trailing 心 is flourish noise",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6577084b9d4c7f0001a6b065 4 3"
     }
   ]
 }

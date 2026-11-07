@@ -121,6 +121,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.653f83caecda660001756117 1 18"
+    },
+    {
+      "image_index": 2,
+      "block_index": 0,
+      "original": "“万圣节·城堡幽影”系列活动更新中！",
+      "corrected": "“万圣节·城堡幽影”系列活动更新中!",
+      "reason": "zoom d2-z94 shows banner with printed middle dot · and narrow half-width-style ! (art-banner narrow-! precedent); v4 full-width ！ wrong; v6 leading 一 is flourish noise",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.653f83caecda660001756117 2 0"
     }
   ]
 }

@@ -346,6 +346,66 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 3 8"
+    },
+    {
+      "image_index": 1,
+      "block_index": 24,
+      "original": "“邓布利多的回响”上线！",
+      "corrected": "“邓布利多的回响”上线!",
+      "reason": "seg076 crop shows art banner “邓布利多的回响”上线! with narrow half-width-style ! (art-banner narrow-! precedent); v4 full-width ！ wrong; v6 trailing 心 is flourish noise",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 1 24"
+    },
+    {
+      "image_index": 2,
+      "block_index": 54,
+      "original": "不好了！小雪鸡撞上雪堆，头晕眼花，把信件散落了",
+      "corrected": "不好了！小雪鸮撞上雪堆，头晕眼花，把信件散落了",
+      "reason": "seg077 crop clearly shows 小雪鸮 (snowy owl 鸮); v4 b54 wrote 鸡; v6 b55 was mis-paired to the star line; equals v6 b56 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 2 54"
+    },
+    {
+      "image_index": 2,
+      "block_index": 55,
+      "original": "不好了！小雪撞上雪堆，头晕眼花，把信件散落了",
+      "drop": true,
+      "reason": "seg077 crop shows one printed line 不好了！小雪鸮撞上雪堆，头晕眼花，把信件散落了 double-read as v4 b54 (misread 鸡) + b55 (missing 鸮); correction carried at b54, b55 is the duplicate slice",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 2 55"
+    },
+    {
+      "image_index": 2,
+      "block_index": 69,
+      "original": "“深邃默者”，妆容组合“金妆开运”、“龙蟠戏宝”，",
+      "corrected": "“深邃缄默者”，妆容组合“金妆开运”、“龙蟠戏宝”，",
+      "reason": "seg078 crop clearly shows 深邃缄默者 with 缄 (v4 b69 missed it); trailing comma prints full-width ，(v6 wrote half-width ,); equals v6 text except final comma",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 2 69"
+    },
+    {
+      "image_index": 3,
+      "block_index": 35,
+      "original": "魔杖皮肤“蜿蜓藤蔓”、头像框“荆棘藤蔓”、“动作-气到",
+      "corrected": "魔杖皮肤“蜿蜒藤蔓”、头像框“荆棘藤蔓”、“动作-气到",
+      "reason": "zoom d2-z117 shows 蜿蜒藤蔓 with 延 (v4 wrote 蜓); rest matches print incl. narrow hyphen in 动作-气到; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 3 35"
+    },
+    {
+      "image_index": 3,
+      "block_index": 36,
+      "original": "脚”、表情包“粲然一笑”、头像“眼眸之中”等大量好",
+      "corrected": "跺脚”、表情包“粲然一笑”、头像“眼眸之中”等大量好",
+      "reason": "seg079 crop shows line starting 跺脚”、 (name 动作-气到跺脚 wraps); v4 b36 dropped the leading 跺; v6 misread it as 跌",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 3 36"
     }
   ]
 }

@@ -41,6 +41,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.64f5eab89af9960001057918 1 22"
+    },
+    {
+      "image_index": 1,
+      "block_index": 23,
+      "original": "巫师参与“禁林\"玩法中的“密林冒险·一、二、三、四”",
+      "corrected": "巫师参与“禁林”玩法中的“密林冒险·一、二、三、四”",
+      "reason": "zoom d2-z85 shows curly quotes throughout (v4 b23 wrote a straight quote after 禁林) and middle dot · after 冒险; v6 b26 四” is a fragment",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64f5eab89af9960001057918 1 23"
     }
   ]
 }

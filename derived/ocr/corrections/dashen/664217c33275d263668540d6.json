@@ -149,6 +149,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 2 46"
+    },
+    {
+      "image_index": 2,
+      "block_index": 10,
+      "original": "质魔杖外观“踪迹无寻”、传说品质猫头鹰“北鹰”、",
+      "corrected": "质魔杖外观“踪迹无寻”、传说品质猫头鹰“北鹰鸮”、",
+      "reason": "seg096 crop clearly shows owl name 北鹰鸮 with 鸮 inside the quotes; v4 b10 dropped 鸮; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 2 10"
+    },
+    {
+      "image_index": 2,
+      "block_index": 55,
+      "original": "前往魔咒课教室寻找弗立维教授，伸皮特魔法觉醒",
+      "corrected": "前往魔咒课教室寻找弗立维教授，和他聊聊吧！",
+      "reason": "zoom d2-z143: head 前往魔咒课教室寻找弗立维教授， legible; tail 和他聊聊吧！ recovered from fragments under the 大神@哈利波特魔法觉醒 watermark (和 clear, 聊聊吧！ partial); v4/v6 tails 伸皮特魔法觉醒 / 天神聊胆释皮特魔法觉醒 are watermark OCR garbage",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 2 55"
     }
   ]
 }
