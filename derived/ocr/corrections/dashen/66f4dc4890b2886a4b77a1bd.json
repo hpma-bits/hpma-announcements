@@ -168,6 +168,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 3 40"
+    },
+    {
+      "image_index": 1,
+      "block_index": 31,
+      "original": "新增焕新款时装：“无染纤尘-橘光”及“无染纤尘-锟蓝”。",
+      "corrected": "新增焕新款时装：“无染纤尘-橘光”及“无染纤尘-锃蓝”。",
+      "reason": "zoom d2-z201 shows red 无染纤尘-锃蓝 with 呈-type right component (v4 wrote 锟); equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 1 31"
+    },
+    {
+      "image_index": 3,
+      "block_index": 19,
+      "original": "7.传说卡牌礼包（内含中国火球幼龙、巨乌贼、石",
+      "corrected": "7.传说卡牌礼包（内含中国火球幼龙、巨乌贼、石礅",
+      "reason": "seg152 crop shows line ending 石礅 (stone radical + 敦; v4 b19 dropped the char, v6 has 礅)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 3 19"
+    },
+    {
+      "image_index": 4,
+      "block_index": 13,
+      "original": "中径”副本在通关后会自动开启下一星级，直到领取",
+      "corrected": "中蹊径”副本在通关后会自动开启下一星级，直到领取",
+      "reason": "seg153 crop shows 中蹊径”副本… (v4 b13 missed 蹊); equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 4 13"
     }
   ]
 }

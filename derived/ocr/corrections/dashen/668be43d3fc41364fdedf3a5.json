@@ -219,6 +219,66 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 2 6"
+    },
+    {
+      "image_index": 2,
+      "block_index": 0,
+      "original": "“黑湖珍宝”再度上线！",
+      "corrected": "“黑湖珍宝”再度上线!",
+      "reason": "zoom d2-z171 shows art banner “黑湖珍宝”再度上线 with simplified 黑 and narrow half-width-style !; v4 full-width ！ wrong; v6 黒 variant wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 2 0"
+    },
+    {
+      "image_index": 3,
+      "block_index": 12,
+      "original": "游船新音乐解锁！",
+      "corrected": "游船新音乐解锁!",
+      "reason": "zoom d2-z172 shows art banner 游船新音乐解锁 with narrow half-width-style !; v4 full-width ！ wrong; v6 trailing 心 is flourish noise",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 3 12"
+    },
+    {
+      "image_index": 3,
+      "block_index": 35,
+      "original": "每周六",
+      "drop": true,
+      "reason": "seg124 crop shows one printed line 活动时间：每周六、周日 carried by v4 b37; b35 每周六 is a duplicate fragment; v6 b35 a is garbage",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 3 35"
+    },
+    {
+      "image_index": 3,
+      "block_index": 36,
+      "original": "周",
+      "drop": true,
+      "reason": "seg124 crop shows one printed line 活动时间：每周六、周日 carried by v4 b37; b36 周 is a duplicate fragment; v6 b36 周日 is a partial read",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 3 36"
+    },
+    {
+      "image_index": 4,
+      "block_index": 5,
+      "original": "（2）水仙一研究笔记一",
+      "corrected": "（2）水仙——研究笔记·一",
+      "reason": "seg125 crop shows （2）水仙——研究笔记·一 with long double dash between 水仙 and 研究笔记 and middle dot before 一; v4 wrote ideograph 一 for both; v6 single dash wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 4 5"
+    },
+    {
+      "image_index": 4,
+      "block_index": 55,
+      "original": "质植物修改为有概率到“普普通通”及“圆润饱满”品质",
+      "corrected": "质植物修改为有概率薅到“普普通通”及“圆润饱满”品质",
+      "reason": "seg126 crop clearly shows 有概率薅到 (v4 b55 missed 薅); equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 4 55"
     }
   ]
 }

@@ -243,6 +243,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 4 34"
+    },
+    {
+      "image_index": 2,
+      "block_index": 11,
+      "original": "宣传单上，黑魔王笑着，混乱与恐慌正侵袭伦敦地",
+      "corrected": "宣传单上，黑魔王狞笑着，混乱与恐慌正侵袭伦敦地",
+      "reason": "seg183 crop clearly shows 黑魔王狞笑着 (v4 b11 missed 狞); equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 2 11"
     }
   ]
 }

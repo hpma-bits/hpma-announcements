@@ -578,6 +578,56 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 5 36"
+    },
+    {
+      "image_index": 1,
+      "block_index": 28,
+      "original": "同时",
+      "drop": true,
+      "reason": "seg127 crop shows printed line 团将在被召唤出来时立刻行动。同时，下调了幽灵骑 carried by v4 b30; b28 同时 is a duplicate fragment; v6 b29 is a misread of the same line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 1 28"
+    },
+    {
+      "image_index": 2,
+      "block_index": 0,
+      "original": "洲际赛事·海选正式启动！",
+      "corrected": "洲际赛事·海选正式启动!",
+      "reason": "zoom d2-z178 shows art banner 洲际赛事·海选正式启动 with printed · and narrow half-width-style !; v4 full-width ！ wrong; v6 trailing 心 is flourish noise",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 2 0"
+    },
+    {
+      "image_index": 4,
+      "block_index": 27,
+      "original": "一菱叶丁香蓼、水生-睡莲、向日葵、铃兰、水生-红火",
+      "corrected": "-菱叶丁香蓼、水生-睡莲、向日葵、铃兰、水生-红火",
+      "reason": "seg130 crop shows the wrapped line starting with a small half-width hyphen completing 水生-菱叶丁香蓼 (v4 wrote ideograph 一); rest matches print; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 4 27"
+    },
+    {
+      "image_index": 5,
+      "block_index": 22,
+      "original": "5.优化了“菜”的交互操作及红点提示。",
+      "corrected": "5.优化了“薅菜”的交互操作及红点提示。",
+      "reason": "seg132 crop clearly shows “薅菜” (v4 b22 missed 薅); equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 5 22"
+    },
+    {
+      "image_index": 5,
+      "block_index": 46,
+      "original": "加速后",
+      "drop": true,
+      "reason": "seg133 crop shows printed line 3、修复了在过场动画中长按加速后，后续剧情对话的 carried by v4 b48; b46 加速后 is a duplicate fragment; v6 b46 whole line (mis-paired)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 5 46"
     }
   ]
 }

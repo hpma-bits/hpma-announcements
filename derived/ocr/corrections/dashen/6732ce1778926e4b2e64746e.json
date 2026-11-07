@@ -126,6 +126,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6732ce1778926e4b2e64746e 1 81"
+    },
+    {
+      "image_index": 1,
+      "block_index": 138,
+      "original": "摆好姿势，对准镜头，等待相机的“咔”声响起吧！",
+      "corrected": "摆好姿势，对准镜头，等待相机的“咔嚓”声响起吧！",
+      "reason": "seg161 crop clearly shows “咔嚓”声 (v4 b138 missed 嚓); equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6732ce1778926e4b2e64746e 1 138"
+    },
+    {
+      "image_index": 1,
+      "block_index": 164,
+      "original": "1、补充了时装“深邃默者”附带的被动双人动作。时",
+      "corrected": "1、补充了时装“深邃缄默者”附带的被动双人动作。时",
+      "reason": "seg162 crop clearly shows “深邃缄默者” (v4 b164 missed 缄); equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6732ce1778926e4b2e64746e 1 164"
     }
   ]
 }

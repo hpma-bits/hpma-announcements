@@ -118,6 +118,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 2 6"
+    },
+    {
+      "image_index": 2,
+      "block_index": 0,
+      "original": "“黑魔法赛季·黯影与微光”持续更新！",
+      "corrected": "“黑魔法赛季·黯影与微光”持续更新!",
+      "reason": "seg154 crop shows art banner “黑魔法赛季·黯影与微光”持续更新 with curly quotes, printed · and narrow half-width-style !; v4 full-width ！ wrong; v6 dropped the opening “ and wrote 黒",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 2 0"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "到活动·步步惊魂”开启！",
+      "drop": true,
+      "reason": "seg155 crop shows star line ✻“签到活动·步步惊魂”开启！ carried by v4 b28; b27 到活动·步步惊魂”开启！ is a partial duplicate slice missing the ✻“签到 head",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 2 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 49,
+      "original": "开着，仿佛在邀请勇敢的探险者踏入未知的领域。",
+      "drop": true,
+      "reason": "seg156 crop shows printed line 敞开着，仿佛在邀请勇敢的探险者踏入未知的领域。 exactly carried by v4 b50; b49 开着，仿佛… is a duplicate slice missing 敞",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 2 49"
+    },
+    {
+      "image_index": 4,
+      "block_index": 28,
+      "original": "活动时间：2024年10月23日5：00-2024年10月30日5:00",
+      "corrected": "活动时间：2024年10月23日5:00-2024年10月30日5:00",
+      "reason": "seg158 crop clearly shows 5:00 with half-width colon (both twins b28/b29 wrote 5：00); range dash half-width; twin b29 needs the same fix",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 4 28"
     }
   ]
 }

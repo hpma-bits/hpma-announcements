@@ -128,6 +128,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 55"
+    },
+    {
+      "image_index": 1,
+      "block_index": 6,
+      "original": "“幸运轮盘”全新开启！",
+      "corrected": "“幸运轮盘”全新开启!",
+      "reason": "zoom d2-z215 shows art banner “幸运轮盘”全新开启 with curly quotes and narrow half-width-style !; v4 full-width ！ wrong; v6 b6 幸运轮盘 is a partial read of the red art text",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 6"
+    },
+    {
+      "image_index": 1,
+      "block_index": 96,
+      "original": "活动时间：2024年11月27日5:00－12月04日5:00",
+      "corrected": "活动时间：2024年11月27日5:00-12月04日5:00",
+      "reason": "zoom d2-z216 shows 5:00 half-width colons and short half-width range dash (v4 b96 wrote full-width －); 12月04 matches print; twin b97 has 5：00",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 96"
     }
   ]
 }
