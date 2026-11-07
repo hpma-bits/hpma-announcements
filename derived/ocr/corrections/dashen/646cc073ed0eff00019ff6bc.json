@@ -71,6 +71,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.646cc073ed0eff00019ff6bc 1 3"
+    },
+    {
+      "image_index": 2,
+      "block_index": 7,
+      "original": "2.每科目都设有四种难度的关卡，首次通过关",
+      "corrected": "2. 每科目都设有四种难度的关卡，首次通过关",
+      "reason": "print has space after 2. before 每科目; v6 matches",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.646cc073ed0eff00019ff6bc 2 7"
     }
   ]
 }

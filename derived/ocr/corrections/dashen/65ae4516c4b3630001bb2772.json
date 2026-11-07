@@ -61,6 +61,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.65ae4516c4b3630001bb2772 1 39"
+    },
+    {
+      "image_index": 1,
+      "block_index": 10,
+      "original": "满月将临！从雪夜深处，传来了狼嚎",
+      "corrected": "满月将临！从雪夜深处，传来了狼嚎……",
+      "reason": "line ends six-dot ellipsis ……; same story text as item 188 reposted",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65ae4516c4b3630001bb2772 1 10"
+    },
+    {
+      "image_index": 1,
+      "block_index": 16,
+      "original": "一切....",
+      "corrected": "一切……",
+      "reason": "line ends six-dot ellipsis; v4 4 dots, v6 9 dots",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65ae4516c4b3630001bb2772 1 16"
     }
   ]
 }

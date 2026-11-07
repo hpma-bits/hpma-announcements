@@ -120,6 +120,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.63f4c4ec0c8dc60001bf8858 2 19"
+    },
+    {
+      "image_index": 1,
+      "block_index": 17,
+      "original": "-\"禁林-单人探险”中出现的“黑市商人\"更改为“神秘商人”",
+      "corrected": "-“禁林-单人探险”中出现的“黑市商人”更改为“神秘商人”。",
+      "reason": "leading - bullet, curly quotes throughout, trailing 。 all printed; v6 matches exactly, v4 had straight-quote artifacts",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63f4c4ec0c8dc60001bf8858 1 17"
+    },
+    {
+      "image_index": 1,
+      "block_index": 21,
+      "original": "地点“三把扫帚酒吧”更改为“三把扫帚”",
+      "corrected": "-地点“三把扫帚酒吧”更改为“三把扫帚”。",
+      "reason": "leading - bullet and trailing 。 printed; v6 matches",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63f4c4ec0c8dc60001bf8858 1 21"
+    },
+    {
+      "image_index": 1,
+      "block_index": 24,
+      "original": "统一了部分饮品在魔法世界中的命名。",
+      "corrected": "-统一了部分饮品在魔法世界中的命名。",
+      "reason": "leading - bullet printed on this line; v6 has it, v4 misses",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63f4c4ec0c8dc60001bf8858 1 24"
     }
   ]
 }

@@ -12,6 +12,36 @@
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.65ef048cd7b80a3cff4cd9e0 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 6,
+      "original": "“巫师研究草药学家·种植系统”上线！",
+      "corrected": "“巫师研究·草药学家·种植系统”上线！",
+      "reason": "header ”巫师研究·草药学家·种植系统”上线！ — both interpuncts printed; v4 drops the first ·",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65ef048cd7b80a3cff4cd9e0 1 6"
+    },
+    {
+      "image_index": 1,
+      "block_index": 22,
+      "original": "巫师可前往背包，打开“巫师研究”，在“巫师研究天赋",
+      "corrected": "巫师可前往背包，打开“巫师研究”，在“巫师研究·天赋",
+      "reason": "interpunct · printed in 巫师研究·天赋 (crop); v4 drops it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65ef048cd7b80a3cff4cd9e0 1 22"
+    },
+    {
+      "image_index": 1,
+      "block_index": 25,
+      "original": "“尤伯特索恩”的支线开启！",
+      "corrected": "“尤伯特·索恩”的支线开启！",
+      "reason": "interpunct · printed in 尤伯特·索恩 header; v4 drops it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65ef048cd7b80a3cff4cd9e0 1 25"
     }
   ]
 }

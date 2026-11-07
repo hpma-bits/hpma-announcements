@@ -156,6 +156,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 2 32"
+    },
+    {
+      "image_index": 2,
+      "block_index": 21,
+      "original": "15/17.5/22.5/30%",
+      "corrected": "15/17.5/22.5/30%.",
+      "reason": "line ends 30%。 full-width 。 clearly printed; v6 rendered half-width .",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 2 21"
     }
   ]
 }

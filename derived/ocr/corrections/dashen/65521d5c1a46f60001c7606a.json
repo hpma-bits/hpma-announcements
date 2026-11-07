@@ -120,6 +120,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.65521d5c1a46f60001c7606a 3 26"
+    },
+    {
+      "image_index": 1,
+      "block_index": 39,
+      "original": "的气息在城堡中蔓延.....危机一触即发。",
+      "corrected": "的气息在城堡中蔓延……危机一触即发。",
+      "reason": "保留块b39省略号读作『.....』（五点）；zoom证实印刷「蔓延」与「危机」之间为六点省略号「……」，行末句号已读出",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65521d5c1a46f60001c7606a 1 39"
+    },
+    {
+      "image_index": 2,
+      "block_index": 15,
+      "original": "这还不是结束",
+      "corrected": "这还不是结束——",
+      "reason": "line ends two-em dash —— running to margin (zoom: ≥1.4em clipped at bbox); v4 none, v6 one dash; p1 precedent corrected to ——",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65521d5c1a46f60001c7606a 2 15"
     }
   ]
 }

@@ -41,6 +41,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.65898367e21e4c0001e3002c 1 14"
+    },
+    {
+      "image_index": 1,
+      "block_index": 8,
+      "original": "活动时间：2023年12月26日17:00（UTC+8)-2024年1月",
+      "corrected": "活动时间：2023年12月26日17:00(UTC+8)-2024年1月",
+      "reason": "17:00 digit:digit half-width colon (prior); (UTC+8) prints half-width parens tight (crop); v4 full-width open paren wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65898367e21e4c0001e3002c 1 8"
+    },
+    {
+      "image_index": 1,
+      "block_index": 23,
+      "original": "德村庄上空升起....",
+      "corrected": "德村庄上空升起……",
+      "reason": "line ends six-dot ellipsis; same story text as item 178 in a reposted notice",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65898367e21e4c0001e3002c 1 23"
+    },
+    {
+      "image_index": 1,
+      "block_index": 41,
+      "original": "备了丰富的整蛊道具，快来一探究竟吧",
+      "corrected": "备了丰富的整蛊道具，快来一探究竟吧！",
+      "reason": "trailing ！ full-width printed; v4 misses line-end mark",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65898367e21e4c0001e3002c 1 41"
     }
   ]
 }

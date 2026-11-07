@@ -1100,6 +1100,1086 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 46"
+    },
+    {
+      "image_index": 2,
+      "block_index": 127,
+      "original": "单人探险”模式中新增机制“冒险预见”，魔法",
+      "corrected": "“单人探险”模式中新增机制“冒险预见”，魔法",
+      "reason": "保留块b127漏行首开引号「“」；crop证实印刷行首为「“单人探险”」（被drop的b126及v6对应块均含该引号）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 127"
+    },
+    {
+      "image_index": 2,
+      "block_index": 14,
+      "original": "45-",
+      "corrected": "45——宝石*15",
+      "reason": "印刷行「45——宝石*15」（crop tbl-1）；v4 将行拆为数字与奖品两片，存活的数字切片『45-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 14"
+    },
+    {
+      "image_index": 2,
+      "block_index": 15,
+      "original": "宝石*15",
+      "drop": true,
+      "reason": "印刷行「45——宝石*15」的奖品切片『宝石*15』；此前已裁删，维持删除；整行由载体 b14 承载（crop tbl-1）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 15"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "320-",
+      "corrected": "320——非凡卡包*1",
+      "reason": "印刷行「320——非凡卡包*1」（crop tbl-23）；v4 将行拆为数字与奖品两片，存活的数字切片『320-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 28,
+      "original": "非凡卡包*1",
+      "drop": true,
+      "reason": "印刷行「320——非凡卡包*1」的奖品切片『非凡卡包*1』；此前已裁删，维持删除；整行由载体 b27 承载（crop tbl-23）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 28"
+    },
+    {
+      "image_index": 2,
+      "block_index": 29,
+      "original": "400-",
+      "corrected": "400——宝石*20",
+      "reason": "印刷行「400——宝石*20」（crop tbl-24）；v4 将行拆为数字与奖品两片，存活的数字切片『400-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 29"
+    },
+    {
+      "image_index": 2,
+      "block_index": 30,
+      "original": "宝石*20",
+      "drop": true,
+      "reason": "印刷行「400——宝石*20」的奖品切片『宝石*20』；此前已裁删，维持删除；整行由载体 b29 承载（crop tbl-24）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 30"
+    },
+    {
+      "image_index": 2,
+      "block_index": 42,
+      "original": "900-",
+      "corrected": "900——非凡卡包*1",
+      "reason": "印刷行「900——非凡卡包*1」（crop tbl-28）；v4 将行拆为数字与奖品两片，存活的数字切片『900-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 42"
+    },
+    {
+      "image_index": 2,
+      "block_index": 43,
+      "original": "非凡卡包*1",
+      "drop": true,
+      "reason": "印刷行「900——非凡卡包*1」的奖品切片『非凡卡包*1』；此前已裁删，维持删除；整行由载体 b42 承载（crop tbl-28）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 43"
+    },
+    {
+      "image_index": 2,
+      "block_index": 51,
+      "original": "1520-",
+      "corrected": "1520——普通万能卡*2",
+      "reason": "印刷行「1520——普通万能卡*2」（crop tbl-2）；v4 将行拆为数字与奖品两片，存活的数字切片『1520-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 51"
+    },
+    {
+      "image_index": 2,
+      "block_index": 52,
+      "original": "普通万能卡*2",
+      "drop": true,
+      "reason": "印刷行「1520——普通万能卡*2」的奖品切片『普通万能卡*2』；此前已裁删，维持删除；整行由载体 b51 承载（crop tbl-2）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 52"
+    },
+    {
+      "image_index": 2,
+      "block_index": 58,
+      "original": "2000-",
+      "corrected": "2000——新星决斗家·赛季专属头像框*1、金耀之匙*1",
+      "reason": "印刷行「2000——新星决斗家·赛季专属头像框*1、金耀之匙*1」（crop tbl-3）；v4 将行拆为数字与奖品两片，存活的数字切片『2000-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 58"
+    },
+    {
+      "image_index": 2,
+      "block_index": 59,
+      "original": "新星决斗家·赛季专属头像框*1、金耀",
+      "drop": true,
+      "reason": "印刷行「2000——新星决斗家·赛季专属头像框*1、金耀之匙*1」的奖品切片『新星决斗家·赛季专属头像框*1、金耀』；此前已裁删，维持删除；整行由载体 b58 承载（crop tbl-3）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 59"
+    },
+    {
+      "image_index": 2,
+      "block_index": 60,
+      "original": "之匙*1",
+      "drop": true,
+      "reason": "印刷行「2000——新星决斗家·赛季专属头像框*1、金耀之匙*1」的奖品切片『之匙*1』；此前已裁删，维持删除；整行由载体 b58 承载（crop tbl-3）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 60"
+    },
+    {
+      "image_index": 2,
+      "block_index": 61,
+      "original": "2210-",
+      "corrected": "2210——宝石*50",
+      "reason": "印刷行「2210——宝石*50」（crop tbl-31）；v4 将行拆为数字与奖品两片，存活的数字切片『2210-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 61"
+    },
+    {
+      "image_index": 2,
+      "block_index": 62,
+      "original": "宝石*50",
+      "drop": true,
+      "reason": "印刷行「2210——宝石*50」的奖品切片『宝石*50』；此前已裁删，维持删除；整行由载体 b61 承载（crop tbl-31）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 62"
+    },
+    {
+      "image_index": 2,
+      "block_index": 63,
+      "original": "银辉之钥*1",
+      "corrected": "2420——银辉之钥*1",
+      "reason": "印刷行「2420——银辉之钥*1」（crop tbl-14）；v4 将行拆为数字与奖品两片，存活的奖品切片『银辉之钥*1』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 63"
+    },
+    {
+      "image_index": 2,
+      "block_index": 66,
+      "original": "2630-",
+      "corrected": "2630——金币*600",
+      "reason": "印刷行「2630——金币*600」（crop tbl-14）；v4 将行拆为数字与奖品两片，存活的数字切片『2630-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 66"
+    },
+    {
+      "image_index": 2,
+      "block_index": 65,
+      "original": "金币*600",
+      "drop": true,
+      "reason": "印刷行「2630——金币*600」的奖品切片『金币*600』；此前已裁删，维持删除；整行由载体 b66 承载（crop tbl-14）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 65"
+    },
+    {
+      "image_index": 2,
+      "block_index": 68,
+      "original": "2840-",
+      "corrected": "2840——银辉之钥*1",
+      "reason": "印刷行「2840——银辉之钥*1」（crop tbl-32）；v4 将行拆为数字与奖品两片，存活的数字切片『2840-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 68"
+    },
+    {
+      "image_index": 2,
+      "block_index": 67,
+      "original": "银辉之钥*1",
+      "drop": true,
+      "reason": "印刷行「2840——银辉之钥*1」的奖品切片『银辉之钥*1』；此前已裁删，维持删除；整行由载体 b68 承载（crop tbl-32）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 67"
+    },
+    {
+      "image_index": 2,
+      "block_index": 69,
+      "original": "金币*800",
+      "corrected": "3050——金币*800",
+      "reason": "印刷行「3050——金币*800」（crop tbl-10）；v4 将行拆为数字与奖品两片，存活的奖品切片『金币*800』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 69"
+    },
+    {
+      "image_index": 2,
+      "block_index": 75,
+      "original": "3500-",
+      "corrected": "3500——首席决斗铭牌*1、非凡卡包*1",
+      "reason": "印刷行「3500——首席决斗铭牌*1、非凡卡包*1」（crop tbl-17）；v4 将行拆为数字与奖品两片，存活的数字切片『3500-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 75"
+    },
+    {
+      "image_index": 2,
+      "block_index": 74,
+      "original": "首席决斗铭牌*1、非凡卡包*1",
+      "drop": true,
+      "reason": "印刷行「3500——首席决斗铭牌*1、非凡卡包*1」的奖品切片『首席决斗铭牌*1、非凡卡包*1』；此前已裁删，维持删除；整行由载体 b75 承载（crop tbl-17）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 74"
+    },
+    {
+      "image_index": 2,
+      "block_index": 76,
+      "original": "3770-",
+      "corrected": "3770——宝石*50",
+      "reason": "印刷行「3770——宝石*50」（crop tbl-17）；v4 将行拆为数字与奖品两片，存活的数字切片『3770-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 76"
+    },
+    {
+      "image_index": 2,
+      "block_index": 77,
+      "original": "宝石*50",
+      "drop": true,
+      "reason": "印刷行「3770——宝石*50」的奖品切片『宝石*50』；此前已裁删，维持删除；整行由载体 b76 承载（crop tbl-17）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 77"
+    },
+    {
+      "image_index": 2,
+      "block_index": 78,
+      "original": "4040-",
+      "corrected": "4040——银辉之钥*1",
+      "reason": "印刷行「4040——银辉之钥*1」（crop tbl-33）；v4 将行拆为数字与奖品两片，存活的数字切片『4040-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 78"
+    },
+    {
+      "image_index": 2,
+      "block_index": 79,
+      "original": "银辉之钥*1",
+      "drop": true,
+      "reason": "印刷行「4040——银辉之钥*1」的奖品切片『银辉之钥*1』；此前已裁删，维持删除；整行由载体 b78 承载（crop tbl-33）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 79"
+    },
+    {
+      "image_index": 2,
+      "block_index": 81,
+      "original": "4310-",
+      "corrected": "4310——金耀之匙*1",
+      "reason": "印刷行「4310——金耀之匙*1」（crop tbl-15）；v4 将行拆为数字与奖品两片，存活的数字切片『4310-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 81"
+    },
+    {
+      "image_index": 2,
+      "block_index": 80,
+      "original": "金耀之匙*1",
+      "drop": true,
+      "reason": "印刷行「4310——金耀之匙*1」的奖品切片『金耀之匙*1』；此前已裁删，维持删除；整行由载体 b81 承载（crop tbl-15）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 80"
+    },
+    {
+      "image_index": 2,
+      "block_index": 82,
+      "original": "金币*800",
+      "corrected": "4580——金币*800",
+      "reason": "印刷行「4580——金币*800」（crop tbl-15）；v4 将行拆为数字与奖品两片，存活的奖品切片『金币*800』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 82"
+    },
+    {
+      "image_index": 2,
+      "block_index": 90,
+      "original": "5400-",
+      "corrected": "5400——荣誉决斗家·赛季专属头像框*1、荣誉决斗铭牌*1",
+      "reason": "印刷行「5400——荣誉决斗家·赛季专属头像框*1、荣誉决斗铭牌*1」（crop tbl-16）；v4 将行拆为数字与奖品两片，存活的数字切片『5400-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 90"
+    },
+    {
+      "image_index": 2,
+      "block_index": 91,
+      "original": "荣誉决斗家·赛季专属头像框*1、荣誉",
+      "drop": true,
+      "reason": "印刷行「5400——荣誉决斗家·赛季专属头像框*1、荣誉决斗铭牌*1」的奖品切片『荣誉决斗家·赛季专属头像框*1、荣誉』；此前已裁删，维持删除；整行由载体 b90 承载（crop tbl-16）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 91"
+    },
+    {
+      "image_index": 2,
+      "block_index": 92,
+      "original": "决斗铭牌*1",
+      "drop": true,
+      "reason": "印刷行「5400——荣誉决斗家·赛季专属头像框*1、荣誉决斗铭牌*1」的奖品切片『决斗铭牌*1』；此前已裁删，维持删除；整行由载体 b90 承载（crop tbl-16）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 92"
+    },
+    {
+      "image_index": 2,
+      "block_index": 93,
+      "original": "5700-",
+      "corrected": "5700——宝石*50",
+      "reason": "印刷行「5700——宝石*50」（crop tbl-34）；v4 将行拆为数字与奖品两片，存活的数字切片『5700-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 93"
+    },
+    {
+      "image_index": 2,
+      "block_index": 94,
+      "original": "宝石*50",
+      "drop": true,
+      "reason": "印刷行「5700——宝石*50」的奖品切片『宝石*50』；此前已裁删，维持删除；整行由载体 b93 承载（crop tbl-34）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 94"
+    },
+    {
+      "image_index": 2,
+      "block_index": 96,
+      "original": "6000-",
+      "corrected": "6000——金币*800",
+      "reason": "印刷行「6000——金币*800」（crop tbl-35）；v4 将行拆为数字与奖品两片，存活的数字切片『6000-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 96"
+    },
+    {
+      "image_index": 2,
+      "block_index": 95,
+      "original": "金币*800",
+      "drop": true,
+      "reason": "印刷行「6000——金币*800」的奖品切片『金币*800』；此前已裁删，维持删除；整行由载体 b96 承载（crop tbl-35）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 95"
+    },
+    {
+      "image_index": 2,
+      "block_index": 97,
+      "original": "6300-",
+      "corrected": "6300——银辉之钥*1",
+      "reason": "印刷行「6300——银辉之钥*1」（crop tbl-36）；v4 将行拆为数字与奖品两片，存活的数字切片『6300-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 97"
+    },
+    {
+      "image_index": 2,
+      "block_index": 98,
+      "original": "银辉之钥*1",
+      "drop": true,
+      "reason": "印刷行「6300——银辉之钥*1」的奖品切片『银辉之钥*1』；此前已裁删，维持删除；整行由载体 b97 承载（crop tbl-36）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 98"
+    },
+    {
+      "image_index": 2,
+      "block_index": 99,
+      "original": "金币*800",
+      "corrected": "6600——金币*800",
+      "reason": "印刷行「6600——金币*800」（crop tbl-37）；v4 将行拆为数字与奖品两片，存活的奖品切片『金币*800』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 99"
+    },
+    {
+      "image_index": 2,
+      "block_index": 107,
+      "original": "7500-",
+      "corrected": "7500——殿堂决斗铭牌*1、非凡卡包*1",
+      "reason": "印刷行「7500——殿堂决斗铭牌*1、非凡卡包*1」（crop tbl-40）；v4 将行拆为数字与奖品两片，存活的数字切片『7500-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 107"
+    },
+    {
+      "image_index": 2,
+      "block_index": 106,
+      "original": "殿堂决斗铭牌*1、非凡卡包*1",
+      "drop": true,
+      "reason": "印刷行「7500——殿堂决斗铭牌*1、非凡卡包*1」的奖品切片『殿堂决斗铭牌*1、非凡卡包*1』；此前已裁删，维持删除；整行由载体 b107 承载（crop tbl-40）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 106"
+    },
+    {
+      "image_index": 2,
+      "block_index": 108,
+      "original": "7700-",
+      "corrected": "7700——宝石*50",
+      "reason": "印刷行「7700——宝石*50」（crop tbl-41）；v4 将行拆为数字与奖品两片，存活的数字切片『7700-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 108"
+    },
+    {
+      "image_index": 2,
+      "block_index": 109,
+      "original": "宝石*50",
+      "drop": true,
+      "reason": "印刷行「7700——宝石*50」的奖品切片『宝石*50』；此前已裁删，维持删除；整行由载体 b108 承载（crop tbl-41）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 109"
+    },
+    {
+      "image_index": 2,
+      "block_index": 111,
+      "original": "7900-",
+      "corrected": "7900——金币*1000",
+      "reason": "印刷行「7900——金币*1000」（crop tbl-42）；v4 将行拆为数字与奖品两片，存活的数字切片『7900-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 111"
+    },
+    {
+      "image_index": 2,
+      "block_index": 110,
+      "original": "金币*1000",
+      "drop": true,
+      "reason": "印刷行「7900——金币*1000」的奖品切片『金币*1000』；此前已裁删，维持删除；整行由载体 b111 承载（crop tbl-42）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 110"
+    },
+    {
+      "image_index": 2,
+      "block_index": 112,
+      "original": "银辉之钥*1",
+      "corrected": "8100——银辉之钥*1",
+      "reason": "印刷行「8100——银辉之钥*1」（crop tbl-43）；v4 将行拆为数字与奖品两片，存活的奖品切片『银辉之钥*1』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 112"
+    },
+    {
+      "image_index": 2,
+      "block_index": 121,
+      "original": "巅峰决斗宗师·赛季专属头像框*1",
+      "corrected": "9000——巅峰决斗宗师·赛季专属头像框*1",
+      "reason": "印刷行「9000——巅峰决斗宗师·赛季专属头像框*1」（crop tbl-47）；v4 将行拆为数字与奖品两片，存活的奖品切片『巅峰决斗宗师·赛季专属头像框*1』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 121"
+    },
+    {
+      "image_index": 6,
+      "block_index": 12,
+      "original": "星级2-",
+      "corrected": "星级2——金币*50",
+      "reason": "印刷行「星级2——金币*50」（crop tbl-s1）；v4 将行拆为数字与奖品两片，存活的数字切片『星级2-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 12"
+    },
+    {
+      "image_index": 6,
+      "block_index": 13,
+      "original": "金币*50",
+      "drop": true,
+      "reason": "印刷行「星级2——金币*50」的奖品切片『金币*50』；此前已裁删，维持删除；整行由载体 b12 承载（crop tbl-s1）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 13"
+    },
+    {
+      "image_index": 6,
+      "block_index": 14,
+      "original": "星级3",
+      "corrected": "星级3——金币*60",
+      "reason": "印刷行「星级3——金币*60」（crop tbl-s2）；v4 将行拆为数字与奖品两片，存活的数字切片『星级3』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 14"
+    },
+    {
+      "image_index": 6,
+      "block_index": 15,
+      "original": "金币*60",
+      "drop": true,
+      "reason": "印刷行「星级3——金币*60」的奖品切片『金币*60』；此前已裁删，维持删除；整行由载体 b14 承载（crop tbl-s2）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 15"
+    },
+    {
+      "image_index": 6,
+      "block_index": 17,
+      "original": "星级4",
+      "corrected": "星级4——金币*80",
+      "reason": "印刷行「星级4——金币*80」（crop tbl-s2）；v4 将行拆为数字与奖品两片，存活的数字切片『星级4』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 17"
+    },
+    {
+      "image_index": 6,
+      "block_index": 16,
+      "original": "金币*80",
+      "drop": true,
+      "reason": "印刷行「星级4——金币*80」的奖品切片『金币*80』；此前已裁删，维持删除；整行由载体 b17 承载（crop tbl-s2）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 16"
+    },
+    {
+      "image_index": 6,
+      "block_index": 19,
+      "original": "星级5-",
+      "corrected": "星级5——金币*100",
+      "reason": "印刷行「星级5——金币*100」（crop tbl-s3）；v4 将行拆为数字与奖品两片，存活的数字切片『星级5-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 19"
+    },
+    {
+      "image_index": 6,
+      "block_index": 18,
+      "original": "金币*100",
+      "drop": true,
+      "reason": "印刷行「星级5——金币*100」的奖品切片『金币*100』；此前已裁删，维持删除；整行由载体 b19 承载（crop tbl-s3）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 18"
+    },
+    {
+      "image_index": 6,
+      "block_index": 21,
+      "original": "星级6",
+      "corrected": "星级6——金币*120",
+      "reason": "印刷行「星级6——金币*120」（crop tbl-s3）；v4 将行拆为数字与奖品两片，存活的数字切片『星级6』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 21"
+    },
+    {
+      "image_index": 6,
+      "block_index": 20,
+      "original": "金币*120",
+      "drop": true,
+      "reason": "印刷行「星级6——金币*120」的奖品切片『金币*120』；此前已裁删，维持删除；整行由载体 b21 承载（crop tbl-s3）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 20"
+    },
+    {
+      "image_index": 6,
+      "block_index": 22,
+      "original": "星级7",
+      "corrected": "星级7——金币*130",
+      "reason": "印刷行「星级7——金币*130」（crop tbl-s5）；v4 将行拆为数字与奖品两片，存活的数字切片『星级7』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 22"
+    },
+    {
+      "image_index": 6,
+      "block_index": 60,
+      "original": "金币-",
+      "corrected": "金币——200——32.05%",
+      "reason": "印刷行「金币——200——32.05%」（crop tbl-4）；v4 将行拆为数字与奖品两片，存活的数字切片『金币-』改写为整行；v6 整行佐证",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 60"
+    },
+    {
+      "image_index": 6,
+      "block_index": 61,
+      "original": "-200-",
+      "drop": true,
+      "reason": "印刷行「金币——200——32.05%」的奖品切片『-200-』；此前已裁删，维持删除；整行由载体 b60 承载（crop tbl-4）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 61"
+    },
+    {
+      "image_index": 6,
+      "block_index": 62,
+      "original": "32.05%",
+      "drop": true,
+      "reason": "印刷行「金币——200——32.05%」的奖品切片『32.05%』；此前已裁删，维持删除；整行由载体 b60 承载（crop tbl-4）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 62"
+    },
+    {
+      "image_index": 6,
+      "block_index": 58,
+      "original": "内容",
+      "corrected": "内容——数量——概率",
+      "reason": "表头印刷行「内容——数量——概率」（crop tbl-4）；v4 拆为『数量』『内容』『概率』三块且块序错乱（x 坐标：内容 35 / 数量 128 / 概率 223），以行首格『内容』(b58) 改写为整行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 58"
+    },
+    {
+      "image_index": 6,
+      "block_index": 57,
+      "original": "数量",
+      "drop": true,
+      "reason": "表头行「内容——数量——概率」的格切片『数量』；整行由载体 b58 承载（crop tbl-4）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 57"
+    },
+    {
+      "image_index": 6,
+      "block_index": 59,
+      "original": "概率",
+      "drop": true,
+      "reason": "表头行「内容——数量——概率」的格切片『概率』；整行由载体 b58 承载（crop tbl-4）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 6 59"
+    },
+    {
+      "image_index": 4,
+      "block_index": 42,
+      "original": "传说猫头鹰-1-1-2.00%",
+      "corrected": "传说猫头鹰 - 1 - 1 - 2.00%",
+      "reason": "probability table row prints cell separators as spaced half-width dashes ( - ), zoom p2-51-zoom; v6 matches, v4 drops spaces",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 4 42"
+    },
+    {
+      "image_index": 4,
+      "block_index": 43,
+      "original": "传说魔杖-1-1-1.50%",
+      "corrected": "传说魔杖 - 1 - 1 - 1.50%",
+      "reason": "probability table row prints cell separators as spaced half-width dashes ( - ), zoom p2-51-zoom; v6 matches, v4 drops spaces",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 4 43"
+    },
+    {
+      "image_index": 4,
+      "block_index": 44,
+      "original": "传说时装-1-1-1.20%",
+      "corrected": "传说时装 - 1 - 1 - 1.20%",
+      "reason": "probability table row prints cell separators as spaced half-width dashes ( - ), zoom p2-51-zoom; v6 matches, v4 drops spaces",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 4 44"
+    },
+    {
+      "image_index": 4,
+      "block_index": 45,
+      "original": "家具礼包-1-1-0.30%",
+      "corrected": "家具礼包 - 1 - 1 - 0.30%",
+      "reason": "probability table row prints cell separators as spaced half-width dashes ( - ), zoom p2-51-zoom; v6 matches, v4 drops spaces",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 4 45"
+    },
+    {
+      "image_index": 4,
+      "block_index": 46,
+      "original": "金币-1300-18-17.00%",
+      "corrected": "金币 - 1300 - 18 - 17.00%",
+      "reason": "probability table row prints cell separators as spaced half-width dashes ( - ), zoom p2-51-zoom; v6 matches, v4 drops spaces",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 4 46"
+    },
+    {
+      "image_index": 4,
+      "block_index": 47,
+      "original": "银辉之钥-5-10-16.00%",
+      "corrected": "银辉之钥 - 5 - 10 - 16.00%",
+      "reason": "probability table row prints cell separators as spaced half-width dashes ( - ), zoom p2-51-zoom; v6 matches, v4 drops spaces",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 4 47"
+    },
+    {
+      "image_index": 4,
+      "block_index": 48,
+      "original": "缓和剂（大）-1-5-16.00%",
+      "corrected": "缓和剂（大）- 1 - 5 - 16.00%",
+      "reason": "probability table row prints cell separators as spaced half-width dashes ( - ), zoom p2-51-zoom; v6 matches, v4 drops spaces",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 4 48"
+    },
+    {
+      "image_index": 4,
+      "block_index": 49,
+      "original": "限定家具-1-25-16.00%",
+      "corrected": "限定家具 - 1 - 25 - 16.00%",
+      "reason": "probability table row prints cell separators as spaced half-width dashes ( - ), zoom p2-51-zoom; v6 matches, v4 drops spaces",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 4 49"
+    },
+    {
+      "image_index": 4,
+      "block_index": 50,
+      "original": "回响晶石-400-18-17.00%",
+      "corrected": "回响晶石 - 400 - 18 - 17.00%",
+      "reason": "probability table row prints cell separators as spaced half-width dashes ( - ), zoom p2-51-zoom; v6 matches, v4 drops spaces",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 4 50"
+    },
+    {
+      "image_index": 4,
+      "block_index": 51,
+      "original": "金耀之匙-1-10-13.00%",
+      "corrected": "金耀之匙 - 1 - 10 - 13.00%",
+      "reason": "probability table row prints cell separators as spaced half-width dashes ( - ), zoom p2-51-zoom; v6 matches, v4 drops spaces",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 4 51"
+    },
+    {
+      "image_index": 5,
+      "block_index": 50,
+      "original": "：学院活动关闭：新增了考试周玩法",
+      "corrected": "；学院活动关闭；新增了考试周玩法。",
+      "reason": "line prints leading wrap ；and mid ；and trailing 。; v4 read ：:colons wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 5 50"
+    },
+    {
+      "image_index": 8,
+      "block_index": 5,
+      "original": "6 -60-0-60",
+      "corrected": "6 - 60 - 0 - 60",
+      "reason": "recharge table row prints cell separators as spaced half-width dashes ' - ' (crops p2-78/79/81/82/84-87); neither engine matched exactly",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 8 5"
+    },
+    {
+      "image_index": 8,
+      "block_index": 10,
+      "original": "198 -1980 -1980-3960",
+      "corrected": "198 - 1980 - 1980 - 3960",
+      "reason": "recharge table row prints cell separators as spaced half-width dashes ' - ' (crops p2-78/79/81/82/84-87); neither engine matched exactly",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 8 10"
+    },
+    {
+      "image_index": 8,
+      "block_index": 12,
+      "original": "648-6480 -6480 - 12960",
+      "corrected": "648 - 6480 - 6480 - 12960",
+      "reason": "recharge table row prints cell separators as spaced half-width dashes ' - ' (crops p2-78/79/81/82/84-87); neither engine matched exactly",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 8 12"
+    },
+    {
+      "image_index": 8,
+      "block_index": 15,
+      "original": "6 -60-0-60",
+      "corrected": "6 - 60 - 0 - 60",
+      "reason": "recharge table row prints cell separators as spaced half-width dashes ' - ' (crops p2-78/79/81/82/84-87); neither engine matched exactly",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 8 15"
+    },
+    {
+      "image_index": 8,
+      "block_index": 18,
+      "original": "68 -680-45-725",
+      "corrected": "68 - 680 - 45 - 725",
+      "reason": "recharge table row prints cell separators as spaced half-width dashes ' - ' (crops p2-78/79/81/82/84-87); neither engine matched exactly",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 8 18"
+    },
+    {
+      "image_index": 8,
+      "block_index": 19,
+      "original": "128 -1280 -210-1490",
+      "corrected": "128 - 1280 - 210 - 1490",
+      "reason": "recharge table row prints cell separators as spaced half-width dashes ' - ' (crops p2-78/79/81/82/84-87); neither engine matched exactly",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 8 19"
+    },
+    {
+      "image_index": 8,
+      "block_index": 22,
+      "original": "648-6480-1600 -8080",
+      "corrected": "648 - 6480 - 1600 - 8080",
+      "reason": "recharge table row prints cell separators as spaced half-width dashes ' - ' (crops p2-78/79/81/82/84-87); neither engine matched exactly",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 8 22"
+    },
+    {
+      "image_index": 8,
+      "block_index": 23,
+      "original": "1298-12980 - 3220 - 16200",
+      "corrected": "1298 - 12980 - 3220 - 16200",
+      "reason": "recharge table row prints cell separators as spaced half-width dashes ' - ' (crops p2-78/79/81/82/84-87); neither engine matched exactly",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 8 23"
+    },
+    {
+      "image_index": 8,
+      "block_index": 86,
+      "original": "优化了魔咒“云雾缥缈”、“冰冻咒”、“八眼巨",
+      "corrected": "-优化了魔咒“云雾缥缈”、“冰冻咒”、“八眼巨",
+      "reason": "leading - bullet printed at line start; v6 has it, v4 drops",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 8 86"
+    },
+    {
+      "image_index": 9,
+      "block_index": 1,
+      "original": "1.禁林觅宝”活动",
+      "corrected": "1.“禁林觅宝”活动",
+      "reason": "leading ” after 1. printed tight (no space); v6 matches",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 9 1"
+    },
+    {
+      "image_index": 2,
+      "after_block": 20,
+      "insert": true,
+      "text": "225——金币*300",
+      "reason": "行「225——金币*300」的 v4 切片（b22 225-、b23 金币*300）均已按 v6 整行被删，无存活块；crop tbl-5 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-5.png"
+    },
+    {
+      "image_index": 2,
+      "after_block": 20,
+      "insert": true,
+      "text": "270——宝石*20",
+      "reason": "行「270——宝石*20」的 v4 切片（b25 270-、b24 宝石*20）均已按 v6 整行被删，无存活块；crop tbl-6 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-6.png"
+    },
+    {
+      "image_index": 2,
+      "after_block": 36,
+      "insert": true,
+      "text": "720——金币*500",
+      "reason": "行「720——金币*500」的 v4 切片（b37 720-、b38 金币*500）均已按 v6 整行被删，无存活块；crop tbl-7 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-7.png"
+    },
+    {
+      "image_index": 2,
+      "after_block": 36,
+      "insert": true,
+      "text": "800——银辉之钥*1",
+      "reason": "行「800——银辉之钥*1」的 v4 切片（b40 800-、b39 银辉之钥*1）均已按 v6 整行被删，无存活块；crop tbl-8 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-8.png"
+    },
+    {
+      "image_index": 2,
+      "after_block": 51,
+      "insert": true,
+      "text": "1675——金币*600",
+      "reason": "行「1675——金币*600」的 v4 切片（b54 1675-、b53 金币*600）均已按 v6 整行被删，无存活块；crop tbl-9 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-9.png"
+    },
+    {
+      "image_index": 2,
+      "after_block": 51,
+      "insert": true,
+      "text": "1830——银辉之钥*1",
+      "reason": "行「1830——银辉之钥*1」的 v4 切片（b56 1830-、b55 银辉之钥*1）均已按 v6 整行被删，无存活块；crop tbl-3 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-3.png"
+    },
+    {
+      "image_index": 2,
+      "after_block": 69,
+      "insert": true,
+      "text": "3260——稀有万能卡*1",
+      "reason": "行「3260——稀有万能卡*1」的 v4 切片（b72 3260-、b71 稀有万能卡*1）均已按 v6 整行被删，无存活块；crop tbl-11 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-11.png"
+    },
+    {
+      "image_index": 2,
+      "after_block": 82,
+      "insert": true,
+      "text": "4850——稀有万能卡*1",
+      "reason": "行「4850——稀有万能卡*1」的 v4 切片（b84 4850-、b86 4850、b85 稀有万能卡*1）均已按 v6 整行被删，无存活块；crop tbl-12 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-12.png"
+    },
+    {
+      "image_index": 2,
+      "after_block": 82,
+      "insert": true,
+      "text": "5120——银辉之钥*1",
+      "reason": "行「5120——银辉之钥*1」的 v4 切片（b87 5120-、b88 银辉之钥*1）均已按 v6 整行被删，无存活块；crop tbl-13 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-13.png"
+    },
+    {
+      "image_index": 2,
+      "after_block": 99,
+      "insert": true,
+      "text": "6900——史诗万能卡*1",
+      "reason": "行「6900——史诗万能卡*1」的 v4 切片（b101 6900-、b102 史诗万能卡*1）均已按 v6 整行被删，无存活块；crop tbl-38 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-38.png"
+    },
+    {
+      "image_index": 2,
+      "after_block": 99,
+      "insert": true,
+      "text": "7200——银辉之钥*1",
+      "reason": "行「7200——银辉之钥*1」的 v4 切片（b103 7200-、b104 银辉之钥*1）均已按 v6 整行被删，无存活块；crop tbl-39 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-39.png"
+    },
+    {
+      "image_index": 2,
+      "after_block": 112,
+      "insert": true,
+      "text": "8300——史诗万能卡*1",
+      "reason": "行「8300——史诗万能卡*1」的 v4 切片（b115 8300-、b114 史诗万能卡*1）均已按 v6 整行被删，无存活块；crop tbl-44 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-44.png"
+    },
+    {
+      "image_index": 2,
+      "after_block": 112,
+      "insert": true,
+      "text": "8500——金耀之匙*1",
+      "reason": "行「8500——金耀之匙*1」的 v4 切片（b116 8500-、b117 金耀之匙*1）均已按 v6 整行被删，无存活块；crop tbl-45 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-45.png"
+    },
+    {
+      "image_index": 2,
+      "after_block": 112,
+      "insert": true,
+      "text": "8750——银辉之钥*1",
+      "reason": "行「8750——银辉之钥*1」的 v4 切片（b118 8750-、b119 银辉之钥*1）均已按 v6 整行被删，无存活块；crop tbl-46 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-46.png"
+    },
+    {
+      "image_index": 6,
+      "after_block": 22,
+      "insert": true,
+      "text": "星级8——金币*160",
+      "reason": "行「星级8——金币*160」的 v4 切片（b24 星级8、b25 金币*160）均已按 v6 整行被删，无存活块；crop tbl-s5 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-s5.png"
+    },
+    {
+      "image_index": 6,
+      "after_block": 22,
+      "insert": true,
+      "text": "星级9——金币*180",
+      "reason": "行「星级9——金币*180」的 v4 切片（b26 星级9、b27 金币*180）均已按 v6 整行被删，无存活块；crop tbl-s4 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-s4.png"
+    },
+    {
+      "image_index": 6,
+      "after_block": 22,
+      "insert": true,
+      "text": "星级10——金币*200",
+      "reason": "行「星级10——金币*200」的 v4 切片（b28 星级10、b29 金币*200）均已按 v6 整行被删，无存活块；crop tbl-s4 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-s4.png"
+    },
+    {
+      "image_index": 6,
+      "after_block": 60,
+      "insert": true,
+      "text": "银辉之钥——1——12.82%",
+      "reason": "行「银辉之钥——1——12.82%」的 v4 切片（b65 银辉之钥、b64 1、b66 12.82%）均已按 v6 整行被删，无存活块；crop tbl-18 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-18.png"
+    },
+    {
+      "image_index": 6,
+      "after_block": 60,
+      "insert": true,
+      "text": "回响晶石——60——32.05%",
+      "reason": "行「回响晶石——60——32.05%」的 v4 切片（b68 回响晶石-、b67 32.05%、b69 60-、b70 回响晶石）均已按 v6 整行被删，无存活块；crop tbl-20 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-20.png"
+    },
+    {
+      "image_index": 6,
+      "after_block": 60,
+      "insert": true,
+      "text": "魔药素材包——1——12.82%",
+      "reason": "行「魔药素材包——1——12.82%」的 v4 切片（b71 魔药素材包、b72 1、b73 12.82%）均已按 v6 整行被删，无存活块；crop tbl-19 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-19.png"
+    },
+    {
+      "image_index": 6,
+      "after_block": 60,
+      "insert": true,
+      "text": "宝石——5——10.26%",
+      "reason": "行「宝石——5——10.26%」的 v4 切片（b75 宝石一、b74 5、b76 10.26%）均已按 v6 整行被删，无存活块；crop tbl-19 复核印刷行后整行插入",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": ".review/audit/adj-crops/tbl-19.png"
     }
   ]
 }

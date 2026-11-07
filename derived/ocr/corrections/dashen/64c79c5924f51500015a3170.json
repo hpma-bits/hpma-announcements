@@ -22,6 +22,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.64c79c5924f51500015a3170 1 4"
+    },
+    {
+      "image_index": 1,
+      "block_index": 9,
+      "original": "修复了部分情况下，伙伴卡“凯文法雷尔”为巫师多次",
+      "corrected": "修复了部分情况下，伙伴卡“凯文·法雷尔”为巫师多次",
+      "reason": "interpunct · printed in 凯文·法雷尔 (crop); v4 drops it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64c79c5924f51500015a3170 1 9"
     }
   ]
 }

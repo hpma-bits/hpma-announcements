@@ -256,6 +256,86 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 3 31"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "哈利·波特”或“昔日重现-阿不思·邓布利多”时，则第50",
+      "corrected": "-哈利·波特”或“昔日重现-阿不思·邓布利多”时，则第50",
+      "reason": "line starts with wrap - (昔日重现-哈利·波特 split across lines); interpuncts printed; v4 drops leading -",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 1 13"
+    },
+    {
+      "image_index": 2,
+      "block_index": 29,
+      "original": "“春步漫野”主题舞会融雪而来！",
+      "corrected": "*“春步漫野”主题舞会融雪而来！",
+      "reason": "star ornament printed before ”春步漫野”主题舞会融雪而来！ (v6-only star real); ！ full-width",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 2 29"
+    },
+    {
+      "image_index": 3,
+      "block_index": 6,
+      "original": "*全新赛季故事·第一章&第二章！",
+      "corrected": "*全新赛季故事·第一章 & 第二章！",
+      "reason": "star ornament printed; interpunct · printed; spaces printed around & (crop gaps); v4 missed spaces, v6 missed star",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 3 6"
+    },
+    {
+      "image_index": 3,
+      "block_index": 13,
+      "original": "觅遗忘的记忆，呈现在眼前却是更多的谜团...",
+      "corrected": "觅遗忘的记忆，呈现在眼前却是更多的谜团……",
+      "reason": "line ends six-dot ellipsis ……; v4 1 dot, v6 garbled .……..",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 3 13"
+    },
+    {
+      "image_index": 3,
+      "block_index": 54,
+      "original": "\"“学院宝箱”系统上线！",
+      "corrected": "”学院宝箱”系统上线！",
+      "reason": "header ”学院宝箱”系统上线！ between flourishes: no star, no edge spaces, ！ full-width; v4 doubled the opening quote, v6 space+half-width ! wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 3 54"
+    },
+    {
+      "image_index": 3,
+      "block_index": 80,
+      "original": "“赛季商店”系统上线！",
+      "corrected": "”赛季商店”系统上线！",
+      "reason": "header between flourishes: no star, no edge spaces, ！ full-width; v6 edge spaces + nothing else wrong, v4 matches except nothing — v4 text == corrected",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 3 80"
+    },
+    {
+      "image_index": 3,
+      "block_index": 114,
+      "original": "“巫师友队”功能上线！",
+      "corrected": "”巫师友队”功能上线！",
+      "reason": "header between flourishes: no star, no edge spaces, ！ full-width; v6 space+half-! wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 3 114"
+    },
+    {
+      "image_index": 4,
+      "block_index": 1,
+      "original": "“禁林探险家”活动开启！",
+      "corrected": "*“禁林探险家”活动开启！",
+      "reason": "star ornament printed before ”禁林探险家”活动开启！ (v6-only star real); ！ full-width",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65c0f65053b12a0001635ee1 4 1"
     }
   ]
 }
