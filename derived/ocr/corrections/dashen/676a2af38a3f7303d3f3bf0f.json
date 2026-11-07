@@ -121,6 +121,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 84"
+    },
+    {
+      "image_index": 1,
+      "block_index": 12,
+      "original": "头鹰“小北鹰”。集齐家具套装后，可在巫师空间领",
+      "corrected": "头鹰“小北鹰鸮”。集齐家具套装后，可在巫师空间领",
+      "reason": "seg169 crop clearly shows red 小北鹰鸮 (v4 b12 missed 鸮); equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 12"
+    },
+    {
+      "image_index": 1,
+      "block_index": 17,
+      "original": "“童话赛季·冬夜故事谈”持读更新！",
+      "corrected": "“童话赛季·冬夜故事谈”持续更新!",
+      "reason": "seg170 crop shows art banner “童话赛季·冬夜故事谈”持续更新 with curly quotes, · and narrow half-width-style !; v4 持读 is a misread of 持续 and full-width ！ wrong; v6 dropped the opening “",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 17"
+    },
+    {
+      "image_index": 1,
+      "block_index": 46,
+      "original": "完成任务",
+      "drop": true,
+      "reason": "seg171 crop shows printed line 完成任务，达成对应等级可获得传说品质唇妆“杏子浅 carried by v4 b47; b46 完成任务 is a duplicate head fragment; v6 李子 is a misread of red 杏子",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 46"
+    },
+    {
+      "image_index": 1,
+      "block_index": 151,
+      "original": "释放的施法方向异常的向题。",
+      "drop": true,
+      "reason": "seg172 crop shows printed line 释放时施法方向异常的问题。 exactly carried by v4 b150; b151 释放的施法方向异常的向题。 is a misread duplicate; v6 b164 garbled",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 151"
     }
   ]
 }

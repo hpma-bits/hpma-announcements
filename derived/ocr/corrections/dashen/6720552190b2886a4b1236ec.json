@@ -80,6 +80,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.6720552190b2886a4b1236ec 1 47"
+    },
+    {
+      "image_index": 1,
+      "block_index": 57,
+      "original": "同的场景、不同的题目，究竟会进发出别样的火花呢？",
+      "corrected": "同的场景、不同的题目，究竟会迸发出别样的火花呢？",
+      "reason": "seg159 crop shows 究竟会迸发出别样的火花呢？ with 迸 (v4 wrote 进发); v4 full-width ？ matches print; v6 half-width ? wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6720552190b2886a4b1236ec 1 57"
     }
   ]
 }

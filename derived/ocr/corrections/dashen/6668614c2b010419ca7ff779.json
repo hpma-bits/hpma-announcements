@@ -443,6 +443,56 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 6 26"
+    },
+    {
+      "image_index": 2,
+      "block_index": 28,
+      "original": "示前在指定地点导找角色，",
+      "drop": true,
+      "reason": "seg107 crop shows printed line 活动期间，巫师需根据提示前往指定地点寻找角色， carried by v4 b27; b28 示前在指定地点导找角色， is a partial misread duplicate (导找)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 2 28"
+    },
+    {
+      "image_index": 3,
+      "block_index": 5,
+      "original": "充值额度达到9680星石，可领取大奖：“翼”，让鹰",
+      "corrected": "充值额度达到9680星石，可领取大奖：“蔫翼”，让鹰",
+      "reason": "seg108 crop shows red prize name 蔫翼 (v4 b5 dropped 蔫); equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 3 5"
+    },
+    {
+      "image_index": 5,
+      "block_index": 14,
+      "original": "换卡功能更新！",
+      "corrected": "换卡功能更新!",
+      "reason": "zoom d2-z156 shows art banner 换卡功能更新 with narrow half-width-style !; v4 full-width ！ wrong; v6 trailing 2 is flourish noise",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 5 14"
+    },
+    {
+      "image_index": 5,
+      "block_index": 23,
+      "original": "已拥有时装“权力之辉”“深邃默者”、“异界魅影”",
+      "corrected": "已拥有时装“权力之辉”、“深邃缄默者”、“异界魅影”、",
+      "reason": "seg110 crop shows 、 after 辉, 缄默者 with 缄, and trailing 、 (v4 b23 missed all three); equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 5 23"
+    },
+    {
+      "image_index": 5,
+      "block_index": 27,
+      "original": "社团挑战功能更新！",
+      "corrected": "社团挑战功能更新!",
+      "reason": "zoom d2-z158 shows art banner 社团挑战功能更新 with narrow half-width-style !; v4 full-width ！ wrong; v6 S…心 are flourish noise",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 5 27"
     }
   ]
 }

@@ -149,6 +149,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.67b3fba157529f558a4e05e2 3 5"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "头鹰“炸毛雪”。集齐家具套装后，可在巫师空间领",
+      "corrected": "头鹰“炸毛雪鸮”。集齐家具套装后，可在巫师空间领",
+      "reason": "seg185 crop clearly shows red 炸毛雪鸮 (v4 b11 missed 鸮); equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67b3fba157529f558a4e05e2 1 11"
+    },
+    {
+      "image_index": 1,
+      "block_index": 22,
+      "original": "宣传单上，黑魔王笑着，混乱与恐慌正侵袭伦敦地",
+      "corrected": "宣传单上，黑魔王狞笑着，混乱与恐慌正侵袭伦敦地",
+      "reason": "seg186 crop clearly shows 黑魔王狞笑着 (v4 b22 missed 狞); equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67b3fba157529f558a4e05e2 1 22"
+    },
+    {
+      "image_index": 1,
+      "block_index": 29,
+      "original": "开启时间：2025年2月19日维护后大神@哈利波特魔法觉醒",
+      "corrected": "开启时间：2025年2月19日维护后",
+      "reason": "seg187 crop shows the line complete at 维护后 with the 大神@哈利波特魔法觉醒 watermark sitting after it, not covering text; v4/v6 watermark tails are OCR garbage",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67b3fba157529f558a4e05e2 1 29"
+    },
+    {
+      "image_index": 5,
+      "block_index": 15,
+      "original": "8、优化了“飞天扫帚架”、“权冠魔杖架”、“森中影”、",
+      "corrected": "8、优化了“飞天扫帚架”、“权冠魔杖架”、“森中鸮影”、",
+      "reason": "zoom d2-z245 clearly shows “森中鸮影” and the line ending with 、 with no trailing paren (v4 b15 missed 鸮 and appended a stray ()",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67b3fba157529f558a4e05e2 5 15"
     }
   ]
 }

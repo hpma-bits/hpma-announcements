@@ -354,6 +354,56 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 7 25"
+    },
+    {
+      "image_index": 1,
+      "block_index": 24,
+      "original": "宣传单上，黑魔王笑着，混乱与恐慌正侵袭伦敦地",
+      "corrected": "宣传单上，黑魔王狞笑着，混乱与恐慌正侵袭伦敦地",
+      "reason": "seg177 crop clearly shows 黑魔王狞笑着 (v4 b24 missed 狞); equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 1 24"
+    },
+    {
+      "image_index": 4,
+      "block_index": 28,
+      "original": "用有其它可发放礼",
+      "drop": true,
+      "reason": "seg178 crop shows printed line 仅“如翼·献瑞”可发放礼物，若巫师拥有其它可发放礼 carried by v4 b27; b28 用有其它可发放礼 is a garbled duplicate slice",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 4 28"
+    },
+    {
+      "image_index": 5,
+      "block_index": 60,
+      "original": "“深邃默者”",
+      "drop": true,
+      "reason": "zoom d2-z233 shows the printed line 脚印特效补充：“深邃缄默者”、“权力之辉”… carried by v4 b62 (item 234); b60 “深邃默者” is a middle fragment duplicate of that line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 5 60"
+    },
+    {
+      "image_index": 5,
+      "block_index": 62,
+      "original": "脚印特效补充：“深邃默者”、“权神辉合利波特魔法觉醒",
+      "corrected": "脚印特效补充：“深邃缄默者”、“权力之辉”",
+      "reason": "zoom d2-z234: 脚印特效补充：“深邃缄默者”、“权 legible (v4 missed 缄), tail 力之辉” recovered from fragments under the 大神@哈利波特魔法觉醒 watermark (name consistent with corpus); anything after 辉” unrecoverable",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 5 62"
+    },
+    {
+      "image_index": 6,
+      "block_index": 3,
+      "original": "风咒：由原本的2魔力值调整为4魔力值。",
+      "corrected": "飓风咒：由原本的2魔力值调整为4魔力值。",
+      "reason": "seg180 crop clearly shows 飓风咒 (v4 b3 missed 飓); equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 6 3"
     }
   ]
 }

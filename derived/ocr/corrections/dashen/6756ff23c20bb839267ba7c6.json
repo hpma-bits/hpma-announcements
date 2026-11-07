@@ -344,6 +344,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 5 3"
+    },
+    {
+      "image_index": 4,
+      "block_index": 5,
+      "original": "*“糖梅圣诞夜·主题舞会”然起舞！",
+      "corrected": "*“糖梅圣诞夜·主题舞会”翩然起舞！",
+      "reason": "seg165 crop shows star line ✻“糖梅圣诞夜·主题舞会”翩然起舞！ in serif font (v4 b5 missed 翩; v6 dropped the star and used narrow !)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 4 5"
+    },
+    {
+      "image_index": 4,
+      "block_index": 57,
+      "original": "完值额度达额度达到%80星",
+      "drop": true,
+      "reason": "seg166 crop shows the 充值额度达额度达到9680星石… line carried by v4 b55; b57 完值额度达额度达到%80星 is a garbled re-read duplicate; matches lowconf prior drop",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 4 57"
+    },
+    {
+      "image_index": 4,
+      "block_index": 59,
+      "original": "巫师将进入魔器“咻砰雪人”的视角，",
+      "drop": true,
+      "reason": "seg166 crop shows printed line 砰雪人”。巫师将进入魔器“咻砰雪人”的视角，向附近 carried by v4 b61; b59 巫师将进入魔器“咻砰雪人”的视角， is a partial duplicate slice",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 4 59"
+    },
+    {
+      "image_index": 5,
+      "block_index": 31,
+      "original": "活动时间：2024年12月18日5：00-2025年1月1日5:00",
+      "corrected": "活动时间：2024年12月18日5:00-2025年1月1日5:00",
+      "reason": "seg168 crop clearly shows 5:00 with half-width colon (twins b30/b31 both wrote 5：00); twin b30 needs the same fix",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 5 31"
     }
   ]
 }

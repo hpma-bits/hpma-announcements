@@ -80,6 +80,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.66b0f0ccc68d6f3157dc2fa0 2 30"
+    },
+    {
+      "image_index": 1,
+      "block_index": 27,
+      "original": "一请听校报记者洛蒂为您带来报导！",
+      "corrected": "——请听校报记者洛蒂为您带来报导！",
+      "reason": "zoom d2-z184 shows the line starting with a long double dash —— (v4 read ideograph 一, v6 dropped it) and full-width ！ in serif body font; v6 half-width ! wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66b0f0ccc68d6f3157dc2fa0 1 27"
+    },
+    {
+      "image_index": 1,
+      "block_index": 47,
+      "original": "本赛季中更多学年故事将每2周更新神敬请期使特魔法觉醒",
+      "corrected": "本赛季中更多学年故事将每2周更新，敬请期待！",
+      "reason": "zoom d2-z185: head 本赛季中更多学年故事将每2周更新 legible; tail ，敬请期待！ recovered from fragments under the 大神@哈利波特魔法觉醒 watermark; v4/v6 tails are watermark OCR garbage",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66b0f0ccc68d6f3157dc2fa0 1 47"
+    },
+    {
+      "image_index": 3,
+      "block_index": 29,
+      "original": "活动时间：2024年8月7日5:00－8月14日5:00",
+      "corrected": "活动时间：2024年8月7日5:00-8月14日5:00",
+      "reason": "zoom d2-z186 shows short half-width range dash (v4 b29 wrote full-width －); time colons half-width matching; twin b30 additionally has 5：00",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66b0f0ccc68d6f3157dc2fa0 3 29"
     }
   ]
 }

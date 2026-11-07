@@ -268,6 +268,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 5 26"
+    },
+    {
+      "image_index": 2,
+      "block_index": 11,
+      "original": "一请听校报记者洛蒂为您带来报导！",
+      "corrected": "——请听校报记者洛蒂为您带来报导！",
+      "reason": "seg138 crop shows the line starting with long double dash —— (v4 read ideograph 一, v6 dropped it and used narrow !); full-width ！ in serif font",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 2 11"
+    },
+    {
+      "image_index": 3,
+      "block_index": 1,
+      "original": "湖光敛滟，乐声悠扬，晚夏将息而秋日正好！",
+      "corrected": "湖光潋滟，乐声悠扬，晚夏将息而秋日正好！",
+      "reason": "seg139 crop clearly shows 湖光潋滟 with 氵radical (v4 wrote 敛滟); v6 s is flourish noise",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 3 1"
+    },
+    {
+      "image_index": 3,
+      "block_index": 23,
+      "original": "华成欢乐的叹，在这片永恒的森林中回荡。",
+      "corrected": "华成欢乐的喟叹，在这片永恒的森林中回荡。",
+      "reason": "seg140 crop clearly shows 欢乐的喟叹 (v4 b23 dropped 喟); equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 3 23"
+    },
+    {
+      "image_index": 4,
+      "block_index": 40,
+      "original": "魔法史课题库继续更新！",
+      "corrected": "魔法史课题库继续更新!",
+      "reason": "zoom d2-z191 shows art banner 魔法史课题库继续更新 with narrow half-width-style !; v4 full-width ！ wrong; v6 trailing 心 is flourish noise",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 4 40"
     }
   ]
 }

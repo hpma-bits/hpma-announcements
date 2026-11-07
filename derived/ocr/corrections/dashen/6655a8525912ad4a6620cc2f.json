@@ -285,6 +285,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 1 52"
+    },
+    {
+      "image_index": 1,
+      "block_index": 58,
+      "original": "同时获得碧赠送的水生植物新手补给包，包含“地精",
+      "corrected": "同时获得葭碧赠送的水生植物新手补给包，包含“地精",
+      "reason": "seg102 crop shows 同时获得葭碧赠送的…; v4 b58 missed 葭; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 1 58"
+    },
+    {
+      "image_index": 1,
+      "block_index": 63,
+      "original": "S7黑湖赛季即将开启！",
+      "corrected": "S7黑湖赛季即将开启!",
+      "reason": "zoom d2-z150 shows art banner S7黑湖赛季即将开启 with simplified 黑 and narrow half-width-style !; v4 full-width ！ wrong; v6 黒 variant wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 1 63"
+    },
+    {
+      "image_index": 2,
+      "block_index": 95,
+      "original": "2次使用“提灯\"可获得双倍奖励。大神@哈利波特魔法觉醒",
+      "corrected": "2次使用“提灯”可获得双倍奖励。",
+      "reason": "seg106 crop shows the complete line with curly quotes and 。; the 大神@哈利波特魔法觉醒 watermark sits after the line, not over text; v4 straight quote and watermark tail are wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 2 95"
     }
   ]
 }

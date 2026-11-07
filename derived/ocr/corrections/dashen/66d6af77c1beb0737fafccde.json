@@ -106,6 +106,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.66d6af77c1beb0737fafccde 1 39"
+    },
+    {
+      "image_index": 1,
+      "block_index": 17,
+      "original": "“洲际巫师杯赛季”开启！",
+      "corrected": "“洲际巫师杯赛季”开启!",
+      "reason": "zoom d2-z192 shows art banner “洲际巫师杯赛季”开启 with curly quotes and narrow half-width-style !; v4 full-width ！ wrong; v6 b17 试手气吧！ is a garbage mis-pair",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66d6af77c1beb0737fafccde 1 17"
     }
   ]
 }
