@@ -1,0 +1,284 @@
+{
+  "blocks": [
+    {
+      "block_index": 0,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "318889abecc8c9f6"
+    },
+    {
+      "block_index": 1,
+      "image_index": 1,
+      "status": "watermark",
+      "text_sha256": "7b794e6653640e14"
+    },
+    {
+      "block_index": 2,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "e7de1f14ad76cec7"
+    },
+    {
+      "block_index": 3,
+      "image_index": 1,
+      "status": "corrected",
+      "text_sha256": "2e02bc4a0757602c"
+    },
+    {
+      "block_index": 4,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "19208609823f9f4c"
+    },
+    {
+      "block_index": 5,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "8e86ea4cee37ba38"
+    },
+    {
+      "block_index": 6,
+      "image_index": 1,
+      "status": "corrected",
+      "text_sha256": "3693bcb9022ed6b1"
+    },
+    {
+      "block_index": 7,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "9feba2e35522f8f1"
+    },
+    {
+      "block_index": 8,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "22ee981bef490c7d"
+    },
+    {
+      "block_index": 9,
+      "image_index": 1,
+      "status": "corrected",
+      "text_sha256": "df773ba013496852"
+    },
+    {
+      "block_index": 10,
+      "image_index": 1,
+      "status": "corrected",
+      "text_sha256": "92eafdcd86e0d2de"
+    },
+    {
+      "block_index": 11,
+      "image_index": 1,
+      "status": "corrected",
+      "text_sha256": "222fdb4817f82f32"
+    },
+    {
+      "block_index": 12,
+      "image_index": 1,
+      "status": "punct_rule",
+      "text_sha256": "5f455d18be1bd01b"
+    },
+    {
+      "block_index": 13,
+      "image_index": 1,
+      "status": "corrected",
+      "text_sha256": "5465dbdf2fd72629"
+    },
+    {
+      "block_index": 14,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "e10cdd396ff82aaa"
+    },
+    {
+      "block_index": 15,
+      "image_index": 1,
+      "status": "corrected",
+      "text_sha256": "f1c94e4fbf45f1bd"
+    },
+    {
+      "block_index": 16,
+      "image_index": 1,
+      "status": "corrected",
+      "text_sha256": "f5558150b805de38"
+    },
+    {
+      "block_index": 17,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "6ae60eb4f5b488b4"
+    },
+    {
+      "block_index": 18,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "fd2a20fc76741d37"
+    },
+    {
+      "block_index": 19,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "9bc0fb10b7f9d781"
+    },
+    {
+      "block_index": 20,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "e6f158454f73007b"
+    },
+    {
+      "block_index": 21,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "0d40a9892ebd87fc"
+    },
+    {
+      "block_index": 22,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "c03f290ea1fca629"
+    },
+    {
+      "block_index": 23,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "ec4febf8796a5de5"
+    },
+    {
+      "block_index": 24,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "f682aba947985700"
+    },
+    {
+      "block_index": 25,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "3bb25d6f356086be"
+    },
+    {
+      "block_index": 26,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "202c851f6df7f99c"
+    },
+    {
+      "block_index": 27,
+      "image_index": 1,
+      "status": "corrected",
+      "text_sha256": "280ac3fb2cb9da1b"
+    },
+    {
+      "block_index": 28,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "1ab189365803cc7c"
+    },
+    {
+      "block_index": 29,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "24ecea8733d14ed1"
+    },
+    {
+      "block_index": 30,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "bbbdd34d78a49910"
+    },
+    {
+      "block_index": 31,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "77cbc230d3eb6192"
+    },
+    {
+      "block_index": 32,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "2828942634d9ef0d"
+    },
+    {
+      "block_index": 33,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "9f2815d0fdb73cc9"
+    },
+    {
+      "block_index": 34,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "90f478b71dae4fba"
+    },
+    {
+      "block_index": 35,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "7a66eb0f62dae0e2"
+    },
+    {
+      "block_index": 36,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "95c5d564e4029497"
+    },
+    {
+      "block_index": 37,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "1106e298ae21c22c"
+    },
+    {
+      "block_index": 38,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "7ab9461e9cd39188"
+    },
+    {
+      "block_index": 39,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "4efb5e293f3b5c87"
+    },
+    {
+      "block_index": 40,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "de2e2ab8366dca02"
+    },
+    {
+      "block_index": 41,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "84c9db9644b46b33"
+    },
+    {
+      "block_index": 42,
+      "image_index": 1,
+      "status": "watermark",
+      "text_sha256": "ae6064522bfb17ca"
+    }
+  ],
+  "counts": {
+    "consensus": 31,
+    "corrected": 9,
+    "punct_rule": 1,
+    "watermark": 2
+  },
+  "engine_audit": {
+    "cls": "off",
+    "model": "PP-OCRv6-small",
+    "name": "rapidocr",
+    "tiling": "1280+256",
+    "version": "3.10.0"
+  },
+  "engine_record": {
+    "cls": "off",
+    "model": "PP-OCRv4",
+    "name": "rapidocr-onnxruntime",
+    "tiling": "1280+256",
+    "version": "1.4.4"
+  },
+  "id": "dashen.63b41fd13408360001476aec",
+  "v6_only": []
+}

@@ -14,7 +14,7 @@ import json
 import sys
 from pathlib import Path
 
-from . import archive, audit_compare, crop, doctor, edition, ocr_audit
+from . import archive, audit_compare, audit_status, crop, doctor, edition, ocr_audit
 
 CROP_DIR = Path(".review/crops")
 
@@ -45,7 +45,8 @@ def _verify(args: argparse.Namespace) -> int:
 
 def _crop(args: argparse.Namespace) -> int:
     feed = archive.feed_id(args.notice)
-    notice = archive.load_ocr(feed)
+    layer_dir = "derived/ocr-v6/dashen" if args.v6 else "derived/ocr/dashen"
+    notice = archive.read_json(archive.REPO_ROOT / layer_dir / f"{feed}.json")
     images = notice.get("images", [])
     if not 1 <= args.image <= len(images):
         raise CliError(f"image index out of range: {args.image} (notice has {len(images)})")
@@ -117,6 +118,10 @@ def _audit_compare(args: argparse.Namespace) -> int:
     return 0
 
 
+def _audit_status(args: argparse.Namespace) -> int:
+    return audit_status.run(soft=args.soft)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         prog="python -m tools.cli", description="Local tooling for the announcement archive."
@@ -136,6 +141,10 @@ def main(argv: list[str] | None = None) -> int:
     crop_cmd.add_argument("--scale", type=float, default=0.0, help="0 fits --target-width")
     crop_cmd.add_argument("--target-width", type=float, default=1400.0)
     crop_cmd.add_argument("--out", default=None)
+    crop_cmd.add_argument(
+        "--v6", action="store_true",
+        help="address blocks in the v6 audit layer (derived/ocr-v6) instead of the v4 record",
+    )
     crop_cmd.set_defaults(func=_crop)
 
     edition_cmd = sub.add_parser("edition", help="render the readable text edition")
@@ -180,6 +189,15 @@ def main(argv: list[str] | None = None) -> int:
         "--crops", action="store_true", help="render an evidence crop per review item"
     )
     compare_cmd.set_defaults(func=_audit_compare)
+
+    status_cmd = sub.add_parser(
+        "audit-status",
+        help="build the per-block audit ledger and fail while unreviewed blocks remain",
+    )
+    status_cmd.add_argument(
+        "--soft", action="store_true", help="report queued blocks without failing"
+    )
+    status_cmd.set_defaults(func=_audit_status)
 
     args = parser.parse_args(argv)
     try:
