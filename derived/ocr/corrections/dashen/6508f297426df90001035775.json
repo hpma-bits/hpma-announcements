@@ -62,6 +62,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6508f297426df90001035775 3 6"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "则第50次抽取必然获得传说卡牌哈利·波特”",
+      "drop": true,
+      "reason": "b19与b18同行重复；印刷为「…传说卡牌“哈利·波特”。」（含开引号与句号，v6对应块完整），b18已覆盖该行但其『哈利?波特』误读需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6508f297426df90001035775 1 19"
+    },
+    {
+      "image_index": 2,
+      "block_index": 2,
+      "original": "*1.学院锦标赛",
+      "corrected": "*1.学院锦标赛——魁地奇选拔活动",
+      "reason": "印刷整行「*1.学院锦标赛——魁地奇选拔活动」（节标星+长横线），v4拆为b2（头部）+b1（尾部）且两块均漏长横线——；v6对应块亦漏*与——；b2为含星标与序号的头部块，给出整行文本；b1需与之合并",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6508f297426df90001035775 2 2"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "“缤纷魁地奇·梳妆魔盒”全新上线！",
+      "drop": true,
+      "reason": "b27与b26同行重复；印刷间隔号为「·」（v6对应块亦为·），b26已覆盖该行但其『魁地奇?梳妆魔盒』误读需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6508f297426df90001035775 2 27"
     }
   ]
 }

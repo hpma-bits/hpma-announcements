@@ -200,6 +200,36 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 5 37"
+    },
+    {
+      "image_index": 5,
+      "block_index": 71,
+      "original": "01",
+      "drop": true,
+      "reason": "overlaps b72 title '停服维护时间通告' left edge (ornament); no independent line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 5 71"
+    },
+    {
+      "image_index": 2,
+      "block_index": 34,
+      "original": "突然现身霍格沃茨.....",
+      "corrected": "突然现身霍格沃茨……",
+      "reason": "independent wrapped line (b33 ends '…一位身具奇异天赋的转学生'); OCR kept 5 of 6 ellipsis dots",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 2 34"
+    },
+    {
+      "image_index": 3,
+      "block_index": 49,
+      "original": "掀起什么事端......",
+      "corrected": "掀起什么事端......？",
+      "reason": "independent wrapped line (b47+b48 '…又会在霍格莫德'); OCR missed trailing fullwidth ？",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 3 49"
     }
   ]
 }

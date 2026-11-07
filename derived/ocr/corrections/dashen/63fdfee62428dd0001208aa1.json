@@ -109,6 +109,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.63fdfee62428dd0001208aa1 2 28"
+    },
+    {
+      "image_index": 2,
+      "block_index": 38,
+      "original": "浦态动物安",
+      "drop": true,
+      "reason": "left fragment slice of the same line as b39 ('限提高系800', y-band 1267-1279); source line is “神奇动物空间”（沙漠）的家具摆放上限提高至800, right part watermark-covered",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63fdfee62428dd0001208aa1 2 38"
+    },
+    {
+      "image_index": 2,
+      "block_index": 39,
+      "original": "限提高系800",
+      "drop": true,
+      "reason": "b39（及b38『浦态动物安』）为横幅下方印刷行「“神奇动物空间”（沙漠）的家具摆放上限提高至800」区域的乱码切片，v6对应块已读出整行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63fdfee62428dd0001208aa1 2 39"
     }
   ]
 }

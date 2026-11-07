@@ -175,6 +175,26 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 2 20"
+    },
+    {
+      "image_index": 1,
+      "block_index": 44,
+      "original": "欢迎各位巫师跃参与，共享游戏天神！@哈利波特魔法觉醒",
+      "drop": true,
+      "reason": "b44与b43同行重复（漏「踊」字）；行尾「共享游戏乐趣!」被水印「大神@哈利波特魔法觉醒」部分遮挡（zoom下『乐趣』依稀可辨），v6对应块两读均被水印污染，行尾需专项处理",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 1 44"
+    },
+    {
+      "image_index": 4,
+      "block_index": 56,
+      "original": "1.日常活动中金币获取效率提升30%。",
+      "drop": true,
+      "reason": "b56与b55同行重复；印刷行末有「。」（v6对应块亦含），b55已覆盖该行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 4 56"
     }
   ]
 }

@@ -137,6 +137,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 4 59"
+    },
+    {
+      "image_index": 2,
+      "block_index": 37,
+      "original": "望，审判善良.....",
+      "corrected": "望，审判善良……",
+      "reason": "independent wrapped line (b36 ends '…审判甜蜜，审判欲'); OCR kept 5 of 6 ellipsis dots",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 2 37"
     }
   ]
 }

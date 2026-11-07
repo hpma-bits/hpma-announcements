@@ -69,6 +69,96 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 2 57"
+    },
+    {
+      "image_index": 2,
+      "block_index": 35,
+      "original": "料：",
+      "drop": true,
+      "reason": "overlaps b36 '料；' (y1264-1290) which read the same wrapped fragment at 0.980; b35 has wrong punctuation (：vs ；)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 2 35"
+    },
+    {
+      "image_index": 1,
+      "block_index": 12,
+      "original": "*2.“绿意生长\"活动",
+      "drop": true,
+      "reason": "b12与b13同行重复；印刷闭引号为「”」（zoom已核），b13已按印刷读出，v6对应块亦一致",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 1 12"
+    },
+    {
+      "image_index": 1,
+      "block_index": 17,
+      "original": "活动时间：7月25日17:00-8月7日16：59",
+      "drop": true,
+      "reason": "b17与b18同行重复；印刷「16:59」时间冒号为半角，b18已按印刷读出",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 1 17"
+    },
+    {
+      "image_index": 1,
+      "block_index": 39,
+      "original": "等级12：“银辉之钥”*2改为“焰色之锁”*1",
+      "drop": true,
+      "reason": "b39与b38同行重复；印刷为「“银辉之钥”*2」（含*），b39已按印刷读出，b38漏*需在differ中修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 1 39"
+    },
+    {
+      "image_index": 1,
+      "block_index": 45,
+      "original": "等级27：“银辉之钥”1改为“焰色之锁”*1",
+      "drop": true,
+      "reason": "b45与b44同行重复；印刷为「“银辉之钥”*1」，b44已按印刷读出，b45漏*",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 1 45"
+    },
+    {
+      "image_index": 1,
+      "block_index": 46,
+      "original": "等级34：“银辉之钥”1改为“焰色之锁”*1",
+      "drop": true,
+      "reason": "b46与b47同行重复；印刷为「“银辉之钥”*1」，b47已按印刷读出，b46漏*",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 1 46"
+    },
+    {
+      "image_index": 1,
+      "block_index": 73,
+      "original": "1.决斗俱乐部”和“禁林\"玩法中金币额外获取30%，额",
+      "drop": true,
+      "reason": "b73与b72同行重复；印刷为「1.“决斗俱乐部”和“禁林”玩法中…」（曲引号），b72已按印刷读出",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 1 73"
+    },
+    {
+      "image_index": 2,
+      "block_index": 59,
+      "original": "决斗俱乐部”亲",
+      "drop": true,
+      "reason": "b59（『决斗俱乐部”亲』，『亲』为乱码）为b61行「“决斗俱乐部”新增限定奖励」的乱码重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 2 59"
+    },
+    {
+      "image_index": 2,
+      "block_index": 60,
+      "original": "新增限定奖励",
+      "drop": true,
+      "reason": "b60为b61行「“决斗俱乐部”新增限定奖励」的重复切片（漏行首引号与“决斗俱乐部”）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 2 60"
     }
   ]
 }

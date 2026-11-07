@@ -61,6 +61,46 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 2 26"
+    },
+    {
+      "image_index": 2,
+      "block_index": 29,
+      "original": "神奇动物",
+      "drop": true,
+      "reason": "v4 b29 神奇动物 (x251) is an inner partial slice of v4 b31 会领取《神奇动物：邓布利多之谜》电影票等惊喜好礼！ (same line y~2287); v6 b29 duplicates its own b28 line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 2 29"
+    },
+    {
+      "image_index": 2,
+      "block_index": 30,
+      "original": "頭取",
+      "drop": true,
+      "reason": "v4 b30 頭取 (x162) is a head partial slice of v4 b31 会领取《神奇动物：邓布利多之谜》电影票等惊喜好礼！ (same line y~2287)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 2 30"
+    },
+    {
+      "image_index": 3,
+      "block_index": 29,
+      "original": "修复了使用隐形药水后，在禁林和课堂战斗中处于隐身状态时使用魔咒，",
+      "drop": true,
+      "reason": "b29与b28同行重复；印刷行末有「，」，v6对应块已读出；保留块b28缺该逗号，需在differ中修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 3 29"
+    },
+    {
+      "image_index": 3,
+      "block_index": 32,
+      "original": "AWAKENEI",
+      "drop": true,
+      "reason": "页脚装饰水印「HARRY POTTER MAGIC AWAKENED」碎片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 3 32"
     }
   ]
 }

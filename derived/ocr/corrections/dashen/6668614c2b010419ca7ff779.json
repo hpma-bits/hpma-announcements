@@ -293,6 +293,36 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 6 32"
+    },
+    {
+      "image_index": 1,
+      "block_index": 41,
+      "original": "洛，长满青苔的雕像遗迹.....深湖暗影之中，有无数",
+      "drop": true,
+      "reason": "b41与b42同行重复；印刷省略号为「……」，两个v4块（与v6对应块）均误读为点串需differ修正，b42已覆盖该行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 1 41"
+    },
+    {
+      "image_index": 2,
+      "block_index": 29,
+      "original": "简，巫师需根据",
+      "drop": true,
+      "reason": "b29（及b28『示前在指定地点导找角色，』）为b27行「活动期间，巫师需根据提示前往指定地点寻找角色，」的乱码重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 2 29"
+    },
+    {
+      "image_index": 4,
+      "block_index": 33,
+      "original": "1.赛季商店代币获取量提升100%（代币获取上限不变",
+      "drop": true,
+      "reason": "b33与b34同行重复；印刷行末有「）」（v6对应块亦含），b34已覆盖该行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 4 33"
     }
   ]
 }

@@ -33,6 +33,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6304c84d3408360001b91055 1 30"
+    },
+    {
+      "image_index": 1,
+      "block_index": 16,
+      "original": "，告价1000金币。",
+      "drop": true,
+      "reason": "overlaps b15 '摩金夫人长袍店上架2款全新基础脸型，售价1000金币。' (y1013-1033) which read it at 0.995; garbled duplicate '，告价1000金币。'",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6304c84d3408360001b91055 1 16"
+    },
+    {
+      "image_index": 1,
+      "block_index": 24,
+      "original": "8月24月维护后",
+      "drop": true,
+      "reason": "b24为b25行「生效时间：8月24日维护后」的乱码重复切片（漏「生效时间：」且『日』误作『月』）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6304c84d3408360001b91055 1 24"
     }
   ]
 }

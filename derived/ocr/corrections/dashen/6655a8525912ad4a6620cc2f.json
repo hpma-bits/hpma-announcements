@@ -145,6 +145,56 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 3 66"
+    },
+    {
+      "image_index": 1,
+      "block_index": 64,
+      "original": "赛季时间：2024年5月29日维护后-7月24日06：00",
+      "drop": true,
+      "reason": "b64与b65同行重复；印刷「06:00」时间冒号为半角（v6对应块亦如此），b65已按印刷读出",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 1 64"
+    },
+    {
+      "image_index": 2,
+      "block_index": 89,
+      "original": "活动时间：2024年6月5日05：00-6月12日05：00",
+      "drop": true,
+      "reason": "b89与b88同行重复；印刷两个时间冒号均为半角「05:00」「05:00」（v6对应块亦如此），b88已覆盖该行但其『05：00』为全角需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 2 89"
+    },
+    {
+      "image_index": 3,
+      "block_index": 29,
+      "original": "（4)优化了加载界面的信息排布。",
+      "drop": true,
+      "reason": "b29与b28同行重复；本行序号括号印刷为半角「(4)」（本图列表括号均如此），b28已按印刷读出",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 3 29"
+    },
+    {
+      "image_index": 3,
+      "block_index": 31,
+      "original": "刀”播报。",
+      "drop": true,
+      "reason": "b31与b32同行重复；印刷为「刀”播报。」（闭引号曲，v6对应块亦为”），b32已覆盖该行但其直引号需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 3 31"
+    },
+    {
+      "image_index": 3,
+      "block_index": 90,
+      "original": "召唤卡“欣克庞克”：“降低附近敌方单位的攻击力\"的效",
+      "drop": true,
+      "reason": "b90与b89同行重复；印刷「攻击力」后为闭引号「”」（v6对应块亦为”），b89已按印刷读出，b90的直引号需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 3 90"
     }
   ]
 }

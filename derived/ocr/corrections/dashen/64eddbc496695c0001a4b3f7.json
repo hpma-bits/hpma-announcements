@@ -58,6 +58,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.64eddbc496695c0001a4b3f7 1 12"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "活动时间：当地时间9月1日00：00-9月15日05:00",
+      "drop": true,
+      "reason": "b13与b12同行重复；印刷两个时间冒号均为半角「00:00」「05:00」（v6对应块亦如此），b12已覆盖该行但其『05：00』为全角需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64eddbc496695c0001a4b3f7 1 13"
     }
   ]
 }

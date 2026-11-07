@@ -116,6 +116,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 4 17"
+    },
+    {
+      "image_index": 2,
+      "block_index": 33,
+      "original": "30%。",
+      "drop": true,
+      "reason": "b33与b32（『30%』）同行重复；印刷「30%。」（v6对应块亦含句号）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 2 33"
     }
   ]
 }

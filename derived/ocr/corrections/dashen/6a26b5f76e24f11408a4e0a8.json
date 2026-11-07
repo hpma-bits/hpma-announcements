@@ -119,6 +119,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 6 18"
+    },
+    {
+      "image_index": 2,
+      "block_index": 28,
+      "original": "，且该双果现入",
+      "drop": true,
+      "reason": "overlaps b27 '的“共舞”卡牌数值在局内战斗中+4，且该效果现对卡' (y1013-1036) which read it at 0.988; garbled duplicate ('双果现入')",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 2 28"
     }
   ]
 }

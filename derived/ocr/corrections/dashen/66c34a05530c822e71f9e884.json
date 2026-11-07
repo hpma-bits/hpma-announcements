@@ -118,6 +118,46 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 2 45"
+    },
+    {
+      "image_index": 1,
+      "block_index": 28,
+      "original": "S",
+      "drop": true,
+      "reason": "overlaps b29 title '“米勒娃?麦格”回响上线！' left edge (ornament); no independent line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 1 28"
+    },
+    {
+      "image_index": 1,
+      "block_index": 21,
+      "original": "获取的“焰色之锁”、光辉咒语卡“古卜莱仙火”和深渊咒",
+      "drop": true,
+      "reason": "b21与b20同行重复；印刷「古卜莱仙火」后为闭引号「”」，b21已按印刷读出，b20的直引号需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 1 21"
+    },
+    {
+      "image_index": 2,
+      "block_index": 28,
+      "original": "谍影重重，危机四伏......第二场比试即将开赛。",
+      "drop": true,
+      "reason": "b28与b27同行重复；印刷省略号为「……」，两个v4块均读作半角点串需differ修正，b27已覆盖该行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 2 28"
+    },
+    {
+      "image_index": 2,
+      "block_index": 29,
+      "original": "但在那之前，霍格沃茨小队成员却陷入了新的难题.",
+      "drop": true,
+      "reason": "b29与b30同行重复；印刷行末省略号为「……」，两个v4块均误读点串（b30读『...』）需differ修正，b30已覆盖该行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 2 29"
     }
   ]
 }

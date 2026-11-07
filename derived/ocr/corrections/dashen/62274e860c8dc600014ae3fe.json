@@ -31,6 +31,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.62274e860c8dc600014ae3fe 1 5"
+    },
+    {
+      "image_index": 1,
+      "block_index": 16,
+      "original": "七了各稀有度魔几获得的的表现。",
+      "corrected": "优化了各稀有度魔咒获得时的表现。",
+      "reason": "both engines garbled; crop reads 优化了各稀有度魔咒获得时的表现。",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62274e860c8dc600014ae3fe 1 16"
+    },
+    {
+      "image_index": 2,
+      "block_index": 8,
+      "original": "POTTE",
+      "drop": true,
+      "reason": "页脚装饰水印「HARRY POTTER MAGIC AWAKENED」碎片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62274e860c8dc600014ae3fe 2 8"
     }
   ]
 }

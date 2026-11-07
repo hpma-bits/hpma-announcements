@@ -143,6 +143,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 4 15"
+    },
+    {
+      "image_index": 2,
+      "block_index": 25,
+      "original": "公邮",
+      "drop": true,
+      "reason": "overlaps b24 '完成魔法部赛季故事第三章后即可接取，前往魔法部' (y1010-1035) right end; garbage '公邮'",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 2 25"
     }
   ]
 }

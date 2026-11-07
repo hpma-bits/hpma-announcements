@@ -88,6 +88,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 6 22"
+    },
+    {
+      "image_index": 4,
+      "block_index": 27,
+      "original": "复制成双?活动升后！",
+      "drop": true,
+      "reason": "overlaps b26 '“复制成双”活动开启！' (y1016-1039) which read it at 0.989; garbled duplicate ('复制成双?活动升后！')",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 4 27"
     }
   ]
 }

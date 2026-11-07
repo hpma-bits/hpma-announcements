@@ -49,6 +49,56 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 35"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "及普通召唤卡“带翼弹弓”。",
+      "drop": true,
+      "reason": "b11与b10同行重复；印刷行末有「。」（v6对应块亦含），b10已覆盖该行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 1 11"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "提箱\"时，则第50次抽取必然获取1张。",
+      "drop": true,
+      "reason": "b13与b14同行重复；印刷「提箱」后为闭引号「”」，b14已按印刷读出，b13的直引号需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 1 13"
+    },
+    {
+      "image_index": 2,
+      "block_index": 59,
+      "original": "1.新增可用魔咒一飞天扫帚、云雾缥缈、吾、中",
+      "corrected": "1.新增可用魔咒——飞天扫帚、云雾缥缈、驺吾、中",
+      "reason": "印刷整行为「1.新增可用魔咒——飞天扫帚、云雾缥缈、驺吾、中」（长横线——与「驺吾」，zoom已核），v4的b57/b58/b59均漏——且『驺』有缺（v6对应块亦漏——）；b59为较大块，给出整行文本；b57/b58需与之合并",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 59"
+    },
+    {
+      "image_index": 2,
+      "block_index": 71,
+      "original": "抵抗护盾的再就绪时间由12秒降低至",
+      "corrected": "6.“破法者”——抵抗护盾的再就绪时间由12秒降低至",
+      "reason": "印刷整行为「6.“破法者”——抵抗护盾的再就绪时间由12秒降低至」，v4拆为b72（头部）+b71（尾部）且均漏长横线——（v6对应块亦漏）；给出整行文本，b72需与之合并",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 71"
+    },
+    {
+      "image_index": 2,
+      "block_index": 72,
+      "original": "6.“破法者”",
+      "drop": true,
+      "reason": "b72为「6.“破法者”——抵抗护盾的再就绪时间由12秒降低至」行的头部切片（同行尾部见b71，已给整行合并文本）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 72"
     }
   ]
 }

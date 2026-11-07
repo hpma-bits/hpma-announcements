@@ -128,6 +128,26 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 2 48"
+    },
+    {
+      "image_index": 1,
+      "block_index": 41,
+      "original": ".一切的源头",
+      "drop": true,
+      "reason": "b41（及b42）为b40行「球场上逼近的黑影，萦绕耳畔的低语……一切的源头」的重复切片；印刷省略号为「……」，b40/v6对应块均读作『....』需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 1 41"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "积分可用于领取传说品质时装“东方年华”、“新月之券”",
+      "drop": true,
+      "reason": "b27与b28同行重复；印刷行末有闭引号「”」（v6对应块亦含），b28已覆盖该行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 2 27"
     }
   ]
 }

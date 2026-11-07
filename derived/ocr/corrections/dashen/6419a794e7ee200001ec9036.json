@@ -12,6 +12,16 @@
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6419a794e7ee200001ec9036 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 29,
+      "original": "活动期间",
+      "drop": true,
+      "reason": "b29（及b28『上架“限时阅读礼包”』、b30『购买后可获得大量』）为b31行「活动期间，上架“限时阅读礼包”，购买后可获得大量」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6419a794e7ee200001ec9036 1 29"
     }
   ]
 }

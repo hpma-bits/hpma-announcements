@@ -79,6 +79,26 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 1 19"
+    },
+    {
+      "image_index": 1,
+      "block_index": 28,
+      "original": "此时使用了“鲁伯·海格”伙伴卡的巫师将消耗移动卡移",
+      "drop": true,
+      "reason": "b28与b27同行重复；印刷间隔号为「·」（v6对应块亦读「·」），b28已按印刷读出，b27误读『鲁伯?海格』需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 1 28"
+    },
+    {
+      "image_index": 1,
+      "block_index": 56,
+      "original": "13、新增了家具“胜享决斗梦”图鉴及收集奖励。",
+      "drop": true,
+      "reason": "b56与b55同行重复；印刷为「13、新增了家具“胜享决斗梦”图鉴及收集奖励。」（v6对应块完整），b55已覆盖该行但其漏闭引号与句号需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 1 56"
     }
   ]
 }

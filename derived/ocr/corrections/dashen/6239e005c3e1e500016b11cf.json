@@ -51,6 +51,56 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6239e005c3e1e500016b11cf 1 16"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "比赛期间，巫师们可通过【城堡主界面一活动→MA大师赛一前往观赛】观",
+      "corrected": "比赛期间，巫师们可通过【城堡主界面→活动→MA大师赛→前往观赛】观",
+      "reason": "crop shows arrow glyphs → for all three path separators; v4 had mixed 一/→",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6239e005c3e1e500016b11cf 1 19"
+    },
+    {
+      "image_index": 1,
+      "block_index": 20,
+      "original": "比赛期间，巫师们可通过【城堡主界面一活动一MA大师赛一前往观赛】观",
+      "drop": true,
+      "reason": "v4 b20 is a duplicate slice of v4 b19 (same printed line y~2230, boxes overlap); line text fixed under item for b19; v6 毛直播策叶问感受决斗激情！ is a garbage read of the next line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6239e005c3e1e500016b11cf 1 20"
+    },
+    {
+      "image_index": 2,
+      "block_index": 36,
+      "original": "POTT",
+      "corrected": "POTTER",
+      "reason": "v4 b36 box x338-432 covers the footer word POTTER but read only POTT; letter-spaced footer art stored compact (cf. HARRY/MAGIC/AWAKENED blocks); crop confirms HARRY POTTER ... MAGIC AWAKENED",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6239e005c3e1e500016b11cf 2 36"
+    },
+    {
+      "image_index": 2,
+      "block_index": 29,
+      "original": "修复了领取活动分享奖励异常的问题。",
+      "drop": true,
+      "reason": "b29与b28同行重复；v6对应块读出含句末「。」的完整行「修复了领取活动分享奖励异常的问题。」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6239e005c3e1e500016b11cf 2 29"
+    },
+    {
+      "image_index": 2,
+      "block_index": 30,
+      "original": "修复了“变形咒”的变形效果解除时，巫师当前的移动会被打断的问题",
+      "drop": true,
+      "reason": "b30与b31同行重复；v6对应块读出含句末「。」的完整行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6239e005c3e1e500016b11cf 2 30"
     }
   ]
 }

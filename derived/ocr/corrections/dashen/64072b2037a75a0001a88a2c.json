@@ -13,6 +13,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.64072b2037a75a0001a88a2c 2 8"
+    },
+    {
+      "image_index": 2,
+      "block_index": 14,
+      "original": "“初运匠心盒”，可在指定范围内挑选所",
+      "drop": true,
+      "reason": "b14与b15（『工匠盒”、』）为同一印刷行「工匠盒”、“初运匠心盒”，可在指定范围内挑选所」的重复切片；v6对应块已读出整行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64072b2037a75a0001a88a2c 2 14"
+    },
+    {
+      "image_index": 2,
+      "block_index": 15,
+      "original": "工匠盒”、",
+      "drop": true,
+      "reason": "b15为印刷行「工匠盒”、“初运匠心盒”，可在指定范围内挑选所」的行首切片；v6对应块已读出整行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64072b2037a75a0001a88a2c 2 15"
     }
   ]
 }

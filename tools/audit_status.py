@@ -66,7 +66,7 @@ def _verdicts_by_v6(base: Path) -> dict[tuple[str, int, int], Record]:
             if not line.strip():
                 continue
             row = json.loads(line)
-            if row.get("v6_block") is None or row.get("v4_block") is not None:
+            if row.get("v6_block") is None:
                 continue
             verdicts[(row["notice"], row["image_index"], row["v6_block"])] = row
     return verdicts
@@ -111,6 +111,7 @@ def build_notice(
 ) -> Record:
     corrected, drops, humans, rules = _ledger_maps(ledger)
     compare = audit_compare.compare_notice(notice_v4, ledger, notice_v6)
+    inserts = archive.insert_lines(ledger)
     ops_by_v4: dict[int, Record] = {}
     for image in compare.get("images", []):
         for op in image.get("ops", []):
@@ -182,6 +183,12 @@ def build_notice(
         "counts": counts,
         "blocks": blocks,
         "v6_only": v6_only,
+        "inserts": [
+            {"image_index": image_index, "after_block": after, "text": text,
+             "status": "adjudicated"}
+            for image_index, pairs in sorted(inserts.items())
+            for after, text in pairs
+        ],
     }
 
 

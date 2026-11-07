@@ -126,6 +126,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 4 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 28,
+      "original": "浦浦的",
+      "drop": true,
+      "reason": "overlaps b27 '痛痛的....' (y1011-1037); garbage slice '浦浦的' of same line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 2 28"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "痛痛的....",
+      "corrected": "痛痛的……",
+      "reason": "independent wrapped line (b26 ends '…怎么我的脑壳也'); OCR kept 4 of 6 ellipsis dots",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 2 27"
     }
   ]
 }

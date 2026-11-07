@@ -70,6 +70,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.63987af40c8dc60001eec2dc 2 28"
+    },
+    {
+      "image_index": 2,
+      "block_index": 33,
+      "original": "可获得制帽专属材料",
+      "corrected": "可获得制帽专属材料——\"冬青赠礼\"。",
+      "reason": "印刷整行为「可获得制帽专属材料——\"冬青赠礼”。」，v4拆成b33（前半）+b32（后半）且均漏破折号——；b33为较完整块，给出整行文本；保留块b32仅剩尾部，需去重合并",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63987af40c8dc60001eec2dc 2 33"
     }
   ]
 }

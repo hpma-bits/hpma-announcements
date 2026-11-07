@@ -71,6 +71,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.64d0fc2a4649d80001003ee8 2 16"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "容及累计购买奖励。",
+      "drop": true,
+      "reason": "b18与b17同行重复；印刷行末有「。」，b18多出句号；该行由b17保留承载（v6对应块一致），句号之差属differ范畴",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64d0fc2a4649d80001003ee8 1 18"
     }
   ]
 }

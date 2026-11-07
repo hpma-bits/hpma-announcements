@@ -224,6 +224,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 5 11"
+    },
+    {
+      "image_index": 7,
+      "block_index": 28,
+      "original": "玫。",
+      "drop": true,
+      "reason": "overlaps b27 '1.优化了段位的显示，现在图标和大段位保持一致。' (y1010-1035) right end; garbage '玫。'",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 7 28"
     }
   ]
 }

@@ -193,6 +193,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 4 12"
+    },
+    {
+      "image_index": 6,
+      "block_index": 37,
+      "original": "互动作",
+      "drop": true,
+      "reason": "overlaps b38 '交互动作，播放躺姿时不再握持魔杖。' (y1264-1286) which read it at 0.993; duplicate slice of '交互动作' region",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 6 37"
     }
   ]
 }

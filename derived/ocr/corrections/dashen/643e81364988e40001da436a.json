@@ -22,6 +22,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.643e81364988e40001da436a 3 14"
+    },
+    {
+      "image_index": 2,
+      "block_index": 22,
+      "original": "皮特魔法觉醒",
+      "drop": true,
+      "reason": "b22『皮特魔法觉醒』为水印「大神@哈利波特魔法觉醒」的已知误读碎片，非独立印刷行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.643e81364988e40001da436a 2 22"
     }
   ]
 }

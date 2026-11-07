@@ -153,6 +153,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6a01c3bb0cbc8d58b737a1eb 3 38"
+    },
+    {
+      "image_index": 2,
+      "block_index": 28,
+      "original": "表博金博克县装、魔权外规踪迹无导",
+      "drop": true,
+      "reason": "overlaps b27 '4.时装“博金博克”套装、魔杖外观“踪迹无寻”' (y1014-1037) which read it at 0.974; garbled duplicate",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a01c3bb0cbc8d58b737a1eb 2 28"
     }
   ]
 }

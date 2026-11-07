@@ -159,6 +159,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 3 23"
+    },
+    {
+      "image_index": 3,
+      "block_index": 28,
+      "original": "“林中蹊径”挑战区域更新",
+      "drop": true,
+      "reason": "b28与b29同行重复；印刷为「“林中蹊径”挑战区域更新」（v6对应块含「蹊」），b29已覆盖该行但其漏「蹊」需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 3 28"
+    },
+    {
+      "image_index": 3,
+      "block_index": 32,
+      "original": "“林中蹊径”的挑战区域将进行更新，游走在禁林深处",
+      "drop": true,
+      "reason": "b32与b31同行重复；印刷为「“林中蹊径”的挑战区域将进行更新，游走在禁林深处」（v6对应块含「蹊」），b31已覆盖该行但其漏「蹊」需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 3 32"
+    },
+    {
+      "image_index": 4,
+      "block_index": 35,
+      "original": "结算",
+      "drop": true,
+      "reason": "b35为b36行「12、优化了当巫师与友队成员组队进行玩法时，结算」的行尾重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 4 35"
     }
   ]
 }

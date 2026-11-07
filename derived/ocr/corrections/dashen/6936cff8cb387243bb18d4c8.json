@@ -76,6 +76,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6936cff8cb387243bb18d4c8 6 9"
+    },
+    {
+      "image_index": 2,
+      "block_index": 28,
+      "original": "2.回响“伏地魔",
+      "drop": true,
+      "reason": "overlaps b27 '2.回响“伏地魔”' (y1017-1041) which read it at 0.987; duplicate slice missing closing ”",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6936cff8cb387243bb18d4c8 2 28"
     }
   ]
 }

@@ -190,6 +190,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 5 15"
+    },
+    {
+      "image_index": 1,
+      "block_index": 25,
+      "original": "忘却....",
+      "corrected": "忘却……",
+      "reason": "independent wrapped line (b23 ends '…心里，无法'); OCR kept 4 of 6 ellipsis dots",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 1 25"
     }
   ]
 }
