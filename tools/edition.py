@@ -4,9 +4,15 @@ An edition is a projection of primary data, not a new source of truth: it is
 rebuilt from ``posts`` + ``ocr`` + ``corrections`` and must stay byte-identical
 when nothing upstream changed (``python -m tools.cli edition --check``).
 
-The platform stamps every long image with a watermark. OCR reads it as its own
-blocks, so it is removed here: a block that is only watermark is dropped, and a
-watermark suffix merged into a content line is cut off.
+Two sources share one pipeline. Dashen notices carry long images, so their text
+comes from OCR plus the correction ledger. NGA notices are already text, so
+their edition has only ``## 正文``; no OCR result or ledger is expected. The
+merged index marks one canonical reading per notice date: NGA when present,
+otherwise Dashen.
+
+The platform stamps every long Dashen image with a watermark. OCR reads it as
+its own blocks, so it is removed here: a block that is only watermark is
+dropped, and a watermark suffix merged into a content line is cut off.
 """
 
 from __future__ import annotations
@@ -50,50 +56,76 @@ def _scalar(value: str) -> str:
     return json.dumps(value, ensure_ascii=False)
 
 
-def _frontmatter(post: Record, selection: Record, notice: Record) -> list[str]:
-    images = [image["path"] for image in notice.get("images", []) if image.get("path")]
+def _images(notice: Record | None) -> list[str]:
+    if not notice:
+        return []
+    return [image["path"] for image in notice.get("images", []) if image.get("path")]
+
+
+def _frontmatter(
+    post: Record, selection: Record, notice: Record | None, source: str
+) -> list[str]:
     lines = ["---"]
-    for key, value in (
-        ("id", f"dashen.{post['id']}"),
+    fields = [
+        ("id", archive.notice_id(source, post["id"])),
+        ("source", source),
         ("title", post["title"]),
         ("published_at", post["published_at"]),
         ("notice_date", selection["notice_date"]),
-        ("url", post["feed_url"]),
-    ):
+        ("url", archive.post_url(post)),
+    ]
+    if post.get("author_uid"):
+        fields.append(("source_author_uid", post["author_uid"]))
+    for key, value in fields:
         lines.append(f"{key}: {_scalar(value)}")
-    lines.append("images:")
-    lines.extend(f"  - {_scalar(path)}" for path in images)
+    images = _images(notice)
+    if images:
+        lines.append("images:")
+        lines.extend(f"  - {_scalar(path)}" for path in images)
+    else:
+        lines.append("images: []")
     lines.append("---")
     return lines
 
 
-def index_record(post: Record, selection: Record, notice: Record) -> Record:
-    return {
-        "id": f"dashen.{post['id']}",
+def index_record(
+    post: Record, selection: Record, notice: Record | None, source: str
+) -> Record:
+    record = {
+        "id": archive.notice_id(source, post["id"]),
+        "source": source,
         "title": post["title"],
         "published_at": post["published_at"],
         "notice_date": selection["notice_date"],
-        "url": post["feed_url"],
-        "images": [image["path"] for image in notice.get("images", []) if image.get("path")],
+        "url": archive.post_url(post),
+        "images": _images(notice),
     }
+    if post.get("author_uid"):
+        record["source_author_uid"] = post["author_uid"]
+    return record
 
 
 def render_notice(
     post: Record,
     selection: Record,
-    notice: Record,
+    notice: Record | None = None,
     ledger: Record | None = None,
+    source: str = archive.DEFAULT_SOURCE,
 ) -> str:
-    """One notice as Markdown: front matter, body text, text per image."""
-    overrides = archive.corrected_blocks(notice, ledger)
-    lines = _frontmatter(post, selection, notice)
+    """One notice as Markdown: front matter, body text, text per image.
+
+    ``notice`` is the OCR result; text-only sources pass ``None`` and get no
+    ``## 图片文字`` section.
+    """
+    overrides = archive.corrected_blocks(notice, ledger) if notice else {}
+    lines = _frontmatter(post, selection, notice, source)
 
     body = normalize_body(post.get("text") or "")
     if body:
         lines += ["", "## 正文", "", body]
 
     sections: list[tuple[int, list[str]]] = []
-    for image in notice.get("images", []):
+    for image in (notice or {}).get("images", []):
         index = image["index"]
         texts: list[str] = []
         previous = ""
@@ -116,21 +148,51 @@ def render_notice(
     return "\n".join(lines).rstrip() + "\n"
 
 
+def _source_present(source: archive.Source, base: Path) -> bool:
+    corpus = base / source.corpus
+    selection = base / source.selection
+    if corpus.exists() and selection.exists():
+        return True
+    if corpus.exists() != selection.exists():
+        raise EditionError(
+            f"{source.name}: corpus and selection must both exist "
+            f"({source.corpus}, {source.selection})"
+        )
+    return False
+
+
 def build(root: Path | None = None) -> dict[Path, str]:
     """Every edition file, keyed by path relative to ``root``."""
+    base = Path(root) if root else archive.REPO_ROOT
     outputs: dict[Path, str] = {}
-    index_lines: list[str] = []
-    for post, selection in archive.selected_posts(root):
-        feed = post["id"]
-        notice = archive.load_ocr(feed, root)
-        ledger = archive.load_ledger(feed, root)
-        try:
-            outputs[EDITION_DIR / f"{feed}.md"] = render_notice(post, selection, notice, ledger)
-        except ValueError as exc:
-            raise EditionError(f"{feed}: {exc}") from exc
-        index_lines.append(
-            json.dumps(index_record(post, selection, notice), ensure_ascii=False, sort_keys=True)
-        )
+    index_rows: list[Record] = []
+
+    for source in archive.SOURCES.values():
+        if not _source_present(source, base):
+            continue
+        for post, selection in archive.selected_posts(root, "update", source.name):
+            feed = post["id"]
+            notice = archive.load_ocr(feed, root) if source.ocr else None
+            ledger = archive.load_ledger(feed, root) if source.ocr else None
+            try:
+                outputs[source.edition_dir / f"{feed}.md"] = render_notice(
+                    post, selection, notice, ledger, source.name
+                )
+            except ValueError as exc:
+                raise EditionError(f"{feed}: {exc}") from exc
+            index_rows.append(index_record(post, selection, notice, source.name))
+
+    index_rows.sort(key=lambda row: (row["published_at"], row["id"]))
+    by_date: dict[str, list[Record]] = {}
+    for row in index_rows:
+        by_date.setdefault(row["notice_date"], []).append(row)
+    for rows in by_date.values():
+        # NGA is a plain-text repost of the operator's notice; when it exists,
+        # it is the canonical reading and the Dashen OCR copy is the image record.
+        preferred = "nga" if any(row["source"] == "nga" for row in rows) else "dashen"
+        for row in rows:
+            row["canonical"] = row["source"] == preferred
+    index_lines = [json.dumps(row, ensure_ascii=False, sort_keys=True) for row in index_rows]
     outputs[INDEX_PATH] = "\n".join(index_lines) + "\n"
     return outputs
 
@@ -146,10 +208,12 @@ def check(root: Path | None = None) -> list[str]:
             problems.append(f"missing {relative.as_posix()}")
         elif path.read_text(encoding="utf-8") != content:
             problems.append(f"stale {relative.as_posix()}")
-    for path in sorted((base / EDITION_DIR).glob("*.md")):
-        relative = path.relative_to(base)
-        if relative not in outputs:
-            problems.append(f"orphan {relative.as_posix()}")
+    for source in archive.SOURCES.values():
+        directory = base / source.edition_dir
+        for path in sorted(directory.glob("*.md")):
+            relative = path.relative_to(base)
+            if relative not in outputs:
+                problems.append(f"orphan {relative.as_posix()}")
     return problems
 
 

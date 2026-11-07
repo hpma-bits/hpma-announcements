@@ -1,6 +1,7 @@
 """Command-line entry point for the data-acquisition pipeline.
 
     python -m collectors.cli corpus [--max-pages N]
+    python -m collectors.cli nga [--before YYYY-MM-DD] [--from-dir DIR]
     python -m collectors.cli ocr [--family update] [--limit N]
 
 Both commands are idempotent: rerunning them rewrites nothing when the upstream
@@ -13,6 +14,7 @@ import argparse
 import json
 
 from . import dashen
+from . import nga
 from . import ocr
 
 
@@ -22,6 +24,18 @@ def _corpus(args: argparse.Namespace) -> int:
         f"corpus: {summary['post_count']} posts, {summary['page_count']} pages, "
         f"changed={summary['changed']}"
     )
+    return 0
+
+
+def _nga(args: argparse.Namespace) -> int:
+    summary = nga.harvest(
+        before=args.before,
+        from_dir=args.from_dir,
+        index_html=args.index_html,
+        delay=args.delay,
+        limit=args.limit,
+    )
+    print(json.dumps(summary, ensure_ascii=False, sort_keys=True))
     return 0
 
 
@@ -39,6 +53,26 @@ def main(argv: list[str] | None = None) -> int:
     corpus.add_argument("--source", default="dashen", choices=["dashen"])
     corpus.add_argument("--max-pages", type=int, default=None, help="stop after N pages (smoke)")
     corpus.set_defaults(func=_corpus)
+
+    nga_cmd = sub.add_parser("nga", help="snapshot the NGA index and harvest its notices")
+    nga_cmd.add_argument(
+        "--before",
+        default=None,
+        help="only harvest production notices before this date (default: all)",
+    )
+    nga_cmd.add_argument(
+        "--from-dir",
+        default=None,
+        help="read <tid>.html pages from this directory instead of the network",
+    )
+    nga_cmd.add_argument(
+        "--index-html",
+        default=None,
+        help="read the index page from this file (with or without --from-dir)",
+    )
+    nga_cmd.add_argument("--delay", type=float, default=5.0, help="seconds between requests")
+    nga_cmd.add_argument("--limit", type=int, default=None, help="process only the first N notices")
+    nga_cmd.set_defaults(func=_nga)
 
     ocr_cmd = sub.add_parser("ocr", help="download images and OCR one label family")
     ocr_cmd.add_argument("--family", default="update")

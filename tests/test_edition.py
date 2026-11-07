@@ -51,6 +51,7 @@ def test_frontmatter_carries_the_provenance():
     head = text.split("---")[1]
 
     assert 'id: "dashen.aaaa"' in head
+    assert 'source: "dashen"' in head
     assert 'title: "【1月1日更新公告】"' in head
     assert 'published_at: "2026-01-01T00:00:00+08:00"' in head
     assert 'notice_date: "2026-01-02"' in head
@@ -182,6 +183,52 @@ def test_write_is_idempotent(tmp_path):
     assert edition.write(tmp_path) == []
 
 
+def test_text_only_source_has_no_image_section():
+    post = _post()
+    post["author_uid"] = "12345"
+    text = edition.render_notice(post, _selection(), None, None, "nga")
+    head = text.split("---")[1]
+
+    assert 'id: "nga.aaaa"' in head
+    assert 'source: "nga"' in head
+    assert 'source_author_uid: "12345"' in head
+    assert "images: []" in head
+    assert "## 正文" in text
+    assert "## 图片文字" not in text
+
+
+def test_committed_nga_edition_is_text_only():
+    paths = sorted((archive.REPO_ROOT / "edition/nga").glob("*.md"))
+
+    assert len(paths) == 58
+    for path in paths:
+        text = path.read_text(encoding="utf-8")
+        assert "## 正文" in text
+        assert "## 图片文字" not in text
+        assert 'source: "nga"' in text
+        assert "images: []" in text
+
+
+def test_every_index_row_carries_its_source():
+    rows = [json.loads(line) for line in edition.build()[edition.INDEX_PATH].splitlines()]
+
+    assert {row["source"] for row in rows} == {"dashen", "nga"}
+    assert all(row["id"].startswith(f"{row['source']}.") for row in rows)
+
+
+def test_index_marks_one_canonical_reading_per_date():
+    rows = [json.loads(line) for line in edition.build()[edition.INDEX_PATH].splitlines()]
+    by_date: dict[str, list[dict]] = {}
+    for row in rows:
+        by_date.setdefault(row["notice_date"], []).append(row)
+
+    for notice_date, group in by_date.items():
+        canonical = [row for row in group if row["canonical"]]
+        expected = "nga" if any(row["source"] == "nga" for row in group) else "dashen"
+        assert len(canonical) == 1, notice_date
+        assert canonical[0]["source"] == expected, notice_date
+
+
 def test_committed_edition_is_current():
     assert edition.check() == []
 
@@ -190,8 +237,10 @@ def test_committed_edition_covers_every_update_notice():
     outputs = edition.build()
     markdown = [path for path in outputs if path.suffix == ".md"]
 
-    assert len(markdown) == 162
-    assert len(outputs[edition.INDEX_PATH].splitlines()) == 162
+    assert len(markdown) == 220
+    assert sum(path.parts[1] == "dashen" for path in markdown) == 162
+    assert sum(path.parts[1] == "nga" for path in markdown) == 58
+    assert len(outputs[edition.INDEX_PATH].splitlines()) == 220
 
 
 def test_index_is_ordered_by_publication():

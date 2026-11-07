@@ -1,5 +1,6 @@
 ---
 id: "dashen.63aaebbc0c8dc60001abdbd4"
+source: "dashen"
 title: "【正式服更新公告】"
 published_at: "2022-12-27T20:57:32+08:00"
 notice_date: "2022-12-28"

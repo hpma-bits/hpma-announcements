@@ -3,7 +3,9 @@
 Primary data — the archive itself, never regenerated from anything else:
 
     corpus/dashen/posts.jsonl               every post, one JSON object per line
-    study/labels.jsonl                      which posts are notices, and their date
+    corpus/nga/posts.jsonl                  the NGA supplement (early notices)
+    study/labels.jsonl                      which Dashen posts are notices
+    study/labels-nga.jsonl                  which NGA threads are notices
     assets/dashen/<feed_id>/<NN>.<ext>      original image bytes
     derived/ocr/corrections/dashen/<id>.json   human decisions about OCR text
 
@@ -20,13 +22,43 @@ rather than apply it, so a changed OCR file can never silently rewrite text.
 from __future__ import annotations
 
 import json
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterator
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
-CORPUS_PATH = Path("corpus/dashen/posts.jsonl")
-SELECTION_PATH = Path("study/labels.jsonl")
+DEFAULT_SOURCE = "dashen"
+
+
+@dataclass(frozen=True)
+class Source:
+    """One place the archive collects posts from."""
+
+    name: str
+    corpus: Path
+    selection: Path
+    edition_dir: Path
+    ocr: bool
+
+
+SOURCES: dict[str, Source] = {
+    "dashen": Source(
+        name="dashen",
+        corpus=Path("corpus/dashen/posts.jsonl"),
+        selection=Path("study/labels.jsonl"),
+        edition_dir=Path("edition/dashen"),
+        ocr=True,
+    ),
+    "nga": Source(
+        name="nga",
+        corpus=Path("corpus/nga/posts.jsonl"),
+        selection=Path("study/labels-nga.jsonl"),
+        edition_dir=Path("edition/nga"),
+        ocr=False,
+    ),
+}
+
 OCR_DIR = Path("derived/ocr/dashen")
 LEDGER_DIR = Path("derived/ocr/corrections/dashen")
 
@@ -34,9 +66,25 @@ Record = dict[str, Any]
 Locator = tuple[int, int]
 
 
+def split_id(value: str) -> tuple[str, str]:
+    """Split ``dashen.<id>`` / ``nga.<id>`` into (source, native id)."""
+    prefix, separator, native = value.partition(".")
+    if separator and prefix in SOURCES:
+        return prefix, native
+    return DEFAULT_SOURCE, value
+
+
+def notice_id(source: str, native: str) -> str:
+    return f"{source}.{native}"
+
+
 def feed_id(value: str) -> str:
-    """Normalise ``dashen.<id>`` / ``<id>`` to the bare feed id used in paths."""
-    return value.removeprefix("dashen.")
+    """Normalise ``dashen.<id>`` / ``<id>`` to the bare id used in paths."""
+    return split_id(value)[1]
+
+
+def post_url(post: Record) -> str:
+    return post.get("thread_url") or post.get("feed_url") or post.get("url") or ""
 
 
 def read_json(path: Path) -> Record:
@@ -49,30 +97,34 @@ def iter_jsonl(path: Path) -> Iterator[Record]:
             yield json.loads(line)
 
 
-def corpus_path(root: Path | None = None) -> Path:
-    return (Path(root) if root else REPO_ROOT) / CORPUS_PATH
+def corpus_path(root: Path | None = None, source: str = DEFAULT_SOURCE) -> Path:
+    return (Path(root) if root else REPO_ROOT) / SOURCES[source].corpus
 
 
-def selection_path(root: Path | None = None) -> Path:
-    return (Path(root) if root else REPO_ROOT) / SELECTION_PATH
+def selection_path(root: Path | None = None, source: str = DEFAULT_SOURCE) -> Path:
+    return (Path(root) if root else REPO_ROOT) / SOURCES[source].selection
 
 
-def load_posts(root: Path | None = None) -> list[Record]:
-    return list(iter_jsonl(corpus_path(root)))
+def load_posts(root: Path | None = None, source: str = DEFAULT_SOURCE) -> list[Record]:
+    return list(iter_jsonl(corpus_path(root, source)))
 
 
-def load_selection(root: Path | None = None) -> dict[str, Record]:
-    return {row["id"]: row for row in iter_jsonl(selection_path(root))}
+def load_selection(
+    root: Path | None = None, source: str = DEFAULT_SOURCE
+) -> dict[str, Record]:
+    return {row["id"]: row for row in iter_jsonl(selection_path(root, source))}
 
 
 def selected_posts(
-    root: Path | None = None, family: str = "update"
+    root: Path | None = None,
+    family: str = "update",
+    source: str = DEFAULT_SOURCE,
 ) -> list[tuple[Record, Record]]:
-    """Posts labelled ``family``, paired with their selection row, oldest first."""
-    selection = load_selection(root)
+    """Posts labelled ``family`` for one source, paired with their selection row."""
+    selection = load_selection(root, source)
     chosen = [
         (post, selection[post["id"]])
-        for post in load_posts(root)
+        for post in load_posts(root, source)
         if selection.get(post["id"], {}).get("label") == family
     ]
     chosen.sort(key=lambda pair: (pair[0]["published_at"], pair[0]["id"]))
