@@ -868,6 +868,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 17 33"
+    },
+    {
+      "image_index": 15,
+      "block_index": 12,
+      "original": "“魔法相伴-持之以恒！”成就的奖励，由头像框【学海无涯】更换为【百",
+      "corrected": "“魔法相伴-持之以恒I”成就的奖励，由头像框【学海无涯】更换为【百",
+      "reason": "！→I；源图为衬线大写 I（双引擎均误读：v4 作！、v6 漏字，人工核验 crop）",
+      "confidence": "high",
+      "via": "manual-both-engines-wrong",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 15 12"
     }
   ]
 }

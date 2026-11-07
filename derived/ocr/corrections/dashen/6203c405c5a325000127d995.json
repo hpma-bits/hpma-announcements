@@ -52,6 +52,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6203c405c5a325000127d995 1 5"
+    },
+    {
+      "image_index": 1,
+      "block_index": 6,
+      "original": "“焕然一新镜”功能升级】",
+      "corrected": "【“焕然一新镜”功能升级】",
+      "reason": "漏字“【”；源图标题为【“焕然一新镜”功能升级】（双引擎均漏，人工核验 crop）",
+      "confidence": "high",
+      "via": "manual-both-engines-wrong",
+      "recrop": "python -m tools.cli crop dashen.6203c405c5a325000127d995 1 6"
     }
   ]
 }
