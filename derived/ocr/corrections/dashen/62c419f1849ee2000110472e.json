@@ -32,6 +32,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.62c419f1849ee2000110472e 1 28"
+    },
+    {
+      "image_index": 1,
+      "block_index": 17,
+      "original": "1.厉火一吞噬之焰（死亡时伤害增加）",
+      "corrected": "1.厉火-吞噬之焰（死亡时伤害增加）",
+      "reason": "crop d1-113 shows 厉火 - 吞噬之焰 with short hyphen joiner, not 一",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62c419f1849ee2000110472e 1 17"
+    },
+    {
+      "image_index": 1,
+      "block_index": 20,
+      "original": "2.愈合如初一愈后成长（追加治疗对象减伤效果）",
+      "corrected": "2.愈合如初-愈后成长（追加治疗对象减伤效果）",
+      "reason": "crop d1-114 shows 愈合如初 - 愈后成长 with short hyphen joiner, not 一",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62c419f1849ee2000110472e 1 20"
     }
   ]
 }

@@ -323,6 +323,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 4 33"
+    },
+    {
+      "image_index": 2,
+      "after_block": 57,
+      "insert": true,
+      "text": "限制，每个奖品都可被重复抽取到",
+      "reason": "v4 整行漏识（v6 审计 missed_line 升级）；源图核验 crop ；行尾为水印所覆，其后文字不可恢复，按可见字形收录",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 2 58 --v6"
     }
   ]
 }

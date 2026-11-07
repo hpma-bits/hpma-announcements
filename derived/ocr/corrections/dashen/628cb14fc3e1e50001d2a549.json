@@ -31,6 +31,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.628cb14fc3e1e50001d2a549 1 52"
+    },
+    {
+      "image_index": 1,
+      "block_index": 87,
+      "original": "的生命值，且可以统计伤害信息，方便巫师们实践自",
+      "corrected": "礅的生命值，且可以统计伤害信息，方便巫师们实践自",
+      "reason": "crop d1-81 shows 陪练石礅 row; first char is 礅 (礅的生命值…), v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.628cb14fc3e1e50001d2a549 1 87"
     }
   ]
 }

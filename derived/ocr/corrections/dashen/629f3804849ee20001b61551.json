@@ -51,6 +51,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.629f3804849ee20001b61551 1 25"
+    },
+    {
+      "image_index": 1,
+      "block_index": 58,
+      "original": "2、修复了伙伴卡“赫敏·格兰杰”在被禁的情况下，",
+      "corrected": "2、修复了伙伴卡“赫敏·格兰杰”在被禁锢的情况下，",
+      "reason": "crop d1-93 clearly shows 在被禁锢的情况下; v4 dropped 锢",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.629f3804849ee20001b61551 1 58"
     }
   ]
 }

@@ -458,6 +458,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 5 47"
+    },
+    {
+      "image_index": 3,
+      "after_block": 62,
+      "insert": true,
+      "text": "使用星石兑换宝石、充值星石不会获得积分",
+      "reason": "v4 整行漏识（v6 审计 missed_line 升级）；源图核验 crop ",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 3 65 --v6"
     }
   ]
 }

@@ -71,6 +71,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.653f83caecda660001756117 2 25"
+    },
+    {
+      "image_index": 1,
+      "after_block": 54,
+      "insert": true,
+      "text": "叫上同学上课，一起体验修复物品的乐趣吧！",
+      "reason": "v4 整行漏识（v6 审计 missed_line 升级）；源图核验 crop ",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": "python -m tools.cli crop dashen.653f83caecda660001756117 1 55 --v6"
+    },
+    {
+      "image_index": 2,
+      "after_block": 48,
+      "insert": true,
+      "text": "“不给糖就捣蛋”！韦格比的烘焙工坊创意继续！",
+      "reason": "v4 整行漏识（v6 审计 missed_line 升级）；源图核验 crop ",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": "python -m tools.cli crop dashen.653f83caecda660001756117 2 48 --v6"
     }
   ]
 }

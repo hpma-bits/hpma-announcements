@@ -158,6 +158,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 2 29"
+    },
+    {
+      "image_index": 2,
+      "block_index": 35,
+      "original": "上架时间：2024年9月1日5：30-10月1日3：20",
+      "drop": true,
+      "reason": "与b34同行重复（y1232-1255同线双读）：b34已正确读出「上架时间：2024年9月1日5:30-10月1日3:20」（源图为半角冒号），b35为冒号误读为全角的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 2 35"
+    },
+    {
+      "image_index": 2,
+      "block_index": 36,
+      "original": "1免费礼",
+      "drop": true,
+      "reason": "与b37同行重叠（y1264-1289同线）：b37已完整读出「1)免费礼盒」，b36「1免费礼」为左半残缺重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 2 36"
     }
   ]
 }

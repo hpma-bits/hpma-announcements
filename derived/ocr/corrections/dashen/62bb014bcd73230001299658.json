@@ -117,6 +117,96 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 4 50"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "全新时装：抒情韵调",
+      "corrected": "全新时装·抒情韵调",
+      "reason": "zoom d1-100-zoom shows single mid-height dot between 装 and 抒, i.e. · not full-width colon; v6 b20 is a shifted-box read of the time row below",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 1 19"
+    },
+    {
+      "image_index": 3,
+      "block_index": 13,
+      "original": "1.闪电风暴一雷暴召唤（范围扩大）",
+      "corrected": "1.闪电风暴-雷暴召唤（范围扩大）",
+      "reason": "crop d1-103 shows short hyphen joiner between 风暴 and 雷暴 (not 一); no space after 1. (serif tracking)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 3 13"
+    },
+    {
+      "image_index": 3,
+      "block_index": 18,
+      "original": "3.游走球一击球手（路径变宽，击打次数减少、伤害变",
+      "corrected": "3.游走球-击球手（路径变宽，击打次数减少、伤害变",
+      "reason": "crop d1-104 shows 游走球 - 击球手 with short hyphen joiner, not 一",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 3 18"
+    },
+    {
+      "image_index": 3,
+      "block_index": 30,
+      "original": "1.算无遗策1",
+      "corrected": "1.算无遗策Ⅱ",
+      "reason": "crop d1-105 shows serif Roman numeral Ⅱ after 策; no space after 1. (serif tracking, cf. d1-103)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 3 30"
+    },
+    {
+      "image_index": 4,
+      "block_index": 11,
+      "original": "（回响召唤物：雷鸟伤害下降，翼魔生命值与伤害",
+      "corrected": "（回响召唤物：雷鸟伤害下降，蜷翼魔生命值与伤害",
+      "reason": "crop d1-106 shows 蜷翼魔 and full-width opening （; v6 used half-width ( and v4 dropped 蜷",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 4 11"
+    },
+    {
+      "image_index": 4,
+      "block_index": 14,
+      "original": "降低28%，翼魔生命值提升38%且伤害提升25%",
+      "corrected": "降低28%，蜷翼魔生命值提升38%且伤害提升25%。",
+      "reason": "crop d1-107 shows 蜷翼魔生命值提升38%且伤害提升25%。; v4 dropped 蜷 and final 。",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 4 14"
+    },
+    {
+      "image_index": 4,
+      "block_index": 18,
+      "original": "们略微提升了由回响效果召唤的翼魔属性，并略微",
+      "corrected": "们略微提升了由回响效果召唤的蜷翼魔属性，并略微",
+      "reason": "crop d1-108 clearly shows 召唤的蜷翼魔属性; v4 dropped 蜷",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 4 18"
+    },
+    {
+      "image_index": 5,
+      "block_index": 1,
+      "original": "1、优化了施放“翼魔”的视觉表现。",
+      "corrected": "1、优化了施放“蜷翼魔”的视觉表现。",
+      "reason": "crop d1-112 top shows 优化了施放“蜷翼魔”的视觉表现。; v4 dropped 蜷",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 5 1"
+    },
+    {
+      "image_index": 5,
+      "block_index": 2,
+      "original": "2、优化了“昔日重现一罗恩·韦斯莱”的视觉表现，现",
+      "corrected": "2、优化了“昔日重现-罗恩·韦斯莱”的视觉表现，现",
+      "reason": "crop d1-112 shows 昔日重现-罗恩·韦斯莱 with short hyphen joiner, not 一",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 5 2"
     }
   ]
 }

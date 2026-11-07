@@ -100,6 +100,56 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 5 8"
+    },
+    {
+      "image_index": 2,
+      "block_index": 0,
+      "original": "“黑湖之谜”赛季新礼盒",
+      "corrected": "“黒湖之谜”赛季新礼盒",
+      "reason": "crop d1-120 shows “黑湖之谜”赛季新礼盒 with standard 黑; v4 used variant 黒",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 2 0"
+    },
+    {
+      "image_index": 2,
+      "block_index": 17,
+      "original": "可解锁特权：日常活动中金币获取效李升50%皮特魔法觉醒",
+      "corrected": "可解锁特权：日常活动中金币获取效率提升50%。",
+      "reason": "crop d1-121 shows 可解锁特权：日常活动中金币获取效率提升50% with white footer watermark covering tail; 效率提升 recoverable (v4 效李, v6 掘 both watermark-garbled); small 。 visible after 50%",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 2 17"
+    },
+    {
+      "image_index": 3,
+      "block_index": 7,
+      "original": "新增开放染色发型：守护者&惊艳之醫、梦境记忆·男",
+      "corrected": "新增开放染色发型：守护者&惊艳之髻、梦境记忆·男",
+      "reason": "crop d1-122 shows 守护者&惊艳之髻; v4 misread 髻 as 醫",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 3 7"
+    },
+    {
+      "image_index": 3,
+      "block_index": 13,
+      "original": "可通过主界面一直播一进入官方直播间，关注中奖资",
+      "corrected": "可通过主界面→直播→进入官方直播间，关注中奖资",
+      "reason": "crop d1-123 shows 主界面→直播→进入官方直播间 with → arrows; v4 read them as 一",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 3 13"
+    },
+    {
+      "image_index": 4,
+      "block_index": 9,
+      "original": "5、“波浪牵引1”：射程降低至175，水球返回时的基础伤",
+      "corrected": "5、“波浪牵引”：射程降低至175，水球返回时的基础伤",
+      "reason": "crop d1-124 shows 5、“波浪牵引”：射程降低至175 — full-width colon after ”, no stray 1 (v4) and not half-width colon (v6)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 4 9"
     }
   ]
 }

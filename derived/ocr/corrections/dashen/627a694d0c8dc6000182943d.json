@@ -120,6 +120,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.627a694d0c8dc6000182943d 1 264"
+    },
+    {
+      "image_index": 1,
+      "block_index": 59,
+      "original": "设计师观点：当前“多重》",
+      "corrected": "设计师观点：当前“多重冰冻咒”过于依赖伙伴卡，因",
+      "reason": "v4 box clipped after 多重 (》 misread); crop reads full line; label colon prints full-width （v4 ： right, v6 : wrong)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.627a694d0c8dc6000182943d 1 59"
     }
   ]
 }

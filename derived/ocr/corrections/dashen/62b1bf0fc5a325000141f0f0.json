@@ -173,6 +173,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 1 22"
+    },
+    {
+      "image_index": 1,
+      "block_index": 24,
+      "original": "群穴地”“狂风峭壁”，“幽谧深林”五大区域。",
+      "drop": true,
+      "reason": "v4 b24 群穴地”“狂风峭壁”… is a duplicate slice of v4 b25 (same row y~1183); b25 群穴地”，“狂风峭壁”，“幽谧深林”五大区域。 matches crop exactly; v6 b24 is a tail fragment",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 1 24"
+    },
+    {
+      "image_index": 5,
+      "block_index": 15,
+      "original": "7、修复了部分情况下，独角兽会被风咒吹到边界外",
+      "corrected": "7、修复了部分情况下，独角兽会被飓风咒吹到边界外",
+      "reason": "crop d1-98 clearly shows 会被飓风咒吹到边界外; v4 dropped 飓",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 5 15"
     }
   ]
 }

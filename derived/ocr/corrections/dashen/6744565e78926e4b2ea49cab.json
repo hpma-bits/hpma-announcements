@@ -78,6 +78,36 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 86"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "外观“糖果扎束”、传说品质猫头鹰“乳黄鹰”。",
+      "drop": true,
+      "reason": "与b12同行重复（y1058-1083同线双读）：源图印「…猫头鹰“乳黄鹰鸮”。」，b12已按主会话修正表改为「乳黄鹰鸮」，b11「乳黄鹰」为漏字重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 11"
+    },
+    {
+      "image_index": 1,
+      "block_index": 36,
+      "original": "每收集1块拼图碎片，可获得宝石*20、金币*3000！",
+      "drop": true,
+      "reason": "与b37同行重复（y2046-2070同线双读）：b37已按修正表改为「每收集1块拼图碎片，可获得宝石*20、金币*3000！」（修正记录明言与b36为重叠切片），b36为重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 36"
+    },
+    {
+      "image_index": 1,
+      "block_index": 182,
+      "original": "作客",
+      "drop": true,
+      "reason": "与b183同行重叠（y7409-7427签名行右端x557-598）：b183已完整读出「《哈利波特：魔法觉醒》工作室」，b182「作客」为其右端「工作室」的乱码重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 182"
     }
   ]
 }
