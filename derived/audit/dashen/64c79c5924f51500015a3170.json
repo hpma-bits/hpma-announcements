@@ -1,0 +1,108 @@
+{
+  "blocks": [
+    {
+      "block_index": 0,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "318889abecc8c9f6"
+    },
+    {
+      "block_index": 1,
+      "image_index": 1,
+      "status": "watermark",
+      "text_sha256": "7b794e6653640e14"
+    },
+    {
+      "block_index": 2,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "8ed7f9a36f81138f"
+    },
+    {
+      "block_index": 3,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "c7885595f5c2bd21"
+    },
+    {
+      "block_index": 4,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "a720c57602c59cf2"
+    },
+    {
+      "block_index": 5,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "b8bc0fd253609aeb"
+    },
+    {
+      "block_index": 6,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "5aa01d5151d89b44"
+    },
+    {
+      "block_index": 7,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "78aebbff9f156a4c"
+    },
+    {
+      "block_index": 8,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "2408b345415ddde3"
+    },
+    {
+      "block_index": 9,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "f134ea14fa7e4937"
+    },
+    {
+      "block_index": 10,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "f5083d232801eaa7"
+    },
+    {
+      "block_index": 11,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "de2e2ab8366dca02"
+    },
+    {
+      "block_index": 12,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "84c9db9644b46b33"
+    },
+    {
+      "block_index": 13,
+      "image_index": 1,
+      "status": "watermark",
+      "text_sha256": "ae6064522bfb17ca"
+    }
+  ],
+  "counts": {
+    "consensus": 12,
+    "watermark": 2
+  },
+  "engine_audit": {
+    "cls": "off",
+    "model": "PP-OCRv6-small",
+    "name": "rapidocr",
+    "tiling": "1280+256",
+    "version": "3.10.0"
+  },
+  "engine_record": {
+    "cls": "off",
+    "model": "PP-OCRv4",
+    "name": "rapidocr-onnxruntime",
+    "tiling": "1280+256",
+    "version": "1.4.4"
+  },
+  "id": "dashen.64c79c5924f51500015a3170",
+  "v6_only": []
+}

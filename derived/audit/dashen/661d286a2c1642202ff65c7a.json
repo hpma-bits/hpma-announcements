@@ -1,0 +1,442 @@
+{
+  "blocks": [
+    {
+      "block_index": 0,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "318889abecc8c9f6"
+    },
+    {
+      "block_index": 1,
+      "image_index": 1,
+      "status": "watermark",
+      "text_sha256": "7b794e6653640e14"
+    },
+    {
+      "block_index": 2,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "e7de1f14ad76cec7"
+    },
+    {
+      "block_index": 3,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "283e0c3175613b3f"
+    },
+    {
+      "block_index": 4,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "8e86ea4cee37ba38"
+    },
+    {
+      "block_index": 5,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "9d19109e7828b2cd"
+    },
+    {
+      "block_index": 6,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "e925d47f06fd548f"
+    },
+    {
+      "block_index": 7,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "2e81d375eca2ee7f"
+    },
+    {
+      "block_index": 8,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "b93ce1352f3d6b5e"
+    },
+    {
+      "block_index": 9,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "37261a97d9c0c032"
+    },
+    {
+      "block_index": 10,
+      "image_index": 1,
+      "status": "corrected",
+      "text_sha256": "e702bc8bc824a4b0"
+    },
+    {
+      "block_index": 11,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "93568a0067fcdd54"
+    },
+    {
+      "block_index": 12,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "17792990d35f33c0"
+    },
+    {
+      "block_index": 13,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "9b8541eb3c91b53d"
+    },
+    {
+      "block_index": 14,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "b1b0e84079d0140f"
+    },
+    {
+      "block_index": 15,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "d4e3087fb8e969b4"
+    },
+    {
+      "block_index": 16,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "a326655c9adf6fe9"
+    },
+    {
+      "block_index": 17,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "a80f5593c7781cfd"
+    },
+    {
+      "block_index": 18,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "8737b6bbb5a07e4e"
+    },
+    {
+      "block_index": 19,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "6cb74bb8cd16628d"
+    },
+    {
+      "block_index": 20,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "b3972fc7274b6929"
+    },
+    {
+      "block_index": 21,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "60a25af7d00ce28d"
+    },
+    {
+      "block_index": 22,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "dc11fbf244c8146c"
+    },
+    {
+      "block_index": 23,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "d30fd6a0d9cb0edd"
+    },
+    {
+      "block_index": 24,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "cfa6f4b890e1c22c"
+    },
+    {
+      "block_index": 25,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "7d9cdd341c665812"
+    },
+    {
+      "block_index": 26,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "c04322cdee332875"
+    },
+    {
+      "block_index": 27,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "63860fed99b48964"
+    },
+    {
+      "block_index": 28,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "4c49455db2a00e9f"
+    },
+    {
+      "block_index": 29,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "f28669fe6147d5a8"
+    },
+    {
+      "block_index": 30,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "35b6f99c7fdc1c63"
+    },
+    {
+      "block_index": 31,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "f5326569c6d8803f"
+    },
+    {
+      "block_index": 32,
+      "image_index": 1,
+      "status": "punct_rule",
+      "text_sha256": "033812b0f272e320"
+    },
+    {
+      "block_index": 33,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "3ecc5116eb79b86d"
+    },
+    {
+      "block_index": 34,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "22b34fd91aaf63d0"
+    },
+    {
+      "block_index": 35,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "7c0758f3b764247e"
+    },
+    {
+      "block_index": 36,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "343f1ff1dcf6cc67"
+    },
+    {
+      "block_index": 37,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "90c00ed0036bad3e"
+    },
+    {
+      "block_index": 38,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "e9fe3be71b5d67a3"
+    },
+    {
+      "block_index": 39,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "a0f4033921bb6596"
+    },
+    {
+      "block_index": 40,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "7ebfc7dc1a318867"
+    },
+    {
+      "block_index": 41,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "51b9582d74c1fc1b"
+    },
+    {
+      "block_index": 42,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "a359a0965ad56894"
+    },
+    {
+      "block_index": 43,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "4e19de7be3f2ddcd"
+    },
+    {
+      "block_index": 44,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "2571025fcdded99f"
+    },
+    {
+      "block_index": 45,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "1b373f3f3d590f82"
+    },
+    {
+      "block_index": 46,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "0a8858288c0921d8"
+    },
+    {
+      "block_index": 47,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "a2dcceca553ab85f"
+    },
+    {
+      "block_index": 48,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "b8262f89e605cc87"
+    },
+    {
+      "block_index": 49,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "964547c84ab11e43"
+    },
+    {
+      "block_index": 50,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "8e8aa05f5e71c59d"
+    },
+    {
+      "block_index": 51,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "fd2a20fc76741d37"
+    },
+    {
+      "block_index": 52,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "6b9507bcadeb36d9"
+    },
+    {
+      "block_index": 53,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "e88f0b74b6aa96d6"
+    },
+    {
+      "block_index": 54,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "f24622a99437badb"
+    },
+    {
+      "block_index": 55,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "73913b5bdea28b98"
+    },
+    {
+      "block_index": 56,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "f90203370d4635d0"
+    },
+    {
+      "block_index": 57,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "ac35d6475db228c4"
+    },
+    {
+      "block_index": 58,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "3e010d8f7e4ff8c3"
+    },
+    {
+      "block_index": 59,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "a6a19dca03cd5133"
+    },
+    {
+      "block_index": 60,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "de2e2ab8366dca02"
+    },
+    {
+      "block_index": 61,
+      "image_index": 1,
+      "status": "consensus",
+      "text_sha256": "84c9db9644b46b33"
+    },
+    {
+      "block_index": 62,
+      "image_index": 1,
+      "status": "watermark",
+      "text_sha256": "ae6064522bfb17ca"
+    }
+  ],
+  "counts": {
+    "consensus": 59,
+    "corrected": 1,
+    "punct_rule": 1,
+    "queued": 6,
+    "watermark": 2
+  },
+  "engine_audit": {
+    "cls": "off",
+    "model": "PP-OCRv6-small",
+    "name": "rapidocr",
+    "tiling": "1280+256",
+    "version": "3.10.0"
+  },
+  "engine_record": {
+    "cls": "off",
+    "model": "PP-OCRv4",
+    "name": "rapidocr-onnxruntime",
+    "tiling": "1280+256",
+    "version": "1.4.4"
+  },
+  "id": "dashen.661d286a2c1642202ff65c7a",
+  "v6_only": [
+    {
+      "image_index": 1,
+      "status": "queued",
+      "text": "s",
+      "v6_block": 6
+    },
+    {
+      "image_index": 1,
+      "status": "queued",
+      "text": "S",
+      "v6_block": 15
+    },
+    {
+      "image_index": 1,
+      "status": "queued",
+      "text": "等奖励！",
+      "v6_block": 40
+    },
+    {
+      "image_index": 1,
+      "status": "queued",
+      "text": "a",
+      "v6_block": 42
+    },
+    {
+      "image_index": 1,
+      "status": "queued",
+      "text": "2",
+      "v6_block": 43
+    },
+    {
+      "image_index": 1,
+      "status": "queued",
+      "text": "同时也修改了一部分与主线剧情关联的克线任条接取",
+      "v6_block": 47
+    }
+  ]
+}
