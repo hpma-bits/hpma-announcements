@@ -31,6 +31,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.64108516922f8100014c2c69 2 17"
+    },
+    {
+      "image_index": 1,
+      "block_index": 10,
+      "original": "夺最终的大奖一为冠军定制的全新外观配件。",
+      "corrected": "夺最终的大奖——为冠军定制的全新外观配件。",
+      "reason": "crop d1-210 clearly shows double em dash —— after 大奖; v4 wrote single 一, v6 dropped the dash",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64108516922f8100014c2c69 1 10"
     }
   ]
 }

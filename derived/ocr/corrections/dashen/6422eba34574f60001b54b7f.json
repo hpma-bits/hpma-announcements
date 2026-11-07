@@ -120,6 +120,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6422eba34574f60001b54b7f 3 12"
+    },
+    {
+      "image_index": 2,
+      "block_index": 36,
+      "original": "全新时装“青柳蒙雨”上线，巫师在4月14日23：59前",
+      "corrected": "全新时装“青柳濛雨”上线，巫师在4月14日23:59前",
+      "reason": "crop d1-213 shows 青柳濛雨 (氵+蒙) and half-width time colon 23:59; v4 wrote 蒙 and full-width 23：59",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6422eba34574f60001b54b7f 2 36"
     }
   ]
 }

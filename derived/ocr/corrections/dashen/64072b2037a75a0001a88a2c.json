@@ -33,6 +33,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.64072b2037a75a0001a88a2c 2 15"
+    },
+    {
+      "image_index": 2,
+      "block_index": 12,
+      "original": "“萤火印记”等道具。还可获得道具“巧心",
+      "corrected": "-普通”、“萤火印记”等道具。还可获得道具“巧心",
+      "reason": "crop d1-208 shows full printed row starting -普通” (hyphen continuation of 神奇救助-专业/神奇救助); v4 block missed the head fragment -普通”、, carried here",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64072b2037a75a0001a88a2c 2 12"
+    },
+    {
+      "image_index": 2,
+      "block_index": 13,
+      "original": "-普通”、",
+      "drop": true,
+      "reason": "head fragment -普通”、 of the same printed row carried corrected at v4 b12 (crop d1-208); v6 b15 paired here is the NEXT row 工匠盒”... (mis-paired)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64072b2037a75a0001a88a2c 2 13"
     }
   ]
 }

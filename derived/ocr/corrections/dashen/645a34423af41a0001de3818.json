@@ -90,6 +90,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.645a34423af41a0001de3818 3 37"
+    },
+    {
+      "image_index": 2,
+      "block_index": 31,
+      "original": "骑士团的骑士数量增加1，最多可增神利波特魔法觉醒",
+      "corrected": "骑士团的骑士数量增加1，最多可增加3个骑士。”",
+      "reason": "crop d1-229 + zooms: covered slots under 大神 logo read 加3 (加 outline visible through gaps; digit per official card text 最多可增加3个骑士, taptap.cn/moment/400780982917005661); trailing 。 and straight closing quote of the quoted card text visible; card text opens with straight quote on the line above",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.645a34423af41a0001de3818 2 31"
     }
   ]
 }

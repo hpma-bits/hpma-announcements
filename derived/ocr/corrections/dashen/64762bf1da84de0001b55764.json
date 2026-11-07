@@ -920,6 +920,186 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 9 21"
+    },
+    {
+      "image_index": 2,
+      "block_index": 16,
+      "original": "金币*300",
+      "corrected": "90——金币*300",
+      "reason": "crop d1-235 shows table row 90——金币*300 with long double dash; v4 split the row into digit slice b17 90- and reward slice b16 金币*300; correction carried at b16 (reward slice, matches v6 b15)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 16"
+    },
+    {
+      "image_index": 2,
+      "block_index": 17,
+      "original": "90-",
+      "drop": true,
+      "reason": "digit slice 90- of table row 90——金币*300 (crop d1-235); correction carried at v4 b16; v6 b16 paired here is the next row (mis-paired)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 17"
+    },
+    {
+      "image_index": 2,
+      "block_index": 18,
+      "original": "135",
+      "drop": true,
+      "reason": "digit slice 135 of table row 135——银辉之钥*1 (crop d1-237/d1-238); correction carried at v4 b19; v6 b17 paired here is the next row (mis-paired)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 18"
+    },
+    {
+      "image_index": 2,
+      "block_index": 19,
+      "original": "银辉之钥*1",
+      "corrected": "135——银辉之钥*1",
+      "reason": "crop d1-238 shows table row 135——银辉之钥*1 with long double dash; correction carried at reward slice b19",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 19"
+    },
+    {
+      "image_index": 2,
+      "block_index": 20,
+      "original": "180-",
+      "corrected": "180——宝石*20",
+      "reason": "crop d1-239 shows table row 180——宝石*20; reward twin b21 already dropped by v4_only pass, so this block carries the full row",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 20"
+    },
+    {
+      "image_index": 2,
+      "block_index": 31,
+      "original": "金币*500",
+      "corrected": "480——金币*500",
+      "reason": "crop d1-240 shows table row 480——金币*500 with long double dash; correction carried at reward slice b31 (matches v6 b23)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 31"
+    },
+    {
+      "image_index": 2,
+      "block_index": 32,
+      "original": "480-",
+      "drop": true,
+      "reason": "digit slice 480- of table row 480——金币*500 (crop d1-241); correction carried at v4 b31",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 32"
+    },
+    {
+      "image_index": 2,
+      "block_index": 33,
+      "original": "560-",
+      "drop": true,
+      "reason": "digit slice 560- of table row 560——银辉之钥*1 (crop d1-242); correction carried at v4 b34",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 33"
+    },
+    {
+      "image_index": 2,
+      "block_index": 34,
+      "original": "银辉之钥*1",
+      "corrected": "560——银辉之钥*1",
+      "reason": "crop d1-243 shows table row 560——银辉之钥*1 with long double dash; correction carried at reward slice b34 (matches v6 b24)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 34"
+    },
+    {
+      "image_index": 2,
+      "block_index": 35,
+      "original": "640-",
+      "drop": true,
+      "reason": "digit slice 640- of table row 640——宝石*20 (crop d1-244); correction carried at v4 b36",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 35"
+    },
+    {
+      "image_index": 2,
+      "block_index": 36,
+      "original": "宝石*20",
+      "corrected": "640——宝石*20",
+      "reason": "crop d1-245 shows table row 640——宝石*20 with long double dash; correction carried at reward slice b36 (matches v6 b25)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 36"
+    },
+    {
+      "image_index": 2,
+      "block_index": 44,
+      "original": "1055",
+      "corrected": "1055——宝石*40",
+      "reason": "crop d1-246 shows table row 1055——宝石*40; only b44 is queued so it carries the full row; unqueued twin slices b45 (1055-) and b46 (宝石*40) still in record and should be dropped",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 44"
+    },
+    {
+      "image_index": 2,
+      "block_index": 47,
+      "original": "银辉之钥*1",
+      "corrected": "1210——银辉之钥*1",
+      "reason": "crop d1-248 shows table row 1210——银辉之钥*1 with long double dash; correction carried at reward slice b47",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 47"
+    },
+    {
+      "image_index": 2,
+      "block_index": 48,
+      "original": "1210-",
+      "drop": true,
+      "reason": "digit slice 1210- of table row 1210——银辉之钥*1 (crop d1-248); correction carried at v4 b47",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 48"
+    },
+    {
+      "image_index": 2,
+      "block_index": 49,
+      "original": "金币*600",
+      "corrected": "1365——金币*600",
+      "reason": "crop d1-250 shows table row 1365——金币*600 with long double dash; correction carried at reward slice b49",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 49"
+    },
+    {
+      "image_index": 2,
+      "block_index": 50,
+      "original": "1365",
+      "drop": true,
+      "reason": "pure digit slice 1365 of table row 1365——金币*600 (crop d1-250); correction carried at v4 b49",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 50"
+    },
+    {
+      "image_index": 2,
+      "block_index": 45,
+      "original": "1055-",
+      "drop": true,
+      "reason": "重复切片；行由 b44 完整承载（1055——宝石*40），此为数字碎片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 45"
+    },
+    {
+      "image_index": 2,
+      "block_index": 46,
+      "original": "宝石*40",
+      "drop": true,
+      "reason": "重复切片；行由 b44 完整承载（1055——宝石*40），此为奖励碎片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 46"
     }
   ]
 }

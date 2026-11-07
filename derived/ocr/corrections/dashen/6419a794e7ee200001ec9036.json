@@ -22,6 +22,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6419a794e7ee200001ec9036 1 29"
+    },
+    {
+      "image_index": 1,
+      "block_index": 28,
+      "original": "上架“限时阅读礼包”",
+      "corrected": "活动期间，上架“限时阅读礼包”，购买后可获得大量",
+      "reason": "crop d1-212 shows full printed row 活动期间，上架“限时阅读礼包”，购买后可获得大量; v4 block missed the head 活动期间， and tail, v6 missed the comma after 期间",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6419a794e7ee200001ec9036 1 28"
     }
   ]
 }
