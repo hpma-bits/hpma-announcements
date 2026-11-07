@@ -60,6 +60,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 2 34"
+    },
+    {
+      "image_index": 1,
+      "block_index": 15,
+      "original": "“咒语妙妙点”、“热浪奇袭”等活动，获取新",
+      "drop": true,
+      "reason": "b15（及b16『赠”、』）为b14行「赠”、“咒语妙妙点”、“热浪奇袭”等活动，获取新」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 1 15"
+    },
+    {
+      "image_index": 1,
+      "block_index": 16,
+      "original": "赠”、",
+      "drop": true,
+      "reason": "b16为b14行「赠”、“咒语妙妙点”、“热浪奇袭”等活动，获取新」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 1 16"
+    },
+    {
+      "image_index": 1,
+      "block_index": 20,
+      "original": "连续离线超过21天的巫师再次登录后，即可开启持续",
+      "drop": true,
+      "reason": "b20与b21同行重复；印刷行末为红字「1」（「…即可开启持续1」），b21已按印刷读出",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 1 20"
     }
   ]
 }

@@ -149,6 +149,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.6357f2eb7442470001997fa9 3 8"
+    },
+    {
+      "image_index": 1,
+      "block_index": 3,
+      "original": "2",
+      "drop": true,
+      "reason": "box (328-425,513-543) sits in nav-card art area between b2 '热门活动' and b4/b5 labels; no text line there",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6357f2eb7442470001997fa9 1 3"
     }
   ]
 }

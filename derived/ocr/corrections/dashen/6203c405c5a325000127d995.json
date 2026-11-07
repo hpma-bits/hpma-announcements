@@ -32,6 +32,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6203c405c5a325000127d995 1 22"
+    },
+    {
+      "image_index": 2,
+      "block_index": 31,
+      "original": "修复了部分",
+      "drop": true,
+      "reason": "v4 b31 修复了部分 is a duplicate partial slice of v4 b32 修复了部分情况下，社团排行榜界面音效缺失的问题。 (same line y~2287)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6203c405c5a325000127d995 2 31"
+    },
+    {
+      "image_index": 1,
+      "block_index": 5,
+      "original": "焕然一新镜”功能升级】",
+      "drop": true,
+      "reason": "b5与b6同行重复；b6已读出「“焕然一新镜”功能升级】」（印刷行首还有【，保留块缺字需另行修正）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6203c405c5a325000127d995 1 5"
     }
   ]
 }

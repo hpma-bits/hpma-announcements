@@ -163,6 +163,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 4 45"
+    },
+    {
+      "image_index": 1,
+      "block_index": 22,
+      "original": "*1、调查区域",
+      "drop": true,
+      "reason": "b22与b21同行重复；印刷行首有节标星「*1、调查区域」（v6对应块亦含*），保留块b21漏星需修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 1 22"
     }
   ]
 }

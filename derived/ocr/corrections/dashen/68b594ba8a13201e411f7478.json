@@ -117,6 +117,36 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.68b594ba8a13201e411f7478 5 21"
+    },
+    {
+      "image_index": 6,
+      "block_index": 27,
+      "original": "了非成平场景中扫带飞行速度并带的下",
+      "drop": true,
+      "reason": "overlaps b26 '1.修复了非战斗场景中扫帚飞行速度异常的问题。' (y1011-1037) which already read the line at 0.979; garbled duplicate",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68b594ba8a13201e411f7478 6 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 14,
+      "original": "言的奥秘......",
+      "corrected": "言的奥秘......？",
+      "reason": "independent line (continuation of b13 '…窥见预'); OCR missed trailing fullwidth ？",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68b594ba8a13201e411f7478 2 14"
+    },
+    {
+      "image_index": 2,
+      "block_index": 9,
+      "original": "入禁林的巫师...",
+      "corrected": "入禁林的巫师……",
+      "reason": "independent wrapped line (b8 ends '…阻拦所有试图踏'); OCR kept 3 of 6 ellipsis dots",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68b594ba8a13201e411f7478 2 9"
     }
   ]
 }

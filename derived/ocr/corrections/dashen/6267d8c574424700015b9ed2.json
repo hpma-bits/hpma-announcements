@@ -88,6 +88,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 83"
+    },
+    {
+      "image_index": 1,
+      "block_index": 47,
+      "original": "L",
+      "drop": true,
+      "reason": "no text at this position; box sits in card illustration area between b46 '带翼弹弓' and b48 '【带翼弹弓】'",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 47"
+    },
+    {
+      "image_index": 1,
+      "block_index": 31,
+      "original": "购买即可解锁特权",
+      "drop": true,
+      "reason": "b31（及b30『电金币获取效率提升50%』）为b32行「购买即可解锁特权：日常活动中金币获取效率提升50%。」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 31"
+    },
+    {
+      "image_index": 1,
+      "block_index": 120,
+      "original": "调整：当己方存在5个及以上食死徒时，将无法再次召唤",
+      "drop": true,
+      "reason": "b120与b121同行重复；印刷为「己方」（v6对应块亦读「己方」），b121已覆盖该行但其读作『已方』",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 120"
     }
   ]
 }

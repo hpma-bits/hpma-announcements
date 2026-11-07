@@ -128,6 +128,26 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 6 25"
+    },
+    {
+      "image_index": 2,
+      "block_index": 23,
+      "original": "的故事....",
+      "corrected": "的故事……",
+      "reason": "independent wrapped line (b22 ends '…发生在中世纪'); OCR kept 4 of 6 ellipsis dots",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 2 23"
+    },
+    {
+      "image_index": 3,
+      "block_index": 28,
+      "original": "月11日5:00",
+      "drop": true,
+      "reason": "overlaps b27 '活动时间：2025年5月28日5：00－6月11日5:00' (y1012-1035) which read it at 0.955; duplicate right slice",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 3 28"
     }
   ]
 }

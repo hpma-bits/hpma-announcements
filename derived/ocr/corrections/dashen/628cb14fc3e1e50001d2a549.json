@@ -21,6 +21,16 @@
       "reason": "漏字“剜”；源图为“钻心剜骨”，当前“钻心骨”不是完整咒名",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.628cb14fc3e1e50001d2a549 1 98"
+    },
+    {
+      "image_index": 1,
+      "block_index": 52,
+      "original": "新增乐器“钢琴”。",
+      "drop": true,
+      "reason": "b52与b53同行重复；v6对应块读出含句末「。」的完整行「新增乐器“钢琴”。」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.628cb14fc3e1e50001d2a549 1 52"
     }
   ]
 }

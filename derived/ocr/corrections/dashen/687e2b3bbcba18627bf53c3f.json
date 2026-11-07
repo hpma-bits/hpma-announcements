@@ -246,6 +246,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 6 20"
+    },
+    {
+      "image_index": 2,
+      "block_index": 25,
+      "original": "伤付低语万效",
+      "drop": true,
+      "reason": "overlaps b24 '成的全部伤害作为挑战分数。排行榜将根据分数排名，' (y1010-1032); no independent line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 2 25"
     }
   ]
 }

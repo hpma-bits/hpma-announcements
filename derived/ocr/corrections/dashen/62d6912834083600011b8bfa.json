@@ -100,6 +100,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.62d6912834083600011b8bfa 2 19"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "“夏夜轮盘",
+      "drop": true,
+      "reason": "b18（及b17『活动』）为b16行「→“活动”→“夏夜轮盘”，即可使用“星芒印花”抽取」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62d6912834083600011b8bfa 1 18"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "”，即可使用“星芒印花”抽取",
+      "drop": true,
+      "reason": "b19为b16行「→“活动”→“夏夜轮盘”，即可使用“星芒印花”抽取」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62d6912834083600011b8bfa 1 19"
     }
   ]
 }

@@ -104,6 +104,76 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.63bd7308c3e1e500018dba57 3 35"
+    },
+    {
+      "image_index": 3,
+      "block_index": 6,
+      "original": "们的入住...",
+      "corrected": "们的入住……",
+      "reason": "independent wrapped line (b5 ends '…正等待着动物'); OCR kept 3 of 6 ellipsis dots",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63bd7308c3e1e500018dba57 3 6"
+    },
+    {
+      "image_index": 2,
+      "block_index": 48,
+      "original": "励。",
+      "drop": true,
+      "reason": "b48与b47（『励』）同行重复；印刷短行「励。」（v6对应块亦读「励。」），b47已覆盖该行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63bd7308c3e1e500018dba57 2 48"
+    },
+    {
+      "image_index": 2,
+      "block_index": 75,
+      "original": "查",
+      "drop": true,
+      "reason": "b75（及b76『玩法』）为b77行「查”玩法。」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63bd7308c3e1e500018dba57 2 75"
+    },
+    {
+      "image_index": 2,
+      "block_index": 76,
+      "original": "玩法",
+      "drop": true,
+      "reason": "b76（及b75『查』）为b77行「查”玩法。」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63bd7308c3e1e500018dba57 2 76"
+    },
+    {
+      "image_index": 3,
+      "block_index": 36,
+      "original": "萤火印记”；",
+      "drop": true,
+      "reason": "b36与b37同行重复；b37已读出完整行「“萤火印记”；」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63bd7308c3e1e500018dba57 3 36"
+    },
+    {
+      "image_index": 3,
+      "block_index": 45,
+      "original": "的玩法活动等，均转化为获",
+      "drop": true,
+      "reason": "b45（及b46『5.其他可获取』）为b47行「5.其他可获取“决斗勋章”的玩法活动等，均转化为获」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63bd7308c3e1e500018dba57 3 45"
+    },
+    {
+      "image_index": 3,
+      "block_index": 46,
+      "original": "5.其他可获取",
+      "drop": true,
+      "reason": "b46为b47行「5.其他可获取“决斗勋章”的玩法活动等，均转化为获」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63bd7308c3e1e500018dba57 3 46"
     }
   ]
 }

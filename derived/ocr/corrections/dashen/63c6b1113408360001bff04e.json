@@ -227,6 +227,136 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 6 17"
+    },
+    {
+      "image_index": 9,
+      "block_index": 22,
+      "original": "熊上",
+      "drop": true,
+      "reason": "overlaps b23 '大神@哈利波特魔法觉醒' watermark band (y630-658); content unrecoverable",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 9 22"
+    },
+    {
+      "image_index": 3,
+      "block_index": 46,
+      "original": "持续时间：1月18日维护后－1月23日05：00",
+      "drop": true,
+      "reason": "b46与b47同行重复；印刷为「…1月23日05:00」（时间冒号半角，v6对应块亦读半角），b47已覆盖该行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 3 46"
+    },
+    {
+      "image_index": 7,
+      "block_index": 37,
+      "original": "爆炸南瓜将更容易被击破，爆炸伤害@哈利波特魔法觉醒",
+      "corrected": "爆炸南瓜将更容易被击破，爆炸伤害不变",
+      "reason": "该行真实且为唯一读块（v6漏读）；印刷为「爆炸南瓜将更容易被击破，爆炸伤害不变」，v4把水印「@哈利波特魔法觉醒」混入行尾；「不变」二字在zoom下清晰可辨，其后句号（若有）被水印遮挡不可恢复",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 7 37"
+    },
+    {
+      "image_index": 8,
+      "block_index": 11,
+      "original": "、“静谧”",
+      "drop": true,
+      "reason": "行碎片；印刷整行「“城堡”、“焰色”、“无言”、“傲罗”、“静谧”、」被v4拆成b7/b10/b9/b8/b11，v6对应块已读出整行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 8 11"
+    },
+    {
+      "image_index": 8,
+      "block_index": 12,
+      "original": "“洞察”、“蜿蜓”、",
+      "drop": true,
+      "reason": "行碎片（『蜿蜓』为OCR误字，印刷为「蜿蜒」）；整行「“远歌”、“洞察”、“蜿蜒”、“粉红雨伞”、“不凡」由v6对应块读出",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 8 12"
+    },
+    {
+      "image_index": 8,
+      "block_index": 13,
+      "original": "“粉红雨伞”、“不凡",
+      "drop": true,
+      "reason": "行碎片；整行「“远歌”、“洞察”、“蜿蜒”、“粉红雨伞”、“不凡」由v6对应块读出",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 8 13"
+    },
+    {
+      "image_index": 8,
+      "block_index": 14,
+      "original": "“远歌”",
+      "drop": true,
+      "reason": "行碎片；整行「“远歌”、“洞察”、“蜿蜒”、“粉红雨伞”、“不凡」由v6对应块读出",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 8 14"
+    },
+    {
+      "image_index": 8,
+      "block_index": 15,
+      "original": "“决斗大师”、“吟梦旅人”、",
+      "drop": true,
+      "reason": "行碎片；整行「指引者”、“决斗大师”、“吟梦旅人”、“非凡桂冠”、」由v6对应块读出",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 8 15"
+    },
+    {
+      "image_index": 8,
+      "block_index": 16,
+      "original": "“非凡桂冠”",
+      "drop": true,
+      "reason": "行碎片；整行「指引者”、“决斗大师”、“吟梦旅人”、“非凡桂冠”、」由v6对应块读出",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 8 16"
+    },
+    {
+      "image_index": 8,
+      "block_index": 17,
+      "original": "指引者”",
+      "drop": true,
+      "reason": "行碎片；整行「指引者”、“决斗大师”、“吟梦旅人”、“非凡桂冠”、」由v6对应块读出",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 8 17"
+    },
+    {
+      "image_index": 8,
+      "block_index": 18,
+      "original": "“雷羽回环”",
+      "drop": true,
+      "reason": "行碎片；整行「“龙骑士”、“时间之杖”、“灵魂使者”、“雷羽回环”」由v6对应块读出",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 8 18"
+    },
+    {
+      "image_index": 8,
+      "block_index": 19,
+      "original": "“时间之杖”、“灵魂使者”、",
+      "drop": true,
+      "reason": "行碎片；整行「“龙骑士”、“时间之杖”、“灵魂使者”、“雷羽回环”」由v6对应块读出",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 8 19"
+    },
+    {
+      "image_index": 8,
+      "block_index": 20,
+      "original": "“龙骑士”",
+      "drop": true,
+      "reason": "行碎片；整行「“龙骑士”、“时间之杖”、“灵魂使者”、“雷羽回环”」由v6对应块读出",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 8 20"
     }
   ]
 }

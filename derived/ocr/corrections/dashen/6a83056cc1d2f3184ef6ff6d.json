@@ -288,6 +288,26 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 5 38"
+    },
+    {
+      "image_index": 6,
+      "block_index": 32,
+      "original": "固整",
+      "drop": true,
+      "reason": "overlaps b33 '1.开心宝石奇奔调整：' (y1267-1291); '固整' = misread of 调整 region",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 6 32"
+    },
+    {
+      "image_index": 2,
+      "block_index": 14,
+      "original": "出一些行动..",
+      "corrected": "出一些行动……",
+      "reason": "independent wrapped line (b13 ends '…你不得不做'); OCR kept 2 of 6 ellipsis dots",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 2 14"
     }
   ]
 }

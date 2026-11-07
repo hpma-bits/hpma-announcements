@@ -13,6 +13,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.62a8732d0c8dc60001d4f612 1 21"
+    },
+    {
+      "image_index": 1,
+      "block_index": 22,
+      "original": "巫师可前往“设置-社交”，从“好友”／“好友及社团",
+      "drop": true,
+      "reason": "b22与b21同行重复；b21已读出完整行（含行末闭引号）「巫师可前往“设置-社交”，从“好友”／“好友及社团”」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62a8732d0c8dc60001d4f612 1 22"
     }
   ]
 }

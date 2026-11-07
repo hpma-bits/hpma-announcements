@@ -154,6 +154,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 7 19"
+    },
+    {
+      "image_index": 4,
+      "block_index": 56,
+      "original": "鬼器",
+      "drop": true,
+      "reason": "overlaps b55 '充值额度达额度达到9680星石，可领取大奖：魔器“咻' right end (魔器 region); garbage '鬼器' slice",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 4 56"
     }
   ]
 }

@@ -458,6 +458,416 @@
       "confidence": "high",
       "via": "audit-insert",
       "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 13 9 --v6"
+    },
+    {
+      "image_index": 2,
+      "block_index": 16,
+      "original": "更新后，巫师可在图书馆中抽取光辉伙伴卡“昔日重现一阿不思·邓布利多",
+      "corrected": "更新后，巫师可在图书馆中抽取光辉伙伴卡“昔日重现-阿不思·邓布利多",
+      "reason": "crop shows narrow low hyphen between 昔日重现 and 阿不思, not ideograph 一",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 2 16"
+    },
+    {
+      "image_index": 2,
+      "block_index": 18,
+      "original": "未来，我们还将推出“昔日重现一哈利·波特”、“昔日重现一赫敏·格兰",
+      "corrected": "未来，我们还将推出“昔日重现-哈利·波特”、“昔日重现-赫敏·格兰",
+      "reason": "both card-name dashes print as narrow hyphens",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 2 18"
+    },
+    {
+      "image_index": 3,
+      "block_index": 7,
+      "original": "入口位于寝室一个人信息一巫师灵魂",
+      "corrected": "入口位于寝室-个人信息-巫师灵魂",
+      "reason": "both separators print as narrow hyphens, not ideograph 一",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 3 7"
+    },
+    {
+      "image_index": 3,
+      "block_index": 25,
+      "original": "活动期间概率限时提升！获取光辉伙伴卡“昔日重现一阿不思·邓布利多”",
+      "corrected": "活动期间概率限时提升！获取光辉伙伴卡“昔日重现-阿不思·邓布利多””，",
+      "reason": "dash prints as narrow hyphen; line ends with trailing ，after closing quote visible in crop",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 3 25"
+    },
+    {
+      "image_index": 3,
+      "block_index": 36,
+      "original": "当它们再次被抽取使用时，会获得强化：咒语卡额外释放次，但伤害降低",
+      "corrected": "当它们再次被抽取使用时，会获得强化：咒语卡额外释放1次，但伤害降低",
+      "reason": "crop shows digit 1 before 次, v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 3 36"
+    },
+    {
+      "image_index": 4,
+      "block_index": 0,
+      "original": "；召唤卡退场后会复活次。邓布利多每次受伤后会使用随从显形。邓布利",
+      "corrected": "；召唤卡退场后会复活1次。邓布利多每次受伤后会使用随从显形。邓布利",
+      "reason": "crop shows digit 1 before 次, v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 4 0"
+    },
+    {
+      "image_index": 5,
+      "block_index": 27,
+      "original": "赛事系统上线，巫师可以通过“主界面一活动一赛事系统上线一点击前往参赛",
+      "corrected": "赛事系统上线，巫师可以通过“主界面-活动-赛事系统上线-点击前往参赛",
+      "reason": "three navigation separators print as narrow hyphens",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 5 27"
+    },
+    {
+      "image_index": 5,
+      "block_index": 34,
+      "original": "2、全新赛事一巫师对抗赛",
+      "corrected": "2、全新赛事-巫师对抗赛",
+      "reason": "headline dash prints as narrow hyphen",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 5 34"
+    },
+    {
+      "image_index": 6,
+      "block_index": 3,
+      "original": "3、全新赛事一终极决斗家",
+      "corrected": "3、全新赛事-终极决斗家",
+      "reason": "headline dash prints as narrow hyphen",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 6 3"
+    },
+    {
+      "image_index": 7,
+      "block_index": 30,
+      "original": "村",
+      "corrected": "杖，为荣誉而战吧！",
+      "reason": "v4 box only caught first glyph misread as 村; scale6 zoom shows 杖，为荣誉而战吧！ incl. comma after 杖 which v6 missed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 7 30"
+    },
+    {
+      "image_index": 8,
+      "block_index": 14,
+      "original": "“雷鸟”，同时，“翼魔”魔咒的调整将同步生效。目前，该回响衍生",
+      "corrected": "“雷鸟”，同时，“蜷翼魔”魔咒的调整将同步生效。目前，该回响衍生",
+      "reason": "crop shows 蜷翼魔; v4 dropped leading 蜷",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 8 14"
+    },
+    {
+      "image_index": 9,
+      "block_index": 20,
+      "original": "召唤一只翼魔，向目标地点发起冲锋，并对沿途敌方单位造成伤害。到",
+      "corrected": "召唤一只蜷翼魔，向目标地点发起冲锋，并对沿途敌方单位造成伤害。到",
+      "reason": "crop shows 蜷翼魔",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 9 20"
+    },
+    {
+      "image_index": 9,
+      "block_index": 21,
+      "original": "达后，翼魔盘旋进行攻击，每次攻击后体型增大，同时伤害、攻击范围",
+      "corrected": "达后，蜷翼魔盘旋进行攻击，每次攻击后体型增大，同时伤害、攻击范围",
+      "reason": "crop shows 蜷翼魔",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 9 21"
+    },
+    {
+      "image_index": 9,
+      "block_index": 22,
+      "original": "会增加，达到上限后停止。同时，翼魔每隔3秒失去25%生命。",
+      "corrected": "会增加，达到上限后停止。同时，蜷翼魔每隔3秒失去25%生命。",
+      "reason": "crop shows 蜷翼魔",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 9 22"
+    },
+    {
+      "image_index": 9,
+      "block_index": 23,
+      "original": "设计师观点：翼魔在设计之初，定位为一张快速突进到后排造成大量伤",
+      "corrected": "设计师观点：蜷翼魔在设计之初，定位为一张快速突进到后排造成大量伤",
+      "reason": "crop shows 蜷翼魔",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 9 23"
+    },
+    {
+      "image_index": 10,
+      "block_index": 38,
+      "original": "的伤害值和护盾效果降低7%。",
+      "corrected": "的伤害值和护盾效果降低17%。",
+      "reason": "crop shows digit 1 before 7% (serif 1), v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 10 38"
+    },
+    {
+      "image_index": 11,
+      "block_index": 3,
+      "original": "决斗俱乐部赛季大奖换新一一“栗木魔杖”，巫师们快来展现才能，争取",
+      "corrected": "决斗俱乐部赛季大奖换新——“栗木魔杖”，巫师们快来展现才能，争取",
+      "reason": "zoom shows one continuous 2-em dash —— after 换新; v4 一一 is ideograph misread, v6 dropped the dash; ledger stores —— form elsewhere",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 11 3"
+    },
+    {
+      "image_index": 12,
+      "block_index": 5,
+      "original": "更新后，巫师可通过点击“社交一通讯一好友配卡”，或“魔咒一卡组推荐一",
+      "corrected": "更新后，巫师可通过点击“社交-通讯-好友配卡”，或“魔咒-卡组推荐-",
+      "reason": "navigation separators print as narrow hyphens",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 12 5"
+    },
+    {
+      "image_index": 12,
+      "block_index": 18,
+      "original": "、“有翼的朋友”",
+      "drop": true,
+      "reason": "v4 b18 、“有翼的朋友” is a duplicate partial slice of v4 b17 2、“有翼的朋友” (same line y~1207, b16+b17+b18 all overlap); v6 b16 is a garbage read of the 获取途径 line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 12 18"
+    },
+    {
+      "image_index": 12,
+      "block_index": 37,
+      "original": "购买即可得头像框“新年烟花”、表情“嗅的新年”、如尼文秘典、冥",
+      "corrected": "购买即可得头像框“新年烟花”、表情“嗅嗅的新年”、如尼文秘典、冥",
+      "reason": "crop shows 嗅嗅的新年 (Niffler name 嗅嗅), v4 dropped one 嗅",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 12 37"
+    },
+    {
+      "image_index": 14,
+      "block_index": 7,
+      "original": "购买即可获得传说品质伙伴皮肤“卡珊德拉一冰雪中心”",
+      "corrected": "购买即可获得传说品质伙伴皮肤“卡珊德拉-冰雪中心”。",
+      "reason": "crop shows narrow hyphen in 卡珊德拉-冰雪中心 and trailing 。 which v4 missed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 14 7"
+    },
+    {
+      "image_index": 16,
+      "block_index": 33,
+      "original": "拍ta。巫师还可在设置一社交中自定义“拍一拍”的文本。",
+      "corrected": "拍ta。巫师还可在设置-社交中自定义“拍一拍”的文本。",
+      "reason": "menu path separator prints as narrow hyphen; 拍一拍 keeps ideograph 一",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 16 33"
+    },
+    {
+      "image_index": 17,
+      "block_index": 7,
+      "original": "处于组队状态，在快捷聊天列表将新增信息类型，可以向队友发送自已当",
+      "corrected": "处于组队状态，在快捷聊天列表将新增信息类型，可以向队友发送自己当",
+      "reason": "crop shows 自己 (己 open-left glyph), v4 misread 已",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 17 7"
+    },
+    {
+      "image_index": 17,
+      "block_index": 35,
+      "original": "無合休险",
+      "corrected": "优化了舞会体验，调整了舞曲的难度解锁逻辑：歌曲当前难度到s评级后，",
+      "reason": "v4 無合休险 is garbage; crop reads 优化了舞会体验，调整了舞曲的难度解锁逻辑：歌曲当前难度到s评级后， (v6 hint had 舞合/c, crop shows 舞会/s)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 17 35"
+    },
+    {
+      "image_index": 18,
+      "block_index": 26,
+      "original": "子士兵”和“占星卡牌·甜点大师”的名称调整为“雪人飞来一占星”、",
+      "corrected": "子士兵”和“占星卡牌·甜点大师”的名称调整为“雪人飞来-占星”、“",
+      "reason": "rename separator prints as narrow hyphen",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 18 26"
+    },
+    {
+      "image_index": 18,
+      "block_index": 37,
+      "original": "修复了“翼魔”伤害范围不准确的问题。",
+      "corrected": "修复了“蜷翼魔”伤害范围不准确的问题。",
+      "reason": "crop shows 蜷翼魔",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 18 37"
+    },
+    {
+      "image_index": 6,
+      "block_index": 14,
+      "original": "次引试同木表",
+      "drop": true,
+      "reason": "duplicate slice of b13 line region (box y1024-1042 overlaps b13 '霍格沃茨考试周来袭…' y1007-1036); no independent line in source",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 6 14"
+    },
+    {
+      "image_index": 17,
+      "block_index": 14,
+      "original": "时界通农现：",
+      "drop": true,
+      "reason": "overlaps b13 '优化了“决斗俱乐部”的界面表现。' (y1005-1038); no independent line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 17 14"
+    },
+    {
+      "image_index": 14,
+      "block_index": 14,
+      "original": "时塑师领软！",
+      "drop": true,
+      "reason": "overlaps b13 '入学的巫师领取！' (y1005-1038); garbled slice '时塑师领软！'",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 14 14"
+    },
+    {
+      "image_index": 17,
+      "block_index": 36,
+      "original": "调教了舞世的难度解",
+      "drop": true,
+      "reason": "overlaps b37 '优化了舞会体验，调整了舞曲的难度解锁逻辑：歌曲当前难度到s评级后，' (y2287-2316) which read it at 0.990; garbled duplicate",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 17 36"
+    },
+    {
+      "image_index": 7,
+      "block_index": 0,
+      "original": "% ",
+      "corrected": "%。",
+      "reason": "independent wrapped line-end shown in crop as '%。' (continuation of a percentage sentence from previous image); OCR missed the fullwidth 。",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 7 0"
+    },
+    {
+      "image_index": 7,
+      "block_index": 31,
+      "original": "为节誉面战吧",
+      "drop": true,
+      "reason": "overlaps b32 '杖，为荣誉而战吧！' (y2285-2319) which read it at 0.976; garbled duplicate ('为节誉面战吧')",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 7 31"
+    },
+    {
+      "image_index": 7,
+      "block_index": 26,
+      "original": "MA第5赛季即将开启！",
+      "drop": true,
+      "reason": "b26与b25同行重复：b25已读出完整「【MA第5赛季即将开启！】」，b26为无括号的重复读",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 7 26"
+    },
+    {
+      "image_index": 8,
+      "block_index": 16,
+      "original": "设计师观点：在目前的游戏环境中，由于“翼魔”的疲软和后场生物的",
+      "drop": true,
+      "reason": "b16与b17同行重复；b17读出正确文本（含「蜷翼魔」），b16漏「蜷」字",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 8 16"
+    },
+    {
+      "image_index": 9,
+      "block_index": 32,
+      "original": "7、速速禁",
+      "drop": true,
+      "reason": "b32与b33同行重复；印刷为「7、速速禁锢」，b33已覆盖该行（其『铜』为OCR误读，属differ范畴）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 9 32"
+    },
+    {
+      "image_index": 9,
+      "block_index": 34,
+      "original": "调整：禁时间由3.4秒提升到3.8秒。",
+      "drop": true,
+      "reason": "b34与b35同行重复；b35已覆盖该行「调整：禁锢时间由3.4秒提升到3.8秒。」（铜/锢误读属differ范畴）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 9 34"
+    },
+    {
+      "image_index": 12,
+      "block_index": 13,
+      "original": "“福灵剂”",
+      "drop": true,
+      "reason": "b13与b12同行重复；b12已读出完整「1、“福灵剂”」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 12 13"
+    },
+    {
+      "image_index": 12,
+      "block_index": 16,
+      "original": "2",
+      "drop": true,
+      "reason": "b16与b17同行重复；b17已读出完整「2、“有翼的朋友”」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 12 16"
+    },
+    {
+      "image_index": 15,
+      "block_index": 11,
+      "original": "“魔法相伴-持之以恒1”成就的奖励，由头像框【学海无涯】更换为【百",
+      "drop": true,
+      "reason": "b11与b12同行重复读；印刷为「“魔法相伴-持之以恒I”…」（衬线大写I，非数字1）；b12已覆盖该行但读作『！』，保留块需另行修正该字形",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 15 11"
+    },
+    {
+      "image_index": 15,
+      "block_index": 27,
+      "original": "“禁林竞速”第二期开启】",
+      "drop": true,
+      "reason": "b27与b26同行重复；b26已读出完整「【“禁林竞速”第二期开启】」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 15 27"
+    },
+    {
+      "image_index": 17,
+      "block_index": 33,
+      "original": "优化舞会的结算表现，将连击结算拆分为：无懈连击（完成所有点击）、",
+      "drop": true,
+      "reason": "b33与b32同行重复；v6对应块亦读出含句末「、」的完整行，行文本已由保留块承载",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 17 33"
     }
   ]
 }

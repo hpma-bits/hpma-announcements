@@ -70,6 +70,46 @@
       "confidence": "high",
       "via": "audit-insert",
       "recrop": "python -m tools.cli crop dashen.63f4c4ec0c8dc60001bf8858 2 35 --v6"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "“禁林-单人探险”中出现的“黑市商人”更改为“神秘商人”",
+      "drop": true,
+      "reason": "b18与b17同行重复；印刷行首有半角「-」、行末有「。」（v6对应块完整读出），b17已覆盖该行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63f4c4ec0c8dc60001bf8858 1 18"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "-地点“猪头酒吧”更改为“猪头旅馆”",
+      "drop": true,
+      "reason": "b19与b20同行重复；b20已读出含行末「。」的完整行「-地点“猪头酒吧”更改为“猪头旅馆”。」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63f4c4ec0c8dc60001bf8858 1 19"
+    },
+    {
+      "image_index": 1,
+      "block_index": 23,
+      "original": "地点“破釜酒吧”更改为“破釜旅馆”",
+      "drop": true,
+      "reason": "b23与b22同行重复；b22已读出完整行「-地点“破釜酒吧”更改为“破釜旅馆”。」（含行首-与句末。）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63f4c4ec0c8dc60001bf8858 1 23"
+    },
+    {
+      "image_index": 2,
+      "block_index": 31,
+      "original": "4、修复了“伙伴同行”中，选择伙伴“丹尼尔”参加双人决斗时，丹",
+      "drop": true,
+      "reason": "b31与b30同行重复；b30已覆盖该行「4、修复了“伙伴同行”中，选择伙伴“丹尼尔”参加双人决斗时，丹」（引号曲直之差属differ范畴）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63f4c4ec0c8dc60001bf8858 2 31"
     }
   ]
 }

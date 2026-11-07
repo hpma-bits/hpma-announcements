@@ -80,6 +80,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 85"
+    },
+    {
+      "image_index": 1,
+      "block_index": 25,
+      "original": "参与“林中激斗”",
+      "drop": true,
+      "reason": "b25为b26行「参与“林中激斗”、“奇踪调查”、“魔咒狂欢赛”（精」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 25"
+    },
+    {
+      "image_index": 1,
+      "block_index": 27,
+      "original": "魔咒狂欢赛”（精",
+      "drop": true,
+      "reason": "b27为b26行「参与“林中激斗”、“奇踪调查”、“魔咒狂欢赛”（精」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 27"
+    },
+    {
+      "image_index": 1,
+      "block_index": 28,
+      "original": "“奇踪调查”",
+      "drop": true,
+      "reason": "b28为b26行「参与“林中激斗”、“奇踪调查”、“魔咒狂欢赛”（精」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 28"
     }
   ]
 }

@@ -134,6 +134,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.667977af9a58390f4abe8cbd 5 40"
+    },
+    {
+      "image_index": 6,
+      "block_index": 34,
+      "original": "17.修复了“黑湖·深潜区”的稀有采集点会出现绿菊以外",
+      "drop": true,
+      "reason": "b34与b33同行重复；印刷间隔号为「·」（v6对应块亦读「·」），b34已按印刷读出，b33误读『黑湖?深潜区』需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.667977af9a58390f4abe8cbd 6 34"
     }
   ]
 }

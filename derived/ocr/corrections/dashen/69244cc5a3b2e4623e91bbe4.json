@@ -193,6 +193,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 5 7"
+    },
+    {
+      "image_index": 6,
+      "block_index": 32,
+      "original": "利波特：摩法觉强》",
+      "drop": true,
+      "reason": "overlaps b33 '《哈利波特：魔法觉醒》工作室' (y1265-1284) which read it at 0.987; garbled duplicate ('摩法觉强')",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 6 32"
     }
   ]
 }

@@ -90,6 +90,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.627a694d0c8dc6000182943d 1 237"
+    },
+    {
+      "image_index": 1,
+      "block_index": 17,
+      "original": "决斗调整",
+      "drop": true,
+      "reason": "b17与b16同行重复；b16已读出完整「一、决斗调整」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.627a694d0c8dc6000182943d 1 17"
+    },
+    {
+      "image_index": 1,
+      "block_index": 60,
+      "original": "永冻咒”过于依赖伙伴卡，因",
+      "drop": true,
+      "reason": "b60（及b59『设计师观点：当前“多重》』）为b58行「设计师观点：当前“多重冰冻咒”过于依赖伙伴卡，因」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.627a694d0c8dc6000182943d 1 60"
+    },
+    {
+      "image_index": 1,
+      "block_index": 264,
+      "original": "9.优化了",
+      "drop": true,
+      "reason": "b264为b265行「9、优化了社区体验，新增“热评”功能。获得点赞数」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.627a694d0c8dc6000182943d 1 264"
     }
   ]
 }

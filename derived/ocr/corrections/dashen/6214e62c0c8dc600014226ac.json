@@ -12,6 +12,26 @@
       "reason": "漏字“剜”；咒语名源图为“钻心剜骨”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6214e62c0c8dc600014226ac 2 5"
+    },
+    {
+      "image_index": 1,
+      "block_index": 8,
+      "original": "份丰厚的奖励！（每位巫师每日最多只能获得次被赠送的奖励）",
+      "corrected": "份丰厚的奖励！（每位巫师每日最多只能获得1次被赠送的奖励）",
+      "reason": "crop shows digit 1 before 次, v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6214e62c0c8dc600014226ac 1 8"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "击败对手可随机升级手中的魔咒，还会有雪球不时滚入战场",
+      "drop": true,
+      "reason": "b18与b17同行重复；b17读出含句末「。」的完整行「击败对手可随机升级手中的魔咒，还会有雪球不时滚入战场。」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6214e62c0c8dc600014226ac 1 18"
     }
   ]
 }

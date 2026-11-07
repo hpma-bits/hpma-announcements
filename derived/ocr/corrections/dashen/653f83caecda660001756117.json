@@ -61,6 +61,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.653f83caecda660001756117 3 11"
+    },
+    {
+      "image_index": 2,
+      "block_index": 25,
+      "original": "到来，谁是那个最有胆量的然师",
+      "drop": true,
+      "reason": "b25为b24行「万圣夜到来，谁是那个“最有胆量的巫师”？」的乱码重复切片（漏头部且『巫』误作『然』）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.653f83caecda660001756117 2 25"
     }
   ]
 }

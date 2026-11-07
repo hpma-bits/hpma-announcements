@@ -52,6 +52,46 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 3 14"
+    },
+    {
+      "image_index": 1,
+      "block_index": 21,
+      "original": "修复了“每日特惠一巫师学习礼”中随机奖励的描述。",
+      "corrected": "修复了“每日特惠-巫师学习礼”中随机奖励的描述。",
+      "reason": "pack-name separator prints as narrow hyphen",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 1 21"
+    },
+    {
+      "image_index": 3,
+      "block_index": 27,
+      "original": "修复了“每日特惠一巫师学习礼”中随机奖励的描述。",
+      "corrected": "修复了“每日特惠-巫师学习礼”中随机奖励的描述。",
+      "reason": "pack-name separator prints as narrow hyphen",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 3 27"
+    },
+    {
+      "image_index": 3,
+      "block_index": 31,
+      "original": "AWAKENEI",
+      "corrected": "AWAKENED",
+      "reason": "letter-spaced footer art HARRY POTTER MAGIC AWAKENED; v4 block misread final D as I; stored compact per v4 full-text convention (AWAKENED), spacing is art letter-spacing not content",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 3 31"
+    },
+    {
+      "image_index": 3,
+      "block_index": 32,
+      "original": "HARR",
+      "drop": true,
+      "reason": "页脚装饰水印「HARRY POTTER … MAGIC AWAKENED」碎片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 3 32"
     }
   ]
 }

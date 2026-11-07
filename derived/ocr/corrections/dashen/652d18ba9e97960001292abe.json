@@ -60,6 +60,46 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.652d18ba9e97960001292abe 2 36"
+    },
+    {
+      "image_index": 1,
+      "block_index": 14,
+      "original": "巫师每次抽取均有概率获得光辉伙伴卡“音日重现-赫",
+      "drop": true,
+      "reason": "b14与b13同行重复；印刷为「昔日重现-赫」（v6对应块亦读「昔日」），b13已按印刷读出，b14误读『音日重现』",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.652d18ba9e97960001292abe 1 14"
+    },
+    {
+      "image_index": 1,
+      "block_index": 15,
+      "original": "敏·格兰杰”卡牌皮肤“汤剂之扰”，若99次抽取都未获得",
+      "drop": true,
+      "reason": "b15与b16同行重复；印刷「格兰杰」后为闭引号「」」…全曲引号（v6对应块亦全曲），b15已按印刷读出，b16的直引号需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.652d18ba9e97960001292abe 1 15"
+    },
+    {
+      "image_index": 1,
+      "block_index": 69,
+      "original": "活动时间：10月24日05：00-10月30日16：59。",
+      "drop": true,
+      "reason": "b69与b68同行重复；印刷时间冒号均为半角「05:00」「16:59」（v6对应块亦如此），b68已按印刷读出",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.652d18ba9e97960001292abe 1 69"
+    },
+    {
+      "image_index": 2,
+      "block_index": 25,
+      "original": "活动时间：10月28日0:00－11月14日17:00",
+      "drop": true,
+      "reason": "b25与b26同行重复；连接号印刷为短横（v6对应块读半角-），b26已覆盖该行；长横—与短横-之辨属differ范畴",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.652d18ba9e97960001292abe 2 25"
     }
   ]
 }

@@ -60,6 +60,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.66b0f0ccc68d6f3157dc2fa0 4 8"
+    },
+    {
+      "image_index": 4,
+      "block_index": 29,
+      "original": "单图，巫师可白行远择是否",
+      "drop": true,
+      "reason": "overlaps b28 '7.追踪成就功能新增二次弹窗，巫师可自行选择是否' (y1014-1037) which read it at 0.997; garbled duplicate ('白行远择')",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66b0f0ccc68d6f3157dc2fa0 4 29"
     }
   ]
 }

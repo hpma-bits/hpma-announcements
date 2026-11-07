@@ -80,6 +80,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6422eba34574f60001b54b7f 2 35"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "天神",
+      "drop": true,
+      "reason": "'天神' is misread of 大神 watermark logo overlapping signature area; overlaps b11/b12 watermark fragment band",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6422eba34574f60001b54b7f 1 13"
+    },
+    {
+      "image_index": 1,
+      "block_index": 12,
+      "original": "寺魔法觉醒",
+      "drop": true,
+      "reason": "b12『寺魔法觉醒』为水印「大神@哈利波特魔法觉醒」碎片（与b11行「…自由试穿冠军时装」区域重叠），非独立印刷行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6422eba34574f60001b54b7f 1 12"
     }
   ]
 }

@@ -87,6 +87,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 2 1"
+    },
+    {
+      "image_index": 3,
+      "block_index": 37,
+      "original": "1.优化了部分关卡的镜头效果。",
+      "drop": true,
+      "reason": "b37与b38同行重复；印刷行末有「。」（v6对应块亦含），b38已覆盖该行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 3 37"
+    },
+    {
+      "image_index": 4,
+      "block_index": 29,
+      "original": "来新的战斗体验",
+      "drop": true,
+      "reason": "b29与b30同行重复；b30已读出含句末「。」的完整行「来新的战斗体验。」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 4 29"
+    },
+    {
+      "image_index": 4,
+      "block_index": 50,
+      "original": "（伤害降低，烟花数量减少，攻击间隔变快，追踪火炮",
+      "drop": true,
+      "reason": "b50与b49同行重复；「减少」后印刷为逗号（v6对应块亦读逗号），b49已覆盖该行但其读作冒号",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 4 50"
     }
   ]
 }

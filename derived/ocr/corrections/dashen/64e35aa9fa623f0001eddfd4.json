@@ -52,6 +52,36 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.64e35aa9fa623f0001eddfd4 2 61"
+    },
+    {
+      "image_index": 1,
+      "block_index": 12,
+      "original": "魁地奇赛李故事开启",
+      "drop": true,
+      "reason": "b12与b11同行重复；印刷为「魁地奇赛季故事开启」（季），b11已按印刷读出，b12误读『赛李』",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64e35aa9fa623f0001eddfd4 1 12"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "将每2周更新1章",
+      "drop": true,
+      "reason": "b19（及b20『敬请期待！』）为b21行「将每2周更新1章。敬请期待！」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64e35aa9fa623f0001eddfd4 1 19"
+    },
+    {
+      "image_index": 1,
+      "block_index": 20,
+      "original": "敬请期待！",
+      "drop": true,
+      "reason": "b20为b21行「将每2周更新1章。敬请期待！」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64e35aa9fa623f0001eddfd4 1 20"
     }
   ]
 }

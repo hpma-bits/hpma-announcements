@@ -22,6 +22,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.62c419f1849ee2000110472e 1 30"
+    },
+    {
+      "image_index": 1,
+      "block_index": 28,
+      "original": "2.修复了禁林商人事件刷新异常的问题。",
+      "drop": true,
+      "reason": "b28与b27同行重复；印刷行末有「。」，b27已覆盖该行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62c419f1849ee2000110472e 1 28"
     }
   ]
 }

@@ -126,6 +126,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 5 11"
+    },
+    {
+      "image_index": 6,
+      "block_index": 29,
+      "original": "话下公务",
+      "drop": true,
+      "reason": "overlaps b28 '鸢尾梦”处于咒语卡“云雾缥缈”生成的雾中时，脚步特' (y1017-1039); garbage slice",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 6 29"
     }
   ]
 }

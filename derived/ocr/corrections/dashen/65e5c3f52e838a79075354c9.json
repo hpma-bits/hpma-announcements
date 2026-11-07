@@ -41,6 +41,26 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.65e5c3f52e838a79075354c9 2 26"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "伙伴卡“卡珊德拉·沃雷”。",
+      "drop": true,
+      "reason": "b11与b10同行重复；印刷行末有「。」（v6对应块亦含），b10已覆盖该行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65e5c3f52e838a79075354c9 1 11"
+    },
+    {
+      "image_index": 2,
+      "block_index": 59,
+      "original": "优化了舞会饮料台的表现",
+      "drop": true,
+      "reason": "b59为b60行「1、优化了舞会饮料台的表现。」的重复切片（漏序号「1、」与句号）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65e5c3f52e838a79075354c9 2 59"
     }
   ]
 }

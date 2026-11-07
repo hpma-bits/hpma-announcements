@@ -97,6 +97,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 5 26"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "雾中，黑暗的身影正在不断靠近·...",
+      "drop": true,
+      "reason": "b19与b20同行重复；印刷省略号为「……」（v6对应块亦读「……」），两v4块均误读",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 1 19"
     }
   ]
 }

@@ -192,6 +192,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 6 45"
+    },
+    {
+      "image_index": 5,
+      "block_index": 56,
+      "original": "2",
+      "drop": true,
+      "reason": "6px-tall '2' fragment nested in b55 '更新时间：2025年6月25日维护后' (y2036-2062); no independent line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 5 56"
     }
   ]
 }

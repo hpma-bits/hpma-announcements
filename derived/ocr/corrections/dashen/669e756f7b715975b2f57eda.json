@@ -408,6 +408,56 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 5 40"
+    },
+    {
+      "image_index": 4,
+      "block_index": 0,
+      "original": "S！",
+      "drop": true,
+      "reason": "overlaps b1 title '学院杯精彩升级！' start (x147-169 vs title x165-301); no independent line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 4 0"
+    },
+    {
+      "image_index": 1,
+      "block_index": 29,
+      "original": "调了幽灵骑",
+      "drop": true,
+      "reason": "overlaps b30 '团将在被召唤出来时立刻行动。同时，下调了幽灵骑' (y1269-1286) which read it at 0.998; duplicate slice",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 1 29"
+    },
+    {
+      "image_index": 2,
+      "block_index": 39,
+      "original": "后，一场盛大赛事即将到来...",
+      "drop": true,
+      "reason": "b39与b38同行重复；印刷行末省略号为「……」（v6对应块亦读点串），b38已覆盖该行但漏省略号需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 2 39"
+    },
+    {
+      "image_index": 4,
+      "block_index": 37,
+      "original": "活动时间：2024年7月31日5：00-8月14日5:00",
+      "drop": true,
+      "reason": "b37与b38同行重复；印刷两个时间冒号均为半角「5:00」「5:00」（v6对应块亦如此），两个v4块均含全角『5：00』，保留块b38需differ修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 4 37"
+    },
+    {
+      "image_index": 5,
+      "block_index": 47,
+      "original": "后续剧情对适的",
+      "drop": true,
+      "reason": "b47（及b46『加速后』）为b48行「3、修复了在过场动画中长按加速后，后续剧情对话的」的乱码重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 5 47"
     }
   ]
 }

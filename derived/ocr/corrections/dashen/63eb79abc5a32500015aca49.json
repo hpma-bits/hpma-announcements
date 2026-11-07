@@ -22,6 +22,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.63eb79abc5a32500015aca49 1 8"
+    },
+    {
+      "image_index": 1,
+      "block_index": 32,
+      "original": "“嗅嗅赠礼”、“球遁鸟赠礼”",
+      "drop": true,
+      "reason": "b32与b31（『“雷鸟赠礼”等』）为同一印刷行「“嗅嗅赠礼”、“球遁鸟赠礼”、“雷鸟赠礼”等。」的重复切片；v6对应块已读出整行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63eb79abc5a32500015aca49 1 32"
     }
   ]
 }

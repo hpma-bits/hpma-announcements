@@ -86,6 +86,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6385ee69744247000130be78 1 27"
+    },
+    {
+      "image_index": 1,
+      "block_index": 24,
+      "original": "活动时间：12月1日00:00－12月31日23:59",
+      "drop": true,
+      "reason": "b24与b25同行重复；印刷为「活动时间：12月1日00:00-12月31日23:59」（时间冒号及连接号半角，zoom已核），v6对应块亦如此；保留块b25时间冒号误作全角",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6385ee69744247000130be78 1 24"
     }
   ]
 }

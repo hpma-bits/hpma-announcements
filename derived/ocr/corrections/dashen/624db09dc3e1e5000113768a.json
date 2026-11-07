@@ -279,6 +279,156 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 4 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 9,
+      "original": "注：“吾来袭”奖励次数可累计。",
+      "corrected": "注：“驺吾来袭”奖励次数可累计。",
+      "reason": "crop shows 驺吾来袭 (Zouwu event name), v4 dropped 驺",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 2 9"
+    },
+    {
+      "image_index": 2,
+      "block_index": 13,
+      "original": "“雪球大战”活动限时开启，每日前3次参与还将获得大量“奶油菊”！",
+      "corrected": "“雪球大战”活动限时开启，每日前3次参与还将获得大量“奶油雏菊”！",
+      "reason": "crop shows 奶油雏菊, v4 dropped 雏",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 2 13"
+    },
+    {
+      "image_index": 2,
+      "block_index": 30,
+      "original": "单人模式：2022年4月7日5：00-2022年4月10日5:00",
+      "drop": true,
+      "reason": "v4 b30 is a duplicate slice of v4 b29 单人模式：2022年4月7日5:00-2022年4月10日5:00 (same line y~2225); b29 matches print (half-width time colons per crop), b30 has 5：00",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 2 30"
+    },
+    {
+      "image_index": 3,
+      "block_index": 16,
+      "original": "区】一【活动】或大神APP内查看具体活动规则。",
+      "corrected": "区】-【活动】或大神APP内查看具体活动规则。",
+      "reason": "crop shows narrow hyphen between 】 and 【, v4 misread ideograph 一",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 3 16"
+    },
+    {
+      "image_index": 3,
+      "block_index": 23,
+      "original": "林的白雪悄然融化，和的阳光轻柔地拂过苍翠的森林。",
+      "corrected": "林的皑皑白雪悄然融化，和煦的阳光轻柔地拂过苍翠的森林。",
+      "reason": "crop shows 皑皑白雪 and 和煦, v4 dropped 皑皑/煦",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 3 23"
+    },
+    {
+      "image_index": 3,
+      "block_index": 29,
+      "original": "新地战",
+      "corrected": "第四期禁林竞速挑战同步开启，巫师们请准备迎接全新挑战，争取更高排",
+      "reason": "v4 新地战 garbage; crop reads 第四期禁林竞速挑战同步开启，巫师们请准备迎接全新挑战，争取更高排 (v6 hint had 楚林/开户/余新, crop shows 禁林/开启/全新)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 3 29"
+    },
+    {
+      "image_index": 4,
+      "block_index": 5,
+      "original": "全新巫师帽“小胖”上线，巫师在活动期间进行购买，更可享受120星石",
+      "corrected": "全新巫师帽“小胖啾”上线，巫师在活动期间进行购买，更可享受120星石",
+      "reason": "crop shows 小胖啾, v4 dropped 啾",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 4 5"
+    },
+    {
+      "image_index": 5,
+      "block_index": 0,
+      "original": "佳拍档”魔力加速回复速度略微上调。好友切、自定义房间、觉醒赛以",
+      "corrected": "佳拍档”魔力加速回复速度略微上调。好友切磋、自定义房间、觉醒赛以",
+      "reason": "crop shows 好友切磋, v4 dropped 磋",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 5 0"
+    },
+    {
+      "image_index": 5,
+      "block_index": 11,
+      "original": "加1点，召唤食死徒所需的堕落值由回响品质由低到高分别为166/48/129/1",
+      "corrected": "加1点，召唤食死徒所需的堕落值由回响品质由低到高分别为166/148/129/1",
+      "reason": "crop shows 166/148/129/1… (next line 12。), v4 dropped the 1 of 148",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 5 11"
+    },
+    {
+      "image_index": 7,
+      "block_index": 31,
+      "original": "POTTE",
+      "corrected": "POTTER",
+      "reason": "v4 b31 box x338-460 covers footer word POTTER, read only POTTE; letter-spaced footer art stored compact",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 7 31"
+    },
+    {
+      "image_index": 7,
+      "block_index": 32,
+      "original": "AWAKENEI",
+      "corrected": "AWAKENED",
+      "reason": "v4 b32 box x948-1138 covers footer word AWAKENED, misread final D as I; v6 M A GI C is a shifted slice (v4 b34 already has MAGIC)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 7 32"
+    },
+    {
+      "image_index": 3,
+      "block_index": 30,
+      "original": "筑四期禁林音速桃找同六",
+      "drop": true,
+      "reason": "overlaps b32 '第四期禁林竞速挑战同步开启，巫师们请准备迎接全新挑战，争取更高排' (y2285-2317) which read it at 0.983; garbled left slice",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 3 30"
+    },
+    {
+      "image_index": 3,
+      "block_index": 31,
+      "original": "免取更亮排",
+      "drop": true,
+      "reason": "overlaps b32 right end ('更高排' region); garbage '免取更亮排'",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 3 31"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "【“魔咒研习赛”活动开启】",
+      "drop": true,
+      "reason": "b27与b26同行重复；印刷为「【“魔咒研习赛”活动开启】」，v6对应块含【；保留块b26漏【，需在differ中修正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 2 27"
+    },
+    {
+      "image_index": 5,
+      "block_index": 14,
+      "original": "了贝拉的堕落值积攒规则，使其在面对大量生物进攻时也能够顺利地召唤",
+      "drop": true,
+      "reason": "b14与b15同行重复；印刷为「积攒」（v6对应块亦读「攒」），b15已覆盖该行但其读作『赞』",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 5 14"
     }
   ]
 }

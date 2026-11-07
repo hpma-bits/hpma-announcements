@@ -12,6 +12,16 @@
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.659be0f146172f0001dba25a 1 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 29,
+      "original": "活动时间：当地时间2024年1月16日5：00-2024年1月",
+      "drop": true,
+      "reason": "b29与b28同行重复；印刷「5:00」时间冒号为半角（v6对应块亦如此），b28已覆盖该行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.659be0f146172f0001dba25a 2 29"
     }
   ]
 }

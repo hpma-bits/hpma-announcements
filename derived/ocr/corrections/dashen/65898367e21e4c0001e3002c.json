@@ -31,6 +31,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.65898367e21e4c0001e3002c 2 10"
+    },
+    {
+      "image_index": 1,
+      "block_index": 14,
+      "original": "质扫帚“圣诞旋舞”",
+      "drop": true,
+      "reason": "b14与b13同行重复；b13已读出含句末「。」的完整行「质扫帚“圣诞旋舞”。」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65898367e21e4c0001e3002c 1 14"
     }
   ]
 }

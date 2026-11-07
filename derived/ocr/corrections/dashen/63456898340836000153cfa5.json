@@ -13,6 +13,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.63456898340836000153cfa5 1 9"
+    },
+    {
+      "image_index": 1,
+      "block_index": 15,
+      "original": "修复了魔咒“闪回咒”复制咒语卡时，魔力值扣除特",
+      "drop": true,
+      "reason": "b15与b14同行重复；b14已读出完整行（含序号「1、」）「1、修复了魔咒“闪回咒”复制咒语卡时，魔力值扣除特」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63456898340836000153cfa5 1 15"
     }
   ]
 }

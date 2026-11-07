@@ -176,6 +176,26 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 5 0"
+    },
+    {
+      "image_index": 6,
+      "block_index": 27,
+      "original": "响异直功能。",
+      "drop": true,
+      "reason": "overlaps b26 '1.新增“回响弃置”功能。巫师可以在回响界面对回响进' (y1016-1038) which read it at 0.981; garbled duplicate",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 6 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 31,
+      "original": "加速开启",
+      "drop": true,
+      "reason": "overlaps b32 '＊玩法加速开启！' (y1263-1287) which read it at 0.977; duplicate right slice",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 2 31"
     }
   ]
 }

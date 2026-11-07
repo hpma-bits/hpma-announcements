@@ -88,6 +88,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 1 25"
+    },
+    {
+      "image_index": 2,
+      "block_index": 28,
+      "original": "中",
+      "drop": true,
+      "reason": "overlaps b29 '快来加入“加隆探宝队”，揭开宝藏线索，找到属于自' (y1266-1291) at its start; garbage '中'",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 2 28"
     }
   ]
 }

@@ -115,6 +115,26 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 38"
+    },
+    {
+      "image_index": 1,
+      "block_index": 215,
+      "original": "优化了魔咒狂欢赛胜场宝箱的领取提示",
+      "drop": true,
+      "reason": "b215与b216均为b217行「1、优化了魔咒狂欢赛胜场宝箱的领取提示，如果巫师在」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 215"
+    },
+    {
+      "image_index": 1,
+      "block_index": 216,
+      "original": "如果巫师在",
+      "drop": true,
+      "reason": "b216为b217行「1、优化了魔咒狂欢赛胜场宝箱的领取提示，如果巫师在」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 216"
     }
   ]
 }

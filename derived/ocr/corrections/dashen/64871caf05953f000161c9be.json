@@ -21,6 +21,16 @@
       "reason": "噢→嗅；源图为“嗅嗅草窝”（与 b0020 为同一行重叠切片）",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.64871caf05953f000161c9be 1 21"
+    },
+    {
+      "image_index": 1,
+      "block_index": 20,
+      "original": "调整：将“神奇动物空间”家具“嗅嗅草窝”与“动",
+      "drop": true,
+      "reason": "b20与b21同行重复；印刷为「嗅嗅草窝」（v6对应块亦读嗅嗅），b21已覆盖该行但其误读『噢嗅』",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64871caf05953f000161c9be 1 20"
     }
   ]
 }
