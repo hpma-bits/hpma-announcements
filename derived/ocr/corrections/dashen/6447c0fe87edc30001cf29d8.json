@@ -119,6 +119,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6447c0fe87edc30001cf29d8 3 19"
+    },
+    {
+      "image_index": 1,
+      "block_index": 26,
+      "original": "合”中的传说及以上品质魔咒时，天继股特魔法觉醒",
+      "corrected": "合”中的传说及以上品质魔咒时，无法再继续抽取。",
+      "reason": "crop d1-224 + threshold: tail under watermark reads 无法再继续抽取。 (再继续抽取 mostly legible, 。 visible); v4/v6 mixed watermark chars",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6447c0fe87edc30001cf29d8 1 26"
+    },
+    {
+      "image_index": 2,
+      "block_index": 34,
+      "original": "一普通”、“萤火印记”等道具。",
+      "corrected": "-普通”、“萤火印记”等道具。",
+      "reason": "crop d1-225 shows leading half-width hyphen (continuation of 神奇救助-); v4 wrote ideograph 一",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6447c0fe87edc30001cf29d8 2 34"
+    },
+    {
+      "image_index": 4,
+      "block_index": 31,
+      "original": "及家具图纸后，无法再继续抽取。大神@哈利波特魔法觉醒",
+      "corrected": "及家具图纸后，无法再继续抽取。",
+      "reason": "crop d1-228 shows row ending 抽取。 with watermark after it; v6 correctly excluded watermark, v4 mixed it in",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6447c0fe87edc30001cf29d8 4 31"
     }
   ]
 }

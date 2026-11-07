@@ -42,6 +42,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.643e81364988e40001da436a 1 13"
+    },
+    {
+      "image_index": 2,
+      "block_index": 5,
+      "original": "“沙漠调查内容调整",
+      "corrected": "“沙漠调查”内容调整",
+      "reason": "crop d1-221 shows banner “沙漠调查”内容调整 with flourishes; v4 dropped closing ”, v6 prefixed 一 (left flourish)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.643e81364988e40001da436a 2 5"
+    },
+    {
+      "image_index": 3,
+      "block_index": 0,
+      "original": "“签到系统”更新V",
+      "corrected": "“签到系统”更新",
+      "reason": "crop d1-222 shows banner “签到系统”更新 with flourishes; v4 trailing V is right flourish misread",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.643e81364988e40001da436a 3 0"
     }
   ]
 }

@@ -41,6 +41,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.64355a6832f3230001c208dc 1 28"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "，以",
+      "drop": true,
+      "reason": "twin tail fragment ，以 of the row carried at v4 b18 (printed 大奖池中奖励包括传说品质猫头鹰“小长耳鸮”，以 per crop d1-218 and v6 b18; v4 b18 needs 号→鸮)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64355a6832f3230001c208dc 1 19"
     }
   ]
 }
