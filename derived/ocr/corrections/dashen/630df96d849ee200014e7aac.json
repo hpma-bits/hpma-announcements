@@ -73,6 +73,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.630df96d849ee200014e7aac 1 15"
+    },
+    {
+      "image_index": 2,
+      "block_index": 9,
+      "original": "决斗精神-久经沙场1：累计收集18个MA决斗家系列",
+      "corrected": "决斗精神-久经沙场I：累计收集18个MA决斗家系列",
+      "reason": "crop d1-140 shows serif Roman numeral I after 沙场 (transcribed as capital I per corpus convention), full-width ：; v4 wrote digit 1, v6 dropped it and used half-width colon",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.630df96d849ee200014e7aac 2 9"
     }
   ]
 }

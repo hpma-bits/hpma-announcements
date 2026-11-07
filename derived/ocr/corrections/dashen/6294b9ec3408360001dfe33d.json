@@ -135,6 +135,106 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 216"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "“礼盒优惠券”",
+      "drop": true,
+      "reason": "v4 b19 “礼盒优惠券” is a middle partial slice of the printed row fully carried by v4 b21 完成任务，达成对应等级即可获得“礼盒优惠券”，可 (same row y~1264); v6 split the same row into b19+b20",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 19"
+    },
+    {
+      "image_index": 1,
+      "block_index": 20,
+      "original": "完成任务，达成对应等级即可获得",
+      "drop": true,
+      "reason": "v4 b20 完成任务，达成对应等级即可获得 is a head partial slice of v4 b21 which carries the full printed row (same row y~1264, crop d1-82)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 20"
+    },
+    {
+      "image_index": 1,
+      "block_index": 43,
+      "original": "日登录可领取奖励，最终可获得猫头鹰“小仓号”",
+      "corrected": "日登录可领取奖励，最终可获得猫头鹰“小仓鸮”",
+      "reason": "crop d1-84 clearly shows 猫头鹰“小仓鸮”; v4 misread 鸮 as 号",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 43"
+    },
+    {
+      "image_index": 1,
+      "block_index": 47,
+      "original": "售卖时间：5月31日维护后-6月7日23：59",
+      "corrected": "售卖时间：5月31日维护后-6月7日23:59",
+      "reason": "crop d1-85 shows half-width 23:59 (time colon convention); v6 b48 “s” is garbage from the banner flourish",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 47"
+    },
+    {
+      "image_index": 1,
+      "block_index": 132,
+      "original": "敌方单位",
+      "drop": true,
+      "reason": "v4 b132 敌方单位 is a head partial slice of v4 b133 which carries the full printed row 敌方单位，一起飞向目标地点。到达后，将裹挟单位抛出 (same line y~4340, crop d1-86)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 132"
+    },
+    {
+      "image_index": 1,
+      "block_index": 138,
+      "original": "设计师观点：我们参考电影中翼魔的表现，为它设计了",
+      "corrected": "设计师观点：我们参考电影中蜷翼魔的表现，为它设计了",
+      "reason": "crop d1-87 clearly shows 电影中蜷翼魔的表现; v4 dropped 蜷",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 138"
+    },
+    {
+      "image_index": 1,
+      "block_index": 200,
+      "original": "10、速速禁",
+      "corrected": "10、速速禁锢",
+      "reason": "crop d1-88 shows 10、速速禁锢; v4 dropped 锢",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 200"
+    },
+    {
+      "image_index": 1,
+      "block_index": 201,
+      "original": "调整：速速禁范围由35降低为32。",
+      "corrected": "调整：速速禁锢范围由35降低为32。",
+      "reason": "crop d1-88/d1-91 show 调整：速速禁锢范围由35降低为32。; v4 dropped 锢",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 201"
+    },
+    {
+      "image_index": 1,
+      "block_index": 202,
+      "original": "设计师观点：在“最佳拍档”中，速速禁给巫师的走位",
+      "corrected": "设计师观点：在“最佳拍档”中，速速禁锢给巫师的走位",
+      "reason": "crop d1-91 shows 速速禁锢给巫师的走位; v4 dropped 锢",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 202"
+    },
+    {
+      "image_index": 1,
+      "block_index": 203,
+      "original": "带来了较大压力，因此，我们略微降低了速速禁的范围。",
+      "corrected": "带来了较大压力，因此，我们略微降低了速速禁锢的范围。",
+      "reason": "crop d1-91 shows 降低了速速禁锢的范围。; v4 dropped 锢",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 203"
     }
   ]
 }

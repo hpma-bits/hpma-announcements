@@ -98,6 +98,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 4 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 50,
+      "original": "敬开着，仿佛在邀请勇敢的探险者踏入未知的领域。",
+      "drop": true,
+      "reason": "与b49同行重复（y2046-2070同线双读）：源图印「敞开着，仿佛在邀请勇敢的探险者踏入未知的领域。」，b49已读出（敞），b50「敬开」为乱码重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 2 50"
     }
   ]
 }

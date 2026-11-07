@@ -98,6 +98,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 2 28"
+    },
+    {
+      "image_index": 1,
+      "block_index": 15,
+      "original": "上架时间：2024年10月1日5：30－11月1日3:20",
+      "drop": true,
+      "reason": "与b14同行重复（y1078-1103同线双读）：b14已按源图读出半角冒号「上架时间：2024年10月1日5:30－11月1日3:20」，b15的5：30为全角误读重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 1 15"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "2）豪华礼盒",
+      "drop": true,
+      "reason": "与b19同行重复（y1183-1210同线双读）：源图印半角括号「2)豪华礼盒」，b19正确，b18的「2）」为全角误读重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 1 18"
+    },
+    {
+      "image_index": 2,
+      "block_index": 18,
+      "original": ".",
+      "drop": true,
+      "reason": "「.」位于「金风欢颂」标题下方横幅图案内（y846-858,x157-187），放大察看无印刷文字，为画面装饰/图案误读碎屑",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66f4dc4890b2886a4b77a1bd 2 18"
     }
   ]
 }

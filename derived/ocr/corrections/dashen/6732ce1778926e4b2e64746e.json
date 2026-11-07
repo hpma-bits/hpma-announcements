@@ -86,6 +86,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.6732ce1778926e4b2e64746e 1 197"
+    },
+    {
+      "image_index": 1,
+      "block_index": 15,
+      "original": "锁\"*10作为奖励；累计抽卡次数达到60时，将获得深",
+      "drop": true,
+      "reason": "与b14同行重复（y1163-1190同线双读）：b14已正确读出「锁”*10作为奖励；累计抽卡次数达到60时，将获得深」，b15把后引号误读为半角\"的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6732ce1778926e4b2e64746e 1 15"
     }
   ]
 }

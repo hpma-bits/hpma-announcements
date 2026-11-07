@@ -157,6 +157,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.65f83fca2e838a790761b0c3 3 53"
+    },
+    {
+      "image_index": 1,
+      "after_block": 81,
+      "insert": true,
+      "text": "的毒牙天竺葵，以支撑魔药材料短缺的艰难时期",
+      "reason": "v4 整行漏识（v6 审计 missed_line 升级）；源图核验 crop ；行尾为水印所覆，其后文字不可恢复，按可见字形收录",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": "python -m tools.cli crop dashen.65f83fca2e838a790761b0c3 1 82 --v6"
     }
   ]
 }

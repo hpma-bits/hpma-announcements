@@ -90,6 +90,76 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 1 20"
+    },
+    {
+      "image_index": 2,
+      "block_index": 13,
+      "original": "1、马人一强力射击：射击距离降低。",
+      "corrected": "1、马人-强力射击：射击距离降低。",
+      "reason": "crop d1-130 shows 马人-强力射击 with short hyphen joiner, not 一",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 2 13"
+    },
+    {
+      "image_index": 2,
+      "block_index": 14,
+      "original": "2、纽特一动物保护者：等级额外提升降低至3。",
+      "corrected": "2、纽特-动物保护者：等级额外提升降低至3。",
+      "reason": "crop d1-131 shows 纽特-动物保护者 with short hyphen joiner",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 2 14"
+    },
+    {
+      "image_index": 2,
+      "block_index": 15,
+      "original": "3、小天狼星一守护之心：护盾值降低为9%。",
+      "corrected": "3、小天狼星-守护之心：护盾值降低为9%。",
+      "reason": "crop d1-133 shows 小天狼星-守护之心：护盾值降低为9%。",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 2 15"
+    },
+    {
+      "image_index": 2,
+      "block_index": 16,
+      "original": "4、灵猫一生生不息：灵猫分裂后生命值降低10%。",
+      "corrected": "4、灵猫-生生不息：灵猫分裂后生命值降低10%。",
+      "reason": "crop d1-133 shows 灵猫-生生不息 with short hyphen joiner",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 2 16"
+    },
+    {
+      "image_index": 2,
+      "block_index": 17,
+      "original": "5、卢娜一神奇成群：神奇动物生命值额外提升10%。",
+      "corrected": "5、卢娜-神奇成群：神奇动物生命值额外提升10%。",
+      "reason": "crop d1-134 shows 卢娜-神奇成群 with short hyphen joiner",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 2 17"
+    },
+    {
+      "image_index": 3,
+      "block_index": 10,
+      "original": "5、优化了强化勋章“斯内普一锋芒如翼“的攻击逻辑，现",
+      "corrected": "5、优化了强化勋章“斯内普-锋芒如翼“的攻击逻辑，现",
+      "reason": "crop d1-135 shows 斯内普-锋芒如翼 with short hyphen joiner; odd closing “ kept as printed (both engines agree)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 3 10"
+    },
+    {
+      "image_index": 4,
+      "block_index": 5,
+      "original": "4、修复了强化勋章“厉火一咆哮之焰”的效果下，厉",
+      "corrected": "4、修复了强化勋章“厉火-咆哮之焰”的效果下，厉",
+      "reason": "crop d1-136 shows 厉火-咆哮之焰 with short hyphen joiner, not 一",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 4 5"
     }
   ]
 }

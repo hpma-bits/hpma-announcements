@@ -110,6 +110,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 28"
+    },
+    {
+      "image_index": 1,
+      "block_index": 56,
+      "original": "累计登陆满7日，还可领取纪念头像框“缤纷魔法”，",
+      "corrected": "累计登陆满7日，还可领取纪念头像框“缤纷魔法”，一",
+      "reason": "line wraps after ，一 (starts 一同…); crop shows trailing 一 which v4 missed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 56"
     }
   ]
 }

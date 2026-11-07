@@ -120,6 +120,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.62d6912834083600011b8bfa 1 19"
+    },
+    {
+      "image_index": 1,
+      "block_index": 17,
+      "original": "活动",
+      "drop": true,
+      "reason": "v4 b17 活动 (x63-119) is an inner partial slice of v4 b16 →“活动”→“夏夜轮盘”，即可使用“星芒印花”抽取 (same row y~1018); v6 b17 奖品! is the next row duplicated as v6 b18 / v4 b20 奖品！",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62d6912834083600011b8bfa 1 17"
     }
   ]
 }

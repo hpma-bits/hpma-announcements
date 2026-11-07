@@ -164,6 +164,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 4 56"
+    },
+    {
+      "image_index": 1,
+      "block_index": 12,
+      "original": "史诗咒语卡“变形咒”。",
+      "drop": true,
+      "reason": "与b11同行重复（y1059-1083同线双读）：源图印「史诗咒语卡“变形咒”。」，对齐器已将b11对上v6；注意b11文本漏句号，与源图不符，建议另行补正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 1 12"
+    },
+    {
+      "image_index": 2,
+      "block_index": 50,
+      "original": "的此生追忆、未尽之愿与身后之事。",
+      "drop": true,
+      "reason": "与b49同行重复（y2064-2086同线双读）：源图印「的此生追忆、未尽之愿与身后之事。」，对齐器已将b49对上v6；注意b49漏句号，建议另行补正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 2 50"
+    },
+    {
+      "image_index": 4,
+      "block_index": 60,
+      "original": "砰雪人",
+      "drop": true,
+      "reason": "与b61同行重叠（y2074-2100同线）：b61已完整读出「砰雪人”。巫师将进入魔器“咻砰雪人”的视角，向附近」，b60「砰雪人」为左端重复切片（同区b57/b58/b59亦为该两行碎屑）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 4 60"
     }
   ]
 }

@@ -118,6 +118,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 120"
+    },
+    {
+      "image_index": 1,
+      "block_index": 30,
+      "original": "电金币获取效率提升50%",
+      "drop": true,
+      "reason": "v4 b30 电金币获取效率提升50% (x300) is an inner partial slice of v4 b32 购买即可解锁特权：日常活动中金币获取效率提升50%。 (same line y~1266)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 30"
     }
   ]
 }

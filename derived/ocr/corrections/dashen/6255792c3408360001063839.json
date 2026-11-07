@@ -49,6 +49,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6255792c3408360001063839 1 56"
+    },
+    {
+      "image_index": 1,
+      "block_index": 85,
+      "original": "堡，领略魔法魅力。点击【主界面一赛事一女巫夺宝",
+      "corrected": "堡，领略魔法魅力。点击【主界面→赛事→女巫夺宝",
+      "reason": "crop shows arrow glyphs → for both path separators",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6255792c3408360001063839 1 85"
+    },
+    {
+      "image_index": 1,
+      "block_index": 86,
+      "original": "夜一观看直播】，即可体验精彩直播！",
+      "corrected": "夜→观看直播】，即可体验精彩直播！",
+      "reason": "crop shows → separator; trailing ！ prints full-width (v4 form per convention), v6 half-width wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6255792c3408360001063839 1 86"
     }
   ]
 }

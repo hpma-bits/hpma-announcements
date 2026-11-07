@@ -189,6 +189,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 4 35"
+    },
+    {
+      "image_index": 1,
+      "after_block": 24,
+      "insert": true,
+      "text": "……？",
+      "reason": "v4 整行漏识（v6 审计 missed_line 升级）；源图核验 crop ",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 1 27 --v6"
     }
   ]
 }

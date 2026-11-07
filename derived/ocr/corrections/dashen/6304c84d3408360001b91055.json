@@ -53,6 +53,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6304c84d3408360001b91055 1 24"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "活动时间：8月24日维护后-9月7日5：00",
+      "corrected": "活动时间：8月24日维护后-9月7日5:00",
+      "reason": "crop d1-138 shows 维护后 - 9月7日5:00 with half-width dash and half-width time colon; v6 b44 “S” is banner flourish garbage",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6304c84d3408360001b91055 1 19"
+    },
+    {
+      "image_index": 2,
+      "block_index": 17,
+      "original": "3、修复了魔咒“速速禁”视觉表现与实际作用范围不符",
+      "corrected": "3、修复了魔咒“速速禁锢”视觉表现与实际作用范围不符",
+      "reason": "crop d1-139 clearly shows 魔咒“速速禁锢”视觉表现; v4 dropped 锢",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6304c84d3408360001b91055 2 17"
     }
   ]
 }

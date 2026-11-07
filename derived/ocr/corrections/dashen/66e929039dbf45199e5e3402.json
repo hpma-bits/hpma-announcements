@@ -136,6 +136,56 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 6 29"
+    },
+    {
+      "image_index": 1,
+      "block_index": 15,
+      "original": "锁”10作为奖励：累计抽卡次数达到60时，将获得光",
+      "drop": true,
+      "reason": "与b14同行重复（y1163-1188同线双读）：b14已正确读出「锁”*10作为奖励；累计抽卡次数达到60时，将获得光」，b15漏*且；误为：",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 1 15"
+    },
+    {
+      "image_index": 2,
+      "block_index": 29,
+      "original": "不会随看赛季更替而替换，“S9.黯影与微光”系列画票",
+      "drop": true,
+      "reason": "与b28同行重复（y1021-1047同线双读）：b28已正确读出「不会随着赛季更替而替换，“S9.黯影与微光”系列画票」，b29「随看」为乱码重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 2 29"
+    },
+    {
+      "image_index": 5,
+      "block_index": 29,
+      "original": "12.嘀喀宝箱的每日使用数量上限由20上调至50。",
+      "drop": true,
+      "reason": "与b28同行重复（y1022-1045同线双读）：b28已正确读出「12.嘀嗒宝箱的每日使用数量上限由20上调至50。」，b29「嘀喀」为乱码重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 5 29"
+    },
+    {
+      "image_index": 6,
+      "block_index": 30,
+      "original": "缥缈”生成的雾中时，脚步特",
+      "drop": true,
+      "reason": "与b28同行重叠（y1017-1044同线）：b28已完整读出「鸢尾梦”处于咒语卡“云雾缥缈”生成的雾中时，脚步特」，b30为右半重复切片（另b29『话下公务』同属该线乱码碎屑）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 6 30"
+    },
+    {
+      "image_index": 6,
+      "block_index": 37,
+      "original": "步的问题",
+      "drop": true,
+      "reason": "与b38同行重复（y1260-1286同线双读）：b38已读出「步的问题。」（源图句号在），b37为漏句号的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 6 37"
     }
   ]
 }
