@@ -101,6 +101,29 @@ def test_corrected_blocks_maps_locator_to_reading():
     assert archive.corrected_blocks(notice(), ledger()) == {(1, 0): "魔法觉醒"}
 
 
+def test_check_ledger_accepts_an_insert_after_a_block():
+    entry = {"image_index": 1, "after_block": 1, "insert": True, "text": "补充的一行", "reason": "v4 漏识"}
+    assert archive.check_ledger(notice(), {"corrections": [entry]}) == []
+
+
+def test_check_ledger_rejects_out_of_range_insert_anchor():
+    entry = {"image_index": 1, "after_block": 99, "insert": True, "text": "x"}
+    problems = archive.check_ledger(notice(), {"corrections": [entry]})
+    assert any("after_block out of range" in problem for problem in problems)
+
+
+def test_check_ledger_rejects_insert_carrying_original():
+    entry = {"image_index": 1, "after_block": 0, "insert": True, "text": "x", "original": "y"}
+    problems = archive.check_ledger(notice(), {"corrections": [entry]})
+    assert any("insert carries text, not original" in problem for problem in problems)
+
+
+def test_insert_lines_maps_anchor_pairs():
+    entry = {"image_index": 1, "after_block": 1, "insert": True, "text": "补充的一行"}
+    assert archive.insert_lines({"corrections": [entry]}) == {1: [(1, "补充的一行")]}
+    assert archive.insert_lines(None) == {}
+
+
 def test_corrected_blocks_without_ledger_is_empty():
     assert archive.corrected_blocks(notice(), None) == {}
 

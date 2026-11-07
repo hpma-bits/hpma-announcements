@@ -160,6 +160,54 @@ def test_drop_entry_must_not_carry_corrected_text():
         _render(ledger)
 
 
+def test_ledger_insert_adds_a_line_the_engine_missed():
+    notice = _notice()
+    ledger = {
+        "id": "dashen.aaaa",
+        "corrections": [
+            {
+                "image_index": 1,
+                "after_block": 4,
+                "insert": True,
+                "text": "引擎漏识的一行",
+                "reason": "v6 审计发现 v4 整行漏识；源图核验",
+                "confidence": "high",
+            }
+        ],
+    }
+    text = edition.render_notice(_post(), _selection(), notice, ledger)
+    body = text.split("### 图 1")[1]
+    lines = [line for line in body.splitlines() if line.strip()]
+    assert "引擎漏识的一行" in lines
+    assert lines.index("第二行") == lines.index("引擎漏识的一行") + 1
+
+
+def test_ledger_insert_survives_a_dropped_anchor_block():
+    notice = _notice()
+    ledger = {
+        "id": "dashen.aaaa",
+        "corrections": [
+            {
+                "image_index": 1,
+                "block_index": 5,
+                "original": "第二行",
+                "drop": True,
+                "reason": "重复切片",
+            },
+            {
+                "image_index": 1,
+                "after_block": 5,
+                "insert": True,
+                "text": "真实存在的尾行",
+                "reason": "v4 漏识",
+            },
+        ],
+    }
+    text = edition.render_notice(_post(), _selection(), notice, ledger)
+    assert "第二行" not in text
+    assert "真实存在的尾行" in text
+
+
 def _seed(root: Path) -> None:
     (root / "corpus/dashen").mkdir(parents=True)
     (root / "study").mkdir()

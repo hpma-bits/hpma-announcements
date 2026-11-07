@@ -41,6 +41,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.632095b50c8dc60001bd950a 3 8"
+    },
+    {
+      "image_index": 1,
+      "after_block": 12,
+      "insert": true,
+      "text": "注：具体鉴定规则请参照网页活动规则页面",
+      "reason": "v4 整行漏识（v6 审计 missed_line 升级，medium）；行尾位于半透明水印下，放大核验为「规则页面」",
+      "confidence": "medium",
+      "via": "audit-insert",
+      "recrop": "python -m tools.cli crop dashen.632095b50c8dc60001bd950a 1 13 --v6"
     }
   ]
 }

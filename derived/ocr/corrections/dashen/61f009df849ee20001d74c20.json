@@ -448,6 +448,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 15 4"
+    },
+    {
+      "image_index": 13,
+      "after_block": 8,
+      "insert": true,
+      "text": "吧！",
+      "reason": "v4 整行漏识（v6 审计 missed_line 升级）；源图为「…快来一试手气吧！」的换行尾行「吧！」",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 13 9 --v6"
     }
   ]
 }

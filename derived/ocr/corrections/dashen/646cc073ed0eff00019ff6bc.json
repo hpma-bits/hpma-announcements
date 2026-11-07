@@ -51,6 +51,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.646cc073ed0eff00019ff6bc 1 9"
+    },
+    {
+      "image_index": 1,
+      "after_block": 9,
+      "insert": true,
+      "text": "，维护结束后开启下一赛季。",
+      "reason": "v4 整行漏识（v6 审计 missed_line 升级）；「，维护结束后开启下一赛季。」换行尾行",
+      "confidence": "high",
+      "via": "audit-insert",
+      "recrop": "python -m tools.cli crop dashen.646cc073ed0eff00019ff6bc 1 11 --v6"
     }
   ]
 }
