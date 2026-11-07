@@ -257,6 +257,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 4 0"
+    },
+    {
+      "image_index": 4,
+      "block_index": 41,
+      "original": "心“周末福利”活动持续开启！",
+      "corrected": "“周末福利”活动持续开启！",
+      "reason": "d3-1 crop: red banner ～“周末福利”活动持续开启！～ with wave flourishes both sides; v4 leading 心 and v6 trailing 心 are flourish misreads (p1 precedent); corrected drops both flourishes",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 4 41"
+    },
+    {
+      "image_index": 5,
+      "block_index": 14,
+      "original": "6、优化了PC端环境中，家具“森中枭影”、“鸦息之处”",
+      "corrected": "6、优化了PC端环境中，家具“森中枭影”、“鸮息之处”、",
+      "reason": "d3-2 crop + glyph zoom d3-2-zoom: printed 鸮 (号+鸟) in “鸮息之处”, v4 鸦 wrong; line ends ”、 with trailing 、 printed; v4 missed both; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 5 14"
+    },
+    {
+      "image_index": 5,
+      "block_index": 40,
+      "original": "择后将提升战斗和舞会体验的最大蚊@哈利波特魔法觉醒",
+      "corrected": "择后将提升战斗和舞会体验的最大帧率@哈利波特魔法觉醒",
+      "reason": "d3-3-zoom: char under 大神 watermark shows 帧 strokes (巾+页), fits 帧率设置新增120帧选项 context; no corpus parallel; watermark tail @哈利波特魔法觉醒 correctly read by both engines and sits after the complete row (keeps 63176c88-16 precedent); v4 蚊/v6 神 are watermark-overlap misreads",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 5 40"
     }
   ]
 }

@@ -135,7 +135,7 @@
     {
       "block_index": 22,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "a9b60b3930afb7ee"
     },
     {
@@ -255,8 +255,8 @@
   ],
   "counts": {
     "consensus": 38,
+    "dropped": 1,
     "punct_rule": 1,
-    "queued": 1,
     "watermark": 2
   },
   "engine_audit": {
@@ -274,5 +274,6 @@
     "version": "1.4.4"
   },
   "id": "dashen.62a8732d0c8dc60001d4f612",
+  "inserts": [],
   "v6_only": []
 }

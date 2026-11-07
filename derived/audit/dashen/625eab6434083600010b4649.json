@@ -213,7 +213,7 @@
     {
       "block_index": 35,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "73cfc0c092e3e218"
     },
     {
@@ -290,7 +290,8 @@
     }
   ],
   "counts": {
-    "consensus": 45,
+    "consensus": 44,
+    "corrected": 1,
     "punct_rule": 1,
     "watermark": 2
   },
@@ -309,5 +310,6 @@
     "version": "1.4.4"
   },
   "id": "dashen.625eab6434083600010b4649",
+  "inserts": [],
   "v6_only": []
 }

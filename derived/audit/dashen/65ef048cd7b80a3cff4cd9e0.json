@@ -39,7 +39,7 @@
     {
       "block_index": 6,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "114b3dd3bf20a5f1"
     },
     {
@@ -81,7 +81,7 @@
     {
       "block_index": 13,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "a1d5711da739d06a"
     },
     {
@@ -111,7 +111,7 @@
     {
       "block_index": 18,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "3670be0a0d7f89b3"
     },
     {
@@ -135,7 +135,7 @@
     {
       "block_index": 22,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "7f0d747dfcb37dbb"
     },
     {
@@ -153,7 +153,7 @@
     {
       "block_index": 25,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "d19e82b5263d629c"
     },
     {
@@ -249,7 +249,7 @@
     {
       "block_index": 41,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "de2e2ab8366dca02"
     },
     {
@@ -260,8 +260,9 @@
     }
   ],
   "counts": {
-    "consensus": 41,
-    "queued": 3,
+    "adjudicated": 6,
+    "consensus": 35,
+    "corrected": 3,
     "watermark": 2
   },
   "engine_audit": {
@@ -279,22 +280,23 @@
     "version": "1.4.4"
   },
   "id": "dashen.65ef048cd7b80a3cff4cd9e0",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "探紧城望获情值物种，提高巫州等级可以解锁更多",
       "v6_block": 14
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "随着植物生长，巫师的草药学相关知识也更加丰富！",
       "v6_block": 19
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "《哈利波特:魔法觉醒》工作室",
       "v6_block": 44
     }

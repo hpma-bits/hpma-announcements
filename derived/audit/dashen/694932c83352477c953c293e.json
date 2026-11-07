@@ -141,13 +141,13 @@
     {
       "block_index": 7,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "506d4d32fcadb85e"
     },
     {
       "block_index": 8,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b3972fc7274b6929"
     },
     {
@@ -165,7 +165,7 @@
     {
       "block_index": 11,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "20957a58e57300df"
     },
     {
@@ -177,7 +177,7 @@
     {
       "block_index": 13,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "08c7e1c1d64ee0f5"
     },
     {
@@ -195,7 +195,7 @@
     {
       "block_index": 16,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "ccdb603d736f6ec9"
     },
     {
@@ -231,7 +231,7 @@
     {
       "block_index": 22,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "256914a2e3eb49b7"
     },
     {
@@ -285,7 +285,7 @@
     {
       "block_index": 31,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "1b98d359686e8f7a"
     },
     {
@@ -363,7 +363,7 @@
     {
       "block_index": 11,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "c7f60ec2d60d33d7"
     },
     {
@@ -423,7 +423,7 @@
     {
       "block_index": 21,
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "ab05a02aa2e97065"
     },
     {
@@ -435,7 +435,7 @@
     {
       "block_index": 23,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "766a3852101d5b79"
     },
     {
@@ -447,7 +447,7 @@
     {
       "block_index": 25,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "6d6ebc00d5406839"
     },
     {
@@ -495,7 +495,7 @@
     {
       "block_index": 33,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5d8e953d8593d64a"
     },
     {
@@ -1010,9 +1010,9 @@
     }
   ],
   "counts": {
-    "consensus": 151,
-    "corrected": 10,
-    "queued": 4,
+    "adjudicated": 9,
+    "consensus": 140,
+    "corrected": 16,
     "watermark": 6
   },
   "engine_audit": {
@@ -1030,22 +1030,23 @@
     "version": "1.4.4"
   },
   "id": "dashen.694932c83352477c953c293e",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 7
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "民情展现你的经商天赋吧！",
       "v6_block": 31
     },
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 1
     }

@@ -111,13 +111,13 @@
     {
       "block_index": 18,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "2b5ef8ff735bd4f1"
     },
     {
       "block_index": 19,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "d072b1de1cbe93fd"
     },
     {
@@ -165,7 +165,7 @@
     {
       "block_index": 27,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b505e7257d81a3df"
     },
     {
@@ -207,7 +207,7 @@
     {
       "block_index": 34,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "fddb9443e8ef6759"
     },
     {
@@ -267,7 +267,7 @@
     {
       "block_index": 0,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "5273b3546ecdc67b"
     },
     {
@@ -339,7 +339,7 @@
     {
       "block_index": 12,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "7ea0c500dd4d6be6"
     },
     {
@@ -435,7 +435,7 @@
     {
       "block_index": 28,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "74d2823b55889389"
     },
     {
@@ -909,7 +909,7 @@
     {
       "block_index": 23,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "11ff7c13b414e8e5"
     },
     {
@@ -975,7 +975,7 @@
     {
       "block_index": 34,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "5555a5f451180a94"
     },
     {
@@ -1077,7 +1077,7 @@
     {
       "block_index": 15,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "eaf6f74a3e69ea4d"
     },
     {
@@ -1095,7 +1095,7 @@
     {
       "block_index": 18,
       "image_index": 5,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "3e28ec9b28ddeb79"
     },
     {
@@ -1119,7 +1119,7 @@
     {
       "block_index": 22,
       "image_index": 5,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e3310085ac16fba3"
     },
     {
@@ -1293,7 +1293,7 @@
     {
       "block_index": 0,
       "image_index": 6,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "76cc8fc85d33e58c"
     },
     {
@@ -1305,7 +1305,7 @@
     {
       "block_index": 2,
       "image_index": 6,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "a730c03296913468"
     },
     {
@@ -1341,7 +1341,7 @@
     {
       "block_index": 8,
       "image_index": 6,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "4735701f1894953e"
     },
     {
@@ -1514,10 +1514,10 @@
     }
   ],
   "counts": {
-    "consensus": 229,
-    "corrected": 4,
+    "adjudicated": 19,
+    "consensus": 219,
+    "corrected": 9,
     "punct_rule": 10,
-    "queued": 14,
     "watermark": 4
   },
   "engine_audit": {
@@ -1535,58 +1535,59 @@
     "version": "1.4.4"
   },
   "id": "dashen.63aaebbc0c8dc60001abdbd4",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "惠!",
       "v6_block": 19
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "快来一试手气吧!",
       "v6_block": 28
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 1
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 14
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 31
     },
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "sS",
       "v6_block": 24
     },
     {
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "该模式由团队探索“禁林边缘”、",
       "v6_block": 16
     },
     {
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "44",
       "v6_block": 23
     },
     {
       "image_index": 6,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 1
     }

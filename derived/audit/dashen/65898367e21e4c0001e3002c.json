@@ -51,7 +51,7 @@
     {
       "block_index": 8,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "fb55d370d0a93c0d"
     },
     {
@@ -87,7 +87,7 @@
     {
       "block_index": 14,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "9aa4020383ca0338"
     },
     {
@@ -99,7 +99,7 @@
     {
       "block_index": 16,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "17792990d35f33c0"
     },
     {
@@ -111,7 +111,7 @@
     {
       "block_index": 18,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "2896191ab135c223"
     },
     {
@@ -141,7 +141,7 @@
     {
       "block_index": 23,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "fe3ad3e0c14cd696"
     },
     {
@@ -249,13 +249,13 @@
     {
       "block_index": 41,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f4b0bfe62ff5437d"
     },
     {
       "block_index": 42,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "6d7393d3880be478"
     },
     {
@@ -327,7 +327,7 @@
     {
       "block_index": 10,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "695aac2de186134d"
     },
     {
@@ -405,7 +405,7 @@
     {
       "block_index": 23,
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "db9fd582e7ee2a84"
     },
     {
@@ -638,9 +638,10 @@
     }
   ],
   "counts": {
-    "consensus": 98,
-    "corrected": 1,
-    "queued": 8,
+    "adjudicated": 8,
+    "consensus": 93,
+    "corrected": 5,
+    "dropped": 3,
     "watermark": 3
   },
   "engine_audit": {
@@ -658,28 +659,41 @@
     "version": "1.4.4"
   },
   "id": "dashen.65898367e21e4c0001e3002c",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "$?",
       "v6_block": 8
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "试手气吧！",
       "v6_block": 18
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
+      "text": "S",
+      "v6_block": 20
+    },
+    {
+      "image_index": 1,
+      "status": "adjudicated",
       "text": "备了丰富的整蛊道具，快来一探究意吧！",
       "v6_block": 43
     },
     {
+      "image_index": 1,
+      "status": "adjudicated",
+      "text": "深猫@哈利波特魔法觉醒",
+      "v6_block": 45
+    },
+    {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 15
     }

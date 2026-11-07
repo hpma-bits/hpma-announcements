@@ -15,7 +15,7 @@
     {
       "block_index": 2,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "a47ff1babcdd0275"
     },
     {
@@ -38,8 +38,8 @@
     }
   ],
   "counts": {
-    "consensus": 3,
-    "queued": 1,
+    "adjudicated": 2,
+    "consensus": 2,
     "watermark": 3
   },
   "engine_audit": {
@@ -57,10 +57,11 @@
     "version": "1.4.4"
   },
   "id": "dashen.62f3b68a3408360001f2c1c9",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "12+",
       "v6_block": 3
     }

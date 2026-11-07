@@ -193,6 +193,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6a01c3bb0cbc8d58b737a1eb 2 37"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "焕新时装“清泉流光?暗流”与“清泉流光?清波”也将同期",
+      "corrected": "焕新时装“清泉流光·暗流”与“清泉流光·清波”也将同期",
+      "reason": "?→·；v6 块为另一行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a01c3bb0cbc8d58b737a1eb 1 18"
     }
   ]
 }

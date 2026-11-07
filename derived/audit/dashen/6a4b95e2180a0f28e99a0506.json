@@ -105,7 +105,7 @@
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "e68fbe4f302bafad"
     },
     {
@@ -147,7 +147,7 @@
     {
       "block_index": 5,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f70ba076f3d854ec"
     },
     {
@@ -183,7 +183,7 @@
     {
       "block_index": 11,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "51dbac1b50256b48"
     },
     {
@@ -423,7 +423,7 @@
     {
       "block_index": 0,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "5da896aa95586419"
     },
     {
@@ -483,7 +483,7 @@
     {
       "block_index": 10,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "1180c0d5aad23a0a"
     },
     {
@@ -596,10 +596,10 @@
     }
   ],
   "counts": {
-    "consensus": 82,
-    "corrected": 6,
+    "adjudicated": 3,
+    "consensus": 79,
+    "corrected": 9,
     "punct_rule": 5,
-    "queued": 3,
     "watermark": 4
   },
   "engine_audit": {
@@ -617,10 +617,11 @@
     "version": "1.4.4"
   },
   "id": "dashen.6a4b95e2180a0f28e99a0506",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "上架“摩命士人长袍专卖店”",
       "v6_block": 17
     }

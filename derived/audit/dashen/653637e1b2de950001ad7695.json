@@ -21,7 +21,7 @@
     {
       "block_index": 3,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "745cdc966e0e820b"
     },
     {
@@ -33,7 +33,7 @@
     {
       "block_index": 5,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "852abc902d2a1028"
     },
     {
@@ -50,8 +50,10 @@
     }
   ],
   "counts": {
-    "consensus": 3,
-    "queued": 3,
+    "adjudicated": 3,
+    "consensus": 2,
+    "corrected": 1,
+    "dropped": 1,
     "watermark": 4
   },
   "engine_audit": {
@@ -69,16 +71,23 @@
     "version": "1.4.4"
   },
   "id": "dashen.653637e1b2de950001ad7695",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "+",
       "v6_block": 4
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
+      "text": "CAIEA",
+      "v6_block": 6
+    },
+    {
+      "image_index": 1,
+      "status": "adjudicated",
       "text": "活的要示",
       "v6_block": 8
     }

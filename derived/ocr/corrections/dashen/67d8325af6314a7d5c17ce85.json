@@ -350,6 +350,86 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 6 45"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "“S12高布石赛季·月下高布石之影",
+      "corrected": "“S12高布石赛季·月下高布石之影”",
+      "reason": "d3-comp01 #4 crop: banner prints 赛季·月下 with middle dot · and closing ”; v4 missed · and ”, v6 月→凡 wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 1 13"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "赛季时间：2025年3月5日维护后-4月30日6：00",
+      "corrected": "赛季时间：2025年3月5日维护后-4月30日6:00",
+      "reason": "d3-comp01 #5 crop: row reads 赛季时间：2025年3月5日维护后-4月30日6:00; half-width dash, half-width time colon 6:00 (v4 '6: 00' space is OCR artifact; spaces around dash normalized per 6304c84d-19 precedent); v6 b18 is a different line (历史悠久的巫师游戏) mis-paired",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 1 18"
+    },
+    {
+      "image_index": 2,
+      "block_index": 31,
+      "original": "米“为咒发声！”活动开启！",
+      "corrected": "*“为咒发声！”活动开启！",
+      "reason": "d3-7-zoom: marker star prints as six-spoke asterisk -> * (convention), v4 米 misread; trailing ！ full-width - identical glyph to the inner ！ (d3-7-bang side-by-side); v6 trailing narrow ! wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 2 31"
+    },
+    {
+      "image_index": 2,
+      "block_index": 37,
+      "original": "累计参与10场“为咒发声！”即可领电@哈利波特魔法觉醒",
+      "corrected": "累计参与10场“为咒发声！”即可领取",
+      "reason": "d3-8-thresh dark-threshold recovers 取 under the 大神 watermark (领取 idiomatic); tail beyond 取 covered by watermark, unrecoverable; v4 @哈利波特魔法觉醒 / v6 @哈利波导魔法觉醒 tails overlay row text -> dropped per 65f83fca-69 precedent",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 2 37"
+    },
+    {
+      "image_index": 5,
+      "block_index": 16,
+      "original": "7、碧的草药商店与回收篓中增加了背包中草药数量",
+      "corrected": "7、葭碧的草药商店与回收篓中增加了背包中草药数量",
+      "reason": "d3-comp03 #10 crop: 葭碧 in red; v4 missed 葭; equals v6 reading (cf. p2 6655a852 葭碧 precedent)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 5 16"
+    },
+    {
+      "image_index": 5,
+      "block_index": 25,
+      "original": "乐部内将不会再收到菜等玩法中其他巫师的交互提",
+      "corrected": "乐部内将不会再收到薅菜等玩法中其他巫师的交互提",
+      "reason": "d3-11-zoom: printed 薅 (艹+耨) before 菜; v4 dropped it; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 5 25"
+    },
+    {
+      "image_index": 5,
+      "block_index": 49,
+      "original": "“中国火球幼龙”卡牌在结算中的承伤数皮特魔法觉醒",
+      "corrected": "“中国火球幼龙”卡牌在结算中的承伤数据展示",
+      "reason": "d3-12-thresh2 dark-threshold recovers 据展示 after v4/v6-agreed 承伤数; tail beyond 示 (incl possible 。) covered by 大神 watermark, unrecoverable; v4 皮特魔法觉醒 / v6 波特魔法觉醒 are watermark tails overlaying row text -> dropped per 65f83fca-69 precedent",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 5 49"
+    },
+    {
+      "image_index": 6,
+      "block_index": 48,
+      "original": "《寸淼@哈利波特魔法觉醒",
+      "corrected": "《",
+      "reason": "d3-13-zoom8: handwritten sign-off first line under white 大神 watermark; only 《 clean, cursive rest degraded (engines' 寸淼/大澳 tails prove); rest unrecoverable, cut at last clean point per 65f83fca-69 precedent",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 6 48"
     }
   ]
 }

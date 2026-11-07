@@ -69,13 +69,13 @@
     {
       "block_index": 11,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "3aec7322d73925d7"
     },
     {
       "block_index": 12,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "474a85eb24d988e2"
     },
     {
@@ -117,13 +117,13 @@
     {
       "block_index": 0,
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "80ae93fdff0a8133"
     },
     {
       "block_index": 1,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "3066385d40eb51d0"
     },
     {
@@ -165,13 +165,13 @@
     {
       "block_index": 8,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "37e40f51e64e87cb"
     },
     {
       "block_index": 9,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "4c78b2122ba01388"
     },
     {
@@ -279,7 +279,7 @@
     {
       "block_index": 1,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "f607530d0cb3a647"
     },
     {
@@ -321,13 +321,13 @@
     {
       "block_index": 8,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "5764d36ae3d38275"
     },
     {
       "block_index": 9,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "a930ec27faf18929"
     },
     {
@@ -417,7 +417,7 @@
     {
       "block_index": 24,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "a544fa3fa93306bc"
     },
     {
@@ -447,7 +447,7 @@
     {
       "block_index": 4,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "20278a2486ff80ae"
     },
     {
@@ -465,7 +465,7 @@
     {
       "block_index": 7,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "31ee21935196ffbb"
     },
     {
@@ -519,7 +519,7 @@
     {
       "block_index": 16,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "f908d37b6173a48c"
     },
     {
@@ -579,7 +579,7 @@
     {
       "block_index": 9,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "caf1e97d280b4be5"
     },
     {
@@ -597,7 +597,7 @@
     {
       "block_index": 12,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f83ba2f490e6d70f"
     },
     {
@@ -705,7 +705,7 @@
     {
       "block_index": 30,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "95976e6287d44504"
     },
     {
@@ -735,7 +735,7 @@
     {
       "block_index": 35,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "20c699040aa7757a"
     },
     {
@@ -950,10 +950,10 @@
     }
   ],
   "counts": {
-    "consensus": 147,
-    "corrected": 2,
+    "adjudicated": 13,
+    "consensus": 136,
+    "corrected": 9,
     "punct_rule": 2,
-    "queued": 9,
     "watermark": 1
   },
   "engine_audit": {
@@ -971,22 +971,30 @@
     "version": "1.4.4"
   },
   "id": "dashen.63176c880c8dc60001ba3e68",
+  "inserts": [
+    {
+      "after_block": 35,
+      "image_index": 5,
+      "status": "adjudicated",
+      "text": "可以在玩家指定的任意区域开始打击目标了"
+    }
+  ],
   "v6_only": [
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 8
     },
     {
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "可以在玩家指定的任意区域开始打击目标了",
       "v6_block": 36
     },
     {
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "\"大神@哈利波特魔法觉醒",
       "v6_block": 37
     }

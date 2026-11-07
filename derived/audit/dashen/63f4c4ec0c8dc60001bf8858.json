@@ -87,7 +87,7 @@
     {
       "block_index": 14,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "d6ae178cbc9fd71f"
     },
     {
@@ -105,19 +105,19 @@
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "774aa2b814740a13"
     },
     {
       "block_index": 18,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "01d2cd4797f1750e"
     },
     {
       "block_index": 19,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "9062d9ee0fa0f1de"
     },
     {
@@ -129,7 +129,7 @@
     {
       "block_index": 21,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "2368d8c8dada95fa"
     },
     {
@@ -141,13 +141,13 @@
     {
       "block_index": 23,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "e2f14addf0303368"
     },
     {
       "block_index": 24,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "a44ea2d4b3367239"
     },
     {
@@ -165,7 +165,7 @@
     {
       "block_index": 0,
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "55174d725d0e4581"
     },
     {
@@ -201,7 +201,7 @@
     {
       "block_index": 6,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "68d925e327dbfadd"
     },
     {
@@ -279,13 +279,13 @@
     {
       "block_index": 19,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "00a4e80c08c54e4d"
     },
     {
       "block_index": 20,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "c6a7f45fa2a80f7c"
     },
     {
@@ -345,13 +345,13 @@
     {
       "block_index": 30,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5b5bbc82a474c255"
     },
     {
       "block_index": 31,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "52496e6d379eaf6e"
     },
     {
@@ -386,9 +386,10 @@
     }
   ],
   "counts": {
-    "consensus": 55,
-    "corrected": 2,
-    "queued": 9,
+    "adjudicated": 6,
+    "consensus": 47,
+    "corrected": 9,
+    "dropped": 4,
     "watermark": 2
   },
   "engine_audit": {
@@ -406,28 +407,36 @@
     "version": "1.4.4"
   },
   "id": "dashen.63f4c4ec0c8dc60001bf8858",
+  "inserts": [
+    {
+      "after_block": 35,
+      "image_index": 2,
+      "status": "adjudicated",
+      "text": "敬上"
+    }
+  ],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "游戏内文本调整心",
       "v6_block": 15
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2",
       "v6_block": 16
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "发特魔法觉醒",
       "v6_block": 26
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "敬上",
       "v6_block": 35
     }

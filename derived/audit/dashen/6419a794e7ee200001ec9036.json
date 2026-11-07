@@ -39,7 +39,7 @@
     {
       "block_index": 6,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "fcf1a1a40cb1e038"
     },
     {
@@ -111,7 +111,7 @@
     {
       "block_index": 18,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e7847a401b911b31"
     },
     {
@@ -171,13 +171,13 @@
     {
       "block_index": 28,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "648087fd2a5619b7"
     },
     {
       "block_index": 29,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "0e3fdc524fa60f3a"
     },
     {
@@ -339,7 +339,7 @@
     {
       "block_index": 4,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "5983eb61cdf99481"
     },
     {
@@ -369,7 +369,7 @@
     {
       "block_index": 9,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "8f5919809963bc3f"
     },
     {
@@ -506,8 +506,10 @@
     }
   ],
   "counts": {
-    "consensus": 79,
-    "queued": 5,
+    "adjudicated": 7,
+    "consensus": 75,
+    "corrected": 1,
+    "dropped": 1,
     "watermark": 3
   },
   "engine_audit": {
@@ -525,22 +527,23 @@
     "version": "1.4.4"
   },
   "id": "dashen.6419a794e7ee200001ec9036",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "晋日重现-四弗勒斯·斯内普的获取概率较活动前",
       "v6_block": 19
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 5
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 11
     }

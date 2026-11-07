@@ -225,7 +225,7 @@
     {
       "block_index": 37,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "9cb3afc6dca05f30"
     },
     {
@@ -285,7 +285,7 @@
     {
       "block_index": 47,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5d8e953d8593d64a"
     },
     {
@@ -345,7 +345,7 @@
     {
       "block_index": 57,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "8ff36538d731e113"
     },
     {
@@ -363,13 +363,13 @@
     {
       "block_index": 60,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "75f80c5e16fe0129"
     },
     {
       "block_index": 61,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "9af9aa51bd1014c3"
     },
     {
@@ -573,7 +573,7 @@
     {
       "block_index": 95,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "7dab550cac92e866"
     },
     {
@@ -741,7 +741,7 @@
     {
       "block_index": 123,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "6abaf18fe738c95f"
     },
     {
@@ -1106,10 +1106,10 @@
     }
   ],
   "counts": {
-    "consensus": 174,
-    "corrected": 2,
+    "adjudicated": 13,
+    "consensus": 169,
+    "corrected": 4,
     "punct_rule": 4,
-    "queued": 10,
     "watermark": 2
   },
   "engine_audit": {
@@ -1127,52 +1127,53 @@
     "version": "1.4.4"
   },
   "id": "dashen.6720552190b2886a4b1236ec",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“黒魔法赛季·黯影与微光”持续更新！",
       "v6_block": 18
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 40
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "Ⅱ1月新学院礼盒即将上架",
       "v6_block": 41
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "成就",
       "v6_block": 66
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 75
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 76
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "小批图本看完符的开户情况",
       "v6_block": 102
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "修氨子在聊天频首中李看其他平师的上组分京啦",
       "v6_block": 131
     }

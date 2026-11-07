@@ -63,7 +63,7 @@
     {
       "block_index": 10,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "f6e7547335db6e95"
     },
     {
@@ -81,7 +81,7 @@
     {
       "block_index": 13,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "0cec4fd5630d76f0"
     },
     {
@@ -105,7 +105,7 @@
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "e68fbe4f302bafad"
     },
     {
@@ -183,13 +183,13 @@
     {
       "block_index": 11,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "520b5f4c2f818f39"
     },
     {
       "block_index": 12,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "c8ec41f8a4638de8"
     },
     {
@@ -219,7 +219,7 @@
     {
       "block_index": 17,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "3fe2f6e77eaec788"
     },
     {
@@ -279,7 +279,7 @@
     {
       "block_index": 27,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "0907d833bb0b0178"
     },
     {
@@ -333,7 +333,7 @@
     {
       "block_index": 8,
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "3d833328135eaaf1"
     },
     {
@@ -375,7 +375,7 @@
     {
       "block_index": 15,
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "64bf06c69afa7887"
     },
     {
@@ -429,7 +429,7 @@
     {
       "block_index": 24,
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "49aca89ab56335bb"
     },
     {
@@ -561,7 +561,7 @@
     {
       "block_index": 15,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "5da896aa95586419"
     },
     {
@@ -632,10 +632,11 @@
     }
   ],
   "counts": {
-    "consensus": 79,
-    "corrected": 8,
+    "adjudicated": 6,
+    "consensus": 75,
+    "corrected": 13,
+    "dropped": 1,
     "punct_rule": 8,
-    "queued": 8,
     "watermark": 3
   },
   "engine_audit": {
@@ -653,10 +654,11 @@
     "version": "1.4.4"
   },
   "id": "dashen.6a956608f192995fa945121c",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "七如“摩合七人长袍专卖店”",
       "v6_block": 17
     }

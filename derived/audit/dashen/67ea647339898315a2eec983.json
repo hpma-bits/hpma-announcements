@@ -123,7 +123,7 @@
     {
       "block_index": 20,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "8c8b759643d3627b"
     },
     {
@@ -177,7 +177,7 @@
     {
       "block_index": 0,
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "8a4d40a733f27d64"
     },
     {
@@ -201,7 +201,7 @@
     {
       "block_index": 4,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "39bc211b7e4a62f4"
     },
     {
@@ -231,7 +231,7 @@
     {
       "block_index": 9,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f4cbf0b4990b17d9"
     },
     {
@@ -333,19 +333,19 @@
     {
       "block_index": 26,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "26152d461411b9fc"
     },
     {
       "block_index": 27,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "5d21ad93b49689f9"
     },
     {
       "block_index": 28,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "ee42631f97e0edf6"
     },
     {
@@ -363,7 +363,7 @@
     {
       "block_index": 31,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "facabc3587fac8fb"
     },
     {
@@ -375,7 +375,7 @@
     {
       "block_index": 33,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "634b21f9f5b4f945"
     },
     {
@@ -435,7 +435,7 @@
     {
       "block_index": 2,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "78385615f1b266a2"
     },
     {
@@ -483,7 +483,7 @@
     {
       "block_index": 10,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "6246b06ae002f22f"
     },
     {
@@ -591,13 +591,13 @@
     {
       "block_index": 28,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "4a0dfa6191aaecb6"
     },
     {
       "block_index": 29,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "5ab292f28c30ac05"
     },
     {
@@ -795,7 +795,7 @@
     {
       "block_index": 26,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "fc623d87ec623081"
     },
     {
@@ -825,7 +825,7 @@
     {
       "block_index": 31,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "75f80c5e16fe0129"
     },
     {
@@ -837,13 +837,13 @@
     {
       "block_index": 33,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "b7ee1e506e37e7fe"
     },
     {
       "block_index": 34,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "72bf49e01369620f"
     },
     {
@@ -855,13 +855,13 @@
     {
       "block_index": 36,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "fc64186bd3f348a3"
     },
     {
       "block_index": 37,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "d3a80322dbf504c6"
     },
     {
@@ -879,13 +879,13 @@
     {
       "block_index": 40,
       "image_index": 4,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "5a7c0d6f67451854"
     },
     {
       "block_index": 41,
       "image_index": 4,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "8994c83777ed4f11"
     },
     {
@@ -897,7 +897,7 @@
     {
       "block_index": 43,
       "image_index": 4,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "f68212466c3ed355"
     },
     {
@@ -1029,7 +1029,7 @@
     {
       "block_index": 21,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "75a96534542b9cae"
     },
     {
@@ -1053,7 +1053,7 @@
     {
       "block_index": 25,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "0f7003faa8095774"
     },
     {
@@ -1113,7 +1113,7 @@
     {
       "block_index": 35,
       "image_index": 5,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "464f53b7a6fb69ba"
     },
     {
@@ -1215,7 +1215,7 @@
     {
       "block_index": 8,
       "image_index": 6,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "b3be6414bfdb6cb1"
     },
     {
@@ -1377,13 +1377,13 @@
     {
       "block_index": 35,
       "image_index": 6,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "81c88fd8f3d19572"
     },
     {
       "block_index": 36,
       "image_index": 6,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "8c485aaa59156336"
     },
     {
@@ -1407,7 +1407,7 @@
     {
       "block_index": 40,
       "image_index": 6,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "a74ebe1743b6b213"
     },
     {
@@ -1454,10 +1454,11 @@
     }
   ],
   "counts": {
-    "consensus": 226,
-    "corrected": 3,
+    "adjudicated": 29,
+    "consensus": 206,
+    "corrected": 17,
+    "dropped": 2,
     "punct_rule": 2,
-    "queued": 25,
     "watermark": 2
   },
   "engine_audit": {
@@ -1475,100 +1476,101 @@
     "version": "1.4.4"
   },
   "id": "dashen.67ea647339898315a2eec983",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "机传说卡牌*1作为奖励：累计地卡次数达到100时，将",
       "v6_block": 20
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 1
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 2
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 18
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "纷”、“雷电霹雳”模式中，巫师有机会遇见“金币宝箱”，",
       "v6_block": 33
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "奖励!",
       "v6_block": 35
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 1
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "吃点苦头吧！",
       "v6_block": 30
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“学院杯”魔法史项目即将开赛！",
       "v6_block": 32
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2",
       "v6_block": 33
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 34
     },
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2",
       "v6_block": 26
     },
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "活的间：每周六、周口",
       "v6_block": 28
     },
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2",
       "v6_block": 41
     },
     {
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "14优化了预监用面中免色的脸型显示、现在预监用",
       "v6_block": 35
     },
     {
       "image_index": 6,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "东石时不合再被卡住",
       "v6_block": 35
     }

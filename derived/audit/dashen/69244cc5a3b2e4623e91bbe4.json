@@ -75,7 +75,7 @@
     {
       "block_index": 12,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "24a5bbf843af273f"
     },
     {
@@ -117,7 +117,7 @@
     {
       "block_index": 19,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "46dd3a03916e17b1"
     },
     {
@@ -165,7 +165,7 @@
     {
       "block_index": 5,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "96699e6a89bb1e24"
     },
     {
@@ -201,7 +201,7 @@
     {
       "block_index": 11,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "8c25df0fdbe9e217"
     },
     {
@@ -231,7 +231,7 @@
     {
       "block_index": 16,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "69f27b7f5d0a55fa"
     },
     {
@@ -375,7 +375,7 @@
     {
       "block_index": 13,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f058115ada71c2a7"
     },
     {
@@ -465,7 +465,7 @@
     {
       "block_index": 28,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "2c954ef49610f125"
     },
     {
@@ -591,7 +591,7 @@
     {
       "block_index": 5,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "fc6d2ee4ed8e4484"
     },
     {
@@ -615,7 +615,7 @@
     {
       "block_index": 9,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "766a3852101d5b79"
     },
     {
@@ -627,7 +627,7 @@
     {
       "block_index": 11,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "6d6ebc00d5406839"
     },
     {
@@ -681,7 +681,7 @@
     {
       "block_index": 20,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5d8e953d8593d64a"
     },
     {
@@ -789,19 +789,19 @@
     {
       "block_index": 6,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "38b74f3d964c70d2"
     },
     {
       "block_index": 7,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "c1cceddbf04cf4bf"
     },
     {
       "block_index": 8,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "08d2ec5bb406c2a5"
     },
     {
@@ -939,7 +939,7 @@
     {
       "block_index": 31,
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "e13d69c1e4cbc46a"
     },
     {
@@ -999,7 +999,7 @@
     {
       "block_index": 5,
       "image_index": 6,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "5da896aa95586419"
     },
     {
@@ -1161,7 +1161,7 @@
     {
       "block_index": 32,
       "image_index": 6,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "ba9ed6ccf730b973"
     },
     {
@@ -1184,10 +1184,11 @@
     }
   ],
   "counts": {
-    "consensus": 172,
-    "corrected": 9,
+    "adjudicated": 4,
+    "consensus": 162,
+    "corrected": 20,
+    "dropped": 3,
     "punct_rule": 5,
-    "queued": 7,
     "watermark": 4
   },
   "engine_audit": {
@@ -1205,5 +1206,13 @@
     "version": "1.4.4"
   },
   "id": "dashen.69244cc5a3b2e4623e91bbe4",
-  "v6_only": []
+  "inserts": [],
+  "v6_only": [
+    {
+      "image_index": 6,
+      "status": "adjudicated",
+      "text": "《哈利波特:魔法觉醒》工作室",
+      "v6_block": 33
+    }
+  ]
 }

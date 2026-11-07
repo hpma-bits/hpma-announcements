@@ -117,7 +117,7 @@
     {
       "block_index": 19,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "2e79571c5ef1b239"
     },
     {
@@ -171,7 +171,7 @@
     {
       "block_index": 28,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "897064f61417ed4e"
     },
     {
@@ -195,7 +195,7 @@
     {
       "block_index": 32,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "12e612aec6018f8e"
     },
     {
@@ -333,13 +333,13 @@
     {
       "block_index": 55,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "a0adbf8a7be404d3"
     },
     {
       "block_index": 56,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "2cac3a00edb31ea7"
     },
     {
@@ -429,13 +429,13 @@
     {
       "block_index": 10,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "693e28c1e631a86b"
     },
     {
       "block_index": 11,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "9a9565ef546a6d66"
     },
     {
@@ -483,7 +483,7 @@
     {
       "block_index": 19,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b4eb5fd370b76ff5"
     },
     {
@@ -615,13 +615,13 @@
     {
       "block_index": 41,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "bc4776d9eec90ba4"
     },
     {
       "block_index": 42,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "df203bc25662a23b"
     },
     {
@@ -639,13 +639,13 @@
     {
       "block_index": 45,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "a76e44f2facc34c3"
     },
     {
       "block_index": 46,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "c691c98ca6f00a4b"
     },
     {
@@ -669,7 +669,7 @@
     {
       "block_index": 50,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "fd76c94163f9054d"
     },
     {
@@ -699,7 +699,7 @@
     {
       "block_index": 55,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "80c6192a4a00f329"
     },
     {
@@ -915,7 +915,7 @@
     {
       "block_index": 35,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "f95cdbf7a9df5bec"
     },
     {
@@ -1100,10 +1100,11 @@
     }
   ],
   "counts": {
-    "consensus": 170,
-    "corrected": 3,
+    "adjudicated": 15,
+    "consensus": 159,
+    "corrected": 11,
+    "dropped": 2,
     "punct_rule": 3,
-    "queued": 14,
     "watermark": 3
   },
   "engine_audit": {
@@ -1121,64 +1122,65 @@
     "version": "1.4.4"
   },
   "id": "dashen.664217c33275d263668540d6",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2",
       "v6_block": 1
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 18
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "担高子“深购试”中",
       "v6_block": 33
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 7
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 16
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 17
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“心动松舟” 活动开户！",
       "v6_block": 22
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 43
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "*合新赛委故事第四音！",
       "v6_block": 50
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "级合被默认没为公平模式的问题",
       "v6_block": 35
     }

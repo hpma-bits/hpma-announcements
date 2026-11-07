@@ -93,7 +93,7 @@
     {
       "block_index": 15,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "4700d9fafe11f673"
     },
     {
@@ -129,7 +129,7 @@
     {
       "block_index": 21,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "a057191af686bb91"
     },
     {
@@ -141,7 +141,7 @@
     {
       "block_index": 23,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "36fd84f15726e052"
     },
     {
@@ -171,7 +171,7 @@
     {
       "block_index": 28,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "6ed52853964eed12"
     },
     {
@@ -189,7 +189,7 @@
     {
       "block_index": 31,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "b996b62540c2f430"
     },
     {
@@ -279,7 +279,7 @@
     {
       "block_index": 46,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b75e6bc68441715e"
     },
     {
@@ -303,7 +303,7 @@
     {
       "block_index": 50,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "2d873fb1a6da4592"
     },
     {
@@ -327,7 +327,7 @@
     {
       "block_index": 54,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "600df1957f982932"
     },
     {
@@ -369,7 +369,7 @@
     {
       "block_index": 61,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "31ee21935196ffbb"
     },
     {
@@ -411,7 +411,7 @@
     {
       "block_index": 68,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "c67e861fac643380"
     },
     {
@@ -513,13 +513,13 @@
     {
       "block_index": 85,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "abaf4654eaed9d17"
     },
     {
       "block_index": 86,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "8181eaf13583c70b"
     },
     {
@@ -531,7 +531,7 @@
     {
       "block_index": 88,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "28f0738d56d8a866"
     },
     {
@@ -650,10 +650,10 @@
     }
   ],
   "counts": {
-    "consensus": 97,
-    "corrected": 3,
+    "adjudicated": 17,
+    "consensus": 87,
+    "corrected": 6,
     "punct_rule": 1,
-    "queued": 10,
     "watermark": 4
   },
   "engine_audit": {
@@ -671,46 +671,47 @@
     "version": "1.4.4"
   },
   "id": "dashen.6255792c3408360001063839",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "注：需完成“看望韦格比”“蛋糕大功告成!”任务",
       "v6_block": 21
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "复力汤师配力将通过邮件",
       "v6_block": 48
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "收藏至导级达封4级后，",
       "v6_block": 49
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 54
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "询问“魔力雪花”相关消息，堆出可爱雪人吧！",
       "v6_block": 58
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 67
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 75
     }

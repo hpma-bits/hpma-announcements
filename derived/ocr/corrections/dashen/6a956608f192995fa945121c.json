@@ -204,6 +204,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6a956608f192995fa945121c 2 17"
+    },
+    {
+      "image_index": 1,
+      "block_index": 10,
+      "original": "本期大奖：传说品质时装“笺中真理”、家具套装“默",
+      "corrected": "本期大奖：传说品质时装“笺中真理”、家具套装“缄默",
+      "reason": "漏「缄」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a956608f192995fa945121c 1 10"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "《默秘宴·房间音乐》、宝石等奖励。",
+      "corrected": "《缄默秘宴·房间音乐》、宝石等奖励。",
+      "reason": "漏「缄」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a956608f192995fa945121c 1 13"
     }
   ]
 }

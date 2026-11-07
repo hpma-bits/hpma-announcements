@@ -105,13 +105,13 @@
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "27452f228205370d"
     },
     {
       "block_index": 18,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e41d08b8bea4976d"
     },
     {
@@ -165,7 +165,7 @@
     {
       "block_index": 8,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "a76e44f2facc34c3"
     },
     {
@@ -189,7 +189,7 @@
     {
       "block_index": 12,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "ab355d6da42f4442"
     },
     {
@@ -201,7 +201,7 @@
     {
       "block_index": 14,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "dde693f2fc12e26c"
     },
     {
@@ -255,7 +255,7 @@
     {
       "block_index": 23,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "6b87734a99753e86"
     },
     {
@@ -441,7 +441,7 @@
     {
       "block_index": 30,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "ff6588731787b04d"
     },
     {
@@ -453,7 +453,7 @@
     {
       "block_index": 32,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "ee7f794fac57fbee"
     },
     {
@@ -543,7 +543,7 @@
     {
       "block_index": 14,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "5da896aa95586419"
     },
     {
@@ -597,7 +597,7 @@
     {
       "block_index": 23,
       "image_index": 4,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "364708e5a6d2d5f2"
     },
     {
@@ -813,7 +813,7 @@
     {
       "block_index": 35,
       "image_index": 5,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "d50f513881b8679c"
     },
     {
@@ -962,10 +962,10 @@
     }
   ],
   "counts": {
-    "consensus": 140,
-    "corrected": 8,
+    "adjudicated": 10,
+    "consensus": 134,
+    "corrected": 14,
     "punct_rule": 4,
-    "queued": 10,
     "watermark": 3
   },
   "engine_audit": {
@@ -983,34 +983,35 @@
     "version": "1.4.4"
   },
   "id": "dashen.69b7f85d58771d514315a136",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 7
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "期七如“摩合士人长袍专卖店”",
       "v6_block": 18
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2",
       "v6_block": 20
     },
     {
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "17优化子赛委代币道具的页签显示",
       "v6_block": 35
     },
     {
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "赛委代币的页",
       "v6_block": 36
     }

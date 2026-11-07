@@ -99,13 +99,13 @@
     {
       "block_index": 16,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e708f8c1b7226b0e"
     },
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "404ab206c1f20cad"
     },
     {
@@ -147,7 +147,7 @@
     {
       "block_index": 24,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "cc4bcf02acb88134"
     },
     {
@@ -177,7 +177,7 @@
     {
       "block_index": 29,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "325ec7f15914a0fa"
     },
     {
@@ -219,13 +219,13 @@
     {
       "block_index": 36,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "32792cfe4889f8e9"
     },
     {
       "block_index": 37,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "adb3cd442ec25748"
     },
     {
@@ -237,19 +237,19 @@
     {
       "block_index": 39,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "ad4553ceb283d1f0"
     },
     {
       "block_index": 40,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "531e5a4c3df74936"
     },
     {
       "block_index": 41,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "8e6486549724629d"
     },
     {
@@ -273,7 +273,7 @@
     {
       "block_index": 45,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "d85f428f7c630b7d"
     },
     {
@@ -303,7 +303,7 @@
     {
       "block_index": 50,
       "image_index": 1,
-      "status": "consensus",
+      "status": "punct_rule",
       "text_sha256": "7113f1b6352f09a3"
     },
     {
@@ -351,7 +351,7 @@
     {
       "block_index": 6,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "941425630472e8cb"
     },
     {
@@ -375,7 +375,7 @@
     {
       "block_index": 10,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "cd5310e33659365e"
     },
     {
@@ -471,19 +471,19 @@
     {
       "block_index": 26,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "94071a918750d1e6"
     },
     {
       "block_index": 27,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "23a95ef24687eca7"
     },
     {
       "block_index": 28,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "bf5d74ed0271ab7e"
     },
     {
@@ -597,13 +597,13 @@
     {
       "block_index": 47,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5d89549dbd3d8b8f"
     },
     {
       "block_index": 48,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "1264dc9ed3a1ff66"
     },
     {
@@ -681,7 +681,7 @@
     {
       "block_index": 61,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "87e272b910cf85b4"
     },
     {
@@ -734,10 +734,11 @@
     }
   ],
   "counts": {
-    "consensus": 105,
-    "corrected": 4,
-    "punct_rule": 5,
-    "queued": 9,
+    "adjudicated": 11,
+    "consensus": 91,
+    "corrected": 12,
+    "dropped": 3,
+    "punct_rule": 6,
     "watermark": 3
   },
   "engine_audit": {
@@ -755,28 +756,29 @@
     "version": "1.4.4"
   },
   "id": "dashen.651184562d41e600010f4f4f",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "魁地奇赛季故事.第四章即将到来!",
       "v6_block": 36
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“赏凡季”邮件好礼！",
       "v6_block": 43
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2",
       "v6_block": 10
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "7、优化了时装“权力之辉·寒青”的特殊效果。",
       "v6_block": 62
     }

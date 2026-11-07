@@ -27,7 +27,7 @@
     {
       "block_index": 4,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "a720c57602c59cf2"
     },
     {
@@ -57,7 +57,7 @@
     {
       "block_index": 9,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f134ea14fa7e4937"
     },
     {
@@ -86,7 +86,8 @@
     }
   ],
   "counts": {
-    "consensus": 12,
+    "consensus": 10,
+    "corrected": 2,
     "watermark": 2
   },
   "engine_audit": {
@@ -104,5 +105,6 @@
     "version": "1.4.4"
   },
   "id": "dashen.64c79c5924f51500015a3170",
+  "inserts": [],
   "v6_only": []
 }

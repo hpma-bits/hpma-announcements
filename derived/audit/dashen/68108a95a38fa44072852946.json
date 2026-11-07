@@ -57,7 +57,7 @@
     {
       "block_index": 9,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "63842f2dac6b79c0"
     },
     {
@@ -105,7 +105,7 @@
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "dc9f8fd16d965c1f"
     },
     {
@@ -129,7 +129,7 @@
     {
       "block_index": 21,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "0bc70b06631be52d"
     },
     {
@@ -153,7 +153,7 @@
     {
       "block_index": 25,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "2f211834ed5efb09"
     },
     {
@@ -309,7 +309,7 @@
     {
       "block_index": 11,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "006e6702bfe24743"
     },
     {
@@ -423,7 +423,7 @@
     {
       "block_index": 30,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "cb16fe0cee09eeaf"
     },
     {
@@ -465,7 +465,7 @@
     {
       "block_index": 37,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "203597e66ddc0306"
     },
     {
@@ -495,7 +495,7 @@
     {
       "block_index": 42,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "8ff55769edf204d4"
     },
     {
@@ -531,7 +531,7 @@
     {
       "block_index": 48,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "191c472a38cbd648"
     },
     {
@@ -567,7 +567,7 @@
     {
       "block_index": 0,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "7b973603a845479a"
     },
     {
@@ -591,7 +591,7 @@
     {
       "block_index": 4,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f71727fce13d8e89"
     },
     {
@@ -681,7 +681,7 @@
     {
       "block_index": 19,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "998fab1ed517a5d0"
     },
     {
@@ -711,13 +711,13 @@
     {
       "block_index": 24,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "6c26a9f6e8429820"
     },
     {
       "block_index": 25,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "c33bba80890f2d12"
     },
     {
@@ -777,25 +777,25 @@
     {
       "block_index": 35,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "cb8938364e8fc7ae"
     },
     {
       "block_index": 36,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "f8325aa71f085447"
     },
     {
       "block_index": 37,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "21f0de30c37d1201"
     },
     {
       "block_index": 38,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "b0943717214a2867"
     },
     {
@@ -927,7 +927,7 @@
     {
       "block_index": 0,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "d56ee4c84b4b45a1"
     },
     {
@@ -993,7 +993,7 @@
     {
       "block_index": 11,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "6ced4bf14b6b6b1b"
     },
     {
@@ -1047,7 +1047,7 @@
     {
       "block_index": 20,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "3f965e8f20e71d1a"
     },
     {
@@ -1077,7 +1077,7 @@
     {
       "block_index": 25,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "a55dbc113f53dc09"
     },
     {
@@ -1089,7 +1089,7 @@
     {
       "block_index": 27,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b550f4a1c8b96171"
     },
     {
@@ -1125,7 +1125,7 @@
     {
       "block_index": 33,
       "image_index": 4,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "3df81cc4b96afbf8"
     },
     {
@@ -1221,7 +1221,7 @@
     {
       "block_index": 49,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "766a3852101d5b79"
     },
     {
@@ -1233,13 +1233,13 @@
     {
       "block_index": 51,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "6d6ebc00d5406839"
     },
     {
       "block_index": 52,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "2a60de5424945ac3"
     },
     {
@@ -1257,7 +1257,7 @@
     {
       "block_index": 55,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "45c9283952241e43"
     },
     {
@@ -1281,7 +1281,7 @@
     {
       "block_index": 59,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5d8e953d8593d64a"
     },
     {
@@ -1293,13 +1293,13 @@
     {
       "block_index": 61,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "bec183f3f4bf2c77"
     },
     {
       "block_index": 62,
       "image_index": 4,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "c420526f9c70b350"
     },
     {
@@ -1461,7 +1461,7 @@
     {
       "block_index": 23,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "7dedebf152889e62"
     },
     {
@@ -1479,7 +1479,7 @@
     {
       "block_index": 26,
       "image_index": 5,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "5eef801bec9df58b"
     },
     {
@@ -1743,13 +1743,13 @@
     {
       "block_index": 17,
       "image_index": 6,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "9d72c4483f63eb38"
     },
     {
       "block_index": 18,
       "image_index": 6,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "4232ec98a767b1ed"
     },
     {
@@ -1839,7 +1839,7 @@
     {
       "block_index": 33,
       "image_index": 6,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "23269eb5740d0a7a"
     },
     {
@@ -1977,7 +1977,7 @@
     {
       "block_index": 56,
       "image_index": 6,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "84c9db9644b46b33"
     },
     {
@@ -1988,11 +1988,11 @@
     }
   ],
   "counts": {
-    "consensus": 300,
-    "corrected": 4,
-    "dropped": 1,
+    "adjudicated": 21,
+    "consensus": 277,
+    "corrected": 20,
+    "dropped": 8,
     "punct_rule": 5,
-    "queued": 21,
     "watermark": 7
   },
   "engine_audit": {
@@ -2010,46 +2010,47 @@
     "version": "1.4.4"
   },
   "id": "dashen.68108a95a38fa44072852946",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "卡兑动品”作为奖励",
       "v6_block": 17
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 30
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“S13烘焙赛季·霜结燃烧火刑架”开启!",
       "v6_block": 31
     },
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "先成任务，达成对应等级可获得传说品质耳部配饰幽",
       "v6_block": 55
     },
     {
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2",
       "v6_block": 1
     },
     {
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "金币及宝石的获取效率提开！",
       "v6_block": 28
     },
     {
       "image_index": 6,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "歌上",
       "v6_block": 56
     }

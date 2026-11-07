@@ -165,7 +165,7 @@
     {
       "block_index": 0,
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "51c97dbb84b7b0ab"
     },
     {
@@ -231,7 +231,7 @@
     {
       "block_index": 11,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "2537ea7bf56fffef"
     },
     {
@@ -273,7 +273,7 @@
     {
       "block_index": 18,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "ef4e5e3785d67504"
     },
     {
@@ -285,7 +285,7 @@
     {
       "block_index": 20,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "fcb4cadf7e9af722"
     },
     {
@@ -315,7 +315,7 @@
     {
       "block_index": 25,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "b0f2693bef4c3ae3"
     },
     {
@@ -333,7 +333,7 @@
     {
       "block_index": 28,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "5726aad535b79fc8"
     },
     {
@@ -399,7 +399,7 @@
     {
       "block_index": 39,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5d0bfb0bfc794209"
     },
     {
@@ -585,13 +585,13 @@
     {
       "block_index": 27,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "a026d75e1b2130e3"
     },
     {
       "block_index": 28,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "c9c98cf8ecf66174"
     },
     {
@@ -603,7 +603,7 @@
     {
       "block_index": 30,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "5a327157ca6c43e1"
     },
     {
@@ -627,19 +627,19 @@
     {
       "block_index": 34,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "30e6639f5b75bb14"
     },
     {
       "block_index": 35,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "0e3fdc524fa60f3a"
     },
     {
       "block_index": 36,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "4b676c90c7acf0b4"
     },
     {
@@ -735,7 +735,7 @@
     {
       "block_index": 14,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "8680908953b962d8"
     },
     {
@@ -825,13 +825,13 @@
     {
       "block_index": 29,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "7dedebf152889e62"
     },
     {
       "block_index": 30,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "fc623d87ec623081"
     },
     {
@@ -849,19 +849,19 @@
     {
       "block_index": 33,
       "image_index": 4,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "ce6c20612542cbc0"
     },
     {
       "block_index": 34,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "9973c2a9d03fa727"
     },
     {
       "block_index": 35,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "04695a9c6b601e70"
     },
     {
@@ -908,10 +908,11 @@
     }
   ],
   "counts": {
-    "consensus": 125,
-    "corrected": 9,
+    "adjudicated": 14,
+    "consensus": 114,
+    "corrected": 15,
+    "dropped": 5,
     "punct_rule": 5,
-    "queued": 14,
     "watermark": 4
   },
   "engine_audit": {
@@ -929,40 +930,41 @@
     "version": "1.4.4"
   },
   "id": "dashen.67a0aff4e0ff6c386f7d84ef",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“摧心咒”、",
       "v6_block": 1
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "一赛季加速福利开启！心",
       "v6_block": 28
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "茶馆凡度活动“爱意浮动”即将开启！",
       "v6_block": 29
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "天神@哈利波特魔法觉醒",
       "v6_block": 35
     },
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "一“周末福利”活动持续开启中！",
       "v6_block": 29
     },
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "活动时间:每周六、周日",
       "v6_block": 31
     }

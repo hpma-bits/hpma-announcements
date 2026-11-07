@@ -21,7 +21,7 @@
     {
       "block_index": 3,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "01a69280d9c9c1aa"
     },
     {
@@ -213,7 +213,7 @@
     {
       "block_index": 19,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "66cc3f3e8d5eebfc"
     },
     {
@@ -339,7 +339,7 @@
     {
       "block_index": 8,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "df6e8dd9ff0f1ec5"
     },
     {
@@ -387,13 +387,13 @@
     {
       "block_index": 16,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "8131397bb8da038f"
     },
     {
       "block_index": 17,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "2b8cf21f055e6ac9"
     },
     {
@@ -483,7 +483,7 @@
     {
       "block_index": 0,
       "image_index": 4,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "6f3751913e9d4799"
     },
     {
@@ -519,7 +519,7 @@
     {
       "block_index": 6,
       "image_index": 4,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "359ee04d1ba6b8d0"
     },
     {
@@ -651,7 +651,7 @@
     {
       "block_index": 28,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "8680908953b962d8"
     },
     {
@@ -681,7 +681,7 @@
     {
       "block_index": 33,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e3c79a07417fde92"
     },
     {
@@ -723,7 +723,7 @@
     {
       "block_index": 0,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "5a327157ca6c43e1"
     },
     {
@@ -861,7 +861,7 @@
     {
       "block_index": 23,
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "5da896aa95586419"
     },
     {
@@ -1070,10 +1070,10 @@
     }
   ],
   "counts": {
-    "consensus": 159,
-    "corrected": 5,
+    "adjudicated": 6,
+    "consensus": 154,
+    "corrected": 12,
     "punct_rule": 2,
-    "queued": 8,
     "watermark": 6
   },
   "engine_audit": {
@@ -1091,16 +1091,17 @@
     "version": "1.4.4"
   },
   "id": "dashen.6911c361d54fe13dc5984fb1",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“回响重塑时”活动开启心",
       "v6_block": 29
     },
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "选回响，获取的自选回响视始携带的3张卡牌加成中至",
       "v6_block": 34
     }

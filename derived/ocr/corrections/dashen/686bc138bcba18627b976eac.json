@@ -167,6 +167,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 6 32"
+    },
+    {
+      "image_index": 4,
+      "block_index": 31,
+      "original": "公示时间：2025年7月20日0：00－8月3日0:00",
+      "corrected": "公示时间：2025年7月20日0:00-8月3日0:00",
+      "reason": "d3-comp22 #58 crop: row 公示时间：2025年7月20日0:00-8月3日0:00; v4 '0: 00' space is OCR artifact; v6 is a different line (未证猜想·梳妆魔盒 banner) mis-paired; short hyphen, spaces normalized per 6304c84d-19 precedent",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 4 31"
+    },
+    {
+      "image_index": 4,
+      "block_index": 41,
+      "original": "3.调整了通过聊天获得“心契指数”火箱体滤剂波特魔法觉醒",
+      "corrected": "3.调整了通过聊天获得“心契指数”的整体速率。",
+      "reason": "d3-59-charY + d3-59-Xcolor thresholds: 体速率。 legible through semi-transparent 大神 watermark; covered char before 体 shows 整's dense-top+攵+bottom-一 structure (v4 火箱/v6 拍 garbage); sentence completes as 整体速率; no corpus parallel (source 640px, all detail in crop)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 4 41"
+    },
+    {
+      "image_index": 5,
+      "block_index": 15,
+      "original": "“周末福利”活动开启！",
+      "corrected": "“周末福利”活动开启!",
+      "reason": "d3-60 advance measure 0.27: art-font banner narrow ! identical to series (d3-1-zoom8b, #33/#35/#46); v6 leading 一 is left flourish misread",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 5 15"
     }
   ]
 }

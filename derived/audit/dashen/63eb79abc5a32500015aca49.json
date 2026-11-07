@@ -51,13 +51,13 @@
     {
       "block_index": 8,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "fd6c9ed27cdf0530"
     },
     {
       "block_index": 9,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "dd5ef17b09f17976"
     },
     {
@@ -87,7 +87,7 @@
     {
       "block_index": 14,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b62258f295d3662b"
     },
     {
@@ -153,7 +153,7 @@
     {
       "block_index": 25,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "dceb5089f6b88c3c"
     },
     {
@@ -189,13 +189,13 @@
     {
       "block_index": 31,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "f61d0a72f908ac18"
     },
     {
       "block_index": 32,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "f006a228ad806ece"
     },
     {
@@ -561,7 +561,7 @@
     {
       "block_index": 15,
       "image_index": 3,
-      "status": "queued",
+      "status": "record",
       "text_sha256": "84c9db9644b46b33"
     },
     {
@@ -572,8 +572,11 @@
     }
   ],
   "counts": {
-    "consensus": 86,
-    "queued": 6,
+    "adjudicated": 3,
+    "consensus": 84,
+    "corrected": 3,
+    "dropped": 1,
+    "record": 1,
     "watermark": 4
   },
   "engine_audit": {
@@ -591,10 +594,11 @@
     "version": "1.4.4"
   },
   "id": "dashen.63eb79abc5a32500015aca49",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "宾·满分击球手”，",
       "v6_block": 10
     }

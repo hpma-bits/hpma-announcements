@@ -69,7 +69,7 @@
     {
       "block_index": 11,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "3a9c34edafed50be"
     },
     {
@@ -129,7 +129,7 @@
     {
       "block_index": 4,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "b305797d677236da"
     },
     {
@@ -141,7 +141,7 @@
     {
       "block_index": 6,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5741daa67c8be767"
     },
     {
@@ -177,7 +177,7 @@
     {
       "block_index": 0,
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "c1e2efa88a489f0f"
     },
     {
@@ -189,7 +189,7 @@
     {
       "block_index": 2,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "ba53af2920a72238"
     },
     {
@@ -225,7 +225,7 @@
     {
       "block_index": 8,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "6be446b4a9798b24"
     },
     {
@@ -267,7 +267,7 @@
     {
       "block_index": 2,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "11911b1467ff231e"
     },
     {
@@ -584,9 +584,10 @@
     }
   ],
   "counts": {
-    "consensus": 89,
+    "adjudicated": 2,
+    "consensus": 83,
+    "corrected": 6,
     "punct_rule": 1,
-    "queued": 2,
     "watermark": 6
   },
   "engine_audit": {
@@ -604,10 +605,18 @@
     "version": "1.4.4"
   },
   "id": "dashen.62cd5552c3e1e50001910c35",
+  "inserts": [
+    {
+      "after_block": 16,
+      "image_index": 1,
+      "status": "adjudicated",
+      "text": "每日登录游戏，即可领取当日奖励。"
+    }
+  ],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "每日登录游戏，即可领取当日奖励。",
       "v6_block": 17
     }

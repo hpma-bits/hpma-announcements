@@ -33,7 +33,7 @@
     {
       "block_index": 5,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "3f5bf68f20142756"
     },
     {
@@ -75,7 +75,7 @@
     {
       "block_index": 12,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "b9c36cbee8608045"
     },
     {
@@ -117,13 +117,13 @@
     {
       "block_index": 19,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "e2c1f16c28a3eef6"
     },
     {
       "block_index": 20,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "807d69c4353210c3"
     },
     {
@@ -135,7 +135,7 @@
     {
       "block_index": 22,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "a2353fa9abba4574"
     },
     {
@@ -171,7 +171,7 @@
     {
       "block_index": 28,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "2b2c16f61ae019ba"
     },
     {
@@ -195,7 +195,7 @@
     {
       "block_index": 32,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "15334f4a544878c4"
     },
     {
@@ -231,7 +231,7 @@
     {
       "block_index": 38,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "02d48e791c1195c8"
     },
     {
@@ -255,7 +255,7 @@
     {
       "block_index": 42,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "28b3e83b7ee6104f"
     },
     {
@@ -471,7 +471,7 @@
     {
       "block_index": 14,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "9fd2861505d1d2cd"
     },
     {
@@ -555,7 +555,7 @@
     {
       "block_index": 28,
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "fdf81efeaea5696a"
     },
     {
@@ -609,7 +609,7 @@
     {
       "block_index": 37,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "7cbb7020e2abe011"
     },
     {
@@ -711,7 +711,7 @@
     {
       "block_index": 54,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "8ed5c2af4a926653"
     },
     {
@@ -735,7 +735,7 @@
     {
       "block_index": 58,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "1d037b5b007bd3f9"
     },
     {
@@ -747,13 +747,13 @@
     {
       "block_index": 60,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "3177e2222f6abee5"
     },
     {
       "block_index": 61,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "55870ed92429ba9c"
     },
     {
@@ -765,7 +765,7 @@
     {
       "block_index": 63,
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "6aeee6920b886540"
     },
     {
@@ -801,7 +801,7 @@
     {
       "block_index": 0,
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "a8d91e69882c62a7"
     },
     {
@@ -885,7 +885,7 @@
     {
       "block_index": 14,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "324c9d57ea10ddcd"
     },
     {
@@ -1041,7 +1041,7 @@
     {
       "block_index": 40,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "1c25e4ae7df4ce7a"
     },
     {
@@ -1059,7 +1059,7 @@
     {
       "block_index": 43,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "eab16ef699990cde"
     },
     {
@@ -1304,9 +1304,11 @@
     }
   ],
   "counts": {
-    "consensus": 203,
+    "adjudicated": 17,
+    "consensus": 189,
+    "corrected": 7,
+    "dropped": 3,
     "punct_rule": 3,
-    "queued": 13,
     "watermark": 4
   },
   "engine_audit": {
@@ -1324,40 +1326,41 @@
     "version": "1.4.4"
   },
   "id": "dashen.64e35aa9fa623f0001eddfd4",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": " 2.魔法后日谈：霍格沃茨生活",
       "v6_block": 40
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2",
       "v6_block": 38
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "随时退出;",
       "v6_block": 56
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“舞会”新増结算分享界面",
       "v6_block": 61
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“林林”再部",
       "v6_block": 63
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 65
     }

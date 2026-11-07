@@ -39,7 +39,7 @@
     {
       "block_index": 6,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "59d5a1513a625733"
     },
     {
@@ -57,7 +57,7 @@
     {
       "block_index": 9,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "4d0fc8d890b64ce0"
     },
     {
@@ -87,7 +87,7 @@
     {
       "block_index": 14,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "3f78e14527f59e51"
     },
     {
@@ -243,7 +243,7 @@
     {
       "block_index": 3,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "f5326569c6d8803f"
     },
     {
@@ -428,10 +428,10 @@
     }
   ],
   "counts": {
-    "consensus": 65,
-    "corrected": 1,
+    "adjudicated": 4,
+    "consensus": 61,
+    "corrected": 3,
     "punct_rule": 2,
-    "queued": 2,
     "watermark": 3
   },
   "engine_audit": {
@@ -449,16 +449,17 @@
     "version": "1.4.4"
   },
   "id": "dashen.65648a225930fd0001592081",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "社团挑战即将开启!",
       "v6_block": 15
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 16
     }

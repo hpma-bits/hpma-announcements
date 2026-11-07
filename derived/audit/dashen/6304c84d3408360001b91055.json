@@ -99,7 +99,7 @@
     {
       "block_index": 16,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "382623d64a119252"
     },
     {
@@ -117,7 +117,7 @@
     {
       "block_index": 19,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "77470f3aec85285c"
     },
     {
@@ -147,7 +147,7 @@
     {
       "block_index": 24,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "88afe212efa95a45"
     },
     {
@@ -297,7 +297,7 @@
     {
       "block_index": 17,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "deaebca430a828e0"
     },
     {
@@ -350,9 +350,11 @@
     }
   ],
   "counts": {
+    "adjudicated": 1,
     "consensus": 49,
+    "corrected": 2,
+    "dropped": 2,
     "punct_rule": 3,
-    "queued": 4,
     "watermark": 2
   },
   "engine_audit": {
@@ -370,5 +372,13 @@
     "version": "1.4.4"
   },
   "id": "dashen.6304c84d3408360001b91055",
-  "v6_only": []
+  "inserts": [],
+  "v6_only": [
+    {
+      "image_index": 1,
+      "status": "adjudicated",
+      "text": "摩金大大长枪居上来2款至款基啦脑星，售价0金。",
+      "v6_block": 16
+    }
+  ]
 }

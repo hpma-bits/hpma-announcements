@@ -33,7 +33,7 @@
     {
       "block_index": 5,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "52b816c9607a5ba2"
     },
     {
@@ -51,7 +51,7 @@
     {
       "block_index": 8,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "88b9e49520a97dd1"
     },
     {
@@ -63,7 +63,7 @@
     {
       "block_index": 10,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "c22236c7195c150b"
     },
     {
@@ -81,7 +81,7 @@
     {
       "block_index": 13,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "11d2103012bdce20"
     },
     {
@@ -147,7 +147,7 @@
     {
       "block_index": 24,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "759443f7c0ecef8c"
     },
     {
@@ -219,7 +219,7 @@
     {
       "block_index": 36,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "11c0a45d081a7c74"
     },
     {
@@ -255,7 +255,7 @@
     {
       "block_index": 42,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "bb10472b3a043d68"
     },
     {
@@ -302,10 +302,11 @@
     }
   ],
   "counts": {
-    "consensus": 39,
-    "corrected": 4,
+    "adjudicated": 5,
+    "consensus": 36,
+    "corrected": 6,
+    "dropped": 2,
     "punct_rule": 1,
-    "queued": 5,
     "watermark": 2
   },
   "engine_audit": {
@@ -323,12 +324,19 @@
     "version": "1.4.4"
   },
   "id": "dashen.64eddbc496695c0001a4b3f7",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "取全部奖励！",
       "v6_block": 11
+    },
+    {
+      "image_index": 1,
+      "status": "adjudicated",
+      "text": "参与多味豆抽奖活动，获得丰富奖励！",
+      "v6_block": 41
     }
   ]
 }

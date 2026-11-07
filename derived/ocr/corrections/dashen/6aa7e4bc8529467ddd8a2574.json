@@ -186,6 +186,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6aa7e4bc8529467ddd8a2574 5 11"
+    },
+    {
+      "image_index": 4,
+      "block_index": 23,
+      "original": "励更新，全新鬼火惟幕主题头像框，幽蝶主题铭牌等",
+      "corrected": "励更新，全新鬼火帷幕主题头像框，幽蝶主题铭牌等",
+      "reason": "惟→帷",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6aa7e4bc8529467ddd8a2574 4 23"
     }
   ]
 }

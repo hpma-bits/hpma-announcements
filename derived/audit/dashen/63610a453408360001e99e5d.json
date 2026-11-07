@@ -27,7 +27,7 @@
     {
       "block_index": 4,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "12de61e305f072ca"
     },
     {
@@ -39,7 +39,7 @@
     {
       "block_index": 6,
       "image_index": 1,
-      "status": "queued",
+      "status": "record",
       "text_sha256": "8480d8c21c18346a"
     },
     {
@@ -69,7 +69,7 @@
     {
       "block_index": 11,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "76ec1f85eec17025"
     },
     {
@@ -147,19 +147,19 @@
     {
       "block_index": 24,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "c222459b8d9fe065"
     },
     {
       "block_index": 25,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "92b10575444170da"
     },
     {
       "block_index": 26,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "f817584945339f80"
     },
     {
@@ -207,7 +207,7 @@
     {
       "block_index": 0,
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "457655347909b57b"
     },
     {
@@ -369,7 +369,7 @@
     {
       "block_index": 27,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "07dbdbd85541af5b"
     },
     {
@@ -441,7 +441,7 @@
     {
       "block_index": 39,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "45967a49b4659bab"
     },
     {
@@ -740,10 +740,12 @@
     }
   ],
   "counts": {
-    "consensus": 107,
-    "corrected": 2,
+    "adjudicated": 5,
+    "consensus": 106,
+    "corrected": 4,
+    "dropped": 3,
     "punct_rule": 3,
-    "queued": 10,
+    "record": 1,
     "watermark": 3
   },
   "engine_audit": {
@@ -761,16 +763,17 @@
     "version": "1.4.4"
   },
   "id": "dashen.63610a453408360001e99e5d",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "惊奇南瓜",
       "v6_block": 3
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 28
     }

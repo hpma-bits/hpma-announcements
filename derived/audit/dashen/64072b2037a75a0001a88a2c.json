@@ -129,7 +129,7 @@
     {
       "block_index": 1,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "203d817b5aa9ec2f"
     },
     {
@@ -141,7 +141,7 @@
     {
       "block_index": 3,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "190710ab25a12e16"
     },
     {
@@ -165,7 +165,7 @@
     {
       "block_index": 7,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "178fef3398853e49"
     },
     {
@@ -195,25 +195,25 @@
     {
       "block_index": 12,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "e733a2c049be4b0a"
     },
     {
       "block_index": 13,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "ee38e255fbfda4c9"
     },
     {
       "block_index": 14,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "9629d5b051b15105"
     },
     {
       "block_index": 15,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "4c2af27819e3a5fd"
     },
     {
@@ -410,9 +410,11 @@
     }
   ],
   "counts": {
-    "consensus": 61,
+    "adjudicated": 6,
+    "consensus": 58,
+    "corrected": 1,
+    "dropped": 3,
     "punct_rule": 1,
-    "queued": 6,
     "watermark": 2
   },
   "engine_audit": {
@@ -430,18 +432,25 @@
     "version": "1.4.4"
   },
   "id": "dashen.64072b2037a75a0001a88a2c",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 4
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 9
+    },
+    {
+      "image_index": 2,
+      "status": "adjudicated",
+      "text": "工匠盒”、“初运匠心盒”，可在指定范围内挑选所",
+      "v6_block": 15
     }
   ]
 }

@@ -279,6 +279,86 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.69a57ecebb7d9814e64ac684 6 42"
+    },
+    {
+      "image_index": 2,
+      "block_index": 25,
+      "original": "集奖励！它们把谢礼放在自己的小窝里",
+      "corrected": "集奖励！它们把谢礼放在自己的小窝里——每日上",
+      "reason": "v4 漏「——每日上」；源图为双破折号",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69a57ecebb7d9814e64ac684 2 25"
+    },
+    {
+      "image_index": 2,
+      "block_index": 26,
+      "original": "一每日上",
+      "drop": true,
+      "reason": "重复切片；整行由 b43 承载（集奖励！…小窝里——每日上）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69a57ecebb7d9814e64ac684 2 26"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "图固”作为奖励。",
+      "corrected": "图囡”作为奖励。",
+      "reason": "固→囡（8x 放大：囗+女；v6 作国亦误）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69a57ecebb7d9814e64ac684 1 18"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "每日上",
+      "drop": true,
+      "reason": "重复切片；第二行由 b28 完整承载（线时，前往小窝即可领取…谢礼）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69a57ecebb7d9814e64ac684 2 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 39,
+      "original": "“与月痴兽共舞”关卡将于3月11日缺神敬请期待魔法觉醒",
+      "corrected": "“与月痴兽共舞”关卡将于3月11日敬请期待",
+      "reason": "「敬请期待」可见，其前 1-2 字被水印覆盖不可恢复",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69a57ecebb7d9814e64ac684 2 39"
+    },
+    {
+      "image_index": 4,
+      "block_index": 7,
+      "original": "妆容组合“烽烟炽染礼包”、“展眉欢颜礼包”及快速提",
+      "corrected": "妆容组合“烽烟烬染礼包”、“展眉欢颜礼包”及快速提",
+      "reason": "炽→烬",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69a57ecebb7d9814e64ac684 4 7"
+    },
+    {
+      "image_index": 4,
+      "block_index": 22,
+      "original": "刻声”、单人动作“鞭势如潮”、“小小棒棒糖”、“如",
+      "corrected": "刻噤声”、单人动作“鞭势如潮”、“小小棒棒糖”、“如",
+      "reason": "漏「噤」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69a57ecebb7d9814e64ac684 4 22"
+    },
+    {
+      "image_index": 4,
+      "block_index": 42,
+      "original": "贡献最多积分的学生将获得本期代理长的资魔法觉醒",
+      "corrected": "贡献最多积分的学生将获得本期代理级长的资格。",
+      "reason": "漏「级」；行尾「格。」部分被水印覆盖",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69a57ecebb7d9814e64ac684 4 42"
     }
   ]
 }

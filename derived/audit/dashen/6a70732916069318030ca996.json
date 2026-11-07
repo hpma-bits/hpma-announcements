@@ -135,7 +135,7 @@
     {
       "block_index": 13,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "7964ea447ebbe8e9"
     },
     {
@@ -231,7 +231,7 @@
     {
       "block_index": 4,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "e8af2cb4d61ea72b"
     },
     {
@@ -309,7 +309,7 @@
     {
       "block_index": 17,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b3972fc7274b6929"
     },
     {
@@ -333,7 +333,7 @@
     {
       "block_index": 21,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "3757ca0a93b765d5"
     },
     {
@@ -345,7 +345,7 @@
     {
       "block_index": 0,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e8a4d7624fb94ac4"
     },
     {
@@ -471,7 +471,7 @@
     {
       "block_index": 21,
       "image_index": 4,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "41c9062612cab330"
     },
     {
@@ -531,7 +531,7 @@
     {
       "block_index": 9,
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "2fbbaeb3854bff8b"
     },
     {
@@ -597,7 +597,7 @@
     {
       "block_index": 20,
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "5a327157ca6c43e1"
     },
     {
@@ -794,10 +794,10 @@
     }
   ],
   "counts": {
-    "consensus": 113,
-    "corrected": 6,
+    "adjudicated": 6,
+    "consensus": 108,
+    "corrected": 10,
     "punct_rule": 5,
-    "queued": 5,
     "watermark": 5
   },
   "engine_audit": {
@@ -815,16 +815,17 @@
     "version": "1.4.4"
   },
   "id": "dashen.6a70732916069318030ca996",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "ss",
       "v6_block": 10
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "维红华章",
       "v6_block": 13
     }

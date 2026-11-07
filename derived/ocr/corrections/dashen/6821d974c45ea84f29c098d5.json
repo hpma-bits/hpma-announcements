@@ -157,6 +157,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 5 3"
+    },
+    {
+      "image_index": 1,
+      "block_index": 14,
+      "original": "“S13烘焙赛季·霜结燃烧火刑架”开启！",
+      "corrected": "“S13烘焙赛季·霜结燃烧火刑架”开启!",
+      "reason": "d3-35-tail: art-font banner narrow ! (tapered bar + diamond dot tight after 启); v6 'a' is flourish garbage",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 1 14"
+    },
+    {
+      "image_index": 2,
+      "block_index": 43,
+      "original": "在温暖而甜蜜的盛夏，与伙伴一同出行哈利波特魔法觉醒",
+      "corrected": "在温暖而甜蜜的盛夏，与伙伴一同出行吧！",
+      "reason": "d3-37-thresh: 吧！ recovered under semi-transparent 大神 watermark (吧 clear, ！ fragment); v4/v6 tails 利波特魔法觉醒 are watermark garbage",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 2 43"
+    },
+    {
+      "image_index": 3,
+      "block_index": 40,
+      "original": "禁忌品质：冷却时间由12s提升至2神@哈利波特魔法觉醒",
+      "corrected": "禁忌品质：冷却时间由12s提升至24s。",
+      "reason": "d3-38-orig color zoom: 24s。 legible under semi-transparent 大神 watermark (2 partial in v4, 4s。 clear); v4 神@哈利波特魔法觉醒 / v6 神@哈利波特魔法觉醒 tails are watermark",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 3 40"
+    },
+    {
+      "image_index": 4,
+      "block_index": 40,
+      "original": "攻击力提高100%，生命值下降20%神@哈利波特魔法觉醒",
+      "corrected": "攻击力提高100%，生命值下降20%。",
+      "reason": "d3-40-orig color zoom: % and 。 both legible through semi-transparent 大神 watermark; v4 %神@哈利波特魔法觉醒 / v6 20人神@哈利波特魔法觉醒 tails are watermark chars over row text -> dropped per 65f83fca-69 precedent",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 4 40"
     }
   ]
 }

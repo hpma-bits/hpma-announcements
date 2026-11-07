@@ -105,7 +105,7 @@
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "acce81eba8eab1ff"
     },
     {
@@ -123,7 +123,7 @@
     {
       "block_index": 20,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "75068121a14f59bc"
     },
     {
@@ -165,13 +165,13 @@
     {
       "block_index": 27,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "a5c7960c3c80d351"
     },
     {
       "block_index": 28,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "b002cf2ece94bd21"
     },
     {
@@ -344,11 +344,11 @@
     }
   ],
   "counts": {
-    "consensus": 47,
-    "corrected": 1,
+    "adjudicated": 3,
+    "consensus": 45,
+    "corrected": 3,
     "dropped": 1,
     "punct_rule": 3,
-    "queued": 3,
     "watermark": 3
   },
   "engine_audit": {
@@ -366,10 +366,11 @@
     "version": "1.4.4"
   },
   "id": "dashen.638de6a5849ee20001b0aa43",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "学变活动免责欢采。",
       "v6_block": 18
     }

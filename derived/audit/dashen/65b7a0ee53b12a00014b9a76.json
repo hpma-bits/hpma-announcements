@@ -21,7 +21,7 @@
     {
       "block_index": 3,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "87aec9c47442efd0"
     },
     {
@@ -135,7 +135,7 @@
     {
       "block_index": 22,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "d493d442c024baa6"
     },
     {
@@ -170,9 +170,9 @@
     }
   ],
   "counts": {
-    "consensus": 24,
-    "corrected": 1,
-    "queued": 2,
+    "adjudicated": 2,
+    "consensus": 23,
+    "corrected": 2,
     "watermark": 2
   },
   "engine_audit": {
@@ -190,10 +190,11 @@
     "version": "1.4.4"
   },
   "id": "dashen.65b7a0ee53b12a00014b9a76",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 7
     }

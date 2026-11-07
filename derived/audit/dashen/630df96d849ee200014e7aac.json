@@ -81,7 +81,7 @@
     {
       "block_index": 13,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "01d34f87b24ac891"
     },
     {
@@ -93,13 +93,13 @@
     {
       "block_index": 15,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "82e8a62d341c77ce"
     },
     {
       "block_index": 16,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "8bb8120f97dfd542"
     },
     {
@@ -231,7 +231,7 @@
     {
       "block_index": 9,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "562c0464d325ceb5"
     },
     {
@@ -572,9 +572,11 @@
     }
   ],
   "counts": {
-    "consensus": 84,
+    "adjudicated": 2,
+    "consensus": 82,
+    "corrected": 2,
+    "dropped": 1,
     "punct_rule": 6,
-    "queued": 3,
     "watermark": 3
   },
   "engine_audit": {
@@ -592,12 +594,13 @@
     "version": "1.4.4"
   },
   "id": "dashen.630df96d849ee200014e7aac",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
-      "text": "购买即可解锁特权:每日可完成作业次数+1；复制成双",
-      "v6_block": 14
+      "status": "adjudicated",
+      "text": "购买即可解锁特权：每日可完成作业次数+1；复制成双",
+      "v6_block": 13
     }
   ]
 }

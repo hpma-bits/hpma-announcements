@@ -256,6 +256,56 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6936cff8cb387243bb18d4c8 4 38"
+    },
+    {
+      "image_index": 2,
+      "block_index": 54,
+      "original": "动作“即兴评审”、个人背景页“魔物市籍浆励特魔法觉醒",
+      "corrected": "动作“即兴评审”、个人背景页“魔物市集”",
+      "reason": "水印覆盖「等奖励」其后文字不可恢复；「魔物市集」字形判读",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6936cff8cb387243bb18d4c8 2 54"
+    },
+    {
+      "image_index": 3,
+      "block_index": 5,
+      "original": "帽子“蛛凳暗笠”、表情包“瞅你咋地”等各种奖励！",
+      "corrected": "帽子“蛛龛暗笠”、表情包“瞅你咋地”等各种奖励！",
+      "reason": "凳→龛",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6936cff8cb387243bb18d4c8 3 5"
+    },
+    {
+      "image_index": 4,
+      "block_index": 17,
+      "original": "钟声敲响，寄生下，万千心意藏进舞步，在月色与",
+      "corrected": "钟声敲响，槲寄生下，万千心意藏进舞步，在月色与",
+      "reason": "漏「槲」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6936cff8cb387243bb18d4c8 4 17"
+    },
+    {
+      "image_index": 4,
+      "block_index": 53,
+      "original": "于初雪飘落之时，拆开满载心愿的社物金利波特魔法觉醒",
+      "corrected": "于初雪飘落之时，拆开满载心愿的神物盒",
+      "reason": "社→神、金→盒（盒字形判读，medium；其后为水印不可恢复）",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6936cff8cb387243bb18d4c8 4 53"
+    },
+    {
+      "image_index": 6,
+      "block_index": 4,
+      "original": "“林中溪径”挑战区域更新",
+      "corrected": "“林中蹊径”挑战区域更新",
+      "reason": "溪→蹊（林中蹊径）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6936cff8cb387243bb18d4c8 6 4"
     }
   ]
 }

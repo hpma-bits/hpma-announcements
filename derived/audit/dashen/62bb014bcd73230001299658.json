@@ -57,7 +57,7 @@
     {
       "block_index": 9,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "a20e01c1aa60b346"
     },
     {
@@ -105,7 +105,7 @@
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "6f4c76e0c0c5e166"
     },
     {
@@ -117,7 +117,7 @@
     {
       "block_index": 19,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "be970e710e64b981"
     },
     {
@@ -147,7 +147,7 @@
     {
       "block_index": 24,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "a41d5d967c1fdbe6"
     },
     {
@@ -165,13 +165,13 @@
     {
       "block_index": 27,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "7fdf6d92b9250cb5"
     },
     {
       "block_index": 28,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "39504ec9effb7e94"
     },
     {
@@ -189,13 +189,13 @@
     {
       "block_index": 31,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "107ea6a473ab7d53"
     },
     {
       "block_index": 32,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "a284b3863f55cf35"
     },
     {
@@ -213,7 +213,7 @@
     {
       "block_index": 35,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "754e9f8001d212e6"
     },
     {
@@ -351,7 +351,7 @@
     {
       "block_index": 16,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "3260479fa62b53e1"
     },
     {
@@ -417,7 +417,7 @@
     {
       "block_index": 0,
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "e8eb88f04f560b21"
     },
     {
@@ -429,7 +429,7 @@
     {
       "block_index": 2,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b6cae0b35da0197f"
     },
     {
@@ -459,19 +459,19 @@
     {
       "block_index": 7,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "76dcb1afa43b4555"
     },
     {
       "block_index": 8,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "0ffc4b0417b7d081"
     },
     {
       "block_index": 9,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "aa1259cd2038a538"
     },
     {
@@ -495,7 +495,7 @@
     {
       "block_index": 13,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "4dda5e3f6f92255e"
     },
     {
@@ -525,7 +525,7 @@
     {
       "block_index": 18,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "b499d6cfea3c14f4"
     },
     {
@@ -597,7 +597,7 @@
     {
       "block_index": 30,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "9a7af5220758ba2b"
     },
     {
@@ -615,19 +615,19 @@
     {
       "block_index": 33,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "428831af9a90a397"
     },
     {
       "block_index": 34,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "0290927329a4f24d"
     },
     {
       "block_index": 35,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "4a32e50bf8749b46"
     },
     {
@@ -639,13 +639,13 @@
     {
       "block_index": 37,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "aad8edff105d4392"
     },
     {
       "block_index": 38,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "8a1377846681f5f7"
     },
     {
@@ -663,7 +663,7 @@
     {
       "block_index": 41,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "f6b42a330a0d801c"
     },
     {
@@ -681,7 +681,7 @@
     {
       "block_index": 44,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "80c3eb92ea556f2c"
     },
     {
@@ -741,7 +741,7 @@
     {
       "block_index": 5,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "607e88bfe2597404"
     },
     {
@@ -777,7 +777,7 @@
     {
       "block_index": 11,
       "image_index": 4,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "7d019624013f0e3d"
     },
     {
@@ -795,7 +795,7 @@
     {
       "block_index": 14,
       "image_index": 4,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "db2f178459969eba"
     },
     {
@@ -819,7 +819,7 @@
     {
       "block_index": 18,
       "image_index": 4,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "c80f1a23002a5c90"
     },
     {
@@ -831,13 +831,13 @@
     {
       "block_index": 20,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "c1e2efa88a489f0f"
     },
     {
       "block_index": 21,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "d9c875c32411eec0"
     },
     {
@@ -885,7 +885,7 @@
     {
       "block_index": 29,
       "image_index": 4,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "315136ef251d0ec9"
     },
     {
@@ -915,7 +915,7 @@
     {
       "block_index": 34,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "09fdb4b2ab3f57cd"
     },
     {
@@ -1005,13 +1005,13 @@
     {
       "block_index": 49,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "1ca5eeec24e237a4"
     },
     {
       "block_index": 50,
       "image_index": 4,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "0fcf999b8333e16a"
     },
     {
@@ -1035,7 +1035,7 @@
     {
       "block_index": 54,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "bb074822dbad2cd0"
     },
     {
@@ -1077,7 +1077,7 @@
     {
       "block_index": 61,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b5f5f69c98722c2b"
     },
     {
@@ -1119,13 +1119,13 @@
     {
       "block_index": 1,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "33caf88ac71c12ac"
     },
     {
       "block_index": 2,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "c42affbfe876dfd3"
     },
     {
@@ -1238,10 +1238,11 @@
     }
   ],
   "counts": {
-    "consensus": 174,
-    "corrected": 6,
+    "adjudicated": 20,
+    "consensus": 152,
+    "corrected": 28,
+    "dropped": 3,
     "punct_rule": 3,
-    "queued": 23,
     "watermark": 6
   },
   "engine_audit": {
@@ -1259,40 +1260,41 @@
     "version": "1.4.4"
   },
   "id": "dashen.62bb014bcd73230001299658",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 18
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 26
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "1.“壁画-八眼巨蛛”的蛛网范围下调50%",
       "v6_block": 36
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2修复了部分情况下禁林调查中音频缺生的问题",
       "v6_block": 44
     },
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "隔降低为18秒，追踪火炮伤害倍率调整为300%。",
       "v6_block": 52
     },
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 61
     }

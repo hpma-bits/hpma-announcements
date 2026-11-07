@@ -187,6 +187,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.68b594ba8a13201e411f7478 3 37"
+    },
+    {
+      "image_index": 2,
+      "block_index": 10,
+      "original": "神秘事务司·预言厅开启！",
+      "corrected": "神秘事务司·预言厅开启!",
+      "reason": "d3-80 advance measure 0.247: art-font banner narrow ! (same glyph as d3-1-zoom8b series); v6 leading 一 is left flourish misread",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68b594ba8a13201e411f7478 2 10"
     }
   ]
 }

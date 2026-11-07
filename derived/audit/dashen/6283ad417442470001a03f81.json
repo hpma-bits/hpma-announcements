@@ -63,7 +63,7 @@
     {
       "block_index": 10,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b821111991ebf1a0"
     },
     {
@@ -75,7 +75,7 @@
     {
       "block_index": 12,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "06a3fb65a87de8f7"
     },
     {
@@ -147,13 +147,13 @@
     {
       "block_index": 24,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "7b5a5817dbc3e70f"
     },
     {
       "block_index": 25,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "215a444eec9964ed"
     },
     {
@@ -165,13 +165,13 @@
     {
       "block_index": 27,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "da4419c4ce7d4147"
     },
     {
       "block_index": 28,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "f796926dc4ac784a"
     },
     {
@@ -201,7 +201,7 @@
     {
       "block_index": 33,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "374ea3c53b1fc8ed"
     },
     {
@@ -321,7 +321,7 @@
     {
       "block_index": 53,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "259d29b247e453b8"
     },
     {
@@ -339,13 +339,13 @@
     {
       "block_index": 56,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "c68ba5c50b50ad68"
     },
     {
       "block_index": 57,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "45d71ee5a8a2423e"
     },
     {
@@ -357,7 +357,7 @@
     {
       "block_index": 59,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "633bc74142043956"
     },
     {
@@ -381,19 +381,19 @@
     {
       "block_index": 63,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "55fb21d8423d5d3a"
     },
     {
       "block_index": 64,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "673463e1dcfd02f8"
     },
     {
       "block_index": 65,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "1da0c36ec7817657"
     },
     {
@@ -429,7 +429,7 @@
     {
       "block_index": 71,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "aa8fffe653d4a9c8"
     },
     {
@@ -531,7 +531,7 @@
     {
       "block_index": 88,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "baf512a98017805d"
     },
     {
@@ -579,7 +579,7 @@
     {
       "block_index": 96,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "55a88d1ead0a54c4"
     },
     {
@@ -878,10 +878,11 @@
     }
   ],
   "counts": {
-    "consensus": 132,
-    "corrected": 2,
+    "adjudicated": 14,
+    "consensus": 120,
+    "corrected": 7,
+    "dropped": 3,
     "punct_rule": 5,
-    "queued": 10,
     "watermark": 2
   },
   "engine_audit": {
@@ -899,34 +900,35 @@
     "version": "1.4.4"
   },
   "id": "dashen.6283ad417442470001a03f81",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
-      "text": "同迎接这特别的纪念日吧！",
-      "v6_block": 54
+      "status": "adjudicated",
+      "text": "同迎接这特别的纪念日吧!",
+      "v6_block": 55
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“草药学者”时装上架～",
       "v6_block": 63
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 64
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "时装焕新",
       "v6_block": 89
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "优化了，“梳妆魔会”的预览用面，现在可以更清晰地",
       "v6_block": 97
     }

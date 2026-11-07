@@ -21,7 +21,7 @@
     {
       "block_index": 3,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "8a8de823d5ed3e12"
     },
     {
@@ -69,7 +69,7 @@
     {
       "block_index": 11,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "ecd2833ec3a091f3"
     },
     {
@@ -117,7 +117,7 @@
     {
       "block_index": 19,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "352c8f33d57d8548"
     },
     {
@@ -207,7 +207,7 @@
     {
       "block_index": 34,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "7941c51a89b8463d"
     },
     {
@@ -249,13 +249,13 @@
     {
       "block_index": 41,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "078f73984fa8b560"
     },
     {
       "block_index": 42,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "1d7ee193a71f3e1e"
     },
     {
@@ -291,7 +291,7 @@
     {
       "block_index": 48,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "c8bfa5a2809146f3"
     },
     {
@@ -375,7 +375,7 @@
     {
       "block_index": 62,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "823602b19f681007"
     },
     {
@@ -387,7 +387,7 @@
     {
       "block_index": 64,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "c446b7f596c3ffec"
     },
     {
@@ -429,7 +429,7 @@
     {
       "block_index": 71,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "40f057bb26bfc083"
     },
     {
@@ -507,13 +507,13 @@
     {
       "block_index": 2,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "35f93510e96374bc"
     },
     {
       "block_index": 3,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "7b400b3ee9851c89"
     },
     {
@@ -585,7 +585,7 @@
     {
       "block_index": 15,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f920d3568e45618f"
     },
     {
@@ -657,7 +657,7 @@
     {
       "block_index": 27,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "214f892def0ffba7"
     },
     {
@@ -675,7 +675,7 @@
     {
       "block_index": 30,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "5d629d7e0bea6d5d"
     },
     {
@@ -801,7 +801,7 @@
     {
       "block_index": 51,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "ada66024b5ca8832"
     },
     {
@@ -867,13 +867,13 @@
     {
       "block_index": 62,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "9996283da3ed9630"
     },
     {
       "block_index": 63,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "09a1f46f3e215b19"
     },
     {
@@ -909,7 +909,7 @@
     {
       "block_index": 69,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "3d51ca83ec3e2bc9"
     },
     {
@@ -921,7 +921,7 @@
     {
       "block_index": 1,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "ee1f15c3e0a614ec"
     },
     {
@@ -1095,25 +1095,25 @@
     {
       "block_index": 30,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "767926baf31fc03e"
     },
     {
       "block_index": 31,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "f28e9a0f67d32b8d"
     },
     {
       "block_index": 32,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "8e72291f4e9cdc9f"
     },
     {
       "block_index": 33,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "3fc1f50fd2e64f9b"
     },
     {
@@ -1125,13 +1125,13 @@
     {
       "block_index": 35,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "2bd130d7b988c1d5"
     },
     {
       "block_index": 36,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "8543c240d4d7ed44"
     },
     {
@@ -1143,19 +1143,19 @@
     {
       "block_index": 38,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "2e29a2fd4562e382"
     },
     {
       "block_index": 39,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "1bc8c63eeb97c7d2"
     },
     {
       "block_index": 40,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "ff1ad41cde53f71a"
     },
     {
@@ -1167,13 +1167,13 @@
     {
       "block_index": 42,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "5da9434fa379b54a"
     },
     {
       "block_index": 43,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "d221ffbb45e5ab5c"
     },
     {
@@ -1197,7 +1197,7 @@
     {
       "block_index": 47,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "57cdc9d32b12d7a7"
     },
     {
@@ -1209,7 +1209,7 @@
     {
       "block_index": 49,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f40594ccb6cfebd0"
     },
     {
@@ -1227,13 +1227,13 @@
     {
       "block_index": 52,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "25981996c10c3893"
     },
     {
       "block_index": 53,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "64953a1766b981ec"
     },
     {
@@ -1269,7 +1269,7 @@
     {
       "block_index": 59,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "122e296294c662ed"
     },
     {
@@ -1364,10 +1364,11 @@
     }
   ],
   "counts": {
-    "consensus": 201,
-    "corrected": 5,
+    "adjudicated": 20,
+    "consensus": 182,
+    "corrected": 23,
+    "dropped": 8,
     "punct_rule": 2,
-    "queued": 24,
     "watermark": 2
   },
   "engine_audit": {
@@ -1385,48 +1386,74 @@
     "version": "1.4.4"
   },
   "id": "dashen.65f83fca2e838a790761b0c3",
+  "inserts": [
+    {
+      "after_block": 81,
+      "image_index": 1,
+      "status": "adjudicated",
+      "text": "的毒牙天竺葵，以支撑魔药材料短缺的艰难时期"
+    }
+  ],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "在生长.....",
       "v6_block": 10
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2",
       "v6_block": 22
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 55
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "的毒牙天竺葵，以支撑魔药材料短缺抑艰难时特魔法觉醒",
       "v6_block": 82
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“累充福利”活动预告！",
       "v6_block": 28
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "应档位的奖励!",
       "v6_block": 31
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 43
+    },
+    {
+      "image_index": 3,
+      "status": "adjudicated",
+      "text": "咒语强化与卡牌调整",
+      "v6_block": 30
+    },
+    {
+      "image_index": 3,
+      "status": "adjudicated",
+      "text": "1.破法者修复了抵抗护盾无法对减益效果生效的",
+      "v6_block": 33
+    },
+    {
+      "image_index": 3,
+      "status": "adjudicated",
+      "text": "2.施虐狂—可以对同一巫师单位多次造成魔力消耗",
+      "v6_block": 35
     }
   ]
 }

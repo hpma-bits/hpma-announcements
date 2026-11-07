@@ -75,7 +75,7 @@
     {
       "block_index": 12,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f232d52867ca7e53"
     },
     {
@@ -93,7 +93,7 @@
     {
       "block_index": 15,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e0802d09a12954a9"
     },
     {
@@ -177,19 +177,19 @@
     {
       "block_index": 29,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "59a969bc7b1d8fc5"
     },
     {
       "block_index": 30,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "216d26f48fde49ec"
     },
     {
       "block_index": 31,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "7d91f0a7c67248cf"
     },
     {
@@ -225,7 +225,7 @@
     {
       "block_index": 37,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "430c6cd7b5b26ccb"
     },
     {
@@ -285,13 +285,13 @@
     {
       "block_index": 47,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "72dfcfb0c470ac25"
     },
     {
       "block_index": 48,
       "image_index": 1,
-      "status": "queued",
+      "status": "record",
       "text_sha256": "7b41a054c2de17c1"
     },
     {
@@ -333,7 +333,7 @@
     {
       "block_index": 55,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "d9c875c32411eec0"
     },
     {
@@ -483,7 +483,7 @@
     {
       "block_index": 80,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "1ddfdbd16f1466d4"
     },
     {
@@ -567,7 +567,7 @@
     {
       "block_index": 94,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "0f1c0fd118bb2d7e"
     },
     {
@@ -603,7 +603,7 @@
     {
       "block_index": 100,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "89e8d9bbd04fed4c"
     },
     {
@@ -615,7 +615,7 @@
     {
       "block_index": 102,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "91b9d1a45591cc30"
     },
     {
@@ -663,7 +663,7 @@
     {
       "block_index": 110,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "75ab7109ab8f1891"
     },
     {
@@ -693,7 +693,7 @@
     {
       "block_index": 115,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "dbf4ef1787b662a1"
     },
     {
@@ -723,7 +723,7 @@
     {
       "block_index": 120,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "e088d29ffa717599"
     },
     {
@@ -920,10 +920,12 @@
     }
   ],
   "counts": {
-    "consensus": 137,
-    "corrected": 4,
+    "adjudicated": 12,
+    "consensus": 127,
+    "corrected": 10,
+    "dropped": 4,
     "punct_rule": 4,
-    "queued": 12,
+    "record": 1,
     "watermark": 2
   },
   "engine_audit": {
@@ -941,40 +943,47 @@
     "version": "1.4.4"
   },
   "id": "dashen.6267d8c574424700015b9ed2",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 16
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
+      "text": "购买即可获得传说品质魔咒皮肤“清水如泉·飞虹如瀑”",
+      "v6_block": 30
+    },
+    {
+      "image_index": 1,
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 33
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 80
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 90
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 112
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 118
     }
