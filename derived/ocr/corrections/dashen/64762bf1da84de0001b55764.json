@@ -2180,6 +2180,16 @@
       "confidence": "high",
       "via": "audit-insert",
       "recrop": ".review/audit/adj-crops/tbl-19.png"
+    },
+    {
+      "image_index": 9,
+      "block_index": 26,
+      "original": "达到30/60次",
+      "drop": true,
+      "reason": "seg012 crop shows line 2.在本期赛季卡池中累积抽取次数达到30/60次 already carried by v4 b25; v4 b26 达到30/60次 is a duplicate tail slice; v6 b26 whole line has 赛学/紧积 misreads",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 9 26"
     }
   ]
 }
