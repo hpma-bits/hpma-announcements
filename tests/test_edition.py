@@ -120,6 +120,46 @@ def test_stale_correction_is_refused():
         _render(ledger)
 
 
+def test_ledger_drop_removes_a_garbage_block():
+    notice = _notice()
+    notice["images"][0]["blocks"].append(
+        {"box": [[10, 250], [90, 250], [90, 280], [10, 280]], "text": "学文活动光货双米。", "score": 0.63}
+    )
+    ledger = {
+        "id": "dashen.aaaa",
+        "corrections": [
+            {
+                "image_index": 1,
+                "block_index": 6,
+                "original": "学文活动光货双米。",
+                "drop": True,
+                "reason": "重叠切片；源图该处无独立文字行",
+                "confidence": "high",
+            }
+        ],
+    }
+    text = edition.render_notice(_post(), _selection(), notice, ledger)
+    assert "学文活动光货双米" not in text
+    assert "第二行" in text
+
+
+def test_drop_entry_must_not_carry_corrected_text():
+    ledger = {
+        "id": "dashen.aaaa",
+        "corrections": [
+            {
+                "image_index": 1,
+                "block_index": 5,
+                "original": "第二行",
+                "drop": True,
+                "corrected": "改过的行",
+            }
+        ],
+    }
+    with pytest.raises(ValueError, match="drop correction must not carry corrected"):
+        _render(ledger)
+
+
 def _seed(root: Path) -> None:
     (root / "corpus/dashen").mkdir(parents=True)
     (root / "study").mkdir()

@@ -1,0 +1,26 @@
+{
+  "id": "dashen.638de6a5849ee20001b0aa43",
+  "source_ocr": "derived/ocr/dashen/638de6a5849ee20001b0aa43.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "学文活动光货双米。",
+      "drop": true,
+      "reason": "低置信度重复残片；与 b0017 为同一行重叠切片，源图该处无独立文字行",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.638de6a5849ee20001b0aa43 1 18"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "飘雪问候”礼包上架",
+      "corrected": "“飘雪问候”礼包上架",
+      "reason": "漏字““”；源图红色标题为“飘雪问候”礼包上架（字符级放大核验），补齐后 b0020 重复行被去重",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.638de6a5849ee20001b0aa43 1 19"
+    }
+  ]
+}

@@ -48,6 +48,15 @@
       "reason": "漏识“锢”；源图为“禁锢效果”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 6 11"
+    },
+    {
+      "image_index": 5,
+      "block_index": 31,
+      "original": "男-发型“不羁棋手”、女-发型“讽爽英姿”，开启",
+      "corrected": "男-发型“不羁棋手”、女-发型“飒爽英姿”，开启",
+      "reason": "讽→飒；源图为“飒爽英姿”（立+风，字符级放大核验），同公告 img1 b33 同款发型即“飒爽英姿”",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 5 31"
     }
   ]
 }

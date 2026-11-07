@@ -13,6 +13,9 @@ otherwise Dashen.
 The platform stamps every long Dashen image with a watermark. OCR reads it as
 its own blocks, so it is removed here: a block that is only watermark is
 dropped, and a watermark suffix merged into a content line is cut off.
+
+The ledger can also drop a block outright (``drop: true``) when OCR emitted a
+duplicate slice or other artifact that has no line of its own in the image.
 """
 
 from __future__ import annotations
@@ -130,7 +133,15 @@ def render_notice(
         texts: list[str] = []
         previous = ""
         for block_index, block in enumerate(image.get("blocks", [])):
-            text = overrides.get((index, block_index), block.get("text") or "")
+            locator = (index, block_index)
+            if locator in overrides:
+                replacement = overrides[locator]
+                if replacement is None:
+                    # Ledger verdict: a duplicate slice with no line of its own.
+                    continue
+                text = replacement
+            else:
+                text = block.get("text") or ""
             cleaned = clean_block(text)
             if not cleaned or cleaned == previous:
                 # Overlapping OCR tiles capture the same line twice; keep one.

@@ -40,7 +40,7 @@ _Avoid_: asset、media
 _Avoid_: raw text、derived text
 
 **Correction**：
-人工判定某个 OCR block 应读作什么的记录：original / corrected / reason / confidence / recrop。是决策，不是派生数据；`original` 与当前 OCR 对不上就拒绝应用，不允许静默改字。
+人工判定某个 OCR block 应读作什么的记录：original / corrected / reason / confidence / recrop；或 `drop: true` 表示该 block 是重叠切片等非正文残片，整块丢弃。是决策，不是派生数据；`original` 与当前 OCR 对不上就拒绝应用，不允许静默改字。
 _Avoid_: fix、patch、corrected text
 
 **Edition**：

@@ -66,6 +66,15 @@
       "reason": "漏字“墩”；卡牌名源图为“石墩出动”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 5 54"
+    },
+    {
+      "image_index": 5,
+      "block_index": 10,
+      "original": "1.优化抽卡道具图标：对“银辉之匙”焰色之锁”的图",
+      "corrected": "1.优化抽卡道具图标：对“银辉之匙”/“焰色之锁”的图",
+      "reason": "漏「/“」两符号；源图红字为“银辉之匙”/“焰色之锁”（字符级放大核验）。“匙”为源图原字，不改作“钥”",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 5 10"
     }
   ]
 }
