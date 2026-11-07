@@ -29,3 +29,6 @@ jobs:
 
       - name: Check the committed edition
         run: uv run python -m tools.cli edition --check
+
+      - name: Check the committed dataset
+        run: uv run python -m tools.cli dataset --check
