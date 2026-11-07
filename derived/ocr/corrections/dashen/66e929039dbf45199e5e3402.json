@@ -186,6 +186,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 6 37"
+    },
+    {
+      "image_index": 2,
+      "block_index": 34,
+      "original": "集齐全部系列画票更有超级大奖宝石5000、“魔咒心",
+      "drop": true,
+      "reason": "与b33同行重复（y1159-1185同线双读）：源图印「集齐全部系列画票更有超级大奖宝石*5000、“魔咒心」，b33已含*号读对，b34漏*为重复切片（下行b35同样漏*，与b33/v6读法不一致）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 2 34"
     }
   ]
 }

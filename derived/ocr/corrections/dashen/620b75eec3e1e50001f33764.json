@@ -92,6 +92,56 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 3 32"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "商店，会自动转至“常规物品”",
+      "corrected": "商店，会自动转至“常规物品”。",
+      "reason": "crop shows line ends “常规物品”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 1 18"
+    },
+    {
+      "image_index": 2,
+      "block_index": 4,
+      "original": "活动时间：2022年2月16日维护后-2022年2月23日5：00",
+      "corrected": "活动时间：2022年2月16日维护后－2022年2月23日5:00",
+      "reason": "crop: full-width range dash, half-width 5:00 time colon; v6 matches print",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 2 4"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "活动时间：2022年2月16日维护后-2022年3月9日5：00",
+      "corrected": "活动时间：2022年2月16日维护后－2022年3月9日5:00",
+      "reason": "crop: full-width range dash, half-width 5:00 time colon; v6 matches print",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 2 27"
+    },
+    {
+      "image_index": 3,
+      "block_index": 15,
+      "original": "体验优化",
+      "corrected": "→体验优化",
+      "reason": "crop shows arrow ornament before 体验优化; real leading arrow",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 3 15"
+    },
+    {
+      "image_index": 3,
+      "block_index": 25,
+      "original": "优化了炸尾螺课堂体验，现在巫师可以跳过课前动画了",
+      "corrected": "优化了炸尾螺课堂体验，现在巫师可以跳过课前动画了。",
+      "reason": "crop shows line ends 跳过课前动画了。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.620b75eec3e1e50001f33764 3 25"
     }
   ]
 }

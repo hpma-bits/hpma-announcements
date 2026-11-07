@@ -78,6 +78,46 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6846b7417629a523a2c55baf 6 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 16,
+      "original": "“S13烘焙赛季?霜结燃烧火刑架”持续",
+      "drop": true,
+      "reason": "与b17同行重复（y1248-1275同线双读）：源图为「“S13烘焙赛季·霜结燃烧火刑架”持续」（·+持续），b17已按主会话修正表改定，b16的?为·误读的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6846b7417629a523a2c55baf 1 16"
+    },
+    {
+      "image_index": 2,
+      "block_index": 9,
+      "original": "故事《糖果记得所有事",
+      "drop": true,
+      "reason": "与b8同行重叠（y318-343同线，b8为右段）：源图整行为「故事《糖果记得所有事——霍格莫德旅游手册》已更」，b8已对上v6并入differ-p3队列（v6含全句与——）；b9为左段重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6846b7417629a523a2c55baf 2 9"
+    },
+    {
+      "image_index": 5,
+      "block_index": 32,
+      "original": "新的征程....",
+      "drop": true,
+      "reason": "与b31同行重复（y1162-1187同线双读）：同句「新的征程….」，b31已对上v6、省略号点数在punct-p4规整；b32为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6846b7417629a523a2c55baf 5 32"
+    },
+    {
+      "image_index": 6,
+      "block_index": 33,
+      "original": "的问题。",
+      "drop": true,
+      "reason": "与b32同行重复（y1263-1288同线双读）：b32已对上v6、缺句号在punct-p4队列补正；b33为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6846b7417629a523a2c55baf 6 33"
     }
   ]
 }

@@ -193,6 +193,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 5 15"
+    },
+    {
+      "image_index": 1,
+      "block_index": 21,
+      "original": "1、调查区域",
+      "corrected": "*1、调查区域",
+      "reason": "crop shows star ornament before 1、调查区域; v6 captured it, v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 1 21"
+    },
+    {
+      "image_index": 2,
+      "block_index": 14,
+      "original": "3）组队参加活动的巫师：每轮还可与队友互赠魔咒，",
+      "corrected": "3）组队参加活动的巫师，每轮还可与队友互赠魔咒，",
+      "reason": "crop shows 组队参加活动的巫师，每轮 - comma printed after 巫师, not colon; v4 ： wrong char",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 2 14"
+    },
+    {
+      "image_index": 4,
+      "block_index": 20,
+      "original": "4、优化了魔法电台节目《巫师之声》、《邂逅魔咒》",
+      "corrected": "4、优化了魔法电台节目《巫师之声》、《邂逅魔咒》、",
+      "reason": "crop shows line ends 《邂逅魔咒》、 - trailing 、 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62b1bf0fc5a325000141f0f0 4 20"
     }
   ]
 }

@@ -83,6 +83,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.630df96d849ee200014e7aac 2 9"
+    },
+    {
+      "image_index": 1,
+      "block_index": 16,
+      "original": "完成任务，达成对应等级可获得神奇动物“猫狸子”",
+      "corrected": "完成任务，达成对应等级可获得神奇动物“猫狸子”、",
+      "reason": "crop shows line ends 神奇动物“猫狸子”、 - trailing 、 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.630df96d849ee200014e7aac 1 16"
     }
   ]
 }

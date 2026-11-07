@@ -234,6 +234,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 7 28"
+    },
+    {
+      "image_index": 5,
+      "block_index": 55,
+      "original": "2",
+      "drop": true,
+      "reason": "「2」(y2061-2067,x408-416)仅数字大小、落在b57「影”、“浮沫海歌”…」行的标点区，放大无独立印刷文字，为标点/装饰误读碎屑",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 5 55"
+    },
+    {
+      "image_index": 5,
+      "block_index": 63,
+      "original": "权方辉合利波特魔法觉醒",
+      "drop": true,
+      "reason": "watermark：b63「权方辉合利波特魔法觉醒」为b62行尾「权力之辉」与右下角水印「大神@哈利波特魔法觉醒」的叠合误读，x达635超出正文右界；水印覆盖内容不可恢复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 5 63"
     }
   ]
 }

@@ -60,6 +60,46 @@
       "confidence": "high",
       "via": "audit-insert",
       "recrop": "python -m tools.cli crop dashen.63176c880c8dc60001ba3e68 5 36 --v6"
+    },
+    {
+      "image_index": 4,
+      "block_index": 4,
+      "original": "一批新商品，快来挑选吧～",
+      "corrected": "一批新商品，快来挑选吧~",
+      "reason": "crop shows line ends 快来挑选吧~ - half-width tilde printed; v6 matches",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63176c880c8dc60001ba3e68 4 4"
+    },
+    {
+      "image_index": 5,
+      "block_index": 9,
+      "original": "20%/17%/14%/11%",
+      "corrected": "20%/17%/14%/11%。",
+      "reason": "crop shows 20%/17%/14%/11%。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63176c880c8dc60001ba3e68 5 9"
+    },
+    {
+      "image_index": 5,
+      "block_index": 12,
+      "original": "原生命值的110%/100%/90%/80%",
+      "corrected": "原生命值的110%/100%/90%/80%。",
+      "reason": "crop shows 原生命值的110%/100%/90%/80%。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63176c880c8dc60001ba3e68 5 12"
+    },
+    {
+      "image_index": 5,
+      "block_index": 30,
+      "original": "例由26%提升为30%",
+      "corrected": "例由26%提升为30%。",
+      "reason": "crop shows 例由26%提升为30%。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63176c880c8dc60001ba3e68 5 30"
     }
   ]
 }

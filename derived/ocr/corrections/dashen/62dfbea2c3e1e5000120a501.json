@@ -150,6 +150,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 4 9"
+    },
+    {
+      "image_index": 1,
+      "block_index": 20,
+      "original": "击来预言”时装上架",
+      "corrected": "“未来预言”时装上架",
+      "reason": "zoom crop: banner prints opening “ before title and title reads 未来预言 (both engines misread 未 as 击 - char fixed in corrected); wave ornaments are art",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 1 20"
+    },
+    {
+      "image_index": 4,
+      "block_index": 13,
+      "original": "设计师观点：我们认为目前“波浪牵引”和“清泉汹涌",
+      "corrected": "设计师观点：我们认为目前“波浪牵引”和“清泉汹涌”",
+      "reason": "crop shows full-width label ： and closing ” printed at line end after 清泉汹涌; v4 missed ”, v6 colon half-width",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 4 13"
+    },
+    {
+      "image_index": 2,
+      "block_index": 7,
+      "original": "购买即可获得史诗时装“校园留影”",
+      "corrected": "购买即可获得史诗时装“校园留影”。",
+      "reason": "crop shows line ends “校园留影”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 2 7"
+    },
+    {
+      "image_index": 5,
+      "block_index": 1,
+      "original": "1、优化了部分场景的表现效果，减少卡顿问题",
+      "corrected": "1、优化了部分场景的表现效果，减少卡顿问题。",
+      "reason": "crop shows 减少卡顿问题。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62dfbea2c3e1e5000120a501 5 1"
     }
   ]
 }

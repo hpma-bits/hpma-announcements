@@ -203,6 +203,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.68d13e54dbba24229025b7b9 4 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 2,
+      "original": "马人们对所有进入禁林的巫师一视同仁",
+      "drop": true,
+      "reason": "与b1同行重叠（y45-74同线）：源图整行为「马人们对所有进入禁林的巫师一视同仁——他们不肯」（一视同仁后有长破折号——）；b1已对上v6并入differ-p3队列（v6含全句与——）；b2为左段重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68d13e54dbba24229025b7b9 2 2"
+    },
+    {
+      "image_index": 2,
+      "block_index": 31,
+      "original": "在活动期间，巫师可通过完成每日任务获得“嘀嗒宝箱”",
+      "drop": true,
+      "reason": "与b32同行重复（y1255-1281同线双读）：源图行尾有逗号（「…“嘀嗒宝箱”，」），b32与v6一致正确，b31漏行尾逗号为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68d13e54dbba24229025b7b9 2 31"
+    },
+    {
+      "image_index": 3,
+      "block_index": 29,
+      "original": "3.高级魔咒心力·稀有",
+      "drop": true,
+      "reason": "与b28同行重复（y1026-1050同线双读）：源图印「3.高级魔咒心力·稀有」（·可见，同类行均含·），b28已对上v6、缺·在punct-p4队列补正；b29为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68d13e54dbba24229025b7b9 3 29"
+    },
+    {
+      "image_index": 4,
+      "block_index": 30,
+      "original": "活动时间：2025年10月1日-10月8日，每日18:00-",
+      "drop": true,
+      "reason": "与b30同行重复（y1103-1128同线双读）：b30已对上v6（半角-与源图一致），b31的－为全角误读重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68d13e54dbba24229025b7b9 4 30"
     }
   ]
 }

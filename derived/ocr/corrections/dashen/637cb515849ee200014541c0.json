@@ -22,6 +22,46 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.637cb515849ee200014541c0 2 20"
+    },
+    {
+      "image_index": 1,
+      "block_index": 36,
+      "original": "段轻快的旋律被拼凑而出",
+      "corrected": "段轻快的旋律被拼凑而出——",
+      "reason": "crop shows line ends with two-em dash ——; v4 had none, v6 read only one",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.637cb515849ee200014541c0 1 36"
+    },
+    {
+      "image_index": 1,
+      "block_index": 37,
+      "original": "“你是我心目中的完美女巫.不管是山巨怪，还是林巨怪，",
+      "corrected": "“你是我心目中的完美女巫...不管是山巨怪，还是林巨怪，",
+      "reason": "zoom crop shows 女巫...不管 - three small tight dots printed (source quirk mid-quote); v6 matches",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.637cb515849ee200014541c0 1 37"
+    },
+    {
+      "image_index": 2,
+      "block_index": 3,
+      "original": "段轻快的旋律被拼凑而出",
+      "corrected": "段轻快的旋律被拼凑而出——",
+      "reason": "crop shows line ends with two-em dash ——; v4 had none, v6 read only one",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.637cb515849ee200014541c0 2 3"
+    },
+    {
+      "image_index": 2,
+      "block_index": 4,
+      "original": "“你是我心目中的完美女巫..不管是山巨怪，还是林巨怪，",
+      "corrected": "“你是我心目中的完美女巫...不管是山巨怪，还是林巨怪，",
+      "reason": "crop shows 女巫...不管 - three small tight dots printed; v6 matches",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.637cb515849ee200014541c0 2 4"
     }
   ]
 }

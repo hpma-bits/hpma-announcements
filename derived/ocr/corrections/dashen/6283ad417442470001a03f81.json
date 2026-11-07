@@ -120,6 +120,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 56"
+    },
+    {
+      "image_index": 1,
+      "block_index": 12,
+      "original": "魁地奇球场上突然出现的生物·...··城堡里到底发生了什么？",
+      "corrected": "魁地奇球场上突然出现的生物…城堡里到底发生了什么?",
+      "reason": "zoom crop: six-dot …… after 生物 and small tight half-width ? at line end; v6 matches print, v4 dot-soup + full-width ？ wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 12"
+    },
+    {
+      "image_index": 1,
+      "block_index": 33,
+      "original": "后，重复获得的部分，将会转化为相应数量的“奇遇瓶”",
+      "corrected": "后，重复获得的部分，将会转化为相应数量的“奇遇瓶”。",
+      "reason": "crop shows line ends “奇遇瓶”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 33"
+    },
+    {
+      "image_index": 1,
+      "block_index": 53,
+      "original": "“迎接热爱日”签到活动开启",
+      "corrected": "\"迎接热爱日\"签到活动开启",
+      "reason": "banner prints STRAIGHT ASCII quotes (crop + notice vote); centered banner gap before quote is layout margin, not a printed space, so no leading space",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 53"
+    },
+    {
+      "image_index": 1,
+      "block_index": 63,
+      "original": "已投入梳妆魔盒中，快来看看吧～",
+      "corrected": "已投入梳妆魔盒中，快来看看吧~",
+      "reason": "crop shows line ends 快来看看吧~ - half-width tilde printed; v6 matches",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 63"
     }
   ]
 }

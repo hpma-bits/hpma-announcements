@@ -195,6 +195,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 1 27"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "‘S12高布石赛季·月下高布石之影”",
+      "drop": true,
+      "reason": "与b17同行重复（y1246-1275同线双读）：源图前引号为全角「“」，b17正确且已对上v6（月/凡之辨在differ-p3）；b18前引号误读为半角'为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 1 18"
+    },
+    {
+      "image_index": 4,
+      "block_index": 30,
+      "original": "生的和即将发生的奇奇怪怪的故事......巫师在大世界",
+      "drop": true,
+      "reason": "与b29同行重复（y1139-1163同线双读）：同句「生的和即将发生的奇奇怪怪的故事……巫师在大世界」，b29已对上v6、省略号点数在punct-p3规整；b30为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 4 30"
+    },
+    {
+      "image_index": 6,
+      "block_index": 28,
+      "original": "（3）新增了巫师尚未使用搭配的提示。",
+      "drop": true,
+      "reason": "与b29同行重复（y1023-1049同线双读）：b29已对上v6（其「（③）」序号误读在punct-p3规整），b28「（3）新增了巫师尚未使用搭配的提示。」为同句重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 6 28"
     }
   ]
 }

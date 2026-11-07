@@ -202,6 +202,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 5 56"
+    },
+    {
+      "image_index": 3,
+      "block_index": 35,
+      "original": "*任务奖励不含括战斗结算的奖励。",
+      "drop": true,
+      "reason": "与b34同行重复（y1260-1287同线双读）：b34已按主会话修正表改为「*任务奖励不含括战斗结算的奖励。」（不含括为源图原样），与b35文本一致；b35为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 3 35"
+    },
+    {
+      "image_index": 4,
+      "block_index": 43,
+      "original": "最终，全球“助力彩球”总数最高的教授将成为",
+      "drop": true,
+      "reason": "与b42同行重叠（y1629-1657同线）：源图整行为「最终，全球“助力彩球”总数最高的教授将成为——“教」（将成为后有长破折号——，源图可见）；b42已对上v6并入differ-p3队列（v6漏——，更正时注意补回）；b43为左段重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 4 43"
     }
   ]
 }

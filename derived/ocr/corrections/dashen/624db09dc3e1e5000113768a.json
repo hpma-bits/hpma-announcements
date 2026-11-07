@@ -439,6 +439,96 @@
       "confidence": "high",
       "via": "manual-both-engines-wrong",
       "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 2 26"
+    },
+    {
+      "image_index": 2,
+      "block_index": 11,
+      "original": "活动时间：4月7日维护后-4月27日5：00",
+      "corrected": "活动时间：4月7日维护后－4月27日5:00",
+      "reason": "crop: full-width 维护后 range dash, half-width 5:00 colon; v6 matches print",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 2 11"
+    },
+    {
+      "image_index": 2,
+      "block_index": 23,
+      "original": "参与活动获取“奶油雏菊”，即可兑换：巫师服饰“灰羽浮动/光阴沉淀”",
+      "corrected": "参与活动获取“奶油雏菊”，即可兑换：巫师服饰“灰羽浮动/光阴沉淀”，",
+      "reason": "crop shows line ends “灰羽浮动/光阴沉淀”， - trailing comma printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 2 23"
+    },
+    {
+      "image_index": 2,
+      "block_index": 35,
+      "original": "石等奖励。活动期间内，累积完成10个任务还可领取最终大奖：非凡卡包",
+      "corrected": "石等奖励。活动期间内，累积完成10个任务还可领取最终大奖：非凡卡包*",
+      "reason": "crop shows line ends 非凡卡包* - small star printed at line end (footnote/wrap); v6 captured it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 2 35"
+    },
+    {
+      "image_index": 3,
+      "block_index": 1,
+      "original": "魔咒详情：",
+      "corrected": "→魔咒详情：",
+      "reason": "crop shows arrow ornament before 魔咒详情 and trailing full-width label ：; v6 matches print",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 3 1"
+    },
+    {
+      "image_index": 3,
+      "block_index": 11,
+      "original": "在制作乳脂蛋糕···如果收到这幅画，韦格比一定会非常高兴。各位巫师",
+      "corrected": "在制作乳脂蛋糕……如果收到这幅画，韦格比一定会非常高兴。各位巫师",
+      "reason": "crop shows six-dot …… after 乳脂蛋糕; v6 read 3 dots, v4 dot-soup; standard six-dot form stored",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 3 11"
+    },
+    {
+      "image_index": 3,
+      "block_index": 17,
+      "original": "“暖春特惠”礼包上架】",
+      "corrected": "【“暖春特惠”礼包上架】",
+      "reason": "crop shows line starts with 【 before “暖春特惠”; real leading bracket",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 3 17"
+    },
+    {
+      "image_index": 3,
+      "block_index": 26,
+      "original": "“禁林竞速”第四期开启】活动时间：4月6日5：00-5月11日5：00",
+      "corrected": "【“禁林竞速”第四期开启】活动时间：4月6日5:00－5月11日5:00",
+      "reason": "zoom crop: line starts with 【 (real); 5:00 colons half-width; range dash prints wide full-width glyph - both engines read it half-width, corrected to －",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 3 26"
+    },
+    {
+      "image_index": 5,
+      "block_index": 25,
+      "original": "2%",
+      "corrected": "2%。",
+      "reason": "crop shows 2%。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 5 25"
+    },
+    {
+      "image_index": 7,
+      "block_index": 17,
+      "original": "优化了课堂商店，增加可兑换材料“非洲树蛇皮”",
+      "corrected": "优化了课堂商店，增加可兑换材料“非洲树蛇皮”。",
+      "reason": "crop shows line ends “非洲树蛇皮”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 7 17"
     }
   ]
 }

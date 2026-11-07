@@ -268,6 +268,106 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6989a694759e573fe467fe54 5 47"
+    },
+    {
+      "image_index": 1,
+      "block_index": 16,
+      "original": "赛季时间：2026年2月4日维护后-3月31日6：00",
+      "drop": true,
+      "reason": "与b17同行重复（y1245-1270同线双读）：b17已对上v6且半角6:00与源图一致，b16的6：00为全角误读重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6989a694759e573fe467fe54 1 16"
+    },
+    {
+      "image_index": 2,
+      "block_index": 30,
+      "original": "近，还会有“发财嗅嗅”藏在魔法世界某处，巫师寻",
+      "drop": true,
+      "reason": "与b29同行重复（y1042-1069同线双读）：源图印「“发财嗅嗅”」，b30正确（v6同）；对齐器保留的b29误读为「发财嗅噢」且未入任何队列，建议补正；b30为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6989a694759e573fe467fe54 2 30"
+    },
+    {
+      "image_index": 2,
+      "block_index": 33,
+      "original": "活动时间：2026年2月14日5：00-2月19日5：00",
+      "drop": true,
+      "reason": "与b34同行重复（y1164-1190同线双读）：b34已对上v6（注意b34首个5：00仍为全角、源图为半角5:00，未入任何队列，建议punct补正）；b33两个5：00为更残缺的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6989a694759e573fe467fe54 2 33"
+    },
+    {
+      "image_index": 3,
+      "block_index": 62,
+      "original": "动首日不会刷新",
+      "drop": true,
+      "reason": "与b63同行重复（y2285-2309同线双读）：b63已读出「动首日不会刷新。」（含句号，v6同），b62漏句号为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6989a694759e573fe467fe54 3 62"
+    },
+    {
+      "image_index": 4,
+      "block_index": 29,
+      "original": "心“爱意定格”活动即将开启！",
+      "drop": true,
+      "reason": "与b28同行重复（y1063-1088同线双读）：源图横幅行首为花纹饰线、无文字，b29行首「心」为饰线误读；b28与v6一致正确；b29为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6989a694759e573fe467fe54 4 29"
+    },
+    {
+      "image_index": 4,
+      "block_index": 56,
+      "original": "寸间：2026年2月13日0:00-2月27日0:00",
+      "drop": true,
+      "reason": "与b55同行重叠（y2041-2070同线）：b55已完整读出「上架时间：2026年2月13日0:00-2月27日0:00」且与v6一致，b56「寸间：…」为漏头部（上架时）的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6989a694759e573fe467fe54 4 56"
+    },
+    {
+      "image_index": 4,
+      "block_index": 63,
+      "original": "也可以快速读取和分",
+      "drop": true,
+      "reason": "与b65同行重叠（y2287-2312同线）：b65已完整读出「计方案，也可以快速读取和分享蓝图。」且与v6一致，b63为中段乱序重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6989a694759e573fe467fe54 4 63"
+    },
+    {
+      "image_index": 4,
+      "block_index": 64,
+      "original": "计方案",
+      "drop": true,
+      "reason": "与b65同行重叠（y2287-2312同线左端x41-108）：b65已完整读出全句，b64「计方案」为头部重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6989a694759e573fe467fe54 4 64"
+    },
+    {
+      "image_index": 5,
+      "block_index": 29,
+      "original": "活动时间：2026年2月18日5：00-2月25日5：00",
+      "drop": true,
+      "reason": "与b28同行重复（y1084-1109同线双读）：b28已对上v6（注意b28首个5：00仍为全角、源图为半角5:00，未入任何队列，建议punct补正）；b29两个5：00为更残缺的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6989a694759e573fe467fe54 5 29"
+    },
+    {
+      "image_index": 5,
+      "block_index": 33,
+      "original": "活动时间：2026年2月21日20：00-22:00",
+      "drop": true,
+      "reason": "与b34同行重复（y1247-1270同线双读）：b34已对上v6且20:00/22:00半角与源图一致，b33的20：00为全角误读重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6989a694759e573fe467fe54 5 33"
     }
   ]
 }

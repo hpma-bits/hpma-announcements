@@ -51,6 +51,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.634eb95c340836000155f4da 2 12"
+    },
+    {
+      "image_index": 1,
+      "block_index": 6,
+      "original": "万圣节将至，海格却似乎遇上了什么麻烦….·前往海格小",
+      "corrected": "万圣节将至，海格却似乎遇上了什么麻烦……前往海格小",
+      "reason": "crop shows 什么麻烦……前往海格小 - six-dot ellipsis printed mid-line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.634eb95c340836000155f4da 1 6"
+    },
+    {
+      "image_index": 1,
+      "block_index": 14,
+      "original": "随着成长进度的增加，南瓜将不断生长..·甚至大到超乎",
+      "corrected": "随着成长进度的增加，南瓜将不断生长……甚至大到超乎",
+      "reason": "crop shows 不断生长……甚至大到超乎 - six-dot ellipsis printed mid-line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.634eb95c340836000155f4da 1 14"
     }
   ]
 }

@@ -95,6 +95,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.69809b37dca1b62657b3c449 5 12"
+    },
+    {
+      "image_index": 2,
+      "block_index": 34,
+      "original": "通过奇妙羁绊获得的“蜷翼魔”衍生卡生命值与伤害由",
+      "drop": true,
+      "reason": "与b33同行重复（y1193-1218同线双读）：源图印「“蜷翼魔”」，b34正确（v6同）；对齐器保留的b33漏「蜷」字且未入任何队列，建议补正；b34为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69809b37dca1b62657b3c449 2 34"
     }
   ]
 }

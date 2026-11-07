@@ -79,6 +79,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.62e90be9c5a3250001799497 3 11"
+    },
+    {
+      "image_index": 2,
+      "block_index": 3,
+      "original": "着一触即发的危险····",
+      "corrected": "着一触即发的危险…",
+      "reason": "crop shows 着一触即发的危险…… - six-dot ellipsis printed at line end",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62e90be9c5a3250001799497 2 3"
     }
   ]
 }

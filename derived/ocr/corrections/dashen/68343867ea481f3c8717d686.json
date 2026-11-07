@@ -148,6 +148,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 3 28"
+    },
+    {
+      "image_index": 4,
+      "block_index": 31,
+      "original": "3)金缎豪华礼盒",
+      "drop": true,
+      "reason": "与b30同行重复（y1143-1169同线双读）：源图印半角括号「3)金缎豪华礼盒」，b31正确；对齐器保留的b30为全角）误读且未入任何队列，建议punct补正；b31为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 4 31"
+    },
+    {
+      "image_index": 4,
+      "block_index": 33,
+      "original": "购买即可获得传说品质帽子“红色格韵”。",
+      "drop": true,
+      "reason": "与b34同行重复（y1214-1237同线双读）：b34已对上v6、缺句号在punct-p4队列补正；b33为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 4 33"
     }
   ]
 }

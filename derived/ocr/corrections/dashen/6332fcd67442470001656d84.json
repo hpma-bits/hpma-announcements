@@ -82,6 +82,46 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6332fcd67442470001656d84 4 23"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "*8．“舞会伙伴挑战”活动开启",
+      "corrected": "*8. “舞会伙伴挑战”活动开启",
+      "reason": "crop shows star ornament, half-width 8. and space before “舞会伙伴挑战”; v4 full-width ．wrong and v6 lost the star; combined correction",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6332fcd67442470001656d84 2 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 36,
+      "original": "*9.“伙伴换新装”活动上线",
+      "corrected": "*9. “伙伴换新装”活动上线",
+      "reason": "crop shows star ornament, half-width 9. and space before “伙伴换新装”; v4 ．wrong and v6 lost the star; combined correction",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6332fcd67442470001656d84 2 36"
+    },
+    {
+      "image_index": 5,
+      "block_index": 4,
+      "original": "雪人飞来",
+      "corrected": "*雪人飞来",
+      "reason": "crop shows star ornament before 雪人飞来; v6 captured it, v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6332fcd67442470001656d84 5 4"
+    },
+    {
+      "image_index": 5,
+      "block_index": 40,
+      "original": "曾经错过的，或许有机会再次拥有·..",
+      "corrected": "曾经错过的，或许有机会再次拥有……",
+      "reason": "crop shows 再次拥有…… - six-dot ellipsis printed at line end",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6332fcd67442470001656d84 5 40"
     }
   ]
 }

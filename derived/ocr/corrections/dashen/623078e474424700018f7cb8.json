@@ -52,6 +52,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.623078e474424700018f7cb8 2 14"
+    },
+    {
+      "image_index": 2,
+      "block_index": 18,
+      "original": "修复了移动卡为0时使用“随从显形”，下张移动卡未变成幻影移形的问题",
+      "corrected": "修复了移动卡为0时使用“随从显形”，下张移动卡未变成幻影移形的问题。",
+      "reason": "crop shows line ends 幻影移形的问题。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.623078e474424700018f7cb8 2 18"
     }
   ]
 }

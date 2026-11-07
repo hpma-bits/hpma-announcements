@@ -153,6 +153,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 2 25"
+    },
+    {
+      "image_index": 3,
+      "block_index": 28,
+      "original": "氛围”、双人动作“默契回旋”、“幸运发条”、“焰色之锁”",
+      "drop": true,
+      "reason": "与b27同行重复（y1030-1055同线双读）：对齐器已将b27对上v6；注意源图行尾有后引号「焰色之锁”」，b27漏后引号，建议punct补正；b28为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 3 28"
+    },
+    {
+      "image_index": 3,
+      "block_index": 34,
+      "original": "巫师参与3次茶馆茶聚即可领取金币奖励",
+      "drop": true,
+      "reason": "与b36同行重叠（y1259-1283同线）：b36已读出「活动期间，巫师参与3次茶馆茶聚即可领取金币奖励」，b34为其右段重复切片；注意b36漏句号（源图/v6有），建议补正",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 3 34"
+    },
+    {
+      "image_index": 3,
+      "block_index": 35,
+      "original": "活动期间",
+      "drop": true,
+      "reason": "与b36同行重叠（y1260-1279左端x37-136）：b36已读出全句，b35「活动期间」为左端重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 3 35"
+    },
+    {
+      "image_index": 4,
+      "block_index": 33,
+      "original": "周六、周日登录还可各自领取“嘀嗒宝箱”*4、“金耀之",
+      "drop": true,
+      "reason": "与b34同行重复（y1251-1275同线双读）：对齐器已将b34对上v6，b34漏*号已在punct-p3队列（v6文本含*4）；b33为另一重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67a0aff4e0ff6c386f7d84ef 4 33"
     }
   ]
 }

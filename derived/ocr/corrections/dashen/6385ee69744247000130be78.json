@@ -96,6 +96,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6385ee69744247000130be78 1 24"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "购买即可获得史诗时装“圣诞牛仔”",
+      "corrected": "购买即可获得史诗时装“圣诞牛仔”。",
+      "reason": "crop shows line ends “圣诞牛仔”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6385ee69744247000130be78 1 11"
+    },
+    {
+      "image_index": 2,
+      "block_index": 10,
+      "original": "新增“海底咏者”焕新款时装：“海底咏者·夕波”",
+      "corrected": "新增“海底咏者”焕新款时装：“海底咏者·夕波”，",
+      "reason": "crop shows line ends “海底咏者·夕波”， - trailing comma printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6385ee69744247000130be78 2 10"
     }
   ]
 }

@@ -69,6 +69,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6255792c3408360001063839 1 86"
+    },
+    {
+      "image_index": 1,
+      "block_index": 31,
+      "original": "自由舞步",
+      "corrected": "*自由舞步",
+      "reason": "crop shows star ornament before 自由舞步; v6 read only the gap as space, v4 dropped star here; printed line is star + text",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6255792c3408360001063839 1 31"
     }
   ]
 }

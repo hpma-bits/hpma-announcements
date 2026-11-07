@@ -116,6 +116,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.6890935d7795d17cc68878d2 5 23"
+    },
+    {
+      "image_index": 2,
+      "block_index": 26,
+      "original": "活动期间，巫师每日登录即可领取宝石、“金耀之匙”、",
+      "drop": true,
+      "reason": "与b25同行重复（y1071-1094同线双读）：b25已对上v6、行尾顿号在punct-p4队列补正（源图行尾有、且下行为「“蜜语棒棒糖”等奖励！」）；b26为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6890935d7795d17cc68878d2 2 26"
     }
   ]
 }

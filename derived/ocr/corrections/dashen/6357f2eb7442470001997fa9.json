@@ -159,6 +159,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6357f2eb7442470001997fa9 1 3"
+    },
+    {
+      "image_index": 5,
+      "block_index": 2,
+      "original": "最终将破土而出，“茁壮”成长～而大家收获的不仅仅",
+      "corrected": "最终将破土而出，“茁壮”成长~而大家收获的不仅仅",
+      "reason": "crop shows “茁壮”成长~ - half-width tilde printed; v6 matches",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6357f2eb7442470001997fa9 5 2"
+    },
+    {
+      "image_index": 5,
+      "block_index": 5,
+      "original": "看看哪个社团的南瓜养成记更加有趣温暖吧～",
+      "corrected": "看看哪个社团的南瓜养成记更加有趣温暖吧~",
+      "reason": "crop shows line ends 有趣温暖吧~ - half-width tilde printed; v6 matches",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6357f2eb7442470001997fa9 5 5"
     }
   ]
 }

@@ -147,6 +147,46 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 6 42"
+    },
+    {
+      "image_index": 2,
+      "block_index": 29,
+      "original": "完成支线任务“高布石对决”，领取恶作剧道真“高布石",
+      "drop": true,
+      "reason": "与b28同行重复（y1020-1045同线双读）：源图印「领取恶作剧道具“高布石」，b28正确，b29「道真」为乱码重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 2 29"
+    },
+    {
+      "image_index": 2,
+      "block_index": 39,
+      "original": "历史悠久的巫师游戏",
+      "drop": true,
+      "reason": "源图为一行「历史悠久的巫师游戏——高布石再度风靡霍格沃茨！」，v4拆成b39（左段）+b38（右段）两块；v6整行读出，b38已入differ-p2队列（b38↔v6b39）应并出全句；b39为该行的重复左段切片",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 2 39"
+    },
+    {
+      "image_index": 4,
+      "block_index": 32,
+      "original": "们深表意，还请继续支持《哈利波特：魔法觉醒》。",
+      "drop": true,
+      "reason": "与b31同行重复（y1183-1208同线双读）：源图印「们深表歉意，还请继续支持《哈利波特：魔法觉醒》。」，b31正确，b32「深表意」漏歉为乱码重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 4 32"
+    },
+    {
+      "image_index": 6,
+      "block_index": 36,
+      "original": "（2）修复了",
+      "drop": true,
+      "reason": "与b37同行重叠（y1263-1288同线）：b37已读出「（2）修复了在采集原石时可能会提示“操作频繁”的问题。」，b36「（2）修复了」为左端重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 6 36"
     }
   ]
 }

@@ -160,6 +160,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 4 5"
+    },
+    {
+      "image_index": 1,
+      "block_index": 26,
+      "original": "的故事.",
+      "corrected": "的故事……",
+      "reason": "crop shows 的故事…… - six-dot ellipsis printed at line end",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 1 26"
+    },
+    {
+      "image_index": 2,
+      "block_index": 0,
+      "original": "咒语妙妙点”精英模式开启！",
+      "corrected": "“咒语妙妙点”精英模式开启！",
+      "reason": "crop shows banner line starts with opening “ before 咒语妙妙点; real leading quote",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 2 0"
+    },
+    {
+      "image_index": 2,
+      "block_index": 19,
+      "original": "12%/20%/28%/36%",
+      "corrected": "12%/20%/28%/36%。",
+      "reason": "crop shows 12%/20%/28%/36%。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 2 19"
     }
   ]
 }

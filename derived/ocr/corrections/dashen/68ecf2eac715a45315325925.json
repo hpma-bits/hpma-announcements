@@ -95,6 +95,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.68ecf2eac715a45315325925 6 18"
+    },
+    {
+      "image_index": 5,
+      "block_index": 34,
+      "original": "行秘宝寻觅。可寻觅的秘宝包括时装“绵绒甜梦”、",
+      "drop": true,
+      "reason": "与b35同行重复（y1237-1260同线双读）：b35已对上v6、行尾顿号在punct-p4队列补正；b34为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68ecf2eac715a45315325925 5 34"
+    },
+    {
+      "image_index": 6,
+      "block_index": 32,
+      "original": "1.赛季剧情页中新增当前赛季的相关奖励收集进度",
+      "drop": true,
+      "reason": "与b33同行重叠（y1261-1283同线）：源图整行为「1.赛季剧情页中新增当前赛季的相关奖励收集进度一」（行尾「一」与下行「览」连读），b33已完整读出且与v6一致，b32漏行尾「一」为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68ecf2eac715a45315325925 6 32"
     }
   ]
 }

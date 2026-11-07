@@ -117,6 +117,16 @@
       "confidence": "medium",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.62f222a5849ee200017e6aaa 1 24"
+    },
+    {
+      "image_index": 4,
+      "block_index": 15,
+      "original": "次伤害成长由20%降低至12%",
+      "corrected": "次伤害成长由20%降低至12%。",
+      "reason": "crop shows 降低至12%。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62f222a5849ee200017e6aaa 4 15"
     }
   ]
 }

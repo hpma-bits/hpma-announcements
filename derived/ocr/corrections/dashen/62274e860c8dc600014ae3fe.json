@@ -51,6 +51,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.62274e860c8dc600014ae3fe 2 8"
+    },
+    {
+      "image_index": 1,
+      "block_index": 8,
+      "original": "“寝室互助”功能更新】",
+      "corrected": "【“寝室互助”功能更新】",
+      "reason": "crop shows line starts with 【 before “寝室互助”; real leading bracket",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62274e860c8dc600014ae3fe 1 8"
     }
   ]
 }

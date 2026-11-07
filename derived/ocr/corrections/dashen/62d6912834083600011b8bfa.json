@@ -130,6 +130,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.62d6912834083600011b8bfa 1 17"
+    },
+    {
+      "image_index": 1,
+      "block_index": 34,
+      "original": "抽取奖励需使用“星芒印花”。参与娱乐赛“清泉乱斗”",
+      "corrected": "抽取奖励需使用“星芒印花”。参与娱乐赛“清泉乱斗”、",
+      "reason": "crop shows line ends 娱乐赛“清泉乱斗”、 - trailing 、 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62d6912834083600011b8bfa 1 34"
     }
   ]
 }

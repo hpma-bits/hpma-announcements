@@ -107,6 +107,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 5 12"
+    },
+    {
+      "image_index": 6,
+      "block_index": 33,
+      "original": "18.修复了在巫师空间中，无法正常回看“混血猫狸子”",
+      "drop": true,
+      "reason": "与b32同行重复（y1166-1189同线双读）：b32已对上v6、缺后引号在punct-p4队列补正；b33为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 6 33"
     }
   ]
 }
