@@ -41,6 +41,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.65648a225930fd0001592081 2 14"
+    },
+    {
+      "image_index": 1,
+      "block_index": 6,
+      "original": "全新赛季故事第四章！",
+      "corrected": "全新赛季故事·第四章！",
+      "reason": "interpunct · printed between 故事 and 第四章 (crop header); v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65648a225930fd0001592081 1 6"
+    },
+    {
+      "image_index": 1,
+      "block_index": 9,
+      "original": "龙守仁的安全也受到了威胁...",
+      "corrected": "龙守仁的安全也受到了威胁……",
+      "reason": "line ends six-dot ellipsis ……; v4 3 dots, v6 4 dots",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.65648a225930fd0001592081 1 9"
     }
   ]
 }

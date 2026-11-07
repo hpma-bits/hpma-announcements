@@ -119,6 +119,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 45"
+    },
+    {
+      "image_index": 1,
+      "block_index": 26,
+      "original": "一本陈旧的笔记，一段尘封的往事....",
+      "corrected": "一本陈旧的笔记，一段尘封的往事……",
+      "reason": "line ends six-dot ellipsis ……; v4 3 dots, v6 garbled .….…….",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 1 26"
+    },
+    {
+      "image_index": 1,
+      "block_index": 31,
+      "original": "你翻开书页，一段不为人知的往事逐渐浮现..",
+      "corrected": "你翻开书页，一段不为人知的往事逐渐浮现……",
+      "reason": "line ends six-dot ellipsis; v6 6 ASCII dots -> form ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 1 31"
     }
   ]
 }

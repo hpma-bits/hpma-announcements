@@ -91,6 +91,36 @@
       "confidence": "high",
       "via": "audit-insert",
       "recrop": "python -m tools.cli crop dashen.653f83caecda660001756117 2 48 --v6"
+    },
+    {
+      "image_index": 1,
+      "block_index": 15,
+      "original": "存在这样的地方，可以为龙蛋提供适宜孵化的环境",
+      "drop": true,
+      "reason": "v4 duplicated line 存在这样的地方…环境 (b15 no-dots re-read; crop p2-161ctx shows b15+b16 same line); correction carried at b16 pair (item below)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.653f83caecda660001756117 1 15"
+    },
+    {
+      "image_index": 1,
+      "block_index": 16,
+      "original": "存在这样的地方，可以为龙蛋提供适宜孵化的环境...",
+      "corrected": "存在这样的地方，可以为龙蛋提供适宜孵化的环境……",
+      "reason": "line ends six-dot …… (zoom p2-162-zoom); v6b16 closest, dots form two U+2026 per prior",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.653f83caecda660001756117 1 16"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "的照顾，而且还要提防可能的窥探者....",
+      "corrected": "的照顾，而且还要提防可能的窥探者……",
+      "reason": "line ends six-dot ellipsis …… (crop 6 dots after 窥探者); v4 4 dots, v6 5 dots",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.653f83caecda660001756117 1 18"
     }
   ]
 }

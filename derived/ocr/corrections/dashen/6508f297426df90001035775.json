@@ -92,6 +92,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6508f297426df90001035775 2 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 8,
+      "original": "*2.“复制成双\"活动",
+      "corrected": "*2.“复制成双”活动",
+      "reason": "star ornament + 2. + curly close quote (crop); v4 straight-close artifact, v6 lost star",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6508f297426df90001035775 2 8"
     }
   ]
 }

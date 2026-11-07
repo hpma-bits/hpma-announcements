@@ -149,6 +149,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6447c0fe87edc30001cf29d8 4 31"
+    },
+    {
+      "image_index": 5,
+      "block_index": 2,
+      "original": "整·...·巫师空间将满足巫师们的更多需求！",
+      "corrected": "整……巫师空间将满足巫师们的更多需求！",
+      "reason": "line prints 整 + six-dot ……) + text + full-width ！; v4 ·...· garbage, v6 had 3-dot … and half-width !",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6447c0fe87edc30001cf29d8 5 2"
     }
   ]
 }

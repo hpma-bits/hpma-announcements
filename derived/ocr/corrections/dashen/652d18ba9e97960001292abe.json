@@ -110,6 +110,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.652d18ba9e97960001292abe 1 9"
+    },
+    {
+      "image_index": 2,
+      "block_index": 16,
+      "original": "一场永不停息的噩梦....",
+      "corrected": "一场永不停息的噩梦……",
+      "reason": "line ends with six-dot ellipsis …… (crop: 6 dots after 噩梦); v4 4 dots, v6 dot+9 dots both wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.652d18ba9e97960001292abe 2 16"
     }
   ]
 }

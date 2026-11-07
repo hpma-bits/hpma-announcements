@@ -70,6 +70,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6577084b9d4c7f0001a6b065 2 53"
+    },
+    {
+      "image_index": 1,
+      "block_index": 23,
+      "original": "德村庄上空升起...",
+      "corrected": "德村庄上空升起……",
+      "reason": "line ends six-dot ellipsis (crop 6 dots); v4 3 dots, v6 dot+…… garbled",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6577084b9d4c7f0001a6b065 1 23"
+    },
+    {
+      "image_index": 2,
+      "block_index": 4,
+      "original": "阴谋正在传播.....",
+      "corrected": "阴谋正在传播……",
+      "reason": "line ends six-dot ellipsis; v4 5 dots, v6 dot+9 dots garbled",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6577084b9d4c7f0001a6b065 2 4"
     }
   ]
 }

@@ -537,6 +537,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 4 10"
+    },
+    {
+      "image_index": 7,
+      "block_index": 33,
+      "original": "8、“多重冰冻咒－冰雪来客",
+      "corrected": "8、“多重冰冻咒-冰雪来客”",
+      "reason": "trailing ” printed after card name; dash glyph is short stroke centered in full-width cell = full-width －, v6 half-width - wrong; v4 misses line-end ”",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 7 33"
     }
   ]
 }

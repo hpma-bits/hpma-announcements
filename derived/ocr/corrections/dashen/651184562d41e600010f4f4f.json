@@ -168,6 +168,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 2 28"
+    },
+    {
+      "image_index": 1,
+      "block_index": 40,
+      "original": "球场上逼近的黑影，绕耳畔的低语....一切的源头",
+      "corrected": "球场上逼近的黑影，萦绕耳畔的低语……一切的源头",
+      "reason": "保留块b40缺「萦」（crop证实印刷为「萦绕耳畔」，b42台账已有蒙→萦修正）且省略号读作『....』；zoom证实逗号后为六点省略号「……」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 1 40"
+    },
+    {
+      "image_index": 1,
+      "block_index": 17,
+      "original": "*2.共绘风景”活动开启",
+      "corrected": "*2.“共绘风景”活动开启",
+      "reason": "star ornament printed AND open-quote “ before 共绘风景 printed (crop); v4 dropped “, v6 dropped *",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 1 17"
+    },
+    {
+      "image_index": 1,
+      "block_index": 24,
+      "original": "*3.“段位保护\"活动开启",
+      "corrected": "*3.“段位保护”活动开启",
+      "reason": "star ornament printed; close quote curly; v4 straight-close artifact, v6 lost star",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 1 24"
+    },
+    {
+      "image_index": 2,
+      "block_index": 47,
+      "original": "1、优化了“禁林”玩法中的“密林冒险”，现在“密林冒险",
+      "corrected": "1、优化了“禁林”玩法中的“密林冒险”，现在“密林冒险·",
+      "reason": "line ends with interpunct · (wrap of 密林冒险·一、二、三、四); v4 dropped it, v6 misread as half-width .",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 2 47"
     }
   ]
 }

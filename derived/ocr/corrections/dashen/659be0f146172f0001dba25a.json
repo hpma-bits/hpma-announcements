@@ -22,6 +22,66 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.659be0f146172f0001dba25a 2 29"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "霍格莫德赛季?狼影迷踪”进行中！",
+      "corrected": "“霍格莫德赛季·狼影迷踪”进行中！",
+      "reason": "header prints ”霍格莫德赛季·狼影迷踪”进行中！ with curly quotes, interpunct, full-width ！; v4 garbled half-width ? missing quote/dot",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.659be0f146172f0001dba25a 1 19"
+    },
+    {
+      "image_index": 1,
+      "block_index": 23,
+      "original": "满月将临！从雪夜深处，传来了狼嚎.",
+      "corrected": "满月将临！从雪夜深处，传来了狼嚎……",
+      "reason": "line ends six-dot ellipsis ……; v4 1 dot, v6 ….+garbled",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.659be0f146172f0001dba25a 1 23"
+    },
+    {
+      "image_index": 1,
+      "block_index": 28,
+      "original": "满月将临，你在追逐真相的道路上加快了脚步",
+      "corrected": "满月将临，你在追逐真相的道路上加快了脚步……",
+      "reason": "line ends six-dot ellipsis (crop); v6 6 ASCII dots -> form ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.659be0f146172f0001dba25a 1 28"
+    },
+    {
+      "image_index": 2,
+      "block_index": 38,
+      "original": "1.嗅嗅出击”：根据增益等级，出击的嗅嗅数量调整为",
+      "corrected": "1.“嗅嗅出击”：根据增益等级，出击的嗅嗅数量调整为",
+      "reason": "leading ” after 1. printed before 嗅嗅出击; v4 drops it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.659be0f146172f0001dba25a 2 38"
+    },
+    {
+      "image_index": 2,
+      "block_index": 40,
+      "original": "2.\"以身筑法”/蓄势待发”/浴血反击”/\"遇强则强”/魔咒",
+      "corrected": "2.“以身筑法”/“蓄势待发”/“浴血反击”/“遇强则强”/“魔咒",
+      "reason": "print: 2.“以身筑法”/“蓄势待发”/“浴血反击”/“遇强则强”/“魔咒 — every name wrapped in curly quotes joined by /; v4 missing several open quotes",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.659be0f146172f0001dba25a 2 40"
+    },
+    {
+      "image_index": 2,
+      "block_index": 41,
+      "original": "精修”/舍身出击”\"飞弹护身”“随身护盾”：所有等级的",
+      "corrected": "精修”/“舍身出击”/“飞弹护身”/“随身护盾”：所有等级的",
+      "reason": "print: 精修”/“舍身出击”/“飞弹护身”/“随身护盾”：所有等级的; v4 missing “ before 舍身出击 and the / separator",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.659be0f146172f0001dba25a 2 41"
     }
   ]
 }
