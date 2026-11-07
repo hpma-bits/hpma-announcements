@@ -80,6 +80,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.63987af40c8dc60001eec2dc 2 33"
+    },
+    {
+      "image_index": 2,
+      "block_index": 7,
+      "original": "巫师每日可从各玩法中累计获得至多1500张“妙缘礼券”",
+      "corrected": "巫师每日可从各玩法中累计获得至多1500张“妙缘礼券”，",
+      "reason": "crop shows line ends 1500张“妙缘礼券”， - trailing comma printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63987af40c8dc60001eec2dc 2 7"
+    },
+    {
+      "image_index": 2,
+      "block_index": 39,
+      "original": "与魔咒尖子生并获胜2次即可获得制帽专属材料",
+      "corrected": "与魔咒尖子生并获胜2次即可获得制帽专属材料——",
+      "reason": "crop shows line ends with two-em dash ——; v4 had none, v6 read only one",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63987af40c8dc60001eec2dc 2 39"
     }
   ]
 }

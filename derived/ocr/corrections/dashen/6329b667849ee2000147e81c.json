@@ -107,6 +107,76 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 1 19"
+    },
+    {
+      "image_index": 1,
+      "block_index": 20,
+      "original": "雾中，黑暗的身影正在不断靠近·.·",
+      "corrected": "雾中，黑暗的身影正在不断靠近……",
+      "reason": "crop shows 不断靠近…… - six-dot ellipsis printed at line end",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 1 20"
+    },
+    {
+      "image_index": 1,
+      "block_index": 33,
+      "original": "手”、女-发型“飒爽英姿”、床品“摆件-傻乎乎”",
+      "corrected": "手”、女-发型“飒爽英姿”、床品“摆件-傻乎乎”、",
+      "reason": "crop shows line ends 床品“摆件-傻乎乎”、 - trailing 、 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 1 33"
+    },
+    {
+      "image_index": 2,
+      "block_index": 20,
+      "original": "奖励包括：男-帽子“扭扭枝蔓”、女-帽子“点点花苞”",
+      "corrected": "奖励包括：男-帽子“扭扭枝蔓”、女-帽子“点点花苞”、",
+      "reason": "crop shows line ends 女-帽子“点点花苞”、 - trailing 、 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 2 20"
+    },
+    {
+      "image_index": 4,
+      "block_index": 36,
+      "original": "持续时间：9月21日维护后-9月26日4：59",
+      "corrected": "持续时间：9月21日维护后－9月26日4:59",
+      "reason": "crop: full-width 维护后 range dash, half-width 4:59 colon; v6 matches print",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 4 36"
+    },
+    {
+      "image_index": 5,
+      "block_index": 15,
+      "original": "购买礼包，即可获得“梳妆魔盒·时新”、“非凡卡包”",
+      "corrected": "购买礼包，即可获得“梳妆魔盒·时新”、“非凡卡包”、",
+      "reason": "crop shows line ends “非凡卡包”、 - trailing 、 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 5 15"
+    },
+    {
+      "image_index": 5,
+      "block_index": 21,
+      "original": "活动时间：9月21日维护后－9月27日23：59",
+      "corrected": "活动时间：9月21日维护后－9月27日23:59",
+      "reason": "crop shows SINGLE wide dash after 维护后 (v6 duplicated －-); time colon half-width; v4 full-width 23：59 wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 5 21"
+    },
+    {
+      "image_index": 6,
+      "block_index": 22,
+      "original": "“冰雪中心”，攻击特效不正确的问题。",
+      "corrected": "-“冰雪中心”，攻击特效不正确的问题。",
+      "reason": "crop shows line starts with - hyphen (title wrap from prev line 马人皮肤-“冰雪中心”); real leading hyphen",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 6 22"
     }
   ]
 }

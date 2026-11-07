@@ -200,6 +200,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 1 25"
+    },
+    {
+      "image_index": 1,
+      "block_index": 14,
+      "original": "“S12高布石赛季·月下高布石之影”",
+      "drop": true,
+      "reason": "与b13同行重复（y1035-1061同线双读）：源图印「“S12高布石赛季·月下高布石之影”」（带后引号、月下），b13已对上v6且入differ-p3队列（后引号与月/凡之辨在彼处处理）；b14为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 1 14"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "历史悠久的巫师游戏一高布石再度风靡霍格沃茨！",
+      "corrected": "历史悠久的巫师游戏——高布石再度风靡霍格沃茨！",
+      "reason": "真实整行，v4唯一读法把长破折号误读成「一」；源图明确印「——」（双横长破折号），v6亦读出——；应更正为全句",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 1 19"
+    },
+    {
+      "image_index": 3,
+      "block_index": 32,
+      "original": "宝石150、金币2400",
+      "drop": true,
+      "reason": "与b31同行重复（y1156-1180同线双读）：源图印「宝石*150、金币*2400。」，b31已对上v6且漏*已在punct-p3队列；b32再漏*与句号，为更残缺的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 3 32"
+    },
+    {
+      "image_index": 3,
+      "block_index": 33,
+      "original": "“帽语心愿·缝纫工坊”再次来袭！",
+      "drop": true,
+      "reason": "与b34同行重复（y1205-1231同线双读）：源图印「“帽语心愿·缝纫工坊”再次来袭！」（含·），b34已对上v6、缺·已在punct-p3队列；b33为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 3 33"
     }
   ]
 }

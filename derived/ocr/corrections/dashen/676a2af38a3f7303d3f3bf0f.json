@@ -71,6 +71,26 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 140"
+    },
+    {
+      "image_index": 1,
+      "block_index": 42,
+      "original": "2）豪华礼盒",
+      "drop": true,
+      "reason": "与b41同行重复（y2148-2175同线双读）：源图印半角括号「2)豪华礼盒」，v6亦读半角，b41正确，b42「2）」为全角误读重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 42"
+    },
+    {
+      "image_index": 1,
+      "block_index": 102,
+      "original": "匙*1！",
+      "drop": true,
+      "reason": "与b101同行重叠（y4303-4331同线双读）：源图印「匙”*1！」（全角！），b101读「匙”*1!」有引号但叹号为半角，b102漏引号；两块均残缺，保留b101，建议punct将其！改全角",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 102"
     }
   ]
 }

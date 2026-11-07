@@ -357,6 +357,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 8 20"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "05：00后开放）、面点台（1月25日05：00后开放）组合并",
+      "corrected": "05:00后开放）、面点台(1月25日05:00后开放)组合并",
+      "reason": "crop confirms vote mixed rule: first kitchen closer ）full-width (wide gap), second parenthetical (1月25日…) tight half-width both ends, half-width time colons",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 1 11"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "萝宾处提交食材，完成各种任务后可获取“福到了”",
+      "corrected": "萝宾处提交食材，完成各种任务后可获取“福到了”，",
+      "reason": "crop shows line ends 可获取“福到了”， - trailing comma printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 1 13"
+    },
+    {
+      "image_index": 2,
+      "block_index": 5,
+      "original": "总奖池数量：100.000.000宝石",
+      "corrected": "总奖池数量：100,000,000宝石",
+      "reason": "crop shows 100,000,000宝石 - commas printed as thousands separators; v4 periods wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 2 5"
+    },
+    {
+      "image_index": 2,
+      "block_index": 25,
+      "original": "（各奖品的获取规则、奖励数量与抽取概率详见概率公示",
+      "corrected": "(各奖品的获取规则、奖励数量与抽取概率详见概率公示",
+      "reason": "crop shows line-initial ( tight half-width opener (flush against 各); matches vote line-initial opener -> v6",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 2 25"
     }
   ]
 }

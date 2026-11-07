@@ -230,6 +230,86 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 3 49"
+    },
+    {
+      "image_index": 1,
+      "block_index": 10,
+      "original": "伙伴卡“阿比盖尔·格雷”。",
+      "drop": true,
+      "reason": "与b11同行重复（y1024-1048同线双读）：b11已对上v6、?误读与缺句号在punct-p4队列更正为「伙伴卡“阿比盖尔·格雷”。」；b10为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 1 10"
+    },
+    {
+      "image_index": 2,
+      "block_index": 28,
+      "original": ".也许，伴随时间推移，霍格沃茨会有不一样的改",
+      "drop": true,
+      "reason": "与b27同行重复（y1130-1156同线双读）：同句「…也许，伴随时间推移，霍格沃茨会有不一样的改」，行首省略号点数已在punct-p4于b27规整；b28为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 2 28"
+    },
+    {
+      "image_index": 2,
+      "block_index": 32,
+      "original": "马蹄匆匆，严防死守的箭天逼退所有试图进入禁林的",
+      "drop": true,
+      "reason": "与b31同行重复（y1253-1276同线双读）：源图印「严防死守的箭矢逼退…」，b31正确（v6同），b32「箭天」为形近乱码重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 2 32"
+    },
+    {
+      "image_index": 3,
+      "block_index": 48,
+      "original": "终日不归家的猫狸子",
+      "drop": true,
+      "reason": "与b47同行重叠（y1882-1908同线）：源图整行为「终日不归家的猫狸子——玛洛，这次又会在霍格莫德」（猫狸子后有长破折号——，源图可见）；b47已对上v6并入differ-p3队列（v6漏一个—，更正时注意补为——）；b48为左段重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 3 48"
+    },
+    {
+      "image_index": 4,
+      "block_index": 58,
+      "original": "全自动魔法牌“占星奇旅”版本上线！",
+      "drop": true,
+      "reason": "与b57同行重复（y2082-2108同线双读）：源图横幅行首为花纹饰线、无文字，b57行首「心」为饰线误读且未入任何队列，建议去除；b58为无「心」的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 4 58"
+    },
+    {
+      "image_index": 5,
+      "block_index": 30,
+      "original": "购买即可获得9月“闲娱课后行·1”主题史诗时装：“雾红",
+      "drop": true,
+      "reason": "与b31同行重复（y1135-1158同线双读）：放大确认源图为「闲娱课后行·I」（衬线大写字母I，非数字1），b31与v6一致正确，b30的·1为误读重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 5 30"
+    },
+    {
+      "image_index": 5,
+      "block_index": 57,
+      "original": "活动时间：2025年08月27日5：00-9月3日5：00",
+      "drop": true,
+      "reason": "与b56同行重复（y2070-2095同线双读）：b56已对上v6（注意b56首个5：00为全角误读、源图为半角5:00，未入任何队列，建议punct补正）；b57两个5：00为更残缺的重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 5 57"
+    },
+    {
+      "image_index": 5,
+      "block_index": 60,
+      "original": "“林中溪径”挑战区域更新",
+      "drop": true,
+      "reason": "与b61同行重复（y2190-2216同线双读）：源图印「“林中蹊径”挑战区域更新」（蹊，zoom已核），b61已按主会话修正表改定，b60「溪径」为误读重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 5 60"
     }
   ]
 }

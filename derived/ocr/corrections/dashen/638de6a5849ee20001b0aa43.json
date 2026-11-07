@@ -51,6 +51,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.638de6a5849ee20001b0aa43 1 21"
+    },
+    {
+      "image_index": 1,
+      "block_index": 27,
+      "original": "2月8日05：00结束",
+      "corrected": "2月8日05:00结束。",
+      "reason": "crop shows 05:00结束。 - half-width time colon and trailing 。 printed; v6 matches",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.638de6a5849ee20001b0aa43 1 27"
     }
   ]
 }

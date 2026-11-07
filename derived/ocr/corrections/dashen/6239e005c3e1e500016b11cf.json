@@ -101,6 +101,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6239e005c3e1e500016b11cf 2 30"
+    },
+    {
+      "image_index": 1,
+      "block_index": 14,
+      "original": "“MA大师赛”64强争夺战开幕】",
+      "corrected": "【“MA大师赛”64强争夺战开幕】",
+      "reason": "crop shows line starts with 【 before “MA大师赛”; real leading bracket",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6239e005c3e1e500016b11cf 1 14"
+    },
+    {
+      "image_index": 2,
+      "block_index": 9,
+      "original": "不变。同时，巫师持有的“古灵阁储值凭证”，将转换为等价值的星石。",
+      "corrected": "不变。同时，巫师持有的“古灵阁储值凭证”，将转换为等价值的星石。)",
+      "reason": "crop shows line ends 等价值的星石。） - closing paren printed after 。, tight small glyph (half-width); v6 captured it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6239e005c3e1e500016b11cf 2 9"
+    },
+    {
+      "image_index": 2,
+      "block_index": 28,
+      "original": "修复了领取活动分享奖励异常的问题",
+      "corrected": "修复了领取活动分享奖励异常的问题。",
+      "reason": "crop shows line ends 分享奖励异常的问题。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6239e005c3e1e500016b11cf 2 28"
     }
   ]
 }

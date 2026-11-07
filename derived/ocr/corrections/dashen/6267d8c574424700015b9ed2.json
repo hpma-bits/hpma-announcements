@@ -128,6 +128,66 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 30"
+    },
+    {
+      "image_index": 1,
+      "block_index": 12,
+      "original": "“花园交响曲”、传说品质魔杖“真言鉴定家·雪松木”",
+      "corrected": "“花园交响曲”、传说品质魔杖“真言鉴定家·雪松木”、",
+      "reason": "crop shows line ends “真言鉴定家·雪松木”、 - trailing 、 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 12"
+    },
+    {
+      "image_index": 1,
+      "block_index": 29,
+      "original": "购买即可获得传说品质魔咒皮肤“清水如泉·飞虹如瀑”",
+      "corrected": "购买即可获得传说品质魔咒皮肤“清水如泉·飞虹如瀑”。",
+      "reason": "crop shows line ends “清水如泉·飞虹如瀑”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 29"
+    },
+    {
+      "image_index": 1,
+      "block_index": 37,
+      "original": "全新伙伴卡“昔日重现-多比”、召唤卡“带翼弹弓”",
+      "corrected": "全新伙伴卡“昔日重现-多比”、召唤卡“带翼弹弓”、",
+      "reason": "crop shows line ends 召唤卡“带翼弹弓”、 - trailing 、 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 37"
+    },
+    {
+      "image_index": 1,
+      "block_index": 94,
+      "original": "参与摇嗅嗅的小玩法！轻轻上下晃动嗅嗅，摇出金币奖励",
+      "corrected": "参与摇嗅嗅的小玩法！轻轻上下晃动嗅嗅，摇出金币奖励，",
+      "reason": "crop shows line ends 摇出金币奖励， - trailing comma printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 94"
+    },
+    {
+      "image_index": 1,
+      "block_index": 100,
+      "original": "购买礼包，即可获得表情“月痴兽惊讶”、“梳妆魔盒”",
+      "corrected": "购买礼包，即可获得表情“月痴兽惊讶”、“梳妆魔盒”、",
+      "reason": "crop shows line ends “月痴兽惊讶”、“梳妆魔盒”、 - trailing 、 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 100"
+    },
+    {
+      "image_index": 1,
+      "block_index": 102,
+      "original": "全新妆容已投入梳妆魔盒中，快来看看吧～",
+      "corrected": "全新妆容已投入梳妆魔盒中，快来看看吧~",
+      "reason": "crop shows line ends 快来看看吧~ - small raised half-width tilde printed; v6 matches",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 102"
     }
   ]
 }

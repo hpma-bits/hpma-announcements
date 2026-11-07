@@ -170,6 +170,76 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 5 34"
+    },
+    {
+      "image_index": 2,
+      "block_index": 15,
+      "original": "回响调整",
+      "corrected": "→回响调整",
+      "reason": "crop shows arrow ornament before 回响调整; v6 read only the gap as space; printed line is arrow + text",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 2 15"
+    },
+    {
+      "image_index": 3,
+      "block_index": 32,
+      "original": "实际治疗范围的半径，随复活次数依次减少，分别为25/22.5/20.3/18.2。",
+      "corrected": "”实际治疗范围的半径，随复活次数依次减少，分别为25/22.5/20.3/18.2。",
+      "reason": "crop shows line starts with ” (continuation of “凤凰 from prev line) - real leading ”",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 3 32"
+    },
+    {
+      "image_index": 4,
+      "block_index": 1,
+      "original": "“春日绽放”赛季新礼盒】",
+      "corrected": "【“春日绽放”赛季新礼盒】",
+      "reason": "crop shows line starts with 【 before “春日绽放”; real leading bracket",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 4 1"
+    },
+    {
+      "image_index": 4,
+      "block_index": 2,
+      "original": "免费礼盒",
+      "corrected": "→免费礼盒",
+      "reason": "crop shows arrow ornament before 免费礼盒; v6 read only the gap as space; printed line is arrow + text",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 4 2"
+    },
+    {
+      "image_index": 4,
+      "block_index": 6,
+      "original": "购买即可获得史诗时装“学园优等生”",
+      "corrected": "购买即可获得史诗时装“学园优等生”。",
+      "reason": "crop shows line ends “学园优等生”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 4 6"
+    },
+    {
+      "image_index": 4,
+      "block_index": 11,
+      "original": "金缎豪华礼盒",
+      "corrected": "→金缎豪华礼盒",
+      "reason": "crop shows arrow ornament before 金缎豪华礼盒; printed line is arrow + text",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 4 11"
+    },
+    {
+      "image_index": 4,
+      "block_index": 13,
+      "original": "购买即可获得传说品质魔咒皮肤“万弹齐发·魔法通缉令”",
+      "corrected": "购买即可获得传说品质魔咒皮肤“万弹齐发·魔法通缉令”。",
+      "reason": "crop shows line ends “万弹齐发·魔法通缉令”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 4 13"
     }
   ]
 }

@@ -99,6 +99,16 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 6 36"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "“陷阱狂潮”活动即将开启！",
+      "drop": true,
+      "reason": "与b26同行重复（y1080-1106同线双读）：源图横幅为「“陷阱狂潮”活动即将开启！」，行首无逗号（b26行首「，」为左侧花纹误读，已在punct-p3队列移除）；b27为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 2 27"
     }
   ]
 }

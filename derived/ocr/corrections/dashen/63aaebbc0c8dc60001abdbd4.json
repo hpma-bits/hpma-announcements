@@ -139,6 +139,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.63aaebbc0c8dc60001abdbd4 4 24"
+    },
+    {
+      "image_index": 1,
+      "block_index": 34,
+      "original": "购买即可获得史诗时装“纯白思念”",
+      "corrected": "购买即可获得史诗时装“纯白思念”。",
+      "reason": "crop shows line ends “纯白思念”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63aaebbc0c8dc60001abdbd4 1 34"
     }
   ]
 }

@@ -62,6 +62,46 @@
       "confidence": "high",
       "via": "manual-both-engines-wrong",
       "recrop": "python -m tools.cli crop dashen.6203c405c5a325000127d995 1 6"
+    },
+    {
+      "image_index": 2,
+      "block_index": 10,
+      "original": "体验优化",
+      "corrected": "→体验优化",
+      "reason": "crop shows arrow ornament before 体验优化; real leading arrow",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6203c405c5a325000127d995 2 10"
+    },
+    {
+      "image_index": 2,
+      "block_index": 11,
+      "original": "优化了课堂兑换体验，新增可兑换道具“美丽药剂配方”",
+      "corrected": "优化了课堂兑换体验，新增可兑换道具“美丽药剂配方”。",
+      "reason": "crop shows line ends “美丽药剂配方”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6203c405c5a325000127d995 2 11"
+    },
+    {
+      "image_index": 2,
+      "block_index": 33,
+      "original": "修复了禁林战斗中，选择“专注施法”增益效果后，使用魔咒“默默然",
+      "corrected": "修复了禁林战斗中，选择“专注施法”增益效果后，使用魔咒“默默然”",
+      "reason": "crop shows line ends 使用魔咒“默默然” - closing ” printed at line end",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6203c405c5a325000127d995 2 33"
+    },
+    {
+      "image_index": 3,
+      "block_index": 1,
+      "original": "体验优化",
+      "corrected": "→体验优化",
+      "reason": "crop shows arrow ornament before 体验优化; real leading arrow",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6203c405c5a325000127d995 3 1"
     }
   ]
 }

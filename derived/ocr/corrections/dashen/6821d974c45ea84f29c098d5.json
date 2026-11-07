@@ -97,6 +97,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 1 22"
+    },
+    {
+      "image_index": 1,
+      "block_index": 16,
+      "original": "赛季时间：2025年4月30日维护后-6月25日6：00",
+      "drop": true,
+      "reason": "与b17同行重复（y1221-1245同线双读）：源图冒号为半角「6:00」，b17已对上v6（注意b17破折号读作全角－，源图为短横线-，未入任何队列，建议punct补正）；b16的6：00为全角误读重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 1 16"
     }
   ]
 }

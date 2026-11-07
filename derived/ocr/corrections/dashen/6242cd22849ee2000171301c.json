@@ -101,6 +101,116 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 3 32"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "购买即可获得史诗时装“布艺时光”",
+      "corrected": "购买即可获得史诗时装“布艺时光”。",
+      "reason": "crop shows line ends “布艺时光”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 1 19"
+    },
+    {
+      "image_index": 2,
+      "block_index": 1,
+      "original": "购买即可获得传说品质魔咒皮肤“弗雷兄弟·顽皮对决”",
+      "corrected": "购买即可获得传说品质魔咒皮肤“弗雷兄弟·顽皮对决”。",
+      "reason": "crop shows line ends “弗雷兄弟·顽皮对决”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 2 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 3,
+      "original": "“慵懒假日”时装上架】",
+      "corrected": "【“慵懒假日”时装上架】",
+      "reason": "crop shows line starts with 【 before “慵懒假日”; real leading bracket",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 2 3"
+    },
+    {
+      "image_index": 2,
+      "block_index": 11,
+      "original": "熏风送来春日的气息，复苏的季节已悄然而至·",
+      "corrected": "熏风送来春日的气息，复苏的季节已悄然而至……",
+      "reason": "crop shows line ends 悄然而至…… - six-dot ellipsis printed at line end; v4 single · wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 2 11"
+    },
+    {
+      "image_index": 2,
+      "block_index": 14,
+      "original": "落加成！《探戈：夜幕深沉》15星谱面全面优化，更有全新6星难度上线，",
+      "corrected": "落加成！《探戈:夜幕深沉》1~5星谱面全面优化，更有全新6星难度上线，",
+      "reason": "crop shows 《探戈:夜幕深沉》 half-width title colon and 1~5 half-width wave; v6 matches print",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 2 14"
+    },
+    {
+      "image_index": 2,
+      "block_index": 32,
+      "original": "“魔法奏鸣礼”限时上架】",
+      "corrected": "【“魔法奏鸣礼”限时上架】",
+      "reason": "crop shows line starts with 【 before “魔法奏鸣礼”; real leading bracket",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 2 32"
+    },
+    {
+      "image_index": 2,
+      "block_index": 33,
+      "original": "上架时间：3月30日维护后-4月16日5:00",
+      "corrected": "上架时间：3月30日维护后－4月16日5:00",
+      "reason": "crop: full-width 维护后 range dash, half-width 5:00 colon; v6 matches print",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 2 33"
+    },
+    {
+      "image_index": 3,
+      "block_index": 0,
+      "original": "巫师可在游戏内或网易云音乐App内购买“魔法奏鸣礼”，并获得限定奖励",
+      "corrected": "巫师可在游戏内或网易云音乐App内购买“魔法奏鸣礼”，并获得限定奖励，",
+      "reason": "crop shows line ends 并获得限定奖励， - trailing comma printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 3 0"
+    },
+    {
+      "image_index": 3,
+      "block_index": 4,
+      "original": "维护后，当巫师处于可邀请他人的场景时，点击主界面左下角的“邀请”",
+      "corrected": "维护后，当巫师处于可邀请他人的场景时，点击主界面左下角的“邀请”，",
+      "reason": "crop shows line ends 左下角的“邀请”， - trailing comma printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 3 4"
+    },
+    {
+      "image_index": 3,
+      "block_index": 28,
+      "original": "修复了使用隐形药水后，在禁林和课堂战斗中处于隐身状态时使用魔咒",
+      "corrected": "修复了使用隐形药水后，在禁林和课堂战斗中处于隐身状态时使用魔咒，",
+      "reason": "crop shows line ends 处于隐身状态时使用魔咒， - trailing comma printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 3 28"
+    },
+    {
+      "image_index": 3,
+      "block_index": 30,
+      "original": "未退出隐身效果的问题。同时，将隐形药水的战斗隐身持续时间调整为10秒",
+      "corrected": "未退出隐身效果的问题。同时，将隐形药水的战斗隐身持续时间调整为10秒。",
+      "reason": "crop shows line ends 持续时间调整为10秒。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 3 30"
     }
   ]
 }

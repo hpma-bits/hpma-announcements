@@ -130,6 +130,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.627a694d0c8dc6000182943d 1 59"
+    },
+    {
+      "image_index": 1,
+      "block_index": 56,
+      "original": "：多道冰轨命中同一敌人时，每道冰轨造成的伤害将以",
+      "corrected": "；多道冰轨命中同一敌人时，每道冰轨造成的伤害将以",
+      "reason": "crop shows line starts with full-width ；(continuation from prev line); v4 read ： (wrong char), v6 read half-width ; (wrong width)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.627a694d0c8dc6000182943d 1 56"
+    },
+    {
+      "image_index": 1,
+      "block_index": 127,
+      "original": "33.3% 。",
+      "corrected": "33.3%。",
+      "reason": "crop shows 33.3%。 - no space before 。; v4 inserted stray space",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.627a694d0c8dc6000182943d 1 127"
     }
   ]
 }

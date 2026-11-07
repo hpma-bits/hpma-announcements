@@ -41,6 +41,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.628cb14fc3e1e50001d2a549 1 87"
+    },
+    {
+      "image_index": 1,
+      "block_index": 53,
+      "original": "新增乐器“钢琴”",
+      "corrected": "新增乐器“钢琴”。",
+      "reason": "crop shows line ends “钢琴”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.628cb14fc3e1e50001d2a549 1 53"
+    },
+    {
+      "image_index": 1,
+      "block_index": 95,
+      "original": "地点“三把扫帚酒吧”更改为“三把扫帚”",
+      "corrected": "地点“三把扫帚酒吧”更改为“三把扫帚”。",
+      "reason": "crop shows line ends “三把扫帚”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.628cb14fc3e1e50001d2a549 1 95"
+    },
+    {
+      "image_index": 1,
+      "block_index": 103,
+      "original": "次数”更改为“决斗俱乐部中使用不可饶恕咒一定次数”",
+      "corrected": "次数”更改为“决斗俱乐部中使用不可饶恕咒一定次数”。",
+      "reason": "crop shows line ends 一定次数”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.628cb14fc3e1e50001d2a549 1 103"
     }
   ]
 }

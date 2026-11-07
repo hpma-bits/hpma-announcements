@@ -99,6 +99,26 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.67b3fba157529f558a4e05e2 6 17"
+    },
+    {
+      "image_index": 2,
+      "block_index": 26,
+      "original": "活动期间，巫师消费宝石或星石即可1：1获得积分。累",
+      "drop": true,
+      "reason": "与b25同行重复（y1051-1077同线双读）：源图印半角「1:1获得积分」，b25正确（v6亦读1:1），b26的1：1为全角误读重复",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67b3fba157529f558a4e05e2 2 26"
+    },
+    {
+      "image_index": 5,
+      "block_index": 35,
+      "original": "所有使用",
+      "drop": true,
+      "reason": "与b36同行重叠（y1265-1288右端x505-592）：b36已完整读出「15、优化了学院礼盒-每周作业的完成体验，所有使用」，b35「所有使用」为右端重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67b3fba157529f558a4e05e2 5 35"
     }
   ]
 }

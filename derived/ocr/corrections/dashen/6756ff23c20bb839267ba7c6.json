@@ -194,6 +194,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 4 60"
+    },
+    {
+      "image_index": 5,
+      "block_index": 60,
+      "original": "活动时间：2024年12月18日5:00－2024年12月25日5:00",
+      "drop": true,
+      "reason": "与b61同行重复（y2234-2257同线双读）：对齐器已将b61对上v6；源图冒号为半角5:00，b61的5：00为全角误读，建议punct补正；b60为另一重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 5 60"
     }
   ]
 }

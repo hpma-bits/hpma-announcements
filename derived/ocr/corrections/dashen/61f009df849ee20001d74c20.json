@@ -878,6 +878,166 @@
       "confidence": "high",
       "via": "manual-both-engines-wrong",
       "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 15 12"
+    },
+    {
+      "image_index": 2,
+      "block_index": 9,
+      "original": "【光辉】",
+      "corrected": "→【光辉】",
+      "reason": "crop shows line starts with decorative arrow ornament before 【光辉】; v6 captured it, v4 missed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 2 9"
+    },
+    {
+      "image_index": 2,
+      "block_index": 12,
+      "original": "【禁忌】",
+      "corrected": "→【禁忌】",
+      "reason": "crop shows arrow ornament before 【禁忌】; real leading arrow",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 2 12"
+    },
+    {
+      "image_index": 2,
+      "block_index": 17,
+      "original": "、禁忌咒语卡“默默然”",
+      "corrected": "、禁忌咒语卡“默默然”。",
+      "reason": "crop shows line ends 禁忌咒语卡“默默然”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 2 17"
+    },
+    {
+      "image_index": 3,
+      "block_index": 2,
+      "original": "灵魂纯净闪耀，禁忌的灵魂迷雾笼罩···而你又将会走向何处？",
+      "corrected": "灵魂纯净闪耀，禁忌的灵魂迷雾笼罩……而你又将会走向何处？",
+      "reason": "crop shows six-dot …… and full-width ？ at line end; v4 dot-soup and v6 half-width ? each partly wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 3 2"
+    },
+    {
+      "image_index": 4,
+      "block_index": 8,
+      "original": "【雪人飞来】",
+      "corrected": "→【雪人飞来】",
+      "reason": "crop shows arrow ornament before 【雪人飞来】; real leading arrow",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 4 8"
+    },
+    {
+      "image_index": 4,
+      "block_index": 32,
+      "original": "活动时间：1月26日维护后-2月16日5：00",
+      "corrected": "活动时间：1月26日维护后－2月16日5:00",
+      "reason": "range dash prints wide full-width em cell (dash sampling convention + this crop); 5:00 time colon half-width; v4 half-width dash and full-width 5：00 both wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 4 32"
+    },
+    {
+      "image_index": 5,
+      "block_index": 0,
+      "original": "活动时间：1月26日维护后-2月16日5:00",
+      "corrected": "活动时间：1月26日维护后－2月16日5:00",
+      "reason": "same template line as item 5 crop: full-width range dash, half-width time colon",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 5 0"
+    },
+    {
+      "image_index": 5,
+      "block_index": 8,
+      "original": "活动时间：1月26日维护后-2月16日5:00",
+      "corrected": "活动时间：1月26日维护后－2月16日5:00",
+      "reason": "same template line as item 5 crop: full-width range dash, half-width time colon",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 5 8"
+    },
+    {
+      "image_index": 6,
+      "block_index": 20,
+      "original": "球巫师觉醒赛”",
+      "corrected": "球巫师觉醒赛”。",
+      "reason": "crop shows line ends 球巫师觉醒赛”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 6 20"
+    },
+    {
+      "image_index": 9,
+      "block_index": 2,
+      "original": "55%/50%",
+      "corrected": "55%/50%。",
+      "reason": "crop shows 55%/50%。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 9 2"
+    },
+    {
+      "image_index": 14,
+      "block_index": 0,
+      "original": "购买即可获得史诗时装“午后摩卡”",
+      "corrected": "购买即可获得史诗时装“午后摩卡”。",
+      "reason": "crop shows “午后摩卡”。 at line end - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 14 0"
+    },
+    {
+      "image_index": 15,
+      "block_index": 5,
+      "original": "“巫师年度成绩单”开启】",
+      "corrected": "【“巫师年度成绩单”开启】",
+      "reason": "crop shows line starts with 【 before “巫师年度成绩单”; real leading bracket",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 15 5"
+    },
+    {
+      "image_index": 16,
+      "block_index": 15,
+      "original": "2.新增预选阵营功能，可以指定“迎战巫师”方或“挑战巫师“方进行匹配",
+      "corrected": "2.新增预选阵营功能，可以指定“迎战巫师”方或“挑战巫师“方进行匹配。",
+      "reason": "crop shows line ends 进行匹配。 - trailing 。 printed (source prints “挑战巫师“ reversed opener but both engines agree there)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 16 15"
+    },
+    {
+      "image_index": 17,
+      "block_index": 32,
+      "original": "优化舞会的结算表现，将连击结算拆分为：无懈连击（完成所有点击）",
+      "corrected": "优化舞会的结算表现，将连击结算拆分为：无懈连击（完成所有点击）、",
+      "reason": "crop shows line ends 完成所有点击）、 - trailing 、 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 17 32"
+    },
+    {
+      "image_index": 18,
+      "block_index": 2,
+      "original": "*40”调整为了“决斗勋章*40”",
+      "corrected": "*40”调整为了“决斗勋章*40”。",
+      "reason": "crop shows line ends 决斗勋章*40”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 18 2"
+    },
+    {
+      "image_index": 18,
+      "block_index": 27,
+      "original": "棋子士兵·占星”和“甜点大师·占星”",
+      "corrected": "棋子士兵·占星”和“甜点大师·占星”。",
+      "reason": "crop shows line ends 甜点大师·占星”。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 18 27"
     }
   ]
 }

@@ -203,6 +203,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 6 37"
+    },
+    {
+      "image_index": 1,
+      "block_index": 41,
+      "original": "2.传说召唤卡“厉火”",
+      "drop": true,
+      "reason": "与b40同行重复（y2129-2153同线双读）：b40已对上v6、缺后引号在punct-p5队列补正；b41为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 1 41"
+    },
+    {
+      "image_index": 2,
+      "block_index": 30,
+      "original": "有文师的新作",
+      "drop": true,
+      "reason": "与b31同行重叠（y1221-1247同线）：源图整行为「有文师的新作——快来一探究竟吧！」（长破折号——，源图可见），b31已对上v6、漏一个—在punct-p5队列补为——；b30为左段重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 2 30"
     }
   ]
 }

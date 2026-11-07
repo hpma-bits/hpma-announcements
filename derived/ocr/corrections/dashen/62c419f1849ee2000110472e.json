@@ -52,6 +52,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.62c419f1849ee2000110472e 1 20"
+    },
+    {
+      "image_index": 1,
+      "block_index": 10,
+      "original": "有些古怪.·",
+      "corrected": "有些古怪……",
+      "reason": "crop shows 有些古怪…… - six-dot ellipsis printed at line end",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62c419f1849ee2000110472e 1 10"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "的1000%",
+      "corrected": "的1000%。",
+      "reason": "crop shows 的1000%。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62c419f1849ee2000110472e 1 19"
+    },
+    {
+      "image_index": 1,
+      "block_index": 22,
+      "original": "60%",
+      "corrected": "60%。",
+      "reason": "crop shows 60%。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62c419f1849ee2000110472e 1 22"
+    },
+    {
+      "image_index": 1,
+      "block_index": 27,
+      "original": "2.修复了禁林商人事件刷新异常的问题",
+      "corrected": "2.修复了禁林商人事件刷新异常的问题。",
+      "reason": "crop shows 刷新异常的问题。 - trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62c419f1849ee2000110472e 1 27"
     }
   ]
 }
