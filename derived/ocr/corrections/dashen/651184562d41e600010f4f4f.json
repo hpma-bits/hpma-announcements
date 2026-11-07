@@ -148,6 +148,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 2 27"
+    },
+    {
+      "image_index": 1,
+      "block_index": 50,
+      "original": "邮件奖励在10月8号05：00活动结束前均可领取",
+      "corrected": "邮件奖励在10月8号05:00活动结束前均可领取",
+      "reason": "标点规则 time_colon_halfwidth（共识块补漏）：数字:数字时间冒号源图印半角（分年采样 23/23；保留块 zoom 复核佐证）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 1 50"
     }
   ]
 }

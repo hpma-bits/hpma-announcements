@@ -196,6 +196,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 2 31"
+    },
+    {
+      "image_index": 6,
+      "block_index": 34,
+      "original": "泡提示，显示其具体的烹饪方式",
+      "drop": true,
+      "reason": "与b35同行重复（y1258-1283同线双读）：b35已读出「泡提示，显示其具体的烹饪方式。」（含句号，v6同），b34漏句号为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 6 34"
     }
   ]
 }

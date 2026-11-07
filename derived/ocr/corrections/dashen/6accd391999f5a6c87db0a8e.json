@@ -181,6 +181,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6accd391999f5a6c87db0a8e 6 20"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "卡“神锋无影”",
+      "drop": true,
+      "reason": "与b10同行重复（y1023-1047同线双读）：b10已读出「卡“神锋无影”。」（含句号，v6同），b11漏句号为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6accd391999f5a6c87db0a8e 1 11"
     }
   ]
 }

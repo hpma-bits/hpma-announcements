@@ -139,6 +139,46 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.6a1432d2c5c9d625ae4f8939 5 12"
+    },
+    {
+      "image_index": 1,
+      "block_index": 12,
+      "original": "巫师累计抽取49次，仍未获得传说召唤卡“巨乌贼”",
+      "drop": true,
+      "reason": "与b11同行重复（y1059-1082同线双读）：b11已对上v6、缺后引号在punct-p5队列补正；b12为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a1432d2c5c9d625ae4f8939 1 12"
+    },
+    {
+      "image_index": 2,
+      "block_index": 29,
+      "original": "2.回响“卢娜·洛夫古德",
+      "drop": true,
+      "reason": "与b28同行重复（y1070-1094同线双读）：b28已读出「2.回响“卢娜·洛夫古德”」（含后引号，v6同），b29漏后引号为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a1432d2c5c9d625ae4f8939 2 29"
+    },
+    {
+      "image_index": 2,
+      "block_index": 32,
+      "original": "由原生物的50%上调至80%。",
+      "drop": true,
+      "reason": "与b31同行重复（y1141-1164同线双读）：b31已对上v6、缺句号在punct-p5队列补正；b32为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a1432d2c5c9d625ae4f8939 2 32"
+    },
+    {
+      "image_index": 2,
+      "block_index": 33,
+      "original": "3.回响“盖勒特·格林德沃",
+      "drop": true,
+      "reason": "与b34同行重复（y1177-1200同线双读）：b34已读出「3.回响“盖勒特·格林德沃”」（含后引号，v6同），b33漏后引号为重复切片",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a1432d2c5c9d625ae4f8939 2 33"
     }
   ]
 }
