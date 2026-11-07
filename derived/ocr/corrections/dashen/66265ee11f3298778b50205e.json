@@ -141,6 +141,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 2 23"
+    },
+    {
+      "image_index": 1,
+      "block_index": 36,
+      "original": "这本手记中还有太多的未解之谜",
+      "corrected": "然而，这本手记中还有太多的未解之谜……",
+      "reason": "seg092 crop shows the line 然而，这本手记中还有太多的未解之谜…… ending with six-dot ellipsis (v4 twin b35 wrongly ends ，; b36 is the partial twin missing 然而，and the ellipsis); rewritten to full row",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 1 36"
+    },
+    {
+      "image_index": 2,
+      "block_index": 34,
+      "original": "获取探宝次数",
+      "drop": true,
+      "reason": "seg094 crop shows printed line 方式获取探宝次数。 carried by v4 b35; b34 获取探宝次数 is a partial duplicate slice missing 方式 and 。; v6 b34 misread of the same line",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 2 34"
     }
   ]
 }

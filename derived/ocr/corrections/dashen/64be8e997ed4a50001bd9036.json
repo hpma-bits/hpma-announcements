@@ -259,6 +259,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 3 64"
+    },
+    {
+      "image_index": 2,
+      "block_index": 28,
+      "original": "10个。另外，巫师可额外购买提灯，",
+      "drop": true,
+      "reason": "seg034 crop shows line 的上限为10个。另外，巫师可额外购买“提灯”，每日 exactly carried by v4 b27; v4 b28 10个。另外，巫师可额外购买提灯， is a shifted partial re-read of the same line (lost 的上限为, quotes, 每日); v6 b28 also partial (mis-paired)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 2 28"
+    },
+    {
+      "image_index": 2,
+      "block_index": 65,
+      "original": "2v2决斗中额外救援一次队友。永久领@波特魔法觉醒",
+      "corrected": "2v2决斗中额外救援一次队友。永久限领一次",
+      "reason": "zooms d2-z69/d2-z69b: head 2v2决斗中额外救援一次队友。永 legible; tail 永久限领一次 recovered from fragments under the 大神@哈利波特魔法觉醒 watermark — 久 confirmed (v6 矢 wrong), 领 and 次 clear, 限/一 partial; v4+v6 both truncated at watermark and their @… tails are watermark OCR, not body text; any glyph after 次 unrecoverable",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 2 65"
+    },
+    {
+      "image_index": 3,
+      "block_index": 19,
+      "original": "魔法。丹尼尔在阿兹卡班与母亲的会面让他喘不安。",
+      "corrected": "魔法。丹尼尔在阿兹卡班与母亲的会面让他惴惴不安。",
+      "reason": "seg037 crop shows 让他惴惴不安 with two identical 忄-charred glyphs; v4 喘不安 dropped one char; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 3 19"
     }
   ]
 }

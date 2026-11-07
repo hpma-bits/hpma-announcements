@@ -208,6 +208,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 2 47"
+    },
+    {
+      "image_index": 1,
+      "block_index": 39,
+      "original": "开启时间：当地时间10月3日05：00",
+      "drop": true,
+      "reason": "seg055 crop shows line 开启时间：当地时间10月3日05:00 with half-width time colon, carried by v4 b38; b39 is the duplicate twin with wrong full-width 05：00; v6 b39 is the next line (mis-paired)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 1 39"
     }
   ]
 }

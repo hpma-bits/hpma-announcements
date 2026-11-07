@@ -91,6 +91,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.64d0fc2a4649d80001003ee8 1 17"
+    },
+    {
+      "image_index": 1,
+      "block_index": 45,
+      "original": "外观“识炼之火”、传说品质猫头鹰“眼镜”、传说品质",
+      "corrected": "外观“识炼之火”、传说品质猫头鹰“眼镜鸮”、传说品质",
+      "reason": "seg040 crop clearly shows owl name 眼镜鸮 with 鸮 inside the quotes; v4 b45 dropped 鸮; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64d0fc2a4649d80001003ee8 1 45"
+    },
+    {
+      "image_index": 2,
+      "block_index": 15,
+      "original": "魔力拟声吟！",
+      "corrected": "魔力拟声吟!",
+      "reason": "zoom d2-z76 shows banner 魔力拟声吟 with narrow half-width-style ! and no trailing 心 (right flourish separate); art banners genuinely print narrow !; v6 心 is flourish noise",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64d0fc2a4649d80001003ee8 2 15"
     }
   ]
 }

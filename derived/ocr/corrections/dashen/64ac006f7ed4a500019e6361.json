@@ -139,6 +139,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.64ac006f7ed4a500019e6361 3 33"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "活动持续时间内，每日参与“禁林-团队探索",
+      "drop": true,
+      "reason": "seg030 crop shows one printed line 活动持续时间内，每日参与“禁林-团队探索” double-read as v4 b18 (missing closing ”) + b19 (exact); keep b19 as carrier, b18 is the duplicate slice; v6 b18 a is garbage",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64ac006f7ed4a500019e6361 1 18"
     }
   ]
 }

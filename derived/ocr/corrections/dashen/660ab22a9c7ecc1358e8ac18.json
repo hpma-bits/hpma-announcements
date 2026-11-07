@@ -139,6 +139,76 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 1 31"
+    },
+    {
+      "image_index": 2,
+      "block_index": 57,
+      "original": "1.新增可用魔咒",
+      "corrected": "1.新增可用魔咒——飞天扫帚、云雾缥缈、骋吾、中",
+      "reason": "zoom d2-z131 shows one printed line 1.新增可用魔咒——飞天扫帚、云雾缥缈、骋吾、中 with double dash; v4 b57 head slice rewritten to full row (tail twin b58, dup full-read b59 with 一 and missing 骋, to drop); v6 paired block is the star line (mis-paired)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 57"
+    },
+    {
+      "image_index": 2,
+      "block_index": 62,
+      "original": "吼叫信。",
+      "corrected": "2.移除可用魔咒——吼叫信。",
+      "reason": "seg090 crop shows one printed line 2.移除可用魔咒——吼叫信。 with double dash; v4 b62 tail slice rewritten to full row, head twin b63 to drop",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 62"
+    },
+    {
+      "image_index": 2,
+      "block_index": 63,
+      "original": "2.移除可用魔咒",
+      "drop": true,
+      "reason": "seg090 crop shows one printed line 2.移除可用魔咒——吼叫信。; correction carried at v4 b62; b63 2.移除可用魔咒 is the head slice duplicate",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 63"
+    },
+    {
+      "image_index": 2,
+      "block_index": 64,
+      "original": "3.“欺诈师”",
+      "drop": true,
+      "reason": "seg090 crop shows one printed line 3.“欺诈师”——隐身状态的持续时间由3秒降低至2.5秒。; correction carried at v4 b66 (tail slice, item 136); b64 3.“欺诈师” is the head slice duplicate",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 64"
+    },
+    {
+      "image_index": 2,
+      "block_index": 65,
+      "original": "3.“欺诈师”—",
+      "drop": true,
+      "reason": "seg090 crop shows one printed line 3.“欺诈师”——隐身状态的持续时间由3秒降低至2.5秒。; correction carried at v4 b66; b65 3.“欺诈师”— is a partial head re-read duplicate",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 65"
+    },
+    {
+      "image_index": 2,
+      "block_index": 66,
+      "original": "隐身状态的持续时间由3秒降低至2.5秒。",
+      "corrected": "3.“欺诈师”——隐身状态的持续时间由3秒降低至2.5秒。",
+      "reason": "seg090 crop shows one printed line 3.“欺诈师”——隐身状态的持续时间由3秒降低至2.5秒。 with double dash; v4 b66 tail slice rewritten to full row; head twins b64/b65 dropped",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 66"
+    },
+    {
+      "image_index": 2,
+      "block_index": 70,
+      "original": "额外施法的概率由50%提高至65%。",
+      "corrected": "5.“秘术家”——额外施法的概率由50%提高至65%。",
+      "reason": "seg091 crop shows one printed line 5.“秘术家”——额外施法的概率由50%提高至65%。 with double dash; v4 b70 tail slice rewritten to full row (head twin b69 5.“秘术家” to drop); v6 paired block is the next line (mis-paired)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 70"
     }
   ]
 }

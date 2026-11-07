@@ -31,6 +31,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.64871caf05953f000161c9be 1 20"
+    },
+    {
+      "image_index": 1,
+      "block_index": 8,
+      "original": "”、传说品质家具“旧居与回忆”。抽中所有大",
+      "corrected": "鸮”、传说品质家具“旧居与回忆”。抽中所有大",
+      "reason": "seg014 crop shows line 2 beginning 鸮”、 (name 小鹰鸮 wraps from line 1 ending “小鹰); v4 b8 dropped the leading 鸮; v6 b7 caught it; rest matches print",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64871caf05953f000161c9be 1 8"
     }
   ]
 }
