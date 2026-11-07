@@ -55,6 +55,18 @@ _Avoid_: preferred、dedupe
 NGA 帖是对官方公告的社区转载，不是官方原文。Edition 用 `source: "nga"` 和 `source_author_uid` 标明。
 _Avoid_: original、official text
 
+**Audit**：
+用第二个引擎（v6）独立重读全部图片，与 v4 记录逐块对齐、差异逐条核图的审校过程；每块最终状态（consensus / corrected / adjudicated / punct_rule / record / source_issue / watermark / dropped）记在 `derived/audit/dashen/`。质量门是 `queued == 0`。
+_Avoid_: 二次 OCR、recheck
+
+**Insert**：
+Correction 的一种：`insert: true` + `after_block` + `text`，记录引擎整行漏识、经 v6 审计与 crop 核验的印刷行；Edition 把它插在锚点块之后。不是派生数据。
+_Avoid_: 补行、append
+
+**Dataset**：
+面向网站投影的 JSONL：每篇一条，含 canonical、全文、分图行与 audit 质量摘要。派生数据，由 `python -m tools.cli dataset` 生成。
+_Avoid_: API、export
+
 **Watermark**：
 平台给 Dashen 长图打的「大神@哈利波特魔法觉醒」。它不是公告内容，Edition 里整块丢弃，混在正文行尾的截掉。
 _Avoid_: logo、角标
