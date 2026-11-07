@@ -168,6 +168,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 4 33"
+    },
+    {
+      "image_index": 3,
+      "block_index": 15,
+      "original": "优秀的草药学家才能拥有优质的食材！“龙舌兰香草”",
+      "corrected": "优秀的草药学家才能拥有优质的食材！“龙舌兰香草”、",
+      "reason": "wrap 、 at line end after 香草” is printed; v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 3 15"
+    },
+    {
+      "image_index": 3,
+      "block_index": 37,
+      "original": "发放哈利波特的回响。",
+      "corrected": "发放哈利·波特的回响。",
+      "reason": "interpunct · between 哈利 and 波特 is printed; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 3 37"
+    },
+    {
+      "image_index": 4,
+      "block_index": 34,
+      "original": "购买即可获得传说品质帽子“红色格韵”",
+      "corrected": "购买即可获得传说品质帽子“红色格韵”。",
+      "reason": "crop shows 。 after 格韵” at line end; v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 4 34"
+    },
+    {
+      "image_index": 6,
+      "block_index": 1,
+      "original": "1.增加了时装“午夜魅影”配套发型“午夜爵士”午夜格雷”",
+      "corrected": "1.增加了时装“午夜魅影”配套发型“午夜爵士”“午夜格雷”",
+      "reason": "zoom shows ”“ pair between 午夜爵士 and 午夜格雷; v4 dropped the opening “",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 6 1"
     }
   ]
 }

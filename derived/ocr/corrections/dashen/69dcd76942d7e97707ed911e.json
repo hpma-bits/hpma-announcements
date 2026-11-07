@@ -146,6 +146,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 2 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 4,
+      "original": "的死亡.....风雪之下，何为谎言，何为真相？",
+      "corrected": "的死亡……风雪之下，何为谎言，何为真相？",
+      "reason": "zoom blob count: 6 mid-line dots after 死亡; trailing ？ full-width (same story template as item 36); v4 5 dots, v6 garbled .…………. + half-width ?",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 2 4"
+    },
+    {
+      "image_index": 2,
+      "block_index": 7,
+      "original": "时针倒转，剧情回到前点",
+      "corrected": "时针倒转，剧情回到前点……",
+      "reason": "zoom blob count: 6 dots line-end after 前点 (last dot clipped at crop edge); v4 missed the run, v6 6 ASCII dots -> form ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 2 7"
+    },
+    {
+      "image_index": 2,
+      "block_index": 21,
+      "original": "18:00-22:00",
+      "corrected": "18:00－22:00",
+      "reason": "pixel measure: dash advance = 2× digit advance with centered short ink (bearings 31/31 = full-width cell), same glyph as the 活动时间 range dash ruled － in p1/p3; v6's space is bearing bleed, v4 half-width - wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 2 21"
     }
   ]
 }

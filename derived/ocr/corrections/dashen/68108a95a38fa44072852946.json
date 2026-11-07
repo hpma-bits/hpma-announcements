@@ -257,6 +257,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 3 4"
+    },
+    {
+      "image_index": 4,
+      "block_index": 52,
+      "original": "购买即可获得史诗时装“花行春日”",
+      "corrected": "购买即可获得史诗时装“花行春日”。",
+      "reason": "crop shows full-width 。 after closing quote; v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 4 52"
+    },
+    {
+      "image_index": 4,
+      "block_index": 61,
+      "original": "购买即可获得传说品质背包“森之信使”",
+      "corrected": "购买即可获得传说品质背包“森之信使”。",
+      "reason": "crop shows 。 after “森之信使”; v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 4 61"
+    },
+    {
+      "image_index": 6,
+      "block_index": 18,
+      "original": "7.决斗俱乐部-精彩对决”中新增了数据统计与举报功",
+      "corrected": "7.“决斗俱乐部-精彩对决”中新增了数据统计与举报功",
+      "reason": "crop shows opening “ after 7. and closing ” after 对决; v4 missed both",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 6 18"
     }
   ]
 }

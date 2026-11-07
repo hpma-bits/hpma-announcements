@@ -132,6 +132,36 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.694932c83352477c953c293e 3 33"
+    },
+    {
+      "image_index": 2,
+      "block_index": 7,
+      "original": "方，罪恶悄然滋长.",
+      "corrected": "方，罪恶悄然滋长……",
+      "reason": "six-dot ellipsis 「……」 after 滋长 at line end",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.694932c83352477c953c293e 2 7"
+    },
+    {
+      "image_index": 2,
+      "block_index": 11,
+      "original": "一个了解龙守仁动向的人..",
+      "corrected": "一个了解龙守仁动向的人……",
+      "reason": "six-dot ellipsis 「……」 after 人; v6 matches source exactly",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.694932c83352477c953c293e 2 11"
+    },
+    {
+      "image_index": 2,
+      "block_index": 16,
+      "original": "..这对于巫师来说可是新鲜事！",
+      "corrected": "……这对于巫师来说可是新鲜事！",
+      "reason": "leading six-dot ellipsis 「……」 at line start printed; v4 2 dots, v6 5 dots",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.694932c83352477c953c293e 2 16"
     }
   ]
 }

@@ -108,6 +108,46 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.68ff6023211aee1690c3c05c 3 12"
+    },
+    {
+      "image_index": 2,
+      "block_index": 5,
+      "original": "最不愿面对的恐惧...",
+      "corrected": "最不愿面对的恐惧……",
+      "reason": "six-dot ellipsis 「……」 after 恐惧 at line end",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68ff6023211aee1690c3c05c 2 5"
+    },
+    {
+      "image_index": 2,
+      "block_index": 10,
+      "original": "名字，而每一次呼唤.…都没有人回应。",
+      "corrected": "名字，而每一次呼唤……都没有人回应。",
+      "reason": "mid-line six-dot ellipsis 「……」 after 呼唤; both engines garbled; trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68ff6023211aee1690c3c05c 2 10"
+    },
+    {
+      "image_index": 2,
+      "block_index": 15,
+      "original": "洛蒂有个主意，希望这个魔咒能够奏效.....",
+      "corrected": "洛蒂有个主意，希望这个魔咒能够奏效……",
+      "reason": "six-dot ellipsis 「……」 after 奏效 at line end",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68ff6023211aee1690c3c05c 2 15"
+    },
+    {
+      "image_index": 2,
+      "block_index": 22,
+      "original": "浓重的万圣氛围感染，变成了可怖的模样..",
+      "corrected": "浓重的万圣氛围感染，变成了可怖的模样……",
+      "reason": "six-dot ellipsis 「……」 after 模样 at line end",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68ff6023211aee1690c3c05c 2 22"
     }
   ]
 }

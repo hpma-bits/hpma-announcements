@@ -310,6 +310,76 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 5 60"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "伙伴卡“阿比盖尔?格雷”",
+      "corrected": "伙伴卡“阿比盖尔·格雷”。",
+      "reason": "interpunct · in 阿比盖尔·格雷 and trailing 。 both printed; v4 read ? and dropped 。",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 1 11"
+    },
+    {
+      "image_index": 2,
+      "block_index": 20,
+      "original": "，用于兑换头像框“解读星辰”、头像“艾斯黛拉的凝视”",
+      "corrected": "，用于兑换头像框“解读星辰”、头像“艾斯黛拉的凝视”、",
+      "reason": "line starts with wrap ， and ends with wrap 、; both printed; v4 dropped both",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 2 20"
+    },
+    {
+      "image_index": 2,
+      "block_index": 21,
+      "original": "帽子“檐上来客”、表情包“冥想中.....”等各种奖励！",
+      "corrected": "帽子“檐上来客”、表情包“冥想中……”等各种奖励！",
+      "reason": "in-quote ellipsis six dots 「……」; final ！ full-width; both engines garbled",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 2 21"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "...也许，伴随时间推移，霍格沃茨会有不一样的改",
+      "corrected": "……也许，伴随时间推移，霍格沃茨会有不一样的改",
+      "reason": "leading six-dot ellipsis 「……」 at line start printed; v4 3 dots, v6 garbled",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 2 27"
+    },
+    {
+      "image_index": 3,
+      "block_index": 77,
+      "original": "本期“永恒绽放礼”中包含全新动态瞳孔贴花“心花怒放”",
+      "corrected": "本期“永恒绽放礼”中包含全新动态瞳孔贴花“心花怒放”、",
+      "reason": "wrap 、 after 怒放” at line end is printed; v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 3 77"
+    },
+    {
+      "image_index": 5,
+      "block_index": 21,
+      "original": "购买“情牵流光”礼包，将可获得野餐垫“甜夜星光垫”",
+      "corrected": "购买“情牵流光”礼包，将可获得野餐垫“甜夜星光垫”、",
+      "reason": "wrap 、 after 星光垫” at line end is printed; v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 5 21"
+    },
+    {
+      "image_index": 5,
+      "block_index": 22,
+      "original": "“焰色之锁”5、“幸运发条”*5。",
+      "corrected": "“焰色之锁”*5、“幸运发条”*5。",
+      "reason": "crop shows ”*5 for both items (star between quote and 5); v4 dropped first *, v6 matches source",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68a324fd708b00579b94d65e 5 22"
     }
   ]
 }

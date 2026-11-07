@@ -116,6 +116,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 3 24"
+    },
+    {
+      "image_index": 1,
+      "block_index": 17,
+      "original": "上架“摩金夫人长袍专卖店”",
+      "corrected": "上架“摩金夫人长袍专卖店”。",
+      "reason": "crop: trailing 。 printed at line end; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 1 17"
+    },
+    {
+      "image_index": 2,
+      "block_index": 5,
+      "original": "去，她比赛一定会赢..",
+      "corrected": "去，她比赛一定会赢……",
+      "reason": "zoom: 6 dots line-end after 赢 (same story)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 2 5"
+    },
+    {
+      "image_index": 2,
+      "block_index": 11,
+      "original": "乎也揪住了你的心，你忍不住想要倾听更多.....",
+      "corrected": "乎也揪住了你的心，你忍不住想要倾听更多……",
+      "reason": "zoom: 6 dots line-end after 更多 (v4 5 dots, v6 6 ASCII dots -> form ……)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 2 11"
     }
   ]
 }

@@ -187,6 +187,96 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6a5dec5320356f5d979a9408 2 30"
+    },
+    {
+      "image_index": 1,
+      "block_index": 10,
+      "original": "巫师累计抽取49次，仍未获得传说伙伴卡“龙守仁",
+      "corrected": "巫师累计抽取49次，仍未获得传说伙伴卡“龙守仁”",
+      "reason": "crop: closing ” after 龙守仁 printed at line end; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a5dec5320356f5d979a9408 1 10"
+    },
+    {
+      "image_index": 2,
+      "block_index": 8,
+      "original": "低20%",
+      "corrected": "低20%。",
+      "reason": "crop: table cell prints trailing 。 after 20%",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a5dec5320356f5d979a9408 2 8"
+    },
+    {
+      "image_index": 2,
+      "block_index": 12,
+      "original": "60%",
+      "corrected": "60%。",
+      "reason": "crop: table cell prints trailing 。 after 60%",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a5dec5320356f5d979a9408 2 12"
+    },
+    {
+      "image_index": 2,
+      "block_index": 19,
+      "original": "魔力值以获得“精炼咒语”降低至1点。",
+      "corrected": "魔力值以获得“精炼咒语”””降低至1点。",
+      "reason": "zoom p5-121-marks: THREE closing ” marks printed after 语 (three uniform 26px tick-pairs at top height); opener “ before 精; v4 got 1 closer, v6 got 2 - source itself prints three",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a5dec5320356f5d979a9408 2 19"
+    },
+    {
+      "image_index": 2,
+      "block_index": 25,
+      "original": "语卡的永久伤害提升从25%/30%调整至20%/25%",
+      "corrected": "语卡的永久伤害提升从25%/30%调整至20%/25%。",
+      "reason": "crop: trailing 。 printed after 25%; v4 missed it; slashes half-width both agree",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a5dec5320356f5d979a9408 2 25"
+    },
+    {
+      "image_index": 2,
+      "block_index": 31,
+      "original": "倘若殷红汁液，仍于你脉中激荡，",
+      "corrected": "“倘若殷红汁液，仍于你脉中激荡，",
+      "reason": "crop: wrapped line starts with printed opener “ before 倘若; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a5dec5320356f5d979a9408 2 31"
+    },
+    {
+      "image_index": 3,
+      "block_index": 3,
+      "original": "信件如雪片般飞来，这是否预示着....争斗将至？",
+      "corrected": "信件如雪片般飞来，这是否预示着……争斗将至？",
+      "reason": "zoom blob count: 6 mid-line dots; tail ？ full-width in sub-crop; v6 half-width ? wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a5dec5320356f5d979a9408 3 3"
+    },
+    {
+      "image_index": 5,
+      "block_index": 22,
+      "original": "稀有“巨螺壳收藏罐”2！",
+      "corrected": "稀有“巨螺壳收藏罐”*2！",
+      "reason": "crop: quantity star * printed before 2 (v6-only star real); trailing ！ full-width (v6 half-width ! wrong)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a5dec5320356f5d979a9408 5 22"
+    },
+    {
+      "image_index": 5,
+      "block_index": 33,
+      "original": "完成任务，达成对应等级可获得传说品质眼影“蝉夏”",
+      "corrected": "完成任务，达成对应等级可获得传说品质眼影“蝉夏”、",
+      "reason": "crop: trailing 、 printed at line end after ”蝉夏“; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a5dec5320356f5d979a9408 5 33"
     }
   ]
 }
