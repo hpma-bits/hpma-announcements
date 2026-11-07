@@ -429,6 +429,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 5 14"
+    },
+    {
+      "image_index": 2,
+      "block_index": 26,
+      "original": "“魔咒研习赛”活动开启】",
+      "corrected": "【“魔咒研习赛”活动开启】",
+      "reason": "漏字“【”；源图标题为【“魔咒研习赛”活动开启】（双引擎均漏，人工核验 crop）",
+      "confidence": "high",
+      "via": "manual-both-engines-wrong",
+      "recrop": "python -m tools.cli crop dashen.624db09dc3e1e5000113768a 2 26"
     }
   ]
 }
