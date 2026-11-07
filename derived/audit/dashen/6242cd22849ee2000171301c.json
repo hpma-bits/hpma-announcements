@@ -21,7 +21,7 @@
     {
       "block_index": 3,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "8e86ea4cee37ba38"
     },
     {
@@ -111,13 +111,13 @@
     {
       "block_index": 18,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "67b2c35294b3a9fb"
     },
     {
       "block_index": 19,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "72facd17ce70f203"
     },
     {
@@ -165,7 +165,7 @@
     {
       "block_index": 1,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f99fb329a0c8a105"
     },
     {
@@ -177,7 +177,7 @@
     {
       "block_index": 3,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "766d61b9d9aa3c64"
     },
     {
@@ -225,7 +225,7 @@
     {
       "block_index": 11,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f0a807ab2a7fb3ab"
     },
     {
@@ -243,7 +243,7 @@
     {
       "block_index": 14,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "af0f6d2e30d7ac05"
     },
     {
@@ -333,13 +333,13 @@
     {
       "block_index": 29,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "0e21ae746244d41f"
     },
     {
       "block_index": 30,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "38397e150a52ccac"
     },
     {
@@ -351,13 +351,13 @@
     {
       "block_index": 32,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "9a599313e08be661"
     },
     {
       "block_index": 33,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "03e46f48ff3c795d"
     },
     {
@@ -375,7 +375,7 @@
     {
       "block_index": 0,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "a107f7b00cbcec55"
     },
     {
@@ -399,7 +399,7 @@
     {
       "block_index": 4,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "8f50a9a6e37fa674"
     },
     {
@@ -543,37 +543,37 @@
     {
       "block_index": 28,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "744a38ca60cec42b"
     },
     {
       "block_index": 29,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "13e42b7090f24505"
     },
     {
       "block_index": 30,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "183f226d99b2f4ae"
     },
     {
       "block_index": 31,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e7b0c01604266fd8"
     },
     {
       "block_index": 32,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "45ec3865de5090f3"
     },
     {
       "block_index": 33,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "9d1de19818e99a11"
     },
     {
@@ -584,10 +584,11 @@
     }
   ],
   "counts": {
-    "consensus": 82,
-    "corrected": 2,
+    "adjudicated": 11,
+    "consensus": 67,
+    "corrected": 13,
+    "dropped": 4,
     "punct_rule": 4,
-    "queued": 9,
     "watermark": 5
   },
   "engine_audit": {
@@ -605,34 +606,47 @@
     "version": "1.4.4"
   },
   "id": "dashen.6242cd22849ee2000171301c",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "里女文州",
       "v6_block": 4
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "LL",
       "v6_block": 5
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "一 豪华礼盒",
       "v6_block": 21
     },
     {
+      "image_index": 2,
+      "status": "adjudicated",
+      "text": "“非凡卡包”*1!根据活动页规则，写下你与神奇动物的精彩故事，更有机",
+      "v6_block": 29
+    },
+    {
+      "image_index": 2,
+      "status": "adjudicated",
+      "text": "合领取《神奇动物：邓布利多之谜》电影票笔惊喜好礼！",
+      "v6_block": 30
+    },
+    {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "A W A K E N E D",
       "v6_block": 30
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "POTTER",
       "v6_block": 33
     }

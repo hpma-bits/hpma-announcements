@@ -87,7 +87,7 @@
     {
       "block_index": 14,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "88da5240bc47edca"
     },
     {
@@ -195,7 +195,7 @@
     {
       "block_index": 15,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "c6a1aedc3eecfa0c"
     },
     {
@@ -267,7 +267,7 @@
     {
       "block_index": 2,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "766a3852101d5b79"
     },
     {
@@ -279,7 +279,7 @@
     {
       "block_index": 4,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "6d6ebc00d5406839"
     },
     {
@@ -327,7 +327,7 @@
     {
       "block_index": 12,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5d8e953d8593d64a"
     },
     {
@@ -339,7 +339,7 @@
     {
       "block_index": 14,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "ced870f7d7797596"
     },
     {
@@ -519,7 +519,7 @@
     {
       "block_index": 14,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "5da896aa95586419"
     },
     {
@@ -596,10 +596,10 @@
     }
   ],
   "counts": {
-    "consensus": 84,
-    "corrected": 4,
+    "adjudicated": 2,
+    "consensus": 79,
+    "corrected": 9,
     "punct_rule": 5,
-    "queued": 2,
     "watermark": 4
   },
   "engine_audit": {
@@ -617,5 +617,6 @@
     "version": "1.4.4"
   },
   "id": "dashen.6adf31ceee0069337849bde8",
+  "inserts": [],
   "v6_only": []
 }

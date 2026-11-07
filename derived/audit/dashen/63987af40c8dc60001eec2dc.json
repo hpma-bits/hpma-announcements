@@ -117,7 +117,7 @@
     {
       "block_index": 19,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "895d268d4f358992"
     },
     {
@@ -201,7 +201,7 @@
     {
       "block_index": 0,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b5db16a7c3cd11a9"
     },
     {
@@ -243,7 +243,7 @@
     {
       "block_index": 7,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "0027b063db002cb2"
     },
     {
@@ -303,7 +303,7 @@
     {
       "block_index": 17,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "1507b4db80584a3c"
     },
     {
@@ -393,13 +393,13 @@
     {
       "block_index": 32,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "37b2c8d840b796fd"
     },
     {
       "block_index": 33,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "ef9b5d70b496a9eb"
     },
     {
@@ -435,7 +435,7 @@
     {
       "block_index": 39,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "92afeded84e5e53e"
     },
     {
@@ -453,7 +453,7 @@
     {
       "block_index": 0,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "9ce36c82c641dab3"
     },
     {
@@ -620,10 +620,11 @@
     }
   ],
   "counts": {
-    "consensus": 92,
+    "adjudicated": 7,
+    "consensus": 86,
+    "corrected": 4,
     "dropped": 1,
     "punct_rule": 4,
-    "queued": 5,
     "watermark": 4
   },
   "engine_audit": {
@@ -641,22 +642,23 @@
     "version": "1.4.4"
   },
   "id": "dashen.63987af40c8dc60001eec2dc",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 1
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 19
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 1
     }

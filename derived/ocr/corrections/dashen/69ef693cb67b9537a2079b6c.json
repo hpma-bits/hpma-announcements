@@ -276,6 +276,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 4 12"
+    },
+    {
+      "image_index": 4,
+      "block_index": 56,
+      "original": "甜享初夏时光！快来设计属于自己的",
+      "corrected": "许下帽语心愿，甜享初夏时光！快来设计属于自己的",
+      "reason": "v4 切行错序（b57 许下帽语心愿，舌）；本块承载整行",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 4 56"
+    },
+    {
+      "image_index": 4,
+      "block_index": 57,
+      "original": "许下帽语心愿，舌",
+      "drop": true,
+      "reason": "重复切片；整行由 b56 承载（许下帽语心愿，甜享初夏时光！…）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 4 57"
     }
   ]
 }

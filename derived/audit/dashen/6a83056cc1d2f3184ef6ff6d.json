@@ -27,7 +27,7 @@
     {
       "block_index": 4,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "b5ebfdbf462193aa"
     },
     {
@@ -39,7 +39,7 @@
     {
       "block_index": 6,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "896ac3c3e61a6e61"
     },
     {
@@ -63,13 +63,13 @@
     {
       "block_index": 10,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "c99243a21bc85d1d"
     },
     {
       "block_index": 11,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "78dd485be10328c3"
     },
     {
@@ -111,7 +111,7 @@
     {
       "block_index": 18,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "9ef1c9c884c4b2d0"
     },
     {
@@ -135,7 +135,7 @@
     {
       "block_index": 22,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "458c70fc869a01b6"
     },
     {
@@ -285,7 +285,7 @@
     {
       "block_index": 14,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "ed37e26c1b9ec168"
     },
     {
@@ -315,7 +315,7 @@
     {
       "block_index": 19,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "18bbffcc8a3ca15d"
     },
     {
@@ -423,7 +423,7 @@
     {
       "block_index": 37,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "5232b3517be5a4f6"
     },
     {
@@ -453,7 +453,7 @@
     {
       "block_index": 0,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5a5eb352a84e4aff"
     },
     {
@@ -495,13 +495,13 @@
     {
       "block_index": 7,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "2ded5924feca70f4"
     },
     {
       "block_index": 8,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "36b594b3bf9b875c"
     },
     {
@@ -531,7 +531,7 @@
     {
       "block_index": 13,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "c366d38484d5dc48"
     },
     {
@@ -645,7 +645,7 @@
     {
       "block_index": 32,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "bcb15e81127571a4"
     },
     {
@@ -699,7 +699,7 @@
     {
       "block_index": 41,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "190a010173ec776d"
     },
     {
@@ -765,7 +765,7 @@
     {
       "block_index": 0,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "0698e94c7acde787"
     },
     {
@@ -885,7 +885,7 @@
     {
       "block_index": 20,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "72aadc4027a435ba"
     },
     {
@@ -933,7 +933,7 @@
     {
       "block_index": 28,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b6d639b9c7006c8e"
     },
     {
@@ -1233,7 +1233,7 @@
     {
       "block_index": 23,
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "b2fae77e9de1d297"
     },
     {
@@ -1245,7 +1245,7 @@
     {
       "block_index": 25,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "766a3852101d5b79"
     },
     {
@@ -1257,7 +1257,7 @@
     {
       "block_index": 27,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "6d6ebc00d5406839"
     },
     {
@@ -1311,7 +1311,7 @@
     {
       "block_index": 36,
       "image_index": 5,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "f8d23bce17bb7184"
     },
     {
@@ -1323,7 +1323,7 @@
     {
       "block_index": 38,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5d8e953d8593d64a"
     },
     {
@@ -1335,7 +1335,7 @@
     {
       "block_index": 40,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "6ac602d7191ada5e"
     },
     {
@@ -1635,7 +1635,7 @@
     {
       "block_index": 32,
       "image_index": 6,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "9b6cd3afbf49b83f"
     },
     {
@@ -1712,10 +1712,11 @@
     }
   ],
   "counts": {
-    "consensus": 245,
-    "corrected": 14,
+    "adjudicated": 17,
+    "consensus": 229,
+    "corrected": 27,
+    "dropped": 4,
     "punct_rule": 12,
-    "queued": 18,
     "watermark": 5
   },
   "engine_audit": {
@@ -1733,60 +1734,61 @@
     "version": "1.4.4"
   },
   "id": "dashen.6a83056cc1d2f3184ef6ff6d",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
-      "text": "青枝弈趣",
-      "v6_block": 3
-    },
-    {
-      "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "法通绿合”作为奖励",
       "v6_block": 17
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 26
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "维红华章",
       "v6_block": 29
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 31
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "ss",
       "v6_block": 32
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "*“翡冷翠之夜·主题舞会”活动开启！",
       "v6_block": 32
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "踏着瀚湖的波光滑入無池，在宛如冷翠的渊镜之",
       "v6_block": 35
     },
     {
       "image_index": 6,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "一“林中蹊径”挑战区域更新",
       "v6_block": 27
+    },
+    {
+      "image_index": 6,
+      "status": "adjudicated",
+      "text": "1.开心宝石奈变调整：",
+      "v6_block": 33
     }
   ]
 }

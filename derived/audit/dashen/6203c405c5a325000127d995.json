@@ -33,13 +33,13 @@
     {
       "block_index": 5,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "1b45b075672fa937"
     },
     {
       "block_index": 6,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "9bfc1b624ec220d0"
     },
     {
@@ -123,7 +123,7 @@
     {
       "block_index": 20,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "338bca657fa58241"
     },
     {
@@ -177,7 +177,7 @@
     {
       "block_index": 2,
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "5697dc6dd16c17d4"
     },
     {
@@ -225,13 +225,13 @@
     {
       "block_index": 10,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "fd2a20fc76741d37"
     },
     {
       "block_index": 11,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "a8aef112a11dd82a"
     },
     {
@@ -255,7 +255,7 @@
     {
       "block_index": 15,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b47044cf1f6c856c"
     },
     {
@@ -351,19 +351,19 @@
     {
       "block_index": 31,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "0fe0663e833b33d5"
     },
     {
       "block_index": 32,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e665dbefc280c4ef"
     },
     {
       "block_index": 33,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "fff0529cb238f067"
     },
     {
@@ -387,7 +387,7 @@
     {
       "block_index": 1,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "fd2a20fc76741d37"
     },
     {
@@ -507,7 +507,7 @@
     {
       "block_index": 21,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "c788b53672b92305"
     },
     {
@@ -530,10 +530,11 @@
     }
   ],
   "counts": {
-    "consensus": 77,
-    "corrected": 1,
+    "adjudicated": 12,
+    "consensus": 68,
+    "corrected": 6,
+    "dropped": 2,
     "punct_rule": 2,
-    "queued": 9,
     "watermark": 5
   },
   "engine_audit": {
@@ -551,40 +552,47 @@
     "version": "1.4.4"
   },
   "id": "dashen.6203c405c5a325000127d995",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "HL",
       "v6_block": 4
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "3份梳妆魔盒！",
       "v6_block": 21
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "亚师在参加自定以宝问双人模式宽惠时",
       "v6_block": 15
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "优化子自宗以房问的休验",
       "v6_block": 16
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "现在",
       "v6_block": 17
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
+      "text": "修复了部分情况下",
+      "v6_block": 34
+    },
+    {
+      "image_index": 2,
+      "status": "adjudicated",
       "text": "社团排行榜界面音效缺先的问题",
       "v6_block": 35
     }

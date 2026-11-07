@@ -105,7 +105,7 @@
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "a80f5593c7781cfd"
     },
     {
@@ -135,7 +135,7 @@
     {
       "block_index": 22,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "dc11fbf244c8146c"
     },
     {
@@ -165,7 +165,7 @@
     {
       "block_index": 27,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "63860fed99b48964"
     },
     {
@@ -225,7 +225,7 @@
     {
       "block_index": 37,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "90c00ed0036bad3e"
     },
     {
@@ -255,7 +255,7 @@
     {
       "block_index": 42,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "a359a0965ad56894"
     },
     {
@@ -380,10 +380,10 @@
     }
   ],
   "counts": {
-    "consensus": 59,
-    "corrected": 1,
+    "adjudicated": 9,
+    "consensus": 54,
+    "corrected": 3,
     "punct_rule": 1,
-    "queued": 6,
     "watermark": 2
   },
   "engine_audit": {
@@ -401,40 +401,41 @@
     "version": "1.4.4"
   },
   "id": "dashen.661d286a2c1642202ff65c7a",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 6
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 15
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "等奖励！",
       "v6_block": 40
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 42
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2",
       "v6_block": 43
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "同时也修改了一部分与主线剧情关联的克线任条接取",
       "v6_block": 47
     }

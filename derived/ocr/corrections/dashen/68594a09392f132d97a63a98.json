@@ -312,6 +312,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 5 47"
+    },
+    {
+      "image_index": 2,
+      "block_index": 41,
+      "original": "摇摆持续时间缩短至7.5秒，吸引1小蝎尾兽的时间缩短",
+      "corrected": "摇摆持续时间缩短至7.5秒，吸引小蝎尾兽的时间缩短",
+      "reason": "d3-comp20 #52 crop: no digit between 吸引 and 小蝎尾兽; v4 spurious 1; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 2 41"
+    },
+    {
+      "image_index": 4,
+      "block_index": 42,
+      "original": "—“教",
+      "corrected": "最终，全球“助力彩球”总数最高的教授将成为——“教",
+      "reason": "d3-comp21 #55 crop: two-em —— printed between 成为 and “教; v4 b42 is the fragment —“教 of the double-read pair, rewritten to full row; v6 missed ——",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 4 42"
+    },
+    {
+      "image_index": 5,
+      "block_index": 29,
+      "original": "新增“S”、“SS\"、“SSS\"",
+      "corrected": "新增“S”、“SS”、“SSS”。",
+      "reason": "d3-comp22 #56 crop: row ends SSS”。 with trailing 。 printed; v4 missed 。; v6 b29 is the next banner line (奇怪故事集更新！) mis-paired",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 5 29"
     }
   ]
 }

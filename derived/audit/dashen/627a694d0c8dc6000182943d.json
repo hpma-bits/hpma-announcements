@@ -39,7 +39,7 @@
     {
       "block_index": 6,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "84b94772f944e27d"
     },
     {
@@ -105,7 +105,7 @@
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "a8326093f4891716"
     },
     {
@@ -165,7 +165,7 @@
     {
       "block_index": 27,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "570bd36c4b4d5d4a"
     },
     {
@@ -339,7 +339,7 @@
     {
       "block_index": 56,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5c0e1811c8c09622"
     },
     {
@@ -357,13 +357,13 @@
     {
       "block_index": 59,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "8b01132220fc706d"
     },
     {
       "block_index": 60,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "f16ff2d535c57686"
     },
     {
@@ -423,7 +423,7 @@
     {
       "block_index": 70,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "c6c799558a6071fe"
     },
     {
@@ -765,7 +765,7 @@
     {
       "block_index": 127,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "a10fdb31a8fc8f4c"
     },
     {
@@ -891,7 +891,7 @@
     {
       "block_index": 148,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "1db290bd61d2d818"
     },
     {
@@ -969,7 +969,7 @@
     {
       "block_index": 161,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "cdcd64cabab8f326"
     },
     {
@@ -1083,7 +1083,7 @@
     {
       "block_index": 180,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "834f123358ae0722"
     },
     {
@@ -1311,7 +1311,7 @@
     {
       "block_index": 218,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "234c970b89126669"
     },
     {
@@ -1347,7 +1347,7 @@
     {
       "block_index": 224,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "69175bc2a8a0daaf"
     },
     {
@@ -1527,7 +1527,7 @@
     {
       "block_index": 254,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "c3cc72b5cd94bedc"
     },
     {
@@ -1587,7 +1587,7 @@
     {
       "block_index": 264,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "a229c4e45d32ba60"
     },
     {
@@ -1754,10 +1754,11 @@
     }
   ],
   "counts": {
-    "consensus": 277,
-    "corrected": 2,
+    "adjudicated": 16,
+    "consensus": 267,
+    "corrected": 5,
+    "dropped": 3,
     "punct_rule": 6,
-    "queued": 12,
     "watermark": 2
   },
   "engine_audit": {
@@ -1775,46 +1776,47 @@
     "version": "1.4.4"
   },
   "id": "dashen.627a694d0c8dc6000182943d",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "1小天狼星·东莱克的回响",
       "v6_block": 26
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "没计师观点，被击购本能触发爆炸的机制过天被动不",
       "v6_block": 69
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 162
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 182
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 221
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": " 新版本预约下载 心",
       "v6_block": 227
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "动作:当才猪会失当前的冲撞目标时，将会在原地发来，",
       "v6_block": 259
     }

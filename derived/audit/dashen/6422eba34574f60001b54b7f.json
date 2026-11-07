@@ -75,13 +75,13 @@
     {
       "block_index": 12,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "0930ebf6003f593a"
     },
     {
       "block_index": 13,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "da3c842884ae4f96"
     },
     {
@@ -303,7 +303,7 @@
     {
       "block_index": 36,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "bb75e3bb3d334711"
     },
     {
@@ -339,7 +339,7 @@
     {
       "block_index": 42,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "814be1a3f0b20b30"
     },
     {
@@ -429,7 +429,7 @@
     {
       "block_index": 12,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "675b85a46823e1d8"
     },
     {
@@ -572,10 +572,11 @@
     }
   ],
   "counts": {
-    "consensus": 81,
-    "corrected": 3,
+    "adjudicated": 1,
+    "consensus": 79,
+    "corrected": 6,
+    "dropped": 2,
     "punct_rule": 5,
-    "queued": 4,
     "watermark": 3
   },
   "engine_audit": {
@@ -593,10 +594,11 @@
     "version": "1.4.4"
   },
   "id": "dashen.6422eba34574f60001b54b7f",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 34
     }

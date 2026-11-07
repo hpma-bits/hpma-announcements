@@ -93,7 +93,7 @@
     {
       "block_index": 15,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "7c3f73a733100011"
     },
     {
@@ -111,7 +111,7 @@
     {
       "block_index": 18,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "f4d644f9a4767620"
     },
     {
@@ -273,7 +273,7 @@
     {
       "block_index": 13,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "c5100f75df7ab003"
     },
     {
@@ -369,7 +369,7 @@
     {
       "block_index": 29,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "2fc6c8bf7d65ca62"
     },
     {
@@ -399,13 +399,13 @@
     {
       "block_index": 34,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "9d55c6bff6a51b28"
     },
     {
       "block_index": 35,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "e0a4b000b4b51674"
     },
     {
@@ -417,7 +417,7 @@
     {
       "block_index": 37,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "28fe3bbbb968fdd1"
     },
     {
@@ -603,7 +603,7 @@
     {
       "block_index": 17,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "e4be08c89c719007"
     },
     {
@@ -633,7 +633,7 @@
     {
       "block_index": 22,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "d55e2c27ea18b25d"
     },
     {
@@ -645,13 +645,13 @@
     {
       "block_index": 24,
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "8f27c0459a31f00c"
     },
     {
       "block_index": 25,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "b62b270b3c0597c9"
     },
     {
@@ -663,13 +663,13 @@
     {
       "block_index": 27,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "50c78ca9682f92d6"
     },
     {
       "block_index": 28,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "0a67a612c32e9670"
     },
     {
@@ -1065,7 +1065,7 @@
     {
       "block_index": 41,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "9973c2a9d03fa727"
     },
     {
@@ -1119,7 +1119,7 @@
     {
       "block_index": 6,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "c10b117964dff691"
     },
     {
@@ -1131,7 +1131,7 @@
     {
       "block_index": 8,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "88d498ae4b1edb8f"
     },
     {
@@ -1149,7 +1149,7 @@
     {
       "block_index": 11,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "cf6e8c402d39e63d"
     },
     {
@@ -1257,7 +1257,7 @@
     {
       "block_index": 29,
       "image_index": 5,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "9250e65e43c71263"
     },
     {
@@ -1299,7 +1299,7 @@
     {
       "block_index": 36,
       "image_index": 5,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "ca28eb1921fde1a4"
     },
     {
@@ -1341,7 +1341,7 @@
     {
       "block_index": 43,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "d98c3f52002fa06f"
     },
     {
@@ -1389,7 +1389,7 @@
     {
       "block_index": 7,
       "image_index": 6,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "fe2480834723039d"
     },
     {
@@ -1521,13 +1521,13 @@
     {
       "block_index": 29,
       "image_index": 6,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "726bf014fdf79a86"
     },
     {
       "block_index": 30,
       "image_index": 6,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "9335dcfe567fbbd2"
     },
     {
@@ -1569,7 +1569,7 @@
     {
       "block_index": 37,
       "image_index": 6,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "1ac6736c32afd818"
     },
     {
@@ -1629,13 +1629,13 @@
     {
       "block_index": 47,
       "image_index": 6,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "947838e905ae22f4"
     },
     {
       "block_index": 48,
       "image_index": 6,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "140364c487692f54"
     },
     {
@@ -1653,7 +1653,7 @@
     {
       "block_index": 51,
       "image_index": 6,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "536721a2156834f4"
     },
     {
@@ -1694,10 +1694,11 @@
     }
   ],
   "counts": {
-    "consensus": 254,
-    "corrected": 6,
+    "adjudicated": 13,
+    "consensus": 240,
+    "corrected": 18,
+    "dropped": 9,
     "punct_rule": 3,
-    "queued": 17,
     "watermark": 6
   },
   "engine_audit": {
@@ -1715,30 +1716,49 @@
     "version": "1.4.4"
   },
   "id": "dashen.66e929039dbf45199e5e3402",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
-      "text": "影”作为奖励",
-      "v6_block": 17
+      "status": "adjudicated",
+      "text": "影”作为奖励。",
+      "v6_block": 18
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "品质的多金画票，助力完成画票搜集！画票交换次数",
       "v6_block": 35
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2",
       "v6_block": 1
     },
     {
+      "image_index": 3,
+      "status": "adjudicated",
+      "text": "摄魂怪行头、动作各唤光明、壁画家真什悔与愧",
+      "v6_block": 26
+    },
+    {
+      "image_index": 3,
+      "status": "adjudicated",
+      "text": "赛季加速福利开启!",
+      "v6_block": 28
+    },
+    {
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "17.魔法相机的相机设置中新增“显示神奇动物”、“显示",
       "v6_block": 36
+    },
+    {
+      "image_index": 6,
+      "status": "adjudicated",
+      "text": "鸟尾梦“处于咒语卡”云雾缥缈”生成的雾中时，脚步特",
+      "v6_block": 29
     }
   ]
 }

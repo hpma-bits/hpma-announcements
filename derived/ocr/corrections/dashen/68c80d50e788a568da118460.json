@@ -165,6 +165,56 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 2 25"
+    },
+    {
+      "image_index": 4,
+      "block_index": 4,
+      "original": "们重现，可能需要花费一番功夫一",
+      "corrected": "们重现，可能需要花费一番功夫——",
+      "reason": "d3-comp32 #83 crop: two-em —— at line end; v4 一 / v6 none both wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 4 4"
+    },
+    {
+      "image_index": 4,
+      "block_index": 16,
+      "original": "“巫师研究·草药学”更新！",
+      "corrected": "“巫师研究·草药学”更新!",
+      "reason": "d3-84-banner: art-font banner narrow ! (tapered bar + diamond dot tight after 新, advance 0.23); v6 leading 一 is left flourish misread",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 4 16"
+    },
+    {
+      "image_index": 4,
+      "block_index": 39,
+      "original": "计入排行，排行前列的小队将获得专属称号奖励魔法觉醒",
+      "corrected": "计入排行，排行前列的小队将获得专属称号奖励。",
+      "reason": "d3-85-color: 专属称号奖励 in red legible through semi-transparent 大神 watermark + 。 ring visible; v4 missed 。, v6 专瞩称哈奖动 garbled; watermark tails dropped per 65f83fca-69",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 4 39"
+    },
+    {
+      "image_index": 5,
+      "block_index": 0,
+      "original": "可染色发型新增！",
+      "corrected": "可染色发型新增!",
+      "reason": "d3-86-banner: art-font banner narrow ! (tapered bar + diamond dot tight after 增); v4 full-width ！ wrong; v6 trailing 心 is right flourish misread",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 5 0"
+    },
+    {
+      "image_index": 5,
+      "block_index": 33,
+      "original": "使用“赛德里克迪戈里白",
+      "corrected": "使用“塞德里克·迪戈里的回响”消耗130点魔力及50张移",
+      "reason": "d3-comp34 #88 crop: full row with · inside 塞德里克·迪戈里, closing ” and 消耗130点魔力及50张移; v4 truncated at 塞德里克迪戈里白; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 5 33"
     }
   ]
 }

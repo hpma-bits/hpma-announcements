@@ -209,6 +209,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 70"
+    },
+    {
+      "image_index": 2,
+      "block_index": 67,
+      "original": "4.“施虐狂”",
+      "corrected": "4.“施虐狂”——至多减少3点魔力消耗。",
+      "reason": "v4 切成两块；源图为整行且含双破折号",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 67"
+    },
+    {
+      "image_index": 2,
+      "block_index": 68,
+      "original": "至多减少3点魔力消耗。",
+      "drop": true,
+      "reason": "重复切片；整行由 b67 承载（4.“施虐狂”——至多减少3点魔力消耗。）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 68"
     }
   ]
 }

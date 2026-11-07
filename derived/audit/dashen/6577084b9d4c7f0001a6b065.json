@@ -141,7 +141,7 @@
     {
       "block_index": 23,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "21296cb5b21b7bf2"
     },
     {
@@ -195,19 +195,19 @@
     {
       "block_index": 2,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "6619758ac5129dd4"
     },
     {
       "block_index": 3,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "5e0e5c91f7d28c19"
     },
     {
       "block_index": 4,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "ed8cbee26e5a4cd1"
     },
     {
@@ -501,7 +501,7 @@
     {
       "block_index": 53,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "38a9b18a42043d03"
     },
     {
@@ -651,7 +651,7 @@
     {
       "block_index": 14,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "8c03ef43422adaca"
     },
     {
@@ -687,7 +687,7 @@
     {
       "block_index": 20,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "007f9eb9484d60da"
     },
     {
@@ -699,7 +699,7 @@
     {
       "block_index": 22,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "406edc5ff6190a90"
     },
     {
@@ -723,13 +723,13 @@
     {
       "block_index": 26,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "242c52e57a55769d"
     },
     {
       "block_index": 27,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b2bc4556cbac4882"
     },
     {
@@ -789,7 +789,7 @@
     {
       "block_index": 37,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "a3261c967a152858"
     },
     {
@@ -813,7 +813,7 @@
     {
       "block_index": 0,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "5843978dcac48606"
     },
     {
@@ -831,7 +831,7 @@
     {
       "block_index": 3,
       "image_index": 4,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "47dc9e36f83ca4dd"
     },
     {
@@ -897,7 +897,7 @@
     {
       "block_index": 14,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "dbf4ef1787b662a1"
     },
     {
@@ -957,7 +957,7 @@
     {
       "block_index": 24,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "d2ff03e4d8d27c1b"
     },
     {
@@ -998,10 +998,11 @@
     }
   ],
   "counts": {
-    "consensus": 151,
-    "corrected": 2,
+    "adjudicated": 11,
+    "consensus": 145,
+    "corrected": 9,
+    "dropped": 2,
     "punct_rule": 3,
-    "queued": 12,
     "watermark": 1
   },
   "engine_audit": {
@@ -1019,24 +1020,37 @@
     "version": "1.4.4"
   },
   "id": "dashen.6577084b9d4c7f0001a6b065",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 20
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 50
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 1
+    },
+    {
+      "image_index": 3,
+      "status": "adjudicated",
+      "text": "圣诞季节，追随者麋鹿的脚印，获得奖励!",
+      "v6_block": 23
+    },
+    {
+      "image_index": 3,
+      "status": "adjudicated",
+      "text": "“圣诞·嗅嗅宝藏”活动开启!",
+      "v6_block": 27
     }
   ]
 }

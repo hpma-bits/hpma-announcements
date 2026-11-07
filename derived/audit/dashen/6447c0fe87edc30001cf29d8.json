@@ -27,7 +27,7 @@
     {
       "block_index": 4,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "1828a2f8910a9fc7"
     },
     {
@@ -39,7 +39,7 @@
     {
       "block_index": 6,
       "image_index": 1,
-      "status": "queued",
+      "status": "record",
       "text_sha256": "0719b049a2338d27"
     },
     {
@@ -117,7 +117,7 @@
     {
       "block_index": 19,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "2cefe15c024d59eb"
     },
     {
@@ -147,7 +147,7 @@
     {
       "block_index": 24,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b9a9c80406bcd3a1"
     },
     {
@@ -159,13 +159,13 @@
     {
       "block_index": 26,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "48f757d82cf5b330"
     },
     {
       "block_index": 0,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "4ccbf474be57ad09"
     },
     {
@@ -207,7 +207,7 @@
     {
       "block_index": 7,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "04ef4d854bdd6bb3"
     },
     {
@@ -339,7 +339,7 @@
     {
       "block_index": 29,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "178fef3398853e49"
     },
     {
@@ -369,7 +369,7 @@
     {
       "block_index": 34,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "55a8d41b063a6821"
     },
     {
@@ -381,7 +381,7 @@
     {
       "block_index": 0,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "35175e4e6d359239"
     },
     {
@@ -477,7 +477,7 @@
     {
       "block_index": 16,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "bbcd1a05a68ea9c5"
     },
     {
@@ -537,7 +537,7 @@
     {
       "block_index": 26,
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "a2c230af6e9879c2"
     },
     {
@@ -567,7 +567,7 @@
     {
       "block_index": 0,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "36409a75394343cd"
     },
     {
@@ -651,7 +651,7 @@
     {
       "block_index": 14,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "0048d8c2dd7bbabe"
     },
     {
@@ -753,7 +753,7 @@
     {
       "block_index": 31,
       "image_index": 4,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "78a8793475dc3078"
     },
     {
@@ -771,7 +771,7 @@
     {
       "block_index": 2,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "4d451434d5feb13d"
     },
     {
@@ -944,10 +944,11 @@
     }
   ],
   "counts": {
-    "consensus": 135,
-    "corrected": 3,
+    "adjudicated": 21,
+    "consensus": 126,
+    "corrected": 7,
     "punct_rule": 8,
-    "queued": 17,
+    "record": 1,
     "watermark": 4
   },
   "engine_audit": {
@@ -965,64 +966,65 @@
     "version": "1.4.4"
   },
   "id": "dashen.6447c0fe87edc30001cf29d8",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "山野牧歌",
       "v6_block": 3
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "合",
       "v6_block": 20
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "每20次阅读，可至少获得]张“专属魔咒组合”中包含",
       "v6_block": 25
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 1
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 9
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 32
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 1
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 18
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "焙窈窕/庄重邂逅·深暗”、“微光之猎·潜匿”、",
       "v6_block": 29
     },
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 1
     }

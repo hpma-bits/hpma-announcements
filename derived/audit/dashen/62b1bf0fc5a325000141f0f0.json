@@ -3,7 +3,7 @@
     {
       "block_index": 0,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "318889abecc8c9f6"
     },
     {
@@ -129,13 +129,13 @@
     {
       "block_index": 21,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "e620b2b6d1d8bd6c"
     },
     {
       "block_index": 22,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "c31d0f2ab8ea79ab"
     },
     {
@@ -147,25 +147,25 @@
     {
       "block_index": 24,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "01588b01e6702448"
     },
     {
       "block_index": 25,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "33c75865a8cf8d31"
     },
     {
       "block_index": 26,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "25759e2189811661"
     },
     {
       "block_index": 27,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "bc9b3d2d916e88d3"
     },
     {
@@ -243,7 +243,7 @@
     {
       "block_index": 40,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "7b0fa0579653b78b"
     },
     {
@@ -333,7 +333,7 @@
     {
       "block_index": 14,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "38210d6f48a5182d"
     },
     {
@@ -591,7 +591,7 @@
     {
       "block_index": 20,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "7084513549aaf99a"
     },
     {
@@ -849,7 +849,7 @@
     {
       "block_index": 15,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "3caa9ae2e74e0709"
     },
     {
@@ -890,10 +890,11 @@
     }
   ],
   "counts": {
-    "consensus": 119,
-    "corrected": 8,
+    "adjudicated": 9,
+    "consensus": 114,
+    "corrected": 12,
+    "dropped": 2,
     "punct_rule": 7,
-    "queued": 8,
     "watermark": 8
   },
   "engine_audit": {
@@ -911,16 +912,29 @@
     "version": "1.4.4"
   },
   "id": "dashen.62b1bf0fc5a325000141f0f0",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
+      "text": "6月22日开放“地精聚落”，",
+      "v6_block": 26
+    },
+    {
+      "image_index": 1,
+      "status": "adjudicated",
+      "text": "“蛛网岩洞”，“兽群穴",
+      "v6_block": 27
+    },
+    {
+      "image_index": 1,
+      "status": "adjudicated",
       "text": "“狂风峭壁”区域，6月",
       "v6_block": 29
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "地”三个区域，6月23日开放",
       "v6_block": 30
     }

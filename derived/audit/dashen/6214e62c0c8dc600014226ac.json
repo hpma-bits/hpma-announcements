@@ -21,7 +21,7 @@
     {
       "block_index": 3,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "8e86ea4cee37ba38"
     },
     {
@@ -33,7 +33,7 @@
     {
       "block_index": 5,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "b620fe14f77f51ca"
     },
     {
@@ -51,7 +51,7 @@
     {
       "block_index": 8,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "ad20b3ea87621cd0"
     },
     {
@@ -111,7 +111,7 @@
     {
       "block_index": 18,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "8fbc6cc4b4b25470"
     },
     {
@@ -123,7 +123,7 @@
     {
       "block_index": 20,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "91ee65ecd8ebd02c"
     },
     {
@@ -255,7 +255,7 @@
     {
       "block_index": 16,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "84d005f8bc081cea"
     },
     {
@@ -291,7 +291,7 @@
     {
       "block_index": 22,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "ae80926905130e5a"
     },
     {
@@ -399,7 +399,7 @@
     {
       "block_index": 6,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "faa4add3c920038f"
     },
     {
@@ -435,7 +435,7 @@
     {
       "block_index": 12,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "9d1de19818e99a11"
     },
     {
@@ -453,7 +453,7 @@
     {
       "block_index": 15,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e7b0c01604266fd8"
     },
     {
@@ -464,9 +464,10 @@
     }
   ],
   "counts": {
-    "consensus": 69,
-    "corrected": 1,
-    "queued": 8,
+    "adjudicated": 11,
+    "consensus": 61,
+    "corrected": 5,
+    "dropped": 1,
     "watermark": 5
   },
   "engine_audit": {
@@ -484,40 +485,41 @@
     "version": "1.4.4"
   },
   "id": "dashen.6214e62c0c8dc600014226ac",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "里女文州",
       "v6_block": 4
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "【光辉8禁已值达管坝则更新】",
       "v6_block": 20
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "双人决斗無合数据夹来自工社团成品在对应玩达中获得的总",
       "v6_block": 16
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "单人中之",
       "v6_block": 17
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "M A G IC A W A K EN E D",
       "v6_block": 13
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "HARRY POTTER",
       "v6_block": 16
     }

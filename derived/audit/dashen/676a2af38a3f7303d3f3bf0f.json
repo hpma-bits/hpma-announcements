@@ -75,7 +75,7 @@
     {
       "block_index": 12,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "366986368785ce27"
     },
     {
@@ -105,7 +105,7 @@
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "b71b610662785972"
     },
     {
@@ -141,7 +141,7 @@
     {
       "block_index": 23,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "24c83c3bec90a8de"
     },
     {
@@ -189,7 +189,7 @@
     {
       "block_index": 31,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "9b1e8ccb39176097"
     },
     {
@@ -255,7 +255,7 @@
     {
       "block_index": 42,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "6d6ebc00d5406839"
     },
     {
@@ -279,7 +279,7 @@
     {
       "block_index": 46,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "56be09301c395913"
     },
     {
@@ -303,7 +303,7 @@
     {
       "block_index": 50,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5d8e953d8593d64a"
     },
     {
@@ -315,7 +315,7 @@
     {
       "block_index": 52,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "7d29c765bc24ea4e"
     },
     {
@@ -411,7 +411,7 @@
     {
       "block_index": 68,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "679e8fd3a1416394"
     },
     {
@@ -435,7 +435,7 @@
     {
       "block_index": 72,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "363c9d63a8520d00"
     },
     {
@@ -507,7 +507,7 @@
     {
       "block_index": 84,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "944f18756d7b664a"
     },
     {
@@ -525,7 +525,7 @@
     {
       "block_index": 87,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "219f990bb00ff688"
     },
     {
@@ -615,7 +615,7 @@
     {
       "block_index": 102,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "caced3c1e095145a"
     },
     {
@@ -735,7 +735,7 @@
     {
       "block_index": 122,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "7a598db627f455b9"
     },
     {
@@ -843,7 +843,7 @@
     {
       "block_index": 140,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "32004c137d1abc28"
     },
     {
@@ -909,7 +909,7 @@
     {
       "block_index": 151,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "e1891e1cfbaa6fda"
     },
     {
@@ -956,10 +956,11 @@
     }
   ],
   "counts": {
-    "consensus": 148,
-    "corrected": 1,
+    "adjudicated": 20,
+    "consensus": 138,
+    "corrected": 9,
+    "dropped": 4,
     "punct_rule": 2,
-    "queued": 20,
     "watermark": 2
   },
   "engine_audit": {
@@ -977,90 +978,103 @@
     "version": "1.4.4"
   },
   "id": "dashen.676a2af38a3f7303d3f3bf0f",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2e",
       "v6_block": 19
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
+      "text": "完成任务，达成对应等级可获得传说品质唇妆“李子浅",
+      "v6_block": 47
+    },
+    {
+      "image_index": 1,
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 57
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 66
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "活动期内，累计参与10场画猜可获得宝石作为奖励！",
       "v6_block": 72
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "由选择!",
       "v6_block": 76
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 88
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 103
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "av",
       "v6_block": 104
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 111
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 116
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 117
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 123
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 124
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "项在目口或真他巫州的植物没有贝面情洗的，不再显",
       "v6_block": 135
+    },
+    {
+      "image_index": 1,
+      "status": "adjudicated",
+      "text": "释放时施法方尚异常的尚向题。",
+      "v6_block": 164
     }
   ]
 }

@@ -27,7 +27,7 @@
     {
       "block_index": 4,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "d9f006c594631566"
     },
     {
@@ -81,13 +81,13 @@
     {
       "block_index": 13,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "b719122d82d2217d"
     },
     {
       "block_index": 14,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "8a4d40a733f27d64"
     },
     {
@@ -99,25 +99,25 @@
     {
       "block_index": 16,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "0b98d9fd09265857"
     },
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "fdf96247f3ce41cf"
     },
     {
       "block_index": 18,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "ac60e952c1d89a8d"
     },
     {
       "block_index": 19,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "39bc211b7e4a62f4"
     },
     {
@@ -153,7 +153,7 @@
     {
       "block_index": 25,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f4cbf0b4990b17d9"
     },
     {
@@ -225,7 +225,7 @@
     {
       "block_index": 11,
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "5099f9eb26c76726"
     },
     {
@@ -309,7 +309,7 @@
     {
       "block_index": 25,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "d0dd310aef4e9def"
     },
     {
@@ -339,19 +339,19 @@
     {
       "block_index": 30,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "fe5b36a1dc3d5fe7"
     },
     {
       "block_index": 31,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "9b49cb205bed8621"
     },
     {
       "block_index": 32,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "94ea7cfc7d6f34f1"
     },
     {
@@ -381,7 +381,7 @@
     {
       "block_index": 37,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "2f4af9b1af1997fa"
     },
     {
@@ -423,7 +423,7 @@
     {
       "block_index": 6,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "e2aaae3eaedc6f7f"
     },
     {
@@ -489,7 +489,7 @@
     {
       "block_index": 17,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5412810b5c83f8aa"
     },
     {
@@ -537,7 +537,7 @@
     {
       "block_index": 25,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "9a8c1055d7f0fa87"
     },
     {
@@ -549,7 +549,7 @@
     {
       "block_index": 27,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "63bf103a3fd5d9e0"
     },
     {
@@ -573,25 +573,25 @@
     {
       "block_index": 31,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "d2c96f3017e0c54a"
     },
     {
       "block_index": 32,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "8270860e7dee372c"
     },
     {
       "block_index": 33,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "c45c38b15a28c499"
     },
     {
       "block_index": 34,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5218359ef02cf2ab"
     },
     {
@@ -771,7 +771,7 @@
     {
       "block_index": 16,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "086d3cddc72a77cf"
     },
     {
@@ -783,7 +783,7 @@
     {
       "block_index": 18,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "766a3852101d5b79"
     },
     {
@@ -795,7 +795,7 @@
     {
       "block_index": 20,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "6d6ebc00d5406839"
     },
     {
@@ -837,7 +837,7 @@
     {
       "block_index": 27,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5d8e953d8593d64a"
     },
     {
@@ -873,7 +873,7 @@
     {
       "block_index": 33,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "33a5ea310ce23f86"
     },
     {
@@ -915,13 +915,13 @@
     {
       "block_index": 40,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "9973c2a9d03fa727"
     },
     {
       "block_index": 41,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "c4549d7a6b156e5a"
     },
     {
@@ -1035,25 +1035,25 @@
     {
       "block_index": 13,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "1f46e3fec02bbaad"
     },
     {
       "block_index": 14,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "dad9b596c2e7de8d"
     },
     {
       "block_index": 15,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "0190c78a2f9acbd1"
     },
     {
       "block_index": 16,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "637362b147aa2bca"
     },
     {
@@ -1107,7 +1107,7 @@
     {
       "block_index": 25,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "e68b6140349f943b"
     },
     {
@@ -1251,7 +1251,7 @@
     {
       "block_index": 49,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "21124e4ffeb5932e"
     },
     {
@@ -1527,7 +1527,7 @@
     {
       "block_index": 45,
       "image_index": 6,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "0f0987c65771c661"
     },
     {
@@ -1545,15 +1545,16 @@
     {
       "block_index": 48,
       "image_index": 6,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "90b41f312b36ca78"
     }
   ],
   "counts": {
-    "consensus": 225,
-    "corrected": 12,
+    "adjudicated": 14,
+    "consensus": 203,
+    "corrected": 38,
+    "dropped": 3,
     "punct_rule": 2,
-    "queued": 21,
     "watermark": 4
   },
   "engine_audit": {
@@ -1571,40 +1572,41 @@
     "version": "1.4.4"
   },
   "id": "dashen.67d8325af6314a7d5c17ce85",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "嘻乐奇旅",
       "v6_block": 3
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "凡下高布石之影",
       "v6_block": 15
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "糖乐奇旅",
       "v6_block": 13
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "定地点回收有瑕疵的羽毛笔并帮助伙伴解决麻烦！",
       "v6_block": 27
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "活动时间:2025年3月19日7:00-4月30日6:00",
       "v6_block": 28
     },
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "活动时间：2025年3月19日5:00-3月26日5:00",
       "v6_block": 34
     }

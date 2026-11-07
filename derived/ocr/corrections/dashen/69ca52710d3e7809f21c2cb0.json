@@ -473,6 +473,56 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 2 18"
+    },
+    {
+      "image_index": 2,
+      "block_index": 29,
+      "original": "快来一探究竟吧！",
+      "corrected": "有文师的新作——快来一探究竟吧！",
+      "reason": "b30（有文师的新作）已删，本块承载整行；源图为双破折号",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 2 29"
+    },
+    {
+      "image_index": 3,
+      "block_index": 25,
+      "original": "成功找回巨怪贴纸，即可获得宝石、金币、一金",
+      "corrected": "每次成功找回巨怪贴纸，即可获得宝石、金币、“金",
+      "reason": "漏「每次」；市→币；行尾“为换行引号",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 3 25"
+    },
+    {
+      "image_index": 5,
+      "block_index": 5,
+      "original": "一配饰-耳饰“滴影成扇”、“滴影成扇·青”、“滴影成",
+      "corrected": "- 配饰-耳饰“滴影成扇”、“滴影成扇·青”、“滴影成",
+      "reason": "行首印刷短连字符+空格（v4 误作一，v6 漏空格）",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 5"
+    },
+    {
+      "image_index": 5,
+      "block_index": 7,
+      "original": "一配饰-耳饰“星月交辉”",
+      "corrected": "- 配饰-耳饰“星月交辉”",
+      "reason": "行首印刷短连字符+空格（v4 误作一，v6 漏空格）",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 7"
+    },
+    {
+      "image_index": 5,
+      "block_index": 21,
+      "original": "一男款配饰-耳饰“龙鳞秘境”",
+      "corrected": "- 男款配饰-耳饰“龙鳞秘境”",
+      "reason": "行首印刷短连字符+空格（v4 误作一）",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 21"
     }
   ]
 }

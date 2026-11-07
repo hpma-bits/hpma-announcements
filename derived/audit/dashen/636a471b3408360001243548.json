@@ -153,7 +153,7 @@
     {
       "block_index": 25,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "0d40a9892ebd87fc"
     },
     {
@@ -254,9 +254,9 @@
     }
   ],
   "counts": {
-    "consensus": 39,
+    "adjudicated": 2,
+    "consensus": 38,
     "corrected": 1,
-    "queued": 1,
     "watermark": 2
   },
   "engine_audit": {
@@ -274,10 +274,11 @@
     "version": "1.4.4"
   },
   "id": "dashen.636a471b3408360001243548",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "中",
       "v6_block": 25
     }

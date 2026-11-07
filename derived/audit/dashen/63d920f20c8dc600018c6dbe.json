@@ -87,7 +87,7 @@
     {
       "block_index": 14,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "8fc7f693aa2bd0a3"
     },
     {
@@ -189,7 +189,7 @@
     {
       "block_index": 6,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f7ff18d024e08611"
     },
     {
@@ -231,7 +231,7 @@
     {
       "block_index": 13,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "c940e094ac8c93f4"
     },
     {
@@ -279,7 +279,7 @@
     {
       "block_index": 21,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "b1867491dfee79c8"
     },
     {
@@ -345,13 +345,13 @@
     {
       "block_index": 32,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "aa57740dea175294"
     },
     {
       "block_index": 33,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "3c4e938881f75806"
     },
     {
@@ -387,7 +387,7 @@
     {
       "block_index": 39,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "d5f65592951cf424"
     },
     {
@@ -441,13 +441,13 @@
     {
       "block_index": 7,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "0d2a78358c31571b"
     },
     {
       "block_index": 8,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "d2fb24fd88f1f87c"
     },
     {
@@ -621,7 +621,7 @@
     {
       "block_index": 5,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "de2ce82ddea4a2e3"
     },
     {
@@ -693,7 +693,7 @@
     {
       "block_index": 17,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "29413fd7c6d71374"
     },
     {
@@ -848,10 +848,11 @@
     }
   ],
   "counts": {
-    "consensus": 130,
-    "corrected": 5,
+    "adjudicated": 5,
+    "consensus": 121,
+    "corrected": 12,
+    "dropped": 1,
     "punct_rule": 2,
-    "queued": 4,
     "watermark": 2
   },
   "engine_audit": {
@@ -869,16 +870,17 @@
     "version": "1.4.4"
   },
   "id": "dashen.63d920f20c8dc600018c6dbe",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 15
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "同时“【每甩】光成自己家”的任备完成备件修改为，裂",
       "v6_block": 38
     }

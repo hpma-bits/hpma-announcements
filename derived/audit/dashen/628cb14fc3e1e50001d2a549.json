@@ -57,7 +57,7 @@
     {
       "block_index": 9,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "2c7cf9da6db3015f"
     },
     {
@@ -99,13 +99,13 @@
     {
       "block_index": 16,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "a3805884e18f6af7"
     },
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "7350e0e3df442bc4"
     },
     {
@@ -165,7 +165,7 @@
     {
       "block_index": 27,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "8ba7a135a71df48f"
     },
     {
@@ -201,7 +201,7 @@
     {
       "block_index": 33,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "6a9b675792f62f3e"
     },
     {
@@ -219,7 +219,7 @@
     {
       "block_index": 36,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "af801cae19bd6ba0"
     },
     {
@@ -315,13 +315,13 @@
     {
       "block_index": 52,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "ff612ed3c7f2885a"
     },
     {
       "block_index": 53,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "db7de61d9c14747d"
     },
     {
@@ -525,7 +525,7 @@
     {
       "block_index": 87,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "a6d48a8152d5cbc8"
     },
     {
@@ -573,7 +573,7 @@
     {
       "block_index": 95,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "2368d8c8dada95fa"
     },
     {
@@ -585,7 +585,7 @@
     {
       "block_index": 97,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "39d31364a1880aaf"
     },
     {
@@ -615,13 +615,13 @@
     {
       "block_index": 102,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "0e649ef659167402"
     },
     {
       "block_index": 103,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "61b7ab5d2b62302b"
     },
     {
@@ -788,9 +788,10 @@
     }
   ],
   "counts": {
-    "consensus": 126,
-    "corrected": 1,
-    "queued": 9,
+    "adjudicated": 15,
+    "consensus": 115,
+    "corrected": 5,
+    "dropped": 1,
     "watermark": 2
   },
   "engine_audit": {
@@ -808,46 +809,47 @@
     "version": "1.4.4"
   },
   "id": "dashen.628cb14fc3e1e50001d2a549",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "项论求，斑开白口时全服排名，但升会再获诗实财。",
       "v6_block": 17
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": " 奖励规则：",
       "v6_block": 18
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 30
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 31
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 41
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "禁忌魔咒“阿瓦达索命”更改为“阿瓦达”。",
       "v6_block": 102
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "次数”更改为“决斗俱乐部中使用不可饶恕咒一定次数”",
       "v6_block": 108
     }

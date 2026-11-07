@@ -69,7 +69,7 @@
     {
       "block_index": 11,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "119612db2464e3bd"
     },
     {
@@ -93,7 +93,7 @@
     {
       "block_index": 15,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "51ba0cee03e46606"
     },
     {
@@ -117,7 +117,7 @@
     {
       "block_index": 19,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "b372274916556a66"
     },
     {
@@ -153,7 +153,7 @@
     {
       "block_index": 25,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "b3cca006a49c2573"
     },
     {
@@ -327,7 +327,7 @@
     {
       "block_index": 28,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "e9c16a78db0f50a5"
     },
     {
@@ -339,7 +339,7 @@
     {
       "block_index": 30,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "da646c85ca6b709d"
     },
     {
@@ -453,7 +453,7 @@
     {
       "block_index": 49,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "8e821e14d1ff74a2"
     },
     {
@@ -525,7 +525,7 @@
     {
       "block_index": 6,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "a4f235e29caf7c45"
     },
     {
@@ -537,7 +537,7 @@
     {
       "block_index": 8,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "eeeedc5f92a589b2"
     },
     {
@@ -615,25 +615,25 @@
     {
       "block_index": 21,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "4b3e8418212af2cf"
     },
     {
       "block_index": 22,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "889c01699bbbb978"
     },
     {
       "block_index": 23,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "d3d551d392a74aab"
     },
     {
       "block_index": 24,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "ef984181669c60ef"
     },
     {
@@ -645,7 +645,7 @@
     {
       "block_index": 26,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "c53255c8a74f7350"
     },
     {
@@ -687,7 +687,7 @@
     {
       "block_index": 33,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e2a42314ed605a7b"
     },
     {
@@ -729,7 +729,7 @@
     {
       "block_index": 40,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "bbf897b2801531df"
     },
     {
@@ -813,7 +813,7 @@
     {
       "block_index": 13,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "9cfc7768133ebe85"
     },
     {
@@ -897,7 +897,7 @@
     {
       "block_index": 27,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "ce93db215bbc7210"
     },
     {
@@ -927,7 +927,7 @@
     {
       "block_index": 32,
       "image_index": 4,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "2664fcc7a930da24"
     },
     {
@@ -939,7 +939,7 @@
     {
       "block_index": 34,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "017082b9c1acf771"
     },
     {
@@ -981,7 +981,7 @@
     {
       "block_index": 41,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "dd018e67d7438f06"
     },
     {
@@ -1017,7 +1017,7 @@
     {
       "block_index": 47,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "11cb17a9b72655cf"
     },
     {
@@ -1119,7 +1119,7 @@
     {
       "block_index": 8,
       "image_index": 5,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e1d4e51e49180c4c"
     },
     {
@@ -1149,7 +1149,7 @@
     {
       "block_index": 13,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "0245e7d622507c44"
     },
     {
@@ -1245,7 +1245,7 @@
     {
       "block_index": 29,
       "image_index": 5,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "2326e90a8fb35801"
     },
     {
@@ -1275,13 +1275,13 @@
     {
       "block_index": 34,
       "image_index": 5,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "5363bd41f1c6ab3e"
     },
     {
       "block_index": 35,
       "image_index": 5,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e4198d2443f2e956"
     },
     {
@@ -1491,7 +1491,7 @@
     {
       "block_index": 26,
       "image_index": 6,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "4cd4e2e4c96599da"
     },
     {
@@ -1622,10 +1622,11 @@
     }
   ],
   "counts": {
-    "consensus": 245,
-    "corrected": 3,
+    "adjudicated": 21,
+    "consensus": 226,
+    "corrected": 13,
+    "dropped": 3,
     "punct_rule": 8,
-    "queued": 14,
     "watermark": 5
   },
   "engine_audit": {
@@ -1643,34 +1644,41 @@
     "version": "1.4.4"
   },
   "id": "dashen.6a26b5f76e24f11408a4e0a8",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
-      "text": "新！",
-      "v6_block": 15
+      "status": "adjudicated",
+      "text": "新!",
+      "v6_block": 16
+    },
+    {
+      "image_index": 2,
+      "status": "adjudicated",
+      "text": "时共舞下牌数值在周内战年中+4，且该戏采现对下",
+      "v6_block": 28
     },
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "充值额度达到9680星石，可领取大奖:魔器“咕噜泡",
       "v6_block": 28
     },
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "将举办盛大的烟花秀！",
       "v6_block": 34
     },
     {
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "一“决斗上分时”活动开启！",
       "v6_block": 33
     },
     {
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "活动时问",
       "v6_block": 35
     }

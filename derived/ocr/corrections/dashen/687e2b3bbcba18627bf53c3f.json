@@ -386,6 +386,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 6 11"
+    },
+    {
+      "image_index": 4,
+      "block_index": 24,
+      "original": "购买即可获得传说品质挎包“奶芙菊”",
+      "corrected": "购买即可获得传说品质挎包“奶芙雏菊”。",
+      "reason": "d3-comp24 #62 crop: 奶芙雏菊 in red with closing ” and 。 printed; v4 missed 雏 and ”。; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 4 24"
+    },
+    {
+      "image_index": 5,
+      "block_index": 14,
+      "original": "9.女生&男生发型“卷毛”。",
+      "corrected": "9.女生&男生发型“卷毛咩咩”。",
+      "reason": "d3-comp24 #63 crop: 卷毛咩咩 in red with ”。 printed; v4 truncated to 卷毛; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 5 14"
+    },
+    {
+      "image_index": 6,
+      "block_index": 12,
+      "original": "5.优化了男生时装“银白序章”、“石密令”、“天才草",
+      "corrected": "5.优化了男生时装“银白序章”、“曜石密令”、“天才草",
+      "reason": "d3-comp25 #65 crop: 曜石密令 with 曜 printed; v4 石密令 missed 曜; block covers the wrapped first row ending 天才草; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 6 12"
     }
   ]
 }

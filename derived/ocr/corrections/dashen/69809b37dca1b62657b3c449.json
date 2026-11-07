@@ -155,6 +155,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.69809b37dca1b62657b3c449 4 42"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "一纽特·斯卡曼德”或光辉咒语卡“古卜莱仙火”时，则第",
+      "corrected": "-纽特·斯卡曼德”或光辉咒语卡“古卜莱仙火”时，则第",
+      "reason": "行首印刷短连字符（v4 误作一）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69809b37dca1b62657b3c449 1 13"
+    },
+    {
+      "image_index": 5,
+      "block_index": 0,
+      "original": "心全自动魔法牌“冰雪派对”版本上线！",
+      "corrected": "全自动魔法牌“冰雪派对”版本上线！",
+      "reason": "v4 前导衍字「心」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69809b37dca1b62657b3c449 5 0"
     }
   ]
 }

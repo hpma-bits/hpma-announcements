@@ -169,6 +169,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6a3949aec18eb54e843d192b 2 9"
+    },
+    {
+      "image_index": 3,
+      "block_index": 4,
+      "original": "“回响重塑时”活动开启",
+      "corrected": "”回响重塑时”活动开启",
+      "reason": "横幅两侧引号均为 ” 形（p2 max-zoom 既定裁决）；v6 前导衍字「一」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a3949aec18eb54e843d192b 3 4"
     }
   ]
 }

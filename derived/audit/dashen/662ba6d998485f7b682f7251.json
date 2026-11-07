@@ -375,7 +375,7 @@
     {
       "block_index": 6,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "d8bd0e74f302769a"
     },
     {
@@ -417,7 +417,7 @@
     {
       "block_index": 13,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "c4a2b71bc202ce13"
     },
     {
@@ -453,7 +453,7 @@
     {
       "block_index": 19,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "181b7b317320342a"
     },
     {
@@ -590,8 +590,9 @@
     }
   ],
   "counts": {
-    "consensus": 94,
-    "queued": 3,
+    "adjudicated": 4,
+    "consensus": 92,
+    "corrected": 1,
     "watermark": 3
   },
   "engine_audit": {
@@ -609,16 +610,17 @@
     "version": "1.4.4"
   },
   "id": "dashen.662ba6d998485f7b682f7251",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“新生交流今”活动即将开启！",
       "v6_block": 18
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 27
     }

@@ -148,6 +148,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.68ff6023211aee1690c3c05c 2 22"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "与环境融为一体....然后出其不意神下巡逻队皮特大跳觉醒",
+      "corrected": "与环境融为一体……然后出其不意，吓巡逻队皮特大跳",
+      "reason": "d3-104-thresh/color: ellipsis prints six dots (……), comma after 不意 (dot fragments + parallel 6accd391 img2 出其不意，吓巡逻队...), 吓 (口+下) recovered under 大神 watermark; 皮特大跳 engine-agreed; row tail beyond 跳 covered by watermark (v4/v6 觉醒 is the watermark's own 觉醒) -> cut at last clean point",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68ff6023211aee1690c3c05c 2 27"
+    },
+    {
+      "image_index": 3,
+      "block_index": 5,
+      "original": "购买即可获得“闲娱课后行·III\"主题史诗时装：“黑糖冒",
+      "corrected": "购买即可获得“闲娱课后行·III”主题史诗时装：“黑糖冒",
+      "reason": "d3-comp40 #105 crop: serif Roman III (capital-I x3 per prior) and curly closing ” printed; v4 straight quote wrong; v6 dropped III; row ends 黑糖冒 with continuation 险”。 on next row",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68ff6023211aee1690c3c05c 3 5"
+    },
+    {
+      "image_index": 3,
+      "block_index": 17,
+      "original": "“幽寂回廊·梳妆魔盒”全新上线！",
+      "corrected": "“幽寂回廊·梳妆魔盒”全新上线!",
+      "reason": "d3-comp40 #106 crop: same 梳妆魔盒 art banner series - narrow ! per zoom-verified d2-z96/#26 ruling; v6 leading 一 and trailing 一 are left/right flourish misreads",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68ff6023211aee1690c3c05c 3 17"
+    },
+    {
+      "image_index": 4,
+      "block_index": 10,
+      "original": "心“学院杯”舞会项目即将开赛！",
+      "corrected": "“学院杯”舞会项目即将开赛！",
+      "reason": "d3-comp41 #107 crop: serif banner prints full-width ！ (gap ~0.3 char, serif family per d2-z102); v4 leading 心 is left flourish misread; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68ff6023211aee1690c3c05c 4 10"
     }
   ]
 }

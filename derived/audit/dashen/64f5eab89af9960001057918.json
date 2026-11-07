@@ -99,13 +99,13 @@
     {
       "block_index": 16,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "32792cfe4889f8e9"
     },
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "bd3c30b56d3e1d5d"
     },
     {
@@ -135,13 +135,13 @@
     {
       "block_index": 22,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "1a48999f9eb8eb43"
     },
     {
       "block_index": 23,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "afe04b923a52338a"
     },
     {
@@ -195,7 +195,7 @@
     {
       "block_index": 32,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e4dbda33f46c8043"
     },
     {
@@ -453,7 +453,7 @@
     {
       "block_index": 75,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "d54f52bb5ac995af"
     },
     {
@@ -710,10 +710,10 @@
     }
   ],
   "counts": {
-    "consensus": 113,
-    "corrected": 1,
+    "adjudicated": 8,
+    "consensus": 108,
+    "corrected": 3,
     "punct_rule": 1,
-    "queued": 5,
     "watermark": 2
   },
   "engine_audit": {
@@ -731,28 +731,29 @@
     "version": "1.4.4"
   },
   "id": "dashen.64f5eab89af9960001057918",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "赛季故事更新心",
       "v6_block": 17
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "魁地奇赛季故事·第二章已更新!",
       "v6_block": 18
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 24
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "巫师参与“禁林”玩法中的“密林冒险·一、二、三、",
       "v6_block": 27
     }

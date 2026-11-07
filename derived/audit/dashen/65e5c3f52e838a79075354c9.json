@@ -63,13 +63,13 @@
     {
       "block_index": 10,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "8f8fd44e020bd8e5"
     },
     {
       "block_index": 11,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "044c57f81e067844"
     },
     {
@@ -111,7 +111,7 @@
     {
       "block_index": 18,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "9deee6ec2022bef2"
     },
     {
@@ -159,7 +159,7 @@
     {
       "block_index": 26,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "a1b56fdb645c22e6"
     },
     {
@@ -243,7 +243,7 @@
     {
       "block_index": 4,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "32f74f1188ecc850"
     },
     {
@@ -375,7 +375,7 @@
     {
       "block_index": 26,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "42dff8691546e861"
     },
     {
@@ -393,7 +393,7 @@
     {
       "block_index": 29,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "1744aa4c50536f5d"
     },
     {
@@ -411,7 +411,7 @@
     {
       "block_index": 32,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "2b11a1baa3c78811"
     },
     {
@@ -537,7 +537,7 @@
     {
       "block_index": 53,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "9e1e8809864c3453"
     },
     {
@@ -555,7 +555,7 @@
     {
       "block_index": 56,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "415c097860d1f309"
     },
     {
@@ -573,7 +573,7 @@
     {
       "block_index": 59,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "a1d84e53315c1c9d"
     },
     {
@@ -632,10 +632,11 @@
     }
   ],
   "counts": {
-    "consensus": 97,
-    "corrected": 1,
+    "adjudicated": 13,
+    "consensus": 89,
+    "corrected": 6,
+    "dropped": 2,
     "punct_rule": 1,
-    "queued": 12,
     "watermark": 3
   },
   "engine_audit": {
@@ -653,60 +654,61 @@
     "version": "1.4.4"
   },
   "id": "dashen.65e5c3f52e838a79075354c9",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
-      "text": "中心”作为奖励",
-      "v6_block": 17
+      "status": "adjudicated",
+      "text": "中心”作为奖励。",
+      "v6_block": 18
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 10
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 20
     },
     {
       "image_index": 2,
-      "status": "queued",
-      "text": " “疯狂藤蔓”草药店正式营业！",
-      "v6_block": 31
+      "status": "adjudicated",
+      "text": "“疯狂藤蔓”草药店正式营业！",
+      "v6_block": 32
     },
     {
       "image_index": 2,
-      "status": "queued",
-      "text": "快到店里找到家养小精灵葭碧，浏览商品吧！",
-      "v6_block": 36
+      "status": "adjudicated",
+      "text": "位于霍格莫德村庄的“疯狂藤蔓”草药店正式开始营业！",
+      "v6_block": 34
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 42
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2e",
       "v6_block": 43
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 59
     },
     {
       "image_index": 2,
-      "status": "queued",
-      "text": "可从对手卡组中随机复制1张！",
-      "v6_block": 64
+      "status": "adjudicated",
+      "text": "可从对手卡组中随机复制1张!",
+      "v6_block": 63
     }
   ]
 }

@@ -168,6 +168,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6846b7417629a523a2c55baf 6 32"
+    },
+    {
+      "image_index": 1,
+      "block_index": 12,
+      "original": "”。集齐家具套装后，可在巫师空间领取蜜糖邀约",
+      "corrected": "鸮”。集齐家具套装后，可在巫师空间领取蜜糖邀约",
+      "reason": "d3-comp19 #47 crop: row head 鸮” printed (wrapped last char of 猫头鹰“红鸮” from previous row); v4 missed 鸮; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6846b7417629a523a2c55baf 1 12"
+    },
+    {
+      "image_index": 2,
+      "block_index": 8,
+      "original": "——霍格莫德旅游手册》已更",
+      "corrected": "故事《糖果记得所有事——霍格莫德旅游手册》已更",
+      "reason": "d3-comp19 #48 crop: full printed row with two-em —— inside 《糖果记得所有事——霍格莫德旅游手册》; v4 b8 is the head fragment (——霍格莫德旅游手册》已更) of the double-read pair; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6846b7417629a523a2c55baf 2 8"
+    },
+    {
+      "image_index": 2,
+      "block_index": 35,
+      "original": "院宝箱即可获得淘金令，最多获得7个@哈利波特魔法觉醒",
+      "corrected": "院宝箱即可获得淘金令，最多获得7个。",
+      "reason": "d3-50-thresh + d3-50-ring: 7个 recovered under semi-transparent 大神 watermark (v6 missed 7个); trailing 。 from partial arc fragments at sentence-final position per 62dfbea2-17 precedent; v4/v6 @哈利波特魔法觉醒 tails are watermark",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6846b7417629a523a2c55baf 2 35"
     }
   ]
 }

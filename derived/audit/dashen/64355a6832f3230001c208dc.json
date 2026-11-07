@@ -117,7 +117,7 @@
     {
       "block_index": 19,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "f24ebe6ecc181541"
     },
     {
@@ -135,7 +135,7 @@
     {
       "block_index": 22,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b8c7dacc2a58e458"
     },
     {
@@ -171,25 +171,25 @@
     {
       "block_index": 28,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "6b0bc2643a8a7a93"
     },
     {
       "block_index": 29,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "26a0ad0d4e0be38a"
     },
     {
       "block_index": 30,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "df89b461e066144f"
     },
     {
       "block_index": 31,
       "image_index": 1,
-      "status": "queued",
+      "status": "record",
       "text_sha256": "eb68450ac67d19e5"
     },
     {
@@ -416,10 +416,12 @@
     }
   ],
   "counts": {
-    "consensus": 60,
-    "corrected": 1,
+    "adjudicated": 6,
+    "consensus": 58,
+    "corrected": 2,
+    "dropped": 1,
     "punct_rule": 1,
-    "queued": 6,
+    "record": 1,
     "watermark": 3
   },
   "engine_audit": {
@@ -437,16 +439,23 @@
     "version": "1.4.4"
   },
   "id": "dashen.64355a6832f3230001c208dc",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
+      "text": "大奖池中奖励包括传说品质猫头鹰",
+      "v6_block": 19
+    },
+    {
+      "image_index": 1,
+      "status": "adjudicated",
       "text": "小长耳弱，以",
       "v6_block": 20
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 24
     }

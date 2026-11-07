@@ -105,13 +105,13 @@
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "a8f90e7e3e5986ea"
     },
     {
       "block_index": 18,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "2b93ef0ed95842d6"
     },
     {
@@ -171,7 +171,7 @@
     {
       "block_index": 28,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "e58513cc30682774"
     },
     {
@@ -219,7 +219,7 @@
     {
       "block_index": 36,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "4a9b71fe7b8d7cf0"
     },
     {
@@ -237,7 +237,7 @@
     {
       "block_index": 39,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "b3cdbad32c07954d"
     },
     {
@@ -411,7 +411,7 @@
     {
       "block_index": 68,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "8f303024f8293c8a"
     },
     {
@@ -435,7 +435,7 @@
     {
       "block_index": 72,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "f57cb6f92c1e25b0"
     },
     {
@@ -1094,10 +1094,10 @@
     }
   ],
   "counts": {
-    "consensus": 169,
-    "corrected": 6,
+    "adjudicated": 14,
+    "consensus": 164,
+    "corrected": 10,
     "punct_rule": 1,
-    "queued": 13,
     "watermark": 4
   },
   "engine_audit": {
@@ -1115,70 +1115,71 @@
     "version": "1.4.4"
   },
   "id": "dashen.66d6af77c1beb0737fafccde",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": " 第四学年·第五、六章！",
       "v6_block": 36
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 63
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 71
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "四大觉院收略进行园台音挂比拼限时流续签题的能力",
       "v6_block": 75
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 80
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 94
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 95
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 110
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 111
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 118
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 124
     }

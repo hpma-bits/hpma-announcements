@@ -99,13 +99,13 @@
     {
       "block_index": 16,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "31fddbde8776c100"
     },
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "ad56a62b44fc7131"
     },
     {
@@ -129,7 +129,7 @@
     {
       "block_index": 21,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "9d24f857d6c4232e"
     },
     {
@@ -141,7 +141,7 @@
     {
       "block_index": 23,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "dbf4ef1787b662a1"
     },
     {
@@ -153,7 +153,7 @@
     {
       "block_index": 25,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "e3cd5070f03351fd"
     },
     {
@@ -351,7 +351,7 @@
     {
       "block_index": 58,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "4a4a7f06d8d40de2"
     },
     {
@@ -428,10 +428,11 @@
     }
   ],
   "counts": {
-    "consensus": 63,
-    "corrected": 1,
+    "adjudicated": 6,
+    "consensus": 61,
+    "corrected": 2,
+    "dropped": 2,
     "punct_rule": 1,
-    "queued": 7,
     "watermark": 2
   },
   "engine_audit": {
@@ -449,22 +450,23 @@
     "version": "1.4.4"
   },
   "id": "dashen.629f3804849ee20001b61551",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "间待定，请期待与客神奇动物的再次相遇吧!",
       "v6_block": 17
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 19
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "平衡性调整心",
       "v6_block": 25
     }

@@ -39,7 +39,7 @@
     {
       "block_index": 6,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "f053d81aa9afc3d1"
     },
     {
@@ -63,7 +63,7 @@
     {
       "block_index": 10,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "66e92e779f9fcca3"
     },
     {
@@ -195,7 +195,7 @@
     {
       "block_index": 12,
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "a2fc3be222536e64"
     },
     {
@@ -207,7 +207,7 @@
     {
       "block_index": 14,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "bcfcf2cb0fecbb93"
     },
     {
@@ -369,7 +369,7 @@
     {
       "block_index": 0,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "d84a027b9e3b943a"
     },
     {
@@ -500,10 +500,10 @@
     }
   ],
   "counts": {
-    "consensus": 75,
-    "corrected": 1,
+    "adjudicated": 8,
+    "consensus": 72,
+    "corrected": 2,
     "punct_rule": 1,
-    "queued": 6,
     "watermark": 4
   },
   "engine_audit": {
@@ -521,28 +521,29 @@
     "version": "1.4.4"
   },
   "id": "dashen.64108516922f8100014c2c69",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2",
       "v6_block": 7
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "新上架商品“飞来币·传说”，巫师可消耗50个",
       "v6_block": 13
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 16
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 1
     }

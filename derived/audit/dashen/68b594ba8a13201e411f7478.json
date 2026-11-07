@@ -81,7 +81,7 @@
     {
       "block_index": 13,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "17792990d35f33c0"
     },
     {
@@ -93,7 +93,7 @@
     {
       "block_index": 15,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "3b3a1f830477ab6a"
     },
     {
@@ -147,7 +147,7 @@
     {
       "block_index": 3,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "0a7c21f07c0e9a71"
     },
     {
@@ -159,7 +159,7 @@
     {
       "block_index": 5,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "dde693f2fc12e26c"
     },
     {
@@ -183,13 +183,13 @@
     {
       "block_index": 9,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "94e94420ee2f4de9"
     },
     {
       "block_index": 10,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "548d9b7d1daf129e"
     },
     {
@@ -213,7 +213,7 @@
     {
       "block_index": 14,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "c4f057580d8cda5c"
     },
     {
@@ -225,13 +225,13 @@
     {
       "block_index": 16,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "df3003e879151979"
     },
     {
       "block_index": 17,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e3784c37c4fb1fa2"
     },
     {
@@ -291,7 +291,7 @@
     {
       "block_index": 27,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "dce8622080b518a4"
     },
     {
@@ -309,7 +309,7 @@
     {
       "block_index": 30,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "069d0d33a81e99e4"
     },
     {
@@ -321,7 +321,7 @@
     {
       "block_index": 32,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "ca934558910c3294"
     },
     {
@@ -363,7 +363,7 @@
     {
       "block_index": 0,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "27f8ed562c1b365b"
     },
     {
@@ -555,7 +555,7 @@
     {
       "block_index": 32,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "277ac4d5de2d0675"
     },
     {
@@ -567,7 +567,7 @@
     {
       "block_index": 34,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "fefea5ecef0363f4"
     },
     {
@@ -585,7 +585,7 @@
     {
       "block_index": 37,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "8f83a91d1ceab155"
     },
     {
@@ -951,7 +951,7 @@
     {
       "block_index": 14,
       "image_index": 5,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "4d287b4368f2b12d"
     },
     {
@@ -987,13 +987,13 @@
     {
       "block_index": 20,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f5d3d256fab33a7c"
     },
     {
       "block_index": 21,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "661e3635b3bc313e"
     },
     {
@@ -1251,7 +1251,7 @@
     {
       "block_index": 27,
       "image_index": 6,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "2435d9a8d3dab089"
     },
     {
@@ -1328,10 +1328,11 @@
     }
   ],
   "counts": {
-    "consensus": 204,
-    "corrected": 5,
+    "adjudicated": 19,
+    "consensus": 186,
+    "corrected": 14,
+    "dropped": 1,
     "punct_rule": 4,
-    "queued": 10,
     "watermark": 6
   },
   "engine_audit": {
@@ -1349,54 +1350,61 @@
     "version": "1.4.4"
   },
   "id": "dashen.68b594ba8a13201e411f7478",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 6
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "试手气吧！",
       "v6_block": 15
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 17
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "丁联回之河",
       "v6_block": 18
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "*全新“禁林”挑战区域限时开启！",
       "v6_block": 28
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "贼”、“预言水晶球”在禁林深处等待对决!巫师完成“魔",
       "v6_block": 32
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "启挑战!",
       "v6_block": 34
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "涂色！还可与好友一起交换颜色，创造最美画作！",
       "v6_block": 33
+    },
+    {
+      "image_index": 6,
+      "status": "adjudicated",
+      "text": "1.修爱北战斗场景中扫带飞行速度异常的间趣。",
+      "v6_block": 27
     }
   ]
 }

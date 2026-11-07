@@ -27,7 +27,7 @@
     {
       "block_index": 4,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "cc964877e9a0f64b"
     },
     {
@@ -45,13 +45,13 @@
     {
       "block_index": 7,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "163871a256cf3354"
     },
     {
       "block_index": 8,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "1e524d84847298cb"
     },
     {
@@ -129,7 +129,7 @@
     {
       "block_index": 21,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "f9072679ecb72add"
     },
     {
@@ -231,13 +231,13 @@
     {
       "block_index": 13,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "88d5840fab773af6"
     },
     {
       "block_index": 14,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "d0974a4fa1fa7c2d"
     },
     {
@@ -261,13 +261,13 @@
     {
       "block_index": 18,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "6cd52a88da97ab5c"
     },
     {
       "block_index": 19,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "f12bfc77ced7cf37"
     },
     {
@@ -315,7 +315,7 @@
     {
       "block_index": 27,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "c788b53672b92305"
     },
     {
@@ -327,7 +327,7 @@
     {
       "block_index": 29,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e7b0c01604266fd8"
     },
     {
@@ -338,8 +338,10 @@
     }
   ],
   "counts": {
-    "consensus": 47,
-    "queued": 10,
+    "adjudicated": 12,
+    "consensus": 42,
+    "corrected": 2,
+    "dropped": 3,
     "watermark": 4
   },
   "engine_audit": {
@@ -357,34 +359,47 @@
     "version": "1.4.4"
   },
   "id": "dashen.623078e474424700018f7cb8",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
+      "text": "生文州",
+      "v6_block": 4
+    },
+    {
+      "image_index": 1,
+      "status": "adjudicated",
       "text": "摩金夫人长袍专卖店上架三款宝石售卖的新系列时装“柔绒风尚”，“温",
       "v6_block": 6
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“温",
       "v6_block": 7
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "本次禁林DOCC关的名平师作审统计和摩器使田送情",
       "v6_block": 23
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
+      "text": "现在可以显尔社团区域排名。",
+      "v6_block": 13
+    },
+    {
+      "image_index": 2,
+      "status": "adjudicated",
       "text": "M A GIC",
       "v6_block": 25
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "A W A K E N E D",
       "v6_block": 26
     }

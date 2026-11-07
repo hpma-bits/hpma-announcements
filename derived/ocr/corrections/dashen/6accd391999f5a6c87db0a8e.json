@@ -231,6 +231,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6accd391999f5a6c87db0a8e 5 16"
+    },
+    {
+      "image_index": 2,
+      "block_index": 19,
+      "original": "灯交相辉映，昏黄微光在暗处投下形态各异的诡笑",
+      "corrected": "灯交相辉映，昏黄微光在暗处投下形态各异的诡谲笑",
+      "reason": "漏「谲」",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6accd391999f5a6c87db0a8e 2 19"
     }
   ]
 }

@@ -138,6 +138,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6adf31ceee0069337849bde8 3 14"
+    },
+    {
+      "image_index": 1,
+      "block_index": 14,
+      "original": "焕新时装“浮白之诗·夜行”与“浮白之诗·星雾”也将同期",
+      "corrected": "焕新时装“浮白之诗·夜行”与“浮白之诗·星霁”也将同期",
+      "reason": "雾→霁（crop 清晰：雨+齐）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6adf31ceee0069337849bde8 1 14"
     }
   ]
 }

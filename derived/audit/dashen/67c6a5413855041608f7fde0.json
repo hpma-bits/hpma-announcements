@@ -21,7 +21,7 @@
     {
       "block_index": 3,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "b926e01e27caba4c"
     },
     {
@@ -105,7 +105,7 @@
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e684e91edc576cf4"
     },
     {
@@ -279,7 +279,7 @@
     {
       "block_index": 20,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "b722d899fa640818"
     },
     {
@@ -333,7 +333,7 @@
     {
       "block_index": 29,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "df6180e1c2287385"
     },
     {
@@ -363,7 +363,7 @@
     {
       "block_index": 34,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "8a4d40a733f27d64"
     },
     {
@@ -375,7 +375,7 @@
     {
       "block_index": 36,
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "0b98d9fd09265857"
     },
     {
@@ -387,13 +387,13 @@
     {
       "block_index": 38,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "d401c02b5a72ac80"
     },
     {
       "block_index": 39,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "0f7b409205c9ca26"
     },
     {
@@ -423,7 +423,7 @@
     {
       "block_index": 44,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "472a3a9c8fb5f59d"
     },
     {
@@ -465,7 +465,7 @@
     {
       "block_index": 5,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "22fe36817b9764ba"
     },
     {
@@ -525,7 +525,7 @@
     {
       "block_index": 15,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "50c78ca9682f92d6"
     },
     {
@@ -621,7 +621,7 @@
     {
       "block_index": 31,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "57cfa37852d3b3d4"
     },
     {
@@ -633,7 +633,7 @@
     {
       "block_index": 33,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "72cf87a05aa108bd"
     },
     {
@@ -723,7 +723,7 @@
     {
       "block_index": 0,
       "image_index": 4,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "dc74f2c01f56a810"
     },
     {
@@ -813,7 +813,7 @@
     {
       "block_index": 15,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "6bccca4e72734203"
     },
     {
@@ -891,7 +891,7 @@
     {
       "block_index": 28,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "baefa06e179a08a6"
     },
     {
@@ -915,7 +915,7 @@
     {
       "block_index": 32,
       "image_index": 4,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "e5a9a1a558a95ecb"
     },
     {
@@ -969,7 +969,7 @@
     {
       "block_index": 41,
       "image_index": 4,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "a0ac3f696e31423b"
     },
     {
@@ -1095,7 +1095,7 @@
     {
       "block_index": 14,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "29492a2c07e161f8"
     },
     {
@@ -1251,7 +1251,7 @@
     {
       "block_index": 40,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "88b7fcbd87ba3688"
     },
     {
@@ -1455,13 +1455,13 @@
     {
       "block_index": 33,
       "image_index": 6,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "325d6bb377403536"
     },
     {
       "block_index": 34,
       "image_index": 6,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "e8cb35a01dde1667"
     },
     {
@@ -1473,19 +1473,19 @@
     {
       "block_index": 36,
       "image_index": 6,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "7601a460cd517c19"
     },
     {
       "block_index": 37,
       "image_index": 6,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "efe7f99a2456359d"
     },
     {
       "block_index": 38,
       "image_index": 6,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "44f8522dd33891dd"
     },
     {
@@ -1497,7 +1497,7 @@
     {
       "block_index": 40,
       "image_index": 6,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "6f70b8075d540ddf"
     },
     {
@@ -1509,7 +1509,7 @@
     {
       "block_index": 42,
       "image_index": 6,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "3ee01ff8d52502e1"
     },
     {
@@ -1538,10 +1538,11 @@
     }
   ],
   "counts": {
-    "consensus": 228,
-    "corrected": 5,
+    "adjudicated": 15,
+    "consensus": 214,
+    "corrected": 19,
+    "dropped": 5,
     "punct_rule": 4,
-    "queued": 19,
     "watermark": 6
   },
   "engine_audit": {
@@ -1559,40 +1560,47 @@
     "version": "1.4.4"
   },
   "id": "dashen.67c6a5413855041608f7fde0",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S12·凡下高布石之影",
       "v6_block": 4
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "上牌中胜“价敦温游”作为奖励",
       "v6_block": 17
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“S12高布石赛季·凡下高布石之影”",
       "v6_block": 34
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 35
     },
     {
+      "image_index": 3,
+      "status": "adjudicated",
+      "text": "担心猫头鹰越养越多坐吃山空?该让它们工作啦！",
+      "v6_block": 33
+    },
+    {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "日语语音下架心",
       "v6_block": 29
     },
     {
       "image_index": 6,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "16、修复了活动“手工高布石大师”的相关问题:",
       "v6_block": 34
     }

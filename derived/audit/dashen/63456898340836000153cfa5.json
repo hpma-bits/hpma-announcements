@@ -93,7 +93,7 @@
     {
       "block_index": 15,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "cacdfbd5f3fa4f37"
     },
     {
@@ -153,7 +153,7 @@
     {
       "block_index": 25,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "187a1d20421c8f25"
     },
     {
@@ -171,7 +171,7 @@
     {
       "block_index": 28,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "84c9db9644b46b33"
     },
     {
@@ -182,9 +182,10 @@
     }
   ],
   "counts": {
-    "consensus": 26,
+    "adjudicated": 4,
+    "consensus": 24,
+    "dropped": 1,
     "punct_rule": 1,
-    "queued": 3,
     "watermark": 2
   },
   "engine_audit": {
@@ -202,16 +203,17 @@
     "version": "1.4.4"
   },
   "id": "dashen.63456898340836000153cfa5",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“妖怪书”等）在，“棋子-主教”效思触",
       "v6_block": 24
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“犀免单”",
       "v6_block": 25
     }

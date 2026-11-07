@@ -51,7 +51,7 @@
     {
       "block_index": 8,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "6a8675633e1ff72f"
     },
     {
@@ -105,7 +105,7 @@
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e255811c1cc1d2d3"
     },
     {
@@ -123,7 +123,7 @@
     {
       "block_index": 20,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "39163543e87fdd68"
     },
     {
@@ -218,9 +218,10 @@
     }
   ],
   "counts": {
-    "consensus": 30,
-    "corrected": 2,
-    "queued": 3,
+    "adjudicated": 2,
+    "consensus": 29,
+    "corrected": 3,
+    "dropped": 1,
     "watermark": 2
   },
   "engine_audit": {
@@ -238,10 +239,11 @@
     "version": "1.4.4"
   },
   "id": "dashen.64871caf05953f000161c9be",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "选洋款时，也会同时获得原版时装(即玩家将",
       "v6_block": 17
     }

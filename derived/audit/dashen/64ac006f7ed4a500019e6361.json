@@ -111,7 +111,7 @@
     {
       "block_index": 18,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "9a33daaa037bc874"
     },
     {
@@ -435,7 +435,7 @@
     {
       "block_index": 5,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "f21701f6a1820b33"
     },
     {
@@ -513,7 +513,7 @@
     {
       "block_index": 18,
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "a62f61aee14dd8ff"
     },
     {
@@ -555,7 +555,7 @@
     {
       "block_index": 25,
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "161307a68b317628"
     },
     {
@@ -597,13 +597,13 @@
     {
       "block_index": 32,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "93fb1267d19ff89d"
     },
     {
       "block_index": 33,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "72ae7e5d4e024f95"
     },
     {
@@ -681,7 +681,7 @@
     {
       "block_index": 46,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "8826ef2ecf7bc570"
     },
     {
@@ -819,7 +819,7 @@
     {
       "block_index": 20,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "7e6b5de8ca153204"
     },
     {
@@ -1095,7 +1095,7 @@
     {
       "block_index": 29,
       "image_index": 5,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "78d27ee7aa270da8"
     },
     {
@@ -1149,7 +1149,7 @@
     {
       "block_index": 38,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "65dcd03b9922e330"
     },
     {
@@ -1286,10 +1286,11 @@
     }
   ],
   "counts": {
-    "consensus": 196,
-    "corrected": 3,
+    "adjudicated": 4,
+    "consensus": 191,
+    "corrected": 7,
+    "dropped": 3,
     "punct_rule": 4,
-    "queued": 5,
     "watermark": 6
   },
   "engine_audit": {
@@ -1307,5 +1308,13 @@
     "version": "1.4.4"
   },
   "id": "dashen.64ac006f7ed4a500019e6361",
-  "v6_only": []
+  "inserts": [],
+  "v6_only": [
+    {
+      "image_index": 1,
+      "status": "adjudicated",
+      "text": "a",
+      "v6_block": 18
+    }
+  ]
 }

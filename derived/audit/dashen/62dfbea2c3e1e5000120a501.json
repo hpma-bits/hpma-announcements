@@ -93,7 +93,7 @@
     {
       "block_index": 15,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b93ce1352f3d6b5e"
     },
     {
@@ -117,13 +117,13 @@
     {
       "block_index": 19,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "7ef89b8957e7771a"
     },
     {
       "block_index": 20,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "aa44cea24636a5d2"
     },
     {
@@ -171,7 +171,7 @@
     {
       "block_index": 0,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "f1cb48b3c8e9da7e"
     },
     {
@@ -213,7 +213,7 @@
     {
       "block_index": 7,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "b132d9c233ff74a1"
     },
     {
@@ -273,7 +273,7 @@
     {
       "block_index": 17,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "6ec646fad391c988"
     },
     {
@@ -321,7 +321,7 @@
     {
       "block_index": 7,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "bbb04265d317e682"
     },
     {
@@ -357,7 +357,7 @@
     {
       "block_index": 13,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "037b8cc4e853f2b7"
     },
     {
@@ -429,7 +429,7 @@
     {
       "block_index": 9,
       "image_index": 4,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "d848e8dad027087d"
     },
     {
@@ -453,7 +453,7 @@
     {
       "block_index": 13,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "e4d61edafd88f11b"
     },
     {
@@ -489,7 +489,7 @@
     {
       "block_index": 1,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "9490103c8e45792a"
     },
     {
@@ -650,10 +650,10 @@
     }
   ],
   "counts": {
-    "consensus": 89,
-    "corrected": 1,
+    "adjudicated": 5,
+    "consensus": 83,
+    "corrected": 10,
     "punct_rule": 7,
-    "queued": 8,
     "watermark": 6
   },
   "engine_audit": {
@@ -671,22 +671,23 @@
     "version": "1.4.4"
   },
   "id": "dashen.62dfbea2c3e1e5000120a501",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "幸运轮盘换期，全新奖品上架!",
       "v6_block": 16
     },
     {
       "image_index": 1,
-      "status": "queued",
-      "text": "来一试手气吧！",
-      "v6_block": 20
+      "status": "adjudicated",
+      "text": "“击来预言”时装上架",
+      "v6_block": 22
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 1
     }

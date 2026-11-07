@@ -209,6 +209,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 3 24"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "外观“炽火桀骜”、传说品质猫头鹰“犀利信使”。",
+      "corrected": "外观“烬火桀骜”、传说品质猫头鹰“犀利信使”。",
+      "reason": "炽→烬",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 1 11"
+    },
+    {
+      "image_index": 1,
+      "block_index": 25,
+      "original": "在昏暗的房间里，你点亮魔杖，想找画嗨的森源法觉醒",
+      "corrected": "在昏暗的房间里，你点亮魔杖，想找画的来源",
+      "reason": "「找」被水印覆盖按上下文补全；尾部水印不可恢复",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 1 25"
+    },
+    {
+      "image_index": 3,
+      "block_index": 40,
+      "original": "学院宝箱即可获得淘金令，最多获得神哈利波特魔法觉醒",
+      "corrected": "学院宝箱即可获得淘金令，最多获得70个",
+      "reason": "「得」被水印覆盖；70个 可见",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 3 40"
+    },
+    {
+      "image_index": 5,
+      "block_index": 13,
+      "original": "一全新决斗加载特效“顽闹时间到”，用恶作剧的欢",
+      "corrected": "——全新决斗加载特效“顽闹时间到”，用恶作剧的欢",
+      "reason": "行首双破折号（v4 误作一）",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 5 13"
     }
   ]
 }

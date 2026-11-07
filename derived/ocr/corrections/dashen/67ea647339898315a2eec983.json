@@ -169,6 +169,56 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 6 40"
+    },
+    {
+      "image_index": 2,
+      "block_index": 4,
+      "original": "历史悠久的巫师游戏一高布石再度风靡霍格沃茨！",
+      "corrected": "历史悠久的巫师游戏——高布石再度风靡霍格沃茨！",
+      "reason": "d3-comp05 #15 crop: two-em dash —— printed (v4 一 / v6 none both wrong); trailing ！ full-width; identical line corrected in verdicts-v4_only-p2 67d8325a img1 b19",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 2 4"
+    },
+    {
+      "image_index": 4,
+      "block_index": 40,
+      "original": "碧带来了新消息！",
+      "corrected": "葭碧带来了新消息！",
+      "reason": "d3-comp07 #17 crop: 葭碧 in red; v4 missed 葭; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 4 40"
+    },
+    {
+      "image_index": 4,
+      "block_index": 41,
+      "original": "原本于“疯狂藤蔓·碧商店”中售卖的季节家具将限时",
+      "corrected": "原本于“疯狂藤蔓·葭碧商店”中售卖的季节家具将限时",
+      "reason": "d3-comp07 #18 crop: interpunct · between 藤蔓 and 葭碧商店 printed, v4 dropped it; 葭 in red, v4 dropped it; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 4 41"
+    },
+    {
+      "image_index": 4,
+      "block_index": 43,
+      "original": "薛碧提醒各位巫师：请在对应季节前往采购！",
+      "corrected": "葭碧提醒各位巫师：请在对应季节前往采购！",
+      "reason": "d3-comp07 #19 crop: printed 葭碧; v4 misread 薛碧; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 4 43"
+    },
+    {
+      "image_index": 6,
+      "block_index": 8,
+      "original": "5、修复了“疯狂藤蔓·碧商店”中，中国咬人甘蓝高价",
+      "corrected": "5、修复了“疯狂藤蔓·葭碧商店”中，中国咬人甘蓝高价",
+      "reason": "d3-comp08 #20 crop: interpunct · and red 葭碧 printed; v4 dropped both; equals v6 reading",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 6 8"
     }
   ]
 }

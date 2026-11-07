@@ -63,7 +63,7 @@
     {
       "block_index": 10,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f15291fc141f74d6"
     },
     {
@@ -105,7 +105,7 @@
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "94fd2b72c4db10fc"
     },
     {
@@ -135,7 +135,7 @@
     {
       "block_index": 22,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "c3a16cc274836114"
     },
     {
@@ -159,7 +159,7 @@
     {
       "block_index": 26,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "87b9914fdbb40a56"
     },
     {
@@ -201,7 +201,7 @@
     {
       "block_index": 0,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "f8a9e758757d2394"
     },
     {
@@ -249,7 +249,7 @@
     {
       "block_index": 8,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "3077a13824ebf2b2"
     },
     {
@@ -261,7 +261,7 @@
     {
       "block_index": 10,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "bb1aa541a1586dbd"
     },
     {
@@ -303,7 +303,7 @@
     {
       "block_index": 17,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "5e1bdd4591f94272"
     },
     {
@@ -351,7 +351,7 @@
     {
       "block_index": 25,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "159f3032a9e0c6db"
     },
     {
@@ -483,7 +483,7 @@
     {
       "block_index": 19,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "25f35f7f7676a52d"
     },
     {
@@ -495,13 +495,13 @@
     {
       "block_index": 21,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "a42d8e30d4f4de3a"
     },
     {
       "block_index": 22,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "08b96d730020a250"
     },
     {
@@ -513,7 +513,7 @@
     {
       "block_index": 24,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "f43415ba7b69ea5c"
     },
     {
@@ -537,7 +537,7 @@
     {
       "block_index": 28,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "de335ac812675f38"
     },
     {
@@ -561,7 +561,7 @@
     {
       "block_index": 32,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "e19acfbdeb5a25ea"
     },
     {
@@ -597,7 +597,7 @@
     {
       "block_index": 38,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "55319ca5b3f2a6a5"
     },
     {
@@ -615,7 +615,7 @@
     {
       "block_index": 0,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "c24ccb83c9322d71"
     },
     {
@@ -645,7 +645,7 @@
     {
       "block_index": 5,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "51722a8d35c1e05c"
     },
     {
@@ -675,7 +675,7 @@
     {
       "block_index": 10,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5d8e953d8593d64a"
     },
     {
@@ -687,7 +687,7 @@
     {
       "block_index": 12,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "87f44ba0c1a81f18"
     },
     {
@@ -705,7 +705,7 @@
     {
       "block_index": 15,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "72896d027639c8a8"
     },
     {
@@ -807,7 +807,7 @@
     {
       "block_index": 32,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "c141ff98d1bf5dbb"
     },
     {
@@ -981,7 +981,7 @@
     {
       "block_index": 21,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "9ed8d096ec3dc136"
     },
     {
@@ -993,7 +993,7 @@
     {
       "block_index": 23,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "19368d42a52e545e"
     },
     {
@@ -1077,7 +1077,7 @@
     {
       "block_index": 37,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "6a13008045dc75c0"
     },
     {
@@ -1095,7 +1095,7 @@
     {
       "block_index": 40,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "24689bd88f2e3c9f"
     },
     {
@@ -1179,7 +1179,7 @@
     {
       "block_index": 54,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "df0b3e0b63baaf1a"
     },
     {
@@ -1389,7 +1389,7 @@
     {
       "block_index": 34,
       "image_index": 6,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "5ef6f3ff7a36d629"
     },
     {
@@ -1418,10 +1418,11 @@
     }
   ],
   "counts": {
-    "consensus": 209,
-    "corrected": 8,
+    "adjudicated": 16,
+    "consensus": 194,
+    "corrected": 27,
+    "dropped": 1,
     "punct_rule": 2,
-    "queued": 21,
     "watermark": 4
   },
   "engine_audit": {
@@ -1439,52 +1440,53 @@
     "version": "1.4.4"
   },
   "id": "dashen.667977af9a58390f4abe8cbd",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "获得本上牌中胜斤",
       "v6_block": 17
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "还可在無全中请资蒂换",
       "v6_block": 18
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "收励",
       "v6_block": 19
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2",
       "v6_block": 30
     },
     {
       "image_index": 2,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 1
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 1
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 2
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "供不应求！嗅幻草行情扑朔迷离",
       "v6_block": 31
     }

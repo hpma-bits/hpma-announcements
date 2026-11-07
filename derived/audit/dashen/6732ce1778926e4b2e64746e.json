@@ -93,7 +93,7 @@
     {
       "block_index": 15,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "e318cde8449aa824"
     },
     {
@@ -111,7 +111,7 @@
     {
       "block_index": 18,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "cbc90de450b7e267"
     },
     {
@@ -135,7 +135,7 @@
     {
       "block_index": 22,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e0c243b8964d9445"
     },
     {
@@ -267,7 +267,7 @@
     {
       "block_index": 44,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "c60a93242db4ddee"
     },
     {
@@ -315,7 +315,7 @@
     {
       "block_index": 52,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "2bc6747e7de332ef"
     },
     {
@@ -393,7 +393,7 @@
     {
       "block_index": 65,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "e1f29b27732fd264"
     },
     {
@@ -471,7 +471,7 @@
     {
       "block_index": 78,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "1a235eb4e54abe7c"
     },
     {
@@ -489,7 +489,7 @@
     {
       "block_index": 81,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5130e9328d94b72b"
     },
     {
@@ -717,7 +717,7 @@
     {
       "block_index": 119,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "8664034a4fae4baf"
     },
     {
@@ -831,7 +831,7 @@
     {
       "block_index": 138,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "e8e677c838ad2117"
     },
     {
@@ -891,7 +891,7 @@
     {
       "block_index": 148,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "b3041391bde80ad8"
     },
     {
@@ -987,7 +987,7 @@
     {
       "block_index": 164,
       "image_index": 1,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "040b65cb9455cd82"
     },
     {
@@ -1185,7 +1185,7 @@
     {
       "block_index": 197,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "20d9c72690daf49a"
     },
     {
@@ -1563,7 +1563,7 @@
     {
       "block_index": 260,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "37cf1f2795b30d01"
     },
     {
@@ -1605,7 +1605,7 @@
     {
       "block_index": 267,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "423cf0c752105098"
     },
     {
@@ -1628,10 +1628,11 @@
     }
   ],
   "counts": {
-    "consensus": 259,
-    "corrected": 6,
+    "adjudicated": 23,
+    "consensus": 247,
+    "corrected": 12,
+    "dropped": 1,
     "punct_rule": 1,
-    "queued": 18,
     "watermark": 2
   },
   "engine_audit": {
@@ -1649,94 +1650,95 @@
     "version": "1.4.4"
   },
   "id": "dashen.6732ce1778926e4b2e64746e",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "SI0·冬夜故事谈",
       "v6_block": 4
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "雨人”作头将励",
       "v6_block": 17
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 23
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 28
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "S",
       "v6_block": 43
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2",
       "v6_block": 44
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": " S10童话赛季·赛季奖励更新",
       "v6_block": 69
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 113
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "*“金加隆的号角”上架！",
       "v6_block": 125
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "越的能力吧!",
       "v6_block": 155
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 158
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“林中蹊径”挑战区城更新",
       "v6_block": 162
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "a",
       "v6_block": 168
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "26、统一了“凯文.法雷尔”的译名，修正此前译为“法瑞",
       "v6_block": 272
     },
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "件与服装状态合出现保存先效的问题",
       "v6_block": 279
     }

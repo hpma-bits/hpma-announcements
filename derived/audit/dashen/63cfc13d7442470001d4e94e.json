@@ -153,7 +153,7 @@
     {
       "block_index": 25,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "eebf488b79651bbb"
     },
     {
@@ -213,7 +213,7 @@
     {
       "block_index": 35,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "463689d494bd5228"
     },
     {
@@ -261,7 +261,7 @@
     {
       "block_index": 43,
       "image_index": 1,
-      "status": "queued",
+      "status": "record",
       "text_sha256": "eac0a73fbe2a36bd"
     },
     {
@@ -296,10 +296,11 @@
     }
   ],
   "counts": {
-    "consensus": 43,
-    "corrected": 1,
+    "adjudicated": 2,
+    "consensus": 41,
+    "corrected": 2,
     "punct_rule": 2,
-    "queued": 2,
+    "record": 1,
     "watermark": 2
   },
   "engine_audit": {
@@ -317,10 +318,11 @@
     "version": "1.4.4"
   },
   "id": "dashen.63cfc13d7442470001d4e94e",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 36
     }

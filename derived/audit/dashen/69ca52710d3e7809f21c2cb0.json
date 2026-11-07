@@ -27,7 +27,7 @@
     {
       "block_index": 4,
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "d8aedc1db6aef8fe"
     },
     {
@@ -105,7 +105,7 @@
     {
       "block_index": 17,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "31380043c8b65c8e"
     },
     {
@@ -129,7 +129,7 @@
     {
       "block_index": 21,
       "image_index": 1,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "cf64b6ca352d2ca7"
     },
     {
@@ -243,13 +243,13 @@
     {
       "block_index": 40,
       "image_index": 1,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "e64de8a5e11591a8"
     },
     {
       "block_index": 41,
       "image_index": 1,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "10bc284809fb7bcd"
     },
     {
@@ -315,7 +315,7 @@
     {
       "block_index": 7,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "4f54841a7bf712b6"
     },
     {
@@ -381,7 +381,7 @@
     {
       "block_index": 18,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "ff6588731787b04d"
     },
     {
@@ -417,7 +417,7 @@
     {
       "block_index": 24,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "a434ad45d5bdb52a"
     },
     {
@@ -447,19 +447,19 @@
     {
       "block_index": 29,
       "image_index": 2,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "1bbb2e575c30956f"
     },
     {
       "block_index": 30,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "2fdb1229fd384369"
     },
     {
       "block_index": 31,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "8ae3c10056a24ade"
     },
     {
@@ -507,7 +507,7 @@
     {
       "block_index": 39,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "50c78ca9682f92d6"
     },
     {
@@ -555,7 +555,7 @@
     {
       "block_index": 47,
       "image_index": 2,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "2484cfe7c5e79d23"
     },
     {
@@ -603,13 +603,13 @@
     {
       "block_index": 55,
       "image_index": 2,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "78a569ca841dc176"
     },
     {
       "block_index": 56,
       "image_index": 2,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "c226c5717bedf804"
     },
     {
@@ -663,7 +663,7 @@
     {
       "block_index": 6,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "29ecd638866c37fa"
     },
     {
@@ -735,7 +735,7 @@
     {
       "block_index": 18,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "a07907cfe138bb35"
     },
     {
@@ -753,7 +753,7 @@
     {
       "block_index": 21,
       "image_index": 3,
-      "status": "queued",
+      "status": "record",
       "text_sha256": "6e78ad4e295a8556"
     },
     {
@@ -777,7 +777,7 @@
     {
       "block_index": 25,
       "image_index": 3,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "b2263869bdd0da10"
     },
     {
@@ -795,7 +795,7 @@
     {
       "block_index": 28,
       "image_index": 3,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "6802e0524cc5e866"
     },
     {
@@ -903,7 +903,7 @@
     {
       "block_index": 46,
       "image_index": 3,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "cd8adfab1312e44a"
     },
     {
@@ -957,7 +957,7 @@
     {
       "block_index": 55,
       "image_index": 3,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "c640da3dd75d564c"
     },
     {
@@ -975,7 +975,7 @@
     {
       "block_index": 58,
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "107b3e7329ec4151"
     },
     {
@@ -1005,7 +1005,7 @@
     {
       "block_index": 0,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "50d2cbe463e49a7d"
     },
     {
@@ -1017,7 +1017,7 @@
     {
       "block_index": 2,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "766a3852101d5b79"
     },
     {
@@ -1029,13 +1029,13 @@
     {
       "block_index": 4,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "6d6ebc00d5406839"
     },
     {
       "block_index": 5,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "0b201e2689480d6a"
     },
     {
@@ -1077,7 +1077,7 @@
     {
       "block_index": 12,
       "image_index": 4,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5d8e953d8593d64a"
     },
     {
@@ -1185,13 +1185,13 @@
     {
       "block_index": 30,
       "image_index": 4,
-      "status": "consensus",
+      "status": "adjudicated",
       "text_sha256": "fa6dddfca05fabcb"
     },
     {
       "block_index": 31,
       "image_index": 4,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "520586a5ce6124cd"
     },
     {
@@ -1269,7 +1269,7 @@
     {
       "block_index": 44,
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text_sha256": "5da896aa95586419"
     },
     {
@@ -1365,7 +1365,7 @@
     {
       "block_index": 5,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "7e99c710e4622a6d"
     },
     {
@@ -1377,49 +1377,49 @@
     {
       "block_index": 7,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "9f72b7166490e441"
     },
     {
       "block_index": 8,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "418503f9d44bd175"
     },
     {
       "block_index": 9,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "372800bd8062b31b"
     },
     {
       "block_index": 10,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "8d3ae556e055d3c3"
     },
     {
       "block_index": 11,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "9794873e2c2c987d"
     },
     {
       "block_index": 12,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "a5557c7f72fa9b73"
     },
     {
       "block_index": 13,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "5d2555a47ea08858"
     },
     {
       "block_index": 14,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "9351b549ebc7bd98"
     },
     {
@@ -1431,7 +1431,7 @@
     {
       "block_index": 16,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "cb431fa2cce30a4f"
     },
     {
@@ -1443,25 +1443,25 @@
     {
       "block_index": 18,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "78f70b5a09a997de"
     },
     {
       "block_index": 19,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "ad0c6ef6ca7c2354"
     },
     {
       "block_index": 20,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "cafd4886883aaa98"
     },
     {
       "block_index": 21,
       "image_index": 5,
-      "status": "queued",
+      "status": "corrected",
       "text_sha256": "2a036ef91a7e16bd"
     },
     {
@@ -1677,19 +1677,19 @@
     {
       "block_index": 57,
       "image_index": 5,
-      "status": "consensus",
+      "status": "corrected",
       "text_sha256": "cb6e445868244145"
     },
     {
       "block_index": 58,
       "image_index": 5,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "f3e6ce65909fa5b1"
     },
     {
       "block_index": 59,
       "image_index": 5,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "3ae92cf19bb0ebd3"
     },
     {
@@ -1911,7 +1911,7 @@
     {
       "block_index": 30,
       "image_index": 6,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "1dd64fd68d7560c6"
     },
     {
@@ -1953,7 +1953,7 @@
     {
       "block_index": 37,
       "image_index": 6,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "7fe3a9a482302711"
     },
     {
@@ -2091,7 +2091,7 @@
     {
       "block_index": 60,
       "image_index": 6,
-      "status": "queued",
+      "status": "dropped",
       "text_sha256": "fc9d0e3f3d45042e"
     },
     {
@@ -2114,11 +2114,12 @@
     }
   ],
   "counts": {
-    "consensus": 311,
-    "corrected": 8,
-    "dropped": 1,
+    "adjudicated": 20,
+    "consensus": 280,
+    "corrected": 34,
+    "dropped": 11,
     "punct_rule": 7,
-    "queued": 25,
+    "record": 1,
     "watermark": 5
   },
   "engine_audit": {
@@ -2136,36 +2137,43 @@
     "version": "1.4.4"
   },
   "id": "dashen.69ca52710d3e7809f21c2cb0",
+  "inserts": [],
   "v6_only": [
     {
       "image_index": 1,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "“提线大偶”作为奖励",
       "v6_block": 17
     },
     {
       "image_index": 2,
-      "status": "queued",
-      "text": "*文人居羽毛笔店·全新场景上线！",
-      "v6_block": 25
+      "status": "adjudicated",
+      "text": " 文人居羽毛笔店·全新场景上线！",
+      "v6_block": 24
     },
     {
       "image_index": 3,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "s",
       "v6_block": 1
     },
     {
       "image_index": 4,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "一“学院杯”最佳拍档项目即将开赛！",
       "v6_block": 30
     },
     {
       "image_index": 5,
-      "status": "queued",
+      "status": "adjudicated",
       "text": "2",
       "v6_block": 1
+    },
+    {
+      "image_index": 6,
+      "status": "adjudicated",
+      "text": "交互动作，播放躺姿时不再握持魔杖。",
+      "v6_block": 37
     }
   ]
 }
