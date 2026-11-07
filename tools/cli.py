@@ -14,7 +14,7 @@ import json
 import sys
 from pathlib import Path
 
-from . import archive, audit_compare, audit_status, crop, doctor, edition, ocr_audit
+from . import archive, audit_compare, audit_status, crop, dataset, doctor, edition, ocr_audit
 
 CROP_DIR = Path(".review/crops")
 
@@ -122,6 +122,10 @@ def _audit_status(args: argparse.Namespace) -> int:
     return audit_status.run(soft=args.soft)
 
 
+def _dataset(args: argparse.Namespace) -> int:
+    return dataset.run(check=args.check)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         prog="python -m tools.cli", description="Local tooling for the announcement archive."
@@ -198,6 +202,12 @@ def main(argv: list[str] | None = None) -> int:
         "--soft", action="store_true", help="report queued blocks without failing"
     )
     status_cmd.set_defaults(func=_audit_status)
+
+    dataset_cmd = sub.add_parser(
+        "dataset", help="build dataset/notices.jsonl, the website-facing data row set"
+    )
+    dataset_cmd.add_argument("--check", action="store_true", help="fail when the committed file is stale")
+    dataset_cmd.set_defaults(func=_dataset)
 
     args = parser.parse_args(argv)
     try:
