@@ -1,0 +1,44 @@
+[project]
+name = "hpma-announcements"
+version = "0.1.0"
+description = "Archive of Harry Potter: Magic Awakened update notices: source posts, original images, OCR, correction ledger and readable edition."
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "pytest>=8,<10",
+    "requests>=2.32,<3",
+]
+
+[project.optional-dependencies]
+# The v4 engine of record (collectors/ocr.py default_engine).
+ocr = [
+    "rapidocr-onnxruntime==1.4.4",
+    "onnxruntime>=1.20,<2",
+    "Pillow>=11,<14",
+    # The single opencv distribution for BOTH engines. rapidocr-onnxruntime
+    # 1.4.4 declares opencv-python while rapidocr 3.x declares
+    # opencv-python-headless; both ship the cv2 module and cannot coexist in
+    # one environment. The [tool.uv] override below drops the GUI variant, and
+    # headless satisfies everything the pipeline does (cv2.imread and basic
+    # array ops, no GUI). It also keeps CI/server installs free of libGL/Qt
+    # baggage.
+    "opencv-python-headless>=4.5.1.48,<6",
+]
+# The v6 second reader (PP-OCRv6 small, models bundled in the wheel).
+audit = [
+    "rapidocr==3.10.0",
+    # rapidocr 3.10 does not declare its inference backend as a dependency;
+    # onnxruntime must be requested explicitly.
+    "onnxruntime>=1.20,<2",
+]
+
+[tool.uv]
+package = false
+
+# rapidocr-onnxruntime 1.4.4 hard-depends on opencv-python, which would collide
+# with the opencv-python-headless that rapidocr 3.x needs (both provide cv2).
+# Overriding it with a requirement whose marker never matches removes it from
+# resolution everywhere, leaving opencv-python-headless as the only cv2
+# provider. See the `ocr` extra comment above.
+override-dependencies = [
+    "opencv-python; sys_platform == 'never'",
+]

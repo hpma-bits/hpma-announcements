@@ -90,14 +90,28 @@ first, for consumers that do not want to parse Markdown.
 
 ## Rebuilding
 
+The project is managed with [uv](https://docs.astral.sh/uv/) and a lockfile;
+dependencies live in a project-local `.venv`. Plain `uv sync` installs the
+base dependencies, which is enough for the tests, `verify` and
+`edition --check`; `uv sync --all-extras` adds both OCR engines.
+
 ```bash
-pip install -r requirements.txt
-python -m collectors.cli corpus     # refresh posts from the read-only Dashen API
-python -m collectors.cli nga        # NGA supplement (58 notices; public guest access)
-python -m collectors.cli ocr        # download images and OCR them (needs requirements-ocr.txt)
-python -m tools.cli verify          # check every ledger entry against the raw OCR
-python -m tools.cli edition         # rewrite edition/ from the data
+uv sync --all-extras
+uv run python -m collectors.cli corpus     # refresh posts from the read-only Dashen API
+uv run python -m collectors.cli nga        # NGA supplement (58 notices; public guest access)
+uv run python -m collectors.cli ocr        # download images and OCR them (needs the `ocr` extra)
+uv run python -m tools.cli verify          # check every ledger entry against the raw OCR
+uv run python -m tools.cli edition         # rewrite edition/ from the data
 ```
+
+Two optional extras carry the OCR engines, which coexist in one venv on a
+single `opencv-python-headless` build (the only `cv2` provider: `rapidocr`
+3.x requires headless, and the v4 pipeline only needs `cv2.imread` and basic
+array ops, no GUI):
+
+- `ocr` — `rapidocr-onnxruntime` 1.4.4, the PP-OCRv4 engine of record that
+  produced `derived/ocr/`;
+- `audit` — `rapidocr` 3.10.0, a PP-OCRv6 second reader for spot checks.
 
 `python -m collectors.cli nga --from-dir <dir>` parses pages saved earlier
 instead of touching the network; the directory needs the index page
@@ -108,6 +122,24 @@ does not log in or download NGA-hosted images.
 `python -m tools.cli edition --check` exits non-zero when the committed edition
 is not what the data produces. A fresh clone needs neither network access nor an
 OCR engine for the tests, `verify` or `edition --check`.
+
+### Checking the environment
+
+```bash
+uv run python -m tools.cli doctor --strict --require-ocr --require-audit --ocr-smoke
+```
+
+`doctor` reports whether the interpreter is the project `.venv` and the base
+dependencies import; the flags above also require each engine to import from
+inside the venv with its bundled PP-OCR models present, and `--ocr-smoke`
+runs each installed engine on one committed image, fully offline. Any
+failure exits 1; without `--strict`, missing optional engines are warnings.
+
+On networks where pypi.org is throttled, point uv at the Tsinghua mirror:
+
+```bash
+UV_DEFAULT_INDEX=https://pypi.tuna.tsinghua.edu.cn/simple uv sync --all-extras
+```
 
 ## The correction ledger
 
@@ -136,13 +168,15 @@ that locates an OCR block and records what the source image shows:
 ## Checking
 
 ```bash
-pytest
-python -m tools.cli verify
-python -m tools.cli edition --check
+uv run pytest -q
+uv run python -m tools.cli verify
+uv run python -m tools.cli edition --check
 ```
 
-CI runs the same three commands on a Linux runner without network, OCR engine or
-Pillow.
+CI runs the same three commands with uv on a Linux runner without network, OCR
+engine or Pillow. `python -m tools.cli doctor` reports whether the local
+environment (venv, dependencies, optional OCR engines) is complete; see
+"Rebuilding" above.
 
 ## Known gaps
 

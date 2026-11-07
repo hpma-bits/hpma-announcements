@@ -3,6 +3,7 @@
     python -m tools.cli verify
     python -m tools.cli crop <notice> <image> <block> [--context N] [--scale F]
     python -m tools.cli edition [--check]
+    python -m tools.cli doctor [--strict] [--require-ocr] [--require-audit] [--ocr-smoke]
 """
 
 from __future__ import annotations
@@ -11,7 +12,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from . import archive, crop, edition
+from . import archive, crop, doctor, edition
 
 CROP_DIR = Path(".review/crops")
 
@@ -91,6 +92,15 @@ def _edition(args: argparse.Namespace) -> int:
     return 0
 
 
+def _doctor(args: argparse.Namespace) -> int:
+    return doctor.run(
+        strict=args.strict,
+        require_ocr=args.require_ocr,
+        require_audit=args.require_audit,
+        ocr_smoke=args.ocr_smoke,
+    )
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         prog="python -m tools.cli", description="Local tooling for the announcement archive."
@@ -115,6 +125,25 @@ def main(argv: list[str] | None = None) -> int:
     edition_cmd = sub.add_parser("edition", help="render the readable text edition")
     edition_cmd.add_argument("--check", action="store_true", help="fail when the committed files are stale")
     edition_cmd.set_defaults(func=_edition)
+
+    doctor_cmd = sub.add_parser(
+        "doctor", help="report whether this interpreter can run the archive tooling"
+    )
+    doctor_cmd.add_argument(
+        "--strict", action="store_true", help="also fail on warnings (e.g. optional engines missing)"
+    )
+    doctor_cmd.add_argument(
+        "--require-ocr", action="store_true", help="fail when the v4 OCR engine (rapidocr-onnxruntime) is not usable"
+    )
+    doctor_cmd.add_argument(
+        "--require-audit", action="store_true", help="fail when the v6 audit engine (rapidocr) is not usable"
+    )
+    doctor_cmd.add_argument(
+        "--ocr-smoke",
+        action="store_true",
+        help="run each installed engine on one committed image, offline",
+    )
+    doctor_cmd.set_defaults(func=_doctor)
 
     args = parser.parse_args(argv)
     try:

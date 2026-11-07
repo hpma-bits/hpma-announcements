@@ -13,19 +13,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10
         with:
           python-version: "3.12"
-          cache: pip
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: uv sync
 
       - name: Test
-        run: pytest -q
+        run: uv run pytest -q
 
       - name: Check the correction ledger
-        run: python -m tools.cli verify
+        run: uv run python -m tools.cli verify
 
       - name: Check the committed edition
-        run: python -m tools.cli edition --check
+        run: uv run python -m tools.cli edition --check
