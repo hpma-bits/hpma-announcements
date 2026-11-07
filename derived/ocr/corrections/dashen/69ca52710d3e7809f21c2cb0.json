@@ -463,6 +463,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 57"
+    },
+    {
+      "image_index": 2,
+      "block_index": 18,
+      "original": "临的死亡......风雪之下，何为谎言，何为真相？",
+      "corrected": "临的死亡……风雪之下，何为谎言，何为真相？",
+      "reason": "zoom blob count on p5-40-zoom: 6 mid-line dots after 死亡; trailing ？ full-width (identical reposted story template as items 36/62/68/83); v4 6 ASCII dots wrong glyph form, v6 garbled .…………. + half-width ?",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 2 18"
     }
   ]
 }

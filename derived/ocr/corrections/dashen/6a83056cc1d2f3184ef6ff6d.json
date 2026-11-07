@@ -358,6 +358,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 1 11"
+    },
+    {
+      "image_index": 3,
+      "block_index": 0,
+      "original": "*庆典预热第二弹.“码”上有礼”",
+      "corrected": "*庆典预热第二弹.“码’上有礼”",
+      "reason": "crop: star ornament printed (v6 dropped it); mark after 码 prints SINGLE curly ’ (smaller than doubles, same as 第一弹 字’在必得 vote); baseline . after 弹",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 3 0"
+    },
+    {
+      "image_index": 3,
+      "block_index": 13,
+      "original": "*庆典预热第三弹·“转属福利”",
+      "corrected": "*庆典预热第三弹.“转’属福利”",
+      "reason": "crop: star printed (both agree); dot after 弹 prints at BASELINE = ASCII . (v4 · wrong); mark after 转 prints single ’ (v4 merged it into 属, wrong)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 3 13"
+    },
+    {
+      "image_index": 4,
+      "block_index": 20,
+      "original": "本期“永恒绽放礼”中包含全新动态瞳孔贴花“蔷薇秘歌”",
+      "corrected": "本期“永恒绽放礼”中包含全新动态瞳孔贴花“蔷薇秘歌”、",
+      "reason": "crop: trailing 、 printed at line end after ”蔷薇秘歌“; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 4 20"
+    },
+    {
+      "image_index": 5,
+      "block_index": 40,
+      "original": "购买即可获得传说品质背包“呦呦蓝调”",
+      "corrected": "购买即可获得传说品质背包“呦呦蓝调”。",
+      "reason": "crop: trailing 。 printed after ”呦呦蓝调“; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 5 40"
     }
   ]
 }

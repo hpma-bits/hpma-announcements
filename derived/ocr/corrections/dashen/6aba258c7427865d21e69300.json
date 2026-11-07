@@ -177,6 +177,26 @@
       "confidence": "high",
       "via": "punct-vote",
       "recrop": "python -m tools.cli crop dashen.6aba258c7427865d21e69300 5 20"
+    },
+    {
+      "image_index": 2,
+      "block_index": 15,
+      "original": "学生，究竟并肩走过怎样的岁月..….",
+      "corrected": "学生，究竟并肩走过怎样的岁月……",
+      "reason": "zoom blob count: 6 dots line-end after 岁月 (v4 garbled ..…., v6 garbled ...……)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6aba258c7427865d21e69300 2 15"
+    },
+    {
+      "image_index": 3,
+      "block_index": 22,
+      "original": "本次返场的家具套装为：“黑湖寂秘”、“列车奇想”",
+      "corrected": "本次返场的家具套装为：“黑湖寂秘”、“列车奇想”、",
+      "reason": "crop: trailing 、 printed at line end after ”列车奇想“ (next line continues “蜜糖邀约”); v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6aba258c7427865d21e69300 3 22"
     }
   ]
 }

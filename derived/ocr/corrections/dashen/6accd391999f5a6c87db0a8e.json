@@ -191,6 +191,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6accd391999f5a6c87db0a8e 1 11"
+    },
+    {
+      "image_index": 2,
+      "block_index": 14,
+      "original": "画像...",
+      "corrected": "画像……",
+      "reason": "zoom: 6 dots line-end after 画像 (v4 3 dots, v6 .…… garbled)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6accd391999f5a6c87db0a8e 2 14"
+    },
+    {
+      "image_index": 2,
+      "block_index": 29,
+      "original": "成了可怖的模样....",
+      "corrected": "成了可怖的模样……",
+      "reason": "zoom blob count: 6 dots line-end after 模样 (v4 4 dots, v6 .…… garbled)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6accd391999f5a6c87db0a8e 2 29"
+    },
+    {
+      "image_index": 2,
+      "block_index": 30,
+      "original": "成了可怖的模样.....",
+      "corrected": "成了可怖的模样……",
+      "reason": "zoom blob count: 6 dots line-end (same sentence reprinted in next story block); v4 5 dots, v6 6 ASCII dots -> form ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6accd391999f5a6c87db0a8e 2 30"
+    },
+    {
+      "image_index": 5,
+      "block_index": 16,
+      "original": "特效“菜到家了”、击败特效“已经结束’了”、击败特效",
+      "corrected": "特效“菜到家了”、击败特效“已经‘结束’了”、击败特效",
+      "reason": "zoom p5-180-inner: inner marks around 结束 are CURLY SINGLES ‘ and ’ (one tick each, curl visible at scale 8); v4 missed the inner opener, v6 misread it as double “",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6accd391999f5a6c87db0a8e 5 16"
     }
   ]
 }
