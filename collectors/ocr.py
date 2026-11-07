@@ -5,9 +5,9 @@ images as original bytes under ``assets/dashen/<feed_id>/``, runs a local OCR
 engine, and writes one JSON per notice under ``derived/ocr/dashen/<feed_id>.json``.
 Corpus text is never modified; OCR output is a derived layer.
 
-Engine: rapidocr-onnxruntime (PP-OCRv4 models), installed separately via
-``requirements-ocr.txt`` so the base test suite stays dependency-light. The
-import is lazy and the engine is injectable for tests.
+Engine: rapidocr-onnxruntime (PP-OCRv4 models), installed via the ``ocr``
+extra (``uv sync --all-extras``) so the base test suite stays dependency-light.
+The import is lazy and the engine is injectable for tests.
 
 Reruns are idempotent: existing image bytes are not re-downloaded, and an
 image whose ``sha256`` already has text in the notice JSON is not re-OCRed.
