@@ -106,6 +106,146 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 4 13"
+    },
+    {
+      "image_index": 4,
+      "block_index": 14,
+      "original": "1）免费礼盒",
+      "corrected": "1)免费礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 4 14"
+    },
+    {
+      "image_index": 4,
+      "block_index": 16,
+      "original": "2）豪华礼盒",
+      "corrected": "2)豪华礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 4 16"
+    },
+    {
+      "image_index": 4,
+      "block_index": 22,
+      "original": "3）金缎豪华礼盒",
+      "corrected": "3)金缎豪华礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 4 22"
+    },
+    {
+      "image_index": 5,
+      "block_index": 18,
+      "original": "（1）信件撤回功能：撤回信件后其他巫师无法捡到对应",
+      "corrected": "(1)信件撤回功能：撤回信件后其他巫师无法捡到对应",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 5 18"
+    },
+    {
+      "image_index": 5,
+      "block_index": 20,
+      "original": "（2）寄信人显示：巫师在拾取信件后可在界面中查看寄",
+      "corrected": "(2)寄信人显示：巫师在拾取信件后可在界面中查看寄",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 5 20"
+    },
+    {
+      "image_index": 5,
+      "block_index": 22,
+      "original": "（3）“猫头鹰信使-我的收藏”新增“我的”的标识，巫师可",
+      "corrected": "(3)“猫头鹰信使-我的收藏”新增“我的”的标识，巫师可",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 5 22"
+    },
+    {
+      "image_index": 5,
+      "block_index": 30,
+      "original": "场对局内使用“隐形衣“后，主动解除隐身并累计额外",
+      "corrected": "场对局内使用“隐形衣\"后，主动解除隐身并累计额外",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 5 30"
+    },
+    {
+      "image_index": 6,
+      "block_index": 1,
+      "original": "（1）区分了巫师人偶和怪物的形象。",
+      "corrected": "(1)区分了巫师人偶和怪物的形象。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 6 1"
+    },
+    {
+      "image_index": 6,
+      "block_index": 2,
+      "original": "（2）新增了拖曳摆放的功能，巫师人偶和怪物可被拖",
+      "corrected": "(2)新增了拖曳摆放的功能，巫师人偶和怪物可被拖",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 6 2"
+    },
+    {
+      "image_index": 6,
+      "block_index": 6,
+      "original": "（3）新增初始化按钮，无需退出即可重置场地状态。",
+      "corrected": "(3)新增初始化按钮，无需退出即可重置场地状态。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 6 6"
+    },
+    {
+      "image_index": 6,
+      "block_index": 7,
+      "original": "（4）新增一键扣血按钮，点击后将按照设置的生命值",
+      "corrected": "(4)新增一键扣血按钮，点击后将按照设置的生命值",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 6 7"
+    },
+    {
+      "image_index": 6,
+      "block_index": 9,
+      "original": "（5）优化了统计面板信息，当存在对友方巫师人偶或",
+      "corrected": "(5)优化了统计面板信息，当存在对友方巫师人偶或",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 6 9"
+    },
+    {
+      "image_index": 6,
+      "block_index": 18,
+      "original": "（1）修复了部分投稿未包含参赛时装依然可以作为投稿",
+      "corrected": "(1)修复了部分投稿未包含参赛时装依然可以作为投稿",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 6 18"
+    },
+    {
+      "image_index": 6,
+      "block_index": 20,
+      "original": "（2）租借的时装不可参与投稿。",
+      "corrected": "(2)租借的时装不可参与投稿。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 6 20"
     }
   ]
 }

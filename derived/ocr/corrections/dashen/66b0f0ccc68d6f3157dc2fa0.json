@@ -40,6 +40,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.66b0f0ccc68d6f3157dc2fa0 3 30"
+    },
+    {
+      "image_index": 4,
+      "block_index": 6,
+      "original": "(2）各玩法准备界面支持查看排行榜。",
+      "corrected": "(2)各玩法准备界面支持查看排行榜。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.66b0f0ccc68d6f3157dc2fa0 4 6"
+    },
+    {
+      "image_index": 4,
+      "block_index": 8,
+      "original": "（4)竞选结束后支持查看本轮竞选的最终排名结果。",
+      "corrected": "(4)竞选结束后支持查看本轮竞选的最终排名结果。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.66b0f0ccc68d6f3157dc2fa0 4 8"
     }
   ]
 }

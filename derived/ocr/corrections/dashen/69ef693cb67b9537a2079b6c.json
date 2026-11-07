@@ -166,6 +166,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 6 1"
+    },
+    {
+      "image_index": 5,
+      "block_index": 0,
+      "original": "“回响重塑时”活动开启",
+      "corrected": "”回响重塑时”活动开启",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 5 0"
     }
   ]
 }

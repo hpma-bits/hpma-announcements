@@ -96,6 +96,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 4 33"
+    },
+    {
+      "image_index": 5,
+      "block_index": 6,
+      "original": "（1）优化了草药商店高价收购的展示效果。现在点击植",
+      "corrected": "(1)优化了草药商店高价收购的展示效果。现在点击植",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 5 6"
+    },
+    {
+      "image_index": 5,
+      "block_index": 8,
+      "original": "（2）优化了种植日志的使用体验。现在在“我的种植日志”",
+      "corrected": "(2)优化了种植日志的使用体验。现在在“我的种植日志”",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 5 8"
+    },
+    {
+      "image_index": 5,
+      "block_index": 11,
+      "original": "（3）优化了野外采集植物的提示，巫师采集植物后将会",
+      "corrected": "(3)优化了野外采集植物的提示，巫师采集植物后将会",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 5 11"
     }
   ]
 }

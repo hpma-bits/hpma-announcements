@@ -97,6 +97,56 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 4 38"
+    },
+    {
+      "image_index": 6,
+      "block_index": 34,
+      "original": "（1）修复了在巫师空间中触发引导剧情后，家具会被隐",
+      "corrected": "(1)修复了在巫师空间中触发引导剧情后，家具会被隐",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 6 34"
+    },
+    {
+      "image_index": 6,
+      "block_index": 37,
+      "original": "（2）修复了在采集原石时可能会提示“操作频繁”的问题。",
+      "corrected": "(2)修复了在采集原石时可能会提示“操作频繁”的问题。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 6 37"
+    },
+    {
+      "image_index": 6,
+      "block_index": 38,
+      "original": "（3）修复了采集原石界面中，“绮画岩彩套装”图标显示",
+      "corrected": "(3)修复了采集原石界面中，“绮画岩彩套装”图标显示",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 6 38"
+    },
+    {
+      "image_index": 6,
+      "block_index": 40,
+      "original": "（4）修复了巫师造访他人的空间时，无法看到家具“高布",
+      "corrected": "(4)修复了巫师造访他人的空间时，无法看到家具“高布",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 6 40"
+    },
+    {
+      "image_index": 6,
+      "block_index": 42,
+      "original": "（5）修复了开采邀请分享到聊天频道时，图标显示错误",
+      "corrected": "(5)修复了开采邀请分享到聊天频道时，图标显示错误",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67c6a5413855041608f7fde0 6 42"
     }
   ]
 }

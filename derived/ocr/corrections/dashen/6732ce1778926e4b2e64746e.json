@@ -76,6 +76,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6732ce1778926e4b2e64746e 1 88"
+    },
+    {
+      "image_index": 1,
+      "block_index": 197,
+      "original": "1-2\"修改至“完成主线任务1-1”。",
+      "corrected": "1-2”修改至“完成主线任务1-1”。",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6732ce1778926e4b2e64746e 1 197"
     }
   ]
 }

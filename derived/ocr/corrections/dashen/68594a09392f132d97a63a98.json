@@ -122,6 +122,76 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 5 51"
+    },
+    {
+      "image_index": 3,
+      "block_index": 2,
+      "original": "1）免费礼盒",
+      "corrected": "1)免费礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 3 2"
+    },
+    {
+      "image_index": 3,
+      "block_index": 4,
+      "original": "2）豪华礼盒",
+      "corrected": "2)豪华礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 3 4"
+    },
+    {
+      "image_index": 3,
+      "block_index": 11,
+      "original": "3）金缎豪华礼盒",
+      "corrected": "3)金缎豪华礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 3 11"
+    },
+    {
+      "image_index": 5,
+      "block_index": 28,
+      "original": "新增“S\"、“SS\"、“SSS”。",
+      "corrected": "新增“S”、“SS”、“SSS”。",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 5 28"
+    },
+    {
+      "image_index": 6,
+      "block_index": 42,
+      "original": "（1)玩家（单位）：指玩家。",
+      "corrected": "(1)玩家（单位）：指玩家。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 6 42"
+    },
+    {
+      "image_index": 6,
+      "block_index": 43,
+      "original": "（2)巫师（单位）：指玩家、时间转换器、残影标记及",
+      "corrected": "(2)巫师（单位）：指玩家、时间转换器、残影标记及",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 6 43"
+    },
+    {
+      "image_index": 6,
+      "block_index": 45,
+      "original": "（3）伙伴（单位）：指通过伙伴卡召唤的单位。",
+      "corrected": "(3)伙伴（单位）：指通过伙伴卡召唤的单位。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.68594a09392f132d97a63a98 6 45"
     }
   ]
 }

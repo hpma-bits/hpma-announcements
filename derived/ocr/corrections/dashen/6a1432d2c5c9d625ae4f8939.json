@@ -89,6 +89,56 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6a1432d2c5c9d625ae4f8939 5 27"
+    },
+    {
+      "image_index": 3,
+      "block_index": 0,
+      "original": "‘S20别境旅行赛季·飞跃云端”开启！",
+      "corrected": "“S20别境旅行赛季·飞跃云端”开启！",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6a1432d2c5c9d625ae4f8939 3 0"
+    },
+    {
+      "image_index": 4,
+      "block_index": 2,
+      "original": "木”、壁画“尘泥与傲骨”、动作“缘”来是你”、巫师名片",
+      "corrected": "木”、壁画“尘泥与傲骨”、动作“缘’来是你”、巫师名片",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6a1432d2c5c9d625ae4f8939 4 2"
+    },
+    {
+      "image_index": 5,
+      "block_index": 2,
+      "original": "1）免费礼盒",
+      "corrected": "1)免费礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6a1432d2c5c9d625ae4f8939 5 2"
+    },
+    {
+      "image_index": 5,
+      "block_index": 4,
+      "original": "2）豪华礼盒",
+      "corrected": "2)豪华礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6a1432d2c5c9d625ae4f8939 5 4"
+    },
+    {
+      "image_index": 5,
+      "block_index": 12,
+      "original": "3）金缎豪华礼盒",
+      "corrected": "3)金缎豪华礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6a1432d2c5c9d625ae4f8939 5 12"
     }
   ]
 }

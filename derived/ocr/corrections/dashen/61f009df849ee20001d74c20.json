@@ -418,6 +418,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 17 28"
+    },
+    {
+      "image_index": 12,
+      "block_index": 24,
+      "original": "奇趣撞色，惊喜焕新。全新时装”拼色乐园”上线，巫师在2022年2月1日00",
+      "corrected": "奇趣撞色，惊喜焕新。全新时装\"拼色乐园”上线，巫师在2022年2月1日00",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 12 24"
+    },
+    {
+      "image_index": 14,
+      "block_index": 12,
+      "original": "还有”首周登录福利”、“决斗排名奖励”、“学年探索奖励”等多重福利等待新",
+      "corrected": "还有\"首周登录福利”、\"决斗排名奖励”、\"学年探索奖励\"等多重福利等待新",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 14 12"
+    },
+    {
+      "image_index": 15,
+      "block_index": 4,
+      "original": "咒的机会。每日共有3次免费参与”复制成双“的机会，快来挑战吧！",
+      "corrected": "咒的机会。每日共有3次免费参与\"复制成双\"的机会，快来挑战吧！",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 15 4"
     }
   ]
 }

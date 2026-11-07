@@ -98,6 +98,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 1 47"
+    },
+    {
+      "image_index": 2,
+      "block_index": 6,
+      "original": "“魔咒心力·传说”、家具礼包“皎皎昊空\"和魔器“温馨餐",
+      "corrected": "“魔咒心力·传说”、家具礼包“皎皎昊空”和魔器“温馨餐",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 2 6"
+    },
+    {
+      "image_index": 2,
+      "block_index": 26,
+      "original": "卡）\"等直售礼包，均可获取积分。",
+      "corrected": "卡）”等直售礼包，均可获取积分。",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 2 26"
+    },
+    {
+      "image_index": 2,
+      "block_index": 48,
+      "original": "一、二、三、四\"将会合并为“密林冒险·回响”，巫师组",
+      "corrected": "一、二、三、四”将会合并为“密林冒险·回响”，巫师组",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.651184562d41e600010f4f4f 2 48"
     }
   ]
 }

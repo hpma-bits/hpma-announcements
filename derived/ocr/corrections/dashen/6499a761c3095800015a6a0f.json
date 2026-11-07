@@ -145,6 +145,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 4 20"
+    },
+    {
+      "image_index": 2,
+      "block_index": 2,
+      "original": "开启时间：6月27日维护后-7月11日13：59（UTC+8）",
+      "corrected": "开启时间：6月27日维护后-7月11日13:59（UTC+8）",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 2 2"
+    },
+    {
+      "image_index": 2,
+      "block_index": 14,
+      "original": "“召唤隐形兽，登场后它会进入隐身状态并以敌方巫师",
+      "corrected": "\"召唤隐形兽，登场后它会进入隐身状态并以敌方巫师",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 2 14"
+    },
+    {
+      "image_index": 2,
+      "block_index": 20,
+      "original": "再次扑向敌方巫师。后跳最多可以触发2次。“",
+      "corrected": "再次扑向敌方巫师。后跳最多可以触发2次。\"",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 2 20"
     }
   ]
 }

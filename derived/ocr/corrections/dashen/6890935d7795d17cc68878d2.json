@@ -106,6 +106,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6890935d7795d17cc68878d2 6 20"
+    },
+    {
+      "image_index": 5,
+      "block_index": 23,
+      "original": "“一起出行吧！”成就从原本“完成“拼图活动”。”，修改",
+      "corrected": "“一起出行吧！”成就从原本“完成‘拼图活动’。”，修改",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6890935d7795d17cc68878d2 5 23"
     }
   ]
 }

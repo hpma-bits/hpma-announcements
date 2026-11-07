@@ -115,6 +115,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 2 93"
+    },
+    {
+      "image_index": 3,
+      "block_index": 4,
+      "original": "(2）强化效果调整",
+      "corrected": "(2)强化效果调整",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 3 4"
+    },
+    {
+      "image_index": 3,
+      "block_index": 32,
+      "original": "刀\"播报。",
+      "corrected": "刀”播报。",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 3 32"
+    },
+    {
+      "image_index": 3,
+      "block_index": 66,
+      "original": "(1)修复了伙伴卡“阿比盖尔·格雷\"狼人形态下可以施放",
+      "corrected": "(1)修复了伙伴卡“阿比盖尔·格雷”狼人形态下可以施放",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 3 66"
     }
   ]
 }

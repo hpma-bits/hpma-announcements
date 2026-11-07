@@ -134,6 +134,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 5 61"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "100时，可领取稀有伙伴卡“凯文·法雷尔\"的卡牌皮肤",
+      "corrected": "100时，可领取稀有伙伴卡“凯文·法雷尔”的卡牌皮肤",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 1 18"
+    },
+    {
+      "image_index": 7,
+      "block_index": 19,
+      "original": "11、修复了使用“心心相印\"动作时，个别脸型出现的",
+      "corrected": "11、修复了使用“心心相印”动作时，个别脸型出现的",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6756ff23c20bb839267ba7c6 7 19"
     }
   ]
 }

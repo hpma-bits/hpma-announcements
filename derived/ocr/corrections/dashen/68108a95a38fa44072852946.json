@@ -107,6 +107,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 5 20"
+    },
+    {
+      "image_index": 4,
+      "block_index": 49,
+      "original": "1）免费礼盒",
+      "corrected": "1)免费礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 4 49"
+    },
+    {
+      "image_index": 4,
+      "block_index": 51,
+      "original": "2）豪华礼盒",
+      "corrected": "2)豪华礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 4 51"
+    },
+    {
+      "image_index": 4,
+      "block_index": 59,
+      "original": "3）金缎豪华礼盒",
+      "corrected": "3)金缎豪华礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.68108a95a38fa44072852946 4 59"
     }
   ]
 }

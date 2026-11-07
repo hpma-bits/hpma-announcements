@@ -41,6 +41,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 111"
+    },
+    {
+      "image_index": 1,
+      "block_index": 50,
+      "original": "3）金缎豪华礼盒",
+      "corrected": "3)金缎豪华礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 50"
+    },
+    {
+      "image_index": 1,
+      "block_index": 87,
+      "original": "2.\"天作之合”：",
+      "corrected": "2.“天作之合”：",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 87"
+    },
+    {
+      "image_index": 1,
+      "block_index": 140,
+      "original": "3、修复了在PC端使用“邓布利多的回响\"时，底部魔杖",
+      "corrected": "3、修复了在PC端使用“邓布利多的回响”时，底部魔杖",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.676a2af38a3f7303d3f3bf0f 1 140"
     }
   ]
 }

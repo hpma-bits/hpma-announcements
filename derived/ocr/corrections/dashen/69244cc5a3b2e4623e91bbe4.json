@@ -143,6 +143,56 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 6 1"
+    },
+    {
+      "image_index": 4,
+      "block_index": 9,
+      "original": "1）免费礼盒",
+      "corrected": "1)免费礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 4 9"
+    },
+    {
+      "image_index": 4,
+      "block_index": 11,
+      "original": "2）豪华礼盒",
+      "corrected": "2)豪华礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 4 11"
+    },
+    {
+      "image_index": 4,
+      "block_index": 20,
+      "original": "3）金缎豪华礼盒",
+      "corrected": "3)金缎豪华礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 4 20"
+    },
+    {
+      "image_index": 5,
+      "block_index": 6,
+      "original": "日进入活动页面即可获得5张巫师空间投票券，为喜爱",
+      "corrected": "日进入活动页面即可获得5张巫师空间投票券,为喜爱",
+      "reason": "标点规则 per-notice vote（，->,）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 5 6"
+    },
+    {
+      "image_index": 5,
+      "block_index": 7,
+      "original": "的作品投票，用你的审美来定义巫师空间设计新潮流吧！",
+      "corrected": "的作品投票,用你的审美来定义巫师空间设计新潮流吧！",
+      "reason": "标点规则 per-notice vote（，->,）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 5 7"
     }
   ]
 }

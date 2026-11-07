@@ -12,6 +12,16 @@
       "reason": "祛→法；封面 logo 源图为“魔法觉醒”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.63eb79abc5a32500015aca49 1 1"
+    },
+    {
+      "image_index": 1,
+      "block_index": 8,
+      "original": "“丹尼尔·圣诞礼物”，“卡珊德拉·冰雪中心”，“萝",
+      "corrected": "“丹尼尔·圣诞礼物”，\"卡珊德拉·冰雪中心”，“萝",
+      "reason": "标点规则 per-notice vote（quote、，->,）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.63eb79abc5a32500015aca49 1 8"
     }
   ]
 }

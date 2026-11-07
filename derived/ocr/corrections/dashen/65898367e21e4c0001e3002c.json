@@ -21,6 +21,16 @@
       "reason": "鸡→鸮；源图猫头鹰名为“小长须鸮”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.65898367e21e4c0001e3002c 1 12"
+    },
+    {
+      "image_index": 2,
+      "block_index": 10,
+      "original": "巫师参与“禁林\"玩法中的“密林冒险·回响”时，每日前",
+      "corrected": "巫师参与“禁林”玩法中的“密林冒险·回响”时，每日前",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.65898367e21e4c0001e3002c 2 10"
     }
   ]
 }

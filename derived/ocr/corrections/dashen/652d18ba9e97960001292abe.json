@@ -30,6 +30,36 @@
       "reason": "帅→师；源图为“巫师”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.652d18ba9e97960001292abe 3 26"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "-赫敏·格兰杰\"时，则第50次抽取必然获得光辉伙伴卡",
+      "corrected": "-赫敏·格兰杰”时，则第50次抽取必然获得光辉伙伴卡",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.652d18ba9e97960001292abe 1 11"
+    },
+    {
+      "image_index": 1,
+      "block_index": 16,
+      "original": "敏·格兰杰\"卡牌皮肤“汤剂之扰”，若99次抽取都未获得",
+      "corrected": "敏·格兰杰”卡牌皮肤“汤剂之扰”，若99次抽取都未获得",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.652d18ba9e97960001292abe 1 16"
+    },
+    {
+      "image_index": 2,
+      "block_index": 36,
+      "original": "“不给糖就捣蛋\"！韦格比带着他烘焙工坊来了！",
+      "corrected": "“不给糖就捣蛋”！韦格比带着他烘焙工坊来了！",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.652d18ba9e97960001292abe 2 36"
     }
   ]
 }

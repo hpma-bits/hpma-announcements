@@ -98,6 +98,36 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 5 19"
+    },
+    {
+      "image_index": 4,
+      "block_index": 30,
+      "original": "3）金缎豪华礼盒",
+      "corrected": "3)金缎豪华礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 4 30"
+    },
+    {
+      "image_index": 6,
+      "block_index": 23,
+      "original": "（1）修复了生成咒语笔记的2张咒语卡中的第1张获得回",
+      "corrected": "(1)修复了生成咒语笔记的2张咒语卡中的第1张获得回",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 6 23"
+    },
+    {
+      "image_index": 6,
+      "block_index": 25,
+      "original": "（2）当“幽灵骑士团”作为咒语笔记的第1张咒语卡参与合",
+      "corrected": "(2)当“幽灵骑士团”作为咒语笔记的第1张咒语卡参与合",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.68343867ea481f3c8717d686 6 25"
     }
   ]
 }

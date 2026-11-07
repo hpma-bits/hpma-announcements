@@ -49,6 +49,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 1 11"
+    },
+    {
+      "image_index": 1,
+      "block_index": 27,
+      "original": "从8月开始，“豪华礼盒（含‘金缎豪华礼盒”）”不同档",
+      "corrected": "从8月开始，“豪华礼盒（含‘金缎豪华礼盒’）”不同档",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 1 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 57,
+      "original": "（2）“团队探索”解锁条件：改为“单人禁林\"通关第",
+      "corrected": "（2）“团队探索”解锁条件：改为“单人禁林”通关第",
+      "reason": "标点规则 per-notice vote（paren、quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 2 57"
     }
   ]
 }
