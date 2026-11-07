@@ -127,6 +127,7 @@ def render_notice(
     ``## 图片文字`` section.
     """
     overrides = archive.corrected_blocks(notice, ledger) if notice else {}
+    inserts = archive.insert_lines(ledger) if notice else {}
     lines = _frontmatter(post, selection, notice, source)
 
     body = normalize_body(post.get("text") or "")
@@ -138,22 +139,30 @@ def render_notice(
         index = image["index"]
         texts: list[str] = []
         previous = ""
+        image_inserts = inserts.get(index, [])
         for block_index, block in enumerate(image.get("blocks", [])):
             locator = (index, block_index)
             if locator in overrides:
                 replacement = overrides[locator]
                 if replacement is None:
                     # Ledger verdict: a duplicate slice with no line of its own.
-                    continue
-                text = replacement
+                    text = None
+                else:
+                    text = replacement
             else:
                 text = block.get("text") or ""
-            cleaned = clean_block(text)
-            if not cleaned or cleaned == previous:
-                # Overlapping OCR tiles capture the same line twice; keep one.
-                continue
-            texts.append(cleaned)
-            previous = cleaned
+            if text is not None:
+                cleaned = clean_block(text)
+                if cleaned and cleaned != previous:
+                    texts.append(cleaned)
+                    previous = cleaned
+            for after, extra in image_inserts:
+                if after != block_index:
+                    continue
+                cleaned_extra = clean_block(extra)
+                if cleaned_extra and cleaned_extra != previous:
+                    texts.append(cleaned_extra)
+                    previous = cleaned_extra
         if texts:
             sections.append((index, texts))
 

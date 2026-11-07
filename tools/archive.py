@@ -177,6 +177,28 @@ def check_ledger(notice: Record, ledger: Record) -> list[str]:
 
     for position, correction in enumerate(corrections):
         label = f"correction[{position}]"
+        if correction.get("insert"):
+            # An insert records a printed line the engine never detected,
+            # positioned after a block the OCR did read.
+            after = correction.get("after_block")
+            image_index = correction.get("image_index")
+            if not isinstance(image_index, int) or not 1 <= image_index <= len(images):
+                problems.append(f"{label}: insert image_index out of range")
+                continue
+            blocks = images[image_index - 1].get("blocks", [])
+            if not isinstance(after, int) or not 0 <= after < len(blocks):
+                problems.append(
+                    f"{label}: insert after_block out of range: {after!r} "
+                    f"(image has {len(blocks)} blocks)"
+                )
+            if not isinstance(correction.get("text"), str) or not correction["text"]:
+                problems.append(f"{label}: insert text must be a non-empty string")
+            if correction.get("original") or correction.get("corrected"):
+                problems.append(
+                    f"{label}: an insert carries text, not original/corrected"
+                )
+            continue
+
         image_index = correction.get("image_index")
         block_index = correction.get("block_index")
         if not isinstance(image_index, int) or not isinstance(block_index, int):
@@ -216,6 +238,23 @@ def check_ledger(notice: Record, ledger: Record) -> list[str]:
     return problems
 
 
+def insert_lines(ledger: Record | None) -> dict[int, list[tuple[int, str]]]:
+    """Map ``image_index`` to ``(after_block, text)`` lines the ledger inserts.
+
+    The edition places each inserted line right after its anchor block's
+    position; several inserts may share one anchor (ledger order wins).
+    """
+    if not ledger:
+        return {}
+    inserts: dict[int, list[tuple[int, str]]] = {}
+    for correction in ledger.get("corrections", []):
+        if correction.get("insert") and correction.get("text"):
+            inserts.setdefault(correction["image_index"], []).append(
+                (correction["after_block"], correction["text"])
+            )
+    return inserts
+
+
 def corrected_blocks_raw(ledger: Record) -> dict[Locator, str | None]:
     """Locator map from a ledger, without validating it against any OCR.
 
@@ -228,6 +267,7 @@ def corrected_blocks_raw(ledger: Record) -> dict[Locator, str | None]:
             None if correction.get("drop") else correction["corrected"]
         )
         for correction in ledger.get("corrections", [])
+        if not correction.get("insert")
     }
 
 
