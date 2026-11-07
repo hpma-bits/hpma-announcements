@@ -19,7 +19,7 @@
       "original": "购买礼包，即可获得表情“含泪凝视”、头像框“噢",
       "corrected": "购买礼包，即可获得表情“含泪凝视”、头像框“嗅",
       "reason": "噢→嗅；源图头像框名为“嗅嗅的金币”，本 block 与下一 block 拼合后应为“嗅嗅的”",
-      "confidence": "medium",
+      "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 2 35"
     },
     {
@@ -30,6 +30,36 @@
       "reason": "皮→波；水印专名源图为“哈利波特”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 3 28"
+    },
+    {
+      "image_index": 1,
+      "block_index": 24,
+      "original": "活动时间：8月17日维护后-8月31日5：00",
+      "corrected": "活动时间：8月17日维护后-8月31日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 1 24"
+    },
+    {
+      "image_index": 2,
+      "block_index": 1,
+      "original": "活动时间：8月17日维护后-8月31日6：59",
+      "corrected": "活动时间：8月17日维护后-8月31日6:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 2 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 34,
+      "original": "售卖时间：8月17日维护后-8月23日23：59",
+      "corrected": "售卖时间：8月17日维护后-8月23日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62fb8c690c8dc60001a57f32 2 34"
     }
   ]
 }

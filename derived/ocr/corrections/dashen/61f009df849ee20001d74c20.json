@@ -228,6 +228,196 @@
       "reason": "阴户→阴尸、震→震慑；源图为“邪恶的阴尸被邓布利多震慑”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 17 41"
+    },
+    {
+      "image_index": 3,
+      "block_index": 22,
+      "original": "活动时间：1月26日维护后-2月16日5：00",
+      "corrected": "活动时间：1月26日维护后-2月16日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 3 22"
+    },
+    {
+      "image_index": 4,
+      "block_index": 15,
+      "original": "随着光辉／禁忌魔咒上架，我们也调整了部分玩法和道具奖励。",
+      "corrected": "随着光辉/禁忌魔咒上架，我们也调整了部分玩法和道具奖励。",
+      "reason": "标点规则 take_v6 ／->/：源图印窄斜杠（采样 12/12 v6 对）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 4 15"
+    },
+    {
+      "image_index": 4,
+      "block_index": 20,
+      "original": "社团商店：2月1日5：00后，商店内传说卡牌替换为冥想卡牌（打开后随机获",
+      "corrected": "社团商店：2月1日5:00后，商店内传说卡牌替换为冥想卡牌（打开后随机获",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 4 20"
+    },
+    {
+      "image_index": 4,
+      "block_index": 22,
+      "original": "复制成双：正在优化中，将在后续更新中支持获得光辉／禁忌魔咒。",
+      "corrected": "复制成双：正在优化中，将在后续更新中支持获得光辉/禁忌魔咒。",
+      "reason": "标点规则 take_v6 ／->/：源图印窄斜杠（采样 12/12 v6 对）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 4 22"
+    },
+    {
+      "image_index": 6,
+      "block_index": 28,
+      "original": "活动时间：1月29日5：00-2月4日4：59",
+      "corrected": "活动时间：1月29日5:00-2月4日4：59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 6 28"
+    },
+    {
+      "image_index": 7,
+      "block_index": 20,
+      "original": "在1月31日的23：50，伴随着热闹的鞭炮声，共同迎接新的一年吧！",
+      "corrected": "在1月31日的23:50，伴随着热闹的鞭炮声，共同迎接新的一年吧！",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 7 20"
+    },
+    {
+      "image_index": 7,
+      "block_index": 28,
+      "original": "MA5赛季将于2月1日5：30正式开启！决斗俱乐部段位将进行重置，段位奖",
+      "corrected": "MA5赛季将于2月1日5:30正式开启！决斗俱乐部段位将进行重置，段位奖",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 7 28"
+    },
+    {
+      "image_index": 12,
+      "block_index": 23,
+      "original": "活动时间：2月1日00:00-2月28日23：59",
+      "corrected": "活动时间：2月1日00:00-2月28日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 12 23"
+    },
+    {
+      "image_index": 12,
+      "block_index": 25,
+      "original": "：00至2022年2月14日23：59期间进行购买，更可享受68元特价优惠！",
+      "corrected": "：00至2022年2月14日23:59期间进行购买，更可享受68元特价优惠！",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 12 25"
+    },
+    {
+      "image_index": 12,
+      "block_index": 29,
+      "original": "售卖时间：1月26日维护后-1月30日23：59",
+      "corrected": "售卖时间：1月26日维护后-1月30日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 12 29"
+    },
+    {
+      "image_index": 13,
+      "block_index": 11,
+      "original": "1月19日维护后~2月16日5：00期间，更有神秘大礼限量兑换，快来看看吧！",
+      "corrected": "1月19日维护后~2月16日5:00期间，更有神秘大礼限量兑换，快来看看吧！",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 13 11"
+    },
+    {
+      "image_index": 13,
+      "block_index": 18,
+      "original": "活动时间：1月19日维护后~2月9日5：00",
+      "corrected": "活动时间：1月19日维护后~2月9日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 13 18"
+    },
+    {
+      "image_index": 14,
+      "block_index": 10,
+      "original": "新服活动时间：1月26日10：00-2月1日24:00",
+      "corrected": "新服活动时间：1月26日10:00-2月1日24:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 14 10"
+    },
+    {
+      "image_index": 14,
+      "block_index": 11,
+      "original": "新服务器【破釜酒吧】将于1月26日10：00正式开启！同时，在新服活动期间，",
+      "corrected": "新服务器【破釜酒吧】将于1月26日10:00正式开启！同时，在新服活动期间，",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 14 11"
+    },
+    {
+      "image_index": 15,
+      "block_index": 18,
+      "original": "活动时间：1月26日更新后-3月16日5：00",
+      "corrected": "活动时间：1月26日更新后-3月16日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 15 18"
+    },
+    {
+      "image_index": 15,
+      "block_index": 28,
+      "original": "活动时间：1月26日维护后-3月2日5：00",
+      "corrected": "活动时间：1月26日维护后-3月2日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 15 28"
+    },
+    {
+      "image_index": 16,
+      "block_index": 1,
+      "original": "第二期竞速挑战结束时间：2022年3月2日5：00",
+      "corrected": "第二期竞速挑战结束时间：2022年3月2日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 16 1"
+    },
+    {
+      "image_index": 17,
+      "block_index": 25,
+      "original": "优化了图书馆概率公示的页面显示，增加了光辉／禁忌魔咒的概率公示内容，",
+      "corrected": "优化了图书馆概率公示的页面显示，增加了光辉/禁忌魔咒的概率公示内容，",
+      "reason": "标点规则 take_v6 ／->/：源图印窄斜杠（采样 12/12 v6 对）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 17 25"
+    },
+    {
+      "image_index": 17,
+      "block_index": 28,
+      "original": "辉／禁忌魔咒，出现比例与阅读的概率比例相同。具体请在图书馆界面查看。",
+      "corrected": "辉/禁忌魔咒，出现比例与阅读的概率比例相同。具体请在图书馆界面查看。",
+      "reason": "标点规则 take_v6 ／->/：源图印窄斜杠（采样 12/12 v6 对）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.61f009df849ee20001d74c20 17 28"
     }
   ]
 }

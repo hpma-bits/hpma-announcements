@@ -48,6 +48,36 @@
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.68ff6023211aee1690c3c05c 5 8"
+    },
+    {
+      "image_index": 4,
+      "block_index": 0,
+      "original": "“第一届卡牌回响设计大赛?投票期”",
+      "corrected": "“第一届卡牌回响设计大赛·投票期”",
+      "reason": "标点规则 take_v6 ?->·：源图为人名/标题分隔点（采样 v6 全对）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.68ff6023211aee1690c3c05c 4 0"
+    },
+    {
+      "image_index": 4,
+      "block_index": 3,
+      "original": "23：59结束！想要参赛但还未投稿的巫师记得及时提交",
+      "corrected": "23:59结束！想要参赛但还未投稿的巫师记得及时提交",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.68ff6023211aee1690c3c05c 4 3"
+    },
+    {
+      "image_index": 4,
+      "block_index": 20,
+      "original": "活动时间：2025年10月29日5:00-11月5日5：00",
+      "corrected": "活动时间：2025年10月29日5:00-11月5日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.68ff6023211aee1690c3c05c 4 20"
     }
   ]
 }

@@ -39,6 +39,16 @@
       "reason": "“赢系%”为水印串扰；源图为“由60%提高至80%”，数字被水印半遮",
       "confidence": "medium",
       "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 74"
+    },
+    {
+      "image_index": 2,
+      "block_index": 35,
+      "original": "活动时间：2024年4月10日5：00－4月17日05：00",
+      "corrected": "活动时间：2024年4月10日5:00－4月17日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 35"
     }
   ]
 }

@@ -30,6 +30,66 @@
       "reason": "漏字“剜”；咒语名源图为“钻心剜骨”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.627a694d0c8dc6000182943d 1 288"
+    },
+    {
+      "image_index": 1,
+      "block_index": 35,
+      "original": "隆巴顿的回响”／“西弗勒斯·斯内普的回响”在双人",
+      "corrected": "隆巴顿的回响”/“西弗勒斯·斯内普的回响”在双人",
+      "reason": "标点规则 take_v6 ／->/：源图印窄斜杠（分年采样 v6 全对）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.627a694d0c8dc6000182943d 1 35"
+    },
+    {
+      "image_index": 1,
+      "block_index": 55,
+      "original": "相同方向释放冰冻咒：多重冰冻咒基础伤害提高10%",
+      "corrected": "相同方向释放冰冻咒；多重冰冻咒基础伤害提高10%",
+      "reason": "标点规则 take_v6 ：->；：源图印带尾分号（采样复检确认）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.627a694d0c8dc6000182943d 1 55"
+    },
+    {
+      "image_index": 1,
+      "block_index": 149,
+      "original": "活动时间：5月11日维护后－5月18日05：00",
+      "corrected": "活动时间：5月11日维护后－5月18日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.627a694d0c8dc6000182943d 1 149"
+    },
+    {
+      "image_index": 1,
+      "block_index": 163,
+      "original": "第四期禁林竞速挑战将于5月11日5：00结束，结算奖励",
+      "corrected": "第四期禁林竞速挑战将于5月11日5:00结束，结算奖励",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.627a694d0c8dc6000182943d 1 163"
+    },
+    {
+      "image_index": 1,
+      "block_index": 228,
+      "original": "活动时间：5月11日更新后-5月18日5：00",
+      "corrected": "活动时间：5月11日更新后-5月18日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.627a694d0c8dc6000182943d 1 228"
+    },
+    {
+      "image_index": 1,
+      "block_index": 237,
+      "original": "提前领取”魔咒保护券”，则在5月11日5：00开始生效。",
+      "corrected": "提前领取”魔咒保护券”，则在5月11日5:00开始生效。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.627a694d0c8dc6000182943d 1 237"
     }
   ]
 }

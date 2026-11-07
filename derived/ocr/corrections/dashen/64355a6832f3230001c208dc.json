@@ -21,6 +21,16 @@
       "reason": "号→鸮；猫头鹰名源图为“小长耳鸮”。",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.64355a6832f3230001c208dc 1 18"
+    },
+    {
+      "image_index": 1,
+      "block_index": 33,
+      "original": "装的折扣时间至4月30日00：00。",
+      "corrected": "装的折扣时间至4月30日00:00。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64355a6832f3230001c208dc 1 33"
     }
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "id": "dashen.642ace3485776b00016bb388",
+  "source_ocr": "derived/ocr/dashen/642ace3485776b00016bb388.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 7,
+      "original": "活动时间：4月04日维护后－4月26日05：00",
+      "corrected": "活动时间：4月04日维护后－4月26日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.642ace3485776b00016bb388 1 7"
+    }
+  ]
+}

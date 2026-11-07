@@ -66,6 +66,16 @@
       "reason": "拍→护；源图同行为“维护后”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.66d6af77c1beb0737fafccde 1 100"
+    },
+    {
+      "image_index": 1,
+      "block_index": 119,
+      "original": "每日金币获取量存在上限，此上限每日5：00重置。",
+      "corrected": "每日金币获取量存在上限，此上限每日5:00重置。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66d6af77c1beb0737fafccde 1 119"
     }
   ]
 }

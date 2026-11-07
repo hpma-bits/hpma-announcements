@@ -30,6 +30,56 @@
       "reason": "蒙→濛，源图“青柳濛雨·雅”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6422eba34574f60001b54b7f 2 40"
+    },
+    {
+      "image_index": 2,
+      "block_index": 1,
+      "original": "赛季更新时间：4月1日05：30-5月1日05：00",
+      "corrected": "赛季更新时间：4月1日05:30-5月1日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6422eba34574f60001b54b7f 2 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 2,
+      "original": "第19赛季将于4月1日05：30正式开启！决斗俱乐部段位",
+      "corrected": "第19赛季将于4月1日05:30正式开启！决斗俱乐部段位",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6422eba34574f60001b54b7f 2 2"
+    },
+    {
+      "image_index": 2,
+      "block_index": 16,
+      "original": "购买即可解锁特权：每日可完成作业次数+1：复制成",
+      "corrected": "购买即可解锁特权：每日可完成作业次数+1；复制成",
+      "reason": "标点规则 take_v6 ：->；：源图印带尾分号（采样复检确认）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6422eba34574f60001b54b7f 2 16"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "活动时间：4月1日00:00-4月30日23：59",
+      "corrected": "活动时间：4月1日00:00-4月30日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6422eba34574f60001b54b7f 2 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 35,
+      "original": "活动时间：4月1日00：00-4月30日23：59",
+      "corrected": "活动时间：4月1日00:00-4月30日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6422eba34574f60001b54b7f 2 35"
     }
   ]
 }

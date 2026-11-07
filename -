@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "E:\Scripts\hpma-announcements\.review\audit\work\measure_dash.py", line 138, in <module>
+    main()
+  File "E:\Scripts\hpma-announcements\.review\audit\work\measure_dash.py", line 119, in main
+    meta = calib[pat][side.lower()]
+           ~~~~~^^^^^
+KeyError: '－-'

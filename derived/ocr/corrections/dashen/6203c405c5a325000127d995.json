@@ -12,6 +12,26 @@
       "reason": "漏字“剜”；咒语名源图为“钻心剜骨”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6203c405c5a325000127d995 3 16"
+    },
+    {
+      "image_index": 1,
+      "block_index": 15,
+      "original": "活动时间：2月12日5：00-2月23日5:00",
+      "corrected": "活动时间：2月12日5:00-2月23日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6203c405c5a325000127d995 1 15"
+    },
+    {
+      "image_index": 1,
+      "block_index": 22,
+      "original": "活动时间：2月16日5：00-2月23日5:00",
+      "corrected": "活动时间：2月16日5:00-2月23日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6203c405c5a325000127d995 1 22"
     }
   ]
 }

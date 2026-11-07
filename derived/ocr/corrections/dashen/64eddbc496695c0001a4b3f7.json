@@ -48,6 +48,16 @@
       "reason": "噢→嗅；活动名源图为“嗅嗅宝藏”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.64eddbc496695c0001a4b3f7 1 16"
+    },
+    {
+      "image_index": 1,
+      "block_index": 12,
+      "original": "活动时间：当地时间9月1日00:00-9月15日05：00",
+      "corrected": "活动时间：当地时间9月1日00:00-9月15日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64eddbc496695c0001a4b3f7 1 12"
     }
   ]
 }

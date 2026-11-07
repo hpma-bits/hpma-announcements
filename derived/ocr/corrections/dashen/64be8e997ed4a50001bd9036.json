@@ -39,6 +39,16 @@
       "reason": "低置信度重复残片；与 b0066 为同一行重叠切片，源图整行为此句",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 1 67"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "活动时间：7月26日18:00-8月7日16：59",
+      "corrected": "活动时间：7月26日18:00-8月7日16:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 1 11"
     }
   ]
 }

@@ -39,6 +39,76 @@
       "reason": "OCR 稀有字误识（骆→驺）；源图为「驺吾」",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.63fdfee62428dd0001208aa1 3 27"
+    },
+    {
+      "image_index": 1,
+      "block_index": 7,
+      "original": "活动时间：3月1日维护后－4月1日05：00",
+      "corrected": "活动时间：3月1日维护后－4月1日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.63fdfee62428dd0001208aa1 1 7"
+    },
+    {
+      "image_index": 2,
+      "block_index": 1,
+      "original": "活动时间：3月1日00:00－3月31日23：59",
+      "corrected": "活动时间：3月1日00:00－3月31日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.63fdfee62428dd0001208aa1 2 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 3,
+      "original": "师在3月14日23：59前购买，更可享受680星石的特价优",
+      "corrected": "师在3月14日23:59前购买，更可享受680星石的特价优",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.63fdfee62428dd0001208aa1 2 3"
+    },
+    {
+      "image_index": 2,
+      "block_index": 6,
+      "original": "赛季更新时间：3月1日05：30-4月1日05：00",
+      "corrected": "赛季更新时间：3月1日05:30-4月1日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.63fdfee62428dd0001208aa1 2 6"
+    },
+    {
+      "image_index": 2,
+      "block_index": 7,
+      "original": "第18赛季将于3月1日05：30正式开启！决斗俱乐部段位",
+      "corrected": "第18赛季将于3月1日05:30正式开启！决斗俱乐部段位",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.63fdfee62428dd0001208aa1 2 7"
+    },
+    {
+      "image_index": 2,
+      "block_index": 12,
+      "original": "活动时间：3月1日00:00－3月31日23：59",
+      "corrected": "活动时间：3月1日00:00－3月31日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.63fdfee62428dd0001208aa1 2 12"
+    },
+    {
+      "image_index": 2,
+      "block_index": 28,
+      "original": "活动时间：3月1日维护后－3月31日23：59",
+      "corrected": "活动时间：3月1日维护后－3月31日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.63fdfee62428dd0001208aa1 2 28"
     }
   ]
 }

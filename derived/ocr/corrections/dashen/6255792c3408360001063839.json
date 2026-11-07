@@ -39,6 +39,16 @@
       "reason": "眶→哐；道具名源图为“哐铛铛钱袋”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6255792c3408360001063839 1 76"
+    },
+    {
+      "image_index": 1,
+      "block_index": 56,
+      "original": "摩金夫人长袍专卖店全新升级，每日5：00，摩金夫人",
+      "corrected": "摩金夫人长袍专卖店全新升级，每日5:00，摩金夫人",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6255792c3408360001063839 1 56"
     }
   ]
 }

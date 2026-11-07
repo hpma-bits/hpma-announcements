@@ -66,6 +66,36 @@
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 4 30"
+    },
+    {
+      "image_index": 2,
+      "block_index": 44,
+      "original": "进行，每日13：30后，各位巫师可通过游戏内的活动界",
+      "corrected": "进行，每日13:30后，各位巫师可通过游戏内的活动界",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 2 44"
+    },
+    {
+      "image_index": 3,
+      "block_index": 49,
+      "original": "皇冠”将以1：100的比例转化为金币。后续“深林对决”模",
+      "corrected": "皇冠”将以1:100的比例转化为金币。后续“深林对决”模",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 3 49"
+    },
+    {
+      "image_index": 4,
+      "block_index": 33,
+      "original": "活动时间：2024年9月25日5：00-10月2日5:00",
+      "corrected": "活动时间：2024年9月25日5:00-10月2日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 4 33"
     }
   ]
 }

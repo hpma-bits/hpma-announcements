@@ -19,7 +19,7 @@
       "original": "秘语”、传说品质魔杖外观“权奔交锋”、传说品质猫头",
       "corrected": "秘语”、传说品质魔杖外观“权弈交锋”、传说品质猫头",
       "reason": "奔→弈；源图“权弈交锋”（b12 为同一行正确重复块）",
-      "confidence": "medium",
+      "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 1 11"
     },
     {
@@ -55,7 +55,7 @@
       "original": "购买即可获得12月“神奇动物在哪里·1”主题史诗时装：",
       "corrected": "购买即可获得12月“神奇动物在哪里·I”主题史诗时装：",
       "reason": "1→I；源图主题编号为罗马数字“I”",
-      "confidence": "medium",
+      "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 4 13"
     },
     {
@@ -93,6 +93,56 @@
       "reason": "sheet 第178行；“5度特”为水印串扰，源图“此上限每日5:00重置。”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 5 35"
+    },
+    {
+      "image_index": 3,
+      "block_index": 9,
+      "original": "活动期间，巫师消费宝石或星石即可1：1获得积分。累",
+      "corrected": "活动期间，巫师消费宝石或星石即可1:1获得积分。累",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 3 9"
+    },
+    {
+      "image_index": 5,
+      "block_index": 11,
+      "original": "第一届卡牌回响设计大赛的投票期将于11月30日23：59",
+      "corrected": "第一届卡牌回响设计大赛的投票期将于11月30日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 5 11"
+    },
+    {
+      "image_index": 5,
+      "block_index": 25,
+      "original": "赛季预告界面开启时间：2025年12月3日7：00",
+      "corrected": "赛季预告界面开启时间：2025年12月3日7:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 5 25"
+    },
+    {
+      "image_index": 5,
+      "block_index": 32,
+      "original": "活动时间：2025年11月26日5：00-12月03日5:00",
+      "corrected": "活动时间：2025年11月26日5:00-12月03日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 5 32"
+    },
+    {
+      "image_index": 6,
+      "block_index": 1,
+      "original": "活动时间：2025年12月03日5：00-12月10日5:00",
+      "corrected": "活动时间：2025年12月03日5:00-12月10日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 6 1"
     }
   ]
 }

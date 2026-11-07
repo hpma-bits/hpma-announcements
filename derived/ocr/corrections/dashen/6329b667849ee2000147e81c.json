@@ -57,6 +57,46 @@
       "reason": "讽→飒；源图为“飒爽英姿”（立+风，字符级放大核验），同公告 img1 b33 同款发型即“飒爽英姿”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 5 31"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "第一阶段：9月21日维护后-10月2日18：59",
+      "corrected": "第一阶段：9月21日维护后-10月2日18:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 1 11"
+    },
+    {
+      "image_index": 5,
+      "block_index": 9,
+      "original": "确定返场的时装将在9月29日7:00-10月19日4：59期间上",
+      "corrected": "确定返场的时装将在9月29日7:00-10月19日4:59期间上",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 5 9"
+    },
+    {
+      "image_index": 5,
+      "block_index": 14,
+      "original": "售卖时间：9月21日维护后－9月27日23：59",
+      "corrected": "售卖时间：9月21日维护后－9月27日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 5 14"
+    },
+    {
+      "image_index": 5,
+      "block_index": 26,
+      "original": "售卖时间：9月21日维护后-9月27日23：59",
+      "corrected": "售卖时间：9月21日维护后-9月27日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 5 26"
     }
   ]
 }

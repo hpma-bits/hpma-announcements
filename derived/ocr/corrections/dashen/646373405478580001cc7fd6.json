@@ -66,6 +66,26 @@
       "reason": "发邮籍→发送到邮箱；源图行末被“大神@哈利波特魔法觉醒”水印覆盖，可辨内容止于“邮箱”，故标 medium",
       "confidence": "medium",
       "recrop": "python -m tools.cli crop dashen.646373405478580001cc7fd6 3 31"
+    },
+    {
+      "image_index": 1,
+      "block_index": 9,
+      "original": "活动时间：5月17日维护后－6月1日04：00",
+      "corrected": "活动时间：5月17日维护后－6月1日04:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.646373405478580001cc7fd6 1 9"
+    },
+    {
+      "image_index": 2,
+      "block_index": 1,
+      "original": "活动时间：5月17日维护后－6月1日04：00",
+      "corrected": "活动时间：5月17日维护后－6月1日04:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.646373405478580001cc7fd6 2 1"
     }
   ]
 }

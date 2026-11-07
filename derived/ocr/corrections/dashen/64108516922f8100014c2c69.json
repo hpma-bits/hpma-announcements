@@ -21,6 +21,16 @@
       "reason": "漏字“迥”；源图为“风格迥异”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.64108516922f8100014c2c69 1 9"
+    },
+    {
+      "image_index": 2,
+      "block_index": 17,
+      "original": "双人模式：3月17日05：00－3月22日04:59",
+      "corrected": "双人模式：3月17日05:00－3月22日04:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64108516922f8100014c2c69 2 17"
     }
   ]
 }

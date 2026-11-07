@@ -21,6 +21,16 @@
       "reason": "漏字“鸮”；源图猫头鹰名为“幼年横斑林鸮”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.661d286a2c1642202ff65c7a 1 10"
+    },
+    {
+      "image_index": 1,
+      "block_index": 32,
+      "original": "活动时间：2024年4月18日05：00-2024年5月2日05:00",
+      "corrected": "活动时间：2024年4月18日05:00-2024年5月2日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.661d286a2c1642202ff65c7a 1 32"
     }
   ]
 }

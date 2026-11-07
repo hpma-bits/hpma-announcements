@@ -21,6 +21,46 @@
       "reason": "号→鸮；猫头鹰名源图为“小林雕鸮”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.653f83caecda660001756117 1 37"
+    },
+    {
+      "image_index": 1,
+      "block_index": 8,
+      "original": "赛季时间：10月17日更新后-12月12日13：50",
+      "corrected": "赛季时间：10月17日更新后-12月12日13:50",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.653f83caecda660001756117 1 8"
+    },
+    {
+      "image_index": 1,
+      "block_index": 46,
+      "original": "奖励发放时间：11月7日05：00",
+      "corrected": "奖励发放时间：11月7日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.653f83caecda660001756117 1 46"
+    },
+    {
+      "image_index": 3,
+      "block_index": 7,
+      "original": "活动时间：10月31日17：00-11月13日16：59",
+      "corrected": "活动时间：10月31日17:00-11月13日16:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.653f83caecda660001756117 3 7"
+    },
+    {
+      "image_index": 3,
+      "block_index": 11,
+      "original": "活动时间：11月7日05：00-11月13日16：59",
+      "corrected": "活动时间：11月7日05:00-11月13日16:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.653f83caecda660001756117 3 11"
     }
   ]
 }

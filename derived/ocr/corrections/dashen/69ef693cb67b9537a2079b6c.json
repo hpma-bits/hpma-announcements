@@ -66,6 +66,106 @@
       "reason": "漏字“蹊”；标题/正文源图均为“林中蹊径”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 5 51"
+    },
+    {
+      "image_index": 1,
+      "block_index": 8,
+      "original": "开启时间：2026年4月29日维护后－5月27日6：00",
+      "corrected": "开启时间：2026年4月29日维护后－5月27日6:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 1 8"
+    },
+    {
+      "image_index": 1,
+      "block_index": 27,
+      "original": "活动时间：2026年4月29日维护后-5月27日6：00",
+      "corrected": "活动时间：2026年4月29日维护后-5月27日6:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 1 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 3,
+      "original": "赛季时间：2026年3月31日维护后-5月27日6：00",
+      "corrected": "赛季时间：2026年3月31日维护后-5月27日6:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 2 3"
+    },
+    {
+      "image_index": 2,
+      "block_index": 22,
+      "original": "活动时间：2026年4月29日维护后-5月27日6：00每晚",
+      "corrected": "活动时间：2026年4月29日维护后-5月27日6:00每晚",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 2 22"
+    },
+    {
+      "image_index": 3,
+      "block_index": 34,
+      "original": "活动期间，巫师消费宝石或星石即可1：1获得积分。累",
+      "corrected": "活动期间，巫师消费宝石或星石即可1:1获得积分。累",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 3 34"
+    },
+    {
+      "image_index": 4,
+      "block_index": 1,
+      "original": "上架时间：2026年5月1日5：30-6月1日3：20",
+      "corrected": "上架时间：2026年5月1日5:30-6月1日3:20",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 4 1"
+    },
+    {
+      "image_index": 5,
+      "block_index": 1,
+      "original": "活动时间：2026年4月29日5：00-5月13日5:00",
+      "corrected": "活动时间：2026年4月29日5:00-5月13日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 5 1"
+    },
+    {
+      "image_index": 5,
+      "block_index": 43,
+      "original": "活动时间：2026年4月29日维护后-5月13日5：00",
+      "corrected": "活动时间：2026年4月29日维护后-5月13日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 5 43"
+    },
+    {
+      "image_index": 5,
+      "block_index": 48,
+      "original": "每日宝箱奖励获取量存在上限，每日5：00重置。",
+      "corrected": "每日宝箱奖励获取量存在上限，每日5:00重置。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 5 48"
+    },
+    {
+      "image_index": 6,
+      "block_index": 1,
+      "original": "活动时间：2026年5月6日05：00-5月13日5：00",
+      "corrected": "活动时间：2026年5月6日05:00-5月13日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 6 1"
     }
   ]
 }

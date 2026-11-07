@@ -48,6 +48,46 @@
       "reason": "已→己；源图为“己方”，与同段后文“己方食死徒”一致",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 121"
+    },
+    {
+      "image_index": 1,
+      "block_index": 5,
+      "original": "MA8赛季将于5月1日5：30正式开启！决斗俱乐部段位将",
+      "corrected": "MA8赛季将于5月1日5:30正式开启！决斗俱乐部段位将",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 5"
+    },
+    {
+      "image_index": 1,
+      "block_index": 35,
+      "original": "双人模式：2022年4月29日5:00－2022年5月5日5：00",
+      "corrected": "双人模式：2022年4月29日5:00－2022年5月5日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 35"
+    },
+    {
+      "image_index": 1,
+      "block_index": 76,
+      "original": "超过该魔咒组合中除自身外等级最低者）：若不为最",
+      "corrected": "超过该魔咒组合中除自身外等级最低者）；若不为最",
+      "reason": "标点规则 take_v6 ：->；：源图印带尾分号（采样复检确认）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 76"
+    },
+    {
+      "image_index": 1,
+      "block_index": 83,
+      "original": "0:00至5月14日23：59期间进行购买，更可享受680星石",
+      "corrected": "0:00至5月14日23:59期间进行购买，更可享受680星石",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6267d8c574424700015b9ed2 1 83"
     }
   ]
 }

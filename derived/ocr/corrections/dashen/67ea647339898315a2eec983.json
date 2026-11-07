@@ -39,6 +39,26 @@
       "reason": "漏字“蹊”；标题源图为“林中蹊径”，与同页正文一致",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 4 21"
+    },
+    {
+      "image_index": 2,
+      "block_index": 29,
+      "original": "活动时间：2025年4月9日5：00－4月16日5：00",
+      "corrected": "活动时间：2025年4月9日5:00－4月16日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 2 29"
+    },
+    {
+      "image_index": 4,
+      "block_index": 18,
+      "original": "活动时间：2025年4月9日5：00－4月16日5:00",
+      "corrected": "活动时间：2025年4月9日5:00－4月16日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 4 18"
     }
   ]
 }

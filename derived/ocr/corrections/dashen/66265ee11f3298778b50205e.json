@@ -21,6 +21,76 @@
       "reason": "漏字“墩”；卡牌名源图为“石墩出动”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 1 16"
+    },
+    {
+      "image_index": 1,
+      "block_index": 28,
+      "original": "赛季时间：2024年4月2日维护后－5月29日05：59",
+      "corrected": "赛季时间：2024年4月2日维护后－5月29日05:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 1 28"
+    },
+    {
+      "image_index": 1,
+      "block_index": 37,
+      "original": "开启时间：2024年5月1日05：00",
+      "corrected": "开启时间：2024年5月1日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 1 37"
+    },
+    {
+      "image_index": 2,
+      "block_index": 42,
+      "original": "活动期间，巫师消费宝石或星石即可1：1获得积分。累",
+      "corrected": "活动期间，巫师消费宝石或星石即可1:1获得积分。累",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 2 42"
+    },
+    {
+      "image_index": 2,
+      "block_index": 49,
+      "original": "活动时间：2024年5月1日05:00－5月15日05：00",
+      "corrected": "活动时间：2024年5月1日05:00－5月15日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 2 49"
+    },
+    {
+      "image_index": 3,
+      "block_index": 11,
+      "original": "活动时间：2024年5月8日05:00－5月15日05：00",
+      "corrected": "活动时间：2024年5月8日05:00－5月15日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 3 11"
+    },
+    {
+      "image_index": 3,
+      "block_index": 16,
+      "original": "活动时间：2024年5月15日05：00-5月22日05:00",
+      "corrected": "活动时间：2024年5月15日05:00-5月22日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 3 16"
+    },
+    {
+      "image_index": 3,
+      "block_index": 19,
+      "original": "每日金币获取量存在上限，此上限每日5：00重置。",
+      "corrected": "每日金币获取量存在上限，此上限每日5:00重置。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66265ee11f3298778b50205e 3 19"
     }
   ]
 }

@@ -57,6 +57,36 @@
       "reason": "漏字“薅”；源图为“前来薅菜”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 6 21"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "“S13烘焙赛季?霜结燃烧火刑架”开启！",
+      "corrected": "“S13烘焙赛季·霜结燃烧火刑架”开启！",
+      "reason": "标点规则 take_v6 ?->·：源图为人名/标题分隔点（采样 v6 全对）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 1 13"
+    },
+    {
+      "image_index": 2,
+      "block_index": 25,
+      "original": "投票时间：2025年5月14日维护后-5月19日23：59",
+      "corrected": "投票时间：2025年5月14日维护后-5月19日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 2 25"
+    },
+    {
+      "image_index": 3,
+      "block_index": 23,
+      "original": "活动时间：2025年5月17日20：00-22:00",
+      "corrected": "活动时间：2025年5月17日20:00-22:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 3 23"
     }
   ]
 }

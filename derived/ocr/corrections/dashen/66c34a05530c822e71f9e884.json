@@ -48,6 +48,36 @@
       "reason": "sheet 第43行；品品→晶晶，源图标题为“月度亮晶晶”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 5 27"
+    },
+    {
+      "image_index": 4,
+      "block_index": 37,
+      "original": "活动时间：2024年8月28日5：00-9月4日5：00",
+      "corrected": "活动时间：2024年8月28日5:00-9月4日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 4 37"
+    },
+    {
+      "image_index": 5,
+      "block_index": 9,
+      "original": "活动时间：2024年8月28日5：00-9月4日5：00",
+      "corrected": "活动时间：2024年8月28日5:00-9月4日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 5 9"
+    },
+    {
+      "image_index": 5,
+      "block_index": 18,
+      "original": "活动时间：2024年8月28日5：00-9月04日5:00",
+      "corrected": "活动时间：2024年8月28日5:00-9月04日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 5 18"
     }
   ]
 }

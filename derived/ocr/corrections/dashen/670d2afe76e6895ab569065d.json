@@ -44,10 +44,30 @@
       "image_index": 5,
       "block_index": 50,
       "original": "（2）画票获得的时候会显示画票当前收的皓糖皮特魔法觉醒",
-      "corrected": "（2）画票获得的时候会显示画票当前收集的进度。",
-      "reason": "“收的皓糖”为水印串扰；源图“当前收集的进度”，水印遮挡“集”字",
+      "corrected": "(2)画票获得的时候会显示画票当前收集的进度。",
+      "reason": "z10 可见源图行首为半角“(2)”（同图 b49 亦作半角“(1)”），现行 corrected 误作全角“（2）”；尾部“收集的进度”半掩于水印下与修正一致",
       "confidence": "medium",
       "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 5 50"
+    },
+    {
+      "image_index": 4,
+      "block_index": 14,
+      "original": "每日宝箱奖励获取量存在上限，此上限每日5：00重置。",
+      "corrected": "每日宝箱奖励获取量存在上限，此上限每日5:00重置。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 4 14"
+    },
+    {
+      "image_index": 4,
+      "block_index": 29,
+      "original": "活动时间：2024年10月23日5：00-2024年10月30日5：00",
+      "corrected": "活动时间：2024年10月23日5:00-2024年10月30日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 4 29"
     }
   ]
 }

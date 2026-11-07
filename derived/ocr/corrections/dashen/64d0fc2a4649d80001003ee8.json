@@ -21,6 +21,56 @@
       "reason": "整行乱码；源图与上一行同为“4、优化了日常任务界面。新增玩法推送，玩家完成”（sheet 第8行）",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.64d0fc2a4649d80001003ee8 2 51"
+    },
+    {
+      "image_index": 1,
+      "block_index": 6,
+      "original": "活动时间：当地时间8月8日17：00-8月21日16：59",
+      "corrected": "活动时间：当地时间8月8日17:00-8月21日16:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64d0fc2a4649d80001003ee8 1 6"
+    },
+    {
+      "image_index": 1,
+      "block_index": 33,
+      "original": "活动时间：所在服务器时区8月8日17:00-8月21日16：59",
+      "corrected": "活动时间：所在服务器时区8月8日17:00-8月21日16:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64d0fc2a4649d80001003ee8 1 33"
+    },
+    {
+      "image_index": 1,
+      "block_index": 38,
+      "original": "活动时间：所在服务器时区8月15日5：00-8月21日16：59",
+      "corrected": "活动时间：所在服务器时区8月15日5:00-8月21日16:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64d0fc2a4649d80001003ee8 1 38"
+    },
+    {
+      "image_index": 1,
+      "block_index": 42,
+      "original": "活动时间：8月8日17:00-9月4日16：59",
+      "corrected": "活动时间：8月8日17:00-9月4日16:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64d0fc2a4649d80001003ee8 1 42"
+    },
+    {
+      "image_index": 2,
+      "block_index": 16,
+      "original": "活动时间：8月8日17:00-8月15日16：59",
+      "corrected": "活动时间：8月8日17:00-8月15日16:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.64d0fc2a4649d80001003ee8 2 16"
     }
   ]
 }

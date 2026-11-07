@@ -30,6 +30,86 @@
       "reason": "噢→嗅、漏一“嗅”；源图为“轻轻上下晃动嗅嗅”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 1 14"
+    },
+    {
+      "image_index": 1,
+      "block_index": 5,
+      "original": "赛季更新时间：3月1日5：30",
+      "corrected": "赛季更新时间：3月1日5:30",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 1 5"
+    },
+    {
+      "image_index": 1,
+      "block_index": 6,
+      "original": "MA6赛季将于3月1日5：30正式开启！决斗俱乐部段位将进行重置，段位奖励",
+      "corrected": "MA6赛季将于3月1日5:30正式开启！决斗俱乐部段位将进行重置，段位奖励",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 1 6"
+    },
+    {
+      "image_index": 1,
+      "block_index": 10,
+      "original": "活动时间：3月1日维护后-3月9日5：00",
+      "corrected": "活动时间：3月1日维护后-3月9日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 1 10"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "第二期禁林竞速挑战将于3月2日5：00结束，结算奖励将以邮件方式发放给",
+      "corrected": "第二期禁林竞速挑战将于3月2日5:00结束，结算奖励将以邮件方式发放给",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 1 19"
+    },
+    {
+      "image_index": 2,
+      "block_index": 13,
+      "original": "更新后，光辉／禁忌魔咒将加入“复制成双”，快来试试吧！",
+      "corrected": "更新后，光辉/禁忌魔咒将加入“复制成双”，快来试试吧！",
+      "reason": "标点规则 take_v6 ／->/：源图印窄斜杠（采样 12/12 v6 对）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 2 13"
+    },
+    {
+      "image_index": 4,
+      "block_index": 16,
+      "original": "活动时间：2022年3月1日维护后-2022年3月31日23：59",
+      "corrected": "活动时间：2022年3月1日维护后-2022年3月31日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 4 16"
+    },
+    {
+      "image_index": 4,
+      "block_index": 18,
+      "original": "23：59期间进行购买，更可享受68元特价优惠！",
+      "corrected": "23:59期间进行购买，更可享受68元特价优惠！",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 4 18"
+    },
+    {
+      "image_index": 4,
+      "block_index": 20,
+      "original": "活动时间：3月1日维护后-3月31日23：59",
+      "corrected": "活动时间：3月1日维护后-3月31日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.621ccda1c5a32500015753ea 4 20"
     }
   ]
 }

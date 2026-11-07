@@ -1,0 +1,38 @@
+{
+  "id": "dashen.6304c84d3408360001b91055",
+  "source_ocr": "derived/ocr/dashen/6304c84d3408360001b91055.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 7,
+      "original": "抢先体验时间：8月24日维护后－8月31日5：00",
+      "corrected": "抢先体验时间：8月24日维护后－8月31日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6304c84d3408360001b91055 1 7"
+    },
+    {
+      "image_index": 1,
+      "block_index": 20,
+      "original": "活动时间：8月24日维护后－9月7日5：00",
+      "corrected": "活动时间：8月24日维护后－9月7日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6304c84d3408360001b91055 1 20"
+    },
+    {
+      "image_index": 1,
+      "block_index": 30,
+      "original": "售卖时间：8月24日维护后－8月30日23：59",
+      "corrected": "售卖时间：8月24日维护后－8月30日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6304c84d3408360001b91055 1 30"
+    }
+  ]
+}

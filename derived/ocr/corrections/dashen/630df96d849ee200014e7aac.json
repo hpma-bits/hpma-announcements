@@ -1,0 +1,68 @@
+{
+  "id": "dashen.630df96d849ee200014e7aac",
+  "source_ocr": "derived/ocr/dashen/630df96d849ee200014e7aac.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 26,
+      "original": "售卖时间：9月1日7:00-9月7日23：59",
+      "corrected": "售卖时间：9月1日7:00-9月7日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.630df96d849ee200014e7aac 1 26"
+    },
+    {
+      "image_index": 2,
+      "block_index": 1,
+      "original": "赛季更新时间：9月1日5：30－10月1日5:00",
+      "corrected": "赛季更新时间：9月1日5:30－10月1日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.630df96d849ee200014e7aac 2 1"
+    },
+    {
+      "image_index": 2,
+      "block_index": 2,
+      "original": "MA第12赛季将于9月1日5：30正式开启！",
+      "corrected": "MA第12赛季将于9月1日5:30正式开启！",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.630df96d849ee200014e7aac 2 2"
+    },
+    {
+      "image_index": 2,
+      "block_index": 15,
+      "original": "活动时间：9月1日0:00-9月30日23：59",
+      "corrected": "活动时间：9月1日0:00-9月30日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.630df96d849ee200014e7aac 2 15"
+    },
+    {
+      "image_index": 2,
+      "block_index": 23,
+      "original": "活动时间：9月1日0:00－9月30日23：59",
+      "corrected": "活动时间：9月1日0:00－9月30日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.630df96d849ee200014e7aac 2 23"
+    },
+    {
+      "image_index": 2,
+      "block_index": 25,
+      "original": "0:00至9月14日23：59期间进行购买，更可享受680星石",
+      "corrected": "0:00至9月14日23:59期间进行购买，更可享受680星石",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.630df96d849ee200014e7aac 2 25"
+    }
+  ]
+}

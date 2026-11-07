@@ -1,0 +1,18 @@
+{
+  "id": "dashen.62a8732d0c8dc60001d4f612",
+  "source_ocr": "derived/ocr/dashen/62a8732d0c8dc60001d4f612.json",
+  "verified_by": "main-session",
+  "verification": "every corrected block was checked against a source-image crop; repeated systematic variants were sampled across notices",
+  "corrections": [
+    {
+      "image_index": 1,
+      "block_index": 21,
+      "original": "巫师可前往“设置-社交”，从“好友”／“好友及社团”",
+      "corrected": "巫师可前往“设置-社交”，从“好友”/“好友及社团”",
+      "reason": "标点规则 take_v6 ／->/：源图印窄斜杠（分年采样 v6 全对）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62a8732d0c8dc60001d4f612 1 21"
+    }
+  ]
+}

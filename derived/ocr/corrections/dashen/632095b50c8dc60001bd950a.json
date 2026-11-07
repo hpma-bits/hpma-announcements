@@ -21,6 +21,26 @@
       "reason": "金→全；源图标题为“全新功能抢先体验”（重叠切片）（sheet 第186行）",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.632095b50c8dc60001bd950a 2 33"
+    },
+    {
+      "image_index": 1,
+      "block_index": 7,
+      "original": "活动时间：9月14日维护后－10月12日5：00",
+      "corrected": "活动时间：9月14日维护后－10月12日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.632095b50c8dc60001bd950a 1 7"
+    },
+    {
+      "image_index": 3,
+      "block_index": 8,
+      "original": "2022年9月20日5：00之后，巫师可前往摩金夫人长袍专",
+      "corrected": "2022年9月20日5:00之后，巫师可前往摩金夫人长袍专",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.632095b50c8dc60001bd950a 3 8"
     }
   ]
 }

@@ -93,6 +93,16 @@
       "reason": "漏两处“锢”；源图为“速速禁锢造成的禁锢时间缩短”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.63b41fd13408360001476aec 1 27"
+    },
+    {
+      "image_index": 1,
+      "block_index": 12,
+      "original": "励！奖励次数于每日05：00刷新。",
+      "corrected": "励！奖励次数于每日05:00刷新。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.63b41fd13408360001476aec 1 12"
     }
   ]
 }

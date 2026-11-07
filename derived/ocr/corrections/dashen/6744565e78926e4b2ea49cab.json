@@ -48,6 +48,26 @@
       "reason": "溪→蹊；源图标题为“林中蹊径”（sheet 第116行）",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 91"
+    },
+    {
+      "image_index": 1,
+      "block_index": 97,
+      "original": "活动时间：2024年11月27日5：00－12月04日5:00",
+      "corrected": "活动时间：2024年11月27日5:00－12月04日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 97"
+    },
+    {
+      "image_index": 1,
+      "block_index": 101,
+      "original": "活动时间：2024年12月4日5：00－12月11日5:00",
+      "corrected": "活动时间：2024年12月4日5:00－12月11日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 101"
     }
   ]
 }

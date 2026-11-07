@@ -30,6 +30,56 @@
       "reason": "漏字“剜”；咒语名源图为“钻心剜骨”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 78"
+    },
+    {
+      "image_index": 1,
+      "block_index": 7,
+      "original": "活动时间：5月18日维护后-6月8日5：00",
+      "corrected": "活动时间：5月18日维护后-6月8日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 7"
+    },
+    {
+      "image_index": 1,
+      "block_index": 54,
+      "original": "活动时间：5月20日5：00-6月3日4:59",
+      "corrected": "活动时间：5月20日5:00-6月3日4:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 54"
+    },
+    {
+      "image_index": 1,
+      "block_index": 60,
+      "original": "售卖时间：5月18日维护后-5月29日23：59",
+      "corrected": "售卖时间：5月18日维护后-5月29日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 60"
+    },
+    {
+      "image_index": 1,
+      "block_index": 68,
+      "original": "6月1日4：59期间进行购买，更可以120星石特价获取！活",
+      "corrected": "6月1日4:59期间进行购买，更可以120星石特价获取！活",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 68"
+    },
+    {
+      "image_index": 1,
+      "block_index": 85,
+      "original": "活动时间：5月18日5：00-6月8日5:00",
+      "corrected": "活动时间：5月18日5:00-6月8日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6283ad417442470001a03f81 1 85"
     }
   ]
 }

@@ -21,6 +21,46 @@
       "reason": "漏“1”；源图为“上限为1次”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 3 2"
+    },
+    {
+      "image_index": 1,
+      "block_index": 5,
+      "original": "赛季更新时间：4月1日5：30-5月1日5:00",
+      "corrected": "赛季更新时间：4月1日5:30-5月1日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 1 5"
+    },
+    {
+      "image_index": 1,
+      "block_index": 6,
+      "original": "MA7赛季将于4月1日5：30正式开启！决斗俱乐部段位将进行重置，段位奖",
+      "corrected": "MA7赛季将于4月1日5:30正式开启！决斗俱乐部段位将进行重置，段位奖",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 1 6"
+    },
+    {
+      "image_index": 2,
+      "block_index": 5,
+      "original": "全新时装“慵懒假日”上线，巫师在4月1日0:00至4月14日23：59期间进行购",
+      "corrected": "全新时装“慵懒假日”上线，巫师在4月1日0:00至4月14日23:59期间进行购",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 2 5"
+    },
+    {
+      "image_index": 2,
+      "block_index": 26,
+      "original": "活动时间：3月30日维护后-4月7日23：59",
+      "corrected": "活动时间：3月30日维护后-4月7日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（采样 23/23 v6 对，分年一致）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6242cd22849ee2000171301c 2 26"
     }
   ]
 }

@@ -21,6 +21,16 @@
       "reason": "皮→波；水印专名源图为“哈利波特”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.62cd5552c3e1e50001910c35 5 15"
+    },
+    {
+      "image_index": 1,
+      "block_index": 10,
+      "original": "看前瞻视频：将视频分享给伙伴，更可获得1张“星芒",
+      "corrected": "看前瞻视频；将视频分享给伙伴，更可获得1张“星芒",
+      "reason": "标点规则 take_v6 ：->；：源图印带尾分号（采样复检确认）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.62cd5552c3e1e50001910c35 1 10"
     }
   ]
 }

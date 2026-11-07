@@ -66,6 +66,66 @@
       "reason": "“参夏/电音”为形近误识，源图为此句",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 4 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 0,
+      "original": "赛季时间：2026年3月31日维护后－5月27日6：00",
+      "corrected": "赛季时间：2026年3月31日维护后－5月27日6:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 2 0"
+    },
+    {
+      "image_index": 2,
+      "block_index": 15,
+      "original": "活动时间：2026年4月15日7：00-5月27日6:00",
+      "corrected": "活动时间：2026年4月15日7:00-5月27日6:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 2 15"
+    },
+    {
+      "image_index": 2,
+      "block_index": 20,
+      "original": "活动时间：2026年4月15日维护后-5月27日6：00每晚",
+      "corrected": "活动时间：2026年4月15日维护后-5月27日6:00每晚",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 2 20"
+    },
+    {
+      "image_index": 3,
+      "block_index": 10,
+      "original": "活动时间：2026年4月15日7：00-4月29日6：00",
+      "corrected": "活动时间：2026年4月15日7:00-4月29日6:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 3 10"
+    },
+    {
+      "image_index": 3,
+      "block_index": 27,
+      "original": "活动时间：2026年4月15日5：00-4月22日5：00",
+      "corrected": "活动时间：2026年4月15日5:00-4月22日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 3 27"
+    },
+    {
+      "image_index": 4,
+      "block_index": 1,
+      "original": "活动时间：2026年4月22日5：00-4月29日5：00",
+      "corrected": "活动时间：2026年4月22日5:00-4月29日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.69dcd76942d7e97707ed911e 4 1"
     }
   ]
 }

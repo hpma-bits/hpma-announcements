@@ -66,6 +66,26 @@
       "reason": "骂→鸮；源图为“与鸮同栖”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6385ee69744247000130be78 2 14"
+    },
+    {
+      "image_index": 1,
+      "block_index": 25,
+      "original": "活动时间：12月1日00：00-12月31日23：59",
+      "corrected": "活动时间：12月1日00:00-12月31日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6385ee69744247000130be78 1 25"
+    },
+    {
+      "image_index": 1,
+      "block_index": 27,
+      "original": "师在12月14日23：59前购买，更可享受680星石特价优",
+      "corrected": "师在12月14日23:59前购买，更可享受680星石特价优",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6385ee69744247000130be78 1 27"
     }
   ]
 }

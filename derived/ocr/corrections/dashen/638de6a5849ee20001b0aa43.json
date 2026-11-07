@@ -21,6 +21,36 @@
       "reason": "漏字““”；源图红色标题为“飘雪问候”礼包上架（字符级放大核验），补齐后 b0020 重复行被去重",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.638de6a5849ee20001b0aa43 1 19"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "同时首周12月8日05：00-12月15日05：00开启“娱乐常",
+      "corrected": "同时首周12月8日05:00-12月15日05:00开启“娱乐常",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.638de6a5849ee20001b0aa43 1 11"
+    },
+    {
+      "image_index": 1,
+      "block_index": 14,
+      "original": "活动时间：12月7日维护后-12月14日05：00",
+      "corrected": "活动时间：12月7日维护后-12月14日05:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.638de6a5849ee20001b0aa43 1 14"
+    },
+    {
+      "image_index": 1,
+      "block_index": 21,
+      "original": "售卖时间：12月7日维护后-12月13日23：59",
+      "corrected": "售卖时间：12月7日维护后-12月13日23:59",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.638de6a5849ee20001b0aa43 1 21"
     }
   ]
 }

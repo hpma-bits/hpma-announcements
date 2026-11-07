@@ -30,6 +30,46 @@
       "reason": "溪→蹊；源图标题为“林中蹊径”（与 b0064 为同一行的重叠切片）",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6720552190b2886a4b1236ec 1 65"
+    },
+    {
+      "image_index": 1,
+      "block_index": 16,
+      "original": "“黑魔法赛季?黯影与微光”持续更新！",
+      "corrected": "“黑魔法赛季·黯影与微光”持续更新！",
+      "reason": "标点规则 take_v6 ?->·：源图为人名/标题分隔点（采样 v6 全对）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6720552190b2886a4b1236ec 1 16"
+    },
+    {
+      "image_index": 1,
+      "block_index": 70,
+      "original": "活动时间：2024年10月30日5：00－11月6日5:00",
+      "corrected": "活动时间：2024年10月30日5:00－11月6日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6720552190b2886a4b1236ec 1 70"
+    },
+    {
+      "image_index": 1,
+      "block_index": 73,
+      "original": "每日回响晶石获取量存在上限，此上限每日5：00重置。",
+      "corrected": "每日回响晶石获取量存在上限，此上限每日5:00重置。",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6720552190b2886a4b1236ec 1 73"
+    },
+    {
+      "image_index": 1,
+      "block_index": 75,
+      "original": "活动时间：2024年11月6日5：00-11月13日5:00",
+      "corrected": "活动时间：2024年11月6日5:00-11月13日5:00",
+      "reason": "标点规则 time_colon_halfwidth：数字:数字时间冒号源图印半角（分年采样 23/23）",
+      "confidence": "high",
+      "via": "punct-rule",
+      "recrop": "python -m tools.cli crop dashen.6720552190b2886a4b1236ec 1 75"
     }
   ]
 }

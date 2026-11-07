@@ -216,6 +216,21 @@ def check_ledger(notice: Record, ledger: Record) -> list[str]:
     return problems
 
 
+def corrected_blocks_raw(ledger: Record) -> dict[Locator, str | None]:
+    """Locator map from a ledger, without validating it against any OCR.
+
+    A value of ``None`` marks a dropped block. Used by tooling that reads the
+    ledger directly (audit comparison); the edition path goes through
+    :func:`corrected_blocks`, which validates first.
+    """
+    return {
+        (correction["image_index"], correction["block_index"]): (
+            None if correction.get("drop") else correction["corrected"]
+        )
+        for correction in ledger.get("corrections", [])
+    }
+
+
 def corrected_blocks(notice: Record, ledger: Record | None) -> dict[Locator, str | None]:
     """Map ``(image_index, block_index)`` to the text the source image shows.
 
@@ -230,9 +245,4 @@ def corrected_blocks(notice: Record, ledger: Record | None) -> dict[Locator, str
     problems = check_ledger(notice, ledger)
     if problems:
         raise ValueError("; ".join(problems))
-    return {
-        (correction["image_index"], correction["block_index"]): (
-            None if correction.get("drop") else correction["corrected"]
-        )
-        for correction in ledger["corrections"]
-    }
+    return corrected_blocks_raw(ledger)
