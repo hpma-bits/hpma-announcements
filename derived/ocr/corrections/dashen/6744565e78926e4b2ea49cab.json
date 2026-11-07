@@ -108,6 +108,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 182"
+    },
+    {
+      "image_index": 1,
+      "block_index": 21,
+      "original": "的故事也在悄然流动.....",
+      "corrected": "的故事也在悄然流动……",
+      "reason": "crop shows line ends 流动 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 21"
+    },
+    {
+      "image_index": 1,
+      "block_index": 55,
+      "original": "计积分达到一定额度即可领取床品套装“夜梦故事集”",
+      "corrected": "计积分达到一定额度即可领取床品套装“夜梦故事集”、",
+      "reason": "crop shows trailing 、 printed at line end; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6744565e78926e4b2ea49cab 1 55"
     }
   ]
 }

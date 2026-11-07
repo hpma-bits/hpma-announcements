@@ -62,6 +62,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.637cb515849ee200014541c0 2 4"
+    },
+    {
+      "image_index": 2,
+      "block_index": 2,
+      "original": "展开那卷写着诗歌的羊皮纸，跟随着跳跃的音符标记，",
+      "corrected": "展开那卷写着诗歌的羊皮纸，跟随着跳跃的音符标记，一",
+      "reason": "crop d1-166 shows the line ends with printed 一 (first half of 一段 continuing next line); v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.637cb515849ee200014541c0 2 2"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "包”、“传说记忆瓶”、“幸运发条大神电磨礼融特魔法觉醒",
+      "corrected": "包”、“传说记忆瓶”、“幸运发条”",
+      "reason": "crop d1-167: body through 幸运发条” clean in both; tail after ” under opaque 大神@哈利波特魔法觉醒 watermark unrecoverable (only fragment strokes visible); corrected cut at last clean point per d1-125 precedent",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.637cb515849ee200014541c0 2 27"
     }
   ]
 }

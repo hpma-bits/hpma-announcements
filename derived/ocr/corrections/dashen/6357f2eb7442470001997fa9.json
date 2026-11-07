@@ -179,6 +179,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6357f2eb7442470001997fa9 5 5"
+    },
+    {
+      "image_index": 4,
+      "block_index": 27,
+      "original": "动获取，更多详细规则请查阅游戏内出规贴说晴特魔法觉醒",
+      "corrected": "动获取，更多详细规则请查阅游戏内详细规则说明。",
+      "reason": "crop d1-158 + threshold zoom: covered tail reads 详细规则说明。 (NGA parallel copy of same post confirms wording)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6357f2eb7442470001997fa9 4 27"
+    },
+    {
+      "image_index": 5,
+      "block_index": 30,
+      "original": "一临风约定&女-荆棘卷曲。",
+      "corrected": "-临风约定&女-荆棘卷曲。",
+      "reason": "crop d1-160 shows leading half-width hyphen (continuation of 男-) and short hyphen in 女-荆棘卷曲; v4 wrote 一 for the leading dash",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6357f2eb7442470001997fa9 5 30"
     }
   ]
 }

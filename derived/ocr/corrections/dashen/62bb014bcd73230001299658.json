@@ -327,6 +327,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 4 34"
+    },
+    {
+      "image_index": 1,
+      "block_index": 35,
+      "original": "蛾”、珍贵道具“如尼文秘典”，可在3张传说魔咒中",
+      "corrected": "蜍”、珍贵道具“如尼文秘典”，可在3张传说魔咒中",
+      "reason": "crop d1-101 shows line continues 紫色蟾/蜍 - first glyph is 蜍 (toad), v4 misread as 蛾",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.62bb014bcd73230001299658 1 35"
     }
   ]
 }

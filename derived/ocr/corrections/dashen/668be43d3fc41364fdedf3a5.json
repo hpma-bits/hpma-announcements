@@ -199,6 +199,26 @@
       "confidence": "high",
       "via": "audit-insert",
       "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 1 27 --v6"
+    },
+    {
+      "image_index": 1,
+      "block_index": 30,
+      "original": "吧......只是务必要小心，噩梦与美梦的转换，往往就",
+      "corrected": "吧……只是务必要小心，噩梦与美梦的转换，往往就",
+      "reason": "crop shows mid-line six dots between 吧 and 只是 = ……; v4 6 ASCII dots wrong glyph",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 1 30"
+    },
+    {
+      "image_index": 2,
+      "block_index": 6,
+      "original": "已拥有“勇气之冠”的巫师，将获得“幸运发条”3。",
+      "corrected": "已拥有“勇气之冠”的巫师，将获得“幸运发条”*3。",
+      "reason": "crop prints 发条”*3 with multiplier star; v4 missed it; trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.668be43d3fc41364fdedf3a5 2 6"
     }
   ]
 }

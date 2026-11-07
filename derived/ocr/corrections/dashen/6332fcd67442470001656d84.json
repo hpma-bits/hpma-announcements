@@ -122,6 +122,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6332fcd67442470001656d84 5 40"
+    },
+    {
+      "image_index": 1,
+      "block_index": 18,
+      "original": "亿之境会额外",
+      "corrected": "活动期间，开启学院宝箱、参与“追忆之境”会额外",
+      "reason": "crop d1-152 shows full printed row 活动期间，开启学院宝箱、参与“追忆之境”会额外; v4 block is a mid-line fragment slice, v6 misread 与→写 and 会→尝",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6332fcd67442470001656d84 1 18"
     }
   ]
 }

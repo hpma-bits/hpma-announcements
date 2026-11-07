@@ -178,6 +178,96 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 2 36"
+    },
+    {
+      "image_index": 1,
+      "block_index": 29,
+      "original": "“米勒娃?麦格”回响上线！",
+      "corrected": "“米勒娃·麦格”回响上线！",
+      "reason": "banner prints interpunct 米勒娃·麦格 (crop); leading/trailing gaps are banner layout margins; ！ full-width",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 1 29"
+    },
+    {
+      "image_index": 2,
+      "block_index": 10,
+      "original": "外患之下....似乎产生了严重的信任危机？",
+      "corrected": "外患之下……似乎产生了严重的信任危机？",
+      "reason": "crop shows mid-line six dots between 下 and 似 = ……; trailing ？ full-width (v6's ? wrong)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 2 10"
+    },
+    {
+      "image_index": 2,
+      "block_index": 27,
+      "original": "谍影重重，危机四伏....第二场比试即将开赛。",
+      "corrected": "谍影重重，危机四伏……第二场比试即将开赛。",
+      "reason": "crop shows mid-line six dots between 伏 and 第 = ……; trailing 。 printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 2 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 30,
+      "original": "但在那之前，霍格沃茨小队成员却陷入了新的难题...",
+      "corrected": "但在那之前，霍格沃茨小队成员却陷入了新的难题……",
+      "reason": "crop shows line ends 难题 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 2 30"
+    },
+    {
+      "image_index": 2,
+      "block_index": 40,
+      "original": "购买即可获得史诗时装“蓝莓苏打”",
+      "corrected": "购买即可获得史诗时装“蓝莓苏打”。",
+      "reason": "crop shows trailing 。 printed; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 2 40"
+    },
+    {
+      "image_index": 3,
+      "block_index": 37,
+      "original": "完成拼图更有设定集、“幸运发条”3、新烟花组合包",
+      "corrected": "完成拼图更有设定集、“幸运发条”*3、新烟花组合包",
+      "reason": "crop prints 发条”*3 with multiplier star; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 3 37"
+    },
+    {
+      "image_index": 3,
+      "block_index": 43,
+      "original": "逐渐搭建起来....",
+      "corrected": "逐渐搭建起来……",
+      "reason": "crop shows line ends 起来 with six dots = ……; v4 4 dots, v6 1 dot",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 3 43"
+    },
+    {
+      "image_index": 3,
+      "block_index": 48,
+      "original": "巫师静候，盛大的音乐会演出即将开始....",
+      "corrected": "巫师静候，盛大的音乐会演出即将开始……",
+      "reason": "crop shows line ends 开始 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 3 48"
+    },
+    {
+      "image_index": 5,
+      "block_index": 26,
+      "original": "匙*1！",
+      "corrected": "匙”*1！",
+      "reason": "crop shows closing ” after 匙 printed, star before 1 printed, ！ full-width; v4 missed ”, v6's ! wrong glyph",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66c34a05530c822e71f9e884 5 26"
     }
   ]
 }

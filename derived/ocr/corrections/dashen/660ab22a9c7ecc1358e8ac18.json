@@ -99,6 +99,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 72"
+    },
+    {
+      "image_index": 1,
+      "block_index": 10,
+      "original": "及普通召唤卡“带翼弹弓”",
+      "corrected": "及普通召唤卡“带翼弹弓”。",
+      "reason": "trailing 。 printed at line end; v6 captured it, v4 missed (p1 50/50; crops p2-6/p2-152 confirm)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 1 10"
+    },
+    {
+      "image_index": 2,
+      "block_index": 45,
+      "original": "2.携带的战斗植物自动获得“夺魂尖啸”、“强力咬肌”",
+      "corrected": "2.携带的战斗植物自动获得“夺魂尖啸”、“强力咬肌”、",
+      "reason": "trailing 、 printed at line end; v6 captured it, v4 missed (p1 12/12; crop p2-2 confirms)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 45"
     }
   ]
 }

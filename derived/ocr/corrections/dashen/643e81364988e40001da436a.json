@@ -32,6 +32,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.643e81364988e40001da436a 2 22"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "每天最多可通过寻找伙伴获得360个“恶作剧礼帽”",
+      "corrected": "每天最多可通过寻找伙伴获得360个“恶作剧礼帽”，",
+      "reason": "trailing ， printed at line end; v6 captured it, v4 missed (p1 9/9; crop p2-24 confirms)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.643e81364988e40001da436a 1 13"
     }
   ]
 }

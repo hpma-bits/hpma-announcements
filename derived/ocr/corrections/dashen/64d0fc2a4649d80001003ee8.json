@@ -81,6 +81,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.64d0fc2a4649d80001003ee8 1 18"
+    },
+    {
+      "image_index": 1,
+      "block_index": 17,
+      "original": "容及累计购买奖励",
+      "corrected": "容及累计购买奖励。",
+      "reason": "trailing 。 printed at line end; v6 captured it, v4 missed (p1 50/50; crops p2-6/p2-152 confirm)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.64d0fc2a4649d80001003ee8 1 17"
     }
   ]
 }

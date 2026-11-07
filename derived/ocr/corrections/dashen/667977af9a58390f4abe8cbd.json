@@ -144,6 +144,76 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.667977af9a58390f4abe8cbd 6 34"
+    },
+    {
+      "image_index": 1,
+      "block_index": 10,
+      "original": "卡“洛蒂·特纳”",
+      "corrected": "卡“洛蒂·特纳”。",
+      "reason": "crop shows trailing 。 printed after closing quote; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.667977af9a58390f4abe8cbd 1 10"
+    },
+    {
+      "image_index": 1,
+      "block_index": 26,
+      "original": "“沉藻邀梦?梳妆魔盒”全新上线！",
+      "corrected": "“沉藻邀梦·梳妆魔盒”全新上线！",
+      "reason": "banner prints interpunct 沉藻邀梦·梳妆魔盒 (crop); leading gap is centered-banner layout margin not a space (prior); trailing ！ full-width so v6 ! wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.667977af9a58390f4abe8cbd 1 26"
+    },
+    {
+      "image_index": 2,
+      "block_index": 0,
+      "original": "黑湖赛季·湖中幽影”开启！",
+      "corrected": "“黑湖赛季·湖中幽影”开启！",
+      "reason": "banner prints opening curly “ before 黑湖 (crop); gap before 开启 is layout margin; v4 missed opening quote",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.667977af9a58390f4abe8cbd 2 0"
+    },
+    {
+      "image_index": 2,
+      "block_index": 8,
+      "original": "她是为什么被困在这里，她的身上...又有什么故事？",
+      "corrected": "她是为什么被困在这里，她的身上……又有什么故事？",
+      "reason": "crop shows mid-line six dots between 身上 and 又 = ……; trailing ？ full-width (v6's ? wrong)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.667977af9a58390f4abe8cbd 2 8"
+    },
+    {
+      "image_index": 2,
+      "block_index": 25,
+      "original": "得攻击性强且烦躁，还到处挥舞着巨大的触手....",
+      "corrected": "得攻击性强且烦躁，还到处挥舞着巨大的触手……",
+      "reason": "crop shows line ends 触手 with six dots = ……; v4 4 dots, v6 6 ASCII; six-dot prior",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.667977af9a58390f4abe8cbd 2 25"
+    },
+    {
+      "image_index": 4,
+      "block_index": 5,
+      "original": "购买即可获得史诗时装“糖果菱格”",
+      "corrected": "购买即可获得史诗时装“糖果菱格”。",
+      "reason": "crop shows trailing 。 printed; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.667977af9a58390f4abe8cbd 4 5"
+    },
+    {
+      "image_index": 4,
+      "block_index": 12,
+      "original": "购买即可获得传说品质帽子“盈漪耳畔”",
+      "corrected": "购买即可获得传说品质帽子“盈漪耳畔”。",
+      "reason": "crop shows trailing 。 printed; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.667977af9a58390f4abe8cbd 4 12"
     }
   ]
 }

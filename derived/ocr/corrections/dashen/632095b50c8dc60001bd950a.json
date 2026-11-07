@@ -51,6 +51,26 @@
       "confidence": "medium",
       "via": "audit-insert",
       "recrop": "python -m tools.cli crop dashen.632095b50c8dc60001bd950a 1 13 --v6"
+    },
+    {
+      "image_index": 2,
+      "block_index": 42,
+      "original": "动中的使用情况，仔细评估后再进行与每更利波特魔法觉醒",
+      "corrected": "动中的使用情况，仔细评估后再进行后续更新",
+      "reason": "crop d1-147 + dark-threshold zoom recovers tail under watermark: 后续更新 (更新 fully legible, 后续 partial, grammar fits 仔细评估后再进行后续更新)",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.632095b50c8dc60001bd950a 2 42"
+    },
+    {
+      "image_index": 3,
+      "block_index": 43,
+      "original": "赛季商店上架超值礼包，助力巫师赛刺哈利波特魔法觉醒",
+      "corrected": "赛季商店上架超值礼包，助力巫师赛季冲刺。",
+      "reason": "crop d1-148 + zoom: tail under watermark reads 季冲刺。 (matches banner 助力冲刺，礼包上新); v4 dropped 季冲, v6 inserted 中",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.632095b50c8dc60001bd950a 3 43"
     }
   ]
 }

@@ -187,6 +187,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 6 25"
+    },
+    {
+      "image_index": 1,
+      "block_index": 41,
+      "original": "参与“伙伴支线”可获得大量“永恒”@璐波特魔法觉醒",
+      "corrected": "参与“伙伴支线”可获得大量“永恒心焰”奖励。",
+      "reason": "crop d1-149 + threshold zoom: covered item name = 心焰 (corpus has 永恒心焰 in 6 parallel sentences incl identical 可获得大量“永恒心焰”奖励。); v4/v6 mixed watermark chars",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 1 41"
+    },
+    {
+      "image_index": 6,
+      "block_index": 21,
+      "original": "2、修复了马人皮肤一“星空仰望者”和卡珊德拉皮肤",
+      "corrected": "2、修复了马人皮肤-“星空仰望者”和卡珊德拉皮肤",
+      "reason": "crop d1-151 shows narrow hyphen joiner between 皮肤 and “星空仰望者”, not ideograph 一",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6329b667849ee2000147e81c 6 21"
     }
   ]
 }

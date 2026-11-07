@@ -73,6 +73,9 @@ def run(root: str | Path | None = None) -> int:
                               file=sys.stderr)
                         continue
                     raw = ocr["images"][locator[0] - 1]["blocks"][locator[1]].get("text") or ""
+                    if corrected == raw:
+                        stats["no_change"] += 1
+                        continue
                     corrections.append({
                         "image_index": locator[0], "block_index": locator[1],
                         "original": raw, "corrected": corrected,

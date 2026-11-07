@@ -99,6 +99,26 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.63610a453408360001e99e5d 1 26"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "11月9日维护前，巫师们登录游戏后可通过“主界面一",
+      "corrected": "11月9日维护前，巫师们登录游戏后可通过“主界面-",
+      "reason": "crop d1-162 shows narrow hyphen at line end after “主界面, not ideograph 一 (menu path continues 活动-冠军时刻 next line)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63610a453408360001e99e5d 1 11"
+    },
+    {
+      "image_index": 2,
+      "block_index": 39,
+      "original": "相同2位数字，获得铛铛钱箱*1；",
+      "corrected": "相同2位数字，获得哐铛铛钱箱*1；",
+      "reason": "crop d1-164 clearly shows 哐铛铛钱箱*1； (v4 dropped 哐) and full-width ；",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.63610a453408360001e99e5d 2 39"
     }
   ]
 }

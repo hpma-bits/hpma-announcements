@@ -70,6 +70,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.66b0f0ccc68d6f3157dc2fa0 4 29"
+    },
+    {
+      "image_index": 2,
+      "block_index": 30,
+      "original": "》“友队携行”巫师友队升级加速！",
+      "corrected": "“友队携行”巫师友队升级加速！",
+      "reason": "banner crop shows no leading 》 — v4's 》 is the decorative flourish misread; v6 matches print",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.66b0f0ccc68d6f3157dc2fa0 2 30"
     }
   ]
 }

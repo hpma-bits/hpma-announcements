@@ -119,6 +119,56 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 2 28"
+    },
+    {
+      "image_index": 2,
+      "block_index": 9,
+      "original": "忘却....",
+      "corrected": "忘却……",
+      "reason": "crop shows line ends 忘却 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 2 9"
+    },
+    {
+      "image_index": 2,
+      "block_index": 26,
+      "original": "，“陷阱狂潮”活动即将开启！",
+      "corrected": "“陷阱狂潮”活动即将开启！",
+      "reason": "banner crop shows no leading comma before the quote — v4's ， is flourish/wrap misread; v6 matches print",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 2 26"
+    },
+    {
+      "image_index": 4,
+      "block_index": 33,
+      "original": "“甜蜜跃动”成就从原本“在荣誉决斗家”段位及以上的排",
+      "corrected": "“甜蜜跃动”成就从原本“在‘荣誉决斗家’段位及以上的排",
+      "reason": "crop shows inner curly single quotes ‘荣誉决斗家’ printed inside the outer double quotes; v4 wrongly used double quotes there",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 4 33"
+    },
+    {
+      "image_index": 4,
+      "block_index": 36,
+      "original": "“在决斗俱乐部排位赛中，单场对局中通过“魔法跳跳",
+      "corrected": "“在决斗俱乐部排位赛中，单场对局中通过‘魔法跳跳",
+      "reason": "crop shows inner curly single open quote ‘ before 魔法跳跳 (matches closing ’ in item 224 row); v4 read double “, v6 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 4 36"
+    },
+    {
+      "image_index": 6,
+      "block_index": 40,
+      "original": "22、修复了时装“权力之辉·寒青”、“权力之辉·含翠”",
+      "corrected": "22、修复了时装“权力之辉·寒青”、“权力之辉·含翠”、",
+      "reason": "crop shows centered interpunct · between 辉 and 寒 (v6's . misread) and trailing 、 printed at line end (v4 missed)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 6 40"
     }
   ]
 }

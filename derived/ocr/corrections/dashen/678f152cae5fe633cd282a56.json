@@ -254,6 +254,106 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 5 63"
+    },
+    {
+      "image_index": 1,
+      "block_index": 14,
+      "original": "摩金夫人长跑专卖店同步新增焕新款时装：“旧调邂逅",
+      "corrected": "摩金夫人长跑专卖店同步新增焕新款时装：“旧调邂逅·",
+      "reason": "crop shows trailing interpunct · at line end (name wraps to 朝夕”); v4 missed it; v6 read baseline . — true glyph is ·",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 1 14"
+    },
+    {
+      "image_index": 1,
+      "block_index": 26,
+      "original": "被塑造并矗立于此..",
+      "corrected": "被塑造并矗立于此……",
+      "reason": "crop shows line ends 于此 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 1 26"
+    },
+    {
+      "image_index": 1,
+      "block_index": 29,
+      "original": "上出现过的名字与标识..",
+      "corrected": "上出现过的名字与标识……",
+      "reason": "crop shows line ends 标识 with six dots = ……",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 1 29"
+    },
+    {
+      "image_index": 2,
+      "block_index": 0,
+      "original": "福享连篇”春节活动精彩开启！",
+      "corrected": "“福享连篇”春节活动精彩开启！",
+      "reason": "banner prints opening curly “ (crop); gap before 春节 is layout margin; v4 missed opening quote",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 2 0"
+    },
+    {
+      "image_index": 2,
+      "block_index": 23,
+      "original": "“糖果券”5、传说品质花瓶“白梅点雪”；",
+      "corrected": "“糖果券”*5、传说品质花瓶“白梅点雪”；",
+      "reason": "crop prints 券”*5 with multiplier star (parallel lines 券”*3, 券”*10 same); trailing ； full-width so v6's ; corrected",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 2 23"
+    },
+    {
+      "image_index": 5,
+      "block_index": 58,
+      "original": "浮沫海歌",
+      "corrected": "“浮沫海歌”",
+      "reason": "crop line shows 影”、“浮沫海歌”、“霍格沃茨的象征”。 — quotes printed around 浮沫海歌; v4 dropped them",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 5 58"
+    },
+    {
+      "image_index": 5,
+      "block_index": 59,
+      "original": "霍格沃茨的象征",
+      "corrected": "“霍格沃茨的象征”",
+      "reason": "crop shows quotes printed around 霍格沃茨的象征; v4 dropped them",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 5 59"
+    },
+    {
+      "image_index": 7,
+      "block_index": 15,
+      "original": "40%",
+      "corrected": "40%。",
+      "reason": "crop shows trailing 。 printed after 40%; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 7 15"
+    },
+    {
+      "image_index": 7,
+      "block_index": 17,
+      "original": "266%",
+      "corrected": "266%。",
+      "reason": "crop shows trailing 。 printed after 266%; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 7 17"
+    },
+    {
+      "image_index": 7,
+      "block_index": 25,
+      "original": "100%调整为75%",
+      "corrected": "100%调整为75%。",
+      "reason": "crop shows trailing 。 printed; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 7 25"
     }
   ]
 }

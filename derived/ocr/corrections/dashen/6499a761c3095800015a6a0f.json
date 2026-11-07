@@ -195,6 +195,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 4 56"
+    },
+    {
+      "image_index": 4,
+      "block_index": 33,
+      "original": "5%",
+      "corrected": "5%。",
+      "reason": "trailing 。 printed at line end; v6 captured it, v4 missed (p1 50/50; crops p2-6/p2-152 confirm)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 4 33"
+    },
+    {
+      "image_index": 4,
+      "block_index": 37,
+      "original": "调整：火墙伤害下调27%",
+      "corrected": "调整：火墙伤害下调27%。",
+      "reason": "trailing 。 printed at line end; v6 captured it, v4 missed (p1 50/50; crops p2-6/p2-152 confirm)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 4 37"
+    },
+    {
+      "image_index": 4,
+      "block_index": 55,
+      "original": "1.日常活动中金币获取效率提升30%",
+      "corrected": "1.日常活动中金币获取效率提升30%。",
+      "reason": "trailing 。 printed at line end; v6 captured it, v4 missed (p1 50/50; crops p2-6/p2-152 confirm)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 4 55"
+    },
+    {
+      "image_index": 5,
+      "block_index": 52,
+      "original": "8、修复了部分脸型下，眉色无法显示的问题",
+      "corrected": "8、修复了部分脸型下，眉色无法显示的问题。",
+      "reason": "trailing 。 printed at line end; v6 captured it, v4 missed (p1 50/50; crops p2-6/p2-152 confirm)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6499a761c3095800015a6a0f 5 52"
     }
   ]
 }

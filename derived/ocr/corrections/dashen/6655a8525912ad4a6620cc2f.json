@@ -195,6 +195,66 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 3 90"
+    },
+    {
+      "image_index": 1,
+      "block_index": 25,
+      "original": "黑湖赛季·湖中幽影”开启！",
+      "corrected": "“黑湖赛季·湖中幽影”开启！",
+      "reason": "banner prints opening curly “ before 黑湖 (crop); gap between ” and 开启 is centered-banner layout margin, not a printed space (prior 6283ad41)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 1 25"
+    },
+    {
+      "image_index": 1,
+      "block_index": 35,
+      "original": "一些看起来像是友好的生物？更有湍流隧道帮助",
+      "corrected": "……一些看起来像是友好的生物？更有湍流隧道帮助",
+      "reason": "crop shows line starts with six leading dots = …… then 一些看起来...; v6 leading marks real; v4 missed them",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 1 35"
+    },
+    {
+      "image_index": 1,
+      "block_index": 36,
+      "original": "..一些看起来像是友好的生物？更有湍流隧道帮助",
+      "corrected": "……一些看起来像是友好的生物？更有湍流隧道帮助",
+      "reason": "same printed line as item 20 (duplicate slice pair); six leading dots = ……; v4 2 dots, v6 9 noisy",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 1 36"
+    },
+    {
+      "image_index": 1,
+      "block_index": 39,
+      "original": "....敬请期待！",
+      "corrected": "……敬请期待！",
+      "reason": "crop shows line starts with six leading dots = …… before 敬请期待！; v6 right per leading-mark prior",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 1 39"
+    },
+    {
+      "image_index": 2,
+      "block_index": 92,
+      "original": "：“禁林探险家”活动开启",
+      "corrected": "“禁林探险家”活动开启",
+      "reason": "banner shows no leading ： before opening quote — v4's ： is flourish misread; v6 matches print",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 2 92"
+    },
+    {
+      "image_index": 3,
+      "block_index": 8,
+      "original": "造成50%的伤害”",
+      "corrected": "造成50%的伤害”。",
+      "reason": "crop shows trailing 。 printed after closing quote; v4 missed it (prior: v6 trailing marks real)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6655a8525912ad4a6620cc2f 3 8"
     }
   ]
 }
