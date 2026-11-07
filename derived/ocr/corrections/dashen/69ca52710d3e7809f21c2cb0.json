@@ -293,6 +293,176 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 6 60"
+    },
+    {
+      "image_index": 1,
+      "block_index": 40,
+      "original": "2.传说召唤卡“厉火",
+      "corrected": "2.传说召唤卡“厉火”",
+      "reason": "crop: closing ” after 厉火 printed at line end; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 1 40"
+    },
+    {
+      "image_index": 2,
+      "block_index": 31,
+      "original": "有文师的新作—快来一探究竟吧！",
+      "corrected": "有文师的新作——快来一探究竟吧！",
+      "reason": "crop: long two-em dash bar printed between 新作 and 快来 (≈2 char widths); v4 single — wrong, v6 —— right",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 2 31"
+    },
+    {
+      "image_index": 2,
+      "block_index": 55,
+      "original": "的梦想”、发型“流星划过之夜”、表情包“欢享反调",
+      "corrected": "的梦想”、发型“流星划过之夜”、表情包“欢享反调”",
+      "reason": "crop: closing ” after 欢享反调 printed at line end; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 2 55"
+    },
+    {
+      "image_index": 3,
+      "block_index": 28,
+      "original": "累计找到5张，更可以获得“夺宝券”1！",
+      "corrected": "累计找到5张，更可以获得“夺宝券”*1！",
+      "reason": "crop: quantity star * before 1 printed after ”夺宝券“ (v6-only star real); trailing ！ full-width both agree",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 3 28"
+    },
+    {
+      "image_index": 4,
+      "block_index": 5,
+      "original": "购买即可获得4月“《唱唱反调》特邀模特·II”主题史",
+      "corrected": "购买即可获得4月“《唱唱反调》特邀模特·Ⅱ”主题史",
+      "reason": "zoom p5-49-II: two symmetric-serif strokes (no digit-1 flag), pair spans ≈1 full-width cell; sibling precedent 62bb014b rules the same serif two-stroke numeral Ⅱ",
+      "confidence": "medium",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 4 5"
+    },
+    {
+      "image_index": 5,
+      "block_index": 8,
+      "original": "配饰-耳饰“荆棘之刺”",
+      "corrected": "-配饰-耳饰“荆棘之刺”",
+      "reason": "crop: every reward row prints a hanging half-width dash bullet at line start (v4 missed it); gap dash→配 is 39% of advance, below the v6-space class (55-63%) and v6 itself transcribed no space -> tight form",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 8"
+    },
+    {
+      "image_index": 5,
+      "block_index": 9,
+      "original": "配饰-耳饰“星相轮转”",
+      "corrected": "-配饰-耳饰“星相轮转”",
+      "reason": "crop: leading dash bullet printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 9"
+    },
+    {
+      "image_index": 5,
+      "block_index": 10,
+      "original": "配饰-耳饰“银色野性”",
+      "corrected": "-配饰-耳饰“银色野性”",
+      "reason": "crop: leading dash bullet printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 10"
+    },
+    {
+      "image_index": 5,
+      "block_index": 11,
+      "original": "配饰-耳饰“湖中歌谣”",
+      "corrected": "-配饰-耳饰“湖中歌谣”",
+      "reason": "crop: leading dash bullet printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 11"
+    },
+    {
+      "image_index": 5,
+      "block_index": 12,
+      "original": "配饰-耳饰“飞艇李耳饰”",
+      "corrected": "-配饰-耳饰“飞艇李耳饰”",
+      "reason": "crop: leading dash bullet printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 12"
+    },
+    {
+      "image_index": 5,
+      "block_index": 13,
+      "original": "配饰-耳饰“图章耳钉套”",
+      "corrected": "-配饰-耳饰“图章耳钉套”",
+      "reason": "crop: leading dash bullet printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 13"
+    },
+    {
+      "image_index": 5,
+      "block_index": 14,
+      "original": "女款配饰-耳饰“含苞低语”",
+      "corrected": "-女款配饰-耳饰“含苞低语”",
+      "reason": "crop: leading dash bullet printed before 女款配饰",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 14"
+    },
+    {
+      "image_index": 5,
+      "block_index": 16,
+      "original": "女款配饰-耳饰“甜蜜垂落”",
+      "corrected": "-女款配饰-耳饰“甜蜜垂落”",
+      "reason": "crop: leading dash bullet printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 16"
+    },
+    {
+      "image_index": 5,
+      "block_index": 18,
+      "original": "男款配饰-耳饰“夜锥”",
+      "corrected": "-男款配饰-耳饰“夜锥”",
+      "reason": "crop: leading dash bullet printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 18"
+    },
+    {
+      "image_index": 5,
+      "block_index": 19,
+      "original": "男款配饰-耳饰“片鸦深意”",
+      "corrected": "-男款配饰-耳饰“片鸦深意”",
+      "reason": "crop: leading dash bullet printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 19"
+    },
+    {
+      "image_index": 5,
+      "block_index": 20,
+      "original": "男款配饰-耳饰“三角弦音”",
+      "corrected": "-男款配饰-耳饰“三角弦音”",
+      "reason": "crop: leading dash bullet printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 20"
+    },
+    {
+      "image_index": 5,
+      "block_index": 57,
+      "original": "配卡界面时会触发弹窗提醒",
+      "corrected": "配卡界面时会触发弹窗提醒。",
+      "reason": "crop: trailing 。 printed at line end; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ca52710d3e7809f21c2cb0 5 57"
     }
   ]
 }

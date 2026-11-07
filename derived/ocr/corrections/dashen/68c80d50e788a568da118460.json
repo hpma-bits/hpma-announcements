@@ -135,6 +135,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 5 34"
+    },
+    {
+      "image_index": 1,
+      "block_index": 13,
+      "original": "活动期间，累计抽卡次数达到30时，将获得“焰色之锁",
+      "corrected": "活动期间，累计抽卡次数达到30时，将获得“焰色之锁”",
+      "reason": "closing ” after 焰色之锁 at line end (wrap to *10) is printed; v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 1 13"
+    },
+    {
+      "image_index": 2,
+      "block_index": 20,
+      "original": "也许，在这个群星闪烁的夜晚，你能做些什么.",
+      "corrected": "也许，在这个群星闪烁的夜晚，你能做些什么……",
+      "reason": "six-dot ellipsis 「……」 after 什么 at line end",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 2 20"
+    },
+    {
+      "image_index": 2,
+      "block_index": 25,
+      "original": "为课后作业，你和朋友们都苦不堪言.",
+      "corrected": "为课后作业，你和朋友们都苦不堪言……",
+      "reason": "six-dot ellipsis 「……」 after 苦不堪言 at line end",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.68c80d50e788a568da118460 2 25"
     }
   ]
 }

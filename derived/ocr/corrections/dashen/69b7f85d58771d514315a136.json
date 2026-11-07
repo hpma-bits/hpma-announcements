@@ -124,6 +124,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.69b7f85d58771d514315a136 4 10"
+    },
+    {
+      "image_index": 2,
+      "block_index": 12,
+      "original": "苏醒过来吧！",
+      "corrected": "——苏醒过来吧！",
+      "reason": "crop: story line starts with long two-em dash bar —— printed at line start (v4 missed it); trailing ！ full-width (v6 half-width ! wrong)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69b7f85d58771d514315a136 2 12"
+    },
+    {
+      "image_index": 3,
+      "block_index": 30,
+      "original": "临的死亡......风雪之下，何为谎言，何为真相？",
+      "corrected": "临的死亡……风雪之下，何为谎言，何为真相？",
+      "reason": "zoom blob count: 6 dots mid-line after 死亡; sub-crop shows trailing ？ full-width; v4 6 ASCII dots v6 garbled .………….",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69b7f85d58771d514315a136 3 30"
     }
   ]
 }

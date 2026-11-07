@@ -126,6 +126,56 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6890935d7795d17cc68878d2 2 26"
+    },
+    {
+      "image_index": 1,
+      "block_index": 24,
+      "original": "新的征程....",
+      "corrected": "新的征程……",
+      "reason": "six-dot ellipsis 「……」 after 征程; both engines wrong dot counts",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6890935d7795d17cc68878d2 1 24"
+    },
+    {
+      "image_index": 2,
+      "block_index": 4,
+      "original": "暂居，但凯伦并不准备就此放过他...",
+      "corrected": "暂居，但凯伦并不准备就此放过他……",
+      "reason": "six-dot ellipsis 「……」 after 他; both engines wrong dot counts",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6890935d7795d17cc68878d2 2 4"
+    },
+    {
+      "image_index": 2,
+      "block_index": 25,
+      "original": "活动期间，巫师每日登录即可领取宝石、“金耀之匙”",
+      "corrected": "活动期间，巫师每日登录即可领取宝石、“金耀之匙”、",
+      "reason": "wrap 、 after 金耀之匙” at line end is printed; v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6890935d7795d17cc68878d2 2 25"
+    },
+    {
+      "image_index": 3,
+      "block_index": 26,
+      "original": "时刻”、多人动作“灌木伪装”、“幸运发条”、“焰色之锁”",
+      "corrected": "时刻”、多人动作“灌木伪装”、“幸运发条”、“焰色之锁”、",
+      "reason": "wrap 、 after 锁” at line end is printed; v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6890935d7795d17cc68878d2 3 26"
+    },
+    {
+      "image_index": 5,
+      "block_index": 25,
+      "original": "“完成拼图活动教授的行囊”。”",
+      "corrected": "“完成拼图活动‘教授的行囊’。”",
+      "reason": "crop shows inner single curly ‘教授的行囊’ with 。 inside outer “ ” (notice-vote: quote v6); v4 garbled order",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6890935d7795d17cc68878d2 5 25"
     }
   ]
 }

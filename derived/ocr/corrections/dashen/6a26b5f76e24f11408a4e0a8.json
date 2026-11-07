@@ -149,6 +149,66 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 5 29"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "去，她比赛一定会赢...",
+      "corrected": "去，她比赛一定会赢……",
+      "reason": "zoom blob count: 6 dots line-end (same reposted story as item 90)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 1 19"
+    },
+    {
+      "image_index": 3,
+      "block_index": 8,
+      "original": "巫师可从邮件中领取“宝石”188、“金耀之匙”*5、金币",
+      "corrected": "巫师可从邮件中领取“宝石”*188、“金耀之匙”*5、金币",
+      "reason": "crop: quantity star *188 printed after ”宝石“ (v6-only star real; line also shows ”金耀之匙“*5 confirming the multiplier style)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 3 8"
+    },
+    {
+      "image_index": 3,
+      "block_index": 21,
+      "original": "5.高级魔咒心力史诗",
+      "corrected": "5.高级魔咒心力·史诗",
+      "reason": "zoom p5-100: interpunct · printed between 心力 and 史诗 (ink sits mid-height like sibling · rulings; v4 dropped it, v6 ASCII . wrong form)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 3 21"
+    },
+    {
+      "image_index": 3,
+      "block_index": 22,
+      "original": "6.魔咒心力传说",
+      "corrected": "6.魔咒心力·传说",
+      "reason": "crop: interpunct · printed between 心力 and 传说",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 3 22"
+    },
+    {
+      "image_index": 3,
+      "block_index": 23,
+      "original": "7.魔咒心力稀有",
+      "corrected": "7.魔咒心力·稀有",
+      "reason": "crop: interpunct · printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 3 23"
+    },
+    {
+      "image_index": 3,
+      "block_index": 24,
+      "original": "8.魔咒心力普通",
+      "corrected": "8.魔咒心力·普通",
+      "reason": "crop: interpunct · printed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 3 24"
     }
   ]
 }

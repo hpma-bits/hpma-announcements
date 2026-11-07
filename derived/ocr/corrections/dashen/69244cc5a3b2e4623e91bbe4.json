@@ -223,6 +223,46 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 3 28"
+    },
+    {
+      "image_index": 2,
+      "block_index": 5,
+      "original": "最不愿面对的恐惧..",
+      "corrected": "最不愿面对的恐惧……",
+      "reason": "six-dot ellipsis 「……」 after 恐惧 at line end",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 2 5"
+    },
+    {
+      "image_index": 2,
+      "block_index": 11,
+      "original": "哪个角落窥伺着你们....",
+      "corrected": "哪个角落窥伺着你们……",
+      "reason": "six-dot ellipsis 「……」 after 你们 at line end",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 2 11"
+    },
+    {
+      "image_index": 3,
+      "block_index": 13,
+      "original": "败特效“已经结束了！”。缎带飞扬又聚拢，束成一个",
+      "corrected": "败特效“已经‘结束’了！”。缎带飞扬又聚拢，束成一个",
+      "reason": "inner single curly ‘结束’ printed inside “ ”; v4 read doubles/missing; notice uses inner singles like 6890935d vote",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 3 13"
+    },
+    {
+      "image_index": 4,
+      "block_index": 5,
+      "original": "“小毛球洛丽丝”、单人动作“超凶—！”、“小小棒棒",
+      "corrected": "“小毛球洛丽丝”、单人动作“超凶——！”、“小小棒棒",
+      "reason": "zoom shows continuous two-em dash bar —— between 凶 and ！; v4 single — too short, v6 dropped dash and halved ！",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69244cc5a3b2e4623e91bbe4 4 5"
     }
   ]
 }

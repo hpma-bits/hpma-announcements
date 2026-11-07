@@ -163,6 +163,36 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6a01c3bb0cbc8d58b737a1eb 2 28"
+    },
+    {
+      "image_index": 1,
+      "block_index": 27,
+      "original": "的死亡......风雪之下，何为谎言，何为真相？",
+      "corrected": "的死亡……风雪之下，何为谎言，何为真相？",
+      "reason": "zoom blob count: 6 mid-line dots; trailing ？ full-width (story template); v6 garbled .…………. + half-width ?",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a01c3bb0cbc8d58b737a1eb 1 27"
+    },
+    {
+      "image_index": 2,
+      "block_index": 7,
+      "original": "文师又惹上了新麻烦？...他怎么总是这样？",
+      "corrected": "文师又惹上了新麻烦？……他怎么总是这样？",
+      "reason": "zoom blob count: 6 dots between 麻烦？ and 他; tail ？ full-width in sub-crop; v4 3 ASCII dots, v6 garbled + half-width ?",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a01c3bb0cbc8d58b737a1eb 2 7"
+    },
+    {
+      "image_index": 2,
+      "block_index": 37,
+      "original": "购买礼包后可分别获得史诗品质时装“风雅叙礼”",
+      "corrected": "购买礼包后可分别获得史诗品质时装“风雅叙礼”、",
+      "reason": "crop: trailing 、 printed at line end; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a01c3bb0cbc8d58b737a1eb 2 37"
     }
   ]
 }

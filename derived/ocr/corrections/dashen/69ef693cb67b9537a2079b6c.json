@@ -206,6 +206,76 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 6 34"
+    },
+    {
+      "image_index": 2,
+      "block_index": 7,
+      "original": "的死亡......风雪之下，何为谎言，何为真相？",
+      "corrected": "的死亡……风雪之下，何为谎言，何为真相？",
+      "reason": "zoom blob count: 6 mid-line dots; trailing ？ full-width; v6 garbled …………. + half-width ?",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 2 7"
+    },
+    {
+      "image_index": 2,
+      "block_index": 8,
+      "original": "欢迎进入《冰封审判日》的世界！",
+      "corrected": "——欢迎进入《冰封审判日》的世界！",
+      "reason": "crop: story line starts with printed two-em dash bar ——; v4 missed it; trailing ！ full-width both agree",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 2 8"
+    },
+    {
+      "image_index": 2,
+      "block_index": 23,
+      "original": "18:00-22:00",
+      "corrected": "18:00－22:00",
+      "reason": "pixel measure identical to item 66: dash advance 2× digit with centered short ink -> full-width －; v6 space is bearing bleed",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 2 23"
+    },
+    {
+      "image_index": 3,
+      "block_index": 43,
+      "original": "上架时间：2026年5月1日0:00-5月15日0:00（当地时间",
+      "corrected": "上架时间：2026年5月1日0:00－5月15日0:00（当地时间",
+      "reason": "pixel measure: date dash advance 2× digit (bearings 16/15) -> full-width －; paren before 当地时间 full-width per notice-vote zoom (lparen-28/b43 sampled this block)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 3 43"
+    },
+    {
+      "image_index": 4,
+      "block_index": 2,
+      "original": "1）免费礼盒",
+      "corrected": "1)免费礼盒",
+      "reason": "crop: gift-box marker tight half-width ) (vote rule + fresh crop)",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 4 2"
+    },
+    {
+      "image_index": 4,
+      "block_index": 4,
+      "original": "2）豪华礼盒",
+      "corrected": "2)豪华礼盒",
+      "reason": "crop: gift-box marker tight half-width )",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 4 4"
+    },
+    {
+      "image_index": 4,
+      "block_index": 12,
+      "original": "3）金缎豪华礼盒",
+      "corrected": "3)金缎豪华礼盒",
+      "reason": "crop: gift-box marker tight half-width )",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.69ef693cb67b9537a2079b6c 4 12"
     }
   ]
 }

@@ -348,6 +348,16 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 5 36"
+    },
+    {
+      "image_index": 1,
+      "block_index": 11,
+      "original": "语卡“高布石”",
+      "corrected": "语卡“高布石”。",
+      "reason": "crop: trailing 。 printed after ”高布石“ at line end; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 1 11"
     }
   ]
 }

@@ -107,6 +107,56 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 1 16"
+    },
+    {
+      "image_index": 2,
+      "block_index": 4,
+      "original": "事实的记者....怎么好像改性了？",
+      "corrected": "事实的记者……怎么好像改性了？",
+      "reason": "mid-line ellipsis prints six dots 「……」; final ？ full-width; v6's 7-dot garble and half-width ? both wrong",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 2 4"
+    },
+    {
+      "image_index": 2,
+      "block_index": 41,
+      "original": "购买礼包后可分别获得史诗品质时装“枯萎月光”",
+      "corrected": "购买礼包后可分别获得史诗品质时装“枯萎月光”、",
+      "reason": "wrap 、 at line end after 月光” is printed; v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 2 41"
+    },
+    {
+      "image_index": 4,
+      "block_index": 29,
+      "original": "为“生命值1212攻击46”",
+      "corrected": "为“生命值1212攻击46”。",
+      "reason": "crop shows 。 after closing quote at line end; v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 4 29"
+    },
+    {
+      "image_index": 4,
+      "block_index": 37,
+      "original": "和生命值提升50%",
+      "corrected": "和生命值提升50%。",
+      "reason": "line ends 50%。 with full-width 。; v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 4 37"
+    },
+    {
+      "image_index": 5,
+      "block_index": 3,
+      "original": "提高75%调整为：使用1魔力值和2魔力值法术时，法",
+      "corrected": "提高75%”调整为：使用1魔力值和2魔力值法术时，法",
+      "reason": "closing ” after 75% is printed; v4 missed it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.6821d974c45ea84f29c098d5 5 3"
     }
   ]
 }

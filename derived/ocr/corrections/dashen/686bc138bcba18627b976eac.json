@@ -117,6 +117,56 @@
       "confidence": "high",
       "via": "audit-adjudication",
       "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 6 33"
+    },
+    {
+      "image_index": 1,
+      "block_index": 22,
+      "original": "新的征程....",
+      "corrected": "新的征程……",
+      "reason": "six-dot ellipsis 「……」 after 征程; v4 4 dots, v6 6 dots but as ASCII dots",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 1 22"
+    },
+    {
+      "image_index": 2,
+      "block_index": 2,
+      "original": "成的队伍一样，他们的磨合之路未必平坦...",
+      "corrected": "成的队伍一样，他们的磨合之路未必平坦……",
+      "reason": "six-dot ellipsis 「……」 after 平坦; both engines garbled",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 2 2"
+    },
+    {
+      "image_index": 3,
+      "block_index": 7,
+      "original": "无人处的脚步声，凭空移动的物品.....霍格沃茨怪事",
+      "corrected": "无人处的脚步声，凭空移动的物品……霍格沃茨怪事",
+      "reason": "mid-line ellipsis prints six dots 「……」 before 霍格沃茨; v4 5 ASCII dots, v6 6 ASCII dots",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 3 7"
+    },
+    {
+      "image_index": 3,
+      "block_index": 26,
+      "original": "计积分达到一定额度即可领取床品套装“重金属狂热”",
+      "corrected": "计积分达到一定额度即可领取床品套装“重金属狂热”、",
+      "reason": "wrap 、 after 狂热” at line end is printed; v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 3 26"
+    },
+    {
+      "image_index": 6,
+      "block_index": 32,
+      "original": "18.修复了在巫师空间中，无法正常回看“混血猫狸子",
+      "corrected": "18.修复了在巫师空间中，无法正常回看“混血猫狸子”",
+      "reason": "closing ” after 狸子 at line end is printed; v4 dropped it",
+      "confidence": "high",
+      "via": "audit-adjudication",
+      "recrop": "python -m tools.cli crop dashen.686bc138bcba18627b976eac 6 32"
     }
   ]
 }
