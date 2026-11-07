@@ -135,6 +135,56 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 4 6"
+    },
+    {
+      "image_index": 6,
+      "block_index": 26,
+      "original": "（2）精简了“闪亮登场·服装动作”的显示，由于同一套时",
+      "corrected": "(2)精简了“闪亮登场·服装动作”的显示，由于同一套时",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 6 26"
+    },
+    {
+      "image_index": 6,
+      "block_index": 47,
+      "original": "（1）修复了界面偶现的刷新错误。",
+      "corrected": "(1)修复了界面偶现的刷新错误。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 6 47"
+    },
+    {
+      "image_index": 6,
+      "block_index": 48,
+      "original": "（2）修复了大师之证卡牌位置显示的错误。",
+      "corrected": "(2)修复了大师之证卡牌位置显示的错误。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 6 48"
+    },
+    {
+      "image_index": 6,
+      "block_index": 49,
+      "original": "（3）修复了部分魔杖皮肤“严阵以待”动作丢失的问题。",
+      "corrected": "(3)修复了部分魔杖皮肤“严阵以待”动作丢失的问题。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 6 49"
+    },
+    {
+      "image_index": 6,
+      "block_index": 50,
+      "original": "（4）修复了部分时装无法使用的问题。",
+      "corrected": "(4)修复了部分时装无法使用的问题。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67fcec3845bdfc20bd3263c0 6 50"
     }
   ]
 }

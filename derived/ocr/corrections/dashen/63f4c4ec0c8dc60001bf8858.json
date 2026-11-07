@@ -30,6 +30,36 @@
       "reason": "水印覆盖处源图为“光效进行了调整优化。”；“谓优”为“效进行”之误。",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.63f4c4ec0c8dc60001bf8858 1 26"
+    },
+    {
+      "image_index": 2,
+      "block_index": 6,
+      "original": "“神奇动物调查\"将增加异常组队判定。版本更新后游戏将对异",
+      "corrected": "“神奇动物调查”将增加异常组队判定。版本更新后游戏将对异",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.63f4c4ec0c8dc60001bf8858 2 6"
+    },
+    {
+      "image_index": 2,
+      "block_index": 20,
+      "original": "6、优化了“神奇动物调查\"中“首领挑战\"和“沙漠救援”的组队",
+      "corrected": "6、优化了“神奇动物调查”中“首领挑战”和“沙漠救援”的组队",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.63f4c4ec0c8dc60001bf8858 2 20"
+    },
+    {
+      "image_index": 2,
+      "block_index": 30,
+      "original": "4、修复了“伙伴同行”中，选择伙伴“丹尼尔\"参加双人决斗时，丹",
+      "corrected": "4、修复了“伙伴同行”中，选择伙伴“丹尼尔”参加双人决斗时，丹",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.63f4c4ec0c8dc60001bf8858 2 30"
     }
   ]
 }

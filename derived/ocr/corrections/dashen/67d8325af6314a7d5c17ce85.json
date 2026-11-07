@@ -140,6 +140,56 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 3 15"
+    },
+    {
+      "image_index": 4,
+      "block_index": 18,
+      "original": "1）免费礼盒",
+      "corrected": "1)免费礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 4 18"
+    },
+    {
+      "image_index": 4,
+      "block_index": 20,
+      "original": "2）豪华礼盒",
+      "corrected": "2)豪华礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 4 20"
+    },
+    {
+      "image_index": 4,
+      "block_index": 27,
+      "original": "3）金缎豪华礼盒",
+      "corrected": "3)金缎豪华礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 4 27"
+    },
+    {
+      "image_index": 5,
+      "block_index": 13,
+      "original": "（1）优化了魔法相机的隐藏范围，现已可以隐藏场景",
+      "corrected": "(1)优化了魔法相机的隐藏范围，现已可以隐藏场景",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 5 13"
+    },
+    {
+      "image_index": 5,
+      "block_index": 15,
+      "original": "（2）增加了平面前后移动的操作控件。",
+      "corrected": "(2)增加了平面前后移动的操作控件。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67d8325af6314a7d5c17ce85 5 15"
     }
   ]
 }

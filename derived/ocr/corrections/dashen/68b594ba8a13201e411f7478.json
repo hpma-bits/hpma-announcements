@@ -97,6 +97,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.68b594ba8a13201e411f7478 5 23"
+    },
+    {
+      "image_index": 5,
+      "block_index": 20,
+      "original": "由原本的“获得一张史诗月痴兽”。”调整为：“获得一张",
+      "corrected": "由原本的“获得一张史诗月痴兽’。”调整为：“获得一张",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.68b594ba8a13201e411f7478 5 20"
+    },
+    {
+      "image_index": 5,
+      "block_index": 21,
+      "original": "传说“月痴兽’。”",
+      "corrected": "传说‘月痴兽’。”",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.68b594ba8a13201e411f7478 5 21"
     }
   ]
 }

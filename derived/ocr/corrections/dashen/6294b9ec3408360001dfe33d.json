@@ -105,6 +105,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 48"
+    },
+    {
+      "image_index": 1,
+      "block_index": 38,
+      "original": "全新时装\"蜜糖之味”上线，巫师在6月1日0:00至6月",
+      "corrected": "全新时装\"蜜糖之味\"上线，巫师在6月1日0:00至6月",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6294b9ec3408360001dfe33d 1 38"
     }
   ]
 }

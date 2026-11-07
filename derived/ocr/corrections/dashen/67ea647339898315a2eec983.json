@@ -59,6 +59,46 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 4 18"
+    },
+    {
+      "image_index": 4,
+      "block_index": 34,
+      "original": "位赛中，“魔法跳跳糖’单次施放时累计弹射4次”，修改",
+      "corrected": "位赛中，‘魔法跳跳糖’单次施放时累计弹射4次”，修改",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 4 34"
+    },
+    {
+      "image_index": 5,
+      "block_index": 21,
+      "original": "（1）新增编辑模式。巫师现在可以通过聊天栏右上角的",
+      "corrected": "(1)新增编辑模式。巫师现在可以通过聊天栏右上角的",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 5 21"
+    },
+    {
+      "image_index": 5,
+      "block_index": 25,
+      "original": "（2）编辑内容可一键重置。新增重置按钮，巫师点击聊",
+      "corrected": "(2)编辑内容可一键重置。新增重置按钮，巫师点击聊",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 5 25"
+    },
+    {
+      "image_index": 6,
+      "block_index": 36,
+      "original": "20、修复了巫师在使用“基础脸型-6\"时会出现眉毛异",
+      "corrected": "20、修复了巫师在使用“基础脸型-6”时会出现眉毛异",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.67ea647339898315a2eec983 6 36"
     }
   ]
 }

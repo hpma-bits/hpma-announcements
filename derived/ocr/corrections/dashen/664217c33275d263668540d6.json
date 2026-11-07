@@ -69,6 +69,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 2 40"
+    },
+    {
+      "image_index": 1,
+      "block_index": 19,
+      "original": "2.查找好友时，将新增\"7天内登录”、“7天内未登录”、",
+      "corrected": "2.查找好友时，将新增“7天内登录”、“7天内未登录”、",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.664217c33275d263668540d6 1 19"
     }
   ]
 }

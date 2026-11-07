@@ -30,6 +30,26 @@
       "reason": "嘉→矗；源图为“矗立于此”。",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.677bdabe5e06c563daab832e 2 25"
+    },
+    {
+      "image_index": 2,
+      "block_index": 6,
+      "original": "“最佳拍档\"模式中属性调整由-16.6调整为-10。",
+      "corrected": "“最佳拍档”模式中属性调整由-16.6调整为-10。",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.677bdabe5e06c563daab832e 2 6"
+    },
+    {
+      "image_index": 5,
+      "block_index": 15,
+      "original": "(5)话题卡追加“修改\"的功能，巫师可以将话题修改成",
+      "corrected": "(5)话题卡追加“修改”的功能，巫师可以将话题修改成",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.677bdabe5e06c563daab832e 5 15"
     }
   ]
 }

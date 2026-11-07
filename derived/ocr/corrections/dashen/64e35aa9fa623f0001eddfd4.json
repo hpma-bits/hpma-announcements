@@ -42,6 +42,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.64e35aa9fa623f0001eddfd4 3 52"
+    },
+    {
+      "image_index": 2,
+      "block_index": 61,
+      "original": "“禁林-单人探险\"2-12关部分关卡调整，加入了更多剧",
+      "corrected": "“禁林-单人探险”2-12关部分关卡调整，加入了更多剧",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.64e35aa9fa623f0001eddfd4 2 61"
     }
   ]
 }

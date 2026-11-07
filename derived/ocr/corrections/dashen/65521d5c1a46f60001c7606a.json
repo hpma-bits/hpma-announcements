@@ -50,6 +50,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.65521d5c1a46f60001c7606a 3 3"
+    },
+    {
+      "image_index": 1,
+      "block_index": 30,
+      "original": "赛季时间：10月17日维护后（UTC+8）-12月12日",
+      "corrected": "赛季时间：10月17日维护后(UTC+8)-12月12日",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.65521d5c1a46f60001c7606a 1 30"
     }
   ]
 }

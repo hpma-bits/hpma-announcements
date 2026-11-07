@@ -77,6 +77,16 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.65f83fca2e838a790761b0c3 2 46"
+    },
+    {
+      "image_index": 2,
+      "block_index": 63,
+      "original": "一”将在原本“默认种植数量1\"的基础上增加1株额外种",
+      "corrected": "一”将在原本“默认种植数量1”的基础上增加1株额外种",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.65f83fca2e838a790761b0c3 2 63"
     }
   ]
 }

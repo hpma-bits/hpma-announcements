@@ -68,6 +68,26 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 4 29"
+    },
+    {
+      "image_index": 1,
+      "block_index": 6,
+      "original": "“幻咒千变”赛季限定卡池开启！",
+      "corrected": "”幻咒千变”赛季限定卡池开启！",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 1 6"
+    },
+    {
+      "image_index": 6,
+      "block_index": 22,
+      "original": "容，将“敌方单位\"精准为“敌方巫师单位（含时间转换",
+      "corrected": "容，将“敌方单位”精准为“敌方巫师单位（含时间转换",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.670d2afe76e6895ab569065d 6 22"
     }
   ]
 }

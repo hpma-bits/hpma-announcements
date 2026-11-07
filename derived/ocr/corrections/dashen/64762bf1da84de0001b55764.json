@@ -150,6 +150,116 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 9 32"
+    },
+    {
+      "image_index": 1,
+      "block_index": 5,
+      "original": "你们好！自5月24日“远洋与共\"版本第一批开",
+      "corrected": "你们好！自5月24日“远洋与共”版本第一批开",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 1 5"
+    },
+    {
+      "image_index": 2,
+      "block_index": 7,
+      "original": "“首席决斗家\"段位新增最高卡牌等级限制（包",
+      "corrected": "“首席决斗家”段位新增最高卡牌等级限制（包",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 7"
+    },
+    {
+      "image_index": 2,
+      "block_index": 146,
+      "original": "“禁林手记\"移除，所有未领取的奖励将通过邮",
+      "corrected": "“禁林手记”移除，所有未领取的奖励将通过邮",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 2 146"
+    },
+    {
+      "image_index": 3,
+      "block_index": 25,
+      "original": "\"抽取。",
+      "corrected": "”抽取。",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 3 25"
+    },
+    {
+      "image_index": 4,
+      "block_index": 28,
+      "original": "\"将在6月13日14:00开放。",
+      "corrected": "”将在6月13日14:00开放。",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 4 28"
+    },
+    {
+      "image_index": 5,
+      "block_index": 31,
+      "original": "更新后将保留“魔法相伴”成就中“持之以恒1\"和",
+      "corrected": "更新后将保留“魔法相伴”成就中“持之以恒1”和",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 5 31"
+    },
+    {
+      "image_index": 5,
+      "block_index": 32,
+      "original": "“持之以恒3\"的成就与奖励内容、以及“收藏家",
+      "corrected": "“持之以恒3”的成就与奖励内容、以及“收藏家",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 5 32"
+    },
+    {
+      "image_index": 5,
+      "block_index": 33,
+      "original": "\"成就中“小有成就3\"的成就与奖励内容，其余",
+      "corrected": "”成就中“小有成就3”的成就与奖励内容，其余",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 5 33"
+    },
+    {
+      "image_index": 8,
+      "block_index": 75,
+      "original": "-回响-罗恩：所有品质下，“棋子-骑士\"的伤害",
+      "corrected": "-回响-罗恩：所有品质下，“棋子-骑士”的伤害",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 8 75"
+    },
+    {
+      "image_index": 9,
+      "block_index": 10,
+      "original": "4.“段位保护\"活动",
+      "corrected": "4.“段位保护”活动",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 9 10"
+    },
+    {
+      "image_index": 9,
+      "block_index": 51,
+      "original": "\"共同参与决斗时，有30%的概率失败时不扣",
+      "corrected": "”共同参与决斗时，有30%的概率失败时不扣",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.64762bf1da84de0001b55764 9 51"
     }
   ]
 }

@@ -318,6 +318,96 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 4 78"
+    },
+    {
+      "image_index": 4,
+      "block_index": 19,
+      "original": "“第四学年·新帆启航”活动开启！",
+      "corrected": "”第四学年·新帆启航”活动开启！",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 4 19"
+    },
+    {
+      "image_index": 4,
+      "block_index": 56,
+      "original": "2）豪华礼盒",
+      "corrected": "2)豪华礼盒",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 4 56"
+    },
+    {
+      "image_index": 5,
+      "block_index": 4,
+      "original": "（1)优化了种植界面的信息，优化后更便于查阅植物状",
+      "corrected": "(1)优化了种植界面的信息，优化后更便于查阅植物状",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 5 4"
+    },
+    {
+      "image_index": 5,
+      "block_index": 6,
+      "original": "（2）优化了疯狂藤蔓中商店等级任务的界面，优化后“高",
+      "corrected": "(2)优化了疯狂藤蔓中商店等级任务的界面，优化后“高",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 5 6"
+    },
+    {
+      "image_index": 5,
+      "block_index": 8,
+      "original": "（3）优化了草药种植的天赋构造，优化后“荧光闪烁·二”",
+      "corrected": "(3)优化了草药种植的天赋构造，优化后“荧光闪烁·二”",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 5 8"
+    },
+    {
+      "image_index": 5,
+      "block_index": 11,
+      "original": "（4)优化了“亮如白昼”的法术速度。现将根据巫师已学",
+      "corrected": "(4)优化了“亮如白昼”的法术速度。现将根据巫师已学",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 5 11"
+    },
+    {
+      "image_index": 5,
+      "block_index": 14,
+      "original": "(5）优化了商店等级任务的界面表达，将更便于理解。",
+      "corrected": "(5)优化了商店等级任务的界面表达，将更便于理解。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 5 14"
+    },
+    {
+      "image_index": 5,
+      "block_index": 15,
+      "original": "（6）优化了植物自身免疫力的特效表现。",
+      "corrected": "(6)优化了植物自身免疫力的特效表现。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 5 15"
+    },
+    {
+      "image_index": 5,
+      "block_index": 40,
+      "original": "(3）新增累计使用颜料个数的奖励",
+      "corrected": "(3)新增累计使用颜料个数的奖励",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.669e756f7b715975b2f57eda 5 40"
     }
   ]
 }

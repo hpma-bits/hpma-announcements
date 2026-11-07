@@ -153,6 +153,146 @@
       "confidence": "high",
       "via": "punct-rule",
       "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 4 16"
+    },
+    {
+      "image_index": 2,
+      "block_index": 51,
+      "original": "活动期间，巫师可在完成活动任务后获取“幸运奖券”",
+      "corrected": "活动期间，巫师可在完成活动任务后获取\"幸运奖券\"",
+      "reason": "标点规则 per-notice vote（quote）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 2 51"
+    },
+    {
+      "image_index": 6,
+      "block_index": 2,
+      "original": "（1）优化了种植玩法，降低植物的种植难度。虫害、心",
+      "corrected": "(1)优化了种植玩法，降低植物的种植难度。虫害、心",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 6 2"
+    },
+    {
+      "image_index": 6,
+      "block_index": 6,
+      "original": "（2）优化了材料背包的分类，增加了草药材料上限的外",
+      "corrected": "(2)优化了材料背包的分类，增加了草药材料上限的外",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 6 6"
+    },
+    {
+      "image_index": 6,
+      "block_index": 8,
+      "original": "（3）优化了观赏盆的操作，改为拖拽摆放。",
+      "corrected": "(3)优化了观赏盆的操作，改为拖拽摆放。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 6 8"
+    },
+    {
+      "image_index": 6,
+      "block_index": 9,
+      "original": "（4）优化了种植相关的界面操作，为动作·草药学家的骄",
+      "corrected": "(4)优化了种植相关的界面操作，为动作·草药学家的骄",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 6 9"
+    },
+    {
+      "image_index": 6,
+      "block_index": 11,
+      "original": "（5）优化了观赏植物的图标，将直观呈现其正确的颜色。",
+      "corrected": "(5)优化了观赏植物的图标，将直观呈现其正确的颜色。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 6 11"
+    },
+    {
+      "image_index": 6,
+      "block_index": 12,
+      "original": "（6）优化了背包中的堆叠效果，相同颜色的植物现在可",
+      "corrected": "(6)优化了背包中的堆叠效果，相同颜色的植物现在可",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 6 12"
+    },
+    {
+      "image_index": 6,
+      "block_index": 14,
+      "original": "（7）修复了背包栏会在拖动草药时移动的问题。",
+      "corrected": "(7)修复了背包栏会在拖动草药时移动的问题。",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 6 14"
+    },
+    {
+      "image_index": 6,
+      "block_index": 15,
+      "original": "（8）增加了巫师研究在未解锁时的解锁提示。巫师点击",
+      "corrected": "(8)增加了巫师研究在未解锁时的解锁提示。巫师点击",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 6 15"
+    },
+    {
+      "image_index": 6,
+      "block_index": 18,
+      "original": "（9）增加了在收获、采集时草药背包可容纳植物的上限",
+      "corrected": "(9)增加了在收获、采集时草药背包可容纳植物的上限",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 6 18"
+    },
+    {
+      "image_index": 6,
+      "block_index": 23,
+      "original": "（10）优化了观赏盆的装配操作，由点击装配植物改为",
+      "corrected": "(10)优化了观赏盆的装配操作，由点击装配植物改为",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 6 23"
+    },
+    {
+      "image_index": 6,
+      "block_index": 27,
+      "original": "（1）修改了烟花释放的逻辑。巫师在点击释放后不会退",
+      "corrected": "(1)修改了烟花释放的逻辑。巫师在点击释放后不会退",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 6 27"
+    },
+    {
+      "image_index": 6,
+      "block_index": 30,
+      "original": "（2）新增了“释放到城堡上空”的功能，勾选后，烟花将",
+      "corrected": "(2)新增了“释放到城堡上空”的功能，勾选后，烟花将",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 6 30"
+    },
+    {
+      "image_index": 6,
+      "block_index": 32,
+      "original": "（3）优化了烟花的界面显示，将烟花释放界面右侧的关",
+      "corrected": "(3)优化了烟花的界面显示，将烟花释放界面右侧的关",
+      "reason": "标点规则 per-notice vote（paren）：源图字形以 notice-vote 证据 crop 为准",
+      "confidence": "high",
+      "via": "punct-vote",
+      "recrop": "python -m tools.cli crop dashen.6668614c2b010419ca7ff779 6 32"
     }
   ]
 }
