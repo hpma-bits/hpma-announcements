@@ -370,7 +370,7 @@ def test_index_is_ordered_by_publication():
 def test_committed_text_keeps_the_repaired_glyphs():
     texts = [
         path.read_text(encoding="utf-8")
-        for path in sorted((archive.REPO_ROOT / edition.EDITION_DIR).glob("*.md"))
+        for path in sorted((archive.REPO_ROOT / archive.SOURCES["dashen"].edition_dir).glob("*.md"))
     ]
 
     assert not any("骆" in text for text in texts)
