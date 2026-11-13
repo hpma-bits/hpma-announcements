@@ -21,23 +21,37 @@ Blocks the v6 engine read but the v4 record has none of (``v6_only``) carry
 no v4 block, so they are tracked separately as ``v6_only`` entries with their
 own verdict status.
 
-    python -m tools.cli audit-status [--soft]
+The evidence is tracked primary data:
 
-Writes ``derived/audit/dashen/<feed_id>.json`` and prints totals. Exits 1
-when ``queued`` blocks remain, unless ``--soft``.
+    audit/verdicts-*.jsonl                  adjudicated verdicts
+    audit/adj-*.jsonl                       the queues those verdicts answer
+
+``derived/audit/dashen/<feed_id>.json`` is the projection rebuilt from it.
+Crops stay in the gitignored ``.review/`` workspace and are never read here.
+
+    python -m tools.cli audit-status [--check | --soft]
+
+Write mode rebuilds every ledger and exits 1 while ``queued`` blocks remain,
+unless ``--soft``. ``--check`` rebuilds in memory, compares each committed
+ledger byte for byte, writes nothing, and exits 1 on any difference or queued
+block. Either mode refuses to run when the tracked evidence is missing.
 """
 
 from __future__ import annotations
 
 import hashlib
 import json
+import os
 import sys
+import tempfile
 from pathlib import Path
 from typing import Any
 
 from . import archive, audit_compare, edition
 
+EVIDENCE_DIR = Path("audit")
 AUDIT_DIR = Path("derived/audit/dashen")
+V6_DIR = Path("derived/ocr-v6/dashen")
 
 Record = dict[str, Any]
 
@@ -46,9 +60,31 @@ COVERED = {"consensus", "punct_rule", "corrected", "adjudicated",
            "record", "dropped", "watermark", "source_issue"}
 
 
-def _verdicts_by_v4(base: Path) -> dict[tuple[str, int, int], Record]:
+class MissingEvidenceError(RuntimeError):
+    """The tracked audit evidence is absent, so nothing can be rebuilt."""
+
+
+def _evidence_paths(base: Path) -> tuple[list[Path], list[Path]]:
+    """The tracked verdict and queue files; refuse to run without both."""
+    evidence = base / EVIDENCE_DIR
+    verdicts = sorted(evidence.glob("verdicts-*.jsonl"))
+    adj = sorted(evidence.glob("adj-*.jsonl"))
+    missing = [
+        pattern
+        for pattern, paths in (("verdicts-*.jsonl", verdicts), ("adj-*.jsonl", adj))
+        if not paths
+    ]
+    if missing:
+        raise MissingEvidenceError(
+            f"audit evidence missing: {EVIDENCE_DIR.as_posix()}/ has no "
+            f"{' or '.join(missing)} (tracked primary data; see audit/README.md)"
+        )
+    return verdicts, adj
+
+
+def _verdicts_by_v4(paths: list[Path]) -> dict[tuple[str, int, int], Record]:
     verdicts: dict[tuple[str, int, int], Record] = {}
-    for path in sorted((base / ".review" / "audit").glob("verdicts-*.jsonl")):
+    for path in paths:
         for line in path.read_text(encoding="utf-8").splitlines():
             if not line.strip():
                 continue
@@ -59,9 +95,9 @@ def _verdicts_by_v4(base: Path) -> dict[tuple[str, int, int], Record]:
     return verdicts
 
 
-def _verdicts_by_v6(base: Path) -> dict[tuple[str, int, int], Record]:
+def _verdicts_by_v6(paths: list[Path]) -> dict[tuple[str, int, int], Record]:
     verdicts: dict[tuple[str, int, int], Record] = {}
-    for path in sorted((base / ".review" / "audit").glob("verdicts-*.jsonl")):
+    for path in paths:
         for line in path.read_text(encoding="utf-8").splitlines():
             if not line.strip():
                 continue
@@ -107,7 +143,7 @@ def _status_for_op(op: Record | None, verdict: Record | None) -> str:
     return "queued"  # differ, v4_only, or unaligned
 
 
-def _queued_v6_locators(base: Path) -> set[tuple[str, int, int]]:
+def _queued_v6_locators(paths: list[Path]) -> set[tuple[str, int, int]]:
     """v6 locators that appeared in an original adjudication queue.
 
     The queues were built from an earlier comparison; ledger drops since then
@@ -116,7 +152,7 @@ def _queued_v6_locators(base: Path) -> set[tuple[str, int, int]]:
     re-queued by the recomparison.
     """
     locators: set[tuple[str, int, int]] = set()
-    for path in sorted((base / ".review" / "audit").glob("adj-*.jsonl")):
+    for path in paths:
         for line in path.read_text(encoding="utf-8").splitlines():
             if not line.strip():
                 continue
@@ -239,33 +275,112 @@ def build_notice(
     }
 
 
-def run(root: str | Path | None = None, *, soft: bool = False) -> int:
-    base = Path(root) if root else archive.REPO_ROOT
-    out_dir = base / AUDIT_DIR
-    out_dir.mkdir(parents=True, exist_ok=True)
-    verdicts_v4 = _verdicts_by_v4(base)
-    verdicts_v6 = _verdicts_by_v6(base)
-    queued_v6 = _queued_v6_locators(base)
-    v6_dir = base / "derived" / "ocr-v6" / "dashen"
+def _serialize(result: Record) -> bytes:
+    return (
+        json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    ).encode("utf-8")
+
+
+def build(base: Path) -> tuple[dict[str, bytes], dict[str, int]]:
+    """Rebuild every ledger in memory; ``(feed -> bytes, totals)``.
+
+    Reads only tracked primary data (``audit/``, ``derived/ocr/``,
+    ``derived/ocr-v6/`` and ``corrections/``). Raises
+    :class:`MissingEvidenceError` before any caller can write when either
+    evidence group is absent.
+    """
+    verdict_paths, adj_paths = _evidence_paths(base)
+    verdicts_v4 = _verdicts_by_v4(verdict_paths)
+    verdicts_v6 = _verdicts_by_v6(verdict_paths)
+    queued_v6 = _queued_v6_locators(adj_paths)
+    v6_dir = base / V6_DIR
+    payloads: dict[str, bytes] = {}
     totals: dict[str, int] = {}
-    for feed, _ in archive.iter_ocr(base):
+    for feed, notice_v4 in archive.iter_ocr(base):
         v6_path = v6_dir / f"{feed}.json"
         if not v6_path.exists():
             print(f"audit-status: no v6 reading for {feed}", file=sys.stderr)
             continue
         result = build_notice(
             feed,
-            archive.load_ocr(feed, base),
+            notice_v4,
             archive.load_ledger(feed, base),
             json.loads(v6_path.read_text(encoding="utf-8")),
             verdicts_v4, verdicts_v6, queued_v6,
         )
-        (out_dir / f"{feed}.json").write_text(
-            json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
-            encoding="utf-8", newline="\n")
+        payloads[feed] = _serialize(result)
         for key, value in result["counts"].items():
             totals[key] = totals.get(key, 0) + value
+    return payloads, totals
+
+
+def _check(payloads: dict[str, bytes], out_dir: Path, base: Path) -> list[str]:
+    """Byte-for-byte comparison against the committed projection."""
+    if not out_dir.is_dir():
+        return [f"missing {AUDIT_DIR.as_posix()}/"]
+    problems: list[str] = []
+    for feed, payload in sorted(payloads.items()):
+        path = out_dir / f"{feed}.json"
+        if not path.is_file():
+            problems.append(f"missing {path.relative_to(base).as_posix()}")
+        elif path.read_bytes() != payload:
+            problems.append(f"stale {path.relative_to(base).as_posix()}")
+    expected = {f"{feed}.json" for feed in payloads}
+    for path in sorted(out_dir.glob("*.json")):
+        if path.name not in expected:
+            problems.append(f"orphan {path.relative_to(base).as_posix()}")
+    return problems
+
+
+def _atomic_write(path: Path, payload: bytes) -> None:
+    """Replace ``path`` in one step; never expose a half-written ledger."""
+    descriptor, temporary = tempfile.mkstemp(
+        dir=path.parent, prefix=f".{path.name}.", suffix=".tmp"
+    )
+    try:
+        with os.fdopen(descriptor, "wb") as handle:
+            handle.write(payload)
+        os.replace(temporary, path)
+    except BaseException:
+        try:
+            os.unlink(temporary)
+        except FileNotFoundError:
+            pass
+        raise
+
+
+def run(root: str | Path | None = None, *, soft: bool = False,
+        check: bool = False) -> int:
+    if check and soft:
+        raise ValueError("--check and --soft are mutually exclusive")
+    base = Path(root) if root else archive.REPO_ROOT
+    out_dir = base / AUDIT_DIR
+    # Build first: missing evidence must fail before the output is touched.
+    payloads, totals = build(base)
     queued = totals.get("queued", 0)
+
+    if check:
+        problems = _check(payloads, out_dir, base)
+        for problem in problems:
+            print(f"audit-status: {problem}", file=sys.stderr)
+        print(f"audit-status: {json.dumps(totals, sort_keys=True)}")
+        if queued:
+            print(f"audit-status: {queued} queued blocks remain", file=sys.stderr)
+        if problems or queued:
+            return 1
+        print(f"audit-status: {len(payloads)} ledgers up to date")
+        return 0
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    changed = 0
+    for feed, payload in sorted(payloads.items()):
+        path = out_dir / f"{feed}.json"
+        if path.is_file() and path.read_bytes() == payload:
+            continue
+        _atomic_write(path, payload)
+        changed += 1
+    print(f"audit-status: wrote {len(payloads)} ledgers ({changed} changed) "
+          f"to {AUDIT_DIR.as_posix()}")
     print(f"audit-status: {json.dumps(totals, sort_keys=True)}")
     if queued:
         print(f"audit-status: {queued} queued blocks remain", file=sys.stderr)

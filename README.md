@@ -24,9 +24,11 @@ study/labels.jsonl                          which Dashen posts are notices, and 
 study/labels-nga.jsonl                      which NGA threads are notices
 assets/dashen/<feed_id>/<NN>.<ext>          original image bytes (650 images)
 derived/ocr/dashen/<feed_id>.json           OCR engine output (v4, the record), immutable
-derived/ocr-v6/dashen/<feed_id>.json        the v6 second reading (audit evidence)
+derived/ocr-v6/dashen/<feed_id>.json        the v6 second reading (audit input)
 corrections/dashen/<id>.json                the correction ledger: human decisions
-derived/audit/dashen/<feed_id>.json         per-block audit status (the quality record)
+audit/verdicts-*.jsonl                      adjudicated audit verdicts (primary evidence)
+audit/adj-*.jsonl                           the audit review queues (primary evidence)
+derived/audit/dashen/<feed_id>.json         per-block audit status (projection of audit/)
 edition/dashen/<feed_id>.md                 the readable edition, one file per notice
 edition/nga/<tid>.md                        the NGA text-only edition
 edition/notices.jsonl                       one line per notice, metadata only
@@ -191,9 +193,16 @@ rules where sampling proved a systematic direction:
   v4-only lines. `python -m tools.cli audit-status` rebuilds the per-block
   record in `derived/audit/dashen/` and fails while anything is queued.
 
-The full evidence trail (crops, verdicts, rule sampling) lives in `.review/`
-during a run; the committed audit ledger and correction ledger are the durable
-record.
+The audit's durable evidence now lives in tracked `audit/`: `verdicts-*.jsonl`
+holds each adjudicated verdict, `adj-*.jsonl` the review queues those verdicts
+answer. `audit/README.md` documents the schema. The per-block ledger in
+`derived/audit/dashen/` is a projection rebuilt from that primary data; the
+source-image crops stay in the gitignored `.review/` workspace as scratch.
+
+`python -m tools.cli audit-status --check` rebuilds every ledger in memory and
+compares it byte for byte with the committed projection, so a clean clone can
+verify the zero-queued claim without `.review/`. Missing evidence is a hard
+error and nothing is written; normal writes replace each ledger atomically.
 
 ## The dataset
 
@@ -210,6 +219,7 @@ watermark removed, line breaks preserved; NGA text is the repost's own text.
 ```bash
 uv run pytest -q
 uv run python -m tools.cli verify
+uv run python -m tools.cli audit-status --check
 uv run python -m tools.cli edition --check
 uv run python -m tools.cli dataset --check
 ```
@@ -217,8 +227,8 @@ uv run python -m tools.cli dataset --check
 CI runs the same commands with uv on a Linux runner without network, OCR
 engine or Pillow. `python -m tools.cli doctor` reports whether the local
 environment (venv, dependencies, optional OCR engines) is complete; see
-"Rebuilding" above. `audit-status` needs the `.review/` evidence directory and
-runs locally, not in CI.
+"Rebuilding" above. `audit-status --check` reads only committed data and runs
+in CI; the write mode (`audit-status`) updates `derived/audit/` locally.
 
 ## Known gaps
 

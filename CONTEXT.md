@@ -56,7 +56,7 @@ NGA 帖是对官方公告的社区转载，不是官方原文。Edition 用 `sou
 _Avoid_: original、official text
 
 **Audit**：
-用第二个引擎（v6）独立重读全部图片，与 v4 记录逐块对齐、差异逐条核图的审校过程；每块最终状态（consensus / corrected / adjudicated / punct_rule / record / source_issue / watermark / dropped）记在 `derived/audit/dashen/`。质量门是 `queued == 0`。
+用第二个引擎（v6）独立重读全部图片，与 v4 记录逐块对齐、差异逐条核图的审校过程。人判证据（`verdicts-*.jsonl` 裁决与 `adj-*.jsonl` 原始审校队列）是主数据，存在 `audit/`；每块最终状态（consensus / corrected / adjudicated / punct_rule / record / source_issue / watermark / dropped）是投影，由 `audit/` 重建到 `derived/audit/dashen/`。质量门是 `queued == 0`，`audit-status --check` 在 CI 中逐字节核对投影。
 _Avoid_: 二次 OCR、recheck
 
 **Insert**：
