@@ -1,7 +1,7 @@
 # OCR precision report (2026-11-07/08)
 
 Scope: the 162 Dashen update notices (650 images, 27,829 v4 blocks) plus the
-733 v6-only extra readings. Goal: every block either agreed by two engines or
+843 v6-only extra readings. Goal: every block either agreed by two engines or
 adjudicated against its source image, with source fidelity as the rule
 (official typos stay).
 
@@ -18,17 +18,18 @@ adjudicated against its source image, with source fidelity as the rule
    crops): 32 occurrences are the posts' own inconsistencies (kept), 2 true
    OCR errors fixed.
 4. **Punctuation patterns**: 425 stratified crops resolved 4,241 punctuation
-   disagreements into class rules (`study/punct-rules.json`): 595 corrections
-   applied by rule, 201 by per-notice vote, 2,217 confirmed v4.
-5. **Full adjudication**: 6,298 queued items -> differ (893), punct leftovers
-   (1,183), v4-only duplicate slices (431), v6-only extras (733), plus the 89
-   low-confidence blocks and 61 medium corrections. Everything read as a
-   source-image crop; verdicts applied via `apply-verdicts`.
+   disagreements into class rules (`study/punct-rules.json`); the final ledger
+   applied 600 corrections by rule and 201 by per-notice vote, and the sampled
+   remainder stayed with v4.
+5. **Full adjudication**: 6,298 queued items across differ / punct / v4-only /
+   v6-only kinds, plus the 89 low-confidence blocks and 61 medium corrections.
+   Every item was read against a source-image crop; the tracked queues and
+   verdicts are in `audit/`.
 
 ## Result
 
-Universe: 27,829 v4 blocks + 733 v6-only + inserts, tracked per block by
-`audit-status`. Final:
+Universe: 27,829 v4 blocks + 843 v6-only = 28,672 audit units; 33 inserted
+lines are tracked with their anchors. Final:
 
 | status | blocks |
 |---|---|
@@ -42,7 +43,7 @@ Universe: 27,829 v4 blocks + 733 v6-only + inserts, tracked per block by
 | **queued** | **0** |
 
 Ledger: 3,268 entries over all 162 notices - corrections, drops, inserts
-(110 lines the v4 detection missed entirely, including reward-table rows and
+(33 lines the v4 detection missed entirely, including reward-table rows and
 watermark-covered tails), and rule applications. Edition and dataset rebuilt;
 `verify`, `edition --check`, `dataset --check`, `pytest` green.
 
@@ -55,8 +56,9 @@ watermark-covered tails), and rule applications. Edition and dataset rebuilt;
   ladder, 萤火印记 ladder, probability table summing to 100.00).
 - Art-font quirks preserved: straight quotes and narrow ! on two banners,
   ”-shaped marks on both sides of one banner, three closing ” after a title.
-- 12 lines the v4 detection missed entirely (wrap tails like 吧！/敬上, one
-  full sentence) recorded as ledger inserts.
+- 33 lines the v4 detection missed entirely: 12 `missed_line` verdicts (wrap
+  tails like 吧！/敬上, one full sentence) plus 21 rebuilt reward-table rows,
+  recorded as ledger inserts.
 
 ## Residual risk
 
@@ -65,4 +67,8 @@ watermark-covered tails), and rule applications. Edition and dataset rebuilt;
   reconstructions carry `confidence: medium`.
 - Consensus blocks are agreed by two independent engines but not individually
   crop-read; the prior full human pass covered the v4 side of each pair.
+- Punctuation-only v4/v6 differences are resolved by sampled class rules and
+  per-notice votes, not by a crop per block; the remaining drift counts as
+  consensus by policy. `study/punct-rules.json` is the sampling record; its
+  `pending-*` actions were superseded by the full adjudication.
 - Source quirks were preserved verbatim, not normalised.
