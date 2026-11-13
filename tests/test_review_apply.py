@@ -233,6 +233,50 @@ def test_apply_override_accept_keep_original_and_drop(tmp_path):
     assert apply_report["ledger_files"] == ["corrections/dashen/aaaa.json"]
 
 
+def test_applied_override_stays_visible_as_an_archived_issue(tmp_path):
+    _seed(tmp_path)
+    _decisions(tmp_path)
+
+    review.apply(tmp_path)
+    queue = review.build_queue(tmp_path)
+    issues = {issue["id"]: issue for issue in queue["issues"]}
+
+    # The medium queue no longer contains the promoted block...
+    live_ocr = [
+        issue
+        for issue in queue["issues"]
+        if issue["type"] == "ocr_block" and not issue.get("archived")
+    ]
+    assert f"ocr:{NOTICE}:1:0" not in {issue["id"] for issue in live_ocr}
+    # ...but its verdict is still in the desk as read-only history.
+    archived = issues[f"ocr:{NOTICE}:1:0"]
+    assert archived["archived"] is True
+    assert archived["applied"] is True
+    assert archived["options"] == []
+    assert archived["confidence"] == "high"
+    assert archived["original"] == "原一"
+    assert archived["corrected"] == "专家定稿"
+    assert archived["reason"].startswith("行尾被水印覆盖")
+    assert review.REVIEW_REASON_MARKER in archived["reason"]
+    assert archived["title"] == f"{NOTICE} · 图 1 · block 0"
+    assert archived["crop"] == {"notice": NOTICE, "image": 1, "block": 0, "scale": 2}
+    assert archived["context_before"] == []
+    assert archived["context_after"] == ["原二", "原三"]
+
+    # keep_original and drop also left the medium queue; both stay visible.
+    assert issues[f"ocr:{NOTICE}:1:3"]["archived"] is True
+    assert issues[f"ocr:{NOTICE}:1:3"]["original"] == "原四"
+    assert issues[f"ocr:{NOTICE}:1:3"]["corrected"] == ""
+    assert issues[f"ocr:{NOTICE}:1:4"]["archived"] is True
+    assert issues[f"ocr:{NOTICE}:1:4"]["corrected"] == ""
+
+    assert queue["stats"]["total"] == 7
+    assert queue["stats"]["pending"] == 0
+    assert queue["stats"]["resolved"] == 7
+    assert queue["stats"]["term"] == 2
+    assert queue["stats"]["ocr"] == 5
+
+
 def test_apply_is_idempotent(tmp_path):
     _seed(tmp_path)
     _decisions(tmp_path)

@@ -316,6 +316,8 @@ class ReviewStore:
         issue = self._find_issue(issue_id)
         if issue is None:
             raise BadRequest(f"未知 issue：{issue_id}")
+        if issue.get("archived"):
+            raise BadRequest(f"这条裁决已应用并归档，不能再次保存：{issue_id}")
         options = issue.get("options")
         if isinstance(options, list):
             allowed = {
@@ -816,6 +818,7 @@ main { min-width: 0; }
 }
 .tag.high { color: var(--warn); border-color: #e8c9a0; background: #fff6ea; }
 .tag.decided { color: var(--ok); border-color: #bfd8c9; background: #f2faf5; }
+.tag.archived { color: var(--ok); border-color: #bfd8c9; background: #f2faf5; }
 .tag.risk { color: #6b5a3b; border-color: #ddd0b8; background: #fbf7ee; }
 .tag.risk.damage { color: #8c2f2f; border-color: #eccaca; background: #fff5f5; }
 .issue h2 { margin: 12px 0 6px; font-size: 25px; line-height: 1.3; letter-spacing: .005em; }
@@ -1022,6 +1025,17 @@ kbd {
   var TYPE_LABEL = { term_conflict: "术语", ocr_block: "OCR" };
   var SEV_LABEL = { high: "高优先", medium: "中", low: "低" };
   var RISK_LABEL = { source_damage: "源图损坏", style: "样式", other: "其他" };
+  var DECISION_LABEL = {
+    same_alias: "同一事物，检索合并",
+    different: "不同事物，保持区分",
+    ocr_error: "其中一个是 OCR 错误",
+    accept: "接受当前修正",
+    override: "改为专家确认文字",
+    keep_original: "保留 OCR 原文",
+    source_issue: "印刷原样",
+    drop: "整块不是正文",
+    defer: "稍后"
+  };
   var FILTERS = [
     ["all", "全部"],
     ["term", "术语"],
@@ -1107,7 +1121,11 @@ kbd {
 
   function optionLabel(issue, value) {
     var option = (issue.options || []).find(function (item) { return item.value === value; });
-    return option ? option.label : (value || "");
+    return option ? option.label : (DECISION_LABEL[value] || value || "");
+  }
+
+  function archivedTag(issue) {
+    return issue.archived ? '<span class="tag archived">已应用 / 归档</span>' : "";
   }
 
   function fmtTime(value) {
@@ -1199,9 +1217,11 @@ kbd {
           var dot = issue.status === "decided" ? "decided" : (issue.status === "deferred" ? "deferred" : (issue.severity === "high" ? "high" : ""));
           var type = TYPE_LABEL[issue.type] || issue.type || "";
           var risk = riskLabel(issue);
-          var status = issue.status === "decided"
-            ? "已裁决"
-            : (issue.status === "deferred" ? "稍后" : (SEV_LABEL[issue.severity] || issue.severity || "待裁决"));
+          var status = issue.archived
+            ? "已应用/归档"
+            : (issue.status === "decided"
+              ? "已裁决"
+              : (issue.status === "deferred" ? "稍后" : (SEV_LABEL[issue.severity] || issue.severity || "待裁决")));
           return '<button type="button" class="qitem ' + (state.currentId === issue.id ? "current" : "") +
             '" data-action="select-issue" data-id="' + esc(issue.id) + '">' +
             '<span class="qtitle">' + esc(issue.title) + "</span>" +
@@ -1226,6 +1246,14 @@ kbd {
   }
 
   function decidedBanner(issue) {
+    if (issue.archived) {
+      var archived = issue.decision || {};
+      var archivedText = "已应用 / 归档";
+      if (archived.decision) archivedText += "：" + optionLabel(issue, archived.decision);
+      if (archived.decided_at) archivedText += " · " + fmtTime(archived.decided_at);
+      if (archived.note) archivedText += " · 备注：" + archived.note;
+      return '<div class="banner"><span>' + esc(archivedText) + "</span></div>";
+    }
     if (issue.status !== "decided" || !issue.decision) return "";
     var decision = issue.decision;
     var text = "已裁决：" + optionLabel(issue, decision.decision);
@@ -1322,7 +1350,7 @@ kbd {
       matchNote +
       '<h3 class="sec">上下文</h3>' +
       '<div class="ctx-cols">' + contextColumns + "</div>" +
-      decisionBlock(issue) +
+      (issue.archived ? "" : decisionBlock(issue)) +
       "</article>";
   }
 
@@ -1365,8 +1393,8 @@ kbd {
 
     return '<article class="issue">' +
       decidedBanner(issue) +
-      '<div class="kicker"><span class="tag">OCR 复核</span>' + severityTag(issue) + riskTag(issue) +
-      confidence + "</div>" +
+      '<div class="kicker"><span class="tag">OCR 复核</span>' + archivedTag(issue) +
+      severityTag(issue) + riskTag(issue) + confidence + "</div>" +
       "<h2>" + esc(issue.title) + "</h2>" +
       whyBlock(issue) +
       (issue.question ? '<p class="question">' + esc(issue.question) + "</p>" : "") +
@@ -1381,7 +1409,7 @@ kbd {
         "</div>" +
       "</div>" +
       (contextRows ? '<div class="ctx-strip">' + contextRows + "</div>" : "") +
-      decisionBlock(issue) +
+      (issue.archived ? "" : decisionBlock(issue)) +
       "</article>";
   }
 
@@ -1396,11 +1424,12 @@ kbd {
       recoBlock(issue) +
       '<h3 class="sec">详情</h3><pre class="details-json">' +
       esc(JSON.stringify(issue, null, 2)) + "</pre>" +
-      decisionBlock(issue) +
+      (issue.archived ? "" : decisionBlock(issue)) +
       "</article>";
   }
 
   function decisionBlock(issue) {
+    if (issue.archived) return "";
     var options = issue.options || [];
     var buttons = options.map(function (option, index) {
       return '<button type="button" class="option ' + (state.selected === option.value ? "sel" : "") +
@@ -1536,7 +1565,7 @@ kbd {
 
   function selectOption(value) {
     var issue = currentIssue();
-    if (!issue) return;
+    if (!issue || issue.archived) return;
     state.selected = value;
     if (value === "same_alias" && !state.preferred) {
       var main = mainVariant(issue);
@@ -1621,13 +1650,15 @@ kbd {
   function saveNext() {
     var issue = currentIssue();
     if (!issue) return;
+    if (issue.archived) { toast("这条裁决已应用并归档，只读"); return; }
     var problem = validateChoice(issue);
     if (problem) { toast(problem); return; }
     postDecision(state.selected, decisionPayload(issue), state.note, true);
   }
 
   function saveDefer() {
-    if (!currentIssue()) return;
+    var issue = currentIssue();
+    if (!issue || issue.archived) return;
     postDecision("defer", {}, state.note, true);
   }
 
@@ -1641,7 +1672,7 @@ kbd {
 
   async function reopenCurrent() {
     var issue = currentIssue();
-    if (!issue) return;
+    if (!issue || issue.archived) return;
     try {
       var data = await api("/api/decisions", {
         method: "POST",

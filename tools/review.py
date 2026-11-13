@@ -538,6 +538,97 @@ def ocr_issues(root: str | Path | None = None) -> list[Record]:
     return _ocr_issues(base, load_fulltext_rows(base))
 
 
+def _archived_ocr_issues(
+    base: Path,
+    rows: list[Record],
+    current_ids: set[str],
+    decisions: Mapping[str, Record],
+) -> list[Record]:
+    """Rebuild decided OCR issues that the medium queue no longer contains.
+
+    An applied override promotes its correction to ``high`` and therefore
+    removes the block from :func:`_ocr_issues`. The desk still has to show the
+    verdict in its history, so every non-deferred OCR decision without a live
+    issue is rebuilt from the ledger as a read-only, ``archived`` issue. The
+    fields mirror a normal OCR issue; ``options`` stays empty because there is
+    nothing left to decide.
+    """
+    rows_by_id = {row["id"]: row for row in rows}
+    cache: dict[str, Record | None] = {}
+    ledgers: dict[str, Record | None] = {}
+    issues: list[Record] = []
+    for issue_id in sorted(decisions):
+        if issue_id in current_ids or not issue_id.startswith("ocr:"):
+            continue
+        record = decisions[issue_id]
+        decision = str(record.get("decision") or "")
+        if not decision or decision == "defer":
+            continue
+        try:
+            notice, image_index, block_index = _ocr_locator(issue_id)
+        except ValueError:
+            continue
+        feed = archive.feed_id(notice)
+        images = _ocr_images(_ocr_cache_read(base, notice, cache))
+        image = _ocr_image(images, image_index)
+        blocks = (image or {}).get("blocks") or []
+        current = (
+            str(blocks[block_index].get("text") or "")
+            if 0 <= block_index < len(blocks)
+            else None
+        )
+        if feed not in ledgers:
+            ledgers[feed] = archive.load_ledger(feed, base)
+        entry = _find_correction(ledgers[feed], image_index, block_index)
+        if entry is not None:
+            original = str(entry.get("original") or current or "")
+            corrected = "" if entry.get("drop") else str(entry.get("corrected") or "")
+            reason = str(entry.get("reason") or "")
+            confidence = str(entry.get("confidence") or "high")
+        else:
+            original = str(record.get("original") or current or "")
+            corrected = (
+                "" if decision in ("keep_original", "drop")
+                else str(record.get("corrected") or original)
+            )
+            reason = str(record.get("note") or "专家裁决已应用")
+            confidence = "high"
+        before, after = _ocr_context(images, image_index, block_index)
+        row = rows_by_id.get(notice, {})
+        issues.append(
+            {
+                "id": issue_id,
+                "type": "ocr_block",
+                "severity": "medium",
+                "risk": _ocr_risk(reason),
+                "title": f"{notice} · 图 {image_index} · block {block_index}",
+                "question": "这个 block 的源图文字是什么？",
+                "why": f"confidence={confidence}；{reason}",
+                "notice": notice,
+                "notice_date": row.get("notice_date") or "",
+                "notice_title": row.get("title") or "",
+                "image_index": image_index,
+                "block_index": block_index,
+                "original": original,
+                "corrected": corrected,
+                "reason": reason,
+                "confidence": confidence,
+                "crop": {
+                    "notice": notice,
+                    "image": image_index,
+                    "block": block_index,
+                    "scale": 2,
+                },
+                "context_before": before,
+                "context_after": after,
+                "options": [],
+                "archived": True,
+                "applied": True,
+            }
+        )
+    return issues
+
+
 # --------------------------------------------------------------------------- #
 # Queue
 # --------------------------------------------------------------------------- #
@@ -589,6 +680,11 @@ def build_queue(
     Term conflicts come first, ordered by impact (the rare spelling's count and
     notice spread). OCR issues follow, source damage first. OCR never uses
     ``high`` severity, so the high-priority filter is terminology only.
+
+    Decided OCR blocks that no longer need a verdict (an override promoted the
+    correction to ``high``, or a ``keep_original``/``drop`` removed it) are
+    appended as read-only ``archived`` issues so the decision history stays
+    visible and ``resolved`` counts every adjudicated issue.
     """
     base = Path(root) if root else archive.REPO_ROOT
     rows = load_fulltext_rows(base)
@@ -596,13 +692,16 @@ def build_queue(
     terms.sort(key=_term_sort_key)
     ocr = _ocr_issues(base, rows)
     ocr.sort(key=_ocr_sort_key)
-    issues = terms + ocr
 
     latest = (
         load_decisions(default_decisions_path(base))
         if decisions is None
         else _index_decisions(decisions)
     )
+    live = terms + ocr
+    archived = _archived_ocr_issues(base, rows, {issue["id"] for issue in live}, latest)
+    archived.sort(key=_ocr_sort_key)
+    issues = live + archived
 
     resolved = 0
     deferred = 0
