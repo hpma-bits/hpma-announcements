@@ -8,6 +8,8 @@ Primary data — the archive itself, never regenerated from anything else:
     study/labels-nga.jsonl                  which NGA threads are notices
     assets/dashen/<feed_id>/<NN>.<ext>      original image bytes
     corrections/dashen/<id>.json            human decisions about OCR text
+    audit/verdicts-*.jsonl                  human adjudication verdicts
+    audit/adj-*.jsonl                       the audit queues those verdicts answer
 
 Derived data — rebuildable, committed only so the archive reads without network:
 

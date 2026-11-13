@@ -4,7 +4,8 @@ __pycache__/
 .venv/
 .DS_Store
 
-# Scratch: reviewer crops and the raw labelling batches they came from.
+# Scratch: reviewer crops and raw labelling batches. The adjudicated audit
+# evidence that rebuilds derived/audit is tracked in audit/ (not here).
 .review/
 study/batches/
 study/labels/

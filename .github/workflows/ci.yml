@@ -27,6 +27,9 @@ jobs:
       - name: Check the correction ledger
         run: uv run python -m tools.cli verify
 
+      - name: Check the audit ledger
+        run: uv run python -m tools.cli audit-status --check
+
       - name: Check the committed edition
         run: uv run python -m tools.cli edition --check
 

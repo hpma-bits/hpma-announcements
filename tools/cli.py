@@ -3,6 +3,7 @@
     python -m tools.cli verify
     python -m tools.cli crop <notice> <image> <block> [--context N] [--scale F]
     python -m tools.cli edition [--check]
+    python -m tools.cli audit-status [--check | --soft]
     python -m tools.cli doctor [--strict] [--require-ocr] [--require-audit] [--ocr-smoke]
     python -m tools.cli audit-ocr [--family update] [--limit N]
 """
@@ -119,7 +120,7 @@ def _audit_compare(args: argparse.Namespace) -> int:
 
 
 def _audit_status(args: argparse.Namespace) -> int:
-    return audit_status.run(soft=args.soft)
+    return audit_status.run(soft=args.soft, check=args.check)
 
 
 def _dataset(args: argparse.Namespace) -> int:
@@ -198,7 +199,13 @@ def main(argv: list[str] | None = None) -> int:
         "audit-status",
         help="build the per-block audit ledger and fail while unreviewed blocks remain",
     )
-    status_cmd.add_argument(
+    status_mode = status_cmd.add_mutually_exclusive_group()
+    status_mode.add_argument(
+        "--check",
+        action="store_true",
+        help="rebuild in memory and byte-compare with derived/audit; write nothing",
+    )
+    status_mode.add_argument(
         "--soft", action="store_true", help="report queued blocks without failing"
     )
     status_cmd.set_defaults(func=_audit_status)
@@ -212,7 +219,8 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     try:
         return args.func(args)
-    except (CliError, FileNotFoundError, ValueError, edition.EditionError) as exc:
+    except (CliError, FileNotFoundError, ValueError, edition.EditionError,
+            audit_status.MissingEvidenceError) as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 2
 
