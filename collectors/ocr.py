@@ -151,7 +151,7 @@ def _rapidocr_v4() -> tuple[Engine, dict[str, str]]:
 
     ocr = RapidOCR()
 
-    def raw_to_lines(result, y_offset: int, width: int) -> list[tuple[float, str, float, list[list[int]]]]:
+    def raw_to_lines(result, y_offset: int) -> list[tuple[float, str, float, list[list[int]]]]:
         out = []
         for box, text, score in (result or []):
             pts = [[int(x), int(y) + y_offset] for x, y in box]
@@ -169,7 +169,7 @@ def _rapidocr_v4() -> tuple[Engine, dict[str, str]]:
             # use_cls=False: notice images are upright, and the angle
             # classifier dominates runtime on CPU (30s+ per image).
             result, _ = ocr(image[start:end, :], use_cls=False)
-            lines.extend(raw_to_lines(result, start, image.shape[1]))
+            lines.extend(raw_to_lines(result, start))
         return merge_lines(lines)
 
     meta = {

@@ -6,7 +6,9 @@
     python -m tools.cli audit-status [--check | --soft]
     python -m tools.cli doctor [--strict] [--require-ocr] [--require-audit] [--ocr-smoke]
     python -m tools.cli audit-ocr [--engine {v4,v6}] [--family update] [--limit N]
+    python -m tools.cli audit-compare [--crops] [--notice ID]...
     python -m tools.cli apply-verdicts [--dry-run]
+    python -m tools.cli dataset [--check] [--allow-unverified]
 """
 
 from __future__ import annotations
@@ -73,9 +75,12 @@ def _crop(args: argparse.Namespace) -> int:
         raise CliError(f"image {args.image} has no local file")
 
     blocks = image.get("blocks", [])
-    box = crop.crop_box(
-        blocks, args.block, context=args.context, pad_x=args.pad_x, pad_y=args.pad_y
-    )
+    try:
+        box = crop.crop_box(
+            blocks, args.block, context=args.context, pad_x=args.pad_x, pad_y=args.pad_y
+        )
+    except IndexError as exc:
+        raise CliError(str(exc)) from None
     rendered = crop.render(
         archive.REPO_ROOT / path, box, scale=args.scale, target_width=args.target_width
     )

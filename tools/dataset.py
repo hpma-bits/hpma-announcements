@@ -31,7 +31,6 @@ from . import archive, projection
 from .text import normalize_body
 
 DATASET_PATH = Path("dataset/notices.jsonl")
-SCHEMA_PATH = Path("dataset/schema.md")
 
 Record = dict[str, Any]
 
