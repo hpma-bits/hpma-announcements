@@ -140,36 +140,31 @@ def issue_status(issue: Record, decisions: dict[str, Record]) -> str:
 def decorate_issues(issues: Any, decisions: dict[str, Record]) -> list[Record]:
     """Copy issues with ``status``/``decision`` and queue order applied.
 
-    Pending issues come first, high severity before the rest and terms before
-    OCR blocks; decided issues follow, most recently decided first.
+    Pending issues keep the data layer's order (high severity and impact for
+    terms, source damage first for OCR); decided issues follow, most recently
+    decided first.
     """
     pending: list[Record] = []
     decided: list[Record] = []
     if not isinstance(issues, list):
         return []
-    for raw in issues:
+    order_by_id: dict[str, int] = {}
+    for position, raw in enumerate(issues):
         if not isinstance(raw, dict) or not raw.get("id"):
             continue
         issue = dict(raw)
         issue["id"] = str(issue["id"])
         issue["title"] = str(issue.get("title") or issue["id"])
+        order_by_id[issue["id"]] = position
         status = issue_status(issue, decisions)
         issue["status"] = status
         issue["decision"] = decisions.get(issue["id"])
         (decided if status == "decided" else pending).append(issue)
 
-    def rank(issue: Record) -> tuple[int, int, int, int, str]:
-        risk = str(issue.get("risk") or "")
-        if issue.get("type") != "ocr_block":
-            risk_rank = 0
-        else:
-            risk_rank = {"source_damage": 0, "style": 1, "other": 2}.get(risk, 3)
+    def rank(issue: Record) -> tuple[int, int]:
         return (
             0 if issue.get("status") == "pending" else 1,
-            0 if issue.get("severity") == "high" else 1,
-            0 if issue.get("type") == "term_conflict" else 1,
-            risk_rank,
-            str(issue.get("title") or ""),
+            order_by_id.get(issue["id"], 0),
         )
 
     pending.sort(key=rank)

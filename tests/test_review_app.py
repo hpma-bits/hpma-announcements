@@ -208,12 +208,12 @@ def test_decorate_issues_sets_status_and_puts_pending_first():
     assert decorated[0]["decision"] is None
 
 
-def test_decorate_issues_puts_damaged_ocr_before_styled_ocr():
+def test_decorate_issues_preserves_the_data_layer_order():
     issues = [
+        issue("term:1", "term_conflict", "medium"),
+        issue("ocr:damage", "ocr_block", "medium", risk="source_damage"),
         issue("ocr:style", "ocr_block", "medium", risk="style"),
         issue("ocr:other", "ocr_block", "medium", risk="other"),
-        issue("ocr:damage", "ocr_block", "medium", risk="source_damage"),
-        issue("term:1", "term_conflict", "medium"),
     ]
     decorated = review_app.decorate_issues(issues, {})
     assert [item["id"] for item in decorated] == [
