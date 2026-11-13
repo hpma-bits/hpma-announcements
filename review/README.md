@@ -4,8 +4,9 @@
 （append-only，latest wins）；`terms.json` 和 `ocr-decisions.jsonl` 是导出产物，
 可由 `review.export()` 随时重建。
 
-数据层实现在 [`tools/review.py`](../tools/review.py)，不依赖旧 checkpage，也不写
-`corrections/`、`edition/`、`dataset/`——裁决结果只进入本目录。
+数据层实现在 [`tools/review.py`](../tools/review.py)，不依赖旧 checkpage。
+`export()` 只写本目录；`apply()` 把 OCR 专家裁决写进 `corrections/`（不会
+自动改 `edition/`、`dataset/`，它们随后从账本重建）。
 
 ## 队列
 
@@ -197,6 +198,8 @@ review.save_decision(
 )
 latest = review.load_decisions()              # {issue_id: 最新记录}
 review.export()                               # 写 terms.json / ocr-decisions.jsonl
+review.apply(dry_run=True)                    # 只计算不写
+review.apply()                                # 写 corrections/ / terms.json / apply-report.json
 ```
 
 `save_decision` 会校验 issue id 前缀、决定取值，以及 `same_alias` 的
@@ -209,14 +212,51 @@ review.export()                               # 写 terms.json / ocr-decisions.j
 2. 首屏只出现一个 issue；按 severity/type 顺序处理。
 3. 选择决定并保存；`defer` 会记录，但 issue 仍留在待裁决队列。
 4. 处理完后运行导出（页面按钮或 `review.export()`）。
-5. 把 `terms.json` / `ocr-decisions.jsonl` 交给后续检索/OCR 流程；本数据层
-   不会自动改 `corrections/`、`edition/`、`dataset/`。
+5. 把 `terms.json` / `ocr-decisions.jsonl` 交给后续检索/OCR 流程。
+6. 需要落地 OCR 专家裁决时运行应用：
+
+   ```bash
+   python -m tools.cli review --apply --dry-run   # 只报告
+   python -m tools.cli review --apply             # 写 corrections/ 和 terms.json
+   python -m tools.cli edition                    # 从账本重建可读版
+   python -m tools.cli dataset                    # 重建站点数据
+   python -m tools.cli review --export            # 刷新 review 导出产物
+   ```
+
+## 应用
+
+`review.apply(root=None, dry_run=False)` 读取最新决定并落地：
+
+- 术语：`same_alias` 写入 `terms.json` 的 `terms`；`different` 写入同一文件的
+  `different`。`ocr_error` / `defer` 不物化。术语只生成 alias/authority，不改
+  原文，也不改 `edition/` 文本。
+- OCR `accept`：不改账本，只确认当前修正仍然适用。
+- OCR `override`：校验决定对应的 `original` 等于当前 OCR block 文本后，把
+  账本里同一 `(image_index, block_index)` 条目的 `corrected` 改成专家文本，
+  `confidence` 改为 `high`，`via` 改为 `expert-review`，reason 追加
+  `；review desk 专家裁决`，并写入 `review_issue_id`。没有条目时按当前 OCR
+  文本创建 `original`/`corrected`/`reason`/`confidence`/`via`/`recrop`。
+- OCR `keep_original`：删除该 locator 的修正，回到原始 OCR 文本。
+- OCR `source_issue`：不改账本（印刷原样）。
+- OCR `drop`：把该 locator 写成 `drop: true`（不带 `corrected`）。
+- OCR `defer`：跳过。
+- 所有 OCR 决定先校验当前 OCR；`original` 不一致或 block 已不存在时记为
+  `stale`，绝不写入。
+- 重复运行是幂等的：override 文本已一致、drop 已存在、keep_original 已无
+  修正都记为 `noop`，账本字节不变。
+
+账本用临时文件 + `os.replace` 原子替换。`review/apply-report.json` 记录：
+`generated_at`、`dry_run`、`term` 各决定计数、`ocr` 各决定计数以及
+`applied`/`noop`/`stale`/`skipped`、`stale_items`、`skipped_items`、
+`ledger_files`（被修改的账本）、`problems`。`--dry-run` 返回同样的报告但
+不写任何文件。
 
 ## 导出
 
 ### `review/terms.json`
 
-只包含最新决定为 `same_alias` 的术语 issue：
+`terms` 是最新决定为 `same_alias` 的术语 issue；`different` 保留专家判定
+「不是同一事物」的成对写法，避免该决定在导出中丢失：
 
 ```json
 {
@@ -225,16 +265,24 @@ review.export()                               # 写 terms.json / ocr-decisions.j
     {
       "preferred": "金缎",
       "aliases": ["金锻"],
-      "issue_id": "term:金锻|金缎",
+      "issue_id": "term:金缎|金锻",
       "note": "官方两种写法都出现，检索合并",
       "decided_at": "2026-11-13T08:00:00Z"
+    }
+  ],
+  "different": [
+    {
+      "terms": ["补获", "捕获"],
+      "issue_id": "term:补获|捕获",
+      "note": "不同词义",
+      "decided_at": "2026-11-13T08:03:00Z"
     }
   ]
 }
 ```
 
-`different` / `ocr_error` / `defer` 不进入 terms 导出；`preferred` 本身不会
-出现在 `aliases` 里。
+`ocr_error` / `defer` 不进入 terms 导出；`preferred` 本身不会出现在
+`aliases` 里。
 
 ### `review/ocr-decisions.jsonl`
 
@@ -246,12 +294,15 @@ review.export()                               # 写 terms.json / ocr-decisions.j
   `current_ocr`；下游必须拒绝应用 stale 记录。
 
 ```json
-{"issue_id":"ocr:dashen.xxx:3:31","notice":"dashen.xxx","image_index":3,"block_index":31,"decision":"accept","original":"……","corrected":"……","current_ocr":"……","applicable":true,"status":"applicable","note":"","decided_at":"2026-11-13T08:01:00Z"}
+{"issue_id":"ocr:dashen.xxx:3:31","notice":"dashen.xxx","image_index":3,"block_index":31,"decision":"accept","original":"……","corrected":"……","current_ocr":"……","applicable":true,"status":"applicable","applied":true,"note":"","decided_at":"2026-11-13T08:01:00Z"}
 ```
 
 `keep_original` 导出 `corrected = original`；`drop` 导出空字符串；
 `accept`/`source_issue` 导出账本的 `corrected`；`override` 导出专家输入。
-`note` 和 `decided_at` 原样保留，便于审计。
+`note` 和 `decided_at` 原样保留，便于审计。`applied` 表示账本当前是否已经
+体现该决定：`override` 的 `corrected` 与专家文本一致、`accept`/`source_issue`
+的修正仍在且原文匹配、`keep_original` 已无修正、`drop` 已是 drop。已应用后
+再导出不会因为修正变成 `high` 而从队列消失，`override` 仍会出现在导出里。
 
 如果修正账本与 OCR 已经不一致，`load_fulltext_rows()` 会对该公告退回未修正的
 OCR 文本，保证队列仍可打开；相应决定在导出时标记为 `stale`，不会被静默应用。

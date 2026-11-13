@@ -159,31 +159,34 @@
       "image_index": 2,
       "block_index": 23,
       "original": "新，快去大世界里找到故事碎片进读利波特魔法觉醒",
-      "corrected": "新，快去大世界里找到故事碎片进行阅读吧",
-      "reason": "「行阅」处为水印覆盖，按上下文补全（两引擎均读作进…读）",
-      "confidence": "medium",
-      "via": "audit-adjudication",
-      "recrop": "python -m tools.cli crop dashen.69b7f85d58771d514315a136 2 23"
+      "corrected": "新，快去大世界里找到故事碎片进行阅读吧！",
+      "reason": "「行阅」处为水印覆盖，按上下文补全（两引擎均读作进…读）；review desk 专家裁决",
+      "confidence": "high",
+      "via": "expert-review",
+      "recrop": "python -m tools.cli crop dashen.69b7f85d58771d514315a136 2 23",
+      "review_issue_id": "ocr:dashen.69b7f85d58771d514315a136:2:23"
     },
     {
       "image_index": 3,
       "block_index": 32,
       "original": "赛季预告开启时间：2026年3月24只神0@哈月波特7：00觉醒",
-      "corrected": "赛季预告开启时间：2026年3月24日5:00 - 3月31日7:00",
-      "reason": "时间范围大部分可见；中段被水印覆盖，5:00 部分可见+上下文",
-      "confidence": "medium",
-      "via": "audit-adjudication",
-      "recrop": "python -m tools.cli crop dashen.69b7f85d58771d514315a136 3 32"
+      "corrected": "赛季预告开启时间：2026年3月24日7:00 - 3月31日7:00",
+      "reason": "时间范围大部分可见；中段被水印覆盖，5:00 部分可见+上下文；review desk 专家裁决",
+      "confidence": "high",
+      "via": "expert-review",
+      "recrop": "python -m tools.cli crop dashen.69b7f85d58771d514315a136 3 32",
+      "review_issue_id": "ocr:dashen.69b7f85d58771d514315a136:3:32"
     },
     {
       "image_index": 4,
       "block_index": 23,
       "original": "6:00-9：00进行，给各位带来的不假大神读谅解皮特魔法觉醒",
-      "corrected": "6:00-9:00进行，给各位带来的不便敬请谅解",
-      "reason": "「敬请谅」处被水印覆盖，按模板短语判读；尾部水印自动剥离",
-      "confidence": "medium",
-      "via": "audit-adjudication",
-      "recrop": "python -m tools.cli crop dashen.69b7f85d58771d514315a136 4 23"
+      "corrected": "6:00-9:00进行，给各位带来的不便敬请谅解。",
+      "reason": "「敬请谅」处被水印覆盖，按模板短语判读；尾部水印自动剥离；review desk 专家裁决",
+      "confidence": "high",
+      "via": "expert-review",
+      "recrop": "python -m tools.cli crop dashen.69b7f85d58771d514315a136 4 23",
+      "review_issue_id": "ocr:dashen.69b7f85d58771d514315a136:4:23"
     }
   ]
 }

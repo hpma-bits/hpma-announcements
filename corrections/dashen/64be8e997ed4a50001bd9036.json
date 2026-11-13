@@ -274,11 +274,12 @@
       "image_index": 2,
       "block_index": 65,
       "original": "2v2决斗中额外救援一次队友。永久领@波特魔法觉醒",
-      "corrected": "2v2决斗中额外救援一次队友。永久限领一次",
-      "reason": "zooms d2-z69/d2-z69b: head 2v2决斗中额外救援一次队友。永 legible; tail 永久限领一次 recovered from fragments under the 大神@哈利波特魔法觉醒 watermark — 久 confirmed (v6 矢 wrong), 领 and 次 clear, 限/一 partial; v4+v6 both truncated at watermark and their @… tails are watermark OCR, not body text; any glyph after 次 unrecoverable",
-      "confidence": "medium",
-      "via": "audit-adjudication",
-      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 2 65"
+      "corrected": "2v2决斗中额外救援一次队友。永久限领一次。",
+      "reason": "zooms d2-z69/d2-z69b: head 2v2决斗中额外救援一次队友。永 legible; tail 永久限领一次 recovered from fragments under the 大神@哈利波特魔法觉醒 watermark — 久 confirmed (v6 矢 wrong), 领 and 次 clear, 限/一 partial; v4+v6 both truncated at watermark and their @… tails are watermark OCR, not body text; any glyph after 次 unrecoverable；review desk 专家裁决",
+      "confidence": "high",
+      "via": "expert-review",
+      "recrop": "python -m tools.cli crop dashen.64be8e997ed4a50001bd9036 2 65",
+      "review_issue_id": "ocr:dashen.64be8e997ed4a50001bd9036:2:65"
     },
     {
       "image_index": 3,

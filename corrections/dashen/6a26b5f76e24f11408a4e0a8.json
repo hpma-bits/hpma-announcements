@@ -224,21 +224,23 @@
       "image_index": 1,
       "block_index": 25,
       "original": "在昏暗的房间里，你点亮魔杖，想找画嗨的森源法觉醒",
-      "corrected": "在昏暗的房间里，你点亮魔杖，想找画的来源",
-      "reason": "「找」被水印覆盖按上下文补全；尾部水印不可恢复",
-      "confidence": "medium",
-      "via": "audit-adjudication",
-      "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 1 25"
+      "corrected": "在昏暗的房间里，你点亮魔杖，想找到巨响的来源。",
+      "reason": "「找」被水印覆盖按上下文补全；尾部水印不可恢复；review desk 专家裁决",
+      "confidence": "high",
+      "via": "expert-review",
+      "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 1 25",
+      "review_issue_id": "ocr:dashen.6a26b5f76e24f11408a4e0a8:1:25"
     },
     {
       "image_index": 3,
       "block_index": 40,
       "original": "学院宝箱即可获得淘金令，最多获得神哈利波特魔法觉醒",
-      "corrected": "学院宝箱即可获得淘金令，最多获得70个",
-      "reason": "「得」被水印覆盖；70个 可见",
-      "confidence": "medium",
-      "via": "audit-adjudication",
-      "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 3 40"
+      "corrected": "学院宝箱即可获得淘金令，最多获得70个。",
+      "reason": "「得」被水印覆盖；70个 可见；review desk 专家裁决",
+      "confidence": "high",
+      "via": "expert-review",
+      "recrop": "python -m tools.cli crop dashen.6a26b5f76e24f11408a4e0a8 3 40",
+      "review_issue_id": "ocr:dashen.6a26b5f76e24f11408a4e0a8:3:40"
     },
     {
       "image_index": 5,

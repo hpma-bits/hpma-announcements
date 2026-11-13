@@ -17,10 +17,12 @@
       "image_index": 1,
       "block_index": 15,
       "original": "巫师有1次机会变更选择的传说卡点神@哈利波特魔法觉醒",
-      "corrected": "巫师有1次机会变更选择的传说卡牌",
-      "reason": "“点神@哈利波特魔法觉醒”→“牌”；源图正文“传说卡牌”与水印合并，行末标点被遮挡，故标 medium",
-      "confidence": "medium",
-      "recrop": "python -m tools.cli crop dashen.6911c361d54fe13dc5984fb1 1 15"
+      "corrected": "巫师有1次机会变更选择的传说卡牌。",
+      "reason": "“点神@哈利波特魔法觉醒”→“牌”；源图正文“传说卡牌”与水印合并，行末标点被遮挡，故标 medium；review desk 专家裁决",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.6911c361d54fe13dc5984fb1 1 15",
+      "via": "expert-review",
+      "review_issue_id": "ocr:dashen.6911c361d54fe13dc5984fb1:1:15"
     },
     {
       "image_index": 2,

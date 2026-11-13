@@ -1,8 +1,11 @@
 """Data layer for the text review desk.
 
 The desk asks a human to settle one text question at a time. This module
-builds that queue from primary data and keeps the append-only decision ledger;
-it never rewrites ``corrections/``, ``edition/`` or ``dataset/``.
+builds that queue from primary data, keeps the append-only decision ledger and
+materialises the verdicts: :func:`export` writes the search alias file and the
+OCR decision export, while :func:`apply` promotes expert OCR verdicts into
+``corrections/`` and writes ``review/terms.json``. It never rewrites
+``edition/`` or ``dataset/``; those are rebuilt afterwards from the ledger.
 
 Two issue families:
 
@@ -30,6 +33,8 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+
+from collectors import atomic
 
 from . import archive, projection, text
 
@@ -717,30 +722,103 @@ def save_decision(
 
 
 # --------------------------------------------------------------------------- #
-# Export
+# Decision materialisation
 # --------------------------------------------------------------------------- #
 
+# Appended to a ledger reason when the review desk, not an audit pass, set the
+# text. The marker is also how a rerun recognises its own work.
+REVIEW_REASON_MARKER = "review desk 专家裁决"
 
-def _effective_corrected(issue: Record, record: Record) -> str:
-    decision = record.get("decision")
-    if decision == "override":
-        return str(record.get("corrected") or "")
-    if decision == "keep_original":
-        return issue.get("original") or ""
-    if decision == "drop":
-        return ""
-    return issue.get("corrected") or ""
+def _ordered_decisions(
+    decisions: Mapping[str, Record], issues: Mapping[str, Record]
+) -> list[Record]:
+    """Decisions in desk order, then any decision whose issue left the queue.
+
+    An applied ``override`` raises a correction's confidence, so the issue
+    disappears from the medium-confidence queue. Those decisions still belong
+    in the export and in a rerun, so they follow the queue in stable id order.
+    """
+    ordered = [decisions[issue_id] for issue_id in issues if issue_id in decisions]
+    extras = sorted(issue_id for issue_id in decisions if issue_id not in issues)
+    ordered.extend(decisions[issue_id] for issue_id in extras)
+    return ordered
 
 
-def _term_export(issue: Record, record: Record) -> Record | None:
+def _ocr_locator(issue_id: str) -> tuple[str, int, int]:
+    """Split ``ocr:<notice>:<image>:<block>`` into its three locator fields."""
+    parts = issue_id.split(":")
+    if len(parts) != 4 or parts[0] != "ocr":
+        raise ValueError(f"malformed OCR issue id: {issue_id!r}")
+    try:
+        return parts[1], int(parts[2]), int(parts[3])
+    except ValueError as error:
+        raise ValueError(f"malformed OCR issue id: {issue_id!r}") from error
+
+
+def _find_correction(
+    ledger: Record | None, image_index: int, block_index: int
+) -> Record | None:
+    if not ledger:
+        return None
+    for correction in ledger.get("corrections") or []:
+        if correction.get("insert"):
+            continue
+        if (
+            correction.get("image_index") == image_index
+            and correction.get("block_index") == block_index
+        ):
+            return correction
+    return None
+
+
+def _remove_corrections(ledger: Record, image_index: int, block_index: int) -> int:
+    corrections = ledger.get("corrections")
+    if not isinstance(corrections, list):
+        return 0
+    keep = [
+        correction
+        for correction in corrections
+        if correction.get("insert")
+        or correction.get("image_index") != image_index
+        or correction.get("block_index") != block_index
+    ]
+    removed = len(corrections) - len(keep)
+    if removed:
+        ledger["corrections"] = keep
+    return removed
+
+
+def _review_reason(reason: str) -> str:
+    """Append the desk marker once, even when a ledger reason is empty."""
+    text = str(reason or "").strip()
+    if not text:
+        return REVIEW_REASON_MARKER
+    if REVIEW_REASON_MARKER in text:
+        return text
+    return f"{text}；{REVIEW_REASON_MARKER}"
+
+
+def _variant_texts(issue: Record | None, issue_id: str) -> list[str]:
+    if issue:
+        return [
+            str(variant.get("text") or "")
+            for variant in issue.get("variants") or []
+            if variant.get("text")
+        ]
+    return [part for part in issue_id[len("term:"):].split("|") if part]
+
+
+def _term_alias(issue: Record | None, record: Record) -> Record | None:
+    """One ``same_alias`` entry for ``review/terms.json``."""
     if record.get("decision") != "same_alias":
         return None
+    issue_id = str(record["issue_id"])
     preferred = record.get("preferred")
     if not isinstance(preferred, str) or not preferred:
-        raise ValueError(f"{issue['id']}: same_alias decision is missing preferred")
+        raise ValueError(f"{issue_id}: same_alias decision is missing preferred")
     aliases = record.get("aliases")
     if not isinstance(aliases, list):
-        aliases = [variant["text"] for variant in issue["variants"]]
+        aliases = _variant_texts(issue, issue_id)
     aliases = [
         alias
         for alias in dict.fromkeys(str(alias) for alias in aliases)
@@ -749,75 +827,161 @@ def _term_export(issue: Record, record: Record) -> Record | None:
     return {
         "preferred": preferred,
         "aliases": aliases,
-        "issue_id": issue["id"],
+        "issue_id": issue_id,
         "note": record.get("note") or "",
         "decided_at": record.get("decided_at") or "",
     }
 
 
+def _term_different(issue: Record | None, record: Record) -> Record:
+    """One ``different`` entry: the decision is authoritative, never dropped."""
+    issue_id = str(record["issue_id"])
+    return {
+        "terms": _variant_texts(issue, issue_id),
+        "issue_id": issue_id,
+        "note": record.get("note") or "",
+        "decided_at": record.get("decided_at") or "",
+    }
+
+
+def _write_terms(
+    base: Path,
+    generated_at: str,
+    terms: list[Record],
+    different: list[Record],
+) -> Path:
+    path = base / "review" / "terms.json"
+    atomic.write_text(
+        path,
+        json.dumps(
+            {"generated_at": generated_at, "terms": terms, "different": different},
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+    )
+    return path
+
+
+def _effective_corrected(
+    issue: Record | None,
+    record: Record,
+    entry: Record | None = None,
+    original: str = "",
+) -> str:
+    decision = record.get("decision")
+    if decision == "override":
+        return str(record.get("corrected") or "")
+    if decision == "keep_original":
+        return original
+    if decision == "drop":
+        return ""
+    if issue is not None:
+        return str(issue.get("corrected") or "")
+    if entry is not None:
+        return str(entry.get("corrected") or "")
+    return original
+
+
+def _decision_applied(
+    decision: str,
+    record: Record,
+    entry: Record | None,
+    current: str | None,
+    applicable: bool,
+) -> bool:
+    """Whether the ledger currently carries this verdict's outcome."""
+    if not applicable or current is None:
+        return False
+    if decision == "override":
+        return (
+            entry is not None
+            and not entry.get("drop")
+            and entry.get("corrected") == record.get("corrected")
+        )
+    if decision == "keep_original":
+        return entry is None
+    if decision == "drop":
+        return entry is not None and bool(entry.get("drop"))
+    if decision in ("accept", "source_issue"):
+        return entry is not None and not entry.get("drop") and bool(entry.get("corrected"))
+    return False
+
+
 def export(root: str | Path | None = None) -> Record:
     """Write the search aliases and the OCR decision export.
 
-    ``review/terms.json`` carries the ``same_alias`` verdicts only.
+    ``review/terms.json`` carries every non-defer term verdict: ``terms`` for
+    ``same_alias`` and ``different`` for the pairs the expert keeps apart.
     ``review/ocr-decisions.jsonl`` carries every non-defer OCR verdict and
     checks its ``original`` against the OCR currently on disk. A mismatch is
-    marked ``stale`` so it is never applied silently.
+    marked ``stale`` so it is never applied silently. ``applied`` says whether
+    the ledger now reflects that verdict (an override's text, an accept that
+    still matches, a drop that is present, a removed correction for
+    ``keep_original``).
     """
     base = Path(root) if root else archive.REPO_ROOT
     decisions = load_decisions(default_decisions_path(base))
     queue = build_queue(base, decisions=decisions)
+    issues = {issue["id"]: issue for issue in queue["issues"]}
+    ledgers = {stem: ledger for stem, ledger in archive.iter_ledgers(base)}
     generated_at = _now()
 
     terms: list[Record] = []
+    different: list[Record] = []
     ocr_records: list[Record] = []
     stale = 0
-    for issue in queue["issues"]:
-        record = decisions.get(issue["id"])
-        if not record:
-            continue
-        if issue["type"] == "term_conflict":
-            entry = _term_export(issue, record)
+    for record in _ordered_decisions(decisions, issues):
+        issue_id = str(record["issue_id"])
+        issue = issues.get(issue_id)
+        if _issue_kind(issue_id) == "term_conflict":
+            entry = _term_alias(issue, record)
             if entry:
                 terms.append(entry)
+            elif record.get("decision") == "different":
+                different.append(_term_different(issue, record))
             continue
         if record.get("decision") == "defer":
             continue
-        current = _ocr_block_text(
-            base, issue["notice"], issue["image_index"], issue["block_index"]
+        notice, image_index, block_index = _ocr_locator(issue_id)
+        current = _ocr_block_text(base, notice, image_index, block_index)
+        entry = _find_correction(
+            ledgers.get(archive.feed_id(notice)), image_index, block_index
         )
-        applicable = current is not None and current == issue.get("original")
+        original = (
+            str(issue.get("original") or "")
+            if issue is not None
+            else str((entry or {}).get("original") or current or "")
+        )
+        applicable = current is not None and current == original
         if not applicable:
             stale += 1
         ocr_records.append(
             {
-                "issue_id": issue["id"],
-                "notice": issue["notice"],
-                "image_index": issue["image_index"],
-                "block_index": issue["block_index"],
+                "issue_id": issue_id,
+                "notice": notice,
+                "image_index": image_index,
+                "block_index": block_index,
                 "decision": record.get("decision"),
-                "original": issue.get("original") or "",
-                "corrected": _effective_corrected(issue, record),
+                "original": original,
+                "corrected": _effective_corrected(issue, record, entry, original),
                 "current_ocr": current,
                 "applicable": applicable,
                 "status": "applicable" if applicable else "stale",
+                "applied": _decision_applied(
+                    str(record.get("decision")),
+                    record,
+                    entry,
+                    current,
+                    applicable,
+                ),
                 "note": record.get("note") or "",
                 "decided_at": record.get("decided_at") or "",
             }
         )
 
-    terms_path = base / "review" / "terms.json"
+    terms_path = _write_terms(base, generated_at, terms, different)
     ocr_path = base / "review" / "ocr-decisions.jsonl"
-    terms_path.parent.mkdir(parents=True, exist_ok=True)
-    terms_path.write_text(
-        json.dumps(
-            {"generated_at": generated_at, "terms": terms},
-            ensure_ascii=False,
-            indent=2,
-        )
-        + "\n",
-        encoding="utf-8",
-        newline="\n",
-    )
     ocr_path.write_text(
         "".join(
             json.dumps(record, ensure_ascii=False, separators=(",", ":")) + "\n"
@@ -829,8 +993,316 @@ def export(root: str | Path | None = None) -> Record:
     return {
         "generated_at": generated_at,
         "terms": len(terms),
+        "different": len(different),
         "ocr": len(ocr_records),
+        "applied": sum(1 for record in ocr_records if record["applied"]),
         "stale": stale,
         "terms_path": str(terms_path),
         "ocr_decisions_path": str(ocr_path),
     }
+
+
+# --------------------------------------------------------------------------- #
+# Apply
+# --------------------------------------------------------------------------- #
+
+
+def _new_ledger(feed: str) -> Record:
+    return {
+        "id": f"dashen.{feed}",
+        "source_ocr": f"derived/ocr/dashen/{feed}.json",
+        "verified_by": "review-desk",
+        "verification": "expert review decisions from review/decisions.jsonl",
+        "corrections": [],
+    }
+
+
+def _correction_base(
+    notice: str,
+    image_index: int,
+    block_index: int,
+    original: str,
+    reason: str,
+    issue_id: str,
+) -> Record:
+    return {
+        "image_index": image_index,
+        "block_index": block_index,
+        "original": original,
+        "reason": _review_reason(reason),
+        "confidence": "high",
+        "via": "expert-review",
+        "review_issue_id": issue_id,
+        "recrop": f"python -m tools.cli crop {notice} {image_index} {block_index}",
+    }
+
+
+def apply(root: str | Path | None = None, dry_run: bool = False) -> Record:
+    """Promote the latest decisions into the correction ledger and aliases.
+
+    Term verdicts are materialised in ``review/terms.json`` (``same_alias``
+    and ``different``). OCR verdicts change ``corrections/dashen/``:
+
+    * ``accept`` / ``source_issue`` - no ledger change;
+    * ``override`` - replace ``corrected`` with the expert text and mark the
+      entry ``high`` / ``expert-review``;
+    * ``keep_original`` - remove the correction so the raw OCR text wins;
+    * ``drop`` - mark the block as not edition text;
+    * ``defer`` - leave it in the queue.
+
+    Every OCR verdict is checked against the OCR block currently on disk. A
+    mismatched ``original`` is reported as ``stale`` and never written. The
+    operation is idempotent: an override whose text already matches, a drop
+    that is already present or a ``keep_original`` with no correction counts
+    as ``noop`` and leaves the ledger bytes untouched.
+
+    Ledgers are replaced atomically. ``review/apply-report.json`` records the
+    counts, changed ledger files and anomalies; ``dry_run`` computes the same
+    report without writing anything.
+    """
+    base = Path(root) if root else archive.REPO_ROOT
+    decisions = load_decisions(default_decisions_path(base))
+    queue = build_queue(base, decisions=decisions)
+    issues = {issue["id"]: issue for issue in queue["issues"]}
+    ledgers = {stem: ledger for stem, ledger in archive.iter_ledgers(base)}
+    generated_at = _now()
+
+    report: Record = {
+        "generated_at": generated_at,
+        "dry_run": dry_run,
+        "term": {
+            "same_alias": 0,
+            "different": 0,
+            "ocr_error": 0,
+            "defer": 0,
+            "skipped": 0,
+        },
+        "ocr": {
+            "accept": 0,
+            "override": 0,
+            "keep_original": 0,
+            "source_issue": 0,
+            "drop": 0,
+            "defer": 0,
+            "applied": 0,
+            "noop": 0,
+            "stale": 0,
+            "skipped": 0,
+        },
+        "applied": 0,
+        "noop": 0,
+        "stale": 0,
+        "skipped": 0,
+        "stale_items": [],
+        "skipped_items": [],
+        "ledger_files": [],
+        "problems": [],
+    }
+    terms: list[Record] = []
+    different: list[Record] = []
+    dirty: set[str] = set()
+
+    def skip(issue_id: str, reason: str, kind: str | None = None) -> None:
+        report["skipped"] += 1
+        if kind:
+            report[kind]["skipped"] += 1
+        report["skipped_items"].append({"issue_id": issue_id, "reason": reason})
+
+    def stale(
+        issue_id: str, notice: str, image_index: int, block_index: int,
+        expected: str | None, current: str | None,
+    ) -> None:
+        report["stale"] += 1
+        report["ocr"]["stale"] += 1
+        report["stale_items"].append(
+            {
+                "issue_id": issue_id,
+                "notice": notice,
+                "image_index": image_index,
+                "block_index": block_index,
+                "expected": expected,
+                "current": current,
+            }
+        )
+
+    for record in _ordered_decisions(decisions, issues):
+        issue_id = str(record.get("issue_id") or "")
+        try:
+            kind = _issue_kind(issue_id)
+        except ValueError:
+            skip(issue_id, "unknown issue id")
+            continue
+        decision = str(record.get("decision") or "")
+        issue = issues.get(issue_id)
+
+        if kind == "term_conflict":
+            allowed = DECISIONS_BY_TYPE["term_conflict"]
+            if decision not in allowed:
+                skip(issue_id, f"unknown term decision {decision!r}", "term")
+                continue
+            if decision == "defer":
+                report["term"]["defer"] += 1
+                skip(issue_id, "deferred")
+                continue
+            report["term"][decision] += 1
+            try:
+                if decision == "same_alias":
+                    entry = _term_alias(issue, record)
+                    if entry is None:  # pragma: no cover - guarded by decision
+                        raise ValueError("same_alias did not produce an alias")
+                    terms.append(entry)
+                    report["applied"] += 1
+                elif decision == "different":
+                    different.append(_term_different(issue, record))
+                    report["applied"] += 1
+                else:  # ocr_error: the decision is primary, nothing to materialise
+                    report["noop"] += 1
+            except ValueError as error:
+                skip(issue_id, str(error), "term")
+            continue
+
+        allowed = DECISIONS_BY_TYPE["ocr_block"]
+        if decision not in allowed:
+            skip(issue_id, f"unknown OCR decision {decision!r}", "ocr")
+            continue
+        if decision == "defer":
+            report["ocr"]["defer"] += 1
+            skip(issue_id, "deferred")
+            continue
+
+        report["ocr"][decision] += 1
+        try:
+            notice, image_index, block_index = _ocr_locator(issue_id)
+        except ValueError as error:
+            skip(issue_id, str(error), "ocr")
+            continue
+        current = _ocr_block_text(base, notice, image_index, block_index)
+        if current is None:
+            stale(issue_id, notice, image_index, block_index, None, None)
+            continue
+        feed = archive.feed_id(notice)
+        ledger = ledgers.get(feed)
+        entry = _find_correction(ledger, image_index, block_index)
+        expected = (
+            str(issue.get("original") or "")
+            if issue is not None
+            else str((entry or {}).get("original") or current)
+        )
+        if expected != current:
+            stale(issue_id, notice, image_index, block_index, expected, current)
+            continue
+
+        if decision in ("accept", "source_issue"):
+            # Both keep the ledger untouched: accept ratifies the existing
+            # correction, source_issue ratifies the printed reading.
+            report["noop"] += 1
+            report["ocr"]["noop"] += 1
+            continue
+
+        if decision == "keep_original":
+            if ledger is None:
+                report["noop"] += 1
+                report["ocr"]["noop"] += 1
+                continue
+            removed = _remove_corrections(ledger, image_index, block_index)
+            if removed:
+                dirty.add(feed)
+                report["applied"] += 1
+                report["ocr"]["applied"] += 1
+            else:
+                report["noop"] += 1
+                report["ocr"]["noop"] += 1
+            continue
+
+        if decision == "override":
+            text = record.get("corrected")
+            if not isinstance(text, str) or not text:
+                skip(issue_id, "override without corrected text", "ocr")
+                continue
+            if entry is not None and not entry.get("drop") and entry.get("corrected") == text:
+                report["noop"] += 1
+                report["ocr"]["noop"] += 1
+                continue
+            if text == current:
+                # The expert chose the OCR reading itself: keep the ledger
+                # valid by removing the correction instead of storing a no-op
+                # entry (``corrected`` must differ from ``original``).
+                removed = (
+                    _remove_corrections(ledger, image_index, block_index)
+                    if ledger is not None
+                    else 0
+                )
+                if removed:
+                    dirty.add(feed)
+                    report["applied"] += 1
+                    report["ocr"]["applied"] += 1
+                else:
+                    report["noop"] += 1
+                    report["ocr"]["noop"] += 1
+                continue
+            if ledger is None:
+                ledger = _new_ledger(feed)
+                ledgers[feed] = ledger
+            if entry is None:
+                entry = _correction_base(
+                    notice, image_index, block_index, current, record.get("note") or "",
+                    issue_id,
+                )
+                entry["corrected"] = text
+                ledger.setdefault("corrections", []).append(entry)
+            else:
+                entry["original"] = current
+                entry["corrected"] = text
+                entry["confidence"] = "high"
+                entry["via"] = "expert-review"
+                entry["reason"] = _review_reason(entry.get("reason") or "")
+                entry["review_issue_id"] = issue_id
+                entry.pop("drop", None)
+            dirty.add(feed)
+            report["applied"] += 1
+            report["ocr"]["applied"] += 1
+            continue
+
+        if decision == "drop":
+            if entry is not None and entry.get("drop"):
+                report["noop"] += 1
+                report["ocr"]["noop"] += 1
+                continue
+            if ledger is None:
+                ledger = _new_ledger(feed)
+                ledgers[feed] = ledger
+            if entry is None:
+                entry = _correction_base(
+                    notice, image_index, block_index, current,
+                    record.get("note") or "重复切片/无独立源行", issue_id,
+                )
+                entry["drop"] = True
+                ledger.setdefault("corrections", []).append(entry)
+            else:
+                entry["original"] = current
+                entry.pop("corrected", None)
+                entry["drop"] = True
+                entry["confidence"] = "high"
+                entry["via"] = "expert-review"
+                entry["reason"] = _review_reason(entry.get("reason") or "")
+                entry["review_issue_id"] = issue_id
+            dirty.add(feed)
+            report["applied"] += 1
+            report["ocr"]["applied"] += 1
+            continue
+
+        skip(issue_id, f"unhandled OCR decision {decision!r}", "ocr")
+
+    report["ledger_files"] = sorted(f"corrections/dashen/{feed}.json" for feed in dirty)
+    if not dry_run:
+        _write_terms(base, generated_at, terms, different)
+        for feed in sorted(dirty):
+            atomic.write_text(
+                base / "corrections" / "dashen" / f"{feed}.json",
+                json.dumps(ledgers[feed], ensure_ascii=False, indent=2) + "\n",
+            )
+        atomic.write_text(
+            base / "review" / "apply-report.json",
+            json.dumps(report, ensure_ascii=False, indent=2) + "\n",
+        )
+    return report

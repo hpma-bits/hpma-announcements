@@ -53,10 +53,12 @@
       "image_index": 5,
       "block_index": 48,
       "original": "不影响游戏内其他声音（如背景音神雪效等皮特效果觉醒",
-      "corrected": "不影响游戏内其他声音（如背景音乐、音效等）",
-      "reason": "“背景音神雪效等皮特效果”为水印串扰；源图正文为“（如背景音乐、音效等）”，句末被水印覆盖",
-      "confidence": "medium",
-      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 5 48"
+      "corrected": "不影响游戏内其他声音（如背景音乐、音效等）效果。",
+      "reason": "“背景音神雪效等皮特效果”为水印串扰；源图正文为“（如背景音乐、音效等）”，句末被水印覆盖；review desk 专家裁决",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.687e2b3bbcba18627bf53c3f 5 48",
+      "via": "expert-review",
+      "review_issue_id": "ocr:dashen.687e2b3bbcba18627bf53c3f:5:48"
     },
     {
       "image_index": 6,

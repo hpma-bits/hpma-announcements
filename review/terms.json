@@ -1,0 +1,124 @@
+{
+  "generated_at": "2026-11-13T10:17:48Z",
+  "terms": [
+    {
+      "preferred": "登录",
+      "aliases": [
+        "登陆"
+      ],
+      "issue_id": "term:登陆|登录",
+      "note": "",
+      "decided_at": "2026-11-13T09:21:33Z"
+    },
+    {
+      "preferred": "云雾缥缈",
+      "aliases": [
+        "云雾飘渺"
+      ],
+      "issue_id": "term:云雾飘渺|云雾缥缈",
+      "note": "",
+      "decided_at": "2026-11-13T09:22:09Z"
+    },
+    {
+      "preferred": "石礅",
+      "aliases": [
+        "石墩"
+      ],
+      "issue_id": "term:石墩|石礅",
+      "note": "",
+      "decided_at": "2026-11-13T09:24:01Z"
+    },
+    {
+      "preferred": "金缎",
+      "aliases": [
+        "金锻"
+      ],
+      "issue_id": "term:金锻|金缎",
+      "note": "",
+      "decided_at": "2026-11-13T09:25:05Z"
+    },
+    {
+      "preferred": "焕新",
+      "aliases": [
+        "换新"
+      ],
+      "issue_id": "term:换新|焕新",
+      "note": "",
+      "decided_at": "2026-11-13T09:26:25Z"
+    },
+    {
+      "preferred": "银辉之钥",
+      "aliases": [
+        "银辉之匙"
+      ],
+      "issue_id": "term:银辉之匙|银辉之钥",
+      "note": "",
+      "decided_at": "2026-11-13T09:27:00Z"
+    },
+    {
+      "preferred": "迸发",
+      "aliases": [
+        "进发"
+      ],
+      "issue_id": "term:进发|迸发",
+      "note": "",
+      "decided_at": "2026-11-13T09:28:05Z"
+    },
+    {
+      "preferred": "凰吟凤鸣",
+      "aliases": [
+        "凤吟凰鸣"
+      ],
+      "issue_id": "term:凤吟凰鸣|凰吟凤鸣",
+      "note": "",
+      "decided_at": "2026-11-13T09:29:09Z"
+    },
+    {
+      "preferred": "戈德里克",
+      "aliases": [
+        "戈德利克"
+      ],
+      "issue_id": "term:戈德利克|戈德里克",
+      "note": "",
+      "decided_at": "2026-11-13T09:29:17Z"
+    },
+    {
+      "preferred": "等级上限",
+      "aliases": [
+        "等级上线"
+      ],
+      "issue_id": "term:等级上线|等级上限",
+      "note": "",
+      "decided_at": "2026-11-13T09:29:29Z"
+    },
+    {
+      "preferred": "长袍专卖店",
+      "aliases": [
+        "长跑专卖店"
+      ],
+      "issue_id": "term:长跑专卖店|长袍专卖店",
+      "note": "",
+      "decided_at": "2026-11-13T09:30:03Z"
+    },
+    {
+      "preferred": "鲁伯",
+      "aliases": [
+        "鲁本"
+      ],
+      "issue_id": "term:鲁本|鲁伯",
+      "note": "",
+      "decided_at": "2026-11-13T09:30:51Z"
+    }
+  ],
+  "different": [
+    {
+      "terms": [
+        "补获",
+        "捕获"
+      ],
+      "issue_id": "term:补获|捕获",
+      "note": "",
+      "decided_at": "2026-11-13T09:29:54Z"
+    }
+  ]
+}

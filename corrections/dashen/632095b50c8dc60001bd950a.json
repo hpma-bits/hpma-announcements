@@ -56,11 +56,12 @@
       "image_index": 2,
       "block_index": 42,
       "original": "动中的使用情况，仔细评估后再进行与每更利波特魔法觉醒",
-      "corrected": "动中的使用情况，仔细评估后再进行后续更新",
-      "reason": "crop d1-147 + dark-threshold zoom recovers tail under watermark: 后续更新 (更新 fully legible, 后续 partial, grammar fits 仔细评估后再进行后续更新)",
-      "confidence": "medium",
-      "via": "audit-adjudication",
-      "recrop": "python -m tools.cli crop dashen.632095b50c8dc60001bd950a 2 42"
+      "corrected": "动中的使用情况，仔细评估后再进行后续更新。",
+      "reason": "crop d1-147 + dark-threshold zoom recovers tail under watermark: 后续更新 (更新 fully legible, 后续 partial, grammar fits 仔细评估后再进行后续更新)；review desk 专家裁决",
+      "confidence": "high",
+      "via": "expert-review",
+      "recrop": "python -m tools.cli crop dashen.632095b50c8dc60001bd950a 2 42",
+      "review_issue_id": "ocr:dashen.632095b50c8dc60001bd950a:2:42"
     },
     {
       "image_index": 3,

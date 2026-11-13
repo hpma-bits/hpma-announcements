@@ -53,10 +53,12 @@
       "image_index": 2,
       "block_index": 41,
       "original": "累计登录7日即可领取时装大奖“秘言梅哈利波特魔法觉醒",
-      "corrected": "累计登录7日即可领取时装大奖“秘言梅影”！",
-      "reason": "z10 可见行末“”！”仍在水印外可辨，现行 corrected 漏“！”；“梅”后被掩残笔与“影”合，时装名补全为“秘言梅影”",
-      "confidence": "medium",
-      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 2 41"
+      "corrected": "累计登录7日即可领取时装大奖“秘言先导”！",
+      "reason": "z10 可见行末“”！”仍在水印外可辨，现行 corrected 漏“！”；“梅”后被掩残笔与“影”合，时装名补全为“秘言梅影”；review desk 专家裁决",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.6a83056cc1d2f3184ef6ff6d 2 41",
+      "via": "expert-review",
+      "review_issue_id": "ocr:dashen.6a83056cc1d2f3184ef6ff6d:2:41"
     },
     {
       "image_index": 3,
