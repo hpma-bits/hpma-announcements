@@ -231,7 +231,8 @@ per-image `sections` and an audit `quality` summary for Dashen rows. Dashen
 inserts), the watermark removed, line breaks preserved; it is not the post's
 own body, which lives in the edition's `## 正文` and in
 `corpus/dashen/posts.jsonl`. NGA `text` is the repost's own text.
-`python -m tools.cli dataset --check` gates staleness in CI.
+`dataset/schema.md` documents every row field. `python -m tools.cli dataset
+--check` gates staleness in CI.
 
 ## Checking
 

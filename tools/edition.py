@@ -28,7 +28,6 @@ from typing import Any
 from . import archive, projection
 from .text import clean_block, normalize_body
 
-EDITION_DIR = Path("edition/dashen")
 INDEX_PATH = Path("edition/notices.jsonl")
 
 Record = dict[str, Any]
