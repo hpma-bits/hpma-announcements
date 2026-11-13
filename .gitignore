@@ -9,6 +9,3 @@ __pycache__/
 .review/
 study/batches/
 study/labels/
-
-# Generated local review page (python -m tools.cli checkpage).
-checkpage/
