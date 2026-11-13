@@ -244,8 +244,9 @@ uv run python -m tools.cli edition --check
 uv run python -m tools.cli dataset --check
 ```
 
-CI runs the same commands with uv on a Linux runner without network, OCR
-engine or Pillow. `python -m tools.cli doctor` reports whether the local
+CI runs the same commands on a Linux runner; the data checks themselves need no
+network, OCR engine or Pillow. It also runs `uvx ruff check .` (E4/E7/E9/F) and
+`uv lock --check`. `python -m tools.cli doctor` reports whether the local
 environment (venv, dependencies, optional OCR engines) is complete; see
 "Rebuilding" above. `audit-status --check` reads only committed data and runs
 in CI; the write mode (`audit-status`) updates `derived/audit/` locally.
