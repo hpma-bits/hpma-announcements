@@ -824,9 +824,10 @@ def save_decision(
 # Decision materialisation
 # --------------------------------------------------------------------------- #
 
-# Appended to a ledger reason when the review desk, not an audit pass, set the
-# text. The marker is also how a rerun recognises its own work.
+# Prefix written ahead of an expert override's historical audit reason. The
+# marker remains the rerun detector.
 REVIEW_REASON_MARKER = "review desk 专家裁决"
+REVIEW_REASON_PREFIX = "review desk 专家裁决：以专家文本为准。"
 
 def _ordered_decisions(
     decisions: Mapping[str, Record], issues: Mapping[str, Record]
@@ -888,13 +889,17 @@ def _remove_corrections(ledger: Record, image_index: int, block_index: int) -> i
 
 
 def _review_reason(reason: str) -> str:
-    """Append the desk marker once, even when a ledger reason is empty."""
+    """Lead with the expert decision; keep the old audit reason as history."""
     text = str(reason or "").strip()
-    if not text:
-        return REVIEW_REASON_MARKER
-    if REVIEW_REASON_MARKER in text:
+    if text.startswith(REVIEW_REASON_PREFIX):
         return text
-    return f"{text}；{REVIEW_REASON_MARKER}"
+    if text == REVIEW_REASON_MARKER:
+        text = ""
+    elif f"；{REVIEW_REASON_MARKER}" in text:
+        text = text.rsplit(f"；{REVIEW_REASON_MARKER}", 1)[0].strip()
+    if not text:
+        return REVIEW_REASON_PREFIX
+    return f"{REVIEW_REASON_PREFIX}原审计理由：{text}"
 
 
 def _variant_texts(issue: Record | None, issue_id: str) -> list[str]:

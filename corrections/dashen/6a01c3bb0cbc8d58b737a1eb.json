@@ -63,7 +63,7 @@
       "block_index": 40,
       "original": "在温暖而甜蜜的盛夏，与伙伴一同哈利波特魔法觉醒",
       "corrected": "在温暖而甜蜜的盛夏，与伙伴一同出行吧！",
-      "reason": "水印吞掉尾句；增强后源图“与伙伴一同出门游玩吧！”；review desk 专家裁决",
+      "reason": "review desk 专家裁决：以专家文本为准。原审计理由：水印吞掉尾句；增强后源图“与伙伴一同出门游玩吧！”",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6a01c3bb0cbc8d58b737a1eb 2 40",
       "via": "expert-review",

@@ -132,7 +132,7 @@
       "block_index": 31,
       "original": "色”、“男-旷野疾驰”&“女-旷野夹”@哈利波特魔法觉醒",
       "corrected": "色”、“男-旷野疾驰”&“女-旷野疾驰” 。",
-      "reason": "crop d1-169 + threshold zoom: covered slots after 女-旷野 read 疾驰” (pairing matches 男-旷野疾驰 on same line, fragments consistent); nothing legible after ”；review desk 专家裁决",
+      "reason": "review desk 专家裁决：以专家文本为准。原审计理由：crop d1-169 + threshold zoom: covered slots after 女-旷野 read 疾驰” (pairing matches 男-旷野疾驰 on same line, fragments consistent); nothing legible after ”",
       "confidence": "high",
       "via": "expert-review",
       "recrop": "python -m tools.cli crop dashen.6385ee69744247000130be78 1 31",

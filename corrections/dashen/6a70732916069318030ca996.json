@@ -152,7 +152,7 @@
       "block_index": 21,
       "original": "对应的奖励在整个活动期间仅可获神次哈利波特魔法觉醒",
       "corrected": "对应的奖励在整个活动期间仅可获得1次。",
-      "reason": "「得1」被水印覆盖按模板补全；尾部水印不可恢复；review desk 专家裁决",
+      "reason": "review desk 专家裁决：以专家文本为准。原审计理由：「得1」被水印覆盖按模板补全；尾部水印不可恢复",
       "confidence": "high",
       "via": "expert-review",
       "recrop": "python -m tools.cli crop dashen.6a70732916069318030ca996 4 21",

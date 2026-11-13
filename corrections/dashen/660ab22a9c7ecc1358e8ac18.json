@@ -36,7 +36,7 @@
       "block_index": 74,
       "original": "7.“集中效应”——咒语伤害增加效果赢系%觉醒",
       "corrected": "7.“集中效应”——咒语伤害增加效果由60%提高至80%。",
-      "reason": "“赢系%”为水印串扰；源图为“由60%提高至80%”，数字被水印半遮；review desk 专家裁决",
+      "reason": "review desk 专家裁决：以专家文本为准。原审计理由：“赢系%”为水印串扰；源图为“由60%提高至80%”，数字被水印半遮",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.660ab22a9c7ecc1358e8ac18 2 74",
       "via": "expert-review",

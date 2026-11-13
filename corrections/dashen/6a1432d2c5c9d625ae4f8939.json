@@ -245,7 +245,7 @@
       "block_index": 29,
       "original": "胜3次后，即可从对手卡组中随机神1张罚特魔法觉醒",
       "corrected": "胜3次后，即可从对手卡组中随机复制1张魔咒！",
-      "reason": "「复」可见，「制」被水印覆盖按上下文补全；其后水印不可恢复；review desk 专家裁决",
+      "reason": "review desk 专家裁决：以专家文本为准。原审计理由：「复」可见，「制」被水印覆盖按上下文补全；其后水印不可恢复",
       "confidence": "high",
       "via": "expert-review",
       "recrop": "python -m tools.cli crop dashen.6a1432d2c5c9d625ae4f8939 5 29",

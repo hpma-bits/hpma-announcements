@@ -253,7 +253,7 @@
       "block_index": 69,
       "original": "药学家的骄傲”提前至“草药学徒·一大神@哈利波特魔法觉醒",
       "corrected": "药学家的骄傲”提前至“草药学徒·一“。",
-      "reason": "seg082 crop: line legible through 草药学徒·一; the tail after 一 (likely ”…) is covered by the 大神@哈利波特魔法觉醒 watermark and unrecoverable; v4/v6 tails 大神@哈利波特魔法觉醒 are watermark OCR garbage；review desk 专家裁决",
+      "reason": "review desk 专家裁决：以专家文本为准。原审计理由：seg082 crop: line legible through 草药学徒·一; the tail after 一 (likely ”…) is covered by the 大神@哈利波特魔法觉醒 watermark and unrecoverable; v4/v6 tails 大神@哈利波特魔法觉醒 are watermark OCR garbage",
       "confidence": "high",
       "via": "expert-review",
       "recrop": "python -m tools.cli crop dashen.65f83fca2e838a790761b0c3 2 69",
