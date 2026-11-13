@@ -7,7 +7,7 @@ import urllib.request
 
 import pytest
 
-from tools import review_app
+from tools import review, review_app
 
 
 def load_fixture():
@@ -111,6 +111,14 @@ def test_page_mentions_keyboard_and_decision_controls():
     assert "override" in html
 
 
+def test_page_renders_archived_issues_as_read_only():
+    html = review_app.PAGE_HTML
+    assert "已应用 / 归档" in html
+    assert "issue.archived" in html
+    assert 'archived ? "" : decisionBlock(issue)' in html
+    assert "这条裁决已应用并归档，只读" in html
+
+
 def test_server_entrypoint_defaults_match_the_spec():
     parameters = inspect.signature(review_app.serve).parameters
     assert parameters["port"].default == 8767
@@ -195,17 +203,31 @@ def test_decorate_issues_sets_status_and_puts_pending_first():
         issue("ocr:1", "ocr_block", "low"),
         issue("term:1", "term_conflict", "high"),
         issue("term:2", "term_conflict", "high"),
+        issue("ocr:archived", "ocr_block", "medium", archived=True, applied=True, options=[]),
     ]
     decisions = {
         "ocr:1": decision("ocr:1", "accept"),
         "term:2": decision("term:2", "defer"),
+        "ocr:archived": decision("ocr:archived", "override"),
     }
     decorated = review_app.decorate_issues(issues, decisions)
-    assert [item["id"] for item in decorated] == ["term:1", "term:2", "ocr:1"]
+    assert [item["id"] for item in decorated] == [
+        "term:1",
+        "term:2",
+        "ocr:1",
+        "ocr:archived",
+    ]
     statuses = {item["id"]: item["status"] for item in decorated}
-    assert statuses == {"term:1": "pending", "ocr:1": "decided", "term:2": "deferred"}
+    assert statuses == {
+        "term:1": "pending",
+        "ocr:1": "decided",
+        "term:2": "deferred",
+        "ocr:archived": "decided",
+    }
     assert decorated[2]["decision"]["decision"] == "accept"
     assert decorated[0]["decision"] is None
+    assert decorated[3]["archived"] is True
+    assert decorated[3]["applied"] is True
 
 
 def test_decorate_issues_preserves_the_data_layer_order():
@@ -238,6 +260,25 @@ def test_compute_stats_counts_pending_high_and_decided():
     assert stats["high"] == 1
     assert stats["decided"] == 1
     assert stats["progress"] == pytest.approx(1 / 3)
+
+
+def test_repo_queue_keeps_applied_overrides_in_the_decided_view():
+    queue = review.build_queue()
+    stats = queue["stats"]
+    assert (stats["total"], stats["pending"], stats["resolved"]) == (97, 0, 97)
+    assert stats["term"] == 13
+    assert stats["ocr"] == 84
+    assert stats["high_total"] == 6
+
+    archived = [item for item in queue["issues"] if item.get("archived")]
+    assert len(archived) == 33
+    assert all(item["applied"] for item in archived)
+    assert all(item["confidence"] == "high" for item in archived)
+    assert all(item["options"] == [] for item in archived)
+
+    decorated = review_app.decorate_issues(queue["issues"], review.load_decisions())
+    assert len(review_app.filter_issues(decorated, "decided")) == 97
+    assert review_app.compute_stats(decorated)["decided"] == 97
 
 
 def test_filter_issues_covers_every_ui_chip():
@@ -408,6 +449,30 @@ def test_store_delegates_to_the_data_layer():
 # ---------------------------------------------------------------------------
 # HTTP
 # ---------------------------------------------------------------------------
+
+
+class ArchivedBackend(FakeBackend):
+    def build_queue(self):
+        return [
+            issue(
+                "ocr:archived",
+                "ocr_block",
+                "medium",
+                archived=True,
+                applied=True,
+                options=[],
+            )
+        ]
+
+    def load_decisions(self):
+        return [decision("ocr:archived", "override")]
+
+
+def test_store_refuses_to_save_an_archived_issue():
+    backend = ArchivedBackend()
+    store = review_app.ReviewStore(backend=backend)
+    with pytest.raises(review_app.BadRequest):
+        store.save_decision("ocr:archived", "override", {"corrected": "新文本"}, "")
 
 
 def test_server_serves_the_page_and_fixture_queue():
