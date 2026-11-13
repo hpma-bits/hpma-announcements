@@ -8,6 +8,9 @@ operator's plain text for 58 weekly notices from 2021-09-15 to 2022-11-16
 source post, its long images as original bytes, OCR of those images, the human
 corrections on top of that OCR, and a Markdown edition.
 
+Domain vocabulary lives in [CONTEXT.md](CONTEXT.md); the OCR precision evidence
+is in [docs/quality-report-ocr-precision.md](docs/quality-report-ocr-precision.md).
+
 This is an unofficial research and preservation archive. Announcement text and
 images remain the property of their rights holders; takedown requests are
 honoured. Notices live only on community platforms, where they get edited,
@@ -23,7 +26,7 @@ corpus/nga/raw/<tid>.html                   first-post HTML fragment (UTF-8)
 study/labels.jsonl                          which Dashen posts are notices, and their date
 study/labels-nga.jsonl                      which NGA threads are notices
 assets/dashen/<feed_id>/<NN>.<ext>          original image bytes (650 images)
-derived/ocr/dashen/<feed_id>.json           OCR engine output (v4, the record), immutable
+derived/ocr/dashen/<feed_id>.json           OCR engine output (v4, the record), immutable; --force is the explicit migration path
 derived/ocr-v6/dashen/<feed_id>.json        the v6 second reading (audit input)
 corrections/dashen/<id>.json                the correction ledger: human decisions
 audit/verdicts-*.jsonl                      adjudicated audit verdicts (primary evidence)
@@ -32,7 +35,7 @@ derived/audit/dashen/<feed_id>.json         per-block audit status (projection o
 edition/dashen/<feed_id>.md                 the readable edition, one file per notice
 edition/nga/<tid>.md                        the NGA text-only edition
 edition/notices.jsonl                       one line per notice, metadata only
-dataset/notices.jsonl                       the website-facing rows: full text + quality
+dataset/notices.jsonl                       the website-facing rows: image text + quality
 study/punct-rules.json                      the sampled punctuation-pattern decisions
 ```
 
@@ -41,6 +44,12 @@ rest of the Dashen corpus (events, fashion, videos, community posts) is kept
 because the selection was derived from it. For 40 dates both sources exist:
 the NGA text is the canonical reading and the Dashen OCR row stays as the
 image-derived record. `edition/notices.jsonl` marks this with `canonical`.
+179 of the 220 rows are canonical: the 40 shared dates pick NGA, and
+2022-08-10 carries two Dashen rows plus one NGA row, so the unique-date count
+is 179 rather than 180.
+
+A fresh clone is about 350 MB: the 650 original images are committed as-is,
+without Git LFS.
 
 `study/` holds the offline evidence for the selection: the labelling prompt,
 the evaluation report and the selected ids.
@@ -105,7 +114,7 @@ base dependencies, which is enough for the tests, `verify` and
 uv sync --all-extras
 uv run python -m collectors.cli corpus     # refresh posts from the read-only Dashen API
 uv run python -m collectors.cli nga        # NGA supplement (58 notices; public guest access)
-uv run python -m collectors.cli ocr        # download images and OCR them (needs the `ocr` extra)
+uv run python -m collectors.cli ocr        # download images and OCR them (default v6 engine needs the `audit` extra)
 uv run python -m tools.cli verify          # check every ledger entry against the raw OCR
 uv run python -m tools.cli edition         # rewrite edition/ from the data
 ```
@@ -116,8 +125,13 @@ single `opencv-python-headless` build (the only `cv2` provider: `rapidocr`
 array ops, no GUI):
 
 - `ocr` — `rapidocr-onnxruntime` 1.4.4, the PP-OCRv4 engine of record that
-  produced `derived/ocr/`;
-- `audit` — `rapidocr` 3.10.0, a PP-OCRv6 second reader for spot checks.
+  produced `derived/ocr/`, plus Pillow for `crop`;
+- `audit` — `rapidocr` 3.10.0, the PP-OCRv6 engine used for new notices and as
+  the second reader over the historical v4 record.
+
+`collectors.cli ocr` uses the v6 engine for new notices, so it needs the
+`audit` extra; the `ocr` extra keeps the v4 engine and provides the Pillow
+dependency used by `crop`.
 
 `python -m collectors.cli nga --from-dir <dir>` parses pages saved earlier
 instead of touching the network; the directory needs the index page
@@ -170,10 +184,12 @@ that locates an OCR block and records what the source image shows:
   slice with no line of its own in the source image, and the edition removes
   it instead of replacing its text. Drop entries carry no `corrected`.
 - `recrop` regenerates the evidence crop from the committed image with
-  `python -m tools.cli crop <notice> <image> <block>`.
+  `python -m tools.cli crop <notice> <image> <block>`; `crop` needs Pillow from
+  the `ocr` extra.
 - 3,268 corrections cover all 162 Dashen notices; the block text is the only
-  thing the ledger changes, `derived/ocr/` is never edited. An `insert` entry
-  records a printed line the engine never detected, anchored after a block.
+  thing the ledger changes. The OCR record is not rewritten except by an
+  explicit `--force` engine migration. An `insert` entry records a printed line
+  the engine never detected, anchored after a block.
 
 ## The cross-engine audit
 
@@ -187,11 +203,12 @@ rules where sampling proved a systematic direction:
 - Punctuation patterns were sampled across years (425 crops): full-width
    ！？·；－ stay, half-width time colons win, range dashes are full-width －,
    and per-notice conventions (parens/quotes/comma) were voted per notice.
-- The 2026-11 audit closed with **zero unreviewed blocks** over the 28,672-block
-  universe: 22,966 consensus, 1,970 human corrections, 1,955 adjudicated,
-  600 punctuation-rule, 653 watermark, 512 dropped slices, 16 confirmed
-  v4-only lines. `python -m tools.cli audit-status` rebuilds the per-block
-  record in `derived/audit/dashen/` and fails while anything is queued.
+- The 2026-11 audit closed with **zero unreviewed blocks** over 28,672 audit
+  units (27,829 v4 blocks + 843 v6-only readings): 22,966 consensus, 1,970
+  human corrections, 1,955 adjudicated, 600 punctuation-rule, 653 watermark,
+  512 dropped slices, 16 confirmed v4-only lines. `python -m tools.cli
+  audit-status` rebuilds the per-block record in `derived/audit/dashen/` and
+  fails while anything is queued.
 
 The audit's durable evidence now lives in tracked `audit/`: `verdicts-*.jsonl`
 holds each adjudicated verdict, `adj-*.jsonl` the review queues those verdicts
@@ -210,8 +227,10 @@ error and nothing is written; normal writes replace each ledger atomically.
 (220 rows, 179 canonical) with `id / source / canonical / title / notice_date /
 published_at / url / source_author_uid / images / text / text_sha256`, plus
 per-image `sections` and an audit `quality` summary for Dashen rows. Dashen
-text is the OCR with the ledger applied (corrections, drops, inserts), the
-watermark removed, line breaks preserved; NGA text is the repost's own text.
+`text` is the image text: OCR with the ledger applied (corrections, drops,
+inserts), the watermark removed, line breaks preserved; it is not the post's
+own body, which lives in the edition's `## 正文` and in
+`corpus/dashen/posts.jsonl`. NGA `text` is the repost's own text.
 `python -m tools.cli dataset --check` gates staleness in CI.
 
 ## Checking

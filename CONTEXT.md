@@ -4,10 +4,10 @@
 
 ## 两层数据
 
-- **主数据**：抓到的、人判定的、不可重算的——Post、Image、Selection、Correction。
-- **派生数据**：能由主数据重算的——OCR result、Edition。
+- **主数据**：抓到的、人判定的、不可重算的——Post、Image、Selection、Correction、Audit verdict。
+- **派生数据**：能由主数据重算的——OCR result、Audit status、Edition、Dataset。
 
-派生层坏了可以重建，主数据坏了就没了。所以人工修正存在账本里，不放在 `derived/` 下；公告只是 Post 的一个角色，不单独建记录；修订历史交给 git，不设 `revision` 字段。
+派生层坏了可以重建，主数据坏了就没了。所以人工修正存在账本里，不放在 `derived/` 下；Audit 裁决同理，存在 `audit/` 下。公告只是 Post 的一个角色，不单独建记录；修订历史交给 git，不设 `revision` 字段。
 
 ## Language
 
@@ -32,7 +32,7 @@ _Avoid_: notice record、公告实体
 _Avoid_: labels 文件、classifier output
 
 **Image**：
-Dashen Post 的附件，按 index 排序；身份是 `(post_id, index)`，字节用 sha256 校验。NGA 的图床图片不入库，只保留正文里的原始引用。
+Dashen Post 的附件，按 index 排序；身份是 `(post_id, index)`，字节用 sha256 记录。NGA 的图床图片不入库，只保留正文里的原始引用。
 _Avoid_: asset、media
 
 **OCR result**：
@@ -48,7 +48,7 @@ _Avoid_: fix、patch、corrected text
 _Avoid_: corrected layer、output
 
 **Canonical**：
-同一公告日期的优先阅读版本。有 NGA 纯文本时选 NGA，否则选 Dashen；只影响 `edition/notices.jsonl` 的 `canonical` 标记，不删除另一来源的 Edition 或图片记录。
+同一公告日期的优先阅读版本。有 NGA 纯文本时选 NGA，否则选 Dashen；影响 `edition/notices.jsonl` 与 `dataset/notices.jsonl` 的 `canonical` 标记，不删除另一来源的 Edition 或图片记录。每个 `(family, notice_date)` 恰好一行 canonical；没有 `notice_date` 的行不标 canonical。
 _Avoid_: preferred、dedupe
 
 **Repost**：
@@ -56,15 +56,15 @@ NGA 帖是对官方公告的社区转载，不是官方原文。Edition 用 `sou
 _Avoid_: original、official text
 
 **Audit**：
-用第二个引擎（v6）独立重读全部图片，与 v4 记录逐块对齐、差异逐条核图的审校过程。人判证据（`verdicts-*.jsonl` 裁决与 `adj-*.jsonl` 原始审校队列）是主数据，存在 `audit/`；每块最终状态（consensus / corrected / adjudicated / punct_rule / record / source_issue / watermark / dropped）是投影，由 `audit/` 重建到 `derived/audit/dashen/`。质量门是 `queued == 0`，`audit-status --check` 在 CI 中逐字节核对投影。
+用另一个引擎（历史记录为 v6）独立重读全部图片，与 v4 记录逐块对齐、差异逐条核图的审校过程。人判证据（`verdicts-*.jsonl` 裁决与 `adj-*.jsonl` 原始审校队列）是主数据，存在 `audit/`；每块最终状态（consensus / corrected / adjudicated / punct_rule / record / source_issue / watermark / dropped；瞬态 `queued` 是质量门）是投影，由 `audit/` 重建到 `derived/audit/dashen/`。质量门是 `queued == 0`，`audit-status --check` 在 CI 中逐字节核对投影。
 _Avoid_: 二次 OCR、recheck
 
 **Insert**：
-Correction 的一种：`insert: true` + `after_block` + `text`，记录引擎整行漏识、经 v6 审计与 crop 核验的印刷行；Edition 把它插在锚点块之后。不是派生数据。
+Correction 的一种：`insert: true` + `image_index` + `after_block` + `text`，记录引擎整行漏识、经 v6 审计与 crop 核验的印刷行；Edition 把它插在锚点块之后。不是派生数据。
 _Avoid_: 补行、append
 
 **Dataset**：
-面向网站投影的 JSONL：每篇一条，含 canonical、全文、分图行与 audit 质量摘要。派生数据，由 `python -m tools.cli dataset` 生成。
+面向网站投影的 JSONL：每篇一条，含 canonical、图片文字、分图行与 audit 质量摘要。Dashen 的 `text` 是 OCR + 账本后的图片文字，不含 Post 正文（正文在 Edition 的 `## 正文` 和 `corpus/dashen/posts.jsonl`）；NGA 的 `text` 是转载正文。派生数据，由 `python -m tools.cli dataset` 生成。
 _Avoid_: API、export
 
 **Watermark**：
