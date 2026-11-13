@@ -18,6 +18,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Check the lockfile
+        run: uv lock --check
+
       - name: Align the lock with PyPI
         # The committed lock records the maintainer's Tsinghua mirror. GitHub's
         # Azure runners are sometimes denied by that mirror; re-locking against
@@ -27,6 +30,9 @@ jobs:
 
       - name: Install dependencies
         run: uv sync --frozen
+
+      - name: Lint
+        run: uvx ruff@0.17.5 check .
 
       - name: Test
         run: uv run pytest -q
