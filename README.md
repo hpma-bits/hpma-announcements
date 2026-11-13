@@ -244,6 +244,25 @@ own body, which lives in the edition's `## 正文` and in
 `dataset/schema.md` documents every row field. `python -m tools.cli dataset
 --check` gates staleness in CI.
 
+## The checkpage
+
+`python -m tools.cli checkpage` writes a local, gitignored
+`checkpage/index.html`: one self-contained page with every text-form update
+notice (220 rows, 162 Dashen + 58 NGA). A Dashen row shows the post's own body
+**and** the image text (OCR + ledger); an NGA row shows the repost's body.
+
+The page is entirely client-side: substring search across title / body / image
+text / id / date / source, sort by notice date or publication time in either
+direction, source filter, and a canonical-only filter. No network, no external
+assets.
+
+```bash
+uv run python -m tools.cli checkpage          # write checkpage/index.html
+uv run python -m tools.cli checkpage --check  # fail when the local page is stale
+```
+
+It is a review aid, not a published projection; `checkpage/` is gitignored.
+
 ## Checking
 
 ```bash
