@@ -1,0 +1,146 @@
+{
+  "issues": [
+    {
+      "id": "term:金锻|金缎",
+      "type": "term_conflict",
+      "severity": "high",
+      "title": "「金锻」与「金缎」",
+      "question": "这两种写法指同一个事物吗？检索时是否合并？",
+      "why": "两种写法都出现在官方原文；当前精确检索会把它们拆成两组。",
+      "variants": [
+        {"text": "金锻", "count": 5, "notices": 4},
+        {"text": "金缎", "count": 119, "notices": 71}
+      ],
+      "impact": {"minor_count": 5, "total_notices": 71, "search_gain": 5},
+      "match_note": "只统计礼盒名中的「金锻/金缎」，不含其他语境。",
+      "contexts": [
+        {
+          "variant": "金锻",
+          "notice_id": "dashen.64871caf05953f000161c9be",
+          "notice_date": "2023-06-13",
+          "title": "【正式服更新公告】",
+          "source": "dashen",
+          "section": "图片文字",
+          "line": "币奖励未受到金锻礼盒金币加成特权效果的问",
+          "before": "2、修复了禁林团队探索及魔法汽车获得的金",
+          "after": "题。"
+        },
+        {
+          "variant": "金锻",
+          "notice_id": "dashen.6499a761c3095800015a6a0f",
+          "notice_date": "2023-06-27",
+          "title": "【6月27日更新公告】",
+          "source": "dashen",
+          "section": "图片文字",
+          "line": "购买“豪华礼盒”和“金锻豪华礼盒”的价格调整为68元和",
+          "before": "礼盒价格调整",
+          "after": "128元。"
+        },
+        {
+          "variant": "金锻",
+          "notice_id": "dashen.64ac006f7ed4a500019e6361",
+          "notice_date": "2023-07-11",
+          "title": "【7月11日更新公告】",
+          "source": "dashen",
+          "section": "图片文字",
+          "line": "；购买本期“金锻豪华礼盒”的巫师，将获得360",
+          "before": "购买本期“豪华礼盒”的巫师，将获得125星石",
+          "after": "星石。"
+        },
+        {
+          "variant": "金锻",
+          "notice_id": "dashen.64ac006f7ed4a500019e6361",
+          "notice_date": "2023-07-11",
+          "title": "【7月11日更新公告】",
+          "source": "dashen",
+          "section": "图片文字",
+          "line": "购买了“豪华礼盒”后升级成为“金锻豪华礼盒",
+          "before": "；购买本期“金锻豪华礼盒”的巫师，将获得360星石。",
+          "after": "”"
+        },
+        {
+          "variant": "金缎",
+          "notice_id": "dashen.64eddbc496695c0001a4b3f7",
+          "notice_date": "2023-08-30",
+          "title": "【8月30日更新公告】",
+          "source": "dashen",
+          "section": "图片文字",
+          "line": "缎豪华礼盒”、“豪华升级金缎礼盒”、“月度亮晶晶（月",
+          "before": "活动期间，巫师充值星石、直接购买“豪华礼盒”、“金",
+          "after": "卡）”或其它直售礼包，皆可获取累计积分。"
+        },
+        {
+          "variant": "金缎",
+          "notice_id": "dashen.64be8e997ed4a50001bd9036",
+          "notice_date": "2023-07-25",
+          "title": "【7月25日更新公告】",
+          "source": "dashen",
+          "section": "图片文字",
+          "line": "从8月开始，“豪华礼盒（含‘金缎豪华礼盒’）”不同档",
+          "before": "“学院礼盒”档位奖励变动预告",
+          "after": "位奖励分别发生变动，具体调整内容如下："
+        },
+        {
+          "variant": "金缎",
+          "notice_id": "dashen.65c0f65053b12a0001635ee1",
+          "notice_date": "2024-02-06",
+          "title": "【2月6日更新公告】",
+          "source": "dashen",
+          "section": "图片文字",
+          "line": "购买了“豪华礼盒/金缎豪华礼盒”的巫师将获得新增福",
+          "before": "达到100级等级上线后，溢出的进度将解锁“惊喜",
+          "after": "利：学院宝箱栏位增加2，并增加赛季商店额外购买"
+        }
+      ],
+      "options": [
+        {"value": "same_alias", "label": "同一事物，检索合并", "description": "保留原文，建立 alias"},
+        {"value": "different", "label": "不同事物，保持区分", "description": ""},
+        {"value": "ocr_error", "label": "其中一个是 OCR 错误", "description": ""},
+        {"value": "defer", "label": "稍后决定", "description": ""}
+      ],
+      "recommendation": "稀有写法仅 5 处，出现在 4 篇官方公告；可能是官方自身不一致。仅供参考。"
+    },
+    {
+      "id": "ocr:dashen.62dfbea2c3e1e5000120a501:2:17",
+      "type": "ocr_block",
+      "severity": "medium",
+      "risk": "source_damage",
+      "title": "dashen.62dfbea2c3e1e5000120a501 · 图 2 · block 17",
+      "question": "这个 block 的源图文字是什么？",
+      "why": "confidence=medium；行尾“效率提升50%”被水印覆盖，当前修正是按可见笔画重建的。",
+      "notice": "dashen.62dfbea2c3e1e5000120a501",
+      "notice_date": "2022-07-27",
+      "notice_title": "【正式服更新公告】",
+      "image_index": 2,
+      "block_index": 17,
+      "original": "可解锁特权：日常活动中金币获取效李升50%皮特魔法觉醒",
+      "corrected": "可解锁特权：日常活动中金币获取效率提升50%。",
+      "reason": "crop d1-121 shows 可解锁特权：日常活动中金币获取效率提升50% with white footer watermark covering the tail; rebuilt from visible strokes",
+      "confidence": "medium",
+      "crop": {
+        "notice": "dashen.62dfbea2c3e1e5000120a501",
+        "image": 2,
+        "block": 17,
+        "scale": 2
+      },
+      "context_before": [
+        "3）金缎豪华礼盒",
+        "购买可获得传说品质魔咒皮肤“三本妖怪书·火爆三重奏”。"
+      ],
+      "context_after": [
+        "“染发灵”发色记忆功能上线",
+        "更新后，巫师使用染发灵获得的发色将会永久保留，并"
+      ],
+      "options": [
+        {"value": "accept", "label": "接受当前修正", "description": ""},
+        {"value": "override", "label": "改为我输入的文字", "description": ""},
+        {"value": "keep_original", "label": "保留 OCR 原文", "description": ""},
+        {"value": "source_issue", "label": "印刷原样", "description": ""},
+        {"value": "drop", "label": "整块不是正文", "description": ""},
+        {"value": "defer", "label": "稍后", "description": ""}
+      ],
+      "recommendation": "源图水印覆盖了行尾，请以放大后的笔画为准。仅供参考。"
+    }
+  ],
+  "decisions": []
+}
