@@ -27,7 +27,7 @@ study/labels.jsonl                          which Dashen posts are notices, and 
 study/labels-nga.jsonl                      which NGA threads are notices
 assets/dashen/<feed_id>/<NN>.<ext>          original image bytes (650 images)
 derived/ocr/dashen/<feed_id>.json           OCR engine output (v4, the record), immutable; --force is the explicit migration path
-derived/ocr-v6/dashen/<feed_id>.json        the v6 second reading (audit input)
+derived/ocr-v6/dashen/<feed_id>.json        the second reading: v6 over the historical v4 record, v4 over a new v6 record
 corrections/dashen/<id>.json                the correction ledger: human decisions
 audit/verdicts-*.jsonl                      adjudicated audit verdicts (primary evidence)
 audit/adj-*.jsonl                           the audit review queues (primary evidence)
@@ -188,8 +188,11 @@ that locates an OCR block and records what the source image shows:
   the `ocr` extra.
 - 3,268 corrections cover all 162 Dashen notices; the block text is the only
   thing the ledger changes. The OCR record is not rewritten except by an
-  explicit `--force` engine migration. An `insert` entry records a printed line
-  the engine never detected, anchored after a block.
+  explicit `--force` engine migration; when a notice already has a correction
+  ledger anchored to another engine, `--force` refuses unless
+  `--migrate-ledger` is given, because the ledger must be revalidated after
+  re-OCR. An `insert` entry records a printed line the engine never detected,
+  anchored after a block.
 
 ## The cross-engine audit
 
@@ -220,6 +223,13 @@ source-image crops stay in the gitignored `.review/` workspace as scratch.
 compares it byte for byte with the committed projection, so a clean clone can
 verify the zero-queued claim without `.review/`. Missing evidence is a hard
 error and nothing is written; normal writes replace each ledger atomically.
+
+The second reader must be a different engine from the record. New notices are
+recorded with v6, so run `audit-ocr --engine v4` for those; `audit-status`
+refuses a record whose second reading carries the same engine fingerprint.
+`python -m tools.cli apply-verdicts --dry-run` validates every tracked verdict
+against the current OCR without writing a ledger; omit `--dry-run` to apply new
+entries.
 
 ## The dataset
 

@@ -2,8 +2,10 @@
 
     python -m collectors.cli corpus [--max-pages N] [--out DIR] [--allow-shrink]
     python -m collectors.cli nga [--before YYYY-MM-DD] [--from-dir DIR]
+                                 [--index-html FILE] [--delay SECONDS]
                                  [--limit N] [--out DIR] [--allow-shrink]
     python -m collectors.cli ocr [--family update] [--limit N]
+                                 [--force] [--migrate-ledger]
 
 Both harvest commands are idempotent: rerunning them rewrites nothing when the
 upstream data has not changed. A partial run (``--max-pages``, ``--before`` or
@@ -74,15 +76,14 @@ def _ocr(args: argparse.Namespace) -> int:
         print(f"ocr: {exc}", file=sys.stderr)
         return 1
     print(json.dumps(stats, sort_keys=True))
-    return 0 if stats["failed_posts"] == 0 else 1
+    return 0 if stats["failed_posts"] == 0 and stats["failed_images"] == 0 else 1
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(prog="hpma-announcements")
+    parser = argparse.ArgumentParser(prog="python -m collectors.cli")
     sub = parser.add_subparsers(dest="command", required=True)
 
     corpus = sub.add_parser("corpus", help="harvest every post's text and metadata")
-    corpus.add_argument("--source", default="dashen", choices=["dashen"])
     corpus.add_argument(
         "--max-pages",
         type=int,
