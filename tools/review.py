@@ -561,9 +561,10 @@ def _index_decisions(
     return latest
 
 
-def _term_sort_key(issue: Record) -> tuple[int, int, str]:
+def _term_sort_key(issue: Record) -> tuple[int, int, int, str]:
     impact = issue.get("impact") or {}
     return (
+        0 if issue.get("severity") == "high" else 1,
         -int(impact.get("minor_count") or 0),
         -int(impact.get("minor_notices") or 0),
         issue.get("id") or "",
