@@ -42,3 +42,12 @@ package = false
 override-dependencies = [
     "opencv-python; sys_platform == 'never'",
 ]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+# Catch real defects (unused imports/variables, undefined names, syntax) without
+# reformatting the data-heavy codebase.
+select = ["E4", "E7", "E9", "F"]
