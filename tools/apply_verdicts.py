@@ -22,7 +22,7 @@ from pathlib import Path
 from . import archive
 
 VERDICT_DIR = Path(".review/audit")
-LEDGER_DIR = Path("derived/ocr/corrections/dashen")
+LEDGER_DIR = Path("corrections/dashen")
 
 APPLY_AS_CORRECTION = {"correct", "v6_right"}
 APPLY_AS_DROP = {"drop"}

@@ -7,7 +7,7 @@ Primary data — the archive itself, never regenerated from anything else:
     study/labels.jsonl                      which Dashen posts are notices
     study/labels-nga.jsonl                  which NGA threads are notices
     assets/dashen/<feed_id>/<NN>.<ext>      original image bytes
-    derived/ocr/corrections/dashen/<id>.json   human decisions about OCR text
+    corrections/dashen/<id>.json            human decisions about OCR text
 
 Derived data — rebuildable, committed only so the archive reads without network:
 
@@ -60,7 +60,7 @@ SOURCES: dict[str, Source] = {
 }
 
 OCR_DIR = Path("derived/ocr/dashen")
-LEDGER_DIR = Path("derived/ocr/corrections/dashen")
+LEDGER_DIR = Path("corrections/dashen")
 
 Record = dict[str, Any]
 Locator = tuple[int, int]
