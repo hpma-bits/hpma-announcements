@@ -14,7 +14,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Callable
 
-from . import http
+from . import atomic, http
 from .paths import REPO_ROOT
 
 UID = "29c10cd0344f462e82e16a516001f0dd"
@@ -23,6 +23,10 @@ LIST_URL = "https://inf.ds.163.com/v1/web/feed/basic/getSomeOneFeeds"
 TZ = timezone(timedelta(hours=8))
 
 Fetcher = Callable[[str], dict[str, Any]]
+
+
+class DashenError(RuntimeError):
+    """The feed cannot be trusted; refuse to overwrite the corpus."""
 
 
 def _iso(epoch_ms: int | None) -> str | None:
@@ -49,10 +53,16 @@ def _feed_url(post_id: str, post_type: int | None) -> str:
 
 
 def parse_post(feed: dict[str, Any]) -> dict[str, Any]:
-    try:
-        content = json.loads(feed.get("content") or "{}")
-    except json.JSONDecodeError:
-        print(f"[dashen] unparseable content for feed {feed.get('id')}", file=sys.stderr)
+    raw_content = feed.get("content")
+    if isinstance(raw_content, dict):
+        content = raw_content
+    else:
+        try:
+            content = json.loads(raw_content or "{}")
+        except (json.JSONDecodeError, TypeError):
+            print(f"[dashen] unparseable content for feed {feed.get('id')}", file=sys.stderr)
+            content = {}
+    if not isinstance(content, dict):
         content = {}
     body = content.get("body") or {}
     media = body.get("media") or []
@@ -85,10 +95,37 @@ def parse_post(feed: dict[str, Any]) -> dict[str, Any]:
 
 
 def parse_page(payload: dict[str, Any]) -> tuple[list[dict[str, Any]], int | None]:
-    result = payload.get("result") or {}
-    feeds = result.get("feeds") or []
-    next_max_time = (result.get("nextRangeParam") or {}).get("maxTime")
-    return [parse_post(feed) for feed in feeds], next_max_time
+    """Parse one feed page, rejecting anything that is not the expected shape.
+
+    An empty body, an error payload or a missing ``feeds`` list must raise
+    before the caller can touch ``posts.jsonl``: a truncated corpus is worse
+    than a failed harvest.
+    """
+    if not isinstance(payload, dict):
+        raise DashenError("feed response is not a JSON object; refusing to write the corpus")
+    result = payload.get("result")
+    if not isinstance(result, dict):
+        raise DashenError(
+            "feed response has no result object (empty or malformed body); "
+            "refusing to write the corpus"
+        )
+    feeds = result.get("feeds")
+    if not isinstance(feeds, list):
+        raise DashenError(
+            "feed response has no feeds list (empty or malformed body); "
+            "refusing to write the corpus"
+        )
+    records: list[dict[str, Any]] = []
+    for feed in feeds:
+        if not isinstance(feed, dict) or not feed.get("id"):
+            raise DashenError(
+                "feed response contains an entry without an id (malformed body); "
+                "refusing to write the corpus"
+            )
+        records.append(parse_post(feed))
+    range_param = result.get("nextRangeParam") or {}
+    next_max_time = range_param.get("maxTime") if isinstance(range_param, dict) else None
+    return records, next_max_time
 
 
 def _page_url(uid: str, max_time: int | None) -> str:
@@ -98,17 +135,65 @@ def _page_url(uid: str, max_time: int | None) -> str:
     return url
 
 
+def _read_previous_posts(path: Path) -> dict[str, dict[str, Any]]:
+    """Load the committed corpus by id; refuse to overwrite an unreadable one."""
+    if not path.exists():
+        return {}
+    posts: dict[str, dict[str, Any]] = {}
+    for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        if not line.strip():
+            continue
+        try:
+            post = json.loads(line)
+        except json.JSONDecodeError as exc:
+            raise DashenError(
+                f"existing corpus {path} line {number} is not valid JSON: {exc}; "
+                "fix or remove it before harvesting"
+            ) from exc
+        if not isinstance(post, dict) or not post.get("id"):
+            raise DashenError(
+                f"existing corpus {path} line {number} has no post id; "
+                "fix or remove it before harvesting"
+            )
+        posts[post["id"]] = post
+    return posts
+
+
+def _manifest(uid: str, pages: int, post_count: int) -> str:
+    payload = {
+        "uid": uid,
+        "fetched_at": datetime.now(timezone.utc)
+        .replace(microsecond=0)
+        .isoformat()
+        .replace("+00:00", "Z"),
+        "page_count": pages,
+        "post_count": post_count,
+        "feed_types": FEED_TYPES,
+        "notes": "text-only corpus; image bytes are not downloaded",
+    }
+    return json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+
+
 def harvest_corpus(
     root: str | Path | None = None,
     *,
     uid: str = UID,
     max_pages: int | None = None,
     fetch: Fetcher | None = None,
+    allow_shrink: bool = False,
+    out: str | Path | None = None,
 ) -> dict[str, Any]:
     """Walk the account's feed and write ``corpus/dashen/posts.jsonl``.
 
-    Rerunning on an unchanged feed is byte-identical and leaves the manifest
-    (and its ``fetched_at``) untouched.
+    A partial run (``max_pages``) is unioned with the committed corpus by id,
+    so it never truncates posts it did not visit. ``allow_shrink`` opts into
+    replacing the corpus with exactly this run's set; without it a smaller
+    result cannot be written. An empty or malformed page raises
+    :class:`DashenError` before any file is touched.
+
+    ``out`` overrides the corpus directory (default ``<root>/corpus/dashen``)
+    so smoke runs can write somewhere else. Rerunning on an unchanged feed is
+    byte-identical and leaves the manifest (and its ``fetched_at``) untouched.
     """
     fetch = fetch or http.fetch_json
     seen: dict[str, dict[str, Any]] = {}
@@ -130,35 +215,43 @@ def harvest_corpus(
         cursors.add(next_max_time)
         cursor = next_max_time
 
-    posts = sorted(seen.values(), key=lambda post: (post["published_at"] or "", post["id"]))
-    corpus_dir = (Path(root) if root else REPO_ROOT) / "corpus" / "dashen"
-    corpus_dir.mkdir(parents=True, exist_ok=True)
+    if not seen:
+        raise DashenError(
+            "feed returned no posts (empty feeds or malformed body); "
+            "refusing to write an empty corpus"
+        )
+
+    corpus_dir = Path(out) if out else (Path(root) if root else REPO_ROOT) / "corpus" / "dashen"
     posts_path = corpus_dir / "posts.jsonl"
+    previous = _read_previous_posts(posts_path)
+
+    if allow_shrink:
+        merged = dict(seen)
+    else:
+        # Keep every committed post the partial feed did not visit; fresh
+        # records win for the ids this run did see.
+        merged = dict(previous)
+        merged.update(seen)
+    if not merged:
+        raise DashenError("harvest produced no posts; refusing to write an empty corpus")
+
+    posts = sorted(merged.values(), key=lambda post: (post["published_at"] or "", post["id"]))
     text = "".join(
         json.dumps(post, ensure_ascii=False, separators=(",", ":")) + "\n" for post in posts
     )
     changed = not posts_path.exists() or posts_path.read_text(encoding="utf-8") != text
+    manifest_path = corpus_dir / "manifest.json"
     if changed:
-        posts_path.write_text(text, encoding="utf-8", newline="\n")
-        manifest = {
-            "uid": uid,
-            "fetched_at": datetime.now(timezone.utc)
-            .replace(microsecond=0)
-            .isoformat()
-            .replace("+00:00", "Z"),
-            "page_count": pages,
-            "post_count": len(posts),
-            "feed_types": FEED_TYPES,
-            "notes": "text-only corpus; image bytes are not downloaded",
-        }
-        (corpus_dir / "manifest.json").write_text(
-            json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
-            encoding="utf-8",
-            newline="\n",
-        )
+        atomic.write_text(posts_path, text)
+        atomic.write_text(manifest_path, _manifest(uid, pages, len(posts)))
+    elif not manifest_path.exists():
+        atomic.write_text(manifest_path, _manifest(uid, pages, len(posts)))
+
+    dropped = sorted(set(previous) - set(merged))
     return {
         "post_count": len(posts),
         "page_count": pages,
         "changed": changed,
+        "dropped": dropped,
         "path": str(posts_path),
     }

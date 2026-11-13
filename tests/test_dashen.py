@@ -1,7 +1,9 @@
 import json
 from pathlib import Path
 
-from collectors import dashen
+import pytest
+
+from collectors import cli, dashen
 
 FIXTURE = Path(__file__).parent / "fixtures" / "dashen_feed_page1.json"
 
@@ -103,3 +105,133 @@ def test_harvest_respects_max_pages(tmp_path):
     assert summary["page_count"] == 1
     assert summary["post_count"] == 2
     assert len(calls) == 1
+
+
+def _harvest(tmp_path, pages: list[dict], **kwargs):
+    calls: list[str] = []
+
+    def fetch(url: str) -> dict:
+        calls.append(url)
+        return pages[(len(calls) - 1) % len(pages)]
+
+    summary = dashen.harvest_corpus(tmp_path, fetch=fetch, **kwargs)
+    return summary, calls
+
+
+def _posts_path(tmp_path) -> Path:
+    return tmp_path / "corpus" / "dashen" / "posts.jsonl"
+
+
+def test_max_pages_keeps_rows_from_a_complete_corpus(tmp_path):
+    pages = _pages()
+    full, _ = _harvest(tmp_path, pages)
+    assert full["post_count"] == 3
+    before = _posts_path(tmp_path).read_bytes()
+
+    partial, calls = _harvest(tmp_path, pages, max_pages=1)
+
+    assert len(calls) == 1
+    assert partial["post_count"] == 3
+    assert partial["dropped"] == []
+    assert _posts_path(tmp_path).read_bytes() == before
+    assert partial["changed"] is False
+
+
+def test_allow_shrink_explicitly_replaces_the_corpus(tmp_path):
+    pages = _pages()
+    _harvest(tmp_path, pages)
+
+    partial, _ = _harvest(tmp_path, pages, max_pages=1, allow_shrink=True)
+
+    assert partial["post_count"] == 2
+    assert partial["dropped"] == ["cccc"]
+    ids = [
+        json.loads(line)["id"]
+        for line in _posts_path(tmp_path).read_text(encoding="utf-8").splitlines()
+    ]
+    assert ids == ["bbbb", "aaaa"]
+
+
+def test_out_writes_a_separate_smoke_corpus(tmp_path):
+    smoke = tmp_path / "smoke"
+    summary, _ = _harvest(tmp_path, _pages(), max_pages=1, out=smoke)
+
+    assert summary["post_count"] == 2
+    assert (smoke / "posts.jsonl").exists()
+    assert (smoke / "manifest.json").exists()
+    assert not _posts_path(tmp_path).exists()
+
+
+@pytest.mark.parametrize(
+    "payload",
+    [
+        [],
+        {},
+        {"result": {}},
+        {"result": {"feeds": []}},
+        {"result": {"feeds": "not-a-list"}},
+        {"result": {"feeds": [{"type": 2}]}},
+    ],
+)
+def test_malformed_response_never_overwrites_the_corpus(tmp_path, payload):
+    _harvest(tmp_path, _pages())
+    before = _posts_path(tmp_path).read_bytes()
+
+    with pytest.raises(dashen.DashenError):
+        dashen.harvest_corpus(tmp_path, fetch=lambda url: payload)
+
+    assert _posts_path(tmp_path).read_bytes() == before
+
+
+def test_empty_response_does_not_create_a_corpus(tmp_path):
+    with pytest.raises(dashen.DashenError, match="no posts"):
+        dashen.harvest_corpus(
+            tmp_path, fetch=lambda url: {"result": {"feeds": []}}
+        )
+
+    assert not _posts_path(tmp_path).exists()
+
+
+def test_atomic_write_failure_keeps_the_previous_corpus(tmp_path, monkeypatch):
+    _harvest(tmp_path, _pages())
+    before = _posts_path(tmp_path).read_bytes()
+
+    def fetch(url: str) -> dict:
+        return {"result": {"feeds": [_post("dddd", 30)], "nextRangeParam": {}}}
+
+    def boom(source, destination):
+        raise OSError("disk full")
+
+    monkeypatch.setattr("os.replace", boom)
+    with pytest.raises(OSError, match="disk full"):
+        dashen.harvest_corpus(tmp_path, fetch=fetch)
+
+    assert _posts_path(tmp_path).read_bytes() == before
+    leftovers = list((tmp_path / "corpus" / "dashen").glob("*.tmp"))
+    assert leftovers == []
+
+
+def test_cli_passes_safety_flags_and_reports_errors(monkeypatch, capsys):
+    captured: dict = {}
+
+    def fake(**kwargs):
+        captured.update(kwargs)
+        return {"post_count": 0, "page_count": 0, "changed": False}
+
+    monkeypatch.setattr(cli.dashen, "harvest_corpus", fake)
+    assert (
+        cli.main(
+            ["corpus", "--max-pages", "1", "--out", "smoke", "--allow-shrink"]
+        )
+        == 0
+    )
+    assert captured["max_pages"] == 1
+    assert captured["out"] == "smoke"
+    assert captured["allow_shrink"] is True
+
+    def fail(**kwargs):
+        raise dashen.DashenError("empty feeds")
+
+    monkeypatch.setattr(cli.dashen, "harvest_corpus", fail)
+    assert cli.main(["corpus"]) == 1
+    assert "empty feeds" in capsys.readouterr().err

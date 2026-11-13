@@ -27,7 +27,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Callable, Iterable
 
-from . import http
+from . import atomic, http
 from .paths import REPO_ROOT
 
 INDEX_TID = "27915340"
@@ -158,15 +158,16 @@ def server_section(value: str) -> str:
 
     Some NGA threads wrap the production and test-server notices in separate
     ``[collapse=正式服]`` / ``[collapse=体验服]`` blocks. The archive only wants
-    the production one; when there is no such split, the whole post is used.
+    the production one. A thread holding only the test-server block is not a
+    production notice, so the whole post is returned instead of silently
+    substituting the test-server text.
     """
     spans = top_level_collapses(value)
-    for wanted in ("正式服", "体验服"):
-        for start, end, title in spans:
-            if title.strip() == wanted:
-                body = value[start:end].strip()
-                if body:
-                    return body
+    for start, end, title in spans:
+        if title.strip() == "正式服":
+            body = value[start:end].strip()
+            if body:
+                return body
     return value
 
 
@@ -387,9 +388,16 @@ def fetch_page(
 
 
 def _iter_jsonl(path: Path) -> Iterable[dict[str, Any]]:
-    for line in path.read_text(encoding="utf-8").splitlines():
-        if line.strip():
+    for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        if not line.strip():
+            continue
+        try:
             yield json.loads(line)
+        except json.JSONDecodeError as exc:
+            raise NgaError(
+                f"existing corpus {path} line {number} is not valid JSON: {exc}; "
+                "fix or remove it before harvesting"
+            ) from exc
 
 
 def _read_page(path: Path) -> bytes:
@@ -417,12 +425,21 @@ def harvest(
     fetch: Fetcher | None = None,
     delay: float = 5.0,
     limit: int | None = None,
+    allow_shrink: bool = False,
+    out: str | Path | None = None,
 ) -> dict[str, Any]:
     """Snapshot the index and harvest every production notice.
 
-    ``before`` optionally limits the harvest to notices earlier than that date.
+    ``before`` and ``limit`` narrow the notices fetched this run. By default
+    the result is unioned with the committed corpus by id, so a partial run
+    never drops posts it did not visit; ``allow_shrink`` opts into replacing
+    the corpus with exactly this run's set. An empty or malformed index or a
+    malformed thread page raises :class:`NgaError` before any corpus file is
+    rewritten.
+
     ``from_dir`` reads ``<tid>.html`` files instead of the network; the index
-    page is looked up there unless ``index_html`` is given.
+    page is looked up there unless ``index_html`` is given. ``out`` overrides
+    the corpus directory (default ``<root>/corpus/nga``).
 
     ``raw_sha256`` is the stable hash of the first-post fragment.
     ``page_sha256`` is the hash of the page response that first captured that
@@ -447,6 +464,11 @@ def harvest(
         index_text = decode(index_bytes)
 
     entries = parse_index(index_text)
+    if not entries:
+        raise NgaError(
+            "NGA index has no maintenance entries (empty or unexpected page); "
+            "refusing to write the corpus"
+        )
     selected = [
         entry
         for entry in entries
@@ -471,7 +493,7 @@ def harvest(
         unique.append(entry)
     selected = unique
 
-    corpus_dir = root_path / "corpus" / "nga"
+    corpus_dir = Path(out) if out else root_path / "corpus" / "nga"
     raw_dir = corpus_dir / "raw"
     corpus_dir.mkdir(parents=True, exist_ok=True)
     raw_dir.mkdir(parents=True, exist_ok=True)
@@ -491,12 +513,15 @@ def harvest(
         else:
             page_bytes = fetch(f"{BASE_URL}/read.php?tid={tid}")
         page = decode(page_bytes)
-        record = parse_thread(
-            page,
-            tid=tid,
-            notice_date=entry["notice_date"],
-            page_sha256=sha256(page_bytes),
-        )
+        try:
+            record = parse_thread(
+                page,
+                tid=tid,
+                notice_date=entry["notice_date"],
+                page_sha256=sha256(page_bytes),
+            )
+        except NgaError as exc:
+            raise NgaError(f"tid {tid}: {exc}") from exc
         previous = previous_posts.get(tid)
         if previous and previous.get("raw_sha256") == record["raw_sha256"]:
             # The first-post fragment is unchanged; keep the page hash from the
@@ -506,10 +531,28 @@ def harvest(
         posts.append(record)
         raw_files[tid] = _post_fragment(page)
 
-    posts.sort(key=lambda post: (post["published_at"], post["id"]))
+    if not posts and not previous_posts:
+        raise NgaError(
+            "no production notices were selected and no previous corpus exists; "
+            "refusing to write an empty corpus"
+        )
+    if allow_shrink:
+        merged_posts = posts
+    else:
+        # Keep every committed notice this partial run did not visit; fresh
+        # records win for the ids this run did see.
+        fetched_ids = {post["id"] for post in posts}
+        merged_posts = posts + [
+            post for post_id, post in previous_posts.items() if post_id not in fetched_ids
+        ]
+    if not merged_posts:
+        raise NgaError("harvest produced no posts; refusing to write an empty corpus")
+    merged_posts.sort(key=lambda post: (post["published_at"], post["id"]))
+    dropped = sorted(set(previous_posts) - {post["id"] for post in merged_posts})
 
     posts_text = "".join(
-        json.dumps(post, ensure_ascii=False, separators=(",", ":")) + "\n" for post in posts
+        json.dumps(post, ensure_ascii=False, separators=(",", ":")) + "\n"
+        for post in merged_posts
     )
     posts_changed = not posts_path.exists() or posts_path.read_text(encoding="utf-8") != posts_text
 
@@ -517,13 +560,18 @@ def harvest(
     for tid, fragment in raw_files.items():
         path = raw_dir / f"{tid}.html"
         if not path.exists() or path.read_text(encoding="utf-8") != fragment:
-            path.write_text(fragment, encoding="utf-8", newline="\n")
             raw_changed = True
 
     index_path = corpus_dir / "index.json"
     previous_index: dict[str, Any] = {}
     if index_path.exists():
-        previous_index = json.loads(index_path.read_text(encoding="utf-8"))
+        try:
+            previous_index = json.loads(index_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            raise NgaError(
+                f"existing corpus {index_path} is not valid JSON: {exc}; "
+                "fix or remove it before harvesting"
+            ) from exc
     entries_unchanged = previous_index.get("entries") == entries
     index_payload = {
         "index_tid": INDEX_TID,
@@ -545,10 +593,16 @@ def harvest(
     )
 
     changed = posts_changed or raw_changed or index_changed
+    # Every corpus file is replaced atomically; a failure mid-run leaves the
+    # previous complete file in place.
     if posts_changed:
-        posts_path.write_text(posts_text, encoding="utf-8", newline="\n")
+        atomic.write_text(posts_path, posts_text)
+    for tid, fragment in raw_files.items():
+        path = raw_dir / f"{tid}.html"
+        if not path.exists() or path.read_text(encoding="utf-8") != fragment:
+            atomic.write_text(path, fragment)
     if index_changed:
-        index_path.write_text(index_text_out, encoding="utf-8", newline="\n")
+        atomic.write_text(index_path, index_text_out)
 
     manifest_path = corpus_dir / "manifest.json"
     if changed or not manifest_path.exists():
@@ -556,7 +610,7 @@ def harvest(
             "index_tid": INDEX_TID,
             "index_url": f"{BASE_URL}/read.php?tid={INDEX_TID}",
             "fetched_at": index_payload["fetched_at"],
-            "post_count": len(posts),
+            "post_count": len(merged_posts),
             "entry_count": len(entries),
             "boundary": boundary or "all",
             "notes": (
@@ -565,12 +619,13 @@ def harvest(
                 "snapshot's page hash."
             ),
         }
-        manifest_path.write_text(_json_text(manifest), encoding="utf-8", newline="\n")
+        atomic.write_text(manifest_path, _json_text(manifest))
 
     return {
         "entry_count": len(entries),
-        "post_count": len(posts),
+        "post_count": len(merged_posts),
         "selected": len(selected),
+        "dropped": dropped,
         "boundary": boundary or "all",
         "changed": changed,
         "path": str(posts_path),

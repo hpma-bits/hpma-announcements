@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from collectors import nga
+from collectors import cli, nga
 
 INDEX_PAGE = """<html><body>
 <p id='postcontent0' class='postcontent ubbcode'>
@@ -294,3 +294,233 @@ def test_committed_index_keeps_the_full_nga_coverage_map():
     assert index["production_count"] == 58
     assert index["test_count"] == 58
     assert index["entries"][0]["month"] == "2022.11"
+
+
+def test_server_section_with_only_a_test_block_returns_the_whole_post():
+    value = "前言\n[collapse=体验服]体验服正文[/collapse]\n后记"
+
+    assert nga.server_section(value) == value
+
+
+def test_notice_text_with_only_a_test_block_uses_the_whole_post():
+    value = (
+        "公告前言。" * 40
+        + "\n[collapse=体验服]"
+        + "体验服正文。" * 40
+        + "[/collapse]\n===重要更新===\n"
+        + "活动内容。" * 40
+    )
+
+    text = nga.notice_text(value)
+
+    assert "公告前言" in text
+    assert "活动内容" in text
+
+
+def _full_pages() -> dict[str, bytes]:
+    return {
+        "https://bbs.nga.cn/read.php?tid=27915340": INDEX_PAGE.encode("gb18030"),
+        "https://bbs.nga.cn/read.php?tid=100": _thread_page().encode("gb18030"),
+        "https://bbs.nga.cn/read.php?tid=102": _thread_page(
+            NOTICE.replace("9月15日", "2月1日", 1),
+            subject="正式服2月1日更新公告",
+            posted="2022-01-31 18:00",
+        ).encode("gb18030"),
+    }
+
+
+def _nga_posts(tmp_path) -> Path:
+    return tmp_path / "corpus" / "nga" / "posts.jsonl"
+
+
+def _seed_full_corpus(tmp_path) -> dict[str, bytes]:
+    pages = _full_pages()
+
+    def fetch(url: str) -> bytes:
+        return pages[url]
+
+    summary = nga.harvest(tmp_path, fetch=fetch, delay=0)
+    assert summary["post_count"] == 2
+    return pages
+
+
+def test_before_boundary_keeps_rows_from_a_complete_corpus(tmp_path):
+    pages = _seed_full_corpus(tmp_path)
+    before = _nga_posts(tmp_path).read_bytes()
+
+    def fetch(url: str) -> bytes:
+        return pages[url]
+
+    partial = nga.harvest(tmp_path, before="2022-01-26", fetch=fetch, delay=0)
+
+    assert partial["selected"] == 1
+    assert partial["post_count"] == 2
+    assert partial["dropped"] == []
+    assert _nga_posts(tmp_path).read_bytes() == before
+    assert partial["changed"] is False
+
+
+def test_limit_keeps_rows_from_a_complete_corpus(tmp_path):
+    pages = _seed_full_corpus(tmp_path)
+    before = _nga_posts(tmp_path).read_bytes()
+
+    def fetch(url: str) -> bytes:
+        return pages[url]
+
+    partial = nga.harvest(tmp_path, limit=1, fetch=fetch, delay=0)
+
+    assert partial["selected"] == 1
+    assert partial["post_count"] == 2
+    assert _nga_posts(tmp_path).read_bytes() == before
+
+
+def test_out_writes_a_separate_nga_corpus(tmp_path):
+    pages = _full_pages()
+    smoke = tmp_path / "smoke"
+
+    summary = nga.harvest(
+        tmp_path, out=smoke, fetch=lambda url: pages[url], delay=0
+    )
+
+    assert summary["post_count"] == 2
+    assert (smoke / "posts.jsonl").exists()
+    assert (smoke / "index.json").exists()
+    assert not (tmp_path / "corpus").exists()
+
+
+def test_allow_shrink_explicitly_replaces_the_corpus(tmp_path):
+    pages = _seed_full_corpus(tmp_path)
+
+    def fetch(url: str) -> bytes:
+        return pages[url]
+
+    partial = nga.harvest(
+        tmp_path, before="2022-01-26", fetch=fetch, delay=0, allow_shrink=True
+    )
+
+    assert partial["post_count"] == 1
+    assert partial["dropped"] == ["102"]
+    ids = [
+        json.loads(line)["id"]
+        for line in _nga_posts(tmp_path).read_text(encoding="utf-8").splitlines()
+    ]
+    assert ids == ["100"]
+
+
+def test_from_dir_partial_run_keeps_previous_rows(tmp_path):
+    pages_dir = tmp_path / "pages"
+    pages_dir.mkdir()
+    pages = _full_pages()
+    for tid in ("27915340", "100", "102"):
+        (pages_dir / f"{tid}.html").write_bytes(
+            pages[f"https://bbs.nga.cn/read.php?tid={tid}"]
+        )
+
+    full = nga.harvest(tmp_path, from_dir=pages_dir, delay=0)
+    assert full["post_count"] == 2
+    before = _nga_posts(tmp_path).read_bytes()
+
+    partial = nga.harvest(tmp_path, before="2022-01-26", from_dir=pages_dir, delay=0)
+
+    assert partial["post_count"] == 2
+    assert _nga_posts(tmp_path).read_bytes() == before
+
+
+@pytest.mark.parametrize(
+    "index_bytes",
+    [
+        b"",
+        "<html><body>not NGA</body></html>".encode("gb18030"),
+        "<p id='postcontent0'>没有维护链接</p>".encode("gb18030"),
+    ],
+)
+def test_empty_or_malformed_index_never_overwrites_the_corpus(tmp_path, index_bytes):
+    _seed_full_corpus(tmp_path)
+    before = _nga_posts(tmp_path).read_bytes()
+
+    def fetch(url: str) -> bytes:
+        return index_bytes
+
+    with pytest.raises(nga.NgaError):
+        nga.harvest(tmp_path, fetch=fetch, delay=0)
+
+    assert _nga_posts(tmp_path).read_bytes() == before
+
+
+def test_malformed_thread_page_never_overwrites_the_corpus(tmp_path):
+    pages = _seed_full_corpus(tmp_path)
+    before = _nga_posts(tmp_path).read_bytes()
+
+    def fetch(url: str) -> bytes:
+        if url.endswith("27915340"):
+            return pages[url]
+        return b"<html><body>no first post</body></html>"
+
+    with pytest.raises(nga.NgaError, match="tid 100"):
+        nga.harvest(tmp_path, fetch=fetch, delay=0)
+
+    assert _nga_posts(tmp_path).read_bytes() == before
+
+
+def test_empty_index_does_not_create_a_corpus(tmp_path):
+    with pytest.raises(nga.NgaError):
+        nga.harvest(tmp_path, fetch=lambda url: b"", delay=0)
+
+    assert not _nga_posts(tmp_path).exists()
+
+
+def test_atomic_write_failure_keeps_the_previous_corpus(tmp_path, monkeypatch):
+    pages = _seed_full_corpus(tmp_path)
+    before = _nga_posts(tmp_path).read_bytes()
+    pages["https://bbs.nga.cn/read.php?tid=100"] = _thread_page(
+        NOTICE.replace("亲爱的巫师：", "亲爱的巫师们：", 1)
+    ).encode("gb18030")
+
+    def fetch(url: str) -> bytes:
+        return pages[url]
+
+    def boom(source, destination):
+        raise OSError("disk full")
+
+    monkeypatch.setattr("os.replace", boom)
+    with pytest.raises(OSError, match="disk full"):
+        nga.harvest(tmp_path, fetch=fetch, delay=0)
+
+    assert _nga_posts(tmp_path).read_bytes() == before
+    leftovers = list((tmp_path / "corpus" / "nga").glob("*.tmp"))
+    assert leftovers == []
+
+
+def test_cli_nga_passes_safety_flags(monkeypatch):
+    captured: dict = {}
+
+    def fake(**kwargs):
+        captured.update(kwargs)
+        return {
+            "entry_count": 0,
+            "post_count": 0,
+            "selected": 0,
+            "boundary": "all",
+            "changed": False,
+        }
+
+    monkeypatch.setattr(cli.nga, "harvest", fake)
+    assert (
+        cli.main(
+            [
+                "nga",
+                "--before",
+                "2022-01-26",
+                "--limit",
+                "5",
+                "--out",
+                "smoke",
+                "--allow-shrink",
+            ]
+        )
+        == 0
+    )
+    assert captured["before"] == "2022-01-26"
+    assert captured["limit"] == 5
+    assert captured["out"] == "smoke"
+    assert captured["allow_shrink"] is True
