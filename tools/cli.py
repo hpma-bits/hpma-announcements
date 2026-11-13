@@ -9,7 +9,7 @@
     python -m tools.cli audit-compare [--crops] [--notice ID]...
     python -m tools.cli apply-verdicts [--dry-run]
     python -m tools.cli dataset [--check] [--allow-unverified]
-    python -m tools.cli checkpage [--check] [--out PATH]
+    python -m tools.cli review [--port N] [--no-browser] [--export]
 """
 
 from __future__ import annotations
@@ -26,7 +26,6 @@ from . import (
     archive,
     audit_compare,
     audit_status,
-    checkpage,
     crop,
     dataset,
     doctor,
@@ -151,15 +150,16 @@ def _dataset(args: argparse.Namespace) -> int:
     return dataset.run(check=args.check, allow_unverified=args.allow_unverified)
 
 
-def _checkpage(args: argparse.Namespace) -> int:
-    if args.check:
-        problems = checkpage.check(out=args.out)
-        for problem in problems:
-            print(problem, file=sys.stderr)
-        print(f"checkpage: {len(problems)} problems")
-        return 1 if problems else 0
-    path = checkpage.write(out=args.out)
-    print(f"checkpage: wrote {path}")
+def _review(args: argparse.Namespace) -> int:
+    from . import review
+
+    if args.export:
+        result = review.export()
+        print(json.dumps(result, ensure_ascii=False, sort_keys=True, default=str))
+        return 0
+    from . import review_app
+
+    review_app.serve(port=args.port, open_browser=not args.no_browser)
     return 0
 
 
@@ -277,16 +277,19 @@ def main(argv: list[str] | None = None) -> int:
     )
     dataset_cmd.set_defaults(func=_dataset)
 
-    checkpage_cmd = sub.add_parser(
-        "checkpage", help="build the searchable full-text review page (local, gitignored)"
+    review_cmd = sub.add_parser(
+        "review", help="start the local one-question-at-a-time text adjudication desk"
     )
-    checkpage_cmd.add_argument(
-        "--check", action="store_true", help="fail when the generated page is stale"
+    review_cmd.add_argument("--port", type=int, default=8767, help="local HTTP port")
+    review_cmd.add_argument(
+        "--no-browser", action="store_true", help="do not open the browser automatically"
     )
-    checkpage_cmd.add_argument(
-        "--out", default=None, help="write somewhere other than checkpage/index.html"
+    review_cmd.add_argument(
+        "--export",
+        action="store_true",
+        help="write review/terms.json and review/ocr-decisions.jsonl, then exit",
     )
-    checkpage_cmd.set_defaults(func=_checkpage)
+    review_cmd.set_defaults(func=_review)
 
     args = parser.parse_args(argv)
     try:

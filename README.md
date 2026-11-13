@@ -244,24 +244,33 @@ own body, which lives in the edition's `## 正文` and in
 `dataset/schema.md` documents every row field. `python -m tools.cli dataset
 --check` gates staleness in CI.
 
-## The checkpage
+## The review desk
 
-`python -m tools.cli checkpage` writes a local, gitignored
-`checkpage/index.html`: one self-contained page with every text-form update
-notice (220 rows, 162 Dashen + 58 NGA). A Dashen row shows the post's own body
-**and** the image text (OCR + ledger); an NGA row shows the repost's body.
+`python -m tools.cli review` starts a local, one-question-at-a-time adjudication
+desk for the business expert. It is not a full-text browser: the main panel
+shows one issue, its evidence and its impact; the queue stays compact.
 
-The page is entirely client-side: substring search across title / body / image
-text / id / date / source, sort by notice date or publication time in either
-direction, source filter, and a canonical-only filter. No network, no external
-assets.
+Two issue types:
+
+- **Term conflicts** — the same thing written two ways in official notices
+  (e.g. 金锻/金缎, 登陆/登录). The desk shows occurrence counts, affected
+  notices, short contexts and the search coverage gained by merging. A
+  `same_alias` decision writes a search alias into `review/terms.json`.
+- **OCR review** — corrections recorded with `confidence: medium` (watermark
+  tails, truncated lines, art text). The desk shows the source crop, the raw
+  OCR, the current correction and the reason. Decisions are exported to
+  `review/ocr-decisions.jsonl` with the `original` checked against the OCR on
+  disk (`applicable` / `stale`).
+
+`review/decisions.jsonl` is the tracked human decision ledger;
+`review/README.md` documents the schema. `--export` writes the derived term and
+OCR files without starting the server. The former all-text checkpage has been
+removed.
 
 ```bash
-uv run python -m tools.cli checkpage          # write checkpage/index.html
-uv run python -m tools.cli checkpage --check  # fail when the local page is stale
+uv run python -m tools.cli review --port 8767
+uv run python -m tools.cli review --export
 ```
-
-It is a review aid, not a published projection; `checkpage/` is gitignored.
 
 ## Checking
 
