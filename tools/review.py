@@ -17,14 +17,16 @@ Two issue families:
     source image was partly obscured, truncated or otherwise uncertain. The
     issue carries the crop locator and a few neighbouring OCR lines.
 
-The queue is deterministic: issues sort by severity, then type, then id.
+The queue is deterministic: term issues sort by impact, OCR issues by risk.
 Decisions live in ``review/decisions.jsonl`` (append-only JSONL, latest wins).
 """
 
 from __future__ import annotations
 
 import json
+import re
 from collections.abc import Iterable, Mapping
+from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -33,24 +35,78 @@ from . import archive, projection, text
 
 Record = dict[str, Any]
 
-# The 14 spelling pairs observed on both sides in the official archive. The
-# order here is the order the desk presents them in.
-TERM_PAIRS: tuple[tuple[str, str], ...] = (
-    ("金锻", "金缎"),
-    ("石墩", "石礅"),
-    ("登陆", "登录"),
-    ("鲁本", "鲁伯"),
-    ("云雾飘渺", "云雾缥缈"),
-    ("凤吟凰鸣", "凰吟凤鸣"),
-    ("进发", "迸发"),
-    ("换新", "焕新"),
-    ("等级上线", "等级上限"),
-    ("补获", "捕获"),
-    ("无暇", "无瑕"),
-    ("银辉之匙", "银辉之钥"),
-    ("戈德利克", "戈德里克"),
-    ("长跑专卖店", "长袍专卖店"),
+
+@dataclass(frozen=True)
+class TermPair:
+    """One spelling pair and the evidence rules used to judge it.
+
+    ``patterns_*`` are regular expressions; an empty tuple means "match the
+    spelling literally". ``excludes_*`` removes matches that overlap one of
+    those phrases. The default rules are deliberately literal: a false
+    positive is worse than a missed context, because the desk asks a human to
+    re-read every line it shows.
+    """
+
+    first: str
+    second: str
+    patterns_first: tuple[str, ...] = ()
+    patterns_second: tuple[str, ...] = ()
+    excludes_first: tuple[str, ...] = ()
+    excludes_second: tuple[str, ...] = ()
+    match_note: str = "按字面统计两种写法的全部出现"
+    context_dependent: bool = False
+    recommendation: str = ""
+
+
+PLAIN_TERM_NOTE = "按字面统计两种写法的全部出现"
+
+# The 14 spelling pairs observed in the archive. The order here is the order
+# the desk presents them in before impact sorting.
+TERM_PAIRS: tuple[TermPair, ...] = (
+    TermPair("金锻", "金缎"),
+    TermPair("石墩", "石礅"),
+    TermPair("登陆", "登录"),
+    TermPair("鲁本", "鲁伯"),
+    TermPair("云雾飘渺", "云雾缥缈"),
+    TermPair("凤吟凰鸣", "凰吟凤鸣"),
+    TermPair(
+        "进发",
+        "迸发",
+        context_dependent=True,
+        recommendation="可能是不同词义（进发=出发，迸发=爆发）；请逐条看上下文。",
+        match_note="按字面统计「进发」/「迸发」；两种词义可能不同，需逐条判断",
+    ),
+    TermPair(
+        "换新",
+        "焕新",
+        patterns_first=(r"换新款", r"大奖换新", r"时装换新"),
+        patterns_second=(r"焕新款", r"大奖焕新", r"时装焕新"),
+        excludes_first=(r"兑换新增", r"更换新的", r"伙伴换新装"),
+        match_note=(
+            "只统计「换新款」「大奖换新」「时装换新」；"
+            "不统计「兑换新增」「更换新的」「伙伴换新装」"
+        ),
+    ),
+    TermPair("等级上线", "等级上限"),
+    TermPair(
+        "补获",
+        "捕获",
+        context_dependent=True,
+        recommendation="可能是不同词义或 OCR 误识（补获=额外获得，捕获=抓获）；请逐条看上下文。",
+        match_note="按字面统计「补获」/「捕获」；两种词义可能不同，需逐条判断",
+    ),
+    TermPair(
+        "无暇",
+        "无瑕",
+        patterns_first=(r"无暇信念",),
+        patterns_second=(r"无瑕信念",),
+        match_note="只统计「无暇信念」/「无瑕信念」；不统计词条「无暇」「无瑕」",
+    ),
+    TermPair("银辉之匙", "银辉之钥"),
+    TermPair("戈德利克", "戈德里克"),
+    TermPair("长跑专卖店", "长袍专卖店"),
 )
+
 
 TERM_OPTIONS = [
     {"value": "same_alias", "label": "同一事物，检索合并", "description": "保留原文，建立 alias"},
@@ -80,10 +136,23 @@ DECORATION_MARKERS = ("页脚装饰水印", "HARRY POTTER", "letter-spaced")
 
 # Reasons that describe damage to the source text rather than a wording choice.
 # The ledger writes reasons in both Chinese and English, so both are matched.
-OCR_HIGH_MARKERS = ("水印", "截断", "覆盖", "watermark", "truncat", "covered")
-
-SEVERITY_RANK = {"high": 0, "medium": 1, "low": 2}
-TYPE_RANK = {"term_conflict": 0, "ocr_block": 1}
+OCR_DAMAGE_MARKERS = ("水印", "截断", "覆盖", "watermark", "truncat", "covered")
+# Non-damage reasons that describe typography, quotes or layout rather than
+# uncertain wording. Everything else is ``other``.
+OCR_STYLE_MARKERS = (
+    "style",
+    "ascii",
+    "quote",
+    "引号",
+    "标点",
+    "字体",
+    "字形",
+    "letter",
+    "spacing",
+    "typography",
+    "格式",
+    "排版",
+)
 
 MAX_CONTEXTS_PER_VARIANT = 8
 
@@ -168,14 +237,47 @@ def _row_streams(row: Record) -> list[tuple[str, int | None, list[str]]]:
     return streams
 
 
-def _variant_count(row: Record, variant: str) -> int:
-    return (row.get("body") or "").count(variant) + (row.get("image_text") or "").count(
-        variant
+Pattern = tuple[re.Pattern[str], re.Pattern[str] | None]
+
+
+def _term_patterns(pair: TermPair, variant: str) -> Pattern:
+    """Include/exclude regexes for one spelling of ``pair``."""
+    if variant == pair.first:
+        includes = pair.patterns_first or (re.escape(variant),)
+        excludes = pair.excludes_first
+    else:
+        includes = pair.patterns_second or (re.escape(variant),)
+        excludes = pair.excludes_second
+    include = re.compile("|".join(f"(?:{pattern})" for pattern in includes))
+    exclude = (
+        re.compile("|".join(f"(?:{pattern})" for pattern in excludes))
+        if excludes
+        else None
+    )
+    return include, exclude
+
+
+def _match_count(value: str, pattern: Pattern) -> int:
+    """Count include matches that do not overlap an excluded phrase."""
+    include, exclude = pattern
+    excluded = [match.span() for match in exclude.finditer(value)] if exclude else []
+    count = 0
+    for match in include.finditer(value):
+        start, end = match.span()
+        if any(start < other_end and other_start < end for other_start, other_end in excluded):
+            continue
+        count += 1
+    return count
+
+
+def _variant_count(row: Record, pattern: Pattern) -> int:
+    return _match_count(row.get("body") or "", pattern) + _match_count(
+        row.get("image_text") or "", pattern
     )
 
 
 def _term_contexts(
-    rows: list[Record], variants: list[str]
+    rows: list[Record], variants: list[str], patterns: dict[str, Pattern]
 ) -> dict[str, list[Record]]:
     """Up to :data:`MAX_CONTEXTS_PER_VARIANT` line contexts per variant."""
     contexts: dict[str, list[Record]] = {variant: [] for variant in variants}
@@ -183,9 +285,9 @@ def _term_contexts(
         for section, image, lines in _row_streams(row):
             for position, line in enumerate(lines):
                 for variant in variants:
-                    if variant not in line:
-                        continue
                     if len(contexts[variant]) >= MAX_CONTEXTS_PER_VARIANT:
+                        continue
+                    if not _match_count(line, patterns[variant]):
                         continue
                     contexts[variant].append(
                         {
@@ -204,7 +306,9 @@ def _term_contexts(
     return contexts
 
 
-def _recommendation(minor: Record, major: Record) -> str:
+def _recommendation(pair: TermPair, minor: Record, major: Record) -> str:
+    if pair.context_dependent and pair.recommendation:
+        return pair.recommendation
     if minor["count"] <= 2:
         tail = "稀有写法数量很少，可能是官方笔误或 OCR 混用；倾向合并检索并保留原文。"
     elif minor["count"] * 2 >= major["count"]:
@@ -222,13 +326,17 @@ def term_issues(rows: Iterable[Record]) -> list[Record]:
     """One issue per pair that actually appears on both sides of ``rows``."""
     materialised = list(rows)
     issues: list[Record] = []
-    for first, second in TERM_PAIRS:
+    for pair in TERM_PAIRS:
+        patterns = {
+            pair.first: _term_patterns(pair, pair.first),
+            pair.second: _term_patterns(pair, pair.second),
+        }
         variants: list[Record] = []
-        for variant in (first, second):
+        for variant in (pair.first, pair.second):
             count = 0
             notices = 0
             for row in materialised:
-                seen = _variant_count(row, variant)
+                seen = _variant_count(row, patterns[variant])
                 if seen:
                     count += seen
                     notices += 1
@@ -236,6 +344,7 @@ def term_issues(rows: Iterable[Record]) -> list[Record]:
 
         if not all(variant["count"] for variant in variants):
             # A pair is only a conflict when both spellings are in use.
+            # This also drops 无暇/无瑕 when only the lexicon word appears.
             continue
 
         major = max(variants, key=lambda variant: (variant["count"], variant["notices"]))
@@ -249,25 +358,32 @@ def term_issues(rows: Iterable[Record]) -> list[Record]:
             minor = variants[1]
             major = variants[0]
 
-        high = minor["count"] >= 3 or minor["notices"] >= 5
-        contexts = _term_contexts(materialised, [first, second])
+        if pair.context_dependent:
+            severity = "medium"
+        elif minor["count"] >= 3 or minor["notices"] >= 5:
+            severity = "high"
+        else:
+            severity = "medium"
+        contexts = _term_contexts(materialised, [pair.first, pair.second], patterns)
         issues.append(
             {
-                "id": f"term:{first}|{second}",
+                "id": f"term:{pair.first}|{pair.second}",
                 "type": "term_conflict",
-                "severity": "high" if high else "medium",
-                "title": f"「{first}」与「{second}」",
+                "severity": severity,
+                "title": f"「{pair.first}」与「{pair.second}」",
                 "question": "这两种写法指同一个事物吗？检索时是否合并？",
                 "why": "两种写法都出现在官方原文；当前精确检索会把它们拆成两组。",
+                "match_note": pair.match_note,
                 "variants": variants,
                 "impact": {
                     "minor_count": minor["count"],
+                    "minor_notices": minor["notices"],
                     "total_notices": major["notices"],
                     "search_gain": minor["count"],
                 },
-                "contexts": contexts[first] + contexts[second],
+                "contexts": contexts[pair.first] + contexts[pair.second],
                 "options": [dict(option) for option in TERM_OPTIONS],
-                "recommendation": _recommendation(minor, major),
+                "recommendation": _recommendation(pair, minor, major),
             }
         )
     return issues
@@ -290,11 +406,14 @@ def _is_decoration(reason: str) -> bool:
     return any(marker.casefold() in folded for marker in DECORATION_MARKERS)
 
 
-def _ocr_severity(reason: str, corrected: str) -> str:
+def _ocr_risk(reason: str) -> str:
+    """Whether the uncertainty comes from source damage, typography or neither."""
     folded = reason.casefold()
-    if len(corrected) >= 10 or any(marker.casefold() in folded for marker in OCR_HIGH_MARKERS):
-        return "high"
-    return "medium"
+    if any(marker.casefold() in folded for marker in OCR_DAMAGE_MARKERS):
+        return "source_damage"
+    if any(marker.casefold() in folded for marker in OCR_STYLE_MARKERS):
+        return "style"
+    return "other"
 
 
 def _ocr_cache_read(base: Path, notice: str, cache: dict[str, Record | None]) -> Record | None:
@@ -380,7 +499,8 @@ def _ocr_issues(root: Path, rows: list[Record]) -> list[Record]:
                 {
                     "id": f"ocr:{notice}:{image_index}:{block_index}",
                     "type": "ocr_block",
-                    "severity": _ocr_severity(reason, corrected),
+                    "severity": "medium",
+                    "risk": _ocr_risk(reason),
                     "title": f"{notice} · 图 {image_index} · block {block_index}",
                     "question": "这个 block 的源图文字是什么？",
                     "why": f"confidence=medium；{reason}",
@@ -441,21 +561,36 @@ def _index_decisions(
     return latest
 
 
+def _term_sort_key(issue: Record) -> tuple[int, int, str]:
+    impact = issue.get("impact") or {}
+    return (
+        -int(impact.get("minor_count") or 0),
+        -int(impact.get("minor_notices") or 0),
+        issue.get("id") or "",
+    )
+
+
+def _ocr_sort_key(issue: Record) -> tuple[int, str]:
+    return (0 if issue.get("risk") == "source_damage" else 1, issue.get("id") or "")
+
+
 def build_queue(
     root: str | Path | None = None,
     decisions: Mapping[str, Record] | Iterable[Record] | None = None,
 ) -> Record:
-    """Merge term and OCR issues, sorted for the desk, with progress stats."""
+    """Merge term and OCR issues, sorted for the desk, with progress stats.
+
+    Term conflicts come first, ordered by impact (the rare spelling's count and
+    notice spread). OCR issues follow, source damage first. OCR never uses
+    ``high`` severity, so the high-priority filter is terminology only.
+    """
     base = Path(root) if root else archive.REPO_ROOT
     rows = load_fulltext_rows(base)
-    issues = term_issues(rows) + _ocr_issues(base, rows)
-    issues.sort(
-        key=lambda issue: (
-            SEVERITY_RANK.get(issue.get("severity"), len(SEVERITY_RANK)),
-            TYPE_RANK.get(issue.get("type"), len(TYPE_RANK)),
-            issue.get("id") or "",
-        )
-    )
+    terms = term_issues(rows)
+    terms.sort(key=_term_sort_key)
+    ocr = _ocr_issues(base, rows)
+    ocr.sort(key=_ocr_sort_key)
+    issues = terms + ocr
 
     latest = (
         load_decisions(default_decisions_path(base))
@@ -495,6 +630,7 @@ def build_queue(
         "ocr": sum(1 for issue in issues if issue["type"] == "ocr_block"),
         "term_pending": term_pending,
         "ocr_pending": ocr_pending,
+        "source_damage": sum(1 for issue in issues if issue.get("risk") == "source_damage"),
     }
     return {"issues": issues, "stats": stats}
 
