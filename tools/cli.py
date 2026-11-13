@@ -9,7 +9,7 @@
     python -m tools.cli audit-compare [--crops] [--notice ID]...
     python -m tools.cli apply-verdicts [--dry-run]
     python -m tools.cli dataset [--check] [--allow-unverified]
-    python -m tools.cli review [--port N] [--no-browser] [--export]
+    python -m tools.cli review [--port N] [--no-browser] [--export | --apply [--dry-run]]
 """
 
 from __future__ import annotations
@@ -153,6 +153,12 @@ def _dataset(args: argparse.Namespace) -> int:
 def _review(args: argparse.Namespace) -> int:
     from . import review
 
+    if args.dry_run and not args.apply:
+        raise CliError("--dry-run is only meaningful with --apply")
+    if args.apply:
+        result = review.apply(dry_run=args.dry_run)
+        print(json.dumps(result, ensure_ascii=False, sort_keys=True, default=str))
+        return 1 if result.get("problems") else 0
     if args.export:
         result = review.export()
         print(json.dumps(result, ensure_ascii=False, sort_keys=True, default=str))
@@ -284,10 +290,24 @@ def main(argv: list[str] | None = None) -> int:
     review_cmd.add_argument(
         "--no-browser", action="store_true", help="do not open the browser automatically"
     )
-    review_cmd.add_argument(
+    review_mode = review_cmd.add_mutually_exclusive_group()
+    review_mode.add_argument(
         "--export",
         action="store_true",
         help="write review/terms.json and review/ocr-decisions.jsonl, then exit",
+    )
+    review_mode.add_argument(
+        "--apply",
+        action="store_true",
+        help=(
+            "apply the latest decisions to corrections/ and review/terms.json, "
+            "write review/apply-report.json, then exit"
+        ),
+    )
+    review_cmd.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="with --apply: report what would change without writing anything",
     )
     review_cmd.set_defaults(func=_review)
 

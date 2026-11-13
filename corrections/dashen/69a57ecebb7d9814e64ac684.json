@@ -324,11 +324,12 @@
       "image_index": 2,
       "block_index": 39,
       "original": "“与月痴兽共舞”关卡将于3月11日缺神敬请期待魔法觉醒",
-      "corrected": "“与月痴兽共舞”关卡将于3月11日敬请期待",
-      "reason": "「敬请期待」可见，其前 1-2 字被水印覆盖不可恢复",
-      "confidence": "medium",
-      "via": "audit-adjudication",
-      "recrop": "python -m tools.cli crop dashen.69a57ecebb7d9814e64ac684 2 39"
+      "corrected": "“与月痴兽共舞”关卡将于3月11日解锁，敬请期待！",
+      "reason": "「敬请期待」可见，其前 1-2 字被水印覆盖不可恢复；review desk 专家裁决",
+      "confidence": "high",
+      "via": "expert-review",
+      "recrop": "python -m tools.cli crop dashen.69a57ecebb7d9814e64ac684 2 39",
+      "review_issue_id": "ocr:dashen.69a57ecebb7d9814e64ac684:2:39"
     },
     {
       "image_index": 4,

@@ -252,11 +252,12 @@
       "image_index": 7,
       "block_index": 37,
       "original": "爆炸南瓜将更容易被击破，爆炸伤害@哈利波特魔法觉醒",
-      "corrected": "爆炸南瓜将更容易被击破，爆炸伤害不变",
-      "reason": "该行真实且为唯一读块（v6漏读）；印刷为「爆炸南瓜将更容易被击破，爆炸伤害不变」，v4把水印「@哈利波特魔法觉醒」混入行尾；「不变」二字在zoom下清晰可辨，其后句号（若有）被水印遮挡不可恢复",
-      "confidence": "medium",
-      "via": "audit-adjudication",
-      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 7 37"
+      "corrected": "爆炸南瓜将更容易被击破，爆炸伤害不变。",
+      "reason": "该行真实且为唯一读块（v6漏读）；印刷为「爆炸南瓜将更容易被击破，爆炸伤害不变」，v4把水印「@哈利波特魔法觉醒」混入行尾；「不变」二字在zoom下清晰可辨，其后句号（若有）被水印遮挡不可恢复；review desk 专家裁决",
+      "confidence": "high",
+      "via": "expert-review",
+      "recrop": "python -m tools.cli crop dashen.63c6b1113408360001bff04e 7 37",
+      "review_issue_id": "ocr:dashen.63c6b1113408360001bff04e:7:37"
     },
     {
       "image_index": 8,

@@ -35,10 +35,12 @@
       "image_index": 4,
       "block_index": 41,
       "original": "光辉品质：冷却时间由15s降低至大神@哈利波特魔法觉醒",
-      "corrected": "光辉品质：冷却时间由15s降低至8s。",
-      "reason": "水印覆盖处源图为“降低至8s。”，与同组其他品质一致。",
-      "confidence": "medium",
-      "recrop": "python -m tools.cli crop dashen.68b594ba8a13201e411f7478 4 41"
+      "corrected": "光辉品质：冷却时间由15s降低至5s。",
+      "reason": "水印覆盖处源图为“降低至8s。”，与同组其他品质一致。；review desk 专家裁决",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.68b594ba8a13201e411f7478 4 41",
+      "via": "expert-review",
+      "review_issue_id": "ocr:dashen.68b594ba8a13201e411f7478:4:41"
     },
     {
       "image_index": 5,

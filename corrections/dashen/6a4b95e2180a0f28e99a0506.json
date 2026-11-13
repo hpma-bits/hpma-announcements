@@ -35,10 +35,12 @@
       "image_index": 2,
       "block_index": 21,
       "original": "赛季预告开启时间：2026年7月15六神00月22日7：00觉醒",
-      "corrected": "赛季预告开启时间：2026年7月15日0:00-7月22日7:00",
-      "reason": "“六神00月”为水印窜入；源图可辨为“2026年7月15日0:00-7月22日7:00”",
-      "confidence": "medium",
-      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 2 21"
+      "corrected": "赛季预告开启时间：2026年7月15日7:00-7月22日7:00",
+      "reason": "“六神00月”为水印窜入；源图可辨为“2026年7月15日0:00-7月22日7:00”；review desk 专家裁决",
+      "confidence": "high",
+      "recrop": "python -m tools.cli crop dashen.6a4b95e2180a0f28e99a0506 2 21",
+      "via": "expert-review",
+      "review_issue_id": "ocr:dashen.6a4b95e2180a0f28e99a0506:2:21"
     },
     {
       "image_index": 3,

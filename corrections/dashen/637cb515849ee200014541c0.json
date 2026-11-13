@@ -77,11 +77,12 @@
       "image_index": 2,
       "block_index": 27,
       "original": "包”、“传说记忆瓶”、“幸运发条大神电磨礼融特魔法觉醒",
-      "corrected": "包”、“传说记忆瓶”、“幸运发条”",
-      "reason": "crop d1-167: body through 幸运发条” clean in both; tail after ” under opaque 大神@哈利波特魔法觉醒 watermark unrecoverable (only fragment strokes visible); corrected cut at last clean point per d1-125 precedent",
-      "confidence": "medium",
-      "via": "audit-adjudication",
-      "recrop": "python -m tools.cli crop dashen.637cb515849ee200014541c0 2 27"
+      "corrected": "包”、“传说记忆瓶”、“幸运发条” 等丰厚礼品！",
+      "reason": "crop d1-167: body through 幸运发条” clean in both; tail after ” under opaque 大神@哈利波特魔法觉醒 watermark unrecoverable (only fragment strokes visible); corrected cut at last clean point per d1-125 precedent；review desk 专家裁决",
+      "confidence": "high",
+      "via": "expert-review",
+      "recrop": "python -m tools.cli crop dashen.637cb515849ee200014541c0 2 27",
+      "review_issue_id": "ocr:dashen.637cb515849ee200014541c0:2:27"
     }
   ]
 }

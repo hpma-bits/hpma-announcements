@@ -112,11 +112,12 @@
       "image_index": 1,
       "block_index": 24,
       "original": "20张魔咒的平均等级（不包含回响加成由@哈利波特魔法觉醒",
-      "corrected": "20张魔咒的平均等级（不包含回响加成",
-      "reason": "crop d1-125 shows row ending 不包含回响加成 with white footer watermark covering tail; v4 tail 由@哈利波特魔法觉醒 and v6 加或 are watermark garbage",
-      "confidence": "medium",
-      "via": "audit-adjudication",
-      "recrop": "python -m tools.cli crop dashen.62f222a5849ee200017e6aaa 1 24"
+      "corrected": "20张魔咒的平均等级（不包含回响加成）。",
+      "reason": "crop d1-125 shows row ending 不包含回响加成 with white footer watermark covering tail; v4 tail 由@哈利波特魔法觉醒 and v6 加或 are watermark garbage；review desk 专家裁决",
+      "confidence": "high",
+      "via": "expert-review",
+      "recrop": "python -m tools.cli crop dashen.62f222a5849ee200017e6aaa 1 24",
+      "review_issue_id": "ocr:dashen.62f222a5849ee200017e6aaa:1:24"
     },
     {
       "image_index": 4,

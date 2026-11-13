@@ -389,11 +389,12 @@
       "image_index": 5,
       "block_index": 62,
       "original": "脚印特效补充：“深邃默者”、“权神辉合利波特魔法觉醒",
-      "corrected": "脚印特效补充：“深邃缄默者”、“权力之辉”",
-      "reason": "zoom d2-z234: 脚印特效补充：“深邃缄默者”、“权 legible (v4 missed 缄), tail 力之辉” recovered from fragments under the 大神@哈利波特魔法觉醒 watermark (name consistent with corpus); anything after 辉” unrecoverable",
-      "confidence": "medium",
-      "via": "audit-adjudication",
-      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 5 62"
+      "corrected": "脚印特效补充：“深邃缄默者”、“权力之辉”。",
+      "reason": "zoom d2-z234: 脚印特效补充：“深邃缄默者”、“权 legible (v4 missed 缄), tail 力之辉” recovered from fragments under the 大神@哈利波特魔法觉醒 watermark (name consistent with corpus); anything after 辉” unrecoverable；review desk 专家裁决",
+      "confidence": "high",
+      "via": "expert-review",
+      "recrop": "python -m tools.cli crop dashen.678f152cae5fe633cd282a56 5 62",
+      "review_issue_id": "ocr:dashen.678f152cae5fe633cd282a56:5:62"
     },
     {
       "image_index": 6,
