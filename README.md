@@ -25,7 +25,7 @@ study/labels-nga.jsonl                      which NGA threads are notices
 assets/dashen/<feed_id>/<NN>.<ext>          original image bytes (650 images)
 derived/ocr/dashen/<feed_id>.json           OCR engine output (v4, the record), immutable
 derived/ocr-v6/dashen/<feed_id>.json        the v6 second reading (audit evidence)
-derived/ocr/corrections/dashen/<id>.json    the correction ledger: human decisions
+corrections/dashen/<id>.json                the correction ledger: human decisions
 derived/audit/dashen/<feed_id>.json         per-block audit status (the quality record)
 edition/dashen/<feed_id>.md                 the readable edition, one file per notice
 edition/nga/<tid>.md                        the NGA text-only edition

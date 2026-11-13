@@ -231,8 +231,8 @@ def test_build_is_deterministic(tmp_path):
 
 def test_build_raises_when_a_ledger_is_stale(tmp_path):
     _seed(tmp_path)
-    (tmp_path / "derived/ocr/corrections/dashen").mkdir(parents=True)
-    (tmp_path / "derived/ocr/corrections/dashen/aaaa.json").write_text(
+    (tmp_path / "corrections/dashen").mkdir(parents=True)
+    (tmp_path / "corrections/dashen/aaaa.json").write_text(
         json.dumps(
             {
                 "id": "dashen.aaaa",

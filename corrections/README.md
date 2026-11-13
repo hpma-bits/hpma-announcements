@@ -3,7 +3,7 @@
 One JSON file per notice, named by the Dashen feed id, listing every human
 decision about that notice's OCR text. The format, the freshness rule and the
 `crop` / `verify` commands are documented in the repository
-[README](../../../README.md#the-correction-ledger).
+[README](../README.md#the-correction-ledger).
 
 ```bash
 python -m tools.cli verify          # every entry against the raw OCR
