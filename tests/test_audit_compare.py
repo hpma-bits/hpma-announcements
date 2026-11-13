@@ -103,6 +103,27 @@ def test_compare_notice_marks_punctuation_only_drift():
     assert op["v6_text"] == "将于6月1日04：00-09:00维护"
 
 
+def test_compare_notice_refuses_to_audit_itself():
+    v4 = _notice(["第一行"])
+    v4["engine"] = {"name": "rapidocr", "model": "PP-OCRv6-small"}
+    v6 = _notice(["第一行"])
+    v6["engine"] = {"name": "rapidocr", "model": "PP-OCRv6-small"}
+
+    with pytest.raises(ac.SelfAuditError, match="both carry engine"):
+        ac.compare_notice(v4, None, v6)
+
+
+def test_compare_notice_accepts_two_engine_fingerprints():
+    v4 = _notice(["第一行"])
+    v4["engine"] = {"name": "rapidocr-onnxruntime", "model": "PP-OCRv4"}
+    v6 = _notice(["第一行"])
+    v6["engine"] = {"name": "rapidocr", "model": "PP-OCRv6-small"}
+
+    result = ac.compare_notice(v4, None, v6)
+
+    assert result["counts"]["equal"] == 1
+
+
 def test_compare_notice_reports_missing_v6_image():
     v4 = _notice(["第一行"])
     v6 = {"id": "dashen.aaaa", "images": []}

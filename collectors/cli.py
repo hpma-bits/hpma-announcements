@@ -63,7 +63,16 @@ def _nga(args: argparse.Namespace) -> int:
 
 
 def _ocr(args: argparse.Namespace) -> int:
-    stats = ocr.run(family=args.family, limit=args.limit, force=args.force)
+    try:
+        stats = ocr.run(
+            family=args.family,
+            limit=args.limit,
+            force=args.force,
+            migrate_ledger=args.migrate_ledger,
+        )
+    except (ocr.LedgerMigrationError, ValueError, OSError) as exc:
+        print(f"ocr: {exc}", file=sys.stderr)
+        return 1
     print(json.dumps(stats, sort_keys=True))
     return 0 if stats["failed_posts"] == 0 else 1
 
@@ -136,7 +145,18 @@ def main(argv: list[str] | None = None) -> int:
     ocr_cmd.add_argument(
         "--force",
         action="store_true",
-        help="re-OCR every notice under the current engine, overriding kept foreign records",
+        help=(
+            "re-OCR under the current engine, overriding kept foreign records; "
+            "with the same engine this still retries only failed/missing images"
+        ),
+    )
+    ocr_cmd.add_argument(
+        "--migrate-ledger",
+        action="store_true",
+        help=(
+            "allow --force to re-OCR notices whose correction ledger anchors a "
+            "different engine; revalidate those ledgers afterwards"
+        ),
     )
     ocr_cmd.set_defaults(func=_ocr)
 

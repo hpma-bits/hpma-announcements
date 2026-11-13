@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from tools import audit_status
+from tools import audit_compare, audit_status
 
 
 def _block(text: str) -> dict:
@@ -69,6 +69,23 @@ def _evidence(
 def _payload(root: Path, feed: str = "aaaa") -> dict:
     payloads, _ = audit_status.build(root)
     return json.loads(payloads[feed])
+
+
+def _selection(root: Path, feed: str = "aaaa") -> None:
+    """Track one update notice so the coverage gate has an expectation."""
+    _write_jsonl(
+        root / "corpus/dashen/posts.jsonl",
+        [{
+            "id": feed,
+            "published_at": "2026-01-01T00:00:00+08:00",
+            "title": "【1月1日更新公告】",
+            "feed_url": f"https://ds.163.com/feed/{feed}/",
+        }],
+    )
+    _write_jsonl(
+        root / "study/labels.jsonl",
+        [{"id": feed, "label": "update", "notice_date": "2026-01-02"}],
+    )
 
 
 @pytest.mark.parametrize(
@@ -148,15 +165,83 @@ def test_ledger_statuses_outrank_verdicts(tmp_path):
     ]
 
 
-def test_missing_v6_reading_is_skipped(tmp_path, capsys):
+def test_missing_v6_reading_fails_coverage(tmp_path, capsys):
     _seed(tmp_path, v6=None)
     _evidence(tmp_path)
 
-    payloads, totals = audit_status.build(tmp_path)
+    with pytest.raises(audit_status.CoverageError) as excinfo:
+        audit_status.build(tmp_path)
+    assert "missing v6 reading for aaaa" in excinfo.value.problems
 
-    assert payloads == {}
-    assert totals == {}
-    assert "no v6 reading for aaaa" in capsys.readouterr().err
+    assert audit_status.run(tmp_path) == 1
+    assert "missing v6 reading for aaaa" in capsys.readouterr().err
+    assert not (tmp_path / "derived/audit").exists()
+
+
+def test_empty_ocr_record_fails_coverage(tmp_path):
+    feed = "aaaa"
+    _write_json(
+        tmp_path / "derived/ocr/dashen" / f"{feed}.json",
+        {"id": f"dashen.{feed}", "engine": "v4", "images": [{"index": 1, "blocks": []}]},
+    )
+    _write_json(
+        tmp_path / "derived/ocr-v6/dashen" / f"{feed}.json",
+        {"id": f"dashen.{feed}", "engine": "v6", "images": [{"index": 1, "blocks": []}]},
+    )
+    _evidence(tmp_path)
+
+    with pytest.raises(audit_status.CoverageError) as excinfo:
+        audit_status.build(tmp_path)
+
+    assert "v4 OCR for aaaa has zero text blocks" in excinfo.value.problems
+    assert "v6 OCR for aaaa has zero text blocks" in excinfo.value.problems
+    assert audit_status.run(tmp_path) == 1
+
+
+def test_a_failed_image_fails_coverage(tmp_path):
+    feed = "aaaa"
+    _write_json(
+        tmp_path / "derived/ocr/dashen" / f"{feed}.json",
+        {
+            "id": f"dashen.{feed}",
+            "engine": "v4",
+            "images": [{"index": 1, "error": "RuntimeError('boom')"}],
+        },
+    )
+    _write_json(
+        tmp_path / "derived/ocr-v6/dashen" / f"{feed}.json",
+        _notice(feed, ("一致",), "v6"),
+    )
+    _evidence(tmp_path)
+
+    with pytest.raises(audit_status.CoverageError) as excinfo:
+        audit_status.build(tmp_path)
+
+    assert "v4 image aaaa/1 failed: RuntimeError('boom')" in excinfo.value.problems
+    assert audit_status.run(tmp_path) == 1
+
+
+def test_an_expected_notice_without_v4_ocr_fails_coverage(tmp_path):
+    _selection(tmp_path)
+    _evidence(tmp_path)
+
+    with pytest.raises(audit_status.CoverageError) as excinfo:
+        audit_status.build(tmp_path)
+
+    assert "missing v4 OCR for expected notice aaaa" in excinfo.value.problems
+    assert audit_status.run(tmp_path, check=True) == 1
+    assert not (tmp_path / "derived/audit").exists()
+
+
+def test_same_engine_audit_is_refused(tmp_path):
+    _seed(tmp_path, v4=("一致",), v6=("一致",))
+    _write_json(
+        tmp_path / "derived/ocr-v6/dashen/aaaa.json", _notice("aaaa", ("一致",), "v4")
+    )
+    _evidence(tmp_path)
+
+    with pytest.raises(audit_compare.SelfAuditError, match="both carry engine"):
+        audit_status.build(tmp_path)
 
 
 def test_empty_corpus_is_a_clean_run(tmp_path):

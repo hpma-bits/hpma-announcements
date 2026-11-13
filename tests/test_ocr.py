@@ -1,5 +1,7 @@
 import json
 
+import pytest
+
 from collectors import ocr
 
 
@@ -103,6 +105,116 @@ def test_ocr_retries_failed_image_on_next_run(tmp_path):
     notice = json.loads((tmp_path / "derived" / "ocr" / "dashen" / "cccc.json").read_text(encoding="utf-8"))
     assert notice["text"] == "好文本"
     assert "error" not in notice["images"][0]
+
+
+def test_truncated_notice_json_is_rebuilt(tmp_path):
+    post, _ = _post("abcd", "update", ["https://ok.166.net/x1"])
+    _seed(tmp_path, [post], [("abcd", "update")])
+    calls = {"n": 0}
+
+    def engine(path: str):
+        calls["n"] += 1
+        return [{"box": [[0, 0], [9, 0], [9, 9], [0, 9]], "text": "文本", "score": 0.9}]
+
+    def fetch(url: str) -> bytes:
+        return JPEG_BYTES
+
+    assert ocr.run(
+        tmp_path, engine=engine, engine_meta={"name": "fake", "version": "0"},
+        fetch=fetch, delay=0,
+    )["written"] == 1
+    out = tmp_path / "derived" / "ocr" / "dashen" / "abcd.json"
+    payload = out.read_text(encoding="utf-8")
+    out.write_text(payload[: len(payload) // 2], encoding="utf-8")
+
+    stats = ocr.run(
+        tmp_path, engine=engine, engine_meta={"name": "fake", "version": "0"},
+        fetch=fetch, delay=0,
+    )
+
+    assert stats["written"] == 1
+    assert stats["ocred"] == 1
+    assert calls["n"] == 2
+    notice = json.loads(out.read_text(encoding="utf-8"))
+    assert notice["text"] == "文本"
+
+
+def test_force_refuses_a_cross_engine_rewrite_while_a_ledger_exists(tmp_path):
+    post, _ = _post("abce", "update", ["https://ok.166.net/y1"])
+    _seed(tmp_path, [post], [("abce", "update")])
+    calls = {"n": 0}
+
+    def engine(path: str):
+        calls["n"] += 1
+        return [{"box": [[0, 0], [9, 0], [9, 9], [0, 9]], "text": "旧引擎", "score": 0.9}]
+
+    def fetch(url: str) -> bytes:
+        return JPEG_BYTES
+
+    ocr.run(
+        tmp_path, engine=engine, engine_meta={"name": "fake", "version": "1"},
+        fetch=fetch, delay=0,
+    )
+    ledger = tmp_path / "corrections" / "dashen" / "abce.json"
+    ledger.parent.mkdir(parents=True)
+    ledger.write_text('{"corrections": []}\n', encoding="utf-8")
+    out = tmp_path / "derived" / "ocr" / "dashen" / "abce.json"
+    before = out.read_bytes()
+
+    with pytest.raises(ocr.LedgerMigrationError, match="--migrate-ledger"):
+        ocr.run(
+            tmp_path, engine=engine, engine_meta={"name": "fake", "version": "2"},
+            fetch=fetch, delay=0, force=True,
+        )
+
+    assert out.read_bytes() == before
+    assert calls["n"] == 1
+
+    stats = ocr.run(
+        tmp_path, engine=engine, engine_meta={"name": "fake", "version": "2"},
+        fetch=fetch, delay=0, force=True, migrate_ledger=True,
+    )
+    assert stats["ocred"] == 1
+    assert json.loads(out.read_text(encoding="utf-8"))["engine"]["version"] == "2"
+
+
+def test_same_engine_force_retries_only_failed_images(tmp_path):
+    post, _ = _post(
+        "abcf", "update", ["https://ok.166.net/z1", "https://ok.166.net/z2"]
+    )
+    _seed(tmp_path, [post], [("abcf", "update")])
+    calls = {"n": 0}
+
+    def engine(path: str):
+        calls["n"] += 1
+        if calls["n"] == 1:
+            raise RuntimeError("engine hiccup")
+        return [{"box": [[0, 0], [9, 0], [9, 9], [0, 9]], "text": "文本", "score": 0.9}]
+
+    def fetch(url: str) -> bytes:
+        return JPEG_BYTES
+
+    first = ocr.run(
+        tmp_path, engine=engine, engine_meta={"name": "fake", "version": "0"},
+        fetch=fetch, delay=0,
+    )
+    assert first["failed_images"] == 1
+    ledger = tmp_path / "corrections" / "dashen" / "abcf.json"
+    ledger.parent.mkdir(parents=True)
+    ledger.write_text('{"corrections": []}\n', encoding="utf-8")
+
+    second = ocr.run(
+        tmp_path, engine=engine, engine_meta={"name": "fake", "version": "0"},
+        fetch=fetch, delay=0, force=True,
+    )
+
+    assert second["ocred"] == 1
+    assert calls["n"] == 3  # first run: 2 images; force retries only the failed one
+
+
+def test_build_engine_rejects_an_unknown_name():
+    with pytest.raises(ValueError, match="unknown OCR engine"):
+        ocr.build_engine("v5")
 
 
 def test_sniff_ext():

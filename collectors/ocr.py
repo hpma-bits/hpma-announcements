@@ -5,12 +5,17 @@ images as original bytes under ``assets/dashen/<feed_id>/``, runs a local OCR
 engine, and writes one JSON per notice under ``derived/ocr/dashen/<feed_id>.json``.
 Corpus text is never modified; OCR output is a derived layer.
 
-Engine: rapidocr-onnxruntime (PP-OCRv4 models), installed via the ``ocr``
-extra (``uv sync --all-extras``) so the base test suite stays dependency-light.
-The import is lazy and the engine is injectable for tests.
+Engines: two rapidocr families share one windowed reader. ``build_engine("v6")``
+(PP-OCRv6 small) is the default for new notices; ``build_engine("v4")``
+(rapidocr-onnxruntime, PP-OCRv4) produced the committed 162 records and is the
+independent second reader for new v6 notices. Both live behind extras
+(``uv sync --all-extras``) so the base test suite stays dependency-light; the
+imports are lazy and the engine is injectable for tests.
 
 Reruns are idempotent: existing image bytes are not re-downloaded, and an
 image whose ``sha256`` already has text in the notice JSON is not re-OCRed.
+A truncated notice JSON is treated as absent and rebuilt, so a killed run
+cannot wedge a notice.
 """
 
 from __future__ import annotations
@@ -22,13 +27,17 @@ import time
 from pathlib import Path
 from typing import Any, Callable
 
-from . import http
+from . import atomic, http
 from .paths import REPO_ROOT
 
 Fetcher = Callable[[str], bytes]
 Block = dict[str, Any]
 Engine = Callable[[str], list[Block]]
 PNG_MAGIC = b"\x89PNG\r\n\x1a\n"
+
+
+class LedgerMigrationError(RuntimeError):
+    """``--force`` would re-OCR a notice whose correction ledger anchors another engine."""
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -129,24 +138,12 @@ def _rapidocr_v6():
     return engine, meta
 
 
-def default_engine() -> tuple[Engine, dict[str, str]]:
-    """Build the engine for NEW notices: rapidocr 3.x (PP-OCRv6 small).
+def _rapidocr_v4() -> tuple[Engine, dict[str, str]]:
+    """Build the rapidocr-onnxruntime (PP-OCRv4) engine, lazily.
 
-    The 162 notices already on file keep their v4 records verbatim: run()
-    skips any notice whose OCR was produced by a different, complete engine
-    fingerprint, so switching the default never rewrites committed history.
-    ``--force`` on the CLI re-OCRs everything under the current engine
-    (an explicit migration). The benchmark that decided this lives in the
-    repo history: v6 fixes 3.4x more human-corrected hard blocks than v4
-    and reads full images twice as fast.
-
-    Heavy dependency; imported lazily.
+    This engine produced the committed 162 records. It stays available as the
+    independent second reading when the record was made by v6.
     """
-    return _rapidocr_v6()
-
-
-def v4_engine() -> tuple[Engine, dict[str, str]]:
-    """The retired engine of record for the committed 162 notices."""
     from importlib.metadata import version
 
     import cv2
@@ -185,6 +182,50 @@ def v4_engine() -> tuple[Engine, dict[str, str]]:
     return engine, meta
 
 
+ENGINE_BUILDERS: dict[str, Callable[[], tuple[Engine, dict[str, str]]]] = {
+    "v4": _rapidocr_v4,
+    "v6": _rapidocr_v6,
+}
+
+
+def build_engine(name: str) -> tuple[Engine, dict[str, str]]:
+    """Build a named OCR engine: ``"v4"`` (PP-OCRv4) or ``"v6"`` (PP-OCRv6 small).
+
+    This is the single construction point for both layers: :func:`default_engine`
+    and :func:`v4_engine` are thin wrappers, and the audit runner asks for its
+    second reader by name. An unknown name fails loudly instead of falling back
+    to the default engine (which would turn the audit into a self-review).
+    """
+    try:
+        builder = ENGINE_BUILDERS[name]
+    except KeyError:
+        choices = ", ".join(sorted(ENGINE_BUILDERS))
+        raise ValueError(f"unknown OCR engine {name!r}; choose one of: {choices}") from None
+    return builder()
+
+
+def default_engine() -> tuple[Engine, dict[str, str]]:
+    """Build the engine for NEW notices: rapidocr 3.x (PP-OCRv6 small).
+
+    The 162 notices already on file keep their v4 records verbatim: run()
+    skips any notice whose OCR was produced by a different, complete engine
+    fingerprint, so switching the default never rewrites committed history.
+    ``--force`` on the CLI is the explicit migration switch, and it refuses to
+    touch a notice that already has a correction ledger until
+    ``--migrate-ledger`` acknowledges that the ledger must be revalidated.
+    The benchmark that chose v6 lives in the repo history: v6 fixes 3.4x more
+    human-corrected hard blocks than v4 and reads full images twice as fast.
+
+    Heavy dependency; imported lazily.
+    """
+    return build_engine("v6")
+
+
+def v4_engine() -> tuple[Engine, dict[str, str]]:
+    """The engine that produced the committed 162 notices (PP-OCRv4)."""
+    return build_engine("v4")
+
+
 def load_posts(root: Path, family: str) -> list[dict[str, Any]]:
     corpus_path = root / "corpus" / "dashen" / "posts.jsonl"
     labels_path = root / "study" / "labels.jsonl"
@@ -219,6 +260,55 @@ def _local_image(asset_dir: Path, index: int) -> Path | None:
     return matches[0] if matches else None
 
 
+def _read_existing(path: Path) -> dict[str, Any]:
+    """Load a prior notice JSON; malformed output is treated as no cache.
+
+    A killed process can leave a truncated file behind. Refusing the notice
+    would wedge it forever, so the caller rebuilds it from the assets and the
+    engine instead. Any other read error still propagates.
+    """
+    if not path.is_file():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+
+
+def _refuse_ledger_migration(
+    base: Path,
+    posts: list[dict[str, Any]],
+    derived_dir: Path,
+    engine_meta: dict[str, str] | None,
+) -> None:
+    """Refuse a cross-engine ``--force`` while correction ledgers still anchor OCR.
+
+    Checked before any file is written (the asset and output directories are
+    untouched), so an accidental engine switch cannot silently invalidate
+    ledger locators. ``--migrate-ledger`` is the explicit override; the
+    operator then revalidates the ledgers after the re-OCR.
+    """
+    if engine_meta is None:
+        return
+    blocked: list[str] = []
+    for post in posts:
+        feed = post["id"]
+        existing = _read_existing(derived_dir / f"{feed}.json")
+        if not existing or existing.get("engine") == engine_meta:
+            continue
+        if (base / "corrections" / "dashen" / f"{feed}.json").is_file():
+            blocked.append(feed)
+    if not blocked:
+        return
+    shown = ", ".join(blocked[:5])
+    more = f" (+{len(blocked) - 5} more)" if len(blocked) > 5 else ""
+    raise LedgerMigrationError(
+        f"--force would re-OCR {len(blocked)} notice(s) under a different engine "
+        f"than their correction ledger anchors: {shown}{more}; revalidate those "
+        f"ledgers, then rerun with --migrate-ledger"
+    )
+
+
 def _image_bytes(
     asset_dir: Path,
     index: int,
@@ -246,7 +336,7 @@ def _store_image(asset_dir: Path, index: int, data: bytes, url: str) -> Path:
         if stale != path:
             stale.unlink()
     if not path.exists() or path.read_bytes() != data:
-        path.write_bytes(data)
+        atomic.write_bytes(path, data)
     return path
 
 
@@ -273,6 +363,7 @@ def run(
     out_dir: str | Path | None = None,
     download: bool = True,
     force: bool = False,
+    migrate_ledger: bool = False,
 ) -> dict[str, int]:
     root_path = Path(root) if root else REPO_ROOT
     posts = load_posts(root_path, family)
@@ -288,6 +379,9 @@ def run(
                 raise ValueError(f"download disabled: {url}")
 
     derived_dir = (root_path / out_dir) if out_dir else (root_path / "derived" / "ocr" / "dashen")
+    if force and not migrate_ledger:
+        # Preflight before any directory or file is created.
+        _refuse_ledger_migration(root_path, posts, derived_dir, engine_meta)
     derived_dir.mkdir(parents=True, exist_ok=True)
     stats = {
         "posts": 0,
@@ -306,9 +400,7 @@ def run(
             asset_dir = root_path / "assets" / "dashen" / feed_id
             asset_dir.mkdir(parents=True, exist_ok=True)
             out_path = derived_dir / f"{feed_id}.json"
-            existing: dict[str, Any] = {}
-            if out_path.exists():
-                existing = json.loads(out_path.read_text(encoding="utf-8"))
+            existing = _read_existing(out_path)
             if (
                 existing
                 and not force
@@ -327,8 +419,10 @@ def run(
                 continue
             cached: dict[int, dict[str, Any]] = {}
             if existing.get("engine") == engine_meta:
-                # Same engine fingerprint: reuse per-image OCR by sha256.
-                # A changed engine/meta invalidates every cached line.
+                # Same engine fingerprint: reuse per-image OCR by sha256, even
+                # with --force. A force retry therefore re-OCRs only failed or
+                # missing images; a changed engine/meta invalidates every
+                # cached line.
                 cached = {
                     image["index"]: image
                     for image in existing.get("images", [])
@@ -395,7 +489,7 @@ def run(
             }
             payload = json.dumps(notice, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
             if not out_path.exists() or out_path.read_text(encoding="utf-8") != payload:
-                out_path.write_text(payload, encoding="utf-8", newline="\n")
+                atomic.write_text(out_path, payload)
                 stats["written"] += 1
             stats["posts"] += 1
         except Exception as exc:  # noqa: BLE001 - one notice must not kill the run

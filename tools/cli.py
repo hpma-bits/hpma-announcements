@@ -5,7 +5,8 @@
     python -m tools.cli edition [--check]
     python -m tools.cli audit-status [--check | --soft]
     python -m tools.cli doctor [--strict] [--require-ocr] [--require-audit] [--ocr-smoke]
-    python -m tools.cli audit-ocr [--family update] [--limit N]
+    python -m tools.cli audit-ocr [--engine {v4,v6}] [--family update] [--limit N]
+    python -m tools.cli apply-verdicts [--dry-run]
 """
 
 from __future__ import annotations
@@ -15,7 +16,19 @@ import json
 import sys
 from pathlib import Path
 
-from . import archive, audit_compare, audit_status, crop, dataset, doctor, edition, ocr_audit
+from collectors import ocr
+
+from . import (
+    apply_verdicts,
+    archive,
+    audit_compare,
+    audit_status,
+    crop,
+    dataset,
+    doctor,
+    edition,
+    ocr_audit,
+)
 
 CROP_DIR = Path(".review/crops")
 
@@ -106,7 +119,7 @@ def _doctor(args: argparse.Namespace) -> int:
 
 
 def _audit_ocr(args: argparse.Namespace) -> int:
-    stats = ocr_audit.run(family=args.family, limit=args.limit)
+    stats = ocr_audit.run(family=args.family, limit=args.limit, engine=args.engine)
     print(json.dumps(stats, sort_keys=True))
     return 0
 
@@ -123,8 +136,12 @@ def _audit_status(args: argparse.Namespace) -> int:
     return audit_status.run(soft=args.soft, check=args.check)
 
 
+def _apply_verdicts(args: argparse.Namespace) -> int:
+    return apply_verdicts.run(dry_run=args.dry_run)
+
+
 def _dataset(args: argparse.Namespace) -> int:
-    return dataset.run(check=args.check)
+    return dataset.run(check=args.check, allow_unverified=args.allow_unverified)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -177,7 +194,16 @@ def main(argv: list[str] | None = None) -> int:
 
     audit_cmd = sub.add_parser(
         "audit-ocr",
-        help="OCR every notice image with the v6 second-reader engine (no downloads)",
+        help="OCR every notice image with the independent second reader (no downloads)",
+    )
+    audit_cmd.add_argument(
+        "--engine",
+        choices=sorted(ocr.ENGINE_BUILDERS),
+        default="v6",
+        help=(
+            "second-reader engine (default: v6); choose v4 when the notice "
+            "record itself was produced by v6"
+        ),
     )
     audit_cmd.add_argument("--family", default="update")
     audit_cmd.add_argument("--limit", type=int, default=None, help="process only the first N posts")
@@ -210,17 +236,33 @@ def main(argv: list[str] | None = None) -> int:
     )
     status_cmd.set_defaults(func=_audit_status)
 
+    apply_cmd = sub.add_parser(
+        "apply-verdicts",
+        help="apply adjudication verdicts from audit/ to the correction ledger",
+    )
+    apply_cmd.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="validate and report every verdict without writing a ledger",
+    )
+    apply_cmd.set_defaults(func=_apply_verdicts)
+
     dataset_cmd = sub.add_parser(
         "dataset", help="build dataset/notices.jsonl, the website-facing data row set"
     )
     dataset_cmd.add_argument("--check", action="store_true", help="fail when the committed file is stale")
+    dataset_cmd.add_argument(
+        "--allow-unverified",
+        action="store_true",
+        help="publish Dashen rows whose audit quality is missing or not verified",
+    )
     dataset_cmd.set_defaults(func=_dataset)
 
     args = parser.parse_args(argv)
     try:
         return args.func(args)
     except (CliError, FileNotFoundError, ValueError, edition.EditionError,
-            audit_status.MissingEvidenceError) as exc:
+            audit_status.MissingEvidenceError, dataset.DatasetError) as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 2
 

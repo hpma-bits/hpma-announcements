@@ -38,6 +38,16 @@ CROP_DIR = Path(".review/audit/crops")
 
 Record = dict[str, Any]
 
+
+class SelfAuditError(ValueError):
+    """The record and its audit layer carry the same engine fingerprint.
+
+    Comparing a reading with itself always yields consensus, so it would hide
+    every engine error instead of measuring it. The second reader must be a
+    different engine family.
+    """
+
+
 # How many consecutive blocks the merge/split rescue may consume.
 MAX_GROUP = 4
 
@@ -181,15 +191,28 @@ def _finish_equal_ops(ops: list[Record], raw_v4: dict[int, str], raw_v6: dict[in
 
 
 def compare_notice(notice_v4: Record, ledger: Record | None, notice_v6: Record) -> Record:
-    """Align one notice's two readings and classify every block."""
+    """Align one notice's two readings and classify every block.
+
+    Raises :class:`SelfAuditError` when both records carry the same engine
+    fingerprint: an engine cannot audit itself.
+    """
+    engine_record = notice_v4.get("engine")
+    engine_audit = notice_v6.get("engine")
+    if engine_record and engine_record == engine_audit:
+        raise SelfAuditError(
+            f"refusing to audit {notice_v4.get('id')}: record and audit both "
+            f"carry engine {engine_record}; run the second reader with a "
+            f"different engine"
+        )
+
     overrides = archive.corrected_blocks_raw(ledger or {})
     corrected = {loc: text for loc, text in overrides.items() if text is not None}
     dropped = {loc for loc, text in overrides.items() if text is None}
 
     result: Record = {
         "id": notice_v4["id"],
-        "engine_record": notice_v4.get("engine"),
-        "engine_audit": notice_v6.get("engine"),
+        "engine_record": engine_record,
+        "engine_audit": engine_audit,
         "images": [],
     }
     counts = {

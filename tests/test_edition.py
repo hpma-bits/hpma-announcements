@@ -221,6 +221,22 @@ def _seed(root: Path) -> None:
     (root / "derived/ocr/dashen/aaaa.json").write_text(
         json.dumps(_notice(), ensure_ascii=False), encoding="utf-8"
     )
+    (root / "derived/audit/dashen").mkdir(parents=True)
+    (root / "derived/audit/dashen/aaaa.json").write_text(
+        json.dumps(
+            {
+                "id": "dashen.aaaa",
+                "engine_record": {"name": "rapidocr-onnxruntime"},
+                "engine_audit": {"name": "rapidocr"},
+                "counts": {"consensus": 1},
+                "blocks": [],
+                "v6_only": [],
+                "inserts": [],
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
 
 
 def test_build_is_deterministic(tmp_path):
