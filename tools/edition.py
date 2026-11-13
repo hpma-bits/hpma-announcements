@@ -11,8 +11,9 @@ merged index marks one canonical reading per notice date: NGA when present,
 otherwise Dashen.
 
 The platform stamps every long Dashen image with a watermark. OCR reads it as
-its own blocks, so it is removed here: a block that is only watermark is
-dropped, and a watermark suffix merged into a content line is cut off.
+its own blocks, so it is removed by the shared text rules: a block that is only
+watermark is dropped, and a watermark suffix merged into a content line is cut
+off.
 
 The ledger can also drop a block outright (``drop: true``) when OCR emitted a
 duplicate slice or other artifact that has no line of its own in the image.
@@ -21,43 +22,30 @@ duplicate slice or other artifact that has no line of its own in the image.
 from __future__ import annotations
 
 import json
-import re
 from pathlib import Path
 from typing import Any
 
-from . import archive
+from . import archive, projection
+from .text import clean_block, normalize_body
 
 EDITION_DIR = Path("edition/dashen")
 INDEX_PATH = Path("edition/notices.jsonl")
 
-WATERMARK = "大神@哈利波特魔法觉醒"
-# The stamped watermark reaches the text layer as line-end suffixes in several
-# OCR spellings: the 大神 prefix or @ may be dropped or merged into content
-# characters, and 特 may come back as 属. Anchored at the line end; a legitimate
-# game-title mention always carries 《》 or a full-width colon before 觉醒.
-WATERMARK_SUFFIX = re.compile(r"(?:大神|神)?\s*[＠@]?\s*哈利波[特属]?\s*魔?法?\s*觉醒\s*$")
-
 Record = dict[str, Any]
+
+__all__ = [
+    "EditionError",
+    "build",
+    "check",
+    "clean_block",
+    "normalize_body",
+    "render_notice",
+    "write",
+]
 
 
 class EditionError(RuntimeError):
     """The data cannot produce a correct edition (stale ledger, missing OCR)."""
-
-
-def normalize_body(text: str) -> str:
-    """Line endings to ``\\n``, trailing spaces removed, outer blank lines trimmed."""
-    lines = [line.rstrip() for line in text.replace("\r\n", "\n").replace("\r", "\n").split("\n")]
-    while lines and not lines[0]:
-        lines.pop(0)
-    while lines and not lines[-1]:
-        lines.pop()
-    return "\n".join(lines)
-
-
-def clean_block(text: str) -> str:
-    """OCR block text with the platform watermark removed; empty when it was only that."""
-    text = WATERMARK_SUFFIX.sub("", text).strip()
-    return "" if text in WATERMARK else text
 
 
 def _scalar(value: str) -> str:
@@ -126,46 +114,13 @@ def render_notice(
     ``notice`` is the OCR result; text-only sources pass ``None`` and get no
     ``## 图片文字`` section.
     """
-    overrides = archive.corrected_blocks(notice, ledger) if notice else {}
-    inserts = archive.insert_lines(ledger) if notice else {}
     lines = _frontmatter(post, selection, notice, source)
 
     body = normalize_body(post.get("text") or "")
     if body:
         lines += ["", "## 正文", "", body]
 
-    sections: list[tuple[int, list[str]]] = []
-    for image in (notice or {}).get("images", []):
-        index = image["index"]
-        texts: list[str] = []
-        previous = ""
-        image_inserts = inserts.get(index, [])
-        for block_index, block in enumerate(image.get("blocks", [])):
-            locator = (index, block_index)
-            if locator in overrides:
-                replacement = overrides[locator]
-                if replacement is None:
-                    # Ledger verdict: a duplicate slice with no line of its own.
-                    text = None
-                else:
-                    text = replacement
-            else:
-                text = block.get("text") or ""
-            if text is not None:
-                cleaned = clean_block(text)
-                if cleaned and cleaned != previous:
-                    texts.append(cleaned)
-                    previous = cleaned
-            for after, extra in image_inserts:
-                if after != block_index:
-                    continue
-                cleaned_extra = clean_block(extra)
-                if cleaned_extra and cleaned_extra != previous:
-                    texts.append(cleaned_extra)
-                    previous = cleaned_extra
-        if texts:
-            sections.append((index, texts))
-
+    sections = projection.effective_sections(notice, ledger) if notice else []
     if sections:
         lines += ["", "## 图片文字"]
         for index, texts in sections:
@@ -209,15 +164,7 @@ def build(root: Path | None = None) -> dict[Path, str]:
             index_rows.append(index_record(post, selection, notice, source.name))
 
     index_rows.sort(key=lambda row: (row["published_at"], row["id"]))
-    by_date: dict[str, list[Record]] = {}
-    for row in index_rows:
-        by_date.setdefault(row["notice_date"], []).append(row)
-    for rows in by_date.values():
-        # NGA is a plain-text repost of the operator's notice; when it exists,
-        # it is the canonical reading and the Dashen OCR copy is the image record.
-        preferred = "nga" if any(row["source"] == "nga" for row in rows) else "dashen"
-        for row in rows:
-            row["canonical"] = row["source"] == preferred
+    projection.assign_canonical(index_rows)
     index_lines = [json.dumps(row, ensure_ascii=False, sort_keys=True) for row in index_rows]
     outputs[INDEX_PATH] = "\n".join(index_lines) + "\n"
     return outputs

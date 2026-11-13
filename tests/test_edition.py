@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from tools import archive, edition
+from tools import archive, dataset, edition
 
 WATERMARK = "大神@哈利波特魔法觉醒"
 
@@ -227,6 +227,19 @@ def test_build_is_deterministic(tmp_path):
     _seed(tmp_path)
 
     assert edition.build(tmp_path) == edition.build(tmp_path)
+
+
+def test_dataset_text_matches_the_edition_image_sections(tmp_path):
+    _seed(tmp_path)
+    edition.write(tmp_path)
+
+    rows = dataset.build(tmp_path)
+    markdown = (tmp_path / "edition/dashen/aaaa.md").read_text(encoding="utf-8")
+    section = markdown.split("## 图片文字", 1)[1]
+    lines = [line for line in section.splitlines() if line and not line.startswith("### ")]
+
+    assert len(rows) == 1
+    assert rows[0]["text"].splitlines() == lines
 
 
 def test_build_raises_when_a_ledger_is_stale(tmp_path):

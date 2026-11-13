@@ -21,7 +21,8 @@ import json
 from pathlib import Path
 from typing import Any
 
-from . import archive, edition
+from . import archive, projection
+from .text import normalize_body
 
 DATASET_PATH = Path("dataset/notices.jsonl")
 SCHEMA_PATH = Path("dataset/schema.md")
@@ -33,42 +34,13 @@ def _notice_text(notice: Record | None, ledger: Record | None) -> tuple[str, lis
     """Clean text for one Dashen notice, plus per-image section records."""
     if not notice:
         return "", []
-    overrides = archive.corrected_blocks(notice, ledger)
-    inserts = archive.insert_lines(ledger)
-    sections: list[Record] = []
-    all_lines: list[str] = []
-    for image in notice.get("images", []):
-        index = image["index"]
-        texts: list[str] = []
-        previous = ""
-        image_inserts = inserts.get(index, [])
-        for block_index, block in enumerate(image.get("blocks", [])):
-            locator = (index, block_index)
-            if locator in overrides:
-                replacement = overrides[locator]
-                text = None if replacement is None else replacement
-            else:
-                text = block.get("text") or ""
-            if text is not None:
-                cleaned = edition.clean_block(text)
-                if cleaned and cleaned != previous:
-                    texts.append(cleaned)
-                    previous = cleaned
-            for after, extra in image_inserts:
-                if after != block_index:
-                    continue
-                cleaned_extra = edition.clean_block(extra)
-                if cleaned_extra and cleaned_extra != previous:
-                    texts.append(cleaned_extra)
-                    previous = cleaned_extra
-        if texts:
-            sections.append({"image": index, "lines": texts})
-            all_lines.extend(texts)
-    return "\n".join(all_lines), sections
+    sections = projection.effective_sections(notice, ledger)
+    rows = [{"image": index, "lines": lines} for index, lines in sections]
+    return "\n".join(line for _, lines in sections for line in lines), rows
 
 
 def _nga_text(post: Record) -> str:
-    return edition.normalize_body(post.get("text") or "")
+    return normalize_body(post.get("text") or "")
 
 
 def _quality(feed: str, base: Path) -> Record | None:
@@ -130,13 +102,7 @@ def build(root: str | Path | None = None) -> list[Record]:
                     row["quality"] = quality
             rows.append(row)
     rows.sort(key=lambda row: (row["published_at"], row["id"]))
-    by_date: dict[str, list[Record]] = {}
-    for row in rows:
-        by_date.setdefault(row["notice_date"], []).append(row)
-    for group in by_date.values():
-        preferred = "nga" if any(row["source"] == "nga" for row in group) else "dashen"
-        for row in group:
-            row["canonical"] = row["source"] == preferred
+    projection.assign_canonical(rows)
     return rows
 
 
