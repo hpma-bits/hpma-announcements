@@ -9,14 +9,18 @@
 
 ## 队列
 
-`build_queue(root=None)` 返回 `{"issues": [...], "stats": {...}}`。issue 按
-`severity`（high → medium）再按 `type`（term → ocr）再按 id 排序。
+`build_queue(root=None)` 返回 `{"issues": [...], "stats": {...}}`。术语
+（`term_conflict`）在前，按 impact（稀有写法的 `minor_count`、
+`minor_notices`）降序再按 id；OCR（`ocr_block`）在后，按 `risk`
+（`source_damage` 先）再按 id。OCR 不使用 `high` 严重度，所以高优先筛选只
+剩下术语冲突。
 
 ### `term_conflict`
 
 同一事物出现两种写法时用于决定是否合并检索。来源是全部 update 公告的
-`body + image_text`（图片文字已应用人工修正账本）。14 对写法见
-`tools/review.py` 的 `TERM_PAIRS`；只有两种写法都实际出现时才生成 issue。
+`body + image_text`（图片文字已应用人工修正账本）。`tools/review.py` 的
+`TERM_PAIRS` 定义 14 对写法及逐对匹配规则；只有两种写法都实际出现时才生成
+issue（例如「无暇/无瑕」只在「无暇信念/无瑕信念」时统计，普通词条不算）。
 
 ```json
 {
@@ -26,11 +30,17 @@
   "title": "「金锻」与「金缎」",
   "question": "这两种写法指同一个事物吗？检索时是否合并？",
   "why": "两种写法都出现在官方原文；当前精确检索会把它们拆成两组。",
+  "match_note": "按字面统计两种写法的全部出现",
   "variants": [
     {"text": "金锻", "count": 5, "notices": 3},
     {"text": "金缎", "count": 119, "notices": 70}
   ],
-  "impact": {"minor_count": 5, "total_notices": 70, "search_gain": 5},
+  "impact": {
+    "minor_count": 5,
+    "minor_notices": 3,
+    "total_notices": 70,
+    "search_gain": 5
+  },
   "contexts": [
     {
       "variant": "金锻",
@@ -55,14 +65,25 @@
 }
 ```
 
-- `count` 是子串出现次数，`notices` 是涉及公告数。
+- `count` 是按该对匹配口径统计的出现次数，`notices` 是涉及公告数；
+  `match_note` 说明统计口径，UI 应原样展示。
+- 匹配规则（`TermPair`）：
+  - 金锻/金缎、石墩/石礅、登陆/登录、鲁本/鲁伯、云雾飘渺/云雾缥缈、
+    凤吟凰鸣/凰吟凤鸣、等级上线/等级上限、银辉之匙/银辉之钥、
+    戈德利克/戈德里克、长跑专卖店/长袍专卖店：字面匹配。
+  - 换新：只统计「换新款」「大奖换新」「时装换新」，不统计「兑换新增」
+    「更换新的」「伙伴换新装」。
+  - 焕新：只统计「焕新款」「大奖焕新」「时装焕新」，不统计泛用的「焕新」动词。
+  - 无暇/无瑕：只统计「无暇信念」「无瑕信念」；若两边不同时出现，不生成 issue。
+  - 进发/迸发、补获/捕获：字面匹配，但标记 `context_dependent: true`。
 - 上下文每个写法最多 8 条（`contexts` 合计最多 16 条）；`count`/`notices`
   始终是完整统计。
 - `section` 为 `正文` 或 `图片文字`；图片文字上下文带 `image` 序号。
 - `impact.search_gain` 是合并检索后稀有写法新增的覆盖处数。
-- 严重度：稀有写法（数量少的一边）出现 ≥3 处或涉及 ≥5 篇公告为 `high`，
-  否则 `medium`。
-- `recommendation` 只是系统提示，不是裁决结果。
+- 严重度：`context_dependent` 的对固定为 `medium`；其余稀有写法（数量少的
+  一边）出现 ≥3 处或涉及 ≥5 篇公告为 `high`，否则 `medium`。
+- 上下文相关的对在 `recommendation` 里提示按上下文判断词义；其余
+  `recommendation` 只是系统提示，不是裁决结果。
 
 ### `ocr_block`
 
@@ -74,7 +95,8 @@
 {
   "id": "ocr:dashen.xxx:3:31",
   "type": "ocr_block",
-  "severity": "high",
+  "severity": "medium",
+  "risk": "source_damage",
   "title": "dashen.xxx · 图 3 · block 31",
   "question": "这个 block 的源图文字是什么？",
   "why": "confidence=medium；行尾被水印覆盖，当前修正是按可见笔画重建的。",
@@ -104,29 +126,36 @@
 - `original` / `corrected` 直接来自修正账本条目；`block_index` 是该图片 OCR
   blocks 列表中的位置。
 - 上下文取同一图片 OCR blocks 中该块前后各 2 个非空行。
-- 严重度：reason 含水印/截断/覆盖（含英文 watermark/truncat/covered），或
-  `corrected` 长度 ≥10 为 `high`，否则 `medium`。
+- OCR 的 `severity` 统一为 `medium`，避免 84 条 OCR 淹没高优先队列。
+- `risk` 说明不确定性的来源：
+  - `source_damage`：reason 含水印/截断/覆盖（含英文 watermark/truncat/covered）。
+  - `style`：reason 描述字形、引号、ASCII、排版等样式问题。
+  - `other`：其他无法归入以上两类的原因。
+  队列内 `source_damage` 排在前面；它只影响 OCR 内部顺序，不改变严重度。
 
 ### `stats`
 
 ```json
 {
-  "total": 98,
-  "pending": 98,
+  "total": 97,
+  "pending": 97,
   "resolved": 0,
   "deferred": 0,
-  "high": 90,
-  "high_total": 90,
-  "term": 14,
+  "high": 6,
+  "high_total": 6,
+  "term": 13,
   "ocr": 84,
-  "term_pending": 14,
-  "ocr_pending": 84
+  "term_pending": 13,
+  "ocr_pending": 84,
+  "source_damage": 75
 }
 ```
 
 - `resolved`：最新决定不是 `defer` 的 issue 数。
 - `pending = total - resolved`，`defer` 仍算 pending，同时单独计入 `deferred`。
-- `high` 是尚未 resolved 的 high 数；`high_total` 是全部 high 数。
+- `high` 是尚未 resolved 的 high 数；`high_total` 是全部 high 数。当前 high
+  只可能来自术语冲突。
+- `source_damage` 是 risk 为 `source_damage` 的 OCR issue 数。
 
 ## 决策账本
 

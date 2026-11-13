@@ -35,14 +35,22 @@ def _seed(root):
                 "id": "aaaa",
                 "title": "【1月2日更新公告】",
                 "published_at": "2026-01-01T22:00:00+08:00",
-                "text": "开头\n金锻与金缎\n结尾",
+                "text": (
+                    "开头\n金锻与金缎\n结尾\n"
+                    "课堂兑换新增\n更换新的方法\n伙伴换新装\n"
+                    "换新款上线\n大奖换新\n时装换新\n词条无瑕 无暇"
+                ),
                 "feed_url": "https://ds.163.com/feed/aaaa/",
             },
             {
                 "id": "bbbb",
                 "title": "【1月3日更新公告】",
                 "published_at": "2026-01-02T22:00:00+08:00",
-                "text": "金缎 金缎\n金锻 金锻\n金缎\n登陆 登陆 登陆 登录",
+                "text": (
+                    "金缎 金缎\n金锻 金锻\n金缎\n登陆 登陆 登陆 登录\n"
+                    "焕新款上线\n大奖焕新\n时装焕新\n泛用焕新动词\n"
+                    "进发 进发 迸发 迸发\n补获 捕获"
+                ),
                 "feed_url": "https://ds.163.com/feed/bbbb/",
             },
         ],
@@ -81,6 +89,10 @@ def _seed(root):
                             {
                                 "box": [[10, 210], [90, 210], [90, 240], [10, 240]],
                                 "text": "图片第六行",
+                            },
+                            {
+                                "box": [[10, 250], [90, 250], [90, 280], [10, 280]],
+                                "text": "图片第七行",
                             },
                         ],
                     }
@@ -157,6 +169,14 @@ def _seed(root):
                         "reason": "普通修正",
                         "confidence": "medium",
                     },
+                    {
+                        "image_index": 1,
+                        "block_index": 6,
+                        "original": "图片第七行",
+                        "corrected": "风格修正",
+                        "reason": "banner prints STRAIGHT ASCII quotes",
+                        "confidence": "medium",
+                    },
                 ],
             },
             ensure_ascii=False,
@@ -198,15 +218,28 @@ def test_term_issues_counts_contexts_and_severity(tmp_path):
     issues = review.term_issues(review.load_fulltext_rows(tmp_path))
     by_id = {issue["id"]: issue for issue in issues}
 
-    assert list(by_id) == ["term:金锻|金缎", "term:登陆|登录"]
+    assert list(by_id) == [
+        "term:金锻|金缎",
+        "term:登陆|登录",
+        "term:进发|迸发",
+        "term:换新|焕新",
+        "term:补获|捕获",
+    ]
+    assert "term:无暇|无瑕" not in by_id
     gold = by_id["term:金锻|金缎"]
     assert gold["type"] == "term_conflict"
     assert gold["severity"] == "high"
+    assert gold["match_note"] == review.PLAIN_TERM_NOTE
     assert gold["variants"] == [
         {"text": "金锻", "count": 3, "notices": 2},
         {"text": "金缎", "count": 5, "notices": 2},
     ]
-    assert gold["impact"] == {"minor_count": 3, "total_notices": 2, "search_gain": 3}
+    assert gold["impact"] == {
+        "minor_count": 3,
+        "minor_notices": 2,
+        "total_notices": 2,
+        "search_gain": 3,
+    }
     assert [option["value"] for option in gold["options"]] == [
         "same_alias",
         "different",
@@ -235,6 +268,61 @@ def test_term_issues_counts_contexts_and_severity(tmp_path):
     assert login["variants"] == [
         {"text": "登陆", "count": 3, "notices": 1},
         {"text": "登录", "count": 1, "notices": 1},
+    ]
+
+    renew = by_id["term:换新|焕新"]
+    assert renew["severity"] == "high"
+    assert renew["variants"] == [
+        {"text": "换新", "count": 3, "notices": 1},
+        {"text": "焕新", "count": 3, "notices": 1},
+    ]
+    assert "兑换新增" in renew["match_note"]
+    assert "伙伴换新装" in renew["match_note"]
+    assert [
+        context["line"] for context in renew["contexts"] if context["variant"] == "换新"
+    ] == ["换新款上线", "大奖换新", "时装换新"]
+    assert [
+        context["line"] for context in renew["contexts"] if context["variant"] == "焕新"
+    ] == ["焕新款上线", "大奖焕新", "时装焕新"]
+    assert all("兑换新增" not in context["line"] for context in renew["contexts"])
+    assert all("更换新的" not in context["line"] for context in renew["contexts"])
+    assert all("伙伴换新装" not in context["line"] for context in renew["contexts"])
+    assert all("泛用焕新" not in context["line"] for context in renew["contexts"])
+
+    burst = by_id["term:进发|迸发"]
+    assert burst["severity"] == "medium"
+    assert burst["recommendation"] == "可能是不同词义（进发=出发，迸发=爆发）；请逐条看上下文。"
+    assert "逐条" in burst["match_note"]
+    assert burst["variants"] == [
+        {"text": "进发", "count": 2, "notices": 1},
+        {"text": "迸发", "count": 2, "notices": 1},
+    ]
+
+    gained = by_id["term:补获|捕获"]
+    assert gained["severity"] == "medium"
+    assert "逐条" in gained["recommendation"]
+
+
+def test_term_issues_requires_both_belief_phrases():
+    def row(body):
+        return {
+            "id": "dashen.xxxx",
+            "source": "dashen",
+            "title": "标题",
+            "notice_date": "2026-01-01",
+            "body": body,
+            "image_text": "",
+            "sections": [],
+        }
+
+    assert review.term_issues([row("词条无瑕 无暇")]) == []
+    assert review.term_issues([row("无瑕信念")]) == []
+
+    issues = review.term_issues([row("无瑕信念 无暇信念")])
+    assert [issue["id"] for issue in issues] == ["term:无暇|无瑕"]
+    assert issues[0]["variants"] == [
+        {"text": "无暇", "count": 1, "notices": 1},
+        {"text": "无瑕", "count": 1, "notices": 1},
     ]
 
 
@@ -282,10 +370,12 @@ def test_ocr_issues_filters_and_context(tmp_path):
         "ocr:dashen.aaaa:1:0",
         "ocr:dashen.aaaa:1:2",
         "ocr:dashen.aaaa:1:5",
+        "ocr:dashen.aaaa:1:6",
     ]
     blocked = by_id["ocr:dashen.aaaa:1:2"]
     assert blocked["type"] == "ocr_block"
-    assert blocked["severity"] == "high"
+    assert blocked["severity"] == "medium"
+    assert blocked["risk"] == "source_damage"
     assert blocked["notice"] == "dashen.aaaa"
     assert blocked["notice_date"] == "2026-01-02"
     assert blocked["notice_title"] == "【1月2日更新公告】"
@@ -312,12 +402,30 @@ def test_ocr_issues_filters_and_context(tmp_path):
 
     first = by_id["ocr:dashen.aaaa:1:0"]
     assert first["severity"] == "medium"
+    assert first["risk"] == "other"
     assert first["context_before"] == []
     assert first["context_after"] == ["图片第二行", "图片第三行 金缎"]
 
     fifth = by_id["ocr:dashen.aaaa:1:5"]
+    assert fifth["severity"] == "medium"
+    assert fifth["risk"] == "other"
     assert fifth["context_before"] == ["图片第四行", "图片第五行"]
-    assert fifth["context_after"] == []
+    assert fifth["context_after"] == ["图片第七行"]
+
+    styled = by_id["ocr:dashen.aaaa:1:6"]
+    assert styled["severity"] == "medium"
+    assert styled["risk"] == "style"
+    assert styled["context_before"] == ["图片第五行", "图片第六行"]
+    assert styled["context_after"] == []
+
+
+def test_ocr_risk_markers():
+    assert review._ocr_risk("行尾被水印覆盖") == "source_damage"
+    assert review._ocr_risk("tail under watermark") == "source_damage"
+    assert review._ocr_risk("line truncated") == "source_damage"
+    assert review._ocr_risk("printed covered") == "source_damage"
+    assert review._ocr_risk("banner prints ASCII quotes") == "style"
+    assert review._ocr_risk("zoom shows a gap") == "other"
 
 
 def test_build_queue_sorts_and_counts(tmp_path):
@@ -326,22 +434,32 @@ def test_build_queue_sorts_and_counts(tmp_path):
 
     assert [issue["id"] for issue in queue["issues"]] == [
         "term:金锻|金缎",
-        "ocr:dashen.aaaa:1:2",
+        "term:换新|焕新",
+        "term:进发|迸发",
         "term:登陆|登录",
+        "term:补获|捕获",
+        "ocr:dashen.aaaa:1:2",
         "ocr:dashen.aaaa:1:0",
         "ocr:dashen.aaaa:1:5",
+        "ocr:dashen.aaaa:1:6",
     ]
+    assert all(
+        issue["severity"] == "medium"
+        for issue in queue["issues"]
+        if issue["type"] == "ocr_block"
+    )
     assert queue["stats"] == {
-        "total": 5,
-        "pending": 5,
+        "total": 9,
+        "pending": 9,
         "resolved": 0,
         "deferred": 0,
         "high": 2,
         "high_total": 2,
-        "term": 2,
-        "ocr": 3,
-        "term_pending": 2,
-        "ocr_pending": 3,
+        "term": 5,
+        "ocr": 4,
+        "term_pending": 5,
+        "ocr_pending": 4,
+        "source_damage": 1,
     }
 
     decisions = [
@@ -355,8 +473,10 @@ def test_build_queue_sorts_and_counts(tmp_path):
     queue = review.build_queue(tmp_path, decisions=decisions)
     assert queue["stats"]["resolved"] == 1
     assert queue["stats"]["deferred"] == 1
-    assert queue["stats"]["pending"] == 4
+    assert queue["stats"]["pending"] == 8
     assert queue["stats"]["high"] == 1
+    assert queue["stats"]["term_pending"] == 4
+    assert queue["stats"]["ocr_pending"] == 4
 
 
 def test_load_and_save_decisions_latest_wins(tmp_path):
