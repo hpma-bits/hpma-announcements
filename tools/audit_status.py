@@ -31,10 +31,19 @@ Crops stay in the gitignored ``.review/`` workspace and are never read here.
 
     python -m tools.cli audit-status [--check | --soft]
 
+Before any ledger is rebuilt, both modes enforce coverage over the notices the
+archive is expected to hold (``archive.selected_posts(base, "update",
+"dashen")``): every expected notice needs a v4 OCR record and a v6 reading,
+every v4 record needs a v6 reading, no image may carry an OCR error, and no
+layer may contain zero blocks. A missing notice or an all-failed reading is a
+hard failure, not a silently empty ledger; this is what keeps ``totals={}``
+from masquerading as a clean run.
+
 Write mode rebuilds every ledger and exits 1 while ``queued`` blocks remain,
 unless ``--soft``. ``--check`` rebuilds in memory, compares each committed
 ledger byte for byte, writes nothing, and exits 1 on any difference or queued
-block. Either mode refuses to run when the tracked evidence is missing.
+block. Either mode refuses to run when the tracked evidence is missing or the
+coverage gate fails.
 """
 
 from __future__ import annotations
@@ -55,13 +64,17 @@ V6_DIR = Path("derived/ocr-v6/dashen")
 
 Record = dict[str, Any]
 
-# Statuses that satisfy the quality gate.
-COVERED = {"consensus", "punct_rule", "corrected", "adjudicated",
-           "record", "dropped", "watermark", "source_issue"}
-
 
 class MissingEvidenceError(RuntimeError):
     """The tracked audit evidence is absent, so nothing can be rebuilt."""
+
+
+class CoverageError(RuntimeError):
+    """Expected notices lack a complete, independent OCR layer."""
+
+    def __init__(self, problems: list[str]):
+        self.problems = problems
+        super().__init__("; ".join(problems))
 
 
 def _evidence_paths(base: Path) -> tuple[list[Path], list[Path]]:
@@ -281,31 +294,88 @@ def _serialize(result: Record) -> bytes:
     ).encode("utf-8")
 
 
+def _expected_feeds(base: Path) -> list[str]:
+    """Feed ids the archive is supposed to hold, from the tracked corpus.
+
+    A tmp fixture without corpus/selection has no expectations; the real
+    archive always has both, so a missing layer fails the coverage gate.
+    """
+    corpus = archive.corpus_path(base, "dashen")
+    selection = archive.selection_path(base, "dashen")
+    if not corpus.is_file() or not selection.is_file():
+        return []
+    return [post["id"] for post, _ in archive.selected_posts(base, "update", "dashen")]
+
+
+def _layer_problems(layer: str, feed: str, notice: Record) -> list[str]:
+    """OCR errors and wholly empty readings in one layer of one notice."""
+    problems: list[str] = []
+    images = notice.get("images") or []
+    for image in images:
+        if image.get("error"):
+            problems.append(
+                f"{layer} image {feed}/{image.get('index')} failed: {image['error']}"
+            )
+    blocks = sum(len(image.get("blocks") or []) for image in images)
+    if not images:
+        problems.append(f"{layer} OCR for {feed} has no images")
+    elif blocks == 0:
+        problems.append(f"{layer} OCR for {feed} has zero text blocks")
+    return problems
+
+
+def _coverage_problems(
+    base: Path,
+    notices_v4: dict[str, Record],
+    notices_v6: dict[str, Record],
+) -> list[str]:
+    """Every expected-notice or layer-completeness violation."""
+    problems: list[str] = []
+    for feed in _expected_feeds(base):
+        if feed not in notices_v4:
+            problems.append(f"missing v4 OCR for expected notice {feed}")
+    for feed in sorted(notices_v4):
+        if feed not in notices_v6:
+            problems.append(f"missing v6 reading for {feed}")
+        problems.extend(_layer_problems("v4", feed, notices_v4[feed]))
+    for feed in sorted(notices_v6):
+        problems.extend(_layer_problems("v6", feed, notices_v6[feed]))
+    return list(dict.fromkeys(problems))
+
+
 def build(base: Path) -> tuple[dict[str, bytes], dict[str, int]]:
     """Rebuild every ledger in memory; ``(feed -> bytes, totals)``.
 
     Reads only tracked primary data (``audit/``, ``derived/ocr/``,
     ``derived/ocr-v6/`` and ``corrections/``). Raises
     :class:`MissingEvidenceError` before any caller can write when either
-    evidence group is absent.
+    evidence group is absent, and :class:`CoverageError` when an expected
+    notice or one of its two readings is missing, errored, or empty.
     """
     verdict_paths, adj_paths = _evidence_paths(base)
     verdicts_v4 = _verdicts_by_v4(verdict_paths)
     verdicts_v6 = _verdicts_by_v6(verdict_paths)
     queued_v6 = _queued_v6_locators(adj_paths)
     v6_dir = base / V6_DIR
+    notices_v4 = dict(archive.iter_ocr(base))
+    notices_v6: dict[str, Record] = {}
+    for feed in notices_v4:
+        v6_path = v6_dir / f"{feed}.json"
+        if v6_path.is_file():
+            notices_v6[feed] = json.loads(v6_path.read_text(encoding="utf-8"))
+
+    problems = _coverage_problems(base, notices_v4, notices_v6)
+    if problems:
+        raise CoverageError(problems)
+
     payloads: dict[str, bytes] = {}
     totals: dict[str, int] = {}
-    for feed, notice_v4 in archive.iter_ocr(base):
-        v6_path = v6_dir / f"{feed}.json"
-        if not v6_path.exists():
-            print(f"audit-status: no v6 reading for {feed}", file=sys.stderr)
-            continue
+    for feed, notice_v4 in notices_v4.items():
         result = build_notice(
             feed,
             notice_v4,
             archive.load_ledger(feed, base),
-            json.loads(v6_path.read_text(encoding="utf-8")),
+            notices_v6[feed],
             verdicts_v4, verdicts_v6, queued_v6,
         )
         payloads[feed] = _serialize(result)
@@ -355,8 +425,14 @@ def run(root: str | Path | None = None, *, soft: bool = False,
         raise ValueError("--check and --soft are mutually exclusive")
     base = Path(root) if root else archive.REPO_ROOT
     out_dir = base / AUDIT_DIR
-    # Build first: missing evidence must fail before the output is touched.
-    payloads, totals = build(base)
+    # Build first: missing evidence or an incomplete corpus must fail before
+    # the output is touched, in both check and write mode.
+    try:
+        payloads, totals = build(base)
+    except CoverageError as exc:
+        for problem in exc.problems:
+            print(f"audit-status: {problem}", file=sys.stderr)
+        return 1
     queued = totals.get("queued", 0)
 
     if check:

@@ -11,7 +11,13 @@ audit quality summary:
   cover the date, otherwise Dashen);
 * ``quality`` summarises the audit ledger for the notice.
 
-    python -m tools.cli dataset [--check]
+A Dashen row is only publishable when its audit quality exists, has no
+``queued`` blocks and is ``verified``. The gate raises :class:`DatasetError`
+instead of writing an unreviewed row; ``--allow-unverified`` is the explicit
+override for a deliberate snapshot. NGA rows are plain source text and are
+not gated.
+
+    python -m tools.cli dataset [--check] [--allow-unverified]
 """
 
 from __future__ import annotations
@@ -28,6 +34,10 @@ DATASET_PATH = Path("dataset/notices.jsonl")
 SCHEMA_PATH = Path("dataset/schema.md")
 
 Record = dict[str, Any]
+
+
+class DatasetError(RuntimeError):
+    """A Dashen row lacks verified audit quality, so it must not be published."""
 
 
 def _notice_text(notice: Record | None, ledger: Record | None) -> tuple[str, list[Record]]:
@@ -64,8 +74,32 @@ def _quality(feed: str, base: Path) -> Record | None:
     }
 
 
-def build(root: str | Path | None = None) -> list[Record]:
-    """One dataset row per notice, sorted by published_at then id."""
+def _require_verified(feed: str, quality: Record | None) -> None:
+    """Refuse to publish a Dashen row that the audit has not verified."""
+    if quality is None:
+        raise DatasetError(
+            f"unverified Dashen notice {feed}: no audit quality "
+            f"(run `python -m tools.cli audit-status`, or pass --allow-unverified)"
+        )
+    if quality["queued"]:
+        raise DatasetError(
+            f"unverified Dashen notice {feed}: {quality['queued']} queued audit "
+            f"blocks (run audit-status, or pass --allow-unverified)"
+        )
+    if quality["status"] != "verified":
+        raise DatasetError(
+            f"unverified Dashen notice {feed}: audit status is "
+            f"{quality['status']!r} (pass --allow-unverified to publish anyway)"
+        )
+
+
+def build(
+    root: str | Path | None = None, *, allow_unverified: bool = False
+) -> list[Record]:
+    """One dataset row per notice, sorted by published_at then id.
+
+    Dashen rows require verified audit quality unless ``allow_unverified``.
+    """
     base = Path(root) if root else archive.REPO_ROOT
     rows: list[Record] = []
     for source in archive.SOURCES.values():
@@ -98,6 +132,8 @@ def build(root: str | Path | None = None) -> list[Record]:
                 row["sections"] = sections
             if source.ocr:
                 quality = _quality(feed, base)
+                if not allow_unverified:
+                    _require_verified(feed, quality)
                 if quality:
                     row["quality"] = quality
             rows.append(row)
@@ -110,11 +146,16 @@ def serialize(rows: list[Record]) -> str:
     return "".join(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n" for row in rows)
 
 
-def run(root: str | Path | None = None, *, check: bool = False) -> int:
+def run(
+    root: str | Path | None = None,
+    *,
+    check: bool = False,
+    allow_unverified: bool = False,
+) -> int:
     import sys
 
     base = Path(root) if root else archive.REPO_ROOT
-    rows = build(base)
+    rows = build(base, allow_unverified=allow_unverified)
     payload = serialize(rows)
     out = base / DATASET_PATH
     if check:
