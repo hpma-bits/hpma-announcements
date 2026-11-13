@@ -282,7 +282,7 @@
       "block_index": 43,
       "original": "20.优化了巫师友队界面中对队友游对状态的展示魔法觉醒",
       "corrected": "20.优化了巫师友队界面中对队友游戏状态的展示。",
-      "reason": "zoom d2-z197: head 20.优化了巫师友队界面中对队友游 legible, tail 戏状态的展示 recovered from fragments under the 大神@哈利波特魔法觉醒 watermark (v6 supplies 游戏, v4 展示); v4 游对 is a misread；review desk 专家裁决",
+      "reason": "review desk 专家裁决：以专家文本为准。原审计理由：zoom d2-z197: head 20.优化了巫师友队界面中对队友游 legible, tail 戏状态的展示 recovered from fragments under the 大神@哈利波特魔法觉醒 watermark (v6 supplies 游戏, v4 展示); v4 游对 is a misread",
       "confidence": "high",
       "via": "expert-review",
       "recrop": "python -m tools.cli crop dashen.66e929039dbf45199e5e3402 5 43",

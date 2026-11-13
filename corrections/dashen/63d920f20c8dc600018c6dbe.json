@@ -36,7 +36,7 @@
       "block_index": 40,
       "original": "达天罗谜网区域40层，或达到致命护装邮0层昭利波特魔法觉醒",
       "corrected": "达天罗谜网区域40层，或达到致命狩猎区域30层以上。",
-      "reason": "“护装邮0层昭”为水印串扰；源图“致命狩猎区域40层以上”，句号被水印遮挡；review desk 专家裁决",
+      "reason": "review desk 专家裁决：以专家文本为准。原审计理由：“护装邮0层昭”为水印串扰；源图“致命狩猎区域40层以上”，句号被水印遮挡",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.63d920f20c8dc600018c6dbe 2 40",
       "via": "expert-review",

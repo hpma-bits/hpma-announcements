@@ -18,7 +18,7 @@
       "block_index": 12,
       "original": "动期间上架，且无法通过“梳妆魔盒大神新哈特魔法觉醒",
       "corrected": "动期间上架，且无法通过“梳妆魔盒·时新”获取。",
-      "reason": "“大神新哈特魔法觉醒”为水印窜入；源图正文为“梳妆魔盒·时新”获取；review desk 专家裁决",
+      "reason": "review desk 专家裁决：以专家文本为准。原审计理由：“大神新哈特魔法觉醒”为水印窜入；源图正文为“梳妆魔盒·时新”获取",
       "confidence": "high",
       "recrop": "python -m tools.cli crop dashen.6357f2eb7442470001997fa9 1 12",
       "via": "expert-review",

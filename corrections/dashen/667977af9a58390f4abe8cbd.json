@@ -300,7 +300,7 @@
       "block_index": 54,
       "original": "将赠礼信息生成特别的赠礼页面并准迪给微糖好表法觉醒",
       "corrected": "将赠礼信息生成特别的赠礼页面并推送给微信好友。",
-      "reason": "zoom d2-z170: head 将赠礼信息生成特别的赠礼页面并 legible; the tail after 并 is covered by the 大神@哈利波特魔法觉醒 watermark and unrecoverable (engines agree only on 给…好 fragments); v4/v6 tails are watermark OCR garbage；review desk 专家裁决",
+      "reason": "review desk 专家裁决：以专家文本为准。原审计理由：zoom d2-z170: head 将赠礼信息生成特别的赠礼页面并 legible; the tail after 并 is covered by the 大神@哈利波特魔法觉醒 watermark and unrecoverable (engines agree only on 给…好 fragments); v4/v6 tails are watermark OCR garbage",
       "confidence": "high",
       "via": "expert-review",
       "recrop": "python -m tools.cli crop dashen.667977af9a58390f4abe8cbd 5 54",

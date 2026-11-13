@@ -292,7 +292,7 @@
       "block_index": 53,
       "original": "于初雪飘落之时，拆开满载心愿的社物金利波特魔法觉醒",
       "corrected": "于初雪飘落之时，拆开满载心愿的礼物盒吧！",
-      "reason": "社→神、金→盒（盒字形判读，medium；其后为水印不可恢复）；review desk 专家裁决",
+      "reason": "review desk 专家裁决：以专家文本为准。原审计理由：社→神、金→盒（盒字形判读，medium；其后为水印不可恢复）",
       "confidence": "high",
       "via": "expert-review",
       "recrop": "python -m tools.cli crop dashen.6936cff8cb387243bb18d4c8 4 53",

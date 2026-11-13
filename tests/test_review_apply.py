@@ -188,7 +188,8 @@ def test_apply_override_accept_keep_original_and_drop(tmp_path):
     assert overridden["via"] == "expert-review"
     assert overridden["review_issue_id"] == f"ocr:{NOTICE}:1:0"
     assert review.REVIEW_REASON_MARKER in overridden["reason"]
-    assert overridden["reason"].startswith("行尾被水印覆盖")
+    assert overridden["reason"].startswith(review.REVIEW_REASON_PREFIX)
+    assert "原审计理由：行尾被水印覆盖" in overridden["reason"]
 
     accepted = corrections[1]
     assert accepted["corrected"] == "修1"
@@ -256,7 +257,8 @@ def test_applied_override_stays_visible_as_an_archived_issue(tmp_path):
     assert archived["confidence"] == "high"
     assert archived["original"] == "原一"
     assert archived["corrected"] == "专家定稿"
-    assert archived["reason"].startswith("行尾被水印覆盖")
+    assert archived["reason"].startswith(review.REVIEW_REASON_PREFIX)
+    assert "原审计理由：行尾被水印覆盖" in archived["reason"]
     assert review.REVIEW_REASON_MARKER in archived["reason"]
     assert archived["title"] == f"{NOTICE} · 图 1 · block 0"
     assert archived["crop"] == {"notice": NOTICE, "image": 1, "block": 0, "scale": 2}
@@ -312,7 +314,7 @@ def test_apply_creates_missing_correction_from_the_expert_text(tmp_path):
         "image_index": 1,
         "block_index": 5,
         "original": "原六",
-        "reason": f"无既有条目；{review.REVIEW_REASON_MARKER}",
+        "reason": f"{review.REVIEW_REASON_PREFIX}原审计理由：无既有条目",
         "confidence": "high",
         "via": "expert-review",
         "review_issue_id": f"ocr:{NOTICE}:1:5",
